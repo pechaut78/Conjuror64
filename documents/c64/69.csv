@@ -1,0 +1,11 @@
+question,answer
+"Make sprite 0 what color?","WHITE"
+"What is the code for BLACK color?","0"
+"What is the code for PURPLE color?","4"
+"What is the code for ORANGE color?","8"
+"What is the code for MED. GREY color?","12"
+"What is the code for WHITE color?","1"
+"What is the code for RED color?","2"
+"What is the code for BLUE color?","6"
+"What is the code for YELLOW color?","7"
+"What is the purpose of reserving a separate 64-BYTE BLOCK of numbers?",""reserve" a separate 64-BYTE BLOCK of numbers in the computer's memory for each sprite""

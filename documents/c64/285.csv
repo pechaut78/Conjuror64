@@ -1,0 +1,7 @@
+question,answer
+"Bit map mode is selected by setting which bit in register 17?","BMM bit"
+"In bit map mode, what is the screen resolution?","320H * 200V individually controlled display dots"
+"What is the VIDEO MATRIX used for in bit map mode?","color data"
+"What is the VIDEO MATRIX COUNTER used for in bit map mode?","address to fetch dot data for display"
+"What is the display base address formed from?","A13| A12| A11| A10| A09| A08| A07| A06| A05| A04| A03| A02| A01| A00"
+"What is the importance of the VIDEO MATRIX COUNTER in bit map mode?",""IMPORTANT""

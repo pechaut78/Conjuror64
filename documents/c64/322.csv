@@ -1,0 +1,11 @@
+question,answer
+"Can the POTX register read the position of a potentiometer?","This register allows the microprocessor to read the position of the potentiometer tied to POTX (pin 24)"
+"What is the range of values for the POTX register?","values ranging from 0 at minimum resistance, to 255 ($FF) at maximum resistance"
+"What is the minimum value for the POTX register?","0 at minimum resistance"
+"What is the maximum value for the POTX register?","255 ($FF) at maximum resistance"
+"What is the validity of the POTX register value?","The value is always valid"
+"How often is the POTX register value updated?","updated every 512 (02 clock cycles"
+"What is the clock cycle frequency for POTX register updates?","02 clock cycles"
+"What is the purpose of the POTX register?","allows the microprocessor to read the position of the potentiometer"
+"What is the pin number for the POTX register?","pin 24"
+"What is the unit of measurement for the POTX register?","resistance"

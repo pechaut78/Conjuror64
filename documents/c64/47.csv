@@ -1,0 +1,11 @@
+question,answer
+"Can sprites cross each other's paths?","Yes, sprites have the ability to cross each other's paths."
+"What is the highest priority sprite number?","Sprite 0 has the highest priority."
+"Can sprites be positioned in front of or behind other objects on the screen?","Yes, sprites can be positioned in front of or behind other objects on the screen."
+"What determines the priority of sprites?","Sprite priority is fixed and determined by the sprite number."
+"Can sprites have 'holes' in them?","Yes, sprites can have 'holes' in them."
+"What happens when a sprite with higher priority has 'holes' in it?","The sprite with the lower priority will show through."
+"What is the effect of assigning lower sprite numbers?","Sprites assigned lower sprite numbers will appear in the foreground."
+"What is the effect of assigning higher sprite numbers?","Sprites assigned higher sprite numbers will appear in the background."
+"Can a sprite with higher priority show through a sprite with lower priority?","Yes, a sprite with higher priority can show through a sprite with lower priority."
+"What is the 'window' effect in sprite display?","The 'window' effect is when a sprite with higher priority shows through a sprite with lower priority."

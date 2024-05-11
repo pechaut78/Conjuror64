@@ -1,0 +1,3 @@
+POTY (Register $1A)
+
+    Same as POTX for the pot tied to POTY (pin 23).

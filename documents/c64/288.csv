@@ -1,0 +1,12 @@
+question,answer
+"Multi-color bit map mode is selected by setting which register to a '1'?","register 22 ($16)"
+"What is the purpose of the MCM bit in register 22 ($16)?","setting the multi-color bit map mode"
+"What is the memory access sequence used in multi-color mode?","the same as standard bit map mode"
+"What is the dot data interpreted as in multi-color mode?","the dot data as follows"
+"What is the purpose of the color nybble in multi-color bit map mode?","used for the multi-color bit map mode"
+"How many colors can be displayed in each 8*8 block in multi-color bit map mode?","three independently selected colors"
+"What is the screen resolution in multi-color bit map mode?","160H*200V"
+"What is the horizontal dot size in multi-color bit map mode?","doubled"
+"What is the purpose of the video matrix pointer in multi-color bit map mode?","used to select one dot color"
+"What is the purpose of the background color in multi-color bit map mode?","used in addition to the three independently selected colors"
+"What is the size of each block in multi-color bit map mode?","8*8"

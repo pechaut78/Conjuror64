@@ -1,0 +1,12 @@
+
+
+  WHAT DOES MACHINE CODE LOOK LIKE?
+
+    You should be familiar with the PEEK and POKE commands in the CBM BASIC
+  language for changing memory locations. You've probably used them for
+  graphics on the screen, and for sound effects. Each memory location has
+  its own number which identifies it. This number is known as the "address"
+  of a memory location. If you imagine the memory in the Commodore 64 as a
+  street of buildings, then the number on each door is, of course, the
+  address. Now let's look at which parts of the street are used for what
+  purposes.

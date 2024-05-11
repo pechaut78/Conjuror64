@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the CLRCHN routine?","Clear I/O channels"
+"What is the call address of the CLRCHN routine?","$FFCC (hex) 65484 (decimal)"
+"What registers are affected by the CLRCHN routine?","A, X"
+"What is the default input device?","0 (keyboard)"
+"What is the default output device?","3 (the Commodore 64 screen)"
+"What signal is sent to clear the input channel on the serial port?","UNTALK"
+"What signal is sent to clear the output channel on the serial port?","UNLISTEN"
+"What is the effect of not calling the CLRCHN routine?","Several devices can receive the same data from the Commodore 64 at the same time"
+"What is the KERNAL CLALL routine?","A routine that automatically calls the CLRCHN routine"
+"How to use the CLRCHN routine?","Call it using the JSR instruction"

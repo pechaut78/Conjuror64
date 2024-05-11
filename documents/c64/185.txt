@@ -1,0 +1,26 @@
+  B-9. Function Name: CLOSE
+
+    Purpose: Close a logical file
+    Call address: $FFC3 (hex) 65475 (decimal)
+    Communication registers: A
+    Preparatory routines: None
+    Error returns: 0,240 (See READST)
+    Stack requirements: 2+
+    Registers affected: A, X, Y
+
+    Description: This routine is used to close a logical file after all I/O
+  operations have been completed on that file. This routine is called after
+  the accumulator is loaded with the logical file number to be closed (the
+  same number used when the file was opened using the OPEN routine).
+
+ How to Use:
+
+    1) Load the accumulator with the number of the logical file to be
+       closed.
+    2) Call this routine.
+
+  EXAMPLE:
+
+    ;CLOSE 15
+    LDA #15
+    JSR CLOSE

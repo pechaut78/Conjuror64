@@ -1,0 +1,11 @@
+question,answer
+"Can you send output to devices other than the screen?","Yes, it is often necessary to send output to devices other than the screen."
+"What is the purpose of the OPEN statement in BASIC?","The OPEN statement creates a 'channel' to talk to one of these devices."
+"What devices can you send output to using the OPEN statement?","You can send output to devices like a cassette deck, printer, disk drive, or modem."
+"What happens once the channel is OPEN?","The PRINT# statement will send characters to that device."
+"What is the purpose of the PRINT# statement?","The PRINT# statement sends characters to the device specified by the OPEN statement."
+"What is an example of using the OPEN and PRINT# statements?","The example shows opening a channel to a printer and printing a message."
+"What is the difference in the OPEN statement for each device?","The parameters in the OPEN statement are different for each device."
+"What is the importance of the OPEN statement?","The OPEN statement is important because it allows you to send output to devices other than the screen."
+"What is the purpose of the parameters in the OPEN statement?","The parameters in the OPEN statement specify the device and other settings."
+"What is an example of opening a channel to a disk drive?","The example shows opening a channel to a disk drive and sending a message."

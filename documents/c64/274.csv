@@ -1,0 +1,11 @@
+question,answer
+"Can a port be both an input and an output?","If a bit in the DDR is set to a one, the corresponding bit in the PR is an output; if a DDR bit is set to a zero, the corresponding PR bit is defined as an input."
+"What is the purpose of the Data Direction Register (DDR)?","The DDR determines whether a port is an input or an output."
+"Can a port be read?","On a READ, the PR reflects the information present on the actual port pins."
+"What is the function of the Peripheral Data Register (PR)?","The PR reflects the information present on the actual port pins."
+"Can a port be written?","On a WRITE, the PR is written with the information present on the actual port pins."
+"What is the purpose of the Peripheral Data Register (PR)?","The PR reflects the information present on the actual port pins."
+"What is the purpose of the Data Direction Register (DDR) in Port A?","The DDR determines whether a port is an input or an output."
+"What is the purpose of the Peripheral Data Register (PR) in Port B?","The PR reflects the information present on the actual port pins."
+"Can a port be both an input and an output at the same time?","No, a port can be either an input or an output, but not both at the same time."
+"What is the purpose of the timer output functions in Port B?","PB6 and PB7 also provide timer output functions."

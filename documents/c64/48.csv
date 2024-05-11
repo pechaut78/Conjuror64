@@ -1,0 +1,10 @@
+question,answer
+"Sprite to background priority is controlled by what register?","The SPRITE-BACKGROUND priority register located at 53275 ($D01B)"
+"Is the priority of each sprite controllable?","Yes"
+"What happens if the bit in the SPRITE-BACKGROUND priority register is 0?","The sprite appears in front of the background data"
+"What happens if the bit in the SPRITE-BACKGROUND priority register is 1?","The sprite appears behind the background data"
+"Can a sprite have a higher priority than the background?","Yes"
+"Can a sprite have a lower priority than the background?","Yes"
+"What is the location of the SPRITE-BACKGROUND priority register?","53275 ($D01B)"
+"What determines the priority of each sprite?","The bit in the SPRITE-BACKGROUND priority register"
+"Is the priority of each sprite independent?","No"

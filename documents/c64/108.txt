@@ -1,0 +1,21 @@
+
+  SUBROUTINES
+
+    In machine language (in the same way as using BASIC), you can call
+  subroutines. The instruction to call a subroutine is JSR (Jump to Sub-
+  Routine), followed by the specified absolute address.
+    Incorporated in the operating system, there is a machine language
+  subroutine that will PRINT a character to the screen. The CBM ASCII code
+  of the character should be in the accumulator before calling the
+  subroutine. The address of this subroutine is $FFD2.
+    Therefore, to print "Hi" to the screen, the following program should be
+  entered:
+
+    .A 1400 LDA #$48     - load the CBM ASCII code of "H"
+    .A 1402 JSR $FFD2    -  print it
+    .A 1405 LDA #$49     - load the CBM ASCII code of "I"
+    .A 1407 JSR $FFD2    -  print that too
+    .A 140A LDA #$0D     - print a carriage return as well
+    .A 140C JSR $FFD2
+    .A 140F BRK          - return to 64MON
+    .G 1400              - will print "HI" and return to 64MON

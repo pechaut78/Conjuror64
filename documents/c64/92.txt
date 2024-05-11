@@ -1,0 +1,12 @@
+
+
+
+  THE X INDEX REGISTER
+
+    This is a very important register. There are instructions for nearly
+  all of the transformations you can make to the accumulator. But there are
+  other instructions for things that only the X register can do. Various
+  machine language instructions allow you to copy the contents of a memory
+  location into the X register, copy the contents of the X register into a
+  memory location, and modify the contents of the X, or some other register
+  directly.

@@ -1,0 +1,11 @@
+question,answer
+"Is the status register a collection of flags?","Yes, it is a collection of eight flags."
+"What does each flag indicate?","Each flag indicates whether something has or has not occurred."
+"What is the purpose of the flags?","The purpose of the flags is to indicate whether something has or has not occurred."
+"What is the total number of flags in the status register?","There are eight flags in the status register."
+"What is the term for something that indicates whether something has or has not occurred?","The term is 'flag'."
+"What is the status register used for?","The status register is used to indicate whether something has or has not occurred."
+"What is the function of each flag in the status register?","The function of each flag is to indicate whether something has or has not occurred."
+"What is the total number of flags in the status register?","There are eight flags in the status register."
+"What is the purpose of the status register?","The purpose of the status register is to indicate whether something has or has not occurred."
+"What does the status register consist of?","The status register consists of eight flags."

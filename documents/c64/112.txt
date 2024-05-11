@@ -1,0 +1,19 @@
+                    
+        PLP   Pull Processor Status from Stack                             
+        ROL   Rotate One Bit Left (Memory or Accumulator)                 
+        ROR   Rotate One Bit Right (Memory or Accumulator)                
+        RTI   Return from Interrupt                                       
+        RTS   Return from Subroutine                                                                                           
+        SBC   Subtract Memory from Accumulator with Borrow                
+        SEC   Set Carry Flag                                              
+        SED   Set Decimal Mode                                            
+        SEI   Set Interrupt Disable Status                                
+        STA   Store Accumulator in Memory                                 
+        STX   Store Index X in Memory                                     
+        STY   Store Index Y in Memory                                                                                   
+        TAX   Transfer Accumulator to Index X                             
+        TAY   Transfer Accumulator to Index Y                             
+        TSX   Transfer Stack Pointer to Index X                           
+        TXA   Transfer Index X to Accumulator                             
+        TXS   Transfer Index X to Stack Pointer                           
+        TYA   Transfer Index Y to Accumulator                             

@@ -1,0 +1,19 @@
+
+
+
+    The Operating System gives you two modes of BASIC operation:
+    1) DIRECT Mode
+    2) PROGRAM Mode
+
+    1) When you're using the DIRECT mode, BASIC statements don't have
+       line numbers in front of the statement. They are executed whenever
+       the <RETURN> key is pressed.
+    2) The PROGRAM mode is the one you use for running programs.
+       When using the PROGRAM mode, all of your BASIC statements must have
+       line numbers in front of them. You can have more than one BASIC
+       statement in a line of your program, but the number of statements is
+       limited by the fact that you can only put 80 characters on a logical
+       screen line. This means that if you are going to go over the 80
+       character limit you have to put the entire BASIC statement that
+       doesn't fit on a new line with a new line number.
+         Always type NEW and hit <RETURN> before starting a new program.

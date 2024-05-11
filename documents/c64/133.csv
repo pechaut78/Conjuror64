@@ -1,0 +1,11 @@
+question,answer
+"DEC instruction decreases the value of what memory location?","memory location"
+"What is the operation performed by the DEC instruction?","decrement"
+"What is the effect of the DEC instruction on the N flag?","no change"
+"What is the effect of the DEC instruction on the Z flag?","no change"
+"What is the effect of the DEC instruction on the C flag?","no change"
+"What is the effect of the DEC instruction on the I flag?","no change"
+"What is the effect of the DEC instruction on the D flag?","no change"
+"What is the effect of the DEC instruction on the V flag?","no change"
+"What is the number of bytes required to execute the DEC instruction?","2"
+"What is the number of cycles required to execute the DEC instruction?","5"

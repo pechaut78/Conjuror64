@@ -1,0 +1,50 @@
+
+
+
+  OUTPUT TO PRINTER
+
+    The printer is an output device similar to the screen. Your main con-
+  cern when sending output to the printer is to create a format that is
+  easy on the eyes. Your tools here include reversed, double-width, capital
+  and lower case letters, as well as dot-programmable graphics.
+    The SPC function works for the printer in the same way it works for the
+  screen. However, the TAB function does not work correctly on the printer,
+  because it calculates the current position on the line based on the
+  cursor's position on the screen, not on the paper.
+    The OPEN statement for the printer creates the channel for communi-
+  cation. It also specifies which character set will be used, either upper
+  case with graphics or upper and lower case.
+
+  EXAMPLES of OPEN Statement for Printer:
+
+    OPEN 1,4: REM UPPER CASE/GRAPHICS
+    OPEN 1,4,7: REM UPPER AND LOWER CASE
+
+    When working with one character set, individual lines can be PRINTed
+  in the opposite character set. When in upper case with graphics, the
+  cursor down character (CHR$(17)) switches the characters to the upper
+  and lower case set. When in upper and lower case, the cursor up char-
+  acter (CHR$(145)) allows upper case and graphics characters to be
+  PRINTed.
+    Other special functions in the printer are controlled through character
+  codes. All these codes are simply PRINTed just like any other character.
+
+  TABLE of Printer Control Character Codes:
+  +----------+------------------------------------------------------------+
+  | CHR$ CODE|                         PURPOSE                            |
+  +----------+------------------------------------------------------------+
+  |    10    |   Line feed                                                |
+  |    13    |   RETURN (automatic line feed on CBM printers)             |
+  |    14    |   Begin double-width character mode                        |
+  |    15    |   End double-width character mode                          |
+  |    18    |   Begin reverse character mode                             |
+  |   146    |   End reverse character mode                               |
+  |    17    |   Switch to upper/lower case character set                 |
+  |   145    |   Switch to upper case/graphics character set              |
+  |    16    |   Tab to position in next 2 characters                     |
+  |    27    |   Move to specified dot position                           |
+  |     8    |   Begin dot-programmable graphic mode                      |
+  |    26    |   Repeat graphics data                                     |
+  +----------+------------------------------------------------------------+
+    See your Commodore printer's manual for details on using the command
+  codes.

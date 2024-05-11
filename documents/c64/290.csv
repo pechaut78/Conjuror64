@@ -1,0 +1,11 @@
+question,answer
+"Can a sprite be selectively enabled for display?","Each sprite can be selectively enabled for display by setting its corresponding enable bit to 1 in register 21 ($15)."
+"Is the enable bit a binary value?","The enable bit is a binary value, where 1 enables the sprite and 0 disables it."
+"What happens if the MnE bit is 0?","If the MnE bit is 0, no sprite operations will occur involving the disabled sprite."
+"Can a sprite be disabled?","Yes, a sprite can be disabled by setting its corresponding enable bit to 0."
+"What is the purpose of the enable bit?","The purpose of the enable bit is to selectively enable or disable sprites for display."
+"Is the enable bit used in register 21?","Yes, the enable bit is used in register 21 ($15)."
+"Can a sprite be enabled for display?","Yes, a sprite can be enabled for display by setting its corresponding enable bit to 1."
+"What happens when a sprite is enabled?","When a sprite is enabled, it can be used for display."
+"Is the enable bit used to control sprite operations?","Yes, the enable bit is used to control sprite operations."
+"Can a sprite be disabled for display?","Yes, a sprite can be disabled for display by setting its corresponding enable bit to 0."

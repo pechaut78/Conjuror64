@@ -1,0 +1,11 @@
+question,answer
+"Sound is created by the movement of what in waves?","air"
+"What is the time between one peak of a wave and the next?","number of seconds"
+"What is the reciprocal of the number of seconds?","cycles per second"
+"What determines the highness or lowness of a sound?","frequency of the sound waves produced"
+"What uses two locations to determine the frequency?","sound generator in your Commodore computer"
+"What is the formula to represent the frequency?","Fn = Fout/.06097"
+"What is the next step after figuring out what Fn is?","create the high and low frequency values for that note"
+"What is the formula to set the high frequency location?","Fhi=INT(Fn/256)"
+"What is the formula to set the low frequency location?","Flo=Fn-(256*Fhi)"
+"What can you do with your computer after playing with one voice?","become the maestro conducting your own computer orchestra"

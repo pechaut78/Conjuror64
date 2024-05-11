@@ -1,0 +1,12 @@
+question,answer
+"Each sprite data block is stored in how many consecutive bytes of memory?","63"
+"Where are the sprite pointers stored in memory?","At the end of the VIDEO MATRIX"
+"What is the range of video matrix locations used for sprite pointers?","$3F8 to $3FF"
+"What is the total address field size in bits?","14"
+"What are the bits from the video matrix used for?","sprite pointer bits"
+"What are the bits from the sprite byte counter used for?","addressing 63 bytes"
+"What is the purpose of the sprite pointer bits?","defining the 14-bit address field"
+"What is the purpose of the internally generated sprite counter bits?","addressing 63 bytes"
+"When are the sprite pointers read from the video matrix?","at the end of every raster line"
+"What happens when the Y position register matches the current raster line count?","actual fetches of sprite data begin"
+"What is displayed on each raster line?","three bytes of sprite data"

@@ -1,0 +1,12 @@
+question,answer
+"what is the purpose of the SERIAL ATN OUT signal in the Commodore 64","The Commodore 64 uses this signal to start a command sequence for a device on the serial bus."
+"What happens when the Commodore 64 brings the SERIAL ATN OUT signal LOW","All other devices on the bus start listening for the Commodore 64 to transmit an address."
+"What happens if the device addressed does not respond in a preset period of time","The Commodore 64 will assume that the device addressed is not on the bus, and will return an error in the STATUS WORD."
+"What is the consequence of not responding to the address in the preset period of time","The Commodore 64 will return an error in the STATUS WORD."
+"What is the purpose of the preset period of time in the SERIAL ATN OUT signal","The device addressed must respond in this period of time."
+"What happens when the Commodore 64 brings the SERIAL ATN OUT signal LOW","All other devices on the bus start listening for the Commodore 64 to transmit an address."
+"What is the purpose of the SERIAL ATN OUT signal in the Commodore 64","The Commodore 64 uses this signal to start a command sequence for a device on the serial bus."
+"What happens when the device addressed does not respond in the preset period of time","The Commodore 64 will assume that the device addressed is not on the bus, and will return an error in the STATUS WORD."
+"What is the consequence of not responding to the address in the preset period of time","The Commodore 64 will return an error in the STATUS WORD."
+"What is the purpose of the preset period of time in the SERIAL ATN OUT signal","The device addressed must respond in this period of time."
+"What happens when the device addressed does not respond in the preset period of time","The Commodore 64 will assume that the device addressed is not on the bus, and will return an error in the STATUS WORD."

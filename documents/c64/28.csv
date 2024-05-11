@@ -1,0 +1,10 @@
+question,answer
+"what is the size of a sprite in terms of dots","24 by 21 dots"
+"How many bytes are needed to store a sprite","63 bytes"
+"What is the size of a sprite in terms of bytes","504/8 bits"
+"How is a sprite created","by taking a look at the sprite definition block on the bit level"
+"What happens to a bit set to 0 in a sprite","it will display whatever data is behind it"
+"What is similar between sprites and characters","each bit set to 0 is transparent"
+"What is the resolution of a multi-color sprite","12 horizontal dots by 21 vertical dots"
+"What happens to the width of each dot in a multi-color sprite","it becomes twice as wide"
+"What is the number of colors displayable in a multi-color sprite","4"

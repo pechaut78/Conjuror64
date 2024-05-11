@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the Commodore Z-80 cartridge?","Allows you to run programs designed for a Z-80 microprocessor on your Commodore 64."
+"What is included with the Commodore Z-80 cartridge?","A diskette containing the Commodore CP/M(R) operating system."
+"How do you run CP/M(R) on your Commodore 64?","LOAD the CP/M(R) program from your disk drive, type RUN, and hit the <RETURN> key."
+"What happens to the 64K bytes of RAM in the Commodore 64 when running CP/M(R)?","They become accessible by the built-in 6510 central processor."
+"What is the limitation when using the Z-80 central processor?","You can't use it at the same time as the 6510 central processor in a single program."
+"What is the purpose of the Commodore 64's sophisticated timing mechanism?","To allow shifting between the 6510 and Z-80 central processors."
+"What is the memory address translation performed on the Z-80 cartridge?","Adding 4096 bytes to the memory locations used in CP/M(R) $1000 (hex) equals the memory addresses of the normal Commodore 64 operating system."
+"What is the correspondence between Z-80 and 6510 memory addresses?","The correspondence is as follows: ... "
+"What is the limitation of the Z-80 cartridge?","You can't use both the 6510 and Z-80 central processors at the same time in a single program."
+"What is the purpose of the diskette included with the Commodore Z-80 cartridge?","It contains the Commodore CP/M(R) operating system."

@@ -1,0 +1,24 @@
+  USING COMMODORE CP/M(R)
+
+    The Commodore Z-80 cartridge let's you run programs designed for a Z-80
+  microprocessor on your Commodore 64. The cartridge is provided with a
+  diskette containing the Commodore CP/M(R) operating system.
+
+  RUNNING COMMODORE CP/M(R)
+
+    To run CP/M(R):
+
+      1) LOAD the CP/M(R) program from your disk drive.
+      2) Type RUN.
+      3) Hit the <RETURN> key.
+    At this point the 64K bytes of RAM in the Commodore 64 are accessible
+  by the built-in 6510 central processor, OR 48K bytes of RAM are available
+  for the Z-80 central processor. You can shift back and forth between
+  these two processors, but you can NOT use them at the same time in a
+  single program. This is possible because of your Commodore 64's
+  sophisticated timing mechanism.
+    Below is the memory address translation that is performed on the Z-80
+  cartridge. You should notice that by adding 4096 bytes to the memory
+  locations used in CP/M(R) $1000 (hex) you equal the memory addresses of
+  the normal Commodore 64 operating system. The correspondence between Z-80
+  and 6510 memory addresses is as follows:

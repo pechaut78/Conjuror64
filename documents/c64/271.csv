@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the 02 clock input","The 02 clock is a TTL compatible input used for internal device operation and as a timing reference for communicating with the system data bus."
+"what is the function of the /CS-Chip Select Input","The /CS input controls the activity of the 6526. A low level on /CS while 02 is high causes the device to respond to signals on the R/W and address (RS) lines."
+"what is the purpose of the R/W-Read/Write Input","The R/W signal is normally supplied by the microprocessor and controls the direction of data transfers of the 6526."
+"what are the functions of the RS3-RS0-Address Inputs","The address inputs select the internal registers as described by the Register Map."
+"what is the purpose of the DB7-DB0-Data Bus Inputs/Outputs","The eight data bus pins transfer information between the 6526 and the system data bus."
+"what is the purpose of the IRQ-Interrupt Request Output","IRQ is an open drain output normally connected to the processor interrupt input."
+"what is the purpose of the /RES-Reset Input","A low on the RES pin resets all internal registers."
+"what is the purpose of the 6526 interface signals","The 6526 interface signals are used for internal device operation and as a timing reference for communicating with the system data bus."
+"what is the function of the /CS-Chip Select Input in the 6526 interface signals","The /CS input controls the activity of the 6526."
+"what is the purpose of the R/W-Read/Write Input in the 6526 interface signals","The R/W signal is normally supplied by the microprocessor and controls the direction of data transfers of the 6526."

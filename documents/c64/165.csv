@@ -1,0 +1,11 @@
+question,answer
+"TSX instruction is used for what purpose?","Transfer stack pointer to index X"
+"TSX is an abbreviation for what?","TSX Transfer stack pointer to index X"
+"What is the operation of TSX?","S -> X"
+"What is the abbreviation for the instruction TSX?","TSX"
+"What is the purpose of the TSX instruction?","Transfer stack pointer to index X"
+"What is the assembly language form of the TSX instruction?","TSX"
+"What is the OP CODE of the TSX instruction?","BA"
+"What is the number of bytes required for the TSX instruction?","1"
+"What is the number of cycles required for the TSX instruction?","2"
+"What is the addressing mode of the TSX instruction?","Implied"

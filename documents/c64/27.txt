@@ -1,0 +1,7 @@
+    These special sprite abilities make it simple to program many arcade
+  style games. Because the sprites are maintained by hardware, it is even
+  possible to write a good quality game in BASIC!
+    There are 8 sprites supported directly by the VIC-II chip. They are
+  numbered from 0 to 7. Each of the sprites has it own definition location,
+  position registers and color register, and has its own bits for enable
+  and collision detection.

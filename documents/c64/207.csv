@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the SETTIM function?","Set the system clock"
+"What is the call address of the SETTIM function?","$FFDB (hex) 65499 (decimal)"
+"What registers are used for communication in the SETTIM function?","A, X, Y"
+"What is the stack requirement for the SETTIM function?","2"
+"What is the maximum time that the SETTIM clock can count up to?","5,184,000 jiffies"
+"What is the unit of time that the SETTIM clock updates every?","1/60th of a second"
+"What is the term for one "1/60th of a second" in the SETTIM clock?","'jiffy'"
+"What are the three bytes used to set the initial time setting in the SETTIM function?","most significant byte, next most significant byte, least significant byte"
+"How many bytes are used to set the initial time setting in the SETTIM function?","3"
+"What is the example of setting the clock to 10 minutes in the SETTIM function?",";SET THE CLOCK TO 10 MINUTES = 3600 JIFFIES"

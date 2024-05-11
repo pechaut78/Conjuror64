@@ -1,0 +1,11 @@
+question,answer
+"Any device on the serial bus can bring this signal LOW when it requires attention from the Commodore 64.","The Commodore 64 will then take care of the device."
+"What is the purpose of bringing the signal LOW on the serial bus?","Any device on the serial bus can bring this signal LOW when it requires attention from the Commodore 64."
+"What happens when a device brings the signal LOW on the serial bus?","The Commodore 64 will then take care of the device."
+"What is the role of the Commodore 64 in this scenario?","The Commodore 64 will then take care of the device."
+"What happens when a device requires attention from the Commodore 64?","The Commodore 64 will then take care of the device."
+"What is the signal LOW used for on the serial bus?","Any device on the serial bus can bring this signal LOW when it requires attention from the Commodore 64."
+"What is the purpose of the Commodore 64 in this scenario?","The Commodore 64 will then take care of the device."
+"What happens when a device brings the signal LOW on the serial bus?","The Commodore 64 will then take care of the device."
+"What is the role of the device in this scenario?","Any device on the serial bus can bring this signal LOW when it requires attention from the Commodore 64."
+"What happens when the Commodore 64 receives a signal LOW on the serial bus?","The Commodore 64 will then take care of the device."

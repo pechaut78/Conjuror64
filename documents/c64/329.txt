@@ -1,0 +1,10 @@
+ R/W  (Pin 7)
+
+    This TTL-level input controls the direction of data transfers between
+  SID and the microprocessor. If the chip select conditions have been met,
+  a high on this line allows the microprocessor to Read data from the
+  selected SID register and a low allows the microprocessor to Write data
+  into the selected SID register. This pin is normally connected to the
+  system Read/Write line.
+
+  

@@ -1,0 +1,27 @@
+
+  B-25. Function Name: SCNKEY
+
+    Purpose: Scan the keyboard
+    Call address: $FF9F (hex) 65439 (decimal)
+    Communication registers: None
+    Preparatory routines: IOINIT
+    Error returns: None
+    Stack requirements: 5
+    Registers affected: A, X, Y
+
+    Description: This routine scans the Commodore 64 keyboard and checks
+  for pressed keys. It is the same routine called by the interrupt handler.
+  If a key is down, its ASCII value is placed in the keyboard queue. This
+  routine is called only if the normal IRQ interrupt is bypassed.
+
+  How to Use:
+
+  1) Call this routine.
+
+  EXAMPLE:
+
+    GET  JSR SCNKEY      ;SCAN KEYBOARD
+         JSR GETIN       ;GET CHARACTER
+         CMP #0          ;IS IT NULL?
+         BEQ GET         ;YES... SCAN AGAIN
+         JSR CHROUT      ;PRINT IT

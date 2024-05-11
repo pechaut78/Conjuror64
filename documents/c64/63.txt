@@ -1,0 +1,29 @@
+  SPRITE PRIORITIES
+
+    You can actually make different sprites seem to move IN FRONT OF or
+  BEHIND each other on the screen. This incredible three dimensional illu-
+  sion is achieved by the built-in SPRITE PRIORITIES which determine which
+  sprites have priority over the others when 2 or more sprites OVERLAP on
+  the screen.
+    The rule is "first come, first served" which means lower-numbered
+  sprites AUTOMATICALLY have priority over higher-numbered sprites. For
+  example, if you display sprite 0 and sprite 1 so they overlap on the
+  screen, sprite 0 will appear to be IN FRONT OF sprite 1. Actually, sprite
+  0 always supersedes all the other sprites because it's the lowest num-
+  bered sprite. In comparison, sprite 1 has priority over sprites 2-7;
+  sprite 2 has priority over sprites 3-7, etc. Sprite 7 (the last sprite)
+  has LESS PRIORITY than any of the other sprites, and will always appear
+  to be displayed "BEHIND" any other sprites which overlap its position.
+    To illustrate how priorities work, change lines 50, 60, and 70 in the
+  program above to the following:
+
+
+  50 POKEV,24:POKEV+1,50:POKEV+16,0
+  60 POKEV+2,34:POKEV+3,60
+  70 POKEV+4,44:POKEV+5,70
+
+
+  You should see a white sprite on top of a yellow sprite on top of an
+  orange sprite. Of course, now that you see how priorities work, you can
+  also MOVE SPRITES and take advantage of these priorities in your ani-
+  mation.

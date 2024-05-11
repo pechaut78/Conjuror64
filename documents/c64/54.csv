@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the interrupt status register?","The interrupt status register shows the current status of any interrupt source."
+"What happens when two sprites hit each other?","The current status of bit 2 of the interrupt register will be a 1 when two sprites hit each other."
+"What is the purpose of bit 7 in the interrupt status register?","Bit 7 is also set with a 1, whenever an interrupt occurs."
+"What is the location of the interrupt status register in memory?","The interrupt status register is located at 53273 ($D019)"
+"What happens when an interrupt bit is set?","Once an interrupt bit has been set, it's "latched" in and must be cleared by writing a 1 to that bit in the interrupt register when you're ready to handle it."
+"What is the purpose of the interrupt register in handling interrupts?","This allows selective interrupt handling, without having to store the other interrupt bits."
+"What is the description of bit 0 in the interrupt status register?","IRST    0   Set when current raster count = stored raster count"
+"What is the description of bit 1 in the interrupt status register?","IMDC    1   Set by SPRITE-DATA collision (1st one only, until reset)"
+"What is the description of bit 2 in the interrupt status register?","IMMC    2   Set by SPRITE-SPRITE collision (1st one only, until reset)"
+"What is the description of bit 3 in the interrupt status register?","ILP    3   Set by negative transition of light pen (1 per frame)"
+"What is the description of bit 7 in the interrupt status register?","IRQ    7   Set by latch set and enabled"

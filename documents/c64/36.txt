@@ -1,0 +1,7 @@
+
+EXPANDED SPRITES
+
+    The VIC-II chip has the ability to expand a sprite in the vertical
+  direction, the horizontal direction, or both at once. When expanded, each
+  dot in the sprite is twice as wide or twice as tall. Resolution doesn't
+  actually increase... the sprite just gets bigger.

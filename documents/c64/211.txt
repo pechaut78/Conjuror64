@@ -1,0 +1,32 @@
+
+
+
+  B-35. Function Name: TKSA
+
+    Purpose: Send a secondary address to a device commanded to TALK
+    Call address: $FF96 (hex) 65430 (decimal)
+    Communication registers: A
+    Preparatory routines: TALK
+    Error returns: See READST
+    Stack requirements: 8
+    Registers affected: A
+
+    Description: This routine transmits a secondary address on the serial
+  bus for a TALK device. This routine must be called with a number between
+  0 and 31 in the accumulator. The routine sends this number as a secondary
+  address command over the serial bus. This routine can only be called
+  after a call to the TALK routine. It will not work after a LISTEN.
+
+  How to Use:
+
+    0) Use the TALK routine.
+    1) Load the accumulator with the secondary address.
+    2) Call this routine.
+
+  EXAMPLE:
+
+    ;TELL DEVICE #4 TO TALK WITH COMMAND #7
+    LDA #4
+    JSR TALK
+    LDA #7
+    JSR TALKSA

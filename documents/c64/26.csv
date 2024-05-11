@@ -1,0 +1,11 @@
+question,answer
+"Can a sprite be displayed anywhere on the screen?","Yes, a sprite can be displayed anywhere on the screen."
+"What chip maintains sprites?","The VIC-II chip maintains sprites."
+"What information do you need to tell a sprite?","You need to tell a sprite what to look like, what color to be, and where to appear."
+"Can sprites be used with any graphics mode?","Yes, sprites can be used with any of the other graphics modes."
+"Can a sprite carry its own color definition?","Yes, a sprite can carry its own color definition."
+"How many sprites can be maintained by the VIC-II chip at a time?","Up to 8 sprites can be maintained by the VIC-II chip at a time."
+"What are the features of sprites?","The features of sprites include 24 horizontal dot by 21 vertical dot size, individual color control, sprite multi-color mode, magnification, and more."
+"Can sprites be magnified?","Yes, sprites can be magnified in horizontal, vertical, or both directions."
+"Can sprite priorities be selected?","Yes, sprite to background priority can be selected."
+"Can sprite collisions be detected?","Yes, sprite to sprite and sprite to background collisions can be detected."

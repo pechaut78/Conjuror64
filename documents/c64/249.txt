@@ -1,0 +1,60 @@
+  +-----------------------------------+-----------------------------------+
+  |          Z-80 ADDRESSES           |           6510 ADDRESSES          |
+  +-----------------+-----------------+-----------------+-----------------+
+  |     DECIMAL     |       HEX       |     DECIMAL     |       HEX       |
+  +-----------------+-----------------+-----------------+-----------------+
+  |    0000-4095    |    0000-0FFF    |    4096-8191    |    1000-1FFF    |
+  |    4096-8191    |    1000-1FFF    |    8192-12287   |    2000-2FFF    |
+  |    8192-12287   |    2000-2FFF    |   12288-16383   |    3000-3FFF    |
+  |   12288-16383   |    3000-3FFF    |   16384-20479   |    4000-4FFF    |
+  |   16384-20479   |    4000-4FFF    |   20480-24575   |    5000-5FFF    |
+  |   20480-24575   |    5000-5FFF    |   24576-28671   |    6000-6FFF    |
+  |   24576-28671   |    6000-6FFF    |   28672-32767   |    7000-7FFF    |
+  |   28672-32767   |    7000-7FFF    |   32768-36863   |    8000-SFFF    |
+  |   32768-36863   |    8000-8FFF    |   36864-40959   |    9000-9FFF    |
+  |   36864-40959   |    9000-9FFF    |   40960-45055   |    A000-AFFF    |
+  |   40960-45055   |    A000-AFFF    |   45056-49151   |    B000-BFFF    |
+  |   45056-49151   |    B000-BFFF    |   49152-53247   |    C000-CFFF    |
+  |   49152-53247   |    C000-CFFF    |   53248-57343   |    D000-DFFF    |
+  |   53248-57343   |    D000-DFFF    |   57344-61439   |    E000-EFFF    |
+  |   57344-61439   |    E000-EFFF    |   61440-65535   |    F000-FFFF    |
+  |   61440-65535   |    F000-FFFF    |    0000-4095    |    0000-0FFF    |
+  +-----------------+-----------------+-----------------+-----------------+
+
+    To TURN ON the Z-80 and TURN OFF the 6510 chip, type in the following
+  program:
+
+start tok64 page371.prg
+  10 rem this program is to be used with the z80 card
+  20 rem it first stores z80 data at $1000 (Z80=$0000)
+  30 rem then it turns off the 6510 irq's and enables
+  40 rem the z80 card. the z80 card must be turned off
+  50 rem to reenable the 6510 system.
+  100 rem store z80 data
+  110 read b: rem get size of z80 code to be moved
+  120 for i=4096 to 4096+b-1:rem move code
+  130 read a:poke i,a
+  140 next i
+  200 rem run z80 code
+  210 poke 56333,127: rem turn of 6510 irq's
+  220 poke 56832,00 : rem turn on z80 card
+  230 poke 56333,129: rem turn on 6510 irq's when z80 done
+  240 end
+  1000 rem z80 machine language code data section
+  1010 data 18 : rem size of data to be passed
+  1100 rem z80 turn on code
+  1110 data 00,00,00 : rem our z80 card requires turn on time at $0000
+  1200 rem z80 task data here
+  1210 data 33,02,245: rem ld hl,nn (location on screen)
+  1220 data 52 : rem inc hl (increment that location)
+  1300 rem z80 self-turn off data here
+  1310 data 62,01 : rem ld a,n
+  1320 data 50,00,206 : rem ld (nn),a :i/o location
+  1330 data 00,00,00  : rem nop, nop, nop
+  1340 data 195,00,00 : rem jmp $0000
+stop tok64
+
+
+    For more details about Commodore CP/M(R) and the Z-80 microprocessor
+  look for the cartridge and the Z-80 Reference Guide at your local
+  Commodore computer dealer.

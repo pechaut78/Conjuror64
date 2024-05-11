@@ -1,0 +1,12 @@
+question,answer
+"INC Operates on what type of memory?","Increment memory by one"
+"What is the operation of INC?","M + 1 -> M"
+"What is the purpose of INC?","Increment memory by one"
+"What is the assembly language form of INC?","INC Oper"
+"What is the OP CODE of INC in Zero Page mode?","E6"
+"What is the number of bytes required for INC in Zero Page mode?","2"
+"What is the number of cycles required for INC in Zero Page mode?","5"
+"What is the assembly language form of INC in Absolute mode?","INC Oper"
+"What is the OP CODE of INC in Absolute mode?","EE"
+"What is the number of bytes required for INC in Absolute mode?","3"
+"What is the number of cycles required for INC in Absolute mode?","6"

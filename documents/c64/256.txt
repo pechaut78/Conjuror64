@@ -1,0 +1,17 @@
+
+
+                              FILTER SETTINGS
+               +------------+--------------------------------+
+               |  Location  |            Contents            |
+               +------------+--------------------------------+
+               |    54293   |  Low cutoff frequency (0-7)    |
+               |    54294   |  High cutoff frequency (0-255) |
+               |    54295   |  Resonance (bits 4-7)          |
+               |            |  Filter voice 3 (bit 2)        |
+               |            |  Filter voice 2 (bit 1)        |
+               |            |  Filter voice 1 (bit 0)        |
+               |    54296   |  High pass (bit 6)             |
+               |            |  Bandpass (bit 5)              |
+               |            |  Low pass (bit 4)              |
+               |            |  Volume (bits 0-3)             |
+               +------------+--------------------------------+

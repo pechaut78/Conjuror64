@@ -1,0 +1,57 @@
+  B-39. Function Name: VECTOR
+
+    Purpose: Manage RAM vectors
+    Call address: $FF8D (hex) 65421 (decimal)
+    Communication registers: X, Y
+    Preparatory routines: None
+    Error returns: None
+    Stack requirements: 2
+    Registers affected: A, X, Y
+
+
+    Description: This routine manages all system vector jump addresses
+  stored in RAM. Calling this routine with the the accumulator carry bit
+  set stores the current contents of the RAM vectors in a list pointed to
+  by the X and Y registers. When this routine is called with the carry
+  clear, the user list pointed to by the X and Y registers is transferred
+  to the system RAM vectors. The RAM vectors are listed in the memory map.
+
+  +-----------------------------------------------------------------------+
+  | NOTE: This routine requires caution in its use. The best way to use it|
+  | is to first read the entire vector contents into the user area, alter |
+  | the desired vectors, and then copy the contents back to the system    |
+  | vectors.                                                              |
+  +-----------------------------------------------------------------------+
+
+  How to Use:
+
+  READ THE SYSTEM RAM VECTORS
+
+    1) Set the carry.
+    2) Set the X and y registers to the address to put the vectors.
+    3) Call this routine.
+
+  LOAD THE SYSTEM RAM VECTORS
+
+    1) Clear the carry bit.
+    2) Set the X and Y registers to the address of the vector list in RAM
+       that must be loaded.
+    3) Call this routine.
+
+
+  EXAMPLE:
+    ;CHANGE THE INPUT ROUTINES TO NEW SYSTEM
+    LDX #<USER
+    LDY #>USER
+    SEC
+    JSR VECTOR      ;READ OLD VECTORS
+    LDA #<MYINP     ;CHANGE INPUT
+    STA USER+10
+    LDA #>MYINP
+    STA USER+11
+    LDX #<USER
+    LDY #>USER
+    CLC
+    JSR VECTOR      ;ALTER SYSTEM
+    ...
+    USER *=*+26

@@ -1,0 +1,18 @@
+
+
+  PW LO/PW HI (Registers 02,03)
+
+    Together these registers form a 12-bit number (bits 4-7 of PW HI are
+  not used) which linearly controls the Pulse Width (duty cycle) of the
+  Pulse waveform on Oscillator 1. The pulse width is determined by the
+  following equation:
+
+                            PWout = (PWn/40.95) %
+
+  Where PWn is the 12-bit number in the Pulse Width registers.
+    The pulse width resolution allows the width to be smoothly swept with
+  no discernable stepping. Note that the Pulse waveform on Oscillator 1
+  must be selected in order for the Pulse Width registers to have any au-
+  dible effect. A value of 0 or 4095 ($FF) in the Pulse Width registers
+  will produce a constant DC output, while a value of 2048 ($800) will
+  produce a square wave.

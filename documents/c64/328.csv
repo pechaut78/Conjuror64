@@ -1,0 +1,10 @@
+question,answer
+"Is the master clock for SID referenced to this clock?","This TTL-Level input is the master clock for SID."
+"What controls data transfers between SID and the microprocessor?","02 also controls data transfers between SID and the microprocessor."
+"What is the nominal operating frequency of the system clock?","1.0 MHz."
+"What is the purpose of pin 6 in the system?","This TTL-Level input is the master clock for SID."
+"What is the function of pin 6 in data transfers?","Essentially, (02 acts as a high-active chip select as far as data transfers are concerned."
+"What is the condition for data transfer between SID and the microprocessor?","Data can only be transferred when (02 is high."
+"What is the typical connection of pin 6 in the system?","This pin is normally connected to the system clock."
+"What is the frequency of the system clock?","1.0 MHz."
+"What is the role of pin 6 in the system?","All oscillator frequencies and envelope rates are referenced to this clock."

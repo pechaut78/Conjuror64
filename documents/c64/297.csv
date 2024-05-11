@@ -1,0 +1,11 @@
+question,answer
+"Screen blanking is achieved by setting which register bit to 0?","DEN bit in register 17"
+"What happens to the screen when it is blanked?","The entire screen will be filled with the exterior color"
+"What is the purpose of blanking the screen?","To permit full processor utilization of the system bus"
+"What type of memory accesses are required when the screen is blanked?","Transparent (Phase 1) memory accesses"
+"What happens to sprite data when the screen is blanked?","Sprite data will be accessed if the sprites are not also disabled"
+"What is the default state of the DEN bit?","The DEN bit must be set to "1" for normal video display"
+"What happens to the system bus when the screen is blanked?","The system bus is utilized fully"
+"What is the effect of setting the DEN bit to 0?","The screen is blanked"
+"What is the purpose of setting the DEN bit to 1?","For normal video display"
+"What happens to the exterior color when the screen is blanked?","The exterior color is displayed on the entire screen"

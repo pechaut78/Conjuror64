@@ -1,0 +1,11 @@
+question,answer
+"Which pins are used to select one of the 29 SID registers?","These TTL-Level inputs"
+"What happens when a Write is performed to any of the three unused locations?","A Write is ignored and a Read returns invalid data"
+"What is the purpose of connecting the pins to the corresponding address lines of the micro-processor?","So that SID may be addressed in the same manner as memory"
+"How many registers can be selected using the provided addresses?","1 of 32 registers"
+"What happens when a Read is performed on the three unused locations?","A Read returns invalid data"
+"Why are the three remaining register locations not used?","The remaining three register locations are not used"
+"What is the significance of the three unused locations?","These pins are normally connected to the corresponding address lines of the micro-processor"
+"What is the function of the TTL-Level inputs?","These TTL-Level inputs are used to select one of the 29 SID registers"
+"What happens when a Write is performed to any of the three locations?","A Write is ignored"
+"What is the purpose of the provided addresses?","Enough addresses are provided to select 1 of 32 registers"

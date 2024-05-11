@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the NOP instruction","The purpose of the NOP instruction is to perform a No Operation, which means that the instruction does not perform any actual operation."
+"What is the number of cycles required to execute the NOP instruction","The NOP instruction requires 2 cycles to execute."
+"What is the addressing mode used by the NOP instruction","The NOP instruction uses the Implied addressing mode."
+"What is the assembly language form of the NOP instruction","The assembly language form of the NOP instruction is NOP."
+"What is the number of bytes required to encode the NOP instruction","The NOP instruction requires 1 byte to encode."
+"What is the opcode of the NOP instruction","The opcode of the NOP instruction is EA."
+"What is the purpose of the NOP instruction in assembly language programming","The purpose of the NOP instruction in assembly language programming is to perform a No Operation, which means that the instruction does not perform any actual operation."
+"What is the number of bytes required to encode the NOP instruction in assembly language programming","The NOP instruction in assembly language programming requires 1 byte to encode."
+"What is the purpose of the NOP instruction in computer architecture","The purpose of the NOP instruction in computer architecture is to perform a No Operation, which means that the instruction does not perform any actual operation."
+"What is the number of cycles required to execute the NOP instruction in computer architecture","The NOP instruction in computer architecture requires 2 cycles to execute."

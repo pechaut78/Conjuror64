@@ -1,0 +1,17 @@
+
+  6510 CHARACTERISTICS
+
+  MAXIMUM RATINGS
+  +--------------------------+------------+-----------------+-------------+
+  |          RATING          |   SYMBOL   |      VALUE      |    UNIT     |
+  +--------------------------+------------+-----------------+-------------+
+  |  SUPPLY VOLTAGE          |    Vcc     |   -0.3 to +7.0  |     VDC     |
+  |  INPUT VOLTAGE           |    Vin     |   -0.3 to +7.0  |     VDC     |
+  |  OPERATING TEMPERATURE   |    Ta      |    0 to +70     |   Celsius   |
+  |  STORAGE TEMPERATURE     |    Tstg    |   -55 to +150   |   Celsius   |
+ 
+ 
+  | NOTE: This device contains input protection against damage due to high|
+  | static voltages or electric fields; however, precautions should be    |
+  | taken to avoid application of voltages higher than the maximum rating.|
+ 

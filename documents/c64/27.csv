@@ -1,0 +1,11 @@
+question,answer
+"Can sprites be used to program arcade style games?","Yes, it is simple to program many arcade style games using sprites."
+"What is the advantage of using sprites for game development?","Because the sprites are maintained by hardware, it is even possible to write a good quality game in BASIC!"
+"How many sprites are supported directly by the VIC-II chip?","There are 8 sprites supported directly by the VIC-II chip."
+"What is the range of sprite numbers?","The sprites are numbered from 0 to 7."
+"What are the components of a sprite definition?","Each of the sprites has its own definition location, position registers and color register."
+"What are the additional features of a sprite?","Each of the sprites has its own bits for enable and collision detection."
+"Can sprites be used for collision detection?","Yes, sprites have its own bits for collision detection."
+"What is the purpose of the enable bit in a sprite?","The enable bit is used to enable or disable a sprite."
+"Can sprites be used for game development in BASIC?","Yes, it is even possible to write a good quality game in BASIC!"
+"What is the benefit of using sprites for game development?","It is simple to program many arcade style games using sprites."

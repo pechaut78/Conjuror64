@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the PEEK and POKE commands in CBM BASIC?","changing memory locations"
+"What is the term for the unique number that identifies each memory location?","address"
+"What is the analogy used to describe the memory in the Commodore 64?","street of buildings"
+"What is the purpose of the PEEK command?","changing memory locations"
+"What is the purpose of the POKE command?","changing memory locations"
+"What is the term for the number on each door in the memory street analogy?","address"
+"What is the purpose of the street of buildings analogy in describing memory?","to explain how memory is used"
+"What is the purpose of the PEEK command in graphics on the screen?","changing memory locations"
+"What is the purpose of the POKE command in sound effects?","changing memory locations"
+"What is the term for the number that identifies each memory location in the street of buildings analogy?","address"

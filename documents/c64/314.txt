@@ -1,0 +1,26 @@
+
+
+  DESCRIPTION
+
+    The 6581 consists of three synthesizer "voices" which can be used
+  independently or in conjunction with each other (or external audio
+  sources) to create complex sounds. Each voice consists of a Tone
+  Oscillator/Waveform Generator, an Envelope Generator and an Amplitude
+  Modulator. The Tone Oscillator controls the pitch of the voice over a
+  wide range. The Oscillator produces four waveforms at the selected
+  frequency, with the unique harmonic content of each waveform providing
+  simple control of tone color. The volume dynamics of the oscillator are
+  controlled by the Amplitude Modulator under the direction of the Envelope
+  Generator. When triggered, the Envelope Generator creates an amplitude
+  envelope with programmable rates of increasing and decreasing volume. In
+  addition to the three voices, a programmable Filter is provided for
+  generating complex, dynamic tone colors via subtractive synthesis.
+    SID allows the microprocessor to read the changing output of the third
+  Oscillator and third Envelope Generator. These outputs can be used as a
+  source of modulation information for creating vibrato, frequency/filter
+  sweeps and similar effects. The third oscillator can also act as a random
+  number generator for games. Two A/D converters are provided for inter-
+  facing SID with potentiometers. These can be used for "paddles" in a
+  game environment or as front panel controls in a music synthesizer. SID
+  can process external audio signals, allowing multiple SID chips to be
+  daisy-chained or mixed in complex polyphonic systems.

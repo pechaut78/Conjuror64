@@ -1,0 +1,25 @@
+  THE OPERATING SYSTEM (OS)
+    The Operating System is contained in the Read Only Memory (ROM) chips
+  and is a combination of three separate, but interrelated, program
+  modules.
+
+    1) The BASIC Interpreter
+    2) The KERNAL
+    3) The Screen Editor
+
+    1) The BASIC Interpreter is responsible for analysing BASIC statement
+       syntax and for performing the required calculations and/or data
+       manipulation. The BASIC Interpreter has a vocabulary of 65
+       "keywords" which have special meanings. The upper and lower case
+       alphabet and the digits 0-9 are used to make both keywords and
+       variable names. Certain punctuation characters and special symbols
+       also have meanings for the Interpreter. Table 1-1 lists the special
+       characters and their uses.
+    2) The KERNAL handles most of the interrupt level processing in the
+       system (for details on interrupt level processing, see Chapter 5).
+       The KERNAL also does the actual input and output of data.
+    3) The Screen Editor controls the output to the video screen (tele-
+       vision set) and the editing of BASIC program text. In addition, the
+       Screen Editor intercepts keyboard input so that it can decide
+       whether the characters put in should be acted upon immediately, or
+       passed on to the BASIC Interpreter.

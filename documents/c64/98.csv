@@ -1,0 +1,11 @@
+question,answer
+"How do you write machine language programs?","You must use either a program to do this, or write for yourself a BASIC program that allows you to write machine language."
+"What is the most common method used to write machine language programs?","Assembler programs are the most common method used to write machine language programs."
+"What is an assembler?","An assembler is a program that allows you to write machine language instructions in a standardized mnemonic format."
+"What is the purpose of an assembler?","The purpose of an assembler is to make machine language programs more readable by allowing you to write machine language instructions in a standardized mnemonic format."
+"What is the difference between an assembler and a disassembler?","An assembler is a program that allows you to write machine language instructions in a standardized mnemonic format, while a disassembler is a program that displays a machine language program in mnemonic format."
+"What is a machine language monitor cartridge?","A machine language monitor cartridge is a cartridge made by Commodore that includes an assembler and disassembler, among other features."
+"What is the purpose of a machine language monitor cartridge?","The purpose of a machine language monitor cartridge is to provide a tool for writing and editing machine language programs."
+"What is the importance of using a program to write machine language programs?","Using a program to write machine language programs is important because it allows you to write machine language instructions in a standardized mnemonic format."
+"What are the benefits of using an assembler?","The benefits of using an assembler include making machine language programs more readable and allowing you to write machine language instructions in a standardized mnemonic format."
+"What are the limitations of writing machine language programs without an assembler?","Writing machine language programs without an assembler can be difficult and may result in a stream of numbers that is hard to read."

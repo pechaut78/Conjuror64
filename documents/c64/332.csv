@@ -1,0 +1,11 @@
+question,answer
+"Should the ground line between SID and the power supply be separate?","Yes, for best results."
+"What is the purpose of separating the ground line between SID and the power supply?","To minimize digital noise at the audio output."
+"What should be done to minimize digital noise at the audio output?","Separate the ground line between SID and the power supply."
+"What is the recommended approach for the ground line between SID and the power supply?","Make it separate from ground lines to other digital circuitry."
+"Why is it important to separate the ground line between SID and the power supply?","To minimize digital noise at the audio output."
+"What happens if the ground line between SID and the power supply is not separate?","Digital noise at the audio output may occur."
+"What is the consequence of not separating the ground line between SID and the power supply?","Digital noise at the audio output."
+"What is the recommended way to prevent digital noise at the audio output?","Separate the ground line between SID and the power supply."
+"Why is digital noise at the audio output a problem?","It may affect the quality of the audio output."
+"What is the recommended approach to prevent digital noise at the audio output?","Separate the ground line between SID and the power supply."

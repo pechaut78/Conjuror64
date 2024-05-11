@@ -1,0 +1,11 @@
+question,answer
+"what is the normal display size of the display window?","The normal display consists of 25 rows of 40 characters (or character regions) per row."
+"What is the minimum number of rows in the reduced display window?","24 rows"
+"What is the maximum number of columns in the standard display window?","40 columns"
+"What is the purpose of the RSEL bit?","The RSEL bit is in register 17 ($11) and the CSEL bit is in register 22 ($16)."
+"What is the default display window size?","The larger display window is normally used, while the smaller display window is normally used in conjunction with scrolling."
+"What is the purpose of the CSEL bit?","The RSEL bit is in register 17 ($11) and the CSEL bit is in register 22 ($16)."
+"What is the minimum number of columns in the reduced display window?","38 columns"
+"What is the purpose of the reduced display window?","The display window may be reduced to 24 rows and 38 characters."
+"What is the purpose of the standard display window?","For standard display the larger display window is normally used,"
+"What is the purpose of the scrolling feature?","The smaller display window is normally used in conjunction with scrolling."

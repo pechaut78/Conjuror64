@@ -1,0 +1,11 @@
+question,answer
+"JMP operation explained","The JMP operation is used to jump to a new location in the program."
+"JMP operation syntax","The syntax for the JMP operation is (PC + 1) -> PCL."
+"JMP operation modes","The JMP operation has two modes: Absolute and Indirect."
+"Absolute JMP mode","In Absolute mode, the JMP operation uses the OP CODE 4C and requires 3 bytes and 3 cycles."
+"Indirect JMP mode","In Indirect mode, the JMP operation uses the OP CODE 6C and requires 3 bytes and 5 cycles."
+"JMP operation purpose","The purpose of the JMP operation is to jump to a new location in the program."
+"JMP operation examples","Examples of the JMP operation include JMP Oper and JMP (Oper)."
+"JMP operation usage","The JMP operation is used to transfer control to a new location in the program."
+"JMP operation limitations","The JMP operation has limitations, such as requiring a specific OP CODE and number of bytes and cycles."
+"JMP operation importance","The JMP operation is important in programming as it allows for control flow and program branching."

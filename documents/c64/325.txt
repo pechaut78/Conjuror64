@@ -1,0 +1,10 @@
+  ENV 3 (Register $1C)
+
+    Same as OSC 3, but this register allows the microprocessor to read the
+  output of the Voice 3 Envelope Generator. This output can be added to the
+  Filter Frequency to produce harmonic envelopes, WAH-WAH, and similar
+  effects. "Phaser" sounds can be created by adding this output to the
+  frequency control registers of an oscillator. The Voice 3 Envelope
+  Generator must be Gated in order to produce any output from this regis-
+  ter. The OSC 3 register, however, always reflects the changing output of
+  the oscillator and is not affected in any way by the Envelope Generator.

@@ -1,0 +1,34 @@
+
+
+
+  FREQUENCIES OF SOUND WAVES
+
+    Sound is created by the movement of air in waves. Think of throwing a
+  stone into a pool and seeing the waves radiate outward. When similar
+  waves are created in air, we hear it. If we measure the time between one
+  peak of a wave and the next, we find the number of seconds for one cycle
+  of the wave (n = number of seconds). The reciprocal of this number (1/n)
+  gives you the cycles per second. Cycles per second are more commonly
+  known as the frequency. The highness or lowness of a sound (pitch) is
+  determined by the frequency of the sound waves produced.
+    The sound generator in your Commodore computer uses two locations to
+  determine the frequency. Appendix E gives you the frequency values you
+  need to reproduce a full eight octaves of musical notes. To create a
+  frequency other than the ones listed in the note table use "Fout" (fre-
+  quency output) and the following formula to represent the frequency (Fn)
+  of the sound you want to create. Remember that each note requires both a
+  high and a low frequency number.
+
+             Fn = Fout/.06097
+
+    Once you've figured out what Fn is for your "new" note the next step is
+  to create the high and low frequency values for that note. To do this you
+  must first round off Fn so that any numbers to the right of the decimal
+  point are left off. You are now left with an integer value. Now you can
+  set the high frequency location (Fhi) by using the formula
+  Fhi=INT(Fn/256) and the low frequency location (Flo) should be
+  Flo=Fn-(256*Fhi).
+    At this point you have already played with one voice of your computer.
+  If you wanted to stop here you could find a copy of your favorite tune
+  and become the maestro conducting your own computer orchestra in your "at
+  home" concert hall.

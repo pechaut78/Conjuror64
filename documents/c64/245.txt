@@ -1,0 +1,10 @@
+
+
+  SERIAL ATN OUT: (SERIAL ATTENTION OUT)
+
+    The Commodore 64 uses this signal to start a command sequence for a
+  device on the serial bus. When the Commodore 64 brings this signal LOW,
+  all other devices on the bus start listening for the Commodore 64 to
+  transmit an address. The device addressed must respond in a preset period
+  of time; otherwise, the Commodore 64 will assume that the device
+  addressed is not on the bus, and will return an error in the STATUS WORD.

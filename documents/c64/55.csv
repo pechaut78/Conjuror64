@@ -1,0 +1,11 @@
+question,answer
+"What is the location of the Interrupt Enable Register?","The Interrupt Enable Register is located at 53274 ($D01A)."
+"What is the purpose of the Interrupt Enable Register?","Unless the corresponding bit in the interrupt enable register is set to a 1, no interrupt from that source will take place."
+"What happens if the Interrupt Enable Register is not set to a 1?","No interrupt will take place."
+"What is the requirement to enable an interrupt request?","The corresponding interrupt enable bit must be set to a 1."
+"What is the benefit of using interrupts properly?","It lets you use split screen modes."
+"What is an example of using interrupts properly?","For instance, you can have half of the screen bit mapped, half text."
+"What is the purpose of the raster compare register?","To set the interrupt to occur at a specific point on the screen."
+"What is the limitation of using BASIC for display interrupts?","BASIC isn't fast enough to do this very well."
+"What is the recommended approach for using display interrupts?","You should work in machine language."
+"What is the advantage of using display interrupts?","You can display more than 8 sprites at a time."

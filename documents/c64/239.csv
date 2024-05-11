@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the two-byte pointer $00F7?","a two-byte pointer to the Receiver Buffer base location."
+"what is the purpose of the two-byte pointer $00F9?","a two-byte pointer to the Transmitter Buffer base location."
+"what are the two locations set up by the OPEN KERNAL routine?","the Receiver Buffer base location and the Transmitter Buffer base location"
+"what are the two locations pointing to?","different 256-byte buffers"
+"what happens when a zero is written into the high order bytes $00F8 and $00FA?","the locations are de-allocated"
+"who can de-allocate the buffer(s) for their own purposes?","the machine language programmer"
+"what must be taken care of when using a machine language program that allocates these buffers?","the top of memory pointers"
+"what should be considered when running BASIC programs at the same time?","the top of memory pointers"
+"what is the importance of the two-byte pointers $00F7 and $00F9?","they point to different buffer locations"
+"what happens to the buffer(s) when the CLOSE KERNAL entry is called?","they are de-allocated"

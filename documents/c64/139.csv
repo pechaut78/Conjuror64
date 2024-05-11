@@ -1,0 +1,10 @@
+question,answer
+"INY operation increments what by one","INY operation increments the index Y by one"
+"INY operation increments what data type","INY operation increments the index Y"
+"INY operation is an example of what type of operation","INY operation is an example of an implied operation"
+"INY operation is used to increment what variable","INY operation is used to increment the index Y"
+"INY operation is used in what addressing mode","INY operation is used in implied addressing mode"
+"INY operation is used in what assembly language form","INY operation is used in assembly language form"
+"INY operation is used in what number of bytes","INY operation is used in 1 byte"
+"INY operation is used in what number of cycles","INY operation is used in 2 cycles"
+"INY operation is used in what operation code","INY operation is used in operation code C8"

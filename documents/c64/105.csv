@@ -1,0 +1,11 @@
+question,answer
+"Indirect indexed mode allows usage of which register as the index?","Y register"
+"What is the mode of instruction in indirect indexed mode?","indirect"
+"What is the low byte of the actual address in indirect indexed mode?","zero page"
+"What is the high order byte of the actual address in indirect indexed mode?","next byte"
+"What is the purpose of the instruction in indirect indexed mode?","load the accumulator"
+"What is the actual address in indirect indexed mode?","$1E45 + Y"
+"What is the low order byte of the actual address in indirect indexed mode?","contents of $02"
+"What is the high order byte of the actual address in indirect indexed mode?","contents of $03"
+"What is the Y register value in indirect indexed mode?","$00"
+"What is the equivalent code for delivering a letter in indirect indexed mode?","LDA #$00, STA $02, LDA #$16, STA $03, LDY #$05, LDA ($02),Y"

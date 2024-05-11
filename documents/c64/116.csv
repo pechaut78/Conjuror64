@@ -1,0 +1,11 @@
+question,answer
+"Is the BCC instruction used for branching?","Yes, it is used for branching."
+"What is the operation of the BCC instruction?","The operation of the BCC instruction is Branch on Carry Clear."
+"What is the condition for the BCC instruction?","The condition for the BCC instruction is Branch on Carry Clear."
+"What is the assembly language form of the BCC instruction?","The assembly language form of the BCC instruction is BCC Oper."
+"What is the OP code of the BCC instruction?","The OP code of the BCC instruction is 90."
+"How many bytes does the BCC instruction occupy?","The BCC instruction occupies 2 bytes."
+"How many cycles does the BCC instruction take?","The BCC instruction takes 2 cycles."
+"Is the BCC instruction used for relative addressing?","Yes, the BCC instruction is used for relative addressing."
+"What is the condition for adding 1 to the cycle count for the BCC instruction?","The condition for adding 1 to the cycle count for the BCC instruction is if the branch occurs to the same page."
+"What is the condition for adding 2 to the cycle count for the BCC instruction?","The condition for adding 2 to the cycle count for the BCC instruction is if the branch occurs to a different page."

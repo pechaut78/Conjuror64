@@ -1,0 +1,45 @@
+
+
+
+  USING MULTI-COLOR:
+
+    You can create multi-colored sprites although using multi-color mode
+  requires that you use PAIRS of pixels instead of individual pixels in
+  your sprite picture (in other words each colored "dot" or "block" in the
+  sprite will consist of two pixels side by side). You have 4 colors to
+  choose from: Sprite Color (chart,above), Multi-Color 1, Multi-Color 2 and
+  "Background Color" (background is achieved by using zero settings which
+  let the background color "show through"). Consider one horizontal 8-pixel
+  block in a sprite picture. The color of each PAIR of pixels is determined
+  according to whether the left, right, or both pixels are solid, like
+  this:
+
+  +-+-+
+  | | | BACKGROUND      (Making BOTH PIXELS BLANK (zero) lets the
+  +-+-+                  INNER SCREEN COLOR (background)show through.)
+
+  +-+-+
+  | |@| MULTI-COLOR 1   (Making the RIGHT PIXEL SOLID in a pair of pixels
+  +-+-+                  sets BOTH PIXELS to Multi-Color 1.)
+
+  +-+-+
+  |@| | SPRITE COLOR    (Making the LEFT PIXEL SOLID in a pair of pixels
+  +-+-+                  sets BOTH PIXELS to Sprite Color.)
+
+  +-+-+
+  |@|@| MULTI-COLOR 2   (Making BOTH PIXELS SOLID in a pair of pixels
+  +-+-+                  sets BOTH PIXELS to Multi-Color 2.)
+
+
+  Look at the horizontal 8-pixel row shown below. This block sets the first
+  two pixels to background color, the second two pixels to Multi-Color 1,
+  the third two pixels to Sprite Color and the fourth two pixels to Multi-
+  Color 2. The color of each PAIR of pixels depends on which bits in each
+  pair are solid and which are blank, according to the illustration above.
+  After you determine which colors you want in each pair of pixels, the
+  next step is to add the values of the solid pixels in the 8-pixel block,
+  and POKE that number into the proper memory location. For example, if the
+  8-pixel row shown below is the first block in a sprite which begins at
+  memory location 832, the value of the solid pixels is 16+8+2+1 27, so you
+  would POKE 832,27.
+

@@ -1,0 +1,49 @@
+    Your Commodore computer is equipped with one of the most sophisticated
+  electronic music synthesizers available on any computer. It comes
+  complete with three voices, totally addressable, ATTACK/DECAY/SUSTAIN/
+  RELEASE (ADSR), filtering, modulation, and "white noise." All of these
+  capabilities are directly available for you through a few easy to use
+  BASIC and/or assembly language statements and functions. This means that
+  you can make very complex sounds and songs using programs that are
+  relatively simple to design.
+    This section of your Programmer's Reference Guide has been created to
+  help you explore all the capabilities of the 6581 "SID" chip, the sound
+  and music synthesizer inside your Commodore computer. We'll explain both
+  the theory behind musical ideas and the practical aspects of turning
+  those ideas into real finished songs on your Commodore computer.
+    You need not be an experienced programmer nor a music expert to achieve
+  exciting results from the music synthesizer. This section is full of
+  programming examples with complete explanations to get you started.
+    You get to the sound generator by POKEing into specified memory
+  locations. A full list of the locations used is provided in Appendix O.
+  We will go through each concept, step by step. By the end you should be
+  able to create an almost infinite variety of sounds, and be ready to
+  perform experiments with sound on your own.
+    Each section of this chapter begins by giving you an example and a full
+  line-by-line description of each program, which will show you how to use
+  the characteristic being discussed. The technical explanation is for you
+  to read whenever you are curious about what is actually going on. The
+  workhorse of your sound programs is the POKE statement. POKE sets the
+  indicated memory location (MEM) equal to a specified value (NUM).
+    POKE MEM,NUM
+    The memory locations (MEM) used for music synthesis start at 54272
+  ($D400) in the Commodore 64. The memory locations 54272 to 54296
+  inclusive are the POKE locations you need to remember when you're using
+  the 6581 (SID) chip register map. Another way to use the locations above
+  is to remember only location 54272 and then add a number from 0 through
+  24 to it. By doing this you can POKE all the locations from 54272 to
+  54296 that you need from the SID chip. The numbers (NUM) that you use in
+  your POKE statement must be between 0 and 255, inclusive.
+    When you've had a little more practice with making music, then you can
+  get a little more involved, by using the PEEK function. PEEK is a
+  function that is equal to the value currently in the indicated memory
+  location.
+    X=PEEK(MEM)
+
+    The value of the variable X is set equal to the current contents of
+  memory location MEM.
+    Of course, your programs include other BASIC commands, but for a full
+  explanation of them, refer to the BASIC Statements section of this
+  manual.
+ 
+     

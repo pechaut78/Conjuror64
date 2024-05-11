@@ -1,0 +1,62 @@
+  CHARACTER DISPLAY MODE
+
+    In the character display mode, the 6566/6567 fetches CHARACTER POINTERs
+  from the VIDEO MATRIX area of memory and translates the pointers to
+  character dot location addresses in the 2048 byte CHARACTER BASE area of
+  memory. The video matrix is comprised of 1000 consecutive locations in
+  memory which each contain an eight-bit character pointer. The location of
+  the video matrix within memory is defined by VM13-VM10 in register 24
+  ($18) which are used as the 4 MSB of the video matrix address. The lower
+  order 10 bits are provided by an internal counter (VC9-VC0) which steps
+  through the 1000 character locations. Note that the 6566/6567 provides 14
+  address outputs; therefore, additional system hardware may be required
+  for complete system memory decodes.
+
+                          CHARACTER POINTER ADDRESS
+
+     A13| A12| A11| A10| A09| A08| A07| A06| A05| A04| A03| A02| A01| A00
+  ------+----+----+----+----+----+----+----+----+----+----+----+----+------
+    VM13|VM12|VM11|VM10| VC9| VC8| VC7| VC6| VC5| VC4| VC3| VC2| VC1| VC0
+
+
+    The eight-bit character pointer permits up to 256 different character
+  definitions to be available simultaneously. Each character is an 8*8 dot
+  matrix stored in the character base as eight consecutive bytes. The loca-
+  tion of the character base is defined by CB13-CB11 also in register 24
+  ($18) which are used for the 3 most significant bits (MSB) of the char-
+  acter base address. The 11 lower order addresses are formed by the 8-bit
+  character pointer from the video matrix (D7-D0) which selects a
+  particular character, and a 3-bit raster counter (RC2-RC0) which selects
+  one of the eight character bytes. The resulting characters are formatted
+  as 25 rows of 40 characters each. In addition to the 8-bit character
+  pointer, a 4-bit COLOR NYBBLE is associated with each video matrix
+  location (the video matrix memory must be 12 bits wide) which defines one
+  of sixteen colors for each character.
+
+
+                           CHARACTER DATA ADDRESS
+
+     A13| A12| A11| A10| A09| A08| A07| A06| A05| A04| A03| A02| A01| A00
+  ------+----+----+----+----+----+----+----+----+----+----+----+----+------
+    CB13|CB12|CB11| D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | RC2| RC1| RC0
+
+
+  STANDARD CHARACTER MODE (MCM = BMM = ECM = 0)
+
+    In the standard character mode, the 8 sequential bytes from the
+  character base are displayed directly on the 8 lines in each character
+  region. A "0" bit causes the background #0 color (from register 33 ($21))
+  to be displayed while the color selected by the color nybble (foreground)
+  is displayed for a "1" bit (see Color Code Table).
+
+                | CHARACTER |
+     FUNCTION   |    BIT    |               COLOR DISPLAYED
+  --------------+-----------+----------------------------------------------
+    Background  |     0     |  Background #0 color
+                |           |  (register 33 ($21)
+    Foreground  |     1     |  Color selected by 4-bit color nybble
+
+
+    Therefore, each character has a unique color determined by the 4-bit
+  color nybble (1 of 16) and all characters share the common background
+  color.

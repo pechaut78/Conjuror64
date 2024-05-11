@@ -1,0 +1,11 @@
+question,answer
+"What character sets are available on the Commodore 64?","The Commodore 64 has two complete character sets that you can use either from the keyboard or in your programs."
+"What happens when you hold down the <SHIFT> key while typing?","Holding down the <SHIFT> key while typing any character that doesn't have graphic symbols on the front of the key gives you the symbol on the top most part of the key."
+"What is the purpose of the <C=> key?","The graphic symbols on the LEFT side of the front of the keys are displayed by pressing the <C=> key, while the symbols on the top most part of any key without graphics characters are selected when you hold down the <SHIFT> key while typing."
+"What happens when you hold down the <C=> key while typing?","The graphic symbols on the LEFT side of the front of the keys are displayed by pressing the <C=> key, while the symbols on the top most part of any key without graphics characters are selected when you hold down the <SHIFT> key while typing."
+"What is the effect of holding down the <SHIFT> key while typing any character?","Holding down the <SHIFT> key while typing any character that doesn't have graphic symbols on the front of the key gives you the symbol on the top most part of the key."
+"What are the available characters in SET 1?","The upper case alphabet and the numbers 0-9 are available without pressing the <SHIFT> key."
+"What are the available characters in SET 2?","The lower case alphabet and the numbers 0-9 are available without pressing the <SHIFT> key."
+"How do you switch from one character set to the other?","To switch from one character set to the other press the <C=> and the <SHIFT> keys together."
+"What happens when you hold down the <SHIFT> key while typing an uppercase letter?","The upper case alphabet is available when you hold down the <SHIFT> key while typing."
+"What happens when you hold down the <C=> key while typing a lowercase letter?","The lower case alphabet is available without pressing the <SHIFT> key."

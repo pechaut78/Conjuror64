@@ -1,0 +1,26 @@
+
+
+  B-21. Function Name: RDTIM
+
+    Purpose: Read system clock
+    Call address: $FFDE (hex) 65502 (decimal)
+    Communication registers: A, X, Y
+    Preparatory routines: None
+    Error returns: None
+    Stack requirements: 2
+    Registers affected: A, X, Y
+
+    Description: This routine is used to read the system clock. The clock's
+  resolution is a 60th of a second. Three bytes are returned by the
+  routine. The accumulator contains the most significant byte, the X index
+  register contains the next most significant byte, and the Y index
+  register contains the least significant byte.
+
+  EXAMPLE:
+
+    JSR RDTIM
+    STY TIME
+    STX TIME+1
+    STA TIME+2
+    ...
+    TIME *=*+3

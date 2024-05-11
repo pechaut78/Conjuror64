@@ -1,0 +1,11 @@
+question,answer
+"Set bottom of memory","This routine is used to set the bottom of the memory."
+"What is the purpose of MEMBOT routine","This routine is used to set the bottom of the memory."
+"What is the call address of MEMBOT routine","$FF9C (hex) 65436 (decimal)"
+"What registers are affected by MEMBOT routine","Registers affected: X, Y"
+"What is the initial value of the pointer to the lowest byte of RAM on the unexpanded Commodore 64","$0800 (2048 in decimal)"
+"What happens when the accumulator carry bit is set when calling MEMBOT routine","a pointer to the lowest byte of RAM is returned in the X and Y registers"
+"What happens when the accumulator carry bit is clear when calling MEMBOT routine","the values of the X and Y registers are transferred to the low and high bytes, respectively, of the pointer to the beginning of RAM"
+"How to read the bottom of RAM","TO READ THE BOTTOM OF RAM 1) Set the carry. 2) Call this routine."
+"How to set the bottom of memory","TO SET THE BOTTOM OF MEMORY 1) Clear the carry. 2) Call this routine."
+"What is the example of moving the bottom of memory up 1 page",";MOVE BOTTOM OF MEMORY UP 1 PAGE SEC ;READ MEMORY BOTTOM JSR MEMBOT INY CLC ;SET MEMORY BOTTOM TO NEW VALUE JSR MEMBOT"

@@ -1,0 +1,12 @@
+question,answer
+"What are the five sources of interrupts on the 6526?","underflow from TIMER A, underflow from TIMER B, TOD ALARM, Serial Port full/empty and /FLAG."
+"What is the purpose of the MASK register?","provides convenient control of individual mask bits."
+"What happens when writing to the MASK register with bit 7 as ZERO?","any mask bit written with a one will be cleared, while those mask bits written with a zero will be unaffected."
+"What happens when writing to the MASK register with bit 7 as ONE?","any mask bit written with a one will be set, while those mask bits written with a zero will be unaffected."
+"What is the condition for an interrupt flag to set IR and generate an Interrupt Request?","the corresponding MASK bit must be set."
+"What is the purpose of the DATA register?","any interrupt will set the corresponding bit in the DATA register."
+"What happens to the DATA register after a read?","it is cleared."
+"What is the purpose of the /IRQ pin?","bring the /IRQ pin low."
+"What is the purpose of polling the IR bit?","detect which chip has generated an interrupt request."
+"What is the limitation of polling the IR bit?","it will cause the DATA register to clear."
+"What is the responsibility of the user when polled interrupts are present?","preserve the information contained in the DATA register if any polled interrupts were present."

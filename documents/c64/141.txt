@@ -1,0 +1,10 @@
+  JSR          JSR Jump to new location saving return address           JSR
+
+  Operation:  PC + 2 toS, (PC + 1) -> PCL               N Z C I D V
+                          (PC + 2) -> PCH               _ _ _ _ _ _
+
+  +----------------+-----------------------+---------+---------+----------+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  +----------------+-----------------------+---------+---------+----------+
+  |  Absolute      |   JSR Oper            |    20   |    3    |    6     |
+  +----------------+-----------------------+---------+---------+----------+

@@ -1,0 +1,11 @@
+question,answer
+"What is the function of the ACPTR kernel routine?","Input byte from serial port"
+"What is the purpose of the CHKIN kernel routine?","Open channel for input"
+"What is the function of the CIOUT kernel routine?","Output byte to serial port"
+"What is the purpose of the CINT kernel routine?","Initialize screen editor"
+"What is the function of the CLOSE kernel routine?","Close a specified logical file"
+"What is the purpose of the CLRCHN kernel routine?","Close input and output channels"
+"What is the function of the GETIN kernel routine?","Get character from keyboard queue"
+"What is the purpose of the IOBASE kernel routine?","Returns base address of I/O devices"
+"What is the function of the IOINIT kernel routine?","Initialize input/output"
+"What is the purpose of the LISTEN kernel routine?","Command devices on the serial bus to LISTEN"

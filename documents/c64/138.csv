@@ -1,0 +1,11 @@
+question,answer
+"what is the operation performed by the INX instruction","Increment Index X by one"
+"what is the result of the operation INX","X + 1"
+"what is the assembly language form of the INX instruction","INX"
+"what is the op code for the INX instruction","E8"
+"how many bytes does the INX instruction occupy","1"
+"how many cycles does the INX instruction take","2"
+"what is the addressing mode of the INX instruction","Implied"
+"what is the purpose of the INX instruction","Increment Index X"
+"what is the format of the INX instruction","INX Increment Index X by one"
+"what is the operation performed by the INX instruction in assembly language","X + 1"

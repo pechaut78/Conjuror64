@@ -1,0 +1,9 @@
+
+
+  READ/WRITE (R/W)
+
+    The read/write input, R/W, is used to determine the direction of data
+  transfer on the data bus, in conjunction with /CS. When R/W is high ("1")
+  data is transferred from the selected register to the data bus output.
+  When R/W is low ("0") data presented on the data bus pins is loaded into
+  the selected register.

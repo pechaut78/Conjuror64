@@ -1,0 +1,33 @@
+    The Programmable Character Worksheet will help you design
+  your own characters. There is an 8 by 8 matrix on the sheet, with row
+  numbers, and numbers at the top of each column. (if you view each row as
+  a binary word, the numbers are the value of that bit position. Each is a
+  power of 2. The leftmost bit is equal to 128 or 2 to the 7th power, the
+  next is equal to 64 or 2 to the 6th, and so on, until you reach the
+  rightmost bit (bit 0) which is equal to 1 or 2 to the 0 power.)
+    Place an X on the matrix at every location where you want a dot to be
+  in your character. When your character is ready you can create the DATA
+  statement for your character.
+    Begin with the first row. Wherever you placed an X, take the number at
+  the top of the column (the power-of-2 number, as explained above) and
+  write it down. When you have the numbers for every column of the first
+  row, add them together. \Mite this number down, next to the row. This is
+  the number that you will put into the DATA statement to draw this row.
+    Do the same thing with all of the other rows (1-7). When you are
+  finished you should have 8 numbers between 0 and 255. If any of your
+  numbers are not within range, recheck your addition. The numbers must be
+  in this range to be correct! If you have less than 8 numbers, you missed
+  a row. It's OK if some are 0. The 0 rows are just as important as the
+  other numbers.
+    Replace the numbers in the DATA statement in line 20 with the numbers
+  you just calculated, and RUN the program. Then type a T. Every time you
+  type it, you'll see your own character!
+    If you don't like the way the character turned out, just change the
+  numbers in the DATA statement and re-RUN the program until you are happy
+  with your character.
+ 
+
+   HINT: For best results, always make any vertical lines in your        
+   characters at least 2 dots (bits) wide. This helps prevent CHROMA     
+   noise (color distortion) on your characters when they are displayed   
+   on a TV screen.                                                       

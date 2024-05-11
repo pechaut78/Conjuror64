@@ -1,0 +1,11 @@
+question,answer
+"Standard bit map mode is used when?", "When the color information is derived only from the data stored in the video matrix."
+"When color nybble is disregarded in standard bit map mode?", "The color nybble is disregarded."
+"How many colors can be independently selected in each 8*8 dot block?", "Two colors can be independently selected."
+"What happens when a bit in the display memory is a '0' in standard bit map mode?", "The color of the output dot is set by the least significant nybble."
+"What happens when a bit in the display memory is a '1' in standard bit map mode?", "The output color is determined by the most significant nybble."
+"What is the least significant nybble used for in standard bit map mode?", "The least significant nybble is used to set the output dot color."
+"What is the most significant nybble used for in standard bit map mode?", "The most significant nybble is used to determine the output color."
+"What is the purpose of dividing the 8 bits into two 4-bit nybbles in standard bit map mode?", "To allow two colors to be independently selected in each 8*8 dot block."
+"In standard bit map mode, what happens to the color information?", "The color information is derived only from the data stored in the video matrix."
+"What is the significance of the video matrix pointer in standard bit map mode?", "The video matrix pointer determines the output color."

@@ -1,0 +1,35 @@
+
+
+  OUTPUT TO MODEM
+
+    The modem is a simple device that can translate character codes into
+  audio pulses and vice-versa, so that computers can communicate over
+  telephone lines. The OPEN statement for the modem sets up the parameters
+  to match the speed and format of the other computer you are communicating
+  with. Two characters can be sent in the string at the end
+  of the OPEN statement.
+    The bit positions of the first character code determine the baud rate,
+  number of data bits, and number of stop bits. The second code is op-
+  tional, and its bits specify the parity and duplex of the transmission.
+  See the RS-232 section or your VICMODEM manual for specific details on
+  this device.
+
+  EXAMPLE of OPEN Statement for Modem:
+
+    OPEN 1,2,0,CHR$(6): REM 300 BAUD
+    100 OPEN 2,2,0,CHR$(163) CHR$(112): REM 110 BAUD, ETC.
+
+    Most computers use the American Standard Code for Information In-
+  terchange, known as ASCII (pronounced ASK-KEY). This standard set of
+  character codes is somewhat different from the codes used in the Com-
+  modore 64. When communicating with other computers, the Commodore
+  character codes must be translated into their ASCII counterparts. A table
+  of standard ASCII codes is included in this book in Appendix C.
+    Output to the modem is a fairly uncomplicated task, aside from the need
+  for character translation. However, you must know the receiving device
+  fairly well, especially when writing programs where your computer "talks"
+  to another computer without human intervention. An example of this would
+  be a terminal program that automatically types in your account number and
+  secret password. To do this successfully, you must carefully count the
+  number of characters and RETURN characters. Otherwise, the computer
+  receiving the characters won't know what to do with them.

@@ -1,0 +1,11 @@
+question,answer
+"Can the Voice 3 Envelope Generator be read by the microprocessor?","The output of the Voice 3 Envelope Generator can be read by the microprocessor."
+"What is the purpose of the ENV 3 register?","This register allows the microprocessor to read the output of the Voice 3 Envelope Generator."
+"Can the ENV 3 register produce harmonic envelopes?","Yes, the output of the Voice 3 Envelope Generator can be added to the Filter Frequency to produce harmonic envelopes."
+"Can the ENV 3 register produce WAH-WAH effects?","Yes, the output of the Voice 3 Envelope Generator can be added to the Filter Frequency to produce WAH-WAH effects."
+"Can the ENV 3 register produce 'Phaser' sounds?","Yes, the output of the Voice 3 Envelope Generator can be added to the frequency control registers of an oscillator to produce 'Phaser' sounds."
+"Is the OSC 3 register affected by the Envelope Generator?","No, the OSC 3 register always reflects the changing output of the oscillator and is not affected in any way by the Envelope Generator."
+"Is the Voice 3 Envelope Generator required to produce output from the ENV 3 register?","Yes, the Voice 3 Envelope Generator must be Gated in order to produce any output from the ENV 3 register."
+"Can the ENV 3 register produce any output without the Voice 3 Envelope Generator?","No, the ENV 3 register requires the output of the Voice 3 Envelope Generator to produce any output."
+"Is the ENV 3 register always reflecting the changing output of the oscillator?","No, the OSC 3 register always reflects the changing output of the oscillator, not the ENV 3 register."
+"Can the ENV 3 register be used to produce different sounds?","Yes, the output of the Voice 3 Envelope Generator can be used to produce different sounds such as harmonic envelopes, WAH-WAH, and 'Phaser' sounds."

@@ -1,0 +1,11 @@
+question,answer
+"What is the first mode of BASIC operation?","DIRECT Mode"
+"What happens when you press the <RETURN> key in DIRECT mode?","BASIC statements are executed"
+"What is the second mode of BASIC operation?","PROGRAM Mode"
+"What is required for BASIC statements in PROGRAM mode?","line numbers in front of the statement"
+"What is the limit on the number of characters on a logical screen line?","80 characters"
+"What happens if you go over the 80 character limit?","you have to put the entire BASIC statement on a new line"
+"What should you do before starting a new program?","type NEW and hit <RETURN>"
+"What is important to remember when starting a new program?","to type NEW and hit <RETURN>"
+"What is the purpose of the PROGRAM mode?","to run programs"
+"What is the main difference between DIRECT and PROGRAM mode?","line numbers are required in PROGRAM mode"

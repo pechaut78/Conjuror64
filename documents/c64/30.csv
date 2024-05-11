@@ -1,0 +1,11 @@
+question,answer
+"What is the formula to calculate the start of the 64 bytes of the sprite definition block?","LOCATION = (BANK * 16384) + (SPRITE POINTER VALUE * 64)"
+"What is the range of the BANK value in the formula?","from 0 to 3"
+"What is the purpose of the ROM IMAGE in the BANK 0 or BANK 2?","there is a ROM IMAGE of the character set present in certain locations"
+"What is the limitation of placing sprite definitions in certain locations?","Sprite definitions can NOT be placed there"
+"What is the reason to use BANK 1 or BANK 3 for sprite definitions?","you should use one of the banks without the ROM IMAGE"
+"What is the value of the sprite pointer #0 at location 2040?","14"
+"What is the location of the sprite definition block for sprite 0?","896"
+"What is the formula to calculate the location of the sprite definition block?","LOCATION = (BANK * 16384) + (SPRITE POINTER VALUE * 64)"
+"What is the purpose of the cassette buffer?","it is used to store the 64 bytes of the sprite definition block"
+"What is the size of the sprite definition block?","64 bytes"

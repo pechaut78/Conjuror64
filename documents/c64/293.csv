@@ -1,0 +1,11 @@
+question,answer
+"Can sprites be selectively expanded?","Yes, each sprite can be selectively expanded in both the horizontal and vertical directions."
+"What are the control bits for magnification control?","The control bits are MnXE and MnYE."
+"What is the function of register 23?","Register 23 ($17) is used for horizontal expand MnXE."
+"What is the function of register 29?","Register 29 ($1D) is used for vertical expand MnYE."
+"Does expanding sprites increase resolution?","No, expanding sprites does not increase resolution."
+"What is the size of the sprite array when expanded?","The sprite array is the same 24*21 array (12X21 if multi-colored) when expanded."
+"What is the maximum sprite dot dimension?","The smallest sprite dot may be up to 4X standard dot dimension if a sprite is both multi-colored and expanded."
+"Are there any limitations to sprite expansion?","Yes, there are limitations to sprite expansion, such as the smallest sprite dot dimension."
+"What is the purpose of magnification control?","The purpose of magnification control is to selectively expand sprites in both the horizontal and vertical directions."
+"Can sprites be expanded in both directions?","Yes, sprites can be selectively expanded in both the horizontal and vertical directions."

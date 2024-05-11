@@ -1,0 +1,66 @@
+
+
+
+                              SERIAL BUS TIMING
+  +-----------------------------+-------+-------+-------+-----------------+
+  |     Description             | Symbol|  Min. |  Typ. |       Max.      |
+  +-----------------------------+-------+-------+-------+-----------------+
+  | ATN RESPONSE (REQUIRED) (1) |  Tat  |   -   |   -   |     1000us      |
+  | LISTENER HOLD-OFF           |  Th   |   0   |   -   |    infinite     |
+  | NON-EOI RESPONSE TO RFD (2) |  Tne  |   -   |  40us |      200us      |
+  | BIT SET-UP TALKER (4)       |  Ts   |  20us |  70us |        -        |
+  | DATA VALID                  |  Tv   |  20us |  20us |        -        |
+  | FRAME HANDSHAKE (3)         |  Tf   |   0   |  20   |     1000us      |
+  | FRAME TO RELEASE OF ATN     |  Tr   |  20us |   -   |        -        |
+  | BETWEEN BYTES TIME          |  Tbb  | 100us |   -   |        -        |
+  | EOI RESPONSE TIME           |  Tye  | 200us | 250us |        -        |
+  | EOI RESPONSE HOLD TIME (5)  |  Tei  |  60us |   -   |        -        |
+  | TALKER RESPONSE LIMIT       |  Try  |   0   |  30us |       60us      |
+  | BYTE-ACKNOWLEDGE (4)        |  Tpr  |  20us |  30us |        -        |
+  | TALK-ATTENTION RELEASE      |  Ttk  |  20us |  30us |      100us      |
+  | TALK-ATTENTION ACKNOWLEDGE  |  Tdc  |   0   |   -   |        -        |
+  | TALK-ATTENTION ACK. HOLD    |  Tda  |  80us |   -   |        -        |
+  | EOI ACKNOWLEDGE             |  Tfr  |  60us |   -   |        -        |
+  +-----------------------------+-------+-------+-------+-----------------+
+     Notes:
+     1. If maximum time exceeded, device not present error.
+     2. If maximum time exceeded, EOI response required.
+     3. If maximum time exceeded, frame error.
+     4. Tv and Tpr minimum must be 60us for external device to be a talker.
+     5. Tei minimum must be 80us for external device to be a listener.
+
+  S
+  
+  
+  
+  ERIAL CLK IN/OUT: (SERIAL CLOCK IN/OUT)
+
+    This signal is used for timing the data sent on the serial bus. (See
+  Figure 6-4).
+
+  SERIAL DATA IN/OUT:
+
+    Data on the serial bus is transmitted one bit at a time on this line.
+  (See Figure 6-4.)
+
+  THE EXPANSION PORT
+
+    The expansion connector is a 44-pin (22122) female edge connector on
+  the back of the Commodore 64. With the Commodore 64 facing you, the
+  expansion connector is on the far right of the back of the computer. To
+  use the connector, a 44-pin (22/22) male edge connector is required.
+    This port is used for expansions of the Commodore 64 system which
+  require access to the address bus or the data bus of the computer.
+  Caution is necessary when using the expansion bus, because it's possible
+  to damage the Commodore 64 by a malfunction of your equipment.
+    The expansion bus is arranged as follows:
+                 2 2 2 1 1 1 1 1 1 1 1 1 1
+                 2 1 0 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1
+             +---@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@---+
+             |                                                 |
+             +---@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@-@---+
+                 Z Y X W V U T S R P N M L K J H F E D C B A
+
+   
+   
+   

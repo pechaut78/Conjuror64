@@ -1,0 +1,22 @@
+
+
+
+    The Commodore 64 has two complete character sets that you can use
+  either from the keyboard or in your programs.
+    In SET 1, the upper case alphabet and the numbers 0-9 are available
+  without pressing the <SHIFT> key. If you hold down the <SHIFT> key
+  while typing, the graphics characters on the RIGHT side of the front of
+  the keys are used. If you hold down the <C=> key while typing, the
+  graphics characters on the LEFT side of the front of the key are used.
+  Holding down the <SHIFT> key while typing any character that doesn't
+  have graphic symbols on the front of the key gives you the symbol on the
+  top most part of the key.
+    In SET 2, the lower case alphabet and the numbers 0-9 are available
+  without pressing the <SHIFT> key. The upper case alphabet is available
+  when you hold down the <SHIFT> key while typing. Again, the graphic
+  symbols on the LEFT side of the front of the keys are displayed by press-
+  ing the <C=> key, while the symbols on the top most part of any key
+  without graphics characters are selected when you hold down the <SHIFT>
+  key while typing.
+    To switch from one character set to the other press the <C=> and
+  the <SHIFT> keys together.

@@ -1,0 +1,20 @@
+
+  THE ENVELOPE GENERATOR
+
+    The volume of a musical tone changes from the moment you first hear it,
+  all the way through until it dies out and you can't hear it anymore. When
+  a note is first struck, it rises from zero volume to its peak volume. The
+  rate at which this happens is called the ATTACK. Then, it fails from the
+  peak to some middle-ranged volume. The rate at which the fall of the note
+  occurs is called the DECAY. The mid-ranged volume itself is called the
+  SUSTAIN level. And finally, when the note stops playing, it fails from
+  the SUSTAIN level to zero volume. The rate at which it fails is called
+  the RELEASE. 
+
+
+    Each of the items mentioned above give certain qualities and restric-
+  tions to a note. The bounds are called parameters.
+    The parameters ATTACK/DECAY/SUSTAIN/RELEASE and collectively called
+  ADSR, can be controlled by your use of another set of locations in the
+  sound generator chip. LOAD your first example program again. RUN it again
+  and remember how it sounds. 

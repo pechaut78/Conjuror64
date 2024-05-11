@@ -1,0 +1,8 @@
+question,answer
+"Each character is formed in an 8 by 8 grid of dots, where each dot may be either on or off.","The Commodore 64 character images are stored in the Character Generator ROM chip."
+"The characters are stored as a set of 8 bytes for each character, with each byte representing a row in the character, and each bit representing a dot.","A zero bit means that dot is off, and a one bit means the dot is on."
+"The character memory in ROM begins at location 53248 (when the I/O is switched off).", "The first 8 bytes from location 53248 ($D000) to 53255 ($D007) contain the pattern for the @ sign, which has a character code value of zero in the screen memory."
+"The next 8 bytes, from location 53256 ($D008) to 53263 ($D00F), contain the information for forming the letter A.","Each complete character set takes up 2K (2048 bits) of memory, 8 bytes per character and 256 characters."
+"Since there are two character sets, one for upper case and graphics and the other with upper and lower case, the character generator ROM takes up a total of 4K locations.","The character generator ROM takes up a total of 4K locations."
+"Each byte represents a row in the character.","Each bit represents a dot."
+"The Commodore 64 character images are stored in the Character Generator ROM chip.","The characters are stored as a set of 8 bytes for each character."

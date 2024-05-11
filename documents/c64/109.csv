@@ -1,0 +1,9 @@
+question,answer
+"What is the 'PRINT a character' routine part of?","The KERNAL jump table."
+"What is the instruction similar to GOTO in BASIC?","JMP"
+"What does JMP stand for?","JUMP to the specified absolute address"
+"What is the KERNAL?","A long list of standardized subroutines that control ALL input and output of the Commodore 64"
+"What is the KERNAL jump table found between memory locations?","$FF84 to $FFF5"
+"What is the purpose of the program that displays the alphabet using a KERNAL routine?","To display the alphabet using a KERNAL routine"
+"What is the new instruction introduced in the program that displays the alphabet?","TXA"
+"What does the instruction TXA do?","Transfer the contents of the X index register, into the Accumulator"

@@ -1,0 +1,11 @@
+question,answer
+"Control system message output is controlled by which routine?","SETMSG"
+"What is the purpose of the SETMSG routine?","Control system message output"
+"What is the call address of the SETMSG routine?","$FF90 (hex) 65424 (decimal)"
+"What communication registers are affected by the SETMSG routine?","A"
+"What is the stack requirement for the SETMSG routine?","2"
+"What registers are affected by the SETMSG routine?","A"
+"What are the two types of messages that can be printed by the SETMSG routine?","error and control"
+"What determines where the message will come from in the SETMSG routine?","bits 6 and 7 of the accumulator value"
+"What is an example of an error message?","FILE NOT FOUND"
+"What is an example of a control message?","PRESS PLAY ON CASSETTE"

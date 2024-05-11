@@ -1,0 +1,65 @@
+
+
+  FILTERING
+
+    The harmonic content of a waveform can be changed by using a filter.
+  The SID chip is equipped with three types of filtering. They can be used
+  separately or in combination with one another. Let's go back to the
+  sample program you've been using to play with a simple example that uses
+  a filter. There are several filter controls to set.
+    You add line 15 in the program to set the cutoff frequency of the
+  filter. The cutoff frequency is the reference point for the filter. You
+  SET the high and low frequency cutoff points in registers 21 and 22. To
+  turn ON the filter for voice 1, POKE register 23.
+    Next change line 30 to show that a high-pass filter will be used (see
+  the SID register map).
+
+
+    The SID chip also has a low-pass filter. As its name implies, this
+  filter will pass the frequencies below cutoff and attenuate those above.
+
+
+                             |
+                      AMOUNT | -----+
+                      PASSED |       \
+                             |        \
+                             |         \
+                             +------|-------
+                                FREQUENCY
+
+    Finally, the chip is equipped with a bandpass filter, which passes a
+  narrow band of frequencies around the cutoff, and attenuates all others.
+
+
+                             |
+                      AMOUNT |      +
+                      PASSED |     / \
+                             |    /   \
+                             |   /     \
+                             +------|-------
+                                FREQUENCY
+
+    The high- and low-pass filters can be combined to form a notch reject
+  filter which passes frequencies away from the cutoff while attenuating
+  at the cutoff frequency.
+
+
+                             |
+                      AMOUNT | --+     +---
+                      PASSED |    \   /
+                             |     \ /
+                             |      +
+                             +------|-------
+                                FREQUENCY
+
+    Register 24 determines which type filter you want to use. This is in
+  addition to register 24's function as the overall volume control. Bit 6
+  controls the high-pass filter (0 = off, 1 = on), bit 5 is the bandpass
+  filter, and bit 4 is the low-pass filter. The low 3 bits of the cutoff
+  frequency are determined by register 21 (Lcf) (Lcf = 0 through 7). While
+  the 8 bits of the high cutoff frequency are determined by register 22
+  (Hcf) (Hcf = 0 through 255).
+    Through careful use of filtering, you can change the harmonic structure
+  of any waveform to get just the sound you want. In addition, changing the
+  filtering of a sound as it goes through the ADSR phases of its life can
+  produce interesting effects.

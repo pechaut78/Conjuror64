@@ -1,0 +1,21 @@
+MACHINE LANGUAGE MONITOR (64MON):
+
+    This program allows you to enter a program in either HEX or SYMBOLIC
+  codes, and save the portion of memory the program is in. Advantages of
+  this method include easier entry of the machine language routines,
+  debugging aids, and a much faster means of saving and loading. The
+  drawback to this method is that it generally requires the BASIC program
+  to load the machine language routine from tape or disk when it is
+  started. (For more details on 64MON see the machine language section.)
+
+  EXAMPLE:
+
+    The following is an example of a BASIC program using a machine language
+  routine prepared by 64MON. The routine is stored on tape:
+
+    10 IF FLAG=L THEN 20
+    15 FLAG=1:LOAD"MACHINE LANGUAGE ROUTINE NAME",1,1
+    20
+    .
+    .
+    REST OF BASIC PROGRAM

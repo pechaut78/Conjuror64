@@ -1,0 +1,12 @@
+
+CS (Pin 8)
+
+    This TTL-Level input is a low active chip select which controls data
+  transfers between SID and the microprocessor. CS must be low for any
+  transfer. A Read from the selected SID register can only occur if CS is
+  low, 02 is high and R/W is high. A Write to the selected SID register can
+  only occur if CS is low, (02 is high and R/W is low. This pin is normally
+  connected to address decoding circuitry, allowing SID to reside in the
+  memory map of a system.
+
+ 

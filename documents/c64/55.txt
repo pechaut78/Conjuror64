@@ -1,0 +1,21 @@
+
+    The INTERRUPT ENABLE REGISTER is located at 53274 ($D01A). It has the
+  same format as the interrupt status register. Unless the corresponding
+  bit in the interrupt enable register is set to a 1, no interrupt from
+  that source will take place. The interrupt status register can still be
+  polled for information, but no interrupts will be generated.
+    To enable an interrupt request the corresponding interrupt enable bit
+  (as shown in the chart above) must be set to a 1.
+    This powerful interrupt structure lets you use split screen modes. For
+  instance you can have half of the screen bit mapped, half text, more than
+  8 sprites at a time, etc. The secret is to use interrupts properly. For
+  example, if you want the top half of the screen to be bit mapped and the
+  bottom to be text, just set the raster compare register (as explained
+  previously) for halfway down the screen. When the interrupt occurs, tell
+  the VIC-II chip to get characters from ROM, then set the raster compare
+  register to interrupt at the top of the screen. When the interrupt occurs
+  at the top of the screen, tell the VIC-II chip to get characters from RAM
+  (bit map mode).
+    You can also display more than 8 sprites in the same way. Unfortunately
+  BASIC isn't fast enough to do this very well. So if you want to start
+  using display interrupts, you should work in machine language.

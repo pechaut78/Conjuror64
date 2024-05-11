@@ -1,0 +1,42 @@
+  B-3. Function Name: CHKOUT
+
+    Purpose: Open a channel for output
+    Call address: $FFC9 (hex) 65481 (decimal)
+    Communication registers: X
+    Preparatory routines: (OPEN)
+    Error returns: 0,3,5,7 (See READST)
+    Stack requirements: 4+
+    Registers affected: A, X
+
+    Description: Any logical file number that has been created by the
+  KERNAL routine OPEN can be defined as an output channel. Of course, the
+  device you intend opening a channel to must be an output device.
+  Otherwise an error will occur, and the routine will be aborted.
+    This routine must be called before any data is sent to any output
+  device unless you want to use the Commodore 64 screen as your output
+  device. If screen output is desired, and there are no other output chan-
+  nels already defined, then calls to this routine, and to the OPEN routine
+  are not needed.
+    When used to open a channel to a device on the serial bus, this routine
+  will automatically send the LISTEN address specified by the OPEN routine
+  (and a secondary address if there was one).
+
+  How to Use:
+  +-----------------------------------------------------------------------+
+  | REMEMBER: this routine is NOT NEEDED to send data to the screen.      |
+  +-----------------------------------------------------------------------+
+    0) Use the KERNAL OPEN routine to specify a logical file number, a
+       LISTEN address, and a secondary address (if needed).
+    1) Load the X register with the logical file number used in the open
+       statement.
+    2) Call this routine (by using the JSR instruction).
+
+  EXAMPLE:
+
+    LDX #3        ;DEFINE LOGICAL FILE 3 AS AN OUTPUT CHANNEL
+    JSR CHKOUT
+
+    Possible errors are:
+    #3: File not open
+    #5: Device not present
+    #7: Not an output file

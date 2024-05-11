@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the UNLSN routine?","Send an UNLISTEN command"
+"What is the call address of the UNLSN routine?","$FFAE (hex) 65454 (decimal)"
+"What communication registers are used by the UNLSN routine?","None"
+"What is the stack requirement for the UNLSN routine?","8"
+"What registers are affected by the UNLSN routine?","A"
+"What is the effect of calling the UNLSN routine?","Commands all devices on the serial bus to stop receiving data from the Commodore 64"
+"What is the purpose of sending the UNLISTEN command?","To get off the serial bus so it can be used for other purposes"
+"What devices are affected by the UNLISTEN command?","Only devices previously commanded to listen"
+"What is the normal use of the UNLSN routine?","After the Commodore 64 is finished sending data to external devices"
+"What is the result of sending the UNLISTEN command?","The listening devices get off the serial bus"

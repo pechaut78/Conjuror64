@@ -1,0 +1,18 @@
+
+
+
+  DYNAMIC RAM REFRESH
+
+    A dynamic ram refresh controller is built in to the 6566/6567 devices.
+  Five 8-bit row addresses are refreshed every raster line. This rate
+  guarantees a maximum delay of 2.02 ms between the refresh of any single
+  row address in a 128 refresh scheme. (The maximum delay is 3.66 ms in a
+  256 address refresh scheme.) This refresh is totally transparent to the
+  system, since the refresh occurs during Phase 1 of the system clock. The
+  6567 generates both /RAS and /CAS which are normally connected directly
+  to the dynamic rams. /RAS and /CAS are generated for every Phase 2 and
+  every video data access (including refresh) so that external clock
+  generation is not required.
+
+
+  RESET

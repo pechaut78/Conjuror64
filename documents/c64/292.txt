@@ -1,0 +1,35 @@
+
+
+  COLOR
+
+    Each sprite has a separate 4-bit register to determine the sprite color. The
+  two sprite color modes are:
+
+  STANDARD sprite (MnMC = 0)
+
+    In the standard mode, a "0" bit of sprite data allows any background data
+  to show through (transparent) and a "1" bit is displayed as the sprite color
+  determined by the corresponding sprite Color register.
+
+  MULTI-COLOR sprite (MnMC = 1)
+
+    Each sprite can be individually selected as a multi-color sprite via MnMC
+  bits in the sprite Multi-color register 28 ($1C). When the MnMC bit is "1",
+  the corresponding sprite is displayed in the multi-color mode. In the multi-
+  color mode, the sprite data is interpreted in pairs (similar to the other
+  multi-color modes) as follows:
+
+        BIT PAIR      |                   COLOR DISPLAYED
+  --------------------+----------------------------------------------------
+           00         |  Transparent
+           01         |  sprite Multi-color #0 (register 37 ($25))
+           10         |  sprite Color (registers 39-46 ($27-$2E))
+           11         |  sprite Multi-color #1 (register 38 ($26))
+
+
+  Since two bits of data are required for each color, the resolution of the
+  sprite is reduced to 12X21, with each horizontal dot expanded to twice
+  standard size so that the overall sprite size does not change. Note that up
+  to 3 colors can be displayed in each sprite (in addition to transparent) but
+  that two of the colors are shared among all the sprites in the multi-color
+  mode.

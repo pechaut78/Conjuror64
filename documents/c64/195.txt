@@ -1,0 +1,43 @@
+
+
+  B-19. Function Name: PLOT
+
+    Purpose: Set cursor location
+    Call address: $FFF0 (hex) 65520 (decimal)
+    Communication registers: A, X, Y
+    Preparatory routines: None
+    Error returns: None
+    Stack requirements: 2
+    Registers affected: A, X, Y
+
+    Description: A call to this routine with the accumulator carry flag
+  set loads the current position of the cursor on the screen (in X,Y
+  coordinates) into the Y and X registers. Y is the column number of the
+  cursor location (6-39), and X is the row number of the location of the
+  cursor (0-24). A call with the carry bit clear moves the cursor to X,Y
+  as determined by the Y and X registers.
+
+  How to Use:
+
+
+  READING CURSOR LOCATION
+
+    1) Set the carry flag.
+    2) Call this routine.
+    3) Get the X and Y position from the Y and X registers, respectively.
+
+
+  SETTING CURSOR LOCATION
+
+    1) Clear carry flag.
+    2) Set the Y and X registers to the desired cursor location.
+    3) Call this routine.
+
+
+  EXAMPLE:
+
+    ;MOVE THE CURSOR TO ROW 10, COLUMN 5 (5,10)
+    LDX #10
+    LDY #5
+    CLC
+    JSR PLOT

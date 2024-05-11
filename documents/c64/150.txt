@@ -1,0 +1,13 @@
+  PLA                 PLA Pull accumulator from stack                   PLA
+
+  Operation:  A fromS                                   N Z C I D V
+                                                        _ _ _ _ _ _
+
+  +----------------+-----------------------+---------+---------+----------+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  +----------------+-----------------------+---------+---------+----------+
+  |  Implied       |   PLA                 |    68   |    1    |    4     |
+  +----------------+-----------------------+---------+---------+----------+
+
+
+  

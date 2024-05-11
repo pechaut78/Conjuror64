@@ -1,0 +1,8 @@
+question,answer
+"Write Pulse Width is measured in what units?","ns"
+"What is the minimum Write Hold Time?","0"
+"What is the maximum Address Set-up Time?","-"
+"What is the minimum Address Hold Time?","10"
+"What is the Chip Select Hold Time?","0"
+"What is the minimum Valid Data time?","80"
+"What is the minimum Data Hold Time?","10"

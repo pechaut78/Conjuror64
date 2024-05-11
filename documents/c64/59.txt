@@ -1,0 +1,25 @@
+
+  POSITIONING SPRITES ON THE SCREEN
+
+    The entire display screen is divided into a grid of X and Y coordi-
+  nates, like a graph. The X COORDINATE is the HORIZONTAL position across
+  the screen and the Y COORDINATE is the VERTICAL position up and down (see
+  Figure 3-4).
+    To position any sprite on the screen, you must POKE TWO SETTINGS...
+  the X position and the Y position... these tell the computer where to
+  display the UPPER LEFT HAND CORNER of the sprite. Remember that a sprite
+  consists of 504 individual pixels, 24 across by 21 down... so if you POKE
+  a sprite onto the upper left corner of your screen, the sprite will be
+  displayed as a graphic image 24 pixels ACROSS and 21 pixels DOWN starting
+  at the X-Y position you defined. The sprite will be displayed based on
+  the upper left corner of the entire sprite, even if you define the sprite
+  using only a small part of the 24X21-pixel sprite area.
+    To understand how X-Y positioning works, study the following diagram
+  (Figure 3-5), which shows the X and Y numbers in relation to your display
+  screen. Note that the GREY AREA in the diagram shows your television
+  viewing area... the white area represents positions which are OFF your
+  viewing screen...
+
+    To display a sprite in a given location, You must POKE the X and Y
+  settings for each SPRITE... remembering that every sprite has its own
+  unique X POKE and Y POKE. 

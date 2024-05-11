@@ -1,0 +1,10 @@
+question,answer
+"How many possible locations are on the Commodore 64 screen?","There are 1000 possible locations on the Commodore 64 screen."
+"What is the starting location of the screen?","The screen starts at location 1024 ($0400 in HEXadecimal notation)."
+"What is the width of each location in screen memory?","Each of these locations is 8 bits wide."
+"What is the range of integer numbers that can be held by each location in screen memory?","It can hold any integer number from 0 to 255."
+"What is the purpose of COLOR MEMORY or COLOR RAM?","COLOR MEMORY or COLOR RAM is connected with screen memory."
+"How many colors can the Commodore 64 use?","There are 16 possible colors that the Commodore 64 can use."
+"What determines which character to display at each screen location?","Each of the 1000 locations in screen memory contains a code number which tells the VIC-II chip which character to display at that screen location."
+"What controls the various graphics modes?","The 47 CONTROL registers in the VIC-II chip select the various graphics modes."
+"Where is the VIC-II chip located?","The VIC-II chip is located starting at 53248 ($D000 in HEX) through 53294 ($D02E in HEX)."

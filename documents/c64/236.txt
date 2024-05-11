@@ -1,0 +1,47 @@
+
+
+
+  GETTING DATA FROM AN RS-232 CHANNEL
+
+    When getting data from an RS-232 channel, the Commodore 64 receiver
+  buffer will hold up to 255 characters before the buffer overflows. This
+  is indicated in the RS-232 status word (ST in BASIC, or RSSTAT in machine
+  language). If an overflow occurs, then all characters received during a
+  full buffer condition, from that point on, are lost. Obviously, it pays
+  to keep the buffer as clear as possible.
+    If you wish to receive RS-232 data at high speeds (BASIC can only go so
+  fast, especially considering garbage collects. This can cause the re-
+  ceiver buffer to overflow), you will have to use machine language
+  routines to handle this type of data burst.
+
+  BASIC SYNTAX:
+
+    Recommended: GET#lfn, <string variable>
+    NOT Recommended: INPUT#lfn <variable list>
+
+  KERNAL ENTRIES:
+
+    CHKIN ($FFC6)-See Memory Map for more information on entry and exit
+  conditions.
+    GETIN ($FFE4)-See Memory Map for more information on entry and exit
+  conditions.
+    CHRIN ($FFCF)-See Memory Map for more information on entry and exit
+  conditions.
+
+  +-----------------------------------------------------------------------+
+  | NOTES:                                                                |
+  |   If the word length is less than 8 bits, all unused bit(s) will be   |
+  | assigned a value of zero.                                             |
+  |   If a GET# does not find any data in the buffer, the character "" (a |
+  | null) is returned.                                                    |
+  |   If INPUT# is used, then the system will hang in a waiting condition |
+  | until a non-null character and a following carriage return is         |
+  | received. Therefore, if the Clear To Send (CTS) or Data Set Ready     |
+  | (DSR) line(s) disappear during character INPUT#, the system will hang |
+  | in a RESTORE-only state. This is why the INPUT# and CHRIN routines are|
+  | NOT recommended.                                                      |
+  |   The routine CHKIN handles the x-line handshake which follows the EIA|
+  | standard (August 1979) for RS-232-C interfaces. (The Request To Send  |
+  | (RTS), CTS, and Received line signal (DCD) lines are implemented with |
+  | the Commodore 64 computer defined as the Data Terminal device.)       |
+  +-----------------------------------------------------------------------+

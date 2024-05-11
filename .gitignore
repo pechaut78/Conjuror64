@@ -1,0 +1,5 @@
+.env
+teacher/
+kb_store
+__pycache__
+temp.txt

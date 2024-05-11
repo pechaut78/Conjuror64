@@ -1,0 +1,12 @@
+question,answer
+"Output a character to an already opened channel.","This routine outputs a character to an already opened channel."
+"What is the purpose of the CHROUT routine?","Output a character"
+"What is the call address of the CHROUT routine?","$FFD2 (hex) 65490 (decimal)"
+"What registers are affected by the CHROUT routine?","Registers affected: A"
+"What is the minimum stack requirement for the CHROUT routine?","8+"
+"What is the default output device if the call is omitted?","the screen"
+"What is the data byte to be output loaded into?","the accumulator"
+"What is the routine that must be used to set up the output channel?","KERNAL OPEN and CHKOUT"
+"What is the routine that must be used to close all open output channels?","KERNAL CLRCHN"
+"What is the potential issue when using the CHROUT routine to send data to a specific serial device?","data will be sent to all open output channels on the bus"
+"What are the steps to use the CHROUT routine?","0) Use the CHKOUT KERNAL routine if needed, 1) Load the data to be output into the accumulator, 2) Call this routine"

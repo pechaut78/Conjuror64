@@ -1,0 +1,53 @@
+
+
+  6526 INTERFACE SIGNALS
+
+  02-Clock Input
+
+    The 02 clock is a TTL compatible input used for internal device opera-
+  tion and as a timing reference for communicating with the system data
+  bus.
+
+  /CS-Chip Select Input
+
+    The /CS input controls the activity of the 6526. A low level on /CS
+  while 02 is high causes the device to respond to signals on the R/W and
+  address (RS) lines. A high on /CS prevents these lines from controlling
+  the 6526. The /CS line is normally activated (low) at 02 by the
+  appropriate address combination.
+
+  R/W-Read/Write Input
+
+    The R/W signal is normally supplied by the microprocessor and controls
+  the direction of data transfers of the 6526. A high on R/W indicates
+  a read (data transfer out of the 6526), while a low indicates a write
+  (data transfer into the 6526).
+
+  RS3-RS0-Address Inputs
+
+    The address inputs select the internal registers as described by the
+  Register Map.
+
+  DB7-DB0-Data Bus Inputs/Outputs
+
+    The eight data bus pins transfer information between the 6526 and the
+  system data bus. These pins are high impedance inputs unless CS is low
+  and R/W and 02 are high to read the device. During this read, the data
+  bus output buffers are enabled, driving the data from the selected
+  register onto the system data bus.
+
+  IRQ-Interrupt Request Output
+
+    IRQ is an open drain output normally connected to the processor inter-
+  rupt input. An external pullup resistor holds the signal high, allowing
+  multiple IRQ outputs to be connected together. The IRQ output is normally
+  off (high impedance) and is activated low as indicated in the functional
+  description.
+
+  /RES-Reset Input
+
+    A low on the RES pin resets all internal registers. The port pins are
+  set as inputs and port registers to zero (although a read of the ports
+  will return all highs because of passive pullups). The timer control
+  registers are set to zero and the timer latches to all ones. All other
+  registers are reset to zero.

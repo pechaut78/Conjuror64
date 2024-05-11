@@ -1,0 +1,51 @@
+
+
+                        6526 TIMING CHARACTERISTICS
+  +--------+-----------------------+---------------+---------------+------+
+  |        |                       |      1MHz     |      2MHz     |      |
+  |        |                       +-------+-------+-------+-------+      |
+  | Symbol |    Characteristic     |  MIN  |  MAX  |  MIN  |  MAX  | Unit |
+  +--------+-----------------------+-------+-------+-------+-------+------+
+  |        | 02 CLOCK              |       |       |       |       |      |
+  | Tcyc   | Cycle Time            |  1000 |20,000 |   500 |20,000 |  ns  |
+  | Tr, Tf | Rise and Fall Time    |   -   |    25 |   -   |    25 |  ns  |
+  | Tchw   | Clock Pulse Width     |       |       |       |       |      |
+  |        |   (High)              |   420 |10,000 |   200 |10,000 |  ns  |
+  | Tclw   | Clock Pulse Width     |       |       |       |       |      |
+  |        |   (Low)               |   420 |10,000 |   200 |10,000 |  ns  |
+  +--------+-----------------------+-------+-------+-------+-------+------+
+  |        | WRITE CYCLE           |       |       |       |       |      |
+  | Tpd    | Output Delay From 02  |    -  |  1000 |   -   |   500 |  ns  |
+  | Twcs   | /CS low while 02 high |   420 |   -   |   200 |   -   |  ns  |
+  | Tads   | Address Setup Time    |     0 |   -   |     0 |   -   |  ns  |
+  | Tadh   | Address Hold Time     |    10 |   -   |     5 |   -   |  ns  |
+  | Trws   | R/W Setup Time        |     0 |   -   |     0 |   -   |  ns  |
+  | Trwh   | R/W Hold Time         |     0 |   -   |     0 |   -   |  ns  |
+  | Tds    | Data Bus Setup Time   |   150 |   -   |    75 |   -   |  ns  |
+  | Tdh    | Data Bus Hold Time    |     0 |   -   |     0 |   -   |  ns  |
+  +--------+-----------------------+-------+-------+-------+-------+------+
+  |        | READ CYCLE            |       |       |       |       |      |
+  | Tps    | Port Setup Time       |   300 |   -   |   150 |   -   |  ns  |
+  | Twcs(2)| /CS low while 02 high |   420 |   -   |    20 |   -   |  ns  |
+  | Tads   | Address Setup Time    |     0 |   -   |     0 |   -   |  ns  |
+  | Tadh   | Address Hold Time     |    10 |   -   |     5 |   -   |  ns  |
+  | Trws   | R/W Setup Time        |     0 |   -   |     0 |   -   |  ns  |
+  | Trwh   | R/W Hold Time         |     0 |   -   |     0 |   -   |  ns  |
+  |        |                       |      1MHz     |      2MHz     |      |
+  |        |                       +-------+-------+-------+-------+      |
+  | Symbol |    Characteristic     |  MIN  |  MAX  |  MIN  |  MAX  | Unit |
+  +--------+-----------------------+-------+-------+-------+-------+------+
+  | Tacc   | Data Access from      |       |       |       |       |      |
+  |        | RS3-RS0               |   -   |   550 |   -   |   275 |  ns  |
+  | Tco(3) | Data Access from /CS  |   -   |   320 |   -   |   150 |  ns  |
+  | Tdr    | Data Release Time     |    50 |   -   |    25 |   -   |  ns  |
+  +--------+-----------------------+-------+-------+-------+-------+------+
+
+  +-----------------------------------------------------------------------+
+  | NOTES: 1 -All timings are referenced from Vil max and Vih min on      |
+  | inputs and Vol max and Voh min on outputs.                            |
+  |        2 -Twcs is measured from the later of 02 high or /CS low. /CS  |
+  | must be low at least until the end of 02 high.                        |
+  |        3 -Tco is measured from the later of 02 high or /CS low.       |
+  |        Valid data is available only after the later of Tacc or Tco.   |
+  +-----------------------------------------------------------------------+

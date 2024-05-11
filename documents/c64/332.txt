@@ -1,0 +1,8 @@
+
+
+  GND (Pin 14)
+
+    For best results, the ground line between SID and the power supply
+  should be separate from ground lines to other digital circuitry. This
+  will minimize digital noise at the audio output.
+ 

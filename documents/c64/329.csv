@@ -1,0 +1,11 @@
+question,answer
+"Does the TTL-level input control the direction of data transfers?","This TTL-level input controls the direction of data transfers between SID and the microprocessor."
+"What happens when the chip select conditions have been met and the input is high?","a high on this line allows the microprocessor to Read data from the selected SID register"
+"What happens when the chip select conditions have been met and the input is low?","a low allows the microprocessor to Write data into the selected SID register"
+"What is the purpose of the Read/Write line?","This pin is normally connected to the system Read/Write line."
+"Can the microprocessor read data from the SID register?","a high on this line allows the microprocessor to Read data from the selected SID register"
+"Can the microprocessor write data into the SID register?","a low allows the microprocessor to Write data into the selected SID register"
+"What determines the direction of data transfers?","This TTL-level input controls the direction of data transfers between SID and the microprocessor."
+"What happens when the input is high?","a high on this line allows the microprocessor to Read data from the selected SID register"
+"What happens when the input is low?","a low allows the microprocessor to Write data into the selected SID register"
+"Is the Read/Write line connected to the system?","This pin is normally connected to the system Read/Write line."

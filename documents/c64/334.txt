@@ -1,0 +1,8 @@
+
+
+
+  VCC (Pin 25)
+
+    As with the GND line, a separate +5 VDC line should be run between SID
+  Vcc and the power supply in order to minimize noise. A bypass capacitor
+  should be located close to the pin.

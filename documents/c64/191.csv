@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the LOAD routine?","Load RAM from device"
+"What is the call address of the LOAD routine?","$FFD5 (hex) 65493 (decimal)"
+"What registers are affected by the LOAD routine?","A, X, Y"
+"What are the preparatory routines for the LOAD routine?","SETLFS, SETNAM"
+"What are the possible error returns for the LOAD routine?","0,4,5,8,9, READST"
+"What is the purpose of setting the accumulator to 0 or 1?","For a LOAD operation or a verify operation"
+"What happens if the input device is opened with a secondary address of 0?","The header information from the device is ignored"
+"What happens if the input device is addressed with a secondary address of 1?","The data is loaded into memory starting at the location specified by the header"
+"What routines must be called before using the LOAD routine?","KERNAL SETLFS, and SETNAM routines"
+"What devices cannot be used for loading data?","Keyboard (0), RS-232 (2), or the screen (3)"

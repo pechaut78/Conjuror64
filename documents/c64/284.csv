@@ -1,0 +1,11 @@
+question,answer
+"Is the extended color mode enabled by setting a specific register bit?","Yes, it is enabled by setting the ECM bit of register 17 to 1."
+"What is the purpose of the 2 MSB of the character pointer in extended color mode?","They are used to select the background color for each character region."
+"Can the 6566/6567 force CB10 and CB9 to specific values?","Yes, they will force CB10 and CB9 to '0' regardless of the original pointer values."
+"How many different character definitions are available in extended color mode?","Only 64 different character definitions are available."
+"Can a character have multiple foreground colors in extended color mode?","No, each character has only one individually defined foreground color."
+"Are there any restrictions on enabling extended color mode?","Yes, it should not be enabled simultaneously with multi-color mode."
+"What is the maximum number of background colors available in extended color mode?","There are four available background colors."
+"Can the background color of a character be changed in extended color mode?","Yes, the background color can be selected for each character region."
+"Is the character dot data displayed differently in extended color mode?","No, it is displayed as in the standard mode."
+"What is the purpose of the color nybble in extended color mode?","The color nybble determines the foreground color for a '1' data bit."

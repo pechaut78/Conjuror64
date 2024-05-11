@@ -1,0 +1,13 @@
+
+  210   BASIC TO MACHINE LANGUAGE
+
+    The OPERATING SYSTEM is in charge of "organizing" all the memory in
+  your machine for various tasks. It also looks at what characters you type
+  on the keyboard and puts them onto the screen, plus a whole number of
+  other functions. The OPERATING SYSTEM can be thought of as the
+  "intelligence and personality" of the Commodore 64 (or any computer for
+  that matter). So when you turn on your Commodore 64, the OPERATING SYSTEM
+  takes control of your machine, and after it has done its housework, it
+  then says:
+
+    READY.

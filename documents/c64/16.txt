@@ -1,0 +1,48 @@
+
+
+  MULTI-COLOR MODE BIT
+
+    To turn on multi-color character mode, set bit 4 of the VIC-II control
+  register at 53270 ($D016) to a 1 by using the following POKE:
+
+    POKE 53270,PEEK(53270)OR 16
+
+    To turn off multi-color character mode, set bit 4 of location 53270 to
+  a 0 by the following POKE:
+
+    POKE 53270,PEEK(53270)AND 239
+
+    Multi-color mode is set on or off for each space on the screen, so that
+  multi-color graphics can be mixed with high-resolution (hi-res) graphics.
+  This is controlled by bit 3 in color memory. Color memory begins at
+  location 55296 ($D800 in HEX). If the number in color memory is less than
+  8 (0-7) the corresponding space on the video screen will be standard
+  hi-res, in the color (0-7) you've chosen. If the number located in color
+  memory is greater or equal
+ to 8 (from 8 to 15), then that space will be displayed in multi-color mode.
+
+    By POKEing a number into color memory, you can change the color of the
+  character in that position on the screen. POKEing a number from 0 to 7
+  gives the normal character colors. POKEing a number between 8 and 15 puts
+  the space into multi-color mode. In other words, turning BIT 3 ON in
+  color memory, sets MULTI-COLOR MODE. Turning BIT 3 OFF in color memory,
+  sets the normal, HIGH-RESOLUTION mode.
+    Once multi-color mode is set in a space, the bits in the character
+  determine which colors are displayed for the dots. 
+
+    In normal or high-resolution mode, the screen color is displayed
+  everywhere there is a 0 bit, and the character color is displayed where
+  the bit is a 1. Multi-color mode uses the bits in pairs
+
+  The bit pairs determine
+  this, according to the following chart:
+
+  +----------+--------------------------------------+---------------------+
+  | BIT PAIR |          COLOR REGISTER              |       LOCATION      |
+  +----------+--------------------------------------+---------------------+
+  |    00    |  Background #0 color (screen color)  |   53281 ($D021)     |
+  |    01    |  Background #l color                 |   53282 ($D022)     |
+  |    10    |  Background #2 color                 |   53283 ($D023)     |
+  |    11    |  Color specified by the              |   color RAM         |
+  |          |  lower 3 bits in color memory        |                     |
+  +----------+--------------------------------------+---------------------+

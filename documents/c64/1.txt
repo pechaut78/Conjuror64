@@ -1,0 +1,31 @@
+
+
+                    Table 1 - 1. CBM BASIC Character Set
+  +-------------+---------------------------------------------------------+
+  |  CHARACTER  |                NAME and DESCRIPTION                     |
+  +-------------+---------------------------------------------------------+
+  |             | BLANK - separates keywords and variable names           |
+  |      ;      | SEMI-COLON - used in variable lists to format output    |
+  |      =      | EQUAL SIGN - value assignment and relationship testing  |
+  |      +      | PLUS SIGN - arithmetic addition or string concatenation |
+  |             |            (concatenation: linking together in a chain) |
+  |      -      | MINUS SIGN - arithmetic subtraction, unary minus        |
+  |      *      | ASTERISK - arithmetic multiplication                    |
+  |      /      | SLASH - arithmetic division                             |
+  |      ^      | UP ARROW - arithmetic exponentiation                    |
+  |      (      | LEFT PARENTHESIS - expression evaluation and functions  |
+  |      )      | RIGHT PARENTHESIS - expression evaluation and functions |
+  |      %      | PERCENT - declares variable name as an integer          |
+  |      #      | NUMBER - comes before logical file number in input/     |
+  |             |          output statements                              |
+  |      $      | DOLLAR SIGN - declares variable name as a string        |
+  |      ,      | COMMA - used in variable lists to format output; also   |
+  |             |         separates command parameters                    |
+  |      .      | PERIOD - decimal point in floating point constants      |
+  |      "      | QUOTATION MARK - encloses string constants              |
+  |      :      | COLON - separates multiple BASIC statements in a line   |
+  |      ?      | QUESTION MARK - abbreviation for the keyword PRINT      |
+  |      <      | LESS THAN - used in relationship tests                  |
+  |      >      | GREATER THAN - used in relationship tests               |
+  |     {pi}    | PI - the numeric constant 3.141592654                   |
+  +-------------+---------------------------------------------------------+

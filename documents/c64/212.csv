@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the UDTIM function?","Update the system clock"
+"What is the call address of the UDTIM function?","$FFEA (hex) 65514 (decimal)"
+"What registers are affected by the UDTIM function?","A, X"
+"How often is the UDTIM function normally called?","every 1/60th of a second"
+"What is the stack requirement for the UDTIM function?","2"
+"What is the purpose of calling the UDTIM function in user programs?","to update the time"
+"What is the consequence of not calling the UDTIM function in user programs?","<STOP> key routine must be called"
+"What is the recommended way to use the UDTIM function?","Call this routine"
+"What is the example of how to use the UDTIM function?","JSR UDTIM"
+"What is the importance of calling the UDTIM function in user programs?","to remain functional"
+"What is the purpose of the UDTIM function in the KERNAL interrupt routine?","to update the system clock"

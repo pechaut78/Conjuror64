@@ -1,0 +1,52 @@
+
+
+  B-28. Function Name: SETLFS
+
+    Purpose: Set up a logical file
+    Call address: $FFBA (hex) 65466 (decimal)
+    Communication registers: A, X, Y
+    Preparatory routines: None
+    Error returns: None
+    Stack requirements: 2
+    Registers affected: None
+
+
+    Description: This routine sets the logical file number, device address,
+  and secondary address (command number) for other KERNAL routines.
+    The logical file number is used by the system as a key to the file
+  table created by the OPEN file routine. Device addresses can range from 0
+  to 31. The following codes are used by the Commodore 64 to stand for the
+  CBM devices listed below:
+
+
+                  ADDRESS          DEVICE
+
+                     0            Keyboard
+                     1            Datassette(TM)
+                     2            RS-232C device
+                     3            CRT display
+                     4            Serial bus printer
+                     8            CBM serial bus disk drive
+
+
+    Device numbers 4 or greater automatically refer to devices on the
+  serial bus.
+    A command to the device is sent as a secondary address on the serial
+  bus after the device number is sent during the serial attention
+  handshaking sequence. If no secondary address is to be sent, the Y index
+  register should be set to 255.
+
+  How to Use:
+
+    1) Load the accumulator with the logical file number.
+    2) Load the X index register with the device number.
+    3) Load the Y index register with the command.
+
+
+  EXAMPLE:
+
+    FOR LOGICAL FILE 32, DEVICE #4, AND NO COMMAND:
+    LDA #32
+    LDX #4
+    LDY #255
+    JSR SETLFS

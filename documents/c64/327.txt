@@ -1,0 +1,8 @@
+
+
+  RES (Pin 5)
+
+    This TTL-level input is the reset control for SID. When brought low for
+  at least ten 02 cycles, all internal registers are reset to zero and the
+  audio output is silenced. This pin is normally connected to the reset
+  line of the microprocessor or a power-on-clear circuit.

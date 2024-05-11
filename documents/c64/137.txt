@@ -1,0 +1,15 @@
+
+
+
+ INC                    INC Increment memory by one                    INC
+                                                        N Z C I D V
+  Operation:  M + 1 -> M                                / / _ _ _ _
+
+  +----------------+-----------------------+---------+---------+----------+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  +----------------+-----------------------+---------+---------+----------+
+  |  Zero Page     |   INC Oper            |    E6   |    2    |    5     |
+  |  Zero Page,X   |   INC Oper,X          |    F6   |    2    |    6     |
+  |  Absolute      |   INC Oper            |    EE   |    3    |    6     |
+  |  Absolute,X    |   INC Oper,X          |    FE   |    3    |    7     |
+  +----------------+-----------------------+---------+---------+----------+

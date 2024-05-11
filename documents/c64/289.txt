@@ -1,0 +1,23 @@
+SPRITES
+
+    The movable object block (sprite) is a special type of character which can
+  be displayed at any one position on the screen without the block
+  constraints inherent in character and bit map mode. Up to 8 unique sprites
+  can be displayed simultaneously, each defined by 63 bytes in memory which
+  are displayed as a 24*21 dot array (shown below). A number of special
+  features make sprites especially suited for video graphics and game
+  applications.
+
+
+                              sprite DISPLAY BLOCK
+                        +--------+--------+--------+
+                        |  BYTE  |  BYTE  |  BYTE  |
+                        +--------+--------+--------+
+                        |   00   |   01   |   02   |
+                        |   03   |   04   |   05   |
+                        |    .   |    .   |    .   |
+                        |    .   |    .   |    .   |
+                        |    .   |    .   |    .   |
+                        |   57   |   58   |   59   |
+                        |   60   |   61   |   62   |
+                        +--------+--------+--------+

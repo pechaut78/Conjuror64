@@ -1,0 +1,11 @@
+question,answer
+"Is the input/output port an 8-bit register?","Yes"
+"What is the purpose of the input/output port in the Commodore 64?","Memory management"
+"What is the range of RAM and ROM memory that the input/output port can control?","More than 64K"
+"What is the memory location of the DATA DIRECTION REGISTER?","0"
+"What is the memory location of the actual PORT?","1"
+"What type of port is the input/output port?","Input/output"
+"What is the size of the input/output port?","8-bit"
+"What is the purpose of the input/output port in the Commodore 64?","Memory management"
+"What is the range of memory that the input/output port can control?","More than 64K"
+"What is the purpose of the input/output port?","Input/output operation"

@@ -1,0 +1,12 @@
+question,answer
+"Where is the best place to put machine language routines on the Commodore 64?","from $C000-$CFFF"
+"What happens to the machine language routine if it's larger than 4K bytes?","it then becomes necessary to reserve an area at the top of memory"
+"What is the top of memory normally?","$9FFF"
+"How can the top of memory be changed?","through the KERNAL routine MEMTOP, or by the following BASIC statements"
+"What is the purpose of the POKE statements in the BASIC code?","to reserve an area at the top of memory"
+"What is the range of the reserved area in the example code?","$9000 to $9FFF"
+"What is the value of the POKE52 statement in the example code?","144"
+"What is the value of the POKE56 statement in the example code?","144"
+"What is the effect of the CLR statement in the BASIC code?","clears the screen"
+"What is the purpose of the MEMTOP routine?","to change the top of memory"
+"What is the range of the reserved area in the example code?","$9000 to $9FFF"

@@ -1,0 +1,12 @@
+question,answer
+"TYA Transfer index Y to accumulator", "TYA Transfer index Y to accumulator"
+"Operation: Y -> A", "Operation: Y -> A"
+"Assembly Language Form", "Assembly Language Form"
+"OP CODE", "OP CODE"
+"No. Bytes", "No. Bytes"
+"No. Cycles", "No. Cycles"
+"Addressing Mode", "Addressing Mode"
+"Implied", "Implied"
+"TYA", "TYA"
+"Assembly Language", "Assembly Language"
+"OP CODE", "OP CODE"

@@ -1,0 +1,12 @@
+question,answer
+"Who wrote the joystick button read routine?","Bill Hindorff"
+"What is the purpose of the joystick button read routine?","To read and decode the joystick/firebutton input data"
+"What are the 5 bits that contain the switch closure information?","The least significant 5 bits"
+"What happens if a switch is closed?","It produces a zero bit"
+"What happens if a switch is open?","It produces a one bit"
+"What are the joystick directions represented by the bits?","Right, left, forward, backward"
+"What does the bit4 represent?","Fire button"
+"What are the possible values for dx and dy?","$ff=-1, $00=0, $01=1"
+"What does the carry flag contain at RTS time?","The fire button state"
+"What happens if the carry flag is 1?","Button not pressed"
+"What happens if the carry flag is 0?","Button pressed"

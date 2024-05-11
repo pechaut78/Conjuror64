@@ -1,0 +1,12 @@
+question,answer
+"Is the CLI command used to clear an interrupt?","Yes"
+"What is the opcode for the CLI command?","58"
+"What is the addressing mode for the CLI command?","Implied"
+"What is the number of bytes used by the CLI command?","1"
+"What is the number of cycles used by the CLI command?","2"
+"What is the purpose of the CLI command?","To clear an interrupt"
+"What is the assembly language form of the CLI command?","CLI"
+"What is the operation code for the CLI command?","58"
+"What is the addressing mode for the CLI command in assembly language?","Implied"
+"What is the number of cycles used by the CLI command in assembly language?","2"
+"What is the purpose of the CLI command in assembly language?","To clear an interrupt"

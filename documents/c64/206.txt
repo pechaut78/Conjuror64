@@ -1,0 +1,33 @@
+
+  B-30. Function Name: SETNAM
+
+    Purpose: Set file name
+    Call address: $FFBD (hex) 65469 (decimal)
+    Communication registers: A, X, Y
+    Preparatory routines:
+    Stack requirements: 2
+    Registers affected:
+
+    Description: This routine is used to set up the file name for the OPEN,
+  SAVE, or LOAD routines. The accumulator must be loaded with the length of
+  the file name. The X and Y registers must be loaded with the address of
+  the file name, in standard 6502 low-byte/high-byte format. The address
+  can be any valid memory address in the system where a string of
+  characters for the file name is stored. If no file name is desired, the
+  accumulator must be set to 0, representing a zero file length. The X and
+  Y registers can be set to any memory address in that case.
+
+  How to Use:
+
+    1) Load the accumulator with the length of the file name.
+    2) Load the X index register with the low order address of the file
+       name.
+    3) Load the Y index register with the high order address.
+    4) Call this routine.
+
+  EXAMPLE:
+
+    LDA #NAME2-NAME     ;LOAD LENGTH OF FILE NAME
+    LDX #<NAME          ;LOAD ADDRESS OF FILE NAME
+    LDY #>NAME
+    JSR SETNAM

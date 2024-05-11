@@ -1,0 +1,12 @@
+question,answer
+"Paddle value is read via which SID registers?","54297 ($D419) and 54298 ($D41A)"
+"Paddles are not reliable when read from BASIC alone?","YES"
+"What is the best way to use paddles?","Use machine language routine"
+"Who is the author of the paddle read routine?","Bill Hindorff"
+"What is the purpose of the line `sei` in the paddle read routine?","To disable interrupts"
+"What is the purpose of the line `sta ciddra` in the paddle read routine?","To save the current value of DDR"
+"What is the purpose of the line `sta porta` in the paddle read routine?","To set port A for input"
+"What is the purpose of the loop `pdlrd2` in the paddle read routine?","To wait a while"
+"What is the purpose of the line `sta btna` in the paddle read routine?","To set the paddle fire buttons"
+"What is the purpose of the line `sta btnb` in the paddle read routine?","To set the paddle fire buttons for the second pair"
+"What is the purpose of the line `cli` in the paddle read routine?","To enable interrupts"

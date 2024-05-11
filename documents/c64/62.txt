@@ -1,0 +1,25 @@
+
+
+
+ DISPLAYING A SPRITE BEYOND THE 255TH X-POSITION
+
+    Displaying a sprite beyond the 255th X position requires a special POKE
+  which SETS the most significant bit of the X position and starts over at
+  the 256th pixel position across the screen. Here's how it works...
+    First, you POKE V+16 with the number for the sprite you're using (check
+  the "RIGHT X" row in the X-Y chart... we'll use sprite 0). Now we assign
+  an X position, keeping in mind that the X counter starts over from 0 at
+  the 256th position on the screen. Change line 50 to read as follows:
+    50 POKE V+16,1:POKE V,24:POKE V+1,75
+
+  This line POKEs V+ 16 with the number required to "open up" the right
+  side of the screen... the new X position 24 for sprite 0 now begins 24
+  pixels to the RIGHT of position 255. To check the right edge of the
+  screen, change line 60 to:
+
+    60 POKE V+16,1:POKE V,65:POKE V+1,75
+
+    Some experimentation with the settings in the sprite chart will give
+  you the settings you need to position and move sprites on the left and
+  right sides of the screen. The section on "moving sprites" will also
+  increase your understanding of how sprite positioning works.

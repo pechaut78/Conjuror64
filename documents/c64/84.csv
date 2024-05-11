@@ -1,0 +1,11 @@
+question,answer
+"Can the SID chip's parameters be changed dynamically during a note or sound?","Yes, the SID chip's parameters can be changed dynamically during a note or sound to create many interesting and fun effects."
+"What are the digitized outputs available for you in registers?","Digitized outputs from oscillator three and envelope generator three are available for you in registers 27 and 28, respectively."
+"What is the relationship between the output of oscillator 3 and the waveform selected?","The output of oscillator 3 is directly related to the waveform selected."
+"What happens to the output of oscillator 3 when the sawtooth waveform is chosen?","The output will present a series of numbers incremented (increased step by step) from 0 to 255 at a rate determined by the frequency of oscillator 3."
+"What happens to the output of oscillator 3 when the triangle waveform is chosen?","The output will increment from 0 up to 255, then decrement (decrease step by step) back down to 0."
+"What happens to the output of oscillator 3 when the pulse wave is chosen?","The output will jump back-and-forth between 0 and 255."
+"What happens to the output of oscillator 3 when the noise waveform is chosen?","The output will give you a series of random numbers."
+"What is the purpose of setting bit 7 of register 24?","Setting bit 7 of register 24 turns the audio output of voice 3 off."
+"What is the function of register 25?","Register 25 gives you access to the output of the envelope generator of oscillator 3."
+"How can vibrato be achieved?","Vibrato can be achieved by adding the output of oscillator 3 to the frequency of another oscillator."

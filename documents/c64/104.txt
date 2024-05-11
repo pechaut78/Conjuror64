@@ -1,0 +1,22 @@
+
+
+
+  INDEXING
+
+    Indexing plays an extremely important part in the running of the 6510
+  microprocessor. It can be defined as "creating an actual address from a
+  base address plus the contents of either the X or Y index registers."
+    For example, if X contains $05, and the microprocessor executes an LDA
+  instruction in the "absolute X indexed mode" with base address (e.g.,
+  $9000), then the actual location that is loaded into the A register is
+  $9000 + $05 = $9005. The mnemonic format of an absolute indexed
+  instruction is the same as an absolute instruction except a ",X" or ",Y"
+  denoting the index is added to the address.
+
+  EXAMPLE:
+
+    LDA $9000,X
+
+    There are absolute indexed, zero page indexed, indirect indexed, and
+  indexed indirect modes of addressing available on the 6510
+  microprocessor.

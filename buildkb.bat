@@ -1,0 +1,1 @@
+python store.py -a "./documents/Base entrainement actuaire IA.docx"

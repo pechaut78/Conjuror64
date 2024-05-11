@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the CHKOUT routine?","Open a channel for output"
+"What is the call address of the CHKOUT routine?","$FFC9 (hex) 65481 (decimal)"
+"What communication registers are affected by the CHKOUT routine?","X"
+"What is the preparatory routine for the CHKOUT routine?","(OPEN)"
+"What are the possible error returns for the CHKOUT routine?","0,3,5,7 (See READST)"
+"What is the minimum stack requirement for the CHKOUT routine?","4+"
+"What registers are affected by the CHKOUT routine?","A, X"
+"What is the purpose of calling the CHKOUT routine before sending data to an output device?","To open a channel for output"
+"What happens if the device intended to be opened is not an output device?","An error will occur and the routine will be aborted"
+"What is the purpose of the LISTEN address specified by the OPEN routine?","To automatically send the LISTEN address to the device on the serial bus"

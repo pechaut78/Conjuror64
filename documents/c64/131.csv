@@ -1,0 +1,11 @@
+question,answer
+"CPX has how many addressing modes?","Immediate, Zero Page, and Absolute"
+"CPX has how many bytes in its opcode?","2"
+"CPX has how many cycles in its execution?","2"
+"CPX has how many bytes in its execution?","2"
+"CPX has how many cycles in its execution?","4"
+"CPX has what type of addressing mode?","Immediate"
+"CPX has what type of addressing mode?","Zero Page"
+"CPX has what type of addressing mode?","Absolute"
+"CPX has what is the opcode for Immediate mode?","E0"
+"CPX has what is the opcode for Zero Page mode?","E4"

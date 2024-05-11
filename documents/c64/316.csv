@@ -1,0 +1,11 @@
+question,answer
+"SID frequency calculation depends on system clock applied to pin 6","The frequency is determined by the equation: Fout = (Fn*Fclk/16777216) Hz"
+"SID frequency calculation depends on 16-bit number in Frequency registers","The frequency is determined by the equation: Fout = (Fn*Fclk/16777216) Hz"
+"What is the formula for calculating SID frequency?","The frequency is determined by the equation: Fout = (Fn*Fclk/16777216) Hz"
+"What is the purpose of Frequency registers in SID?","Together these registers form a 16-bit number which linearly controls the frequency of Oscillator 1"
+"What is the relationship between SID frequency and system clock?","The frequency is determined by the equation: Fout = (Fn*Fclk/16777216) Hz"
+"What is the frequency resolution of SID?","The frequency resolution of SID is sufficient for any tuning scale and allows sweeping from note to note (portamento) with no discernable frequency steps"
+"What is the tuning scale used in SID?","It should be noted that the frequency resolution of SID is sufficient for any tuning scale and allows sweeping from note to note (portamento) with no discernable frequency steps"
+"What is the frequency range of SID?","A complete table of values for generating 8 octaves of the equally tempered musical scale with concert A (440 Hz) tuning is provided in Appendix E"
+"What is the role of pin 6 in SID?","For a standard 1.0-MHz clock, the frequency is given by: Fout = (Fn*0.059604645) Hz"
+"What is the formula for calculating SID frequency for a standard 1.0-MHz clock?","For a standard 1.0-MHz clock, the frequency is given by: Fout = (Fn*0.059604645) Hz"

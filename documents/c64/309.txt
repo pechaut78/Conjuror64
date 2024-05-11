@@ -1,0 +1,8 @@
+
+
+  ADDRESS BUS (A05-A00)
+
+    The lower six address pins, A5-A0, are bidirectional. During a pro-
+  cessor read or write of the video device, these address pins are inputs.
+  The data on the address inputs selects the register for read or write as
+  defined in the register map.

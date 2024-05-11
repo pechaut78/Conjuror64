@@ -1,0 +1,33 @@
+
+
+
+  PRIORITY
+
+    The priority of each sprite may be individually controlled with respect to
+  the other displayed information from character or bit map modes. The
+  priority of each sprite is set by the corresponding bit (MnDP) of register
+  27 ($1B) as follows:
+
+     REG BIT  |          PRIORITY TO CHARACTER OR BIT MAP DATA
+  ------------+------------------------------------------------------------
+        0     |  Non-transparent sprite data will be displayed (sprite in front)
+        1     |  Non-transparent sprite data will be displayed only instead of
+              |  Bkgd #0 or multi-color bit pair 01 (sprite behind)
+
+
+                          sprite-DISPLAY DATA PRIORITY
+                       +--------------+--------------+
+                       |   MnDP = 1   |   MnDP = 0   |
+                       +--------------+--------------+
+                       |  spriten        |  Foreground  |
+                       |  Foreground  |  spriten        |
+                       |  Background  |  Background  |
+                       +--------------+--------------+
+
+  sprite data bits of "0" ("00" in multi-color mode) are transparent, always
+  permitting any other information to be displayed.
+    The sprites have a fixed priority with respect to each other, with sprite 0
+  having the highest priority and sprite 7 the lowest. When sprite data (except
+  transparent data) of two sprites are coincident, the data from the lower
+  number sprite will be displayed. sprite vs. sprite data is prioritized before
+  priority resolution with character or bit map data.

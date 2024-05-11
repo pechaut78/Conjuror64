@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the TKSA function?","Send a secondary address to a device commanded to TALK"
+"What is the call address of the TKSA function?","$FF96 (hex) 65430 (decimal)"
+"What communication registers are affected by the TKSA function?","A"
+"What preparatory routines must be performed before calling the TKSA function?","TALK"
+"What error returns can occur when calling the TKSA function?","See READST"
+"What is the stack requirement for the TKSA function?","8"
+"What registers are affected by the TKSA function?","A"
+"What is the range of numbers that can be loaded into the accumulator for the TKSA function?","0 and 31"
+"What is the purpose of the TALK routine in relation to the TKSA function?","It must be called before the TKSA function"
+"What is the consequence of calling the TKSA function after a LISTEN routine?","It will not work"
+"What is an example of how to use the TKSA function?",";TELL DEVICE #4 TO TALK WITH COMMAND #7"

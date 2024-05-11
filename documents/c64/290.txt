@@ -1,0 +1,6 @@
+
+SPRITE  ENABLE
+
+    Each sprite can be selectively enabled for display by setting its corre-
+  sponding enable bit (MnE) to "1" in register 21 ($15). If the MnE bit is
+  "0," no sprite operations will occur involving the disabled sprite.

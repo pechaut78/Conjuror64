@@ -1,0 +1,27 @@
+
+
+
+  B-17. Function Name: MEMTOP
+
+    Purpose: Set the top of RAM
+    Call address: $FF99 (hex) 65433 (decimal)
+    Communication registers: X, Y
+    Preparatory routines: None
+    Error returns: None
+    Stack requirements: 2
+    Registers affected: X, Y
+
+    Description: This routine is used to set the top of RAM. When this
+  routine is called with the carry bit of the accumulator set, the pointer
+  to the top of RAM will be loaded into the X and Y registers. When this
+  routine is called with the accumulator carry bit clear, the contents of
+  the X and Y registers are loaded in the top of memory pointer, changing
+  the top of memory.
+
+  EXAMPLE:
+    ;DEALLOCATE THE RS-232 BUFFER
+    SEC
+    JSR MEMTOP   ;READ TOP OF MEMORY
+    DEX
+    CLC
+    JSR MEMTOP   ;SET NEW TOP OF MEMORY

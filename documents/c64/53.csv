@@ -1,0 +1,12 @@
+question,answer
+"Where is the raster register located in the VIC-II chip?","The raster register is found in the VIC-II chip at location 53266 ($D012)."
+"What is the purpose of the raster register when reading it?","It returns the lower 8 bits of the current raster position."
+"What is the most significant bit of the raster position located at?","Register location 53265 ($D011)."
+"What is the purpose of the raster register in setting up timing changes?","To get rid of screen flicker."
+"When should the changes on the screen be made?","When the raster is not in the visible display area, which is when your dot positions fall between 51 and 251."
+"What happens when the raster register is written to?","The number written to is saved for use with the raster compare function."
+"What happens when the actual raster value becomes the same as the number written to the raster register?","A bit in the VIC-II chip interrupt register 53273 ($D019) is turned ON by setting it to 1."
+"What happens if the proper interrupt bit is enabled?","An interrupt (IRQ) will occur."
+"What is the purpose of the raster compare function?","To compare the actual raster value with the number written to the raster register."
+"What is the purpose of the VIC-II chip interrupt register?","To handle interrupts."
+"What is the purpose of the raster register in the VIC-II chip?","To set up timing changes in your display to get rid of screen flicker."

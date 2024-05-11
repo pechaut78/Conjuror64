@@ -1,0 +1,14 @@
+
+Status Register
+                        +-+-+-+-+-+-+-+-+
+                        |N|V| |B|D|I|Z|C|  PROCESSOR STATUS REG "P"
+                        +-+-+-+-+-+-+-+-+
+                         | |   | | | | |
+                         | |   | | | | +>  CARRY         1=TRUE
+                         | |   | | | +-->  ZERO          1=RESULT ZERO
+                         | |   | | +---->  IRQ DISABLE   1=DISABLE
+                         | |   | +------>  DECIMAL MODE  1=TRUE
+                         | |   +-------->  BRK COMMAND
+                         | |
+                         | +------------>  OVERFLOW      1=TRUE
+                         +-------------->  NEGATIVE      1=NEG

@@ -1,0 +1,11 @@
+question,answer
+"Can a sprite be displayed at any position on the screen?","A sprite can be displayed at any one position on the screen without the block constraints inherent in character and bit map mode."
+"Up to how many unique sprites can be displayed simultaneously?","Up to 8 unique sprites can be displayed simultaneously."
+"How many bytes are used to define a sprite?","A sprite is defined by 63 bytes in memory."
+"What is the size of the dot array that represents a sprite?","A sprite is displayed as a 24*21 dot array."
+"What makes sprites especially suited for video graphics and game applications?","A number of special features make sprites especially suited for video graphics and game applications."
+"What is the purpose of the sprite display block?","The sprite display block is used to display a sprite."
+"Can a sprite be displayed as a 24*21 dot array?","Yes, a sprite is displayed as a 24*21 dot array."
+"What is the size of each byte in the sprite display block?","Each byte in the sprite display block is 1 byte."
+"Can multiple sprites be displayed simultaneously?","Yes, up to 8 unique sprites can be displayed simultaneously."
+"What is the purpose of the sprite in video graphics and game applications?","Sprites are especially suited for video graphics and game applications."

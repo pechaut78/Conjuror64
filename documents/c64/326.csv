@@ -1,0 +1,11 @@
+question,answer
+"What are the pins used to connect the two integrating capacitors?","CAP1A,CAP1B, (Pins 1,2)/ CAP2A,CAP2B (Pins 3,4)"
+"What is the normal operation frequency range of the Filter?","audio range (approximately 30 Hz-12 kHz)"
+"What is the recommended capacitor value for C1 and C2 for normal operation?","2200 pF"
+"What type of capacitors are preferred for the Filter?","Polystyrene capacitors"
+"Why are matched capacitors recommended in complex polyphonic systems?","to track each other"
+"What is the frequency range of the Filter that can be tailored to specific applications?","the choice of capacitor values"
+"What is the maximum Cutoff Frequency of the Filter?","FCmax = 2.6E-5/C"
+"What is the range of the Filter extends below the maximum Cutoff Frequency?","9 octaves"
+"What is the formula to calculate the maximum Cutoff Frequency?","FCmax = 2.6E-5/C"
+"Why may a low-cost game not require full high-frequency response?","to provide more control over the bass frequencies"

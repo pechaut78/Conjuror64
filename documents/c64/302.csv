@@ -1,0 +1,12 @@
+question,answer
+"An interrupt latch is set to what value when an interrupt source generates an interrupt request?","1"
+"What are the four sources of interrupt?","IRST, IMDC, IMMC, ILP"
+"What is the purpose of the interrupt enable bit in register 26 ($1A)?","to enable an interrupt request"
+"What happens to the /IRQ output when an interrupt latch is set?","set to 0"
+"What is the condition for setting the /IRQ output to 0?","corresponding interrupt enable bit in register 26 ($1A) must be set to 1"
+"What is the purpose of the interrupt register?","to show the status of the four sources of interrupt"
+"What happens to an interrupt latch once it has been set?","may be cleared only by writing a 1 to the desired latch in the interrupt register"
+"What is the feature that allows selective handling of video interrupts without software?","ability to clear interrupt latches"
+"What is the condition for clearing an interrupt latch?","writing a 1 to the desired latch in the interrupt register"
+"What happens to the /IRQ output when an interrupt latch is cleared?","set high"
+"What is the purpose of the raster count in the interrupt register?","to set when an interrupt source has generated an interrupt request"

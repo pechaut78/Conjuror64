@@ -1,0 +1,21 @@
+
+
+  B-23. Function Name: RESTOR
+
+    Purpose: Restore default system and interrupt vectors
+    Call address: $FF8A (hex) 65418 (decimal)
+    Preparatory routines: None
+    Error returns: None
+    Stack requirements: 2
+    Registers affected: A, X, Y
+
+    Description: This routine restores the default values of all system
+  vectors used in KERNAL and BASIC routines and interrupts. (See the Memory
+  Map for the default vector contents). The KERNAL VECTOR routine is used
+  to read and alter individual system vectors.
+
+  How to Use:
+    1) Call this routine.
+
+  EXAMPLE:
+    JSR RESTOR

@@ -1,0 +1,86 @@
+
+
+
+  SMOOTH SCROLLING
+
+    The VIC-II chip supports smooth scrolling in both the horizontal and
+  vertical directions. Smooth scrolling is a one pixel movement of the
+  entire screen in one direction. It can move either UP, or down, or left,
+  or right. It is used to move new information smoothly onto the screen,
+  while smoothly removing characters from the other side.
+    While the VIC-II chip does much of the task for you, the actual scroll-
+  ing must be done by a machine language program. The VIC-II chip features
+  the ability to place the video screen in any of 8 horizontal positions,
+  and 8 vertical positions. Positioning is controlled by the VIC-II
+  scrolling registers. The VIC-II chip also has a 38 column mode, and a 24
+  row mode. the smaller screen sizes are used to give you a place for your
+  new data to scroll on from.
+
+  The following are the steps for SMOOTH SCROLLING:
+  1) Shrink the screen (the border will expand).
+  2) Set the scrolling register to maximum (or minimum value depending upon
+     the direction of your scroll).
+  3) Place the new data on the proper (covered) portion of the screen.
+  4) Increment (or decrement) the scrolling register until it reaches the
+     maximum (or minimum) value.
+  5) At this point, use your machine language routine to shift the entire
+     screen one entire character in the direction of the scroll.
+  6) Go back to step 2.
+
+    To go into 38 column mode, bit 3 of location 53270 ($D016) must be set
+  to a 0. The following POKE does this:
+
+    POKE 53270,PEEK(53270)AND 247
+
+    To return to 40 column mode, set bit 3 of location 53270 ($D016) to a
+  1.The following POKE does this:
+
+    POKE 53270,PEEK(53270)OR 8
+
+    To go into 24 row mode, bit 3 of location 53265 ($D011) must be set to
+  a 0. The following POKE will do this:
+
+    POKE 53265,PEEK(53265)AND 247
+
+    To return to 25 row mode, set bit 3 of location 53265 ($D011) to a 1.
+  The following POKE does this:
+
+    POKE 53265,PEEK(53265)OR 8
+
+    When scrolling in the X direction, it is necessary to place the VIC-II
+  chip into 38 column mode. This gives new data a place to scroll from.
+  When scrolling LEFT, the new data should be placed on the right. When
+  scrolling RIGHT the new data should be placed on the left. Please note
+  that there are still 40 columns to screen memory, but only 38 are
+  visible.
+    When scrolling in the Y direction, it is necessary to place the VIC-II
+  chip into 24 row mode. When scrolling UP, place the new data in the LAST
+  row. When scrolling DOWN, place the new data on the FIRST row. Unlike X
+  scrolling, where there are covered areas on each side of the screen,
+  there is only one covered area in Y scrolling. When the Y scrolling
+  register is set to 0, the first line is covered, ready for new data. When
+  the Y scrolling register is set to 7 the last row is covered.
+    For scrolling in the X direction, the scroll register is located in
+  bits 2 to 0 of the VIC-II control register at location 53270 ($D016 in
+  HEX). As always, it is important to affect only those bits. The following
+  POKE does this:
+
+    POKE 53270,(PEEK(53270)AND 248)+X
+
+  where X is the X position of the screen from 0 to 7.
+    For scrolling in the Y direction, the scroll register is located in
+  bits 2 to 0 of the VIC-II control register at location 53265 ($D011 in
+  HEX). As always, it is important to affect only those bits. The following
+  POKE does this:
+
+    POKE 53265,(PEEK(53265)AND 248)+Y
+
+  where Y is the Y position of the screen from 0 to 7.
+    To scroll text onto the screen from the bottom, you would step the low-
+  order 3 bits of location 53265 from 0-7, put more data on the covered
+  line at the bottom of the screen, and then repeat the process. To scroll
+  characters onto the screen from left to right, you would step the low-
+  order 3 bits of location 53270 from 0 to 7, print or POKE another column
+  of new data into column 0 of the screen, then repeat the process.
+    If you step the scroll bits by -1, your text will move in the opposite
+  direction.

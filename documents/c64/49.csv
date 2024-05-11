@@ -1,0 +1,11 @@
+question,answer
+"Can the VIC-II chip detect collisions between sprites?","Yes, it can detect collisions between sprites."
+"What can the VIC-II chip detect collisions between?","The VIC-II chip can detect collisions between sprites, or between sprites and background data."
+"What is a collision in the context of the VIC-II chip?","A collision occurs when a non-zero part of a sprite overlaps a non-zero portion of another sprite or characters on the screen."
+"Can the VIC-II chip detect collisions between sprites and background data?","Yes, it can detect collisions between sprites and background data."
+"What happens when a collision occurs in the context of the VIC-II chip?","A collision occurs when a non-zero part of a sprite overlaps a non-zero portion of another sprite or characters on the screen."
+"Can the VIC-II chip detect collisions between sprites and characters?","Yes, it can detect collisions between sprites and characters."
+"What is the purpose of collision detection in the VIC-II chip?","The purpose of collision detection is to detect when a non-zero part of a sprite overlaps a non-zero portion of another sprite or characters on the screen."
+"Can the VIC-II chip detect collisions between sprites and sprites?","Yes, it can detect collisions between sprites."
+"Can the VIC-II chip detect collisions between background data and characters?","Yes, it can detect collisions between background data and characters."
+"What is the VIC-II chip's ability to detect collisions useful for?","The VIC-II chip's ability to detect collisions is useful for detecting when a non-zero part of a sprite overlaps a non-zero portion of another sprite or characters on the screen."

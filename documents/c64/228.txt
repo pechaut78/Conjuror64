@@ -1,0 +1,24 @@
+
+
+
+  DATA STORAGE ON FLOPPY DISKETTES
+
+    Diskettes allow 3 different forms of data storage. Sequential files are
+  similar to those on tape, but several can can be used at the same time.
+  Relative files let you organize the data into records, and then read and
+  replace individual records within the file. Random files let you work
+  with data anywhere on the disk. They are organized into 256 byte sections
+  called blocks.
+    The PRINT# statement's limitations are discussed in the section on
+  cassette tape. The same limitations to format apply on the disk. RETURNs
+  or commas are needed to separate your data. The CHR$(0) is still read by
+  the GET# statement as an empty string.
+    Relative and random files both make use of separate data and command
+  "channels." Data written to the disk goes through the data channel, where
+  it is stored in a temporary buffer in the disk's RAM. When the record or
+  block is complete, a command is sent through the command channel that
+  tells the drive where to put the data, and the entire buffer is written.
+    Applications that require large amounts of data to be processed are
+  best stored in relative disk files. These will use the least amount of
+  time and provide the best flexibility for the programmer. Your disk drive
+  manual gives a complete programming guide to use of disk files.

@@ -1,0 +1,107 @@
+  THE USER PORT
+
+    The user port is meant to connect the Commodore 64 to the outside
+  world. By using the lines available at this port, you can connect the
+  Commodore 64 to a printer, a Votrax Type and Talk, a MODEM, even another
+  computer.
+    The port on the Commodore 64 is directly connected to one of the 6526
+  CIA chips. By programming, the CIA will connect to many other devices.
+
+  PORT PIN DESCRIPTION
+
+                                             1 1 1
+                           1 2 3 4 5 6 7 8 9 0 1 2
+                        +--@-@-@-@-@-@-@-@-@-@-@-@--+
+                        |                           |
+                        +--@-@-@-@-@-@-@-@-@-@-@-@--+
+                           A B C D E F H J K L M N
+
+                            PORT PIN DESCRIPTION
+  +-----------+-----------+-----------------------------------------------+
+  |    PIN    |           |                                               |
+  +-----------+DESCRIPTION|                     NOTES                     |
+  | TOP SIDE  |           |                                               |
+  +-----------+-----------+-----------------------------------------------+
+  |     1     |  GROUND   |                                               |
+  |     2     |   +5V     |  (100 mA MAX.)                                |
+  |     3     |  RESET    |  By grounding this pin, the Commodore 64 will |
+  |           |           |  do a COLD START, resetting completely. The   |
+  |           |           |  pointers to a BASIC program will be reset,   |
+  |           |           |  but memory will not be cleared. This is also |
+  |           |           |  a RESET output for the external devices.     |
+  |     4     |    CNT1   |  Serial port counter from CIA#1(SEE CIA SPECS)|
+  |     5     |    SP1    |  Serial port from CIA #l (SEE 6526 CIA SPECS) |
+  |     6     |    CNT2   |  Serial port counter from CIA#2(SEE CIA SPECS)|
+  |     7     |    SP2    |  Serial port from CIA #l (SEE 6526 CIA SPECS) |
+  |     8     |    PC2    |  Handshaking line from CIA #2 (SEE CIA SPECS) |
+  |     9     |SERIAL ATN |  This pin is connected to the ATN line of the |
+  |           |           |  serial bus.                                  |
+  |    10     |9 VAC+phase|  Connected directly to the Commodore          |
+  |    11     |9 VAC-phase|  64 transformer (50 mA MAX.).                 |
+  |    12     |    GND    |                                               |
+  |           |           |                                               |
+  |BOTTOM SIDE|           |                                               |
+  |           |           |                                               |
+  |     A     |    GND    |  The Commodore 64 gives you control over      |
+  |     B     |   FLAG2   |  PORT B on CIA chip #1. Eight lines for input |
+  |     C     |    PB0    |  or output are available, as well as 2 lines  |
+  |     D     |    PB1    |  for handshaking with an outside device. The  |
+  |     E     |    PB2    |  I/O lines for PORT B are controlled by two   |
+  |     F     |    PB3    |  locations. One is the PORT itself, and is    |
+  |     H     |    PB4    |  located at 56577 ($DD01 HEX). Naturally you  |
+  |     I     |    PB5    |  PEEK it to read an INPUT, or POKE it to set  |
+  |     K     |    PB6    |  an OUTPUT. Each of the eight I/O lines can   |
+  |     L     |    PB7    |  be set up as either an INPUT or an OUTPUT by |
+  |     M     |    PA2    |  by setting the DATA DIRECTION REGISTER       |
+  |     N     |    GND    |  properly.                                    |
+  +-----------+-----------+-----------------------------------------------+
+
+
+    The DATA DIRECTION REGISTER has its location at 56579 ($DD03 hex). Each
+  of the eight lines in the PORT has a BIT in the eight-bit DATA DIRECTION
+  REGISTER (DDR) which controls whether that line will be an input or an
+  output. If a bit in the DDR is a ONE, the corresponding line of the PORT
+  will be an OUTPUT. If a bit in the DDR is a ZERO, the corresponding line
+  of the PORT will be an INPUT. For example, if bit 3 of the DDR is set to
+  1, then line 3 of the PORT will be an output. A further example:
+    If the DDR is set like this:
+
+                          BIT #: 7 6 5 4 3 2 1 0
+                          VALUE: 0 0 1 1 1 0 0 0
+
+  You can see that lines 5,4, and 3 will be outputs since those bits are
+  ones. The rest of the lines will be inputs, since those lines are zeros.
+    To PEEK or POKE the USER port, it is necessary to use both the DDR and
+  the PORT itself.
+    Remember that the PEEK and POKE statements want a number from 0-255.
+  The numbers given in the example must be translated into decimal before
+  they can be used. The value would be:
+
+                     2^5 + 2^4 + 2^3 = 32 + 16 + 8 = 56
+
+  Notice that the bit # for the DDR is the same number that = 2 raised to
+  a power to turn the bit value on.
+
+                      (16 = 2^4=2*2*2*2, 8 = 2^3=2*2*2)
+
+    The two other lines, FLAG1 and PA2 are different from the rest of the
+  USER PORT. These two lines are mainly for HANDSHAKING, and are programmed
+  differently from port B.
+    Handshaking is needed when two devices communicate. Since one device
+  may run at a different speed than another device it is necessary to give
+  the devices some way of knowing what the other device is doing. Even when
+  the devices are operating at the same speed, handshaking is necessary to
+  let the other know when data is to be sent, and if it has been received.
+  The FLAG1 line has special characteristics which make it well suited for
+  handshaking.
+    FLAG1 is a negative edge sensitive input which can be used as a general
+  purpose interrupt input. Any negative transition on the FLAG line will
+  set the FLAG interrupt bit. If the FLAG interrupt is enabled, this will
+
+  cause an INTERRUPT REQUEST. If the FLAG bit is not enabled, it can be
+  polled from the interrupt register under program control.
+    PA2 is bit 2 of PORT A of the CIA. It is controlled like any other bit
+  in the port. The port is located at 56576 ($DD00). The data direction
+  register is located at 56578 ($DD02.)
+    FOR MORE INFORMATION ON THE 6526 SEE THE CHIP SPECIFICATIONS IN
+  APPENDIX M.

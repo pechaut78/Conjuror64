@@ -1,0 +1,11 @@
+question,answer
+"Is the carry flag set?","1=TRUE"
+"What is the result of the zero flag?","1=RESULT ZERO"
+"Is the IRQ disabled?","1=DISABLE"
+"Is the decimal mode enabled?","1=TRUE"
+"What is the purpose of the BRK command?","BRK COMMAND"
+"What happens when the overflow flag is set?","1=TRUE"
+"What is the significance of the negative flag?","1=NEG"
+"What is the purpose of the IRQ disable flag?","1=DISABLE"
+"What is the result of the decimal mode?","1=TRUE"
+"What is the purpose of the BRK command?","BRK COMMAND"

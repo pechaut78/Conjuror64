@@ -1,0 +1,11 @@
+question,answer
+"JSR instruction is used for what purpose?","Jump to new location saving return address"
+"JSR instruction is also known as what?","Jump to new location"
+"JSR instruction is used in what type of operation?","PC + 2 to S"
+"JSR instruction is used to save what?","return address"
+"JSR instruction is used to jump to what?","new location"
+"JSR instruction is used to save the return address in what?","PC + 1"
+"JSR instruction is used to save the return address in what?","PCL"
+"JSR instruction is used to save the return address in what?","PCH"
+"JSR instruction is used to save the return address in what?","PC + 2"
+"JSR instruction is used to save the return address in what?","(PC + 1)"

@@ -1,0 +1,11 @@
+question,answer
+"GetIN function purpose","Get a character"
+"GetIN call address","$FFE4 (hex) 65508 (decimal)"
+"Registers affected by GetIN","A (X, Y)"
+"Preparatory routines for GetIN","CHKIN, OPEN"
+"Error returns for GetIN","See READST"
+"Stack requirements for GetIN","7+"
+"Description of GetIN","Removes one character from the keyboard queue and returns it as an ASCII value"
+"Characters in the keyboard buffer","Up to ten"
+"Channel types supported by GetIN","Keyboard, RS-232, serial, cassette, screen"
+"Routine to call for serial, cassette, or screen channels","BASIN"

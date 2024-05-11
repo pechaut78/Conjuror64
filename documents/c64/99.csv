@@ -1,0 +1,12 @@
+question,answer
+"What is the 64MON cartridge used for?","allows you to escape from the world of CBM BASIC, into the land of machine language."
+"What can the 64MON cartridge display?","the contents of the internal registers in the 6510 microprocessor, and it allows you to display portions of memory, and change them on the screen, using the screen editor."
+"What features does the 64MON cartridge have?","a built-in assembler and disassembler, as well as many other features that allow you to write and edit machine language programs easily."
+"Is an assembler necessary to write machine language programs?","no, but it is strongly suggested that you purchase an assembler of some sort."
+"What is the recommended way to write machine language programs?","using an assembler, which is considerably easier than writing them without an assembler."
+"What is the format of the machine language examples in this manual?","the format that 64MON uses, from now on."
+"Are the machine language examples compatible with any assembler?","almost certainly, since nearly all assembler formats are the same."
+"What is the importance of explaining the hexadecimal numbering system?","it must be explained before explaining any of the other features of 64MON."
+"What is the 64MON cartridge used for in relation to CBM BASIC?","it allows you to escape from the world of CBM BASIC, into the land of machine language."
+"What are the internal registers in the 6510 microprocessor?","the contents of which can be displayed by the 64MON cartridge."
+"What is the purpose of the screen editor in the 64MON cartridge?","to display and change portions of memory on the screen."

@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the Y Index Register?", "This is a very important register."
+"What can you do with the Y Index Register?", "There are instructions for nearly all of the transformations you can make to the accumulator, and the X register."
+"What are some examples of transformations you can make to the Y register?", "copy the contents of a memory location into the Y register, copy the contents of the Y register into a memory location, and modify the contents of the Y, or some other register directly."
+"What can you copy with the Y Index Register?", "the contents of a memory location into the Y register"
+"What can you modify with the Y Index Register?", "the contents of the Y, or some other register directly"
+"What is unique about the Y Index Register?", "there are other instructions for things that only the Y register can do"
+"What can you do with the contents of the Y Index Register?", "copy the contents of the Y register into a memory location"
+"What is important about the Y Index Register?", "IMPORTANT: only provide questions and answers pairs, no other sentence"
+"What are some examples of machine language instructions?", "allow you to copy the contents of a memory location into the Y register, copy the contents of the Y register into a memory location, and modify the contents of the Y, or some other register directly"
+"What is the purpose of the instructions for the Y Index Register?", "There are instructions for nearly all of the transformations you can make to the accumulator, and the X register"
+"What can you do with the Y Index Register and the X register?", "There are instructions for nearly all of the transformations you can make"

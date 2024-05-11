@@ -1,0 +1,11 @@
+question,answer
+"Is the TOD clock a special purpose timer for real-time applications?","Yes"
+"What is the resolution of the TOD clock?","1/10th second"
+"What are the 4 registers of the TOD clock?","10ths of seconds, Seconds, Minutes and Hours"
+"What is the purpose of the AM/PM flag?","Easy bit testing"
+"What is the frequency of the external input required for accurate time-keeping?","60 Hz or 50 Hz"
+"What is the programmable ALARM used for?","Generating an interrupt at a desired time"
+"What is the Control Register bit used for?","Governing access to the ALARM"
+"What happens when a write to the Hours register occurs?","TOD is automatically stopped"
+"What is the purpose of the latching function in the TOD clock?","Keeping all Time Of Day information constant during a read sequence"
+"What happens if only one register is to be read?","The register can be read "on the fly""

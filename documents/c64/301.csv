@@ -1,0 +1,11 @@
+question,answer
+"what is the function of the raster register","The raster register is a dual-function register."
+"what is the purpose of reading the raster register 18","A read of the raster register 18 returns the lower 8 bits of the current raster position"
+"what is the location of the MSB-RC8","The MSB-RC8 is located in register 17 ($11)"
+"what is the purpose of interrogating the raster register","The raster register can be interrogated to implement display changes outside the visible area to prevent display flicker"
+"what is the range of the visible display window","The visible display window is from raster 51 through raster 251 ($033-$0FB)"
+"what happens when the current raster matches the written value","When the current raster matches the written value, the raster interrupt latch is set"
+"what is the purpose of writing to the raster bits","A write to the raster bits (including RC8) is latched for use in an internal raster compare"
+"what is the purpose of the internal raster compare","The internal raster compare is used to compare the current raster with the written value"
+"what is the purpose of the raster interrupt latch","The raster interrupt latch is set when the current raster matches the written value"
+"what is the purpose of the internal raster compare latch","The internal raster compare latch is used to latch the written value for comparison with the current raster"

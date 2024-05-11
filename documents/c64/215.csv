@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the VECTOR routine?","Manage RAM vectors"
+"What is the call address of the VECTOR routine?","$FF8D (hex) 65421 (decimal)"
+"What communication registers are used by the VECTOR routine?","X, Y"
+"What is the stack requirement of the VECTOR routine?","2"
+"What registers are affected by the VECTOR routine?","A, X, Y"
+"What happens when the accumulator carry bit is set when calling the VECTOR routine?","Stores the current contents of the RAM vectors in a list pointed to by the X and Y registers"
+"What happens when the accumulator carry bit is clear when calling the VECTOR routine?","Transfers the user list pointed to by the X and Y registers to the system RAM vectors"
+"What is the recommended way to use the VECTOR routine?","Read the entire vector contents into the user area, alter the desired vectors, and then copy the contents back to the system vectors"
+"How do you read the system RAM vectors?","Set the carry, set the X and Y registers to the address to put the vectors, and call the VECTOR routine"
+"How do you load the system RAM vectors?","Clear the carry bit, set the X and Y registers to the address of the vector list in RAM that must be loaded, and call the VECTOR routine"

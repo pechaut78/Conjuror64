@@ -1,0 +1,68 @@
+  THE GAME PORTS
+
+    The Commodore 64 has two 9-pin Game Ports which allow the use of
+  joysticks, paddies, or a light pen. Each port will accept either one joy-
+  stick or one paddle pair. A light pen can be plugged into Port A (only)
+  for special graphic control, etc. This section gives you examples of how
+  to use the joysticks and paddies from both BASIC and machine language.
+    The digital joystick is connected to CIA #1 (MOS 6526 Complex Interface
+  Adapter). This input/output device also handles the paddle fire buttons
+  and keyboard scanning. The 6526 CIA chip has 16 registers which are in
+  memory locations 56320 through 56335 inclusive ($DC00 to $DC0F). Port A
+  data appears at location 56320 (DC00) and Port B data is found at
+  location 56321 ($DC01).
+    A digital joystick has five distinct switches, four of the switches are
+  used for direction and one of the switches is used for the fire button.
+
+
+
+    These switches correspond to the lower 5 bits of the data in location
+  56320 or 56321. Normally the bit is set to a one if a direction is NOT
+  chosen or the fire button is NOT pressed. When the fire button is
+  pressed, the bit (bit 4 in this case) changes to a 0. 
+  
+  
+  
+  
+  To read the
+  joystick from BASIC, the following subroutine should be used:
+
+
+start tok64 page344.prg
+  10 fork=0to10:rem set up direction string
+  20 readdr$(k):next
+  30 data"","n","s","","w","nw"
+  40 data"sw","","e","ne","se"
+  50 print"going...";
+  60 gosub100:rem read the joystick
+  65 ifdr$(jv)=""then80:rem check if a direction was chosen
+  70 printdr$(jv);" ";:rem output which direction
+  80 iffr=16then60:rem check if fire button was pushed
+  90 print"-----f-----i-----r-----e-----!!!":goto60
+  100 jv=peek(56320):rem get joystick value
+  110 fr=jvand16:rem form fire button status
+  120 jv=15-(jvand15):rem form direction value
+  130 return
+stop tok64
+
+  +-----------------------------------------------------------------------+
+  | NOTE: For the second joystick, set JV = PEEK (56321).                 |
+  +-----------------------------------------------------------------------+
+
+    The values for JV correspond to these directions:
+
+                       +-------------+---------------+
+                       | JV EQUAL TO |   DIRECTION   |
+                       +-------------+---------------+
+                       |      0      |          NONE |
+                       |      1      |            UP |
+                       |      2      |          DOWN |
+                       |      3      |             - |
+                       |      4      |          LEFT |
+                       |      5      |     UP & LEFT |
+                       |      6      |   DOWN & LEFT |
+                       |      7      |             - |
+                       |      8      |         RIGHT |
+                       |      9      |    UP & RIGHT |
+                       |     10      |  DOWN & RIGHT |
+                       +-------------+---------------+

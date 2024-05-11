@@ -1,0 +1,11 @@
+question,answer
+"Multi-color bit map mode allows you to display how many different colors in each 8 by 8 section of bit map?","up to four"
+"Multi-color bit map mode uses how much memory for the bit map?","an 8K section"
+"What are the three ways to select colors for multi-color bit map mode?","(1) the background color register 0, (2) the video matrix, and (3) color memory"
+"What is the purpose of setting bit 5 of 53265 and bit 4 at location 53270 to a 1?","to turn ON multi-color bit mapped mode"
+"What is the purpose of setting bit 5 of 53265 and bit 4 at location 53270 to a 0?","to turn OFF multi-color bit mapped mode"
+"What is the correspondence between the 8K section of memory and the display?","one to one"
+"How wide are the horizontal dots in multi-color bit mapped mode?","two bits"
+"What is the maximum number of colors that can be displayed in each 2 bits?","4"
+"What is the purpose of the POKE 53265,PEEK(53265)OR 32 command?","to turn ON multi-color bit mapped mode"
+"What is the purpose of the POKE 53265,PEEK(53265)AND 223 command?","to turn OFF multi-color bit mapped mode"

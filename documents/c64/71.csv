@@ -1,0 +1,11 @@
+question,answer
+"Which sprite has priority over all other sprites?","Sprite 0"
+"What happens to a sprite with lower priority when two sprites are in the same position?","The sprite with lower priority will be obscured or show through"
+"What is the rule for determining sprite priority?","Lower numbered sprites have priority over higher numbered sprites"
+"What happens to a sprite with higher priority when two sprites are in the same position?","The sprite with higher priority will appear in front of the sprite with lower priority"
+"What is the priority of Sprite 7?","Sprite 7 has no priority in relation to the other sprites"
+"What happens to a sprite with higher priority when it is in front of a sprite with lower priority?","The sprite with higher priority will appear in front of the sprite with lower priority"
+"What is the priority of Sprite 1?","Sprite 1 has priority over sprites 2-7"
+"What happens to a sprite with lower priority when it is behind a sprite with higher priority?","The sprite with lower priority will be obscured or show through"
+"What is the rule for determining which sprite appears in front of the other?","The sprite with higher priority will appear in front of the sprite with lower priority"
+"What happens to a sprite with lower priority when it is in front of a sprite with higher priority?","The sprite with lower priority will be obscured or show through"

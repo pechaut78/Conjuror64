@@ -1,0 +1,11 @@
+question,answer
+"what is the operation of the BNE instruction?","Branch on result not zero"
+"what is the condition for the BNE instruction to execute?","result not zero"
+"what is the abbreviation for the BNE instruction?","BNE"
+"what is the purpose of the BNE instruction?","Branch on result not zero"
+"what is the condition for the BNE instruction to execute?","result not zero"
+"what is the operation of the BNE instruction in assembly language?","BMI Oper"
+"what is the opcode for the BNE instruction?","D0"
+"what is the number of bytes required for the BNE instruction?","2"
+"what is the number of cycles required for the BNE instruction?","2"
+"what is the condition for the BNE instruction to execute?","result not zero"

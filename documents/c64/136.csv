@@ -1,0 +1,10 @@
+question,answer
+"EOR operation",The EOR operation is used to perform an Exclusive-OR operation between the accumulator and the memory location.
+"EOR instruction",The EOR instruction is used to perform an Exclusive-OR operation between the accumulator and the memory location.
+"Assembly language form",The assembly language form of the EOR instruction is EOR #Oper.
+"OP CODE",The OP CODE of the EOR instruction is 49.
+"Number of bytes",The number of bytes required to execute the EOR instruction is 2.
+"Number of cycles",The number of cycles required to execute the EOR instruction is 2.
+"Addressing mode",The addressing mode of the EOR instruction is Immediate.
+"Assembly language form of EOR",The assembly language form of the EOR instruction is EOR #Oper.
+"Number of cycles for EOR",The number of cycles required to execute the EOR instruction is 2.

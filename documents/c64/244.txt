@@ -1,0 +1,7 @@
+
+
+  SERIAL SRQ IN: (SERIAL SERVICE REQUEST IN)
+
+    Any device on the serial bus can bring this signal LOW when it requires
+  attention from the Commodore 64. The Commodore 64 will then take care of
+  the device. (See Figure 6-4).

@@ -1,0 +1,43 @@
+  6581 SOUND INTERFACE DEVICE (SID)
+  CHIP SPECIFICATIONS
+  CONCEPT
+
+    The 6581 Sound Interface Device (SID) is a single-chip, 3-voice elec-
+  tronic music synthesizer/sound effects generator compatible with the 65XX
+  and similar microprocessor families. SID provides wide-range, high-
+  resolution control of pitch (frequency), tone color (harmonic content),
+  and dynamics (volume). Specialized control circuitry minimizes software
+  overhead, facilitating use in arcade/home video games and low-cost
+  musical instruments.
+
+
+  FEATURES
+
+  o 3 TONE OSCILLATORS
+        Range: 0-4 kHz
+  o 4 WAVEFORMS PER OSCILLATOR
+        Triangle, Sawtooth,
+        Variable Pulse, Noise
+  o 3 AMPLITUDE MODULATORS
+        Range: 48 dB
+  o 3 ENVELOPE GENERATORS
+        Exponential response
+        Attack Rate: 2 ms-8 s
+        Decay Rate: 6 ms-24 s
+        Sustain Level: 0-peak volume
+        Release Rate: 6 ms-24 s
+  o OSCILLATOR SYNCHRONIZATION
+  o RING MODULATION
+  o PROGRAMMABLE FILTER
+        Cutoff range: 30 Hz-12 kHz
+        12 dB/octave Rolloff
+        Low pass, Bandpass,
+        High pass, Notch outputs
+        Variable Resonance
+  o MASTER VOLUME CONTROL
+  o 2 A/D POT INTERFACES
+  o RANDOM NUMBER/MODULATION GENERATOR
+  o EXTERNAL AUDIO INPUT
+
+
+  

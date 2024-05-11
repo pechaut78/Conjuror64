@@ -1,0 +1,12 @@
+
+
+    The actual values to POKE into a color memory location to change a
+  character's color are:
+
+             0  BLACK   4  PURPLE     8  ORANGE     12  GRAY 2
+             1  WHITE   5  GREEN      9  BROWN      13  Light GREEN
+             2  RED     6  BLUE      10  Light RED  14  Light BLUE
+             3  CYAN    7  YELLOW    11  GRAY 1     15  GRAY 3
+
+    For example, to change the color of a character located at the upper
+  left-hand corner of the screen to red, type: POKE 55296,2.

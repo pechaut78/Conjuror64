@@ -1,0 +1,11 @@
+question,answer
+"Is there a pseudo 6551 control register in the RS-232 storage?","Yes, it is located at $0293-M51CTR-Pseudo 6551 control register."
+"What is the purpose of the two bytes following the control and command registers in the file name field?","They contain the baud rate for the start of the bit test during the interface activity."
+"What is the function of the RS-232 status register?","It is used to calculate baud rate."
+"What is the purpose of the number of bits to be sent/received?","It is used to calculate baud rate."
+"What is the purpose of the two bytes that are equal to the time of one bit cell?","They are used to calculate baud rate."
+"What is the purpose of the byte index to the end of the receiver FIFO buffer?","It is used to calculate baud rate."
+"What is the purpose of the byte index to the start of the receiver FIFO buffer?","It is used to calculate baud rate."
+"What is the purpose of the byte index to the start of the transmitter FIFO buffer?","It is used to calculate baud rate."
+"What is the purpose of the byte index to the end of the transmitter FIFO buffer?","It is used to calculate baud rate."
+"What is the function of the CIA #2 ICR?","It holds current active interrupts in the CIA #2 ICR."

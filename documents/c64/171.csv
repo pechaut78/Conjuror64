@@ -1,0 +1,11 @@
+question,answer
+"Is the Commodore 64's memory map divided into sections?","Yes, it is."
+"What is the size of the Kernal ROM in the Commodore 64's memory map?","8K"
+"What is the purpose of the OR RAM in the Commodore 64's memory map?","It is used for I/O operations or character ROM."
+"What is the size of the RAM in the Commodore 64's memory map?","16K"
+"What is the range of the 8K RAM in the Commodore 64's memory map?","8000-9FFF"
+"What is the purpose of the ROM PLUG-IN in the Commodore 64's memory map?","It is used for expansion or additional functionality."
+"What is the size of the BASIC ROM in the Commodore 64's memory map?","8K"
+"What is the range of the 4K RAM in the Commodore 64's memory map?","C000-CFFF"
+"What is the range of the 4K I/O OR RAM in the Commodore 64's memory map?","D000-DFFF"
+"What is the range of the 8K KERNAL ROM in the Commodore 64's memory map?","E000-FFFF"

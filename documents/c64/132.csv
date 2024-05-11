@@ -1,0 +1,11 @@
+question,answer
+"CPY instruction has how many addressing modes?","Immediate, Zero Page, Absolute"
+"CPY instruction uses how many bytes in Zero Page mode?","2"
+"CPY instruction uses how many cycles in Zero Page mode?","3"
+"CPY instruction uses how many bytes in Absolute mode?","3"
+"CPY instruction uses how many cycles in Absolute mode?","4"
+"What is the OP CODE for CPY instruction in Immediate mode?","C0"
+"What is the OP CODE for CPY instruction in Zero Page mode?","C4"
+"What is the OP CODE for CPY instruction in Absolute mode?","CC"
+"How many bytes does CPY instruction use in Immediate mode?","2"
+"How many cycles does CPY instruction take in Immediate mode?","2"

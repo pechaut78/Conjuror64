@@ -1,0 +1,11 @@
+question,answer
+"what is the maximum operating temperature of this device","0 to +70 Celsius"
+"what is the maximum storage temperature of this device","-55 to +150 Celsius"
+"what is the maximum supply voltage of this device","-0.3 to +7.0 VDC"
+"what is the maximum input voltage of this device","-0.3 to +7.0 VDC"
+"what is the unit of measurement for the supply voltage","VDC"
+"what is the unit of measurement for the operating temperature","Celsius"
+"what is the unit of measurement for the storage temperature","Celsius"
+"what is the minimum operating temperature of this device","0 Celsius"
+"what precautions should be taken when applying voltages to this device","precautions should be taken to avoid application of voltages higher than the maximum rating"
+"what is the purpose of the input protection in this device","input protection against damage due to high static voltages or electric fields"

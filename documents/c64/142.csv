@@ -1,0 +1,11 @@
+question,answer
+"Operation of LDA instruction","The LDA instruction is used to load the accumulator with a value from memory."
+"LDA instruction format","The LDA instruction has several formats, including immediate, zero page, zero page X, absolute, absolute X, absolute Y, indirect X, and indirect Y."
+"LDA instruction opcode","The opcode for the LDA instruction is A9, A5, B5, AD, BD, B9, A1, and B1."
+"LDA instruction cycles","The number of cycles required to execute the LDA instruction varies depending on the addressing mode, ranging from 2 to 6 cycles."
+"LDA instruction bytes","The number of bytes required to execute the LDA instruction varies depending on the addressing mode, ranging from 2 to 3 bytes."
+"LDA instruction addressing modes","The LDA instruction has several addressing modes, including immediate, zero page, zero page X, absolute, absolute X, absolute Y, indirect X, and indirect Y."
+"LDA instruction indirect addressing","The LDA instruction can use indirect addressing modes, including (indirect,X) and (indirect),Y."
+"LDA instruction page boundary crossing","The LDA instruction can cross page boundaries, resulting in an additional cycle being added to the instruction's execution time."
+"LDA instruction zero page addressing","The LDA instruction can use zero page addressing, which allows for faster access to memory locations."
+"LDA instruction absolute addressing","The LDA instruction can use absolute addressing, which allows for direct access to memory locations."

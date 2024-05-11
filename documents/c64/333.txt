@@ -1,0 +1,28 @@
+
+
+  D0-D7 (Pins 15-22)
+
+    These bidirectional lines are used to transfer data between SID and the
+  microprocessor. They are TTL compatible in the input mode and capable of
+  driving 2 TTL loads in the output mode. The data buffers are usually in
+  the high-impedance off state. During a Write operation, the data buffers
+  remain in the off (input) state and the microprocessor supplies data to
+  SID over these lines. During a Read operation, the data buffers turn on
+  and SID supplies data to the microprocessor over these lines. The pins
+  are normally connected to the corresponding data lines of the micro-
+  processor.
+
+  POTX,POTY (Pins 24,23)
+
+    These pins are inputs to the A/D converters used to digitize the posi-
+  tion of potentiometers. The conversion process is based on the time con-
+  stant of a capacitor tied from the POT pin to ground, charged by a
+  potentiometer tied from the POT pin to +5 volts. The component values are
+  determined by:
+
+                                RC = 4.7E-4
+
+  Where R is the maximum resistance of the pot and C is the capacitor.
+    The larger the capacitor, the smaller the POT value jitter. The recom-
+  mended values for R and C are 470 komhs and 1000 pF. Note that a separate
+  pot and cap are required for each POT pin.

@@ -1,0 +1,11 @@
+question,answer
+"Once you've made a sprite, you want to be able to move it around the screen.","To do this, your Commodore 64 uses three positioning registers: SPRITE X POSITION REGISTER, SPRITE Y POSITION REGISTER, and MOST SIGNIFICANT BIT X POSITION REGISTER."
+"Can you move a sprite around the screen?","Yes, you can, by using the SPRITE X POSITION REGISTER, SPRITE Y POSITION REGISTER, and MOST SIGNIFICANT BIT X POSITION REGISTER."
+"What are the three positioning registers used to move a sprite?","The three positioning registers are SPRITE X POSITION REGISTER, SPRITE Y POSITION REGISTER, and MOST SIGNIFICANT BIT X POSITION REGISTER."
+"How many possible X positions can you place a sprite?","You can place your sprite in 512 possible X positions."
+"What is the purpose of the X and Y position registers?","The X and Y position registers work together, in pairs, as a team, to position your sprites very accurately."
+"What is the memory map layout of the X and Y registers?","The locations of the X and Y registers appear in the memory map as follows: First is the X register for sprite 0, then the Y register for sprite 0. Next comes the X register for sprite 1, the Y register for sprite 1, and so on. After all 16 X and Y registers comes the most significant bit in the X position (X MSB) located in its own register."
+"Can you position a sprite in 256 possible Y positions?","Yes, you can, because each sprite has a Y position register."
+"How many possible Y positions can you place a sprite?","You can place your sprite in 256 possible Y positions."
+"What is the purpose of the most significant bit in the X position register?","This bit lets you position your sprites very accurately."
+"Can you position a sprite in 512 possible X positions?","Yes, you can, because each sprite has an X position register."

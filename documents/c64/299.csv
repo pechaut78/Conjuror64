@@ -1,0 +1,12 @@
+question,answer
+"Can the display data be scrolled in both horizontal and vertical directions?","Yes, the display data may be scrolled up to one entire character space in both the horizontal and vertical direction."
+"What is the purpose of scrolling in conjunction with the smaller display window?","Scrolling can be used to create a smooth panning motion of display data while updating the system memory only when a new character row (or column) is required."
+"What is the effect of scrolling on the system memory?","Scrolling updates the system memory only when a new character row (or column) is required."
+"What is the purpose of scrolling in centering a fixed display within the display window?","Scrolling is used to center a fixed display within the display window."
+"What are the registers used for horizontal positioning?","The X2, X1, X0 registers are used for horizontal positioning."
+"What are the registers used for vertical positioning?","The Y2, Y1, Y0 registers are used for vertical positioning."
+"What is the function of the horizontal position register?","The horizontal position register is used to set the horizontal position."
+"What is the function of the vertical position register?","The vertical position register is used to set the vertical position."
+"What is the purpose of the function register?","The function register is used to specify the function of the display."
+"What is the hexadecimal value of the horizontal position register?","The hexadecimal value of the horizontal position register is $16."
+"What is the hexadecimal value of the vertical position register?","The hexadecimal value of the vertical position register is $11."

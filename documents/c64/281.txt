@@ -1,0 +1,6 @@
+    The 6566/6567 are multi-purpose color video controller devices for use
+  in both computer video terminals and video game applications. Both
+  devices contain 47 control registers which are accessed via a standard
+  8-bit microprocessor bus (65XX) and will access up to 16K of memory for
+  display information. The various operating modes and options within each
+  mode are described.

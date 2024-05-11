@@ -1,0 +1,29 @@
+
+
+
+    To unexpand a sprite in the horizontal direction, the corresponding bit
+  in the VIC-II control register at location 53277 ($D01D in HEX) must be
+  turned OFF (set to a 0). The following POKE "unexpands" a sprite in the
+  X direction:
+
+    POKE 53277,PEEK(53277)AND (255-2^SN)
+
+  where SN is the sprite number from 0 to 7.
+    To expand a sprite in the vertical direction, the corresponding bit in
+  the VIC-II control register at location 53271 ($D017 in HEX) must be
+  turned ON (set to a 1). The following POKE expands a sprite in the Y
+  direction:
+
+    POKE 53271,PEEK(53271)OR(2^SN)
+
+  where SN is the sprite number from 0 to 7.
+
+     
+   To expand a sprite in the horizontal direction, the corresponding bit
+  in the VIC-II control register at location 53277 ($D01D in HEX) must be
+  turned ON (set to a 1). The following POKE expands a sprite in the X
+  direction:
+
+    POKE 53277,PEEK(53277)OR(2^SN)
+
+  where SN is the sprite number from 0 to 7.

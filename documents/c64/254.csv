@@ -1,0 +1,12 @@
+question,answer
+"POKE 55296,2","To change the color of a character located at the upper left-hand corner of the screen to red."
+"Change color of character","To change the color of a character located at the upper left-hand corner of the screen to red."
+"What is the value to change a character's color to red","2"
+"What is the value to change a character's color to black","0"
+"What is the value to change a character's color to purple","4"
+"What is the value to change a character's color to orange","8"
+"What is the value to change a character's color to gray","12"
+"What is the value to change a character's color to light green","13"
+"What is the value to change a character's color to light blue","14"
+"What is the value to change a character's color to brown","9"
+"What is the value to change a character's color to yellow","7"

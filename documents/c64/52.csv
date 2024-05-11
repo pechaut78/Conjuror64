@@ -1,0 +1,11 @@
+question,answer
+"Bit 4 of the VIC-II control register controls what function?","screen blanking function"
+"What happens to the screen when bit 4 is set to 1?","the screen is normal"
+"What happens to the screen when bit 4 is set to 0?","the entire screen changes to border color"
+"What is the location of the control register?","53265"
+"What is the hexadecimal value of the control register location?","$D011"
+"What happens to the processor when the screen is turned off?","it speeds up"
+"What is the POKE command to blank the screen?","POKE 53265,PEEK(53265)AND 239"
+"What is the POKE command to bring back the screen?","POKE 53265,PEEK(53265)OR 16"
+"What is the purpose of turning off the screen?","to speed up the processor"
+"What happens to program running when the screen is turned off?","it is sped up"

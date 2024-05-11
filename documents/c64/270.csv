@@ -1,0 +1,9 @@
+question,answer
+"Is the 6526 Complex Interface Adapter (CIA) a peripheral interface device?","Yes, the 6526 Complex Interface Adapter (CIA) is a 65XX bus compatible peripheral interface device with extremely flexible timing and I/O capabilities."
+"What are the features of the 6526 Complex Interface Adapter (CIA)?","The 6526 Complex Interface Adapter (CIA) has 16 individually programmable 110 lines, 8 or 16-Bit handshaking on read or write, 2 independent, linkable 16-Bit interval timers, 24-hour (AM/PM) time of day clock with programmable alarm, 8-Bit shift register for serial I/O, 2 TTL load capability, CMOS compatible I/O lines, and 1 or 2 MHz operation available."
+"What is the purpose of the 6526 Complex Interface Adapter (CIA)?","The purpose of the 6526 Complex Interface Adapter (CIA) is to provide a peripheral interface device with extremely flexible timing and I/O capabilities."
+"Can the 6526 Complex Interface Adapter (CIA) be used for serial I/O?","Yes, the 6526 Complex Interface Adapter (CIA) has an 8-Bit shift register for serial I/O."
+"Is the 6526 Complex Interface Adapter (CIA) compatible with CMOS?","Yes, the 6526 Complex Interface Adapter (CIA) has CMOS compatible I/O lines."
+"Can the 6526 Complex Interface Adapter (CIA) be used for 1 or 2 MHz operation?","Yes, the 6526 Complex Interface Adapter (CIA) can operate at 1 or 2 MHz."
+"What are the pin configurations of the 6526 Complex Interface Adapter (CIA)?","The 6526 Complex Interface Adapter (CIA) has a pin configuration that includes Vss, PA0-PA7, PB0-PB7, /PC, TOD, Vcc, and /IRQ."
+"Is the 6526 Complex Interface Adapter (CIA) a 65XX bus compatible device?","Yes, the 6526 Complex Interface Adapter (CIA) is a 65XX bus compatible device."

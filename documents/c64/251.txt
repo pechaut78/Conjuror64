@@ -1,0 +1,29 @@
+
+
+
+  SCREEN DISPLAY CODES
+
+    The following chart lists all of the characters built into the
+  Commodore 64 character sets. It shows which numbers should be POKED into
+  screen memory (locations 1024-2023) to get a desired character. Also
+  shown is which character corresponds to a number PEEKed from the screen.
+    Two character sets are available, but only one set at a time. This
+  means that you cannot have characters from one set on the screen at the
+  same time you have characters from the other set displayed. The sets are
+  switched by holding down the <SHIFT> and <C=> keys simultaneously.
+    From BASIC, POKE 53272,21 will switch to upper case mode and
+  POKE 53272,23 switches to lower case.
+    Any number on the chart may also be displayed in REVERSE. The reverse
+  character code may be obtained by adding 128 to the values shown.
+    If you want to display a solid circle at location 1504, POKE the code
+  for the circle (81) into location 1504: POKE 1504,81.
+    There is a corresponding memory location to control the color of each
+  character displayed on the screen (locations 55296-56295). To change the
+  color of the circle to yellow (color code 7) you would POKE the corre-
+  sponding memory location (55776) with the character color: POKE 55776,7.
+    Refer to Appendix D for the complete screen and color memory maps,
+  along with color codes.
+
+  | NOTE: The following POKEs display the same symbol in set 1 and 2: 1,  |
+  | 27-64, 91-93, 96-104, 106-121, 123-127.                               |
+  

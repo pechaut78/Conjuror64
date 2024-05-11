@@ -1,0 +1,10 @@
+
+  RTI                    RTI Return from interrupt                      RTI
+                                                        N Z C I D V
+  Operation:  P fromS PC fromS                           From Stack
+
+  +----------------+-----------------------+---------+---------+----------+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  +----------------+-----------------------+---------+---------+----------+
+  |  Implied       |   RTI                 |    4D   |    1    |    6     |
+  +----------------+-----------------------+---------+---------+----------+

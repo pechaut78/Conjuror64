@@ -1,0 +1,38 @@
+
+ 
+
+  EQUAL-TEMPERED MUSICAL SCALE VALUES
+
+    The table in Appendix E lists the numerical values which must be stored
+  in the SID Oscillator frequency control registers to produce the notes of
+  the equal-tempered musical scale. The equal-tempered scale consists of an
+  octave containing 12 semitones (notes): C,D,E,F,G,A,B and C#,D#,F#,G#,A#.
+  The frequency of each semitone is exactly the 12th root of 2 times the
+  frequency of the previous semitone. The table is based on a (02 clock of
+  1.02 MHz. Refer to the equation given in the Register Description for use
+  of other master clock frequencies. The scale selected is concert pitch,
+  in which A-4 = 440 Hz. Transpositions of this scale and scales other than
+  the equal-tempered scale are also possible.
+    Although the table in Appendix E provides a simple and quick method for
+  generating the equal-tempered scale, it is very memory inefficient as it
+  requires 192 bytes for the table alone. Memory efficiency can be improved
+  by determining the note value algorithmically. Using the fact that each
+  note in an octave is exactly half the frequency of that note in the next
+  octave, the note look-up table can be reduced from 96 entries to 12
+  entries, as there are 12 notes per octave. If the 12 entries (24 bytes)
+  consist of the 16-bit values for the eighth octave (C-7 through B-7),
+  then notes in lower octaves can be derived by choosing the appropriate
+  note in the eighth octave and dividing the 16-bit value by two for each
+  octave of difference. As division by two is nothing more than a right-
+  shift of the value, the calculation can easily be accomplished by a
+  simple software routine. Although note B-7 is beyond the range of the
+  oscillators, this value should still be included in the table for
+  calculation purposes (the MSB of B-7 would require a special software
+  case, such as generating this bit in the CARRY before shifting). Each
+  note must be specified in a form which indicates which of the 12
+  semitones is desired, and which of the eight octaves the semitone is in.
+  Since four bits are necessary to select 1 of 12 semitones and three bits
+  are necessary to select 1 of 8 octaves, the information can fit in one
+  byte, with the lower nybble selecting the semitone (by addressing the
+  look-up table) and the upper nybble being used by the division routine to
+  determine how many times the table value must be right-shifted.

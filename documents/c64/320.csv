@@ -1,0 +1,11 @@
+question,answer
+"FC LO and FC HI registers form an 11-bit number which linearly controls the Cutoff Frequency of the programmable Filter.","The approximate Cutoff Frequency ranges from 30 Hz to 12 KHz."
+"Resonance is a peaking effect which emphasizes frequency components at the Cutoff Frequency of the Filter.","causing a sharper sound."
+"Bits 4-7 of RES/FILT register control the resonance of the filter.","There are 16 resonance settings ranging linearly from no resonance (0) to maximum resonance (15 or $F)."
+"Bits 0-3 of RES/FILT register determine which signals will be routed through the Filter.","FILT 1 (Bit 0), FILT 2 (Bit 1), FILT 3 (Bit 2), and FILTEX (Bit 3) control the routing of signals."
+"Voice 1 will be processed through the Filter when FILT 1 is set to a one.","the harmonic content of Voice 1 will be altered according to the selected Filter parameters."
+"External audio input (pin 26) will be processed through the Filter when FILTEX is set to a one.","the harmonic content of External audio input will be altered according to the selected Filter parameters."
+"FC LO and FC HI registers are used to form an 11-bit number.","which linearly controls the Cutoff Frequency of the programmable Filter."
+"Resonance settings range from no resonance to maximum resonance.","There are 16 resonance settings ranging linearly from no resonance (0) to maximum resonance (15 or $F)."
+"Bits 4-7 of RES/FILT register control the resonance of the filter.","There are 16 resonance settings ranging linearly from no resonance (0) to maximum resonance (15 or $F)."
+"FC LO and FC HI registers are used to form an 11-bit number which linearly controls the Cutoff Frequency of the programmable Filter.","The approximate Cutoff Frequency ranges from 30 Hz to 12 KHz."

@@ -1,0 +1,11 @@
+question,answer
+"Can you set sprite pointers anywhere in RAM memory?","Yes, but be cautious of long BASIC programs overwriting sprite data."
+"What happens if you set sprite pointers too low in memory?","A long BASIC program may overwrite your sprite data."
+"Why might you want to set sprite pointers at a higher area of memory?","To protect an especially long BASIC program from overwriting sprite data."
+"How many different sprites can you define with sprite pointers?","Up to 64 different sprites plus a sizable BASIC program."
+"What is the purpose of redefining a particular sprite by changing its pointer?","To point the sprite at different areas of memory containing different sprite picture data."
+"Can you use the same sprite pointer for multiple sprites?","Yes, to make multiple sprites have the same shape."
+"What is the advantage of using the same sprite pointer for multiple sprites?","You can make multiple sprites have the same shape."
+"How do you make multiple sprites have the same shape?","By using the same sprite pointer and memory location for the sprites."
+"What is the purpose of the 'Dancing Mouse' example?","To show how to redefine a particular sprite by changing its pointer."
+"Can you use the same sprite pointer for sprites with different positions and colors?","Yes, as long as you use the same sprite pointer and memory location."

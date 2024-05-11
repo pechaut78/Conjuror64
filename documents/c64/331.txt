@@ -1,0 +1,8 @@
+ A0-A4 (Pins 9-13)
+
+    These TTL-Level inputs are used to select one of the 29 SID registers.
+  Although enough addresses are provided to select 1 of 32 registers, the
+  remaining three register locations are not used. A Write to any of these
+  three locations is ignored and a Read returns invalid data. These pins
+  are normally connected to the corresponding address lines of the micro-
+  processor so that SID may be addressed in the same manner as memory.

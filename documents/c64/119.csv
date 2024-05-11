@@ -1,0 +1,11 @@
+question,answer
+"BIT Test bits in memory with accumulator", "The operation is used to test bits in memory with the accumulator."
+"Accumulator is used in BIT operation", "Yes, the accumulator is used in the BIT operation."
+"Result of A /\ M is transferred to status register", "Yes, the result of A /\ M is transferred to the status register."
+"Z = 1 if result of A /\ M is zero", "Yes, Z = 1 if the result of A /\ M is zero."
+"Z = 0 if result of A /\ M is not zero", "Yes, Z = 0 if the result of A /\ M is not zero."
+"Addressing modes for BIT operation", "The addressing modes for the BIT operation are Zero Page and Absolute."
+"OP CODE for Zero Page BIT operation", "The OP CODE for the Zero Page BIT operation is 24."
+"Number of bytes for Zero Page BIT operation", "The number of bytes for the Zero Page BIT operation is 2."
+"Number of cycles for Zero Page BIT operation", "The number of cycles for the Zero Page BIT operation is 3."
+"Number of bytes for Absolute BIT operation", "The number of bytes for the Absolute BIT operation is 3."

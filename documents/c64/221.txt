@@ -1,0 +1,11 @@
+    Computers have three basic abilities: they can calculate, make deci-
+  sions, and communicate. Calculation is probably the easiest to program.
+  Most of the rules of mathematics are familiar to us. Decision making is
+  not too difficult, since the rules of logic are relatively few, even if
+  you don't know them too well yet.
+    Communication is the most complex, because it involves the least
+  exacting set of rules. This is not an oversight in the design of
+  computers. The rules allow enough flexibility to communicate virtually
+  anything, and in many possible ways. The only real rule is this: whatever
+  sends information must present the information so that it can be
+  understood by the receiver.

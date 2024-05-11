@@ -1,0 +1,25 @@
+  NONZERO-PAGE MEMORY LOCATIONS AND USAGE FOR
+  RS-232 SYSTEM INTERFACE
+
+
+    General RS-232 storage:
+
+    $0293-M51CTR-Pseudo 6551 control register (see Figure 6-1).
+    $0294-M51COR-Pseudo 6551 command register (see Figure 6-2) .
+    $0295-M51AJB-Two bytes following the control and command registers in
+          the file name field. These locations contain the baud rate for
+          the start of the bit test during the interface activity, which,
+          in turn, is used to calculate baud rate.
+    $0297-RSSTAT-The RS-232 status register (see Figure 6-3).
+    $0298-BITNUM-The number of bits to be sent/received.
+    $0299-BAUDOF-Two bytes that are equal to the time of one bit cell.
+          (Based on system clock/baud rate.)
+    $029B-RIDBE-The byte index to the end of the receiver FIFO buffer.
+    $029C-RIDBS-The byte index to the start of the receiver FIFO buffer.
+    $029D-RODBS-The byte index to the start of the transmitter FIFO buffer.
+    $029E-RODBE-The byte index to the end of the transmitter FIFO buffer.
+    $02A1-ENABL-Holds current active interrupts in the CIA #2 ICR.
+          When bit 4 is turned on means that the system is waiting for the
+          Receiver Edge. When bit 1 is turned on then the system is
+          receiving data. When bit 0 is turned on then the system is
+          transmitting data.

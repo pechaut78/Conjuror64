@@ -1,0 +1,12 @@
+question,answer
+"Multi-color mode provides how many colors within each character?","up to four colors"
+"What is the bit in register 22 that selects multi-color mode?","MCM bit"
+"What happens when the MSB of the color nybble is a '0' in multi-color mode?","the character will be displayed as described in standard character mode"
+"What happens when the MSB of the color nybble is a '1' in multi-color mode?","the character bits are interpreted in the multi-color mode"
+"What are the two modes that can be inter-mixed?","standard character mode and multi-color mode"
+"What is the maximum number of colors available in standard character mode?","8 colors"
+"What is the size of each dot in multi-color mode compared to standard mode?","twice the horizontal size"
+"What is the maximum number of colors that can be displayed in each character region in multi-color mode?","4 different colors"
+"What are the two types of colors that can be specified in multi-color mode?","foreground and background"
+"What is the purpose of the 3 LSB of the color nybble in multi-color mode?","to specify the color"
+"What is the size of the character matrix in multi-color mode?","4*8 matrix"

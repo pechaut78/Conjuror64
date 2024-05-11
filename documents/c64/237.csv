@@ -1,0 +1,11 @@
+question,answer
+"Can the output buffer hold more than 255 characters?","No, the output buffer can hold 255 characters before a full buffer hold-off occurs."
+"What happens when the output buffer is full?","The system will wait in the CHROUT routine until transmission is allowed or the RUN/STOP and RESTORE keys are used to recover the system through a WARM START."
+"What is the purpose of the CHROUT routine?","The CHROUT routine is used to send data to an RS-232 channel."
+"What is the difference between the CHROUT and CHKOUT routines?","The CHROUT routine is used to send data to an RS-232 channel, while the CHKOUT routine is used to handle the x-line handshake."
+"Is there a carriage-return delay built into the output channel?","No, there is no carriage-return delay built into the output channel."
+"What is the purpose of the x-line handshake?","The x-line handshake is used to implement a handshake routine that uses multiple lines for receiving and transmitting data."
+"What is the EIA standard for RS-232-C interfaces?","The EIA standard for RS-232-C interfaces is August 1979."
+"What is the role of the RTS, CTS, and DCD lines in the x-line handshake?","The RTS, CTS, and DCD lines are implemented with the Commodore 64 defined as the Data Terminal Device."
+"Can a normal RS-232 printer correctly print without hold-off or internal buffering?","No, a normal RS-232 printer cannot correctly print without hold-off or internal buffering."
+"What is the purpose of the CHKOUT routine?","The CHKOUT routine is used to handle the x-line handshake, which follows the EIA standard for RS-232-C interfaces."

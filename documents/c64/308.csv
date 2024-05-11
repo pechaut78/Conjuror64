@@ -1,0 +1,11 @@
+question,answer
+"Is the R/W input used to determine the direction of data transfer?","The read/write input, R/W, is used to determine the direction of data transfer on the data bus, in conjunction with /CS."
+"What happens when R/W is high?","data is transferred from the selected register to the data bus output."
+"What happens when R/W is low?","data presented on the data bus pins is loaded into the selected register."
+"What is the purpose of the R/W input?","The read/write input, R/W, is used to determine the direction of data transfer on the data bus, in conjunction with /CS."
+"Is data transferred from the register to the data bus when R/W is high?","Yes"
+"Is data loaded into the register from the data bus when R/W is low?","Yes"
+"What happens to the data on the data bus when R/W is high?","data is transferred from the selected register to the data bus output."
+"What happens to the data on the data bus when R/W is low?","data presented on the data bus pins is loaded into the selected register."
+"Is the R/W input used in conjunction with /CS?","Yes"
+"Is the R/W input used to determine the direction of data transfer?","Yes"

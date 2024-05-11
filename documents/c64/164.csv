@@ -1,0 +1,11 @@
+question,answer
+"TAY Transfer accumulator to index Y", "The operation TAY transfers the accumulator to index Y."
+"Operation: A -> Y", "The operation is A -> Y, which is a transfer operation."
+"Assembly Language Form", "The assembly language form is TAY."
+"OP CODE", "The OP code is A8."
+"No. Bytes", "The number of bytes is 1."
+"No. Cycles", "The number of cycles is 2."
+"Addressing Mode", "The addressing mode is Implied."
+"Implied", "The addressing mode is Implied."
+"TAY", "The operation is TAY, which is a transfer operation."
+"accumulator to index Y", "The operation is transferring the accumulator to index Y."

@@ -1,0 +1,11 @@
+question,answer
+"VIC is located at which memory range","D000-D3FF"
+"The Commodore 64 has how many open I/O slots","2"
+"What is the purpose of the two open I/O slots","General purpose user I/O, special purpose I/O cartridges"
+"What is the purpose of the Z-80 cartridge","Enabling the CP/M option"
+"What is the auto-start feature of the Commodore 64","Starting the program in a Commodore 64 Expansion Cartridge"
+"What are the specific data required for auto-start","First nine bytes of the cartridge ROM starting at location 32768"
+"What are the two vectors required for the cartridge program","Cold Start and Warm Start vectors"
+"What are the letters required in the cartridge ROM","CBM"
+"What are the last two bytes required in the cartridge ROM","80"
+"What is the purpose of the CIA1 and CIA2","Keyboard and Serial Bus/RS-232"

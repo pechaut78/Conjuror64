@@ -1,0 +1,31 @@
+  B-27. Function Name: SECOND
+
+    Purpose: Send secondary address for LISTEN
+    Call address: $FF93 (hex) 65427 (decimal)
+    Communication registers: A
+    Preparatory routines: LISTEN
+    Error returns: See READST
+    Stack requirements: 8
+    Registers affected: A
+
+    Description: This routine is used to send a secondary address to an
+  I/O device after a call to the LISTEN routine is made, and the device is
+  commanded to LISTEN. The routine canNOT be used to send a secondary
+  address after a call to the TALK routine.
+    A secondary address is usually used to give setup information to a
+  device before I/O operations begin.
+    When a secondary address is to be sent to a device on the serial bus,
+  the address must first be ORed with $60.
+
+  How to Use:
+
+    1) load the accumulator with the secondary address to be sent.
+    2) Call this routine.
+
+  EXAMPLE:
+
+    ;ADDRESS DEVICE #8 WITH COMMAND (SECONDARY ADDRESS) #15
+    LDA #8
+    JSR LISTEN
+    LDA #15
+    JSR SECOND

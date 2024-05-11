@@ -1,0 +1,11 @@
+question,answer
+"Is the BMI operation used in assembly language?","Yes, it is used in BMI Oper"
+"What is the OP CODE for the BMI operation?","The OP CODE is 30"
+"What is the number of bytes used by the BMI operation?","The number of bytes is 2"
+"What is the number of cycles used by the BMI operation?","The number of cycles is 2"
+"Is the BMI operation used in relative addressing mode?","Yes, it is used in relative addressing mode"
+"What is the purpose of adding 1 if the branch occurs to the same page?","To add 1 if branch occurs to same page"
+"What is the purpose of adding 1 if the branch occurs to a different page?","To add 1 if branch occurs to different page"
+"What is the purpose of the BMI operation?","To branch on result minus BMI"
+"Is the BMI operation used in assembly language form?","Yes, it is used in assembly language form"
+"What is the number of cycles used by the BMI operation when branching to the same page?","The number of cycles is 2*"

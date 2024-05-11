@@ -1,0 +1,10 @@
+question,answer
+"The stack pointer contains the location of the first empty place on the stack.","This register contains the location of the first empty place on the stack."
+"What is the purpose of the stack pointer?","The stack is used for temporary storage by machine language programs, and by the computer."
+"What is stored in the stack pointer?","The location of the first empty place on the stack."
+"What is the stack used for?","The stack is used for temporary storage by machine language programs, and by the computer."
+"What is the stack pointer used for?","The stack is used for temporary storage by machine language programs, and by the computer."
+"What is the purpose of the stack?","The stack is used for temporary storage by machine language programs, and by the computer."
+"What is stored in the stack?","The location of the first empty place on the stack."
+"What is the stack pointer?","This register contains the location of the first empty place on the stack."
+"What is the stack used for temporary storage?","The stack is used for temporary storage by machine language programs, and by the computer."

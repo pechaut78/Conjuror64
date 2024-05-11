@@ -1,0 +1,34 @@
+  SENDING DATA TO AN RS-232 CHANNEL
+
+    When sending data, the output buffer can hold 255 characters before a
+  full buffer hold-off occurs. The system will wait in the CHROUT routine
+  until transmission is allowed or the <RUN/STOP> and <RESTORE> keys are
+  used to recover the system through a WARM START.
+
+
+  BASIC SYNTAX:
+
+    CMD lfn-acts same as in the BASIC specifications.
+    PRINT#lfn,<variable list>
+
+
+  KERNAL ENTRIES:
+
+    CHKOUT ($FFC9)-See Memory Map for more information on entry and exit
+  conditions.
+    CHROUT ($FFD2)-See Memory Map for more information on entry conditions.
+  +-----------------------------------------------------------------------+
+  | IMPORTANT NOTES: There is no carriage-return delay built into the     |
+  | output channel. This means that a normal RS-232 printer cannot        |
+  | correctly print, unless some form of hold-off (asking the Commodore 64|
+  | to wait) or internal buffering is implemented by the printer. The     |
+  | hold-off can easily be implemented in your program. If a CTS (x-line) |
+  | handshake is implemented, the Commodore 64 buffer will fill, and then |
+  | hold-off more output until transmission is allowed by the RS-232      |
+  | device. X-line handshaking is a handshake routine that uses multi-    |
+  | lines for receiving and transmitting data.                            |
+  |   The routine CHKOUT handles the x-line handshake, which follows the  |
+  | EIA standard (August 1979) for RS-232-C interfaces. The RTS, CTS, and |
+  | DCD lines are implemented with the Commodore 64 defined as the Data   |
+  | Terminal Device.                                                      |
+  +-----------------------------------------------------------------------+

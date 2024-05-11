@@ -1,0 +1,20 @@
+  RASTER REGISTER
+
+    The raster register is found in the VIC-II chip at location 53266
+  ($D012). The raster register is a dual purpose register. When you read
+  this register it returns the lower 8 bits of the current raster position.
+  The raster position of the most significant bit is in register location
+  53265 ($D011). You use the raster register to set up timing changes in
+  your display so that you can get rid of screen flicker. The changes on
+  your screen should be mode when the raster is not in the visible display
+  area, which is when your dot positions fall between 51 and 251.
+    When the raster register is written to (including the MSB) the number
+  written to is saved for use with the raster compare function. When the
+  actual raster value becomes the same as the number written to the raster
+  register, a bit in the VIC-II chip interrupt register 53273 ($D019) is
+  turned ON by setting it to 1.
+
+   NOTE: If the proper interrupt bit is enabled (turned on), an interrupt
+   (IRQ) will occur.                                                     
+  
+ 

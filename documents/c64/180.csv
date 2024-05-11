@@ -1,0 +1,11 @@
+question,answer
+"Get a character from the input channel","This routine gets a byte of data from a channel already set up as the input channel by the KERNAL routine CHKIN."
+"What is the purpose of the CHRIN routine?","Get a character from the input channel"
+"What is the call address of the CHRIN routine?","$FFCF (hex) 65487 (decimal)"
+"What registers are affected by the CHRIN routine?","A, X"
+"What is the stack requirement for the CHRIN routine?","7+"
+"What is the error return value for the CHRIN routine?","0 (See READST)"
+"What is the description of the CHRIN routine?","This routine gets a byte of data from a channel already set up as the input channel by the KERNAL routine CHKIN."
+"How does the CHRIN routine handle input from the keyboard?","The cursor is turned on, and blinks until a carriage return is typed on the keyboard."
+"What is the purpose of the CHKIN routine?","Set up a channel as the input channel"
+"What is the purpose of the OPEN routine?","Set up a channel as the input channel"

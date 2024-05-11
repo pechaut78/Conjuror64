@@ -1,0 +1,22 @@
+
+
+
+  B-38. Function Name: UNTLK
+
+    Purpose: Send an UNTALK command
+    Call address: $FFAB (hex) 65451 (decimal)
+    Communication registers: None
+    Preparatory routines: None
+    Error returns: See READST
+    Stack requirements: 8
+    Registers affected: A
+
+    Description: This routine transmits an UNTALK command on the serial
+  bus. All devices previously set to TALK will stop sending data when this
+  command is received.
+
+  How to Use:
+    1) Call this routine.
+
+  EXAMPLE:
+    JSR UNTALK

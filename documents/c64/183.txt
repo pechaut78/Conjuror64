@@ -1,0 +1,27 @@
+
+
+
+  B-7. Function Name: CINT
+
+    Purpose: Initialize screen editor & 6567 video chip
+    Call address: $FF81 (hex) 65409 (decimal)
+    Communication registers: None
+    Preparatory routines: None
+    Error returns: None
+    Stack requirements: 4
+    Registers affected: A, X, Y
+
+
+    Description: This routine sets up the 6567 video controller chip in the
+  Commodore 64 for normal operation. The KERNAL screen editor is also
+  initialized. This routine should be called by a Commodore 64 program
+  cartridge.
+
+  How to Use:
+
+    1) Call this routine.
+
+  EXAMPLE:
+
+    JSR CINT
+    JMP RUN       ;BEGIN EXECUTION

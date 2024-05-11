@@ -1,0 +1,41 @@
+
+  MODE/VOL (Register $18)
+
+    Bits 4-7 of this register select various Filter mode and output
+  options:
+    LP (Bit 4): When set to a one, the Low-Pass output of the Filter is
+  selected and sent to the audio output. For a given Filter input signal,
+  all frequency components below the Filter Cutoff Frequency are passed
+  unaltered, while all frequency components above the Cutoff are attenuated
+  at a rate of 12 dB/Octave. The Low-Pass mode produces fullbodied sounds.
+    BP (Bit 5): Same as bit 4 for the Bandpass output. All frequency
+  components above and below the Cutoff are attenuated at a rate of 6
+  dB/Octave. The Bandpass mode produces thin, open sounds.
+    HP (Bit 6): Same as bit 4 for the High-Pass output. All frequency
+  components above the Cutoff are passed unaltered, while all frequency
+  components below the Cutoff are attenuated at a rate of 12 dB/Octave.
+  The High-Pass mode produces tinny, buzzy sounds.
+    3 OFF (Bit 7): When set to a one, the output of Voice 3 is disconnected
+  from the direct audio path. Setting Voice 3 to bypass the Filter
+  (FILT 3 = 0) and setting 3 OFF to a one prevents Voice 3 from reaching
+  the audio output. This allows Voice 3 to be used for modulation purposes
+  without any undesirable output.
+
+  | NOTE: The Filter output modes ARE additive and multiple Filter modes  |
+  | may be selected simultaneously. For example, both LP and HP modes can |
+  | be selected to produce a Notch (or Band Reject) Filter response. In   |
+  | order for the Filter to have any audible effect, at least one Filter  |
+  | output must be selected and at least one Voice must be routed through |
+  | the Filter. The Filter is, perhaps, the most important element in SID |
+  | as it allows the generation of complex tone colors via subtractive    |
+  | synthesis (the Filter is used to eliminate specific frequency         |
+  | components from a harmonically rich input signal). The best results   |
+  | are achieved by varying the Cutoff Frequency in real-time.            |
+
+
+    Bits 0-3 (VOL0-VOL3) select 1 of 16 overall Volume levels for the final
+  composite audio output. The output volume levels range from no output (0)
+  to maximum volume (15 or $F) in 16 linear steps. This control can be used
+  as a static volume control for balancing levels in multi-chip systems or
+  for creating dynamic volume effects, such as Tremolo. Some Volume level
+  other than zero must be selected in order for SID to produce any sound.

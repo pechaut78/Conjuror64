@@ -1,0 +1,9 @@
+
+
+  COLOR MEMORY
+
+    Color memory can NOT move. It is always located at locations 55296
+  ($D800) through 56295 ($DBE7). Screen memory (the 1000 locations starting
+  at 1024) and color memory are used differently in the different graphics
+  modes. A picture created in one mode will often look completely different
+  when displayed in another graphics mode.

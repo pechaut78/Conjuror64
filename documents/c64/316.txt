@@ -1,0 +1,23 @@
+  SID REGISTER DESCRIPTION
+
+  VOICE 1
+
+  FREQ LO/FREQ HI (Registers 00,01)
+
+    Together these registers form a 16-bit number which linearly controls
+  the frequency of Oscillator 1 . The frequency is determined by the
+  following equation:
+
+                       Fout = (Fn*Fclk/16777216) Hz
+
+    Where Fn is the 16-bit number in the Frequency registers and Fclk is
+  the system clock applied to the 02 input (pin 6). For a standard 1.0-MHz
+  clock, the frequency is given by:
+
+                       Fout = (Fn*0.059604645) Hz
+
+    A complete table of values for generating 8 octaves of the equally
+  tempered musical scale with concert A (440 Hz) tuning is provided in
+  Appendix E. It should be noted that the frequency resolution of SID is
+  sufficient for any tuning scale and allows sweeping from note to note
+  (portamento) with no discernable frequency steps.

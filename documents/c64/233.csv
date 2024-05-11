@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the light pen input?","The light pen input latches the current screen position into a pair of registers."
+"What are the two registers that store the screen position?","The two registers are LPX and LPY."
+"How many bits does the X position register contain?","The X position register contains 9 bits."
+"What is the resolution of the X position?","The resolution of the X position is 2 horizontal dots."
+"What is the purpose of the 8 MSB of the X position?","The 8 MSB of the X position define the X position at the time of transition."
+"What is the purpose of the Y position register?","The Y position register latches in its register 20 ($14)."
+"What is the resolution of the Y position?","The resolution of the Y position is single raster resolution within the visible display."
+"How many times can the light pen latch be triggered in a frame?","The light pen latch can only be triggered once per frame."
+"Why is it important to take several samples before turning the pen to the screen?","It is important to take several samples because subsequent triggers within the same frame will have no effect."
+"What is the minimum number of samples required before turning the pen to the screen?","The minimum number of samples required is 3 or more."

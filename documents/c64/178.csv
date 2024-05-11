@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the CHKIN routine?","Open a channel for input"
+"What is the call address of the CHKIN routine?","$FFC6 (hex) 65478 (decimal)"
+"What registers are affected by the CHKIN routine?","A, X"
+"What is the error return #3 for?","File not open"
+"What is the error return #5 for?","Device not present"
+"What is the error return #6 for?","File not an input file"
+"What is the purpose of the OPEN routine in relation to the CHKIN routine?","To open a logical file"
+"What is the purpose of loading the X register with the number of the logical file?","To specify the logical file to be used"
+"What is the purpose of the JSR command in the CHKIN routine?","To call the CHKIN routine"
+"What is the effect of using the CHKIN routine with a device on the serial bus?","It automatically sends the talk address and secondary address over the bus"

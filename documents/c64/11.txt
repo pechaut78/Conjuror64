@@ -1,0 +1,25 @@
+
+
+  STANDARD CHARACTER MODE
+
+    Standard character mode is the mode the Commodore 64 is in when you
+  first turn it on. It is the mode you will generally program in.
+    Characters can be taken from ROM or from RAM, but normally they are
+  taken from ROM. When you want special graphics characters for a program,
+  all you have to do is define the new character shapes in RAM, and tell
+  the VIC-II chip to get its character information from there instead of
+  the character ROM. This is covered in more detail in the next section.
+    In order to display characters on the screen in color, the VIC-II chip
+  accesses the screen memory to determine the character code for that
+  location on the screen. At the same time, it accesses the color memory to
+  determine what color you want for the character displayed. The character
+  code is translated by the VIC-II into the starting address of the 8-byte
+  block holding your character pattern. The 8-byte block is located in
+  character memory.
+    The translation isn't too complicated, but a number of items are com-
+  bined to generate the desired address. First the character code you use
+  to POKE screen memory is multiplied by 8. Next add the start of char-
+  acter memory (see CHARACTER MEMORY section). Then the Bank Select Bits
+  are taken into account by adding in the base address (see VIDEO BANK
+  SELECTION section). Below is a simple formula to illustrate what happens:
+  CHARACTER ADDRESS = SCREEN CODE*8+(CHARACTER SET*2048)+(BANK*16384)

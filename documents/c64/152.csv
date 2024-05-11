@@ -1,0 +1,11 @@
+question,answer
+"ROL instruction rotates one bit left in memory or accumulator","The ROL instruction rotates one bit left in memory or accumulator."
+"ROL instruction has different addressing modes","The ROL instruction has different addressing modes such as Accumulator, Zero Page, Zero Page,X, Absolute, and Absolute,X."
+"ROL instruction has different operation codes","The ROL instruction has different operation codes such as 2A, 26, 36, 2E, and 3E."
+"ROL instruction has different number of bytes","The ROL instruction has different number of bytes such as 1, 2, and 3."
+"ROL instruction has different number of cycles","The ROL instruction has different number of cycles such as 2, 5, 6, and 7."
+"ROL instruction is used in assembly language","The ROL instruction is used in assembly language to rotate one bit left in memory or accumulator."
+"ROL instruction is used in different addressing modes","The ROL instruction is used in different addressing modes such as Accumulator, Zero Page, Zero Page,X, Absolute, and Absolute,X."
+"ROL instruction is used in different operation codes","The ROL instruction is used in different operation codes such as 2A, 26, 36, 2E, and 3E."
+"ROL instruction is used in different number of bytes","The ROL instruction is used in different number of bytes such as 1, 2, and 3."
+"ROL instruction is used in different number of cycles","The ROL instruction is used in different number of cycles such as 2, 5, 6, and 7."

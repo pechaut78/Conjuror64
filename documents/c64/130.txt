@@ -1,0 +1,20 @@
+
+
+
+  CMP                CMP Compare memory and accumulator                 CMP
+
+                                                        N Z C I D V
+                                                        / / / _ _ _
+  +----------------+-----------------------+---------+---------+----------+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  +----------------+-----------------------+---------+---------+----------+
+  |  Immediate     |   CMP #Oper           |    C9   |    2    |    2     |
+  |  Zero Page     |   CMP Oper            |    C5   |    2    |    3     |
+  |  Zero Page,X   |   CMP Oper,X          |    D5   |    2    |    4     |
+  |  Absolute      |   CMP Oper            |    CD   |    3    |    4     |
+  |  Absolute,X    |   CMP Oper,X          |    DD   |    3    |    4*    |
+  |  Absolute,Y    |   CMP Oper,Y          |    D9   |    3    |    4*    |
+  |  (Indirect,X)  |   CMP (Oper,X)        |    C1   |    2    |    6     |
+  |  (Indirect),Y  |   CMP (Oper),Y        |    D1   |    2    |    5*    |
+  +----------------+-----------------------+---------+---------+----------+
+  * Add 1 if page boundary is crossed.

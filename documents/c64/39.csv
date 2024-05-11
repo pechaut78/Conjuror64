@@ -1,0 +1,11 @@
+question,answer
+"Can a sprite be unexpanded in the vertical direction?","To unexpand a sprite in the vertical direction, the corresponding bit in the VIC-II control register at location 53271 ($D017 in HEX) must be turned OFF (set to a 0)."
+"What is the location of the VIC-II control register?","$D017 in HEX"
+"What is the condition to unexpand a sprite in the vertical direction?","The corresponding bit in the VIC-II control register at location 53271 ($D017 in HEX) must be turned OFF (set to a 0)."
+"What is the effect of POKE 53271,PEEK(53271)AND (255-2^SN) on a sprite?","The following POKE 'unexpands' a sprite in the Y direction:"
+"What is the purpose of POKE 53271,PEEK(53271)AND (255-2^SN)?","'unexpands' a sprite in the Y direction"
+"What is the range of sprite numbers?","from 0 to 7"
+"What is the condition for a sprite to be unexpanded in the vertical direction?","The corresponding bit in the VIC-II control register at location 53271 ($D017 in HEX) must be turned OFF (set to a 0)."
+"What is the location of the sprite number?","from 0 to 7"
+"What is the effect of turning OFF the corresponding bit in the VIC-II control register?","To unexpand a sprite in the vertical direction"
+"What is the purpose of the POKE command?","'unexpands' a sprite in the Y direction"

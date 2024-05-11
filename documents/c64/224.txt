@@ -1,0 +1,22 @@
+
+
+
+  TABLE of OPEN Statement Parameters:
+
+    FORMAT: OPEN file#, device#, number, string
+
+  +--------+---------+---------------------+------------------------------+
+  | DEVICE | DEVICE# |       NUMBER        |            STRING            |
+  +--------+---------+---------------------+------------------------------+
+  |CASSETTE|    1    | 0 = Input           | File Name                    |
+  |        |         | 1 = Output          |                              |
+  |        |         | 2 = Output with EOT |                              |
+  | MODEM  |    2    | 0                   | Control Registers            |
+  | SCREEN |    3    | 0,1                 |                              |
+  | PRINTER|  4 or 5 | 0 = Upper/Graphics  | Text Is PRINTed              |
+  |        |         | 7 = Upper/Lower Case|                              |
+  | DISK   | 8 to 11 | 2-14 = Data Channel | Drive #, File Name           |
+  |        |         |                     | File Type, Read/Write        |
+  |        |         | 15 = Command        | Command                      |
+  |        |         |      Channel        |                              |
+  +--------+---------+---------------------+------------------------------+

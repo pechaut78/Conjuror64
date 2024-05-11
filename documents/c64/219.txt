@@ -1,0 +1,25 @@
+
+  HOW TO ENTER MACHINE LANGUAGE
+
+    There are 3 common methods to add the machine language programs to a
+  BASIC program. They are:
+
+  1-DATA STATEMENTS:
+
+    By READing DATA statements, and POKEing the values into memory at the
+  start of the program, machine language routines can be added. This is the
+  easiest method. No special methods are needed to save the two parts of
+  the program, and it is fairly easy to debug. The drawbacks include taking
+  up more memory space, and the wait while the program is POKED in.
+  Therefore, this method is better for smaller routines.
+
+  EXAMPLE:
+
+  10 RESTORE:FORX=1T09:READA:POKE12*4096+X,A:NEXT
+  .
+  BASIC PROGRAM
+  .
+  1000 DATA 161,1,204,204,204,204,204,204,96
+
+
+  

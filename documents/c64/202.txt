@@ -1,0 +1,22 @@
+  B-26. Function Name: SCREEN
+
+    Purpose: Return screen format
+    Call address: $FFED (hex) 65517 (decimal)
+    Communication registers: X, Y
+    Preparatory routines: None
+    Stack requirements: 2
+    Registers affected: X, Y
+
+    Description: This routine returns the format of the screen, e.g., 40
+  columns in X and 25 lines in Y. The routine can be used to determine what
+  machine a program is running on. This function has been implemented on
+  the Commodore 64 to help upward compatibility of your programs.
+  How to Use:
+
+    1) Call this routine.
+
+  EXAMPLE:
+
+    JSR SCREEN
+    STX MAXCOL
+    STY MAXROW

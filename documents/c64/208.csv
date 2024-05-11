@@ -1,0 +1,11 @@
+question,answer
+"Does the SETTMO routine set the timeout flag for the IEEE bus?","Yes"
+"What is the purpose of the SETTMO routine?","Set IEEE bus card timeout flag"
+"What is the call address of the SETTMO routine?","$FFA2 (hex) 65442 (decimal)"
+"What communication registers are affected by the SETTMO routine?","A"
+"What is the stack requirement for the SETTMO routine?","2"
+"Can the SETTMO routine be used with an IEEE add-on card only?","Yes"
+"What happens if the device on the IEEE port does not respond to the DAV signal within 64 milliseconds?","The Commodore 64 will recognize an error condition and leave the handshake sequence"
+"What is the effect of setting bit 7 of the accumulator to 0 when calling the SETTMO routine?","Timeouts are enabled"
+"What is the effect of setting bit 7 of the accumulator to 1 when calling the SETTMO routine?","Timeouts are disabled"
+"What is the purpose of the timeout feature in the Commodore 64?","To communicate that a disk file is not found on an attempt to OPEN a file only with an IEEE card"

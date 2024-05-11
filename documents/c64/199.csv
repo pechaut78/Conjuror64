@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the RESTOR function?","Restore default system and interrupt vectors"
+"What is the call address of the RESTOR function?","$FF8A (hex) 65418 (decimal)"
+"What is the number of preparatory routines for the RESTOR function?","None"
+"What is the error return for the RESTOR function?","None"
+"What is the stack requirement for the RESTOR function?","2"
+"What registers are affected by the RESTOR function?","A, X, Y"
+"What does the RESTOR function restore?","default values of all system vectors used in KERNAL and BASIC routines and interrupts"
+"What is the KERNAL VECTOR routine used for?","to read and alter individual system vectors"
+"What is the purpose of the KERNAL VECTOR routine?","to read and alter individual system vectors"
+"How do you use the RESTOR function?","Call this routine"
+"What is an example of using the RESTOR function?","JSR RESTOR"

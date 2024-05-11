@@ -1,0 +1,11 @@
+question,answer
+"Are zero-page memory locations used locally?","Yes, they are used locally and are only given as a guide to understand the associated routines."
+"What is the purpose of the zero-page locations?","They are used to understand the associated routines."
+"Can the zero-page locations be used directly by the BASIC or KERNAL level programmer?","No, they cannot be used directly by the BASIC or KERNAL level programmer to do RS-232 type things."
+"What are the zero-page locations used for?","They are used locally and are only given as a guide to understand the associated routines."
+"Are the zero-page locations used for RS-232 type things?","No, the system RS-232 routines must be used."
+"What is the significance of the zero-page locations?","They are used locally and are only given as a guide to understand the associated routines."
+"Can the zero-page locations be used to do RS-232 type things?","No, the system RS-232 routines must be used."
+"What is the purpose of the $00A7 location?","It is used as Receiver input bit temp storage."
+"What is the purpose of the $00B6 location?","It is used as Transmitter byte buffer/disassembly location."
+"What is the purpose of the $00AA location?","It is used as Receiver byte buffer/assembly location."

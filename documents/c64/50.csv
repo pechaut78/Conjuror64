@@ -1,0 +1,12 @@
+question,answer
+"Sprite to sprite collisions are recognized by the computer in which register?","in the sprite to sprite collision register at location 53278 ($D01E in HEX)"
+"Is the bit in the register set to 1 if a sprite is involved in a collision?","yes"
+"What happens to the bits in the register once they are read?","they are automatically cleared"
+"Why is it a good idea to save the value in a variable until you are finished with it?","because the register is automatically cleared once read"
+"Can collisions take place even when the sprites are off screen?","yes"
+"What is the purpose of the sprite to sprite collision register?","to recognize sprite to sprite collisions"
+"Is the sprite to sprite collision register automatically cleared after being read?","yes"
+"What happens to the bits in the register if they are not read?","they remain set"
+"Can a sprite be involved in a collision even if it is off screen?","yes"
+"What is the location of the sprite to sprite collision register in the VIC-II chip control register?","53278 ($D01E in HEX)"
+"Is it necessary to read the sprite to sprite collision register to clear it?","no"

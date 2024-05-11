@@ -1,0 +1,11 @@
+question,answer
+"What is the first action taken by the KERNAL on power-up?","The KERNAL first resets the stack pointer, and clears decimal mode."
+"What happens if an autostart ROM cartridge is present at location $8000 HEX?","Normal initialization is suspended, and control is transferred to the cartridge code."
+"What is initialized next by the KERNAL?","All INPUT/OUTPUT devices are initialized."
+"What is set up in the RAM TEST routine?","The top and bottom of memory pointers are set."
+"What is the purpose of the RAM TEST routine?","It is a nondestructive test starting at location $0300 and working upward."
+"What is cleared by the KERNAL?","The SID chip is cleared."
+"What is set up in the screen editor variables?","All screen editor variables are reset."
+"What is used to start BASIC?","The indirect at $A000 is used to start BASIC."
+"What is the purpose of the indirect jump table in low memory?","It is established."
+"What is cleared by the KERNAL?","The screen is cleared."

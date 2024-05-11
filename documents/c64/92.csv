@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the X Index Register?", "This is a very important register."
+"What can you do with the X Index Register?", "There are instructions for nearly all of the transformations you can make to the accumulator."
+"What can you copy into the X register?", "copy the contents of a memory location into the X register"
+"What can you copy from the X register?", "copy the contents of the X register into a memory location"
+"What can you modify directly with the X register?", "modify the contents of the X, or some other register directly"
+"What is unique about the X register?", "there are other instructions for things that only the X register can do"
+"What can you do with the X register that you can't with other registers?", "there are other instructions for things that only the X register can do"
+"What are some examples of machine language instructions?", "machine language instructions allow you to copy the contents of a memory location into the X register, copy the contents of the X register into a memory location, and modify the contents of the X, or some other register directly"
+"What is the importance of the X Index Register?", "IMPORTANT: only provide questions and answers pairs, no other sentence"
+"What are the main functions of the X Index Register?", "There are instructions for nearly all of the transformations you can make to the accumulator"
+"What are the capabilities of the X Index Register?", "there are other instructions for things that only the X register can do"

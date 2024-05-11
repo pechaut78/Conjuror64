@@ -1,0 +1,11 @@
+question,answer
+"What is the SID chip compatible with?","65XX and similar microprocessor families"
+"What is the SID chip used for?","Electronic music synthesizer/sound effects generator"
+"How many tone oscillators does the SID chip have?","3"
+"What is the range of the SID chip's pitch control?","0-4 kHz"
+"What are the four waveforms available per oscillator?","Triangle, Sawtooth, Variable Pulse, Noise"
+"How many amplitude modulators does the SID chip have?","3"
+"What is the range of the SID chip's amplitude modulation?","48 dB"
+"What are the three envelope generators used for?","Attack, Decay, Sustain"
+"What is the range of the SID chip's cutoff frequency?","30 Hz-12 kHz"
+"What is the purpose of the SID chip's ring modulation feature?","To create unique sounds"

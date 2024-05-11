@@ -1,0 +1,54 @@
+
+
+
+  B-24. Function Name: SAVE
+
+    Purpose: Save memory to a device
+    Call address: $FFD8 (hex) 65496 (decimal)
+    Communication registers: A, X, Y
+    Preparatory routines: SETLFS, SETNAM
+    Error returns: 5,8,9, READST
+    Stack requirements: None
+    Registers affected: A, X, Y
+
+    Description: This routine saves a section of memory. Memory is saved
+  from an indirect address on page 0 specified by the accumulator to the
+  address stored in the X and Y registers. It is then sent to a logical
+  file on an input/output device. The SETLFS and SETNAM routines must be
+  used before calling this routine. However, a file name is not required to
+  SAVE to device 1 (the Datassette(TM) recorder). Any attempt to save to
+  other devices without using a file name results in an error.
+
+  +-----------------------------------------------------------------------+
+  | NOTE: Device 0 (the keyboard), device 2 (RS-232), and device 3 (the   |
+  | screen) cannot be SAVEd to. If the attempt is made, an error occurs,  |
+  | and the SAVE is stopped.                                              |
+  +-----------------------------------------------------------------------+
+
+  How to Use:
+
+    0) Use the SETLFS routine and the SETNAM routine (unless a SAVE with no
+       file name is desired on "a save to the tape recorder"),
+    1) Load two consecutive locations on page 0 with a pointer to the start
+       of your save (in standard 6502 low byte first, high byte next
+       format).
+    2) Load the accumulator with the single byte page zero offset to the
+       pointer.
+    3) Load the X and Y registers with the low byte and high byte re-
+       spectively of the location of the end of the save.
+    4) Call this routine.
+
+  EXAMPLE:
+
+    LDA #1              ;DEVICE = 1:CASSETTE
+    JSR SETLFS
+    LDA #0              ;NO FILE NAME
+    JSR SETNAM
+    LDA PROG            ;LOAD START ADDRESS OF SAVE
+    STA TXTTAB          ;(LOW BYTE)
+    LDA PROG+1
+    STA TXTTA B+1       ;(HIGH BYTE)
+    LDX VARTAB          ;LOAD X WITH LOW BYTE OF END OF SAVE
+    LDY VARTAB+1        ;LOAD Y WITH HIGH BYTE
+    LDA #<TXTTAB        ;LOAD ACCUMULATOR WITH PAGE 0 OFFSET
+    JSR SAVE

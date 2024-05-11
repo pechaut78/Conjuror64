@@ -1,0 +1,11 @@
+question,answer
+"Which video interface chip has thirteen fully decoded addresses?","The 6566"
+"What is the difference between the 6566 and 6567 video interface chips?","The 6566 has thirteen fully decoded addresses for direct connection to the system address bus, while the 6567 has multiplexed addresses for direct connection to 64K dynamic RAMS."
+"What is the purpose of the pins A11-A07 on the 6567?","The pins A11-A07 on the 6567 are static address outputs to allow direct connection of these bits to a conventional 16K (2K*8) ROM."
+"What is the significance of the /RAS signal in the 6567?","/RAS is brought low while the least significant address bits, A06-A00, are present."
+"What is the significance of the /CAS signal in the 6567?","/CAS is brought low while the most significant bits, A13-A08, are present."
+"What is the purpose of the address output configurations in the 6566 and 6567?","The address output configurations allow direct connection to the system address bus or 64K dynamic RAMS."
+"What is the difference in address output configurations between the 6566 and 6567?","The 6566 has thirteen fully decoded addresses, while the 6567 has multiplexed addresses."
+"What is the purpose of the external latching in the 6567?","The external latching is required for the lower order addresses."
+"What is the purpose of the address bits A06-A00 in the 6567?","The address bits A06-A00 are present on A06-A00 while /RAS is brought low."
+"What is the purpose of the address bits A13-A08 in the 6567?","The address bits A13-A08 are present on A05-A00 while /CAS is brought low."

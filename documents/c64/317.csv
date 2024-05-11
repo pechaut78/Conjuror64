@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the Pulse Width registers?", "Together these registers form a 12-bit number which linearly controls the Pulse Width (duty cycle) of the Pulse waveform on Oscillator 1."
+"What is the range of values for the Pulse Width registers?", "A value of 0 or 4095 ($FF) in the Pulse Width registers will produce a constant DC output, while a value of 2048 ($800) will produce a square wave."
+"What is the resolution of the Pulse Width registers?", "The pulse width resolution allows the width to be smoothly swept with no discernable stepping."
+"What is the equation for calculating the Pulse Width?", "PWout = (PWn/40.95) %"
+"What is the unit of measurement for the Pulse Width?", "%"
+"What is the minimum value for the Pulse Width registers?", "0"
+"What is the maximum value for the Pulse Width registers?", "4095 ($FF)"
+"What is the effect of a value of 0 in the Pulse Width registers?", "produces a constant DC output"
+"What is the effect of a value of 4095 in the Pulse Width registers?", "produces a constant DC output"
+"What is the effect of a value of 2048 in the Pulse Width registers?", "produces a square wave"

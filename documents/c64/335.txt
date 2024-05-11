@@ -1,0 +1,19 @@
+
+
+
+  EXT IN (Pin 26)
+
+    This analog input allows external audio signals to be mixed with the
+  audio output of SID or processed through the Filter. Typical sources in-
+  clude voice, guitar, and organ. The input impedance of this pin is on the
+  order of 100 kohms. Any signal applied directly to the pin should ride at
+  a DC level of 6 volts and should not exceed 3 volts p-p. In order to pre-
+
+  vent any interference caused by DC level differences, external signals
+  should be AC-coupled to EXT IN by an electrolytic capacitor in the 1-10
+  uF range. As the direct audio path (FILTEX=0) has unity gain, EXT IN can
+  be used to mix outputs of many SID chips by daisy-chaining. The number of
+  chips that can be chained in this manner is determined by the amount of
+  noise and distortion allowable at the final output. Note that the output
+  Volume control will affect not only the three SID voices, but also any
+  external inputs.

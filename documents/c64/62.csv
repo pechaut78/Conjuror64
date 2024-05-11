@@ -1,0 +1,10 @@
+question,answer
+"Displaying a sprite beyond the 255th X position requires a special POKE which sets the most significant bit of the X position and starts over at the 256th pixel position across the screen.","True"
+"What is the purpose of POKE V+16 in displaying a sprite beyond the 255th X position?","Sets the most significant bit of the X position and starts over at the 256th pixel position across the screen"
+"What is the starting point for the X counter when displaying a sprite beyond the 255th X position?","The 256th pixel position across the screen"
+"What is the value to POKE V+16 to "open up" the right side of the screen?","1"
+"What is the new X position for sprite 0 when displaying a sprite beyond the 255th X position?","24"
+"What is the purpose of POKE V+1 in displaying a sprite beyond the 255th X position?","Sets the X position"
+"What is the value to POKE V in displaying a sprite beyond the 255th X position?","24"
+"What is the value to POKE V+1 in displaying a sprite beyond the 255th X position?","75"
+"What is the value to POKE V in displaying a sprite beyond the 255th X position?","65"

@@ -1,0 +1,8 @@
+
+
+
+  INTERRUPTS (/IRQ)
+
+    The interrupt output, /IRQ, is brought low when an enabled source of
+  interrupt occurs within the device. The /IRQ output is open drain,
+  requiring an external pull-up resistor.

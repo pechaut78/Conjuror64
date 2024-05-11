@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the RES pin?","The RES pin is the reset control for the SID."
+"What happens when the RES pin is brought low for at least 10 clock cycles?","All internal registers are reset to zero and the audio output is silenced."
+"What is the typical connection for the RES pin?","The RES pin is normally connected to the reset line of the microprocessor or a power-on-clear circuit."
+"What happens to the audio output when the RES pin is brought low?","The audio output is silenced."
+"What is the minimum duration for the RES pin to be low to reset the SID?","At least 10 clock cycles."
+"What is the effect of bringing the RES pin low for at least 10 clock cycles?","All internal registers are reset to zero."
+"What is the typical use of the RES pin?","The RES pin is used as a reset control for the SID."
+"What happens to the internal registers when the RES pin is brought low?","All internal registers are reset to zero."
+"What is the typical connection for the RES pin in a microprocessor?","The RES pin is connected to the reset line of the microprocessor."
+"What is the purpose of the RES pin in a microprocessor?","The RES pin is used as a reset control for the SID."

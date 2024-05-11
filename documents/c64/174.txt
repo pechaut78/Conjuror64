@@ -1,0 +1,26 @@
+
+  KERNAL POWER-UP ACTIVITIES
+
+  1) On power-up, the KERNAL first resets the stack pointer, and clears
+     decimal mode.
+  2) The KERNAL then checks for the presence of an autostart ROM cartridge
+     at location $8000 HEX (32768 decimal). If this is present, normal
+     initialization is suspended, and control is transferred to the car-
+     tridge code. If an autostart ROM is not present, normal system ini-
+     tialization continues.
+  3) Next, the KERNAL initializes all INPUT/OUTPUT devices. The serial bus
+     is initialized. Both 6526 CIA chips are set to the proper values for
+     keyboard scanning, and the 60-Hz timer is activated. The SID chip is
+     cleared. The BASIC memory map is selected and the cassette motor is
+     switched off.
+  4) Next, the KERNAL performs a RAM test, setting the top and bottom of
+     memory pointers. Also, page zero is initialized, and the tape buffer
+     is set up.
+       The RAM TEST routine is a nondestructive test starting at location
+     $0300 and working upward. Once the test has found the first non-RAM
+     location, the top of RAM has its pointer set. The bottom of memory is
+     always set to $0800, and the screen setup is always set at $0400.
+  5) Finally, the KERNAL performs these other activities. I/O vectors are
+     set to default values. The indirect jump table in low memory is estab-
+     lished. The screen is then cleared, and all screen editor variables
+     reset. Then the indirect at $A000 is used to start BASIC.

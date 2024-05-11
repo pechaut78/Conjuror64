@@ -1,0 +1,11 @@
+question,answer
+"Position of a sprite is calculated from what corner of the 24 dot by 21 dot area?","The TOP LEFT corner"
+"What is the minimum number of dots required to make up a sprite?","One"
+"Is the position of a sprite dependent on the number of dots used?","No"
+"Can a sprite be designed in the middle of the screen with only one dot?","Yes"
+"What is the starting point for calculating the exact positioning of a sprite?","The top left corner location"
+"Is the positioning of a sprite affected by the number of dots used?","No"
+"Can a sprite be designed in the 24 dot by 21 dot area?","Yes"
+"Is the positioning of a sprite dependent on the screen size?","No"
+"Can a sprite be designed in the middle of the screen?","Yes"
+"What is the exact positioning of a sprite calculated from?","The top left corner location"

@@ -1,0 +1,15 @@
+
+
+
+  MEMORY INTERFACE
+
+    The two versions of the video interface chip, 6566 and 6567, differ in
+  address output configurations. The 6566 has thirteen fully decoded
+  addresses for direct connection to the system address bus. The 6567 has
+  multiplexed addresses for direct connection to 64K dynamic RAMS. The
+  least significant address bits, A06-A00, are present on A06-A00 while
+  /RAS is brought low, while the most significant bits, A13-A08, are pres-
+  ent on A05-A00 while /CAS is brought low. The pins A11-A07 on the 6567
+  are static address outputs to allow direct connection of these bits to a
+  conventional 16K (2K*8) ROM. (The lower order addresses require external
+  latching.)

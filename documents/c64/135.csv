@@ -1,0 +1,12 @@
+question,answer
+"DEY operation is used to decrement what index?","Y"
+"DEY operation is used to decrement the index by how many?","1"
+"What is the opcode for DEY operation?","88"
+"How many bytes does DEY operation use?","1"
+"How many cycles does DEY operation take?","2"
+"What is the addressing mode for DEY operation?","Implied"
+"What is the assembly language form for DEY operation?","DEY"
+"What is the operation performed by DEY operation?","Decrement"
+"What is the result of DEY operation?","Y - 1"
+"Is DEY operation used to increment or decrement?","Decrement"
+"What is the purpose of DEY operation?","To decrement the index Y by one"

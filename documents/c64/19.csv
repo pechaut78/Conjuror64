@@ -1,0 +1,12 @@
+question,answer
+"Extended color mode is turned ON by setting which bit of the VIC-II register?","bit 6"
+"Which register is used to turn ON extended color mode?","VIC-II register"
+"What is the hexadecimal value of the location where the bit is set?","$D011"
+"What is the POKE command used to turn ON extended color mode?","POKE 53265,PEEK(53265)OR 64"
+"What is the result of the POKE command?","Extended color mode is turned ON"
+"What is the location of the register that needs to be set?","53265"
+"What is the hexadecimal value of the location in hexadecimal?","$D011"
+"What is the purpose of setting bit 6 of the VIC-II register?","to turn ON extended color mode"
+"What is the command used to read the current value of the register?","PEEK"
+"What is the command used to write a value to the register?","POKE"
+"What is the value that needs to be ORed with the current value of the register?","64"

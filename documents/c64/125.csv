@@ -1,0 +1,11 @@
+question,answer
+"Is the BVS instruction used for branching?","Yes"
+"What is the purpose of the BVS instruction?","Branching"
+"What is the BVS instruction short for?","Branch on Overflow Set"
+"What happens to the program counter when a branch occurs?","It increments"
+"What is the default value of the V flag?","1"
+"What is the purpose of the N flag?","To indicate if the result of the operation is negative"
+"What is the purpose of the C flag?","To indicate if the result of the operation is carry"
+"What is the purpose of the I flag?","To indicate if the result of the operation is interrupt"
+"What is the purpose of the D flag?","To indicate if the result of the operation is decimal"
+"What is the purpose of the V flag?","To indicate if the result of the operation is overflow"

@@ -1,0 +1,36 @@
+
+
+
+  VIDEO BANK SELECTION
+ OR VBLANK
+
+    The VIC-II chip can access ("see") 16K of memory at a time. Since there
+  is 64K of memory in the Commodore 64, you want to be able to have the
+  VIC-II chip see all of it. There is a way. There are 4 possible BANKS
+  (or sections) of 16K of memory. All that is needed is some means of
+  controlling which 16K bank the VIC-II chip looks at. In that way, the
+  chip can "see" the entire 64K of memory. The BANK SELECT bits that allow
+  you access to all the different sections of memory are located in the
+  6526 COMPLEX INTERFACE ADAPTER CHIP #2 (CIA #2). The POKE and PEEK BASIC
+  statements (or their machine language versions) are used to select a
+  bank, by controlling bits 0 and 1 of PORT A of CIA#2 (location 56576 (or
+  $DD00 HEX)). These 2 bits must be set to outputs by setting bits 0 and 1
+  of location 56578 ($DD02,HEX) to change banks. The following example
+  shows this:
+
+    POKE 56578,PEEK(56578)OR 3: REM MAKE SURE BITS 0 AND 1 ARE OUTPUTS
+    POKE 56576,(PEEK(56576)AND 252)OR A: REM CHANGE BANKS
+
+
+
+  This 16K bank concept is part of everything that the VIC-II chip does.
+  You should always be aware of which bank the VIC-II chip is pointing at,
+  since this will affect where character data patterns come from, where the
+  screen is, where sprites come from, etc. When you turn on the power of
+  your Commodore 64, bits 0 and 1 of location 56576 are automatically set
+  to BANK 0 ($0000-$3FFF) for all display information.
+
+  +-----------------------------------------------------------------------+
+  | *NOTE: The Commodore 64 character set is not available to the VIC-II  |
+  | chip in BANKS 1 and 3. (See character memory section.)                |
+  +-----------------------------------------------------------------------+

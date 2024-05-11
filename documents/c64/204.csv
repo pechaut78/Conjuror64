@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the SETLFS routine?","Set up a logical file"
+"What is the call address of the SETLFS routine?","$FFBA (hex) 65466 (decimal)"
+"What communication registers are used by the SETLFS routine?","A, X, Y"
+"What is the stack requirement of the SETLFS routine?","2"
+"What is the purpose of the logical file number?","used by the system as a key to the file table created by the OPEN file routine"
+"What are the possible device addresses?","0 to 31"
+"What is the meaning of device number 4 or greater?","devices on the serial bus"
+"What is the purpose of the Y index register?","to send a secondary address on the serial bus"
+"How do you load the Y index register?","set to 255"
+"What is the purpose of the SETLFS routine?","sets the logical file number, device address, and secondary address for other KERNAL routines"

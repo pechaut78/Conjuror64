@@ -1,0 +1,20 @@
+
+
+
+  OUTPUT TO OTHER DEVICES
+
+    It is often necessary to send output to devices other than the screen,
+  like a cassette deck, printer, disk drive, or modem. The OPEN statement
+  in BASIC creates a "channel" to talk to one of these devices. Once the
+  channel is OPEN, the PRINT# statement will send characters to that
+  device.
+
+  EXAMPLE of OPEN and PRINT# Statements:
+
+    100 OPEN 4,4: PRINT# 4, "WRITING ON PRINTER"
+    110 OPEN 3,8,3,"0:DISK-FILE,S,W":PRINT#3,"SEND TO DISK"
+    120 OPEN 1,1,1,"TAPE-FILE": PRINT#1,"WRITE ON TAPE"
+    130 OPEN 2,2,0,CHR$(10):PRINT#2,"SEND TO MODEM"
+    The OPEN statement is somewhat different for each device. The pa-
+  rameters in the OPEN statement are shown in the table below for each
+  device.

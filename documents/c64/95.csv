@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the program counter","The program counter contains the address of the current machine language instruction being executed."
+"What is always changing in the Commodore 64","The program counter is always changing."
+"What stops the program counter from changing","The program counter could only be stopped by halting the microprocessor in some way."
+"What is the program counter always running in","The operating system is always running in the Commodore 64."
+"What is the program counter always executing","The program counter is always executing the current machine language instruction."
+"What is the program counter always containing","The program counter always contains the address of the current machine language instruction."
+"What is the program counter always changing to","The program counter is always changing to the address of the next machine language instruction."
+"What is the program counter always running in the","The program counter is always running in the Commodore 64."
+"What is the program counter always executing in","The program counter is always executing in the Commodore 64."
+"What is the program counter always containing in","The program counter is always containing the address of the current machine language instruction in the Commodore 64."

@@ -1,0 +1,11 @@
+question,answer
+"What is the format of the OPEN statement parameters?","FORMAT: OPEN file#, device#, number, string"
+"What is the purpose of the DEVICE column in the table?","File Name"
+"What is the purpose of the NUMBER column in the table?","Control Registers"
+"What is the purpose of the STRING column in the table?","Text Is PRINTed"
+"What is the range of DEVICE# values?","8 to 11"
+"What is the purpose of the MODEM device?","Control Registers"
+"What is the purpose of the SCREEN device?","Text Is PRINTed"
+"What is the purpose of the PRINTER device?","Text Is PRINTed"
+"What is the purpose of the DISK device?","Drive #, File Name"
+"What is the purpose of the CASSETTE device?","File Name"

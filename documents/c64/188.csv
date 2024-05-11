@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the IOBASE routine?","Define I/O memory page"
+"What is the call address of the IOBASE routine?","$FFF3 (hex) 65523 (decimal)"
+"What registers are affected by the IOBASE routine?","X, Y"
+"What is the stack requirement for the IOBASE routine?","2"
+"What is the purpose of the X register in the IOBASE routine?","contains the low order address byte"
+"What is the purpose of the Y register in the IOBASE routine?","contains the high order address byte"
+"How do you access the I/O location after calling the IOBASE routine?","Load the Y register with the offset and access that I/O location"
+"What is the benefit of using the IOBASE routine?","provide compatibility between Commodore 64, VIC-20, and future models"
+"What is the instruction used to call the IOBASE routine?","JSR"
+"What is the purpose of storing the X and Y registers in consecutive locations?","to set the base registers"

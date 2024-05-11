@@ -1,0 +1,11 @@
+question,answer
+"VCx denotes the video matrix counter outputs, what does RCx denote?","The 3-bit raster line counter"
+"Video matrix counter steps through how many locations?","40"
+"What is the increment of the raster counter?","once for each horizontal video line"
+"What is the purpose of the video matrix counter?","to step through the same 40 locations"
+"What is the purpose of the raster counter?","to increment once for each horizontal video line"
+"How many locations are formatted as an 8*8 dot block on the video display?","8"
+"What is the addressing result of the video matrix and raster counters?","each eight sequential memory locations being formatted as an 8*8 dot block"
+"What is the frequency of the raster counter increment?","once for each horizontal video line"
+"What is the range of the video matrix counter?","40 locations"
+"What is the purpose of the raster line counter?","to increment once for each horizontal video line"

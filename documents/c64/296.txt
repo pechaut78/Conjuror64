@@ -1,0 +1,24 @@
+
+
+  sprite MEMORY ACCESS
+
+    The data for each sprite is Stored in 63 consecutive bytes of memory. Each
+  block of sprite data is defined by a sprite pointer, located at the end of the
+  VIDEO MATRIX. Only 1000 bytes of the video matrix are used in the normal
+  display modes, allowing the video matrix locations 1016-1023 (VM base+
+  $3F8 to VM base+$3FF) to be used for sprite pointers 0-7, respectively. The
+  eight-bit sprite pointer from the video matrix together with the six bits
+  from the sprite byte counter (to address 63 bytes) define the entire 14-bit
+  address field:
+
+
+     A13| A12| A11| A10| A09| A08| A07| A06| A05| A04| A03| A02| A01| A00
+  ------+----+----+----+----+----+----+----+----+----+----+----+----+------
+     MP7| MP6| MP5| MP4| MP3| MP2| MP1| MP0| MC5| MC4| MC3| MC2| MC1| MC0
+
+  Where MPx are the sprite pointer bits from the video matrix and MCx are the
+  internally generated sprite counter bits. The sprite pointers are read from the
+  video matrix at the end of every raster line. When the Y position
+  register of a sprite matches the current raster line count, the actual
+  fetches of sprite data begin. Internal counters automatically step through
+  the 63 bytes of sprite data, displaying three bytes on each raster line.

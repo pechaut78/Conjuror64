@@ -1,0 +1,11 @@
+question,answer
+"Can a sprite be expanded in both the vertical and horizontal directions?","The VIC-II chip has the ability to expand a sprite in the vertical direction, the horizontal direction, or both at once."
+"Can a sprite be expanded in the vertical direction?","The VIC-II chip has the ability to expand a sprite in the vertical direction, the horizontal direction, or both at once."
+"What happens to the resolution when a sprite is expanded?","Resolution doesn't actually increase... the sprite just gets bigger."
+"Can a sprite be expanded in the horizontal direction?","The VIC-II chip has the ability to expand a sprite in the vertical direction, the horizontal direction, or both at once."
+"What happens to each dot in a sprite when it is expanded?","each dot in the sprite is twice as wide or twice as tall."
+"Can a sprite be expanded in both the vertical and horizontal directions at once?","The VIC-II chip has the ability to expand a sprite in the vertical direction, the horizontal direction, or both at once."
+"What is the effect of expanding a sprite on its size?","the sprite just gets bigger."
+"Can a sprite be expanded in the vertical direction only?","The VIC-II chip has the ability to expand a sprite in the vertical direction, the horizontal direction, or both at once."
+"What happens to the size of a sprite when it is expanded?","the sprite just gets bigger."
+"Can a sprite be expanded in the horizontal direction only?","The VIC-II chip has the ability to expand a sprite in the vertical direction, the horizontal direction, or both at once."

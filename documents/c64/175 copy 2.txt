@@ -1,0 +1,25 @@
+
+
+                       USER CALLABLE KERNAL ROUTINES
+  +--------+-------------------+------------------------------------------+
+  |        |      ADDRESS      |                                          |
+  |  NAME  +---------+---------+                 FUNCTION                 |
+  |        |   HEX   | DECIMAL |                                          |
+  +--------+---------+---------+------------------------------------------+
+  | ACPTR  |  $FFA5  |  65445  |  Input byte from serial port             |
+  | CHKIN  |  $FFC6  |  65478  |  Open channel for input                  |
+  | CHKOUT |  $FFC9  |  65481  |  Open channel for output                 |
+  | CHRIN  |  $FFCF  |  65487  |  Input character from channel            |
+  | CHROUT |  $FFD2  |  65490  |  Output character to channel             |
+  | CIOUT  |  $FFA8  |  65448  |  Output byte to serial port              |
+  | CINT   |  $FF81  |  65409  |  Initialize screen editor                |
+  | CLALL  |  $FFE7  |  65511  |  Close all channels and files            |
+  | CLOSE  |  $FFC3  |  65475  |  Close a specified logical file          |
+  | CLRCHN |  $FFCC  |  65484  |  Close input and output channels         |
+  | GETIN  |  $FFE4  |  65508  |  Get character from keyboard queue       |
+  |        |         |         |  (keyboard buffer)                       |
+  | IOBASE |  $FFF3  |  65523  |  Returns base address of I/O devices     |
+  | IOINIT |  $FF84  |  65412  |  Initialize input/output                 |
+  | LISTEN |  $FFB1  |  65457  |  Command devices on the serial bus to    |
+  |        |         |         |  LISTEN                                  |
+  

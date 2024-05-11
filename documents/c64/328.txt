@@ -1,0 +1,13 @@
+
+
+  02 (Pin 6)
+
+    This TTL-Level input is the master clock for SID. All oscillator
+  frequencies and envelope rates are referenced to this clock. 02 also
+  controls data transfers between SID and the microprocessor. Data can only
+  be transferred when (02 is high. Essentially, (02 acts as a high-active
+  chip select as far as data transfers are concerned. This pin is normally
+  connected to the system clock, with a nominal operating frequency of 1.0
+  MHz.
+
+ 

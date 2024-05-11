@@ -1,0 +1,11 @@
+question,answer
+"The volume of a musical tone changes from the moment you first hear it, all the way through until it dies out and you can't hear it anymore.","The volume of a musical tone changes from the moment you first hear it, all the way through until it dies out and you can't hear it anymore."
+"What happens to the volume of a musical tone when it is first struck?","It rises from zero volume to its peak volume."
+"What is the rate at which the volume of a musical tone rises when it is first struck?","The rate at which this happens is called the ATTACK."
+"What happens to the volume of a musical tone after it reaches its peak?","It fails from the peak to some middle-ranged volume."
+"What is the rate at which the volume of a musical tone falls after it reaches its peak?","The rate at which the fall of the note occurs is called the DECAY."
+"What is the mid-ranged volume of a musical tone?","The mid-ranged volume itself is called the SUSTAIN level."
+"What happens to the volume of a musical tone when it stops playing?","It fails from the SUSTAIN level to zero volume."
+"What is the rate at which the volume of a musical tone fails when it stops playing?","The rate at which it fails is called the RELEASE."
+"What are the parameters that give certain qualities and restrictions to a note?","The bounds are called parameters."
+"What is the collective name for the parameters ATTACK, DECAY, SUSTAIN, and RELEASE?","The parameters ATTACK/DECAY/SUSTAIN/RELEASE and collectively called ADSR."

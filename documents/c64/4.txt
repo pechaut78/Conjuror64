@@ -1,0 +1,38 @@
+  GRAPHICS OVERVIEW
+
+  All of the graphics abilities of the Commodore 64 come from the 6567
+  Video Interface Chip (also known as the VIC-II chip). This chip gives a
+  variety of graphics modes, including a 40 column by 25 line text display,
+  a 320 by 200 dot high resolution display, and SPRITES, small movable
+  objects which make writing games simple. And if this weren't enough,
+  many of the graphics modes can be mixed on the same screen. It is
+  possible, for example, to define the top half of the screen to be in
+  high resolution mode, while the bottom half is in text mode. And SPRITES
+  will combine with anything! More on sprites later. First the other
+  graphics modes.
+   The VIC-II chip has the following graphics display modes:
+
+  A) CHARACTER DISPLAY MODES
+
+     1) Standard Character Mode
+            a)ROM characters
+            b)RAM programmable characters
+     2) Multi-Color Character Mode
+            a)ROM characters
+            b)RAM programmable characters
+
+     3) Extended Background Color Mode
+            a)ROM characters
+            b)RAM programmable characters
+
+
+  B) BIT MAP MODES
+
+     1) Standard Bit Map Mode
+     2) Multi-Color Bit Map Mode
+
+
+  C) SPRITES
+
+     1) Standard Sprites
+     2) Multi-Color Sprites

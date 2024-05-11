@@ -1,0 +1,8 @@
+
+  DRAWING A SPRITE
+
+    Drawing a Commodore sprite is like coloring the empty spaces in a
+  coloring book. Every sprite consists of tiny dots called pixels. To draw
+  a sprite, all you have to do is "color in" some of the pixels.
+    Look at the spritemaking grid in Figure 3-6. This is what a blank
+  sprite looks like:

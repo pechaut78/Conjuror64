@@ -1,0 +1,53 @@
+
+
+
+  THEORY OF OPERATION
+
+  SYSTEM INTERFACE
+
+    The 6566/6567 video controller devices interact with the system data
+  bus in a special way. A 65XX system requires the system buses only during
+  the Phase 2 (clock high) portion of the cycle. The 6566/6567 devices take
+  advantage of this feature by normally accessing system memory during the
+  Phase 1 (clock low) portion of the clock cycle. Therefore, operations
+  such as character data fetches and memory refresh are totally transparent
+  to the processor and do not reduce the processor throughput. The video
+  chips provide the interface control signals required to maintain this bus
+  sharing.
+    The video devices provide the signal AEC (address enable control) which
+  is used to disable the processor address bus drivers allowing the video
+  device to access the address bus. AEC is active low which, permits direct
+  connection to the AEC input of the 65XX family. The AEC signal is
+normally activated during Phase 1 so that processor operation is not
+  affected. Because of this bus "sharing", all memory accesses must be
+  completed in 1/2 cycle. Since the video chips provide a 1-MHz clock
+  (which must be used as system Phase 2), a memory cycle is 500 ns
+  including address setup, data access and, data setup to the reading
+  device.
+    Certain operations of the 6566/6567 require data at a faster rate than
+  available by reading only during the Phase 1 time; specifically, the ac-
+  cess of character pointers from the video matrix and the fetch of sprite
+  data. Therefore, the processor must be disabled and the data accessed
+  during the Phase 2 clock. This is accomplished via the BA (bus available)
+  signal. The BA line is normally high but is brought low during Phase 1 to
+  indicate that the video chip will require a Phase 2 data access. Three
+  Phase-2 times are allowed after BA low for the processor to complete any
+  current memory accesses. On the fourth Phase 2 after BA low, the AEC
+  signal will remain low during Phase 2 as the video chip fetches data. The
+  BA line is normally connected to the RDY input of a 65XX processor. The
+  character pointer fetches occur every eighth raster line during the
+  display window and require 40 consecutive Phase 2 accesses to fetch the
+  video matrix pointers. The sprite data fetches require 4 memory accesses as
+  follows:
+
+
+     PHASE 1   | sprite Pointer |   CONDITION: Every raster
+     PHASE  2   | sprite Byte 1  | CONDITION : Each raster while sprite is displayed
+     PHASE  1   | sprite Byte 2  | CONDITION :  Each raster while sprite is displayed
+     PHASE  2   | sprite Byte 3  | CONDITION : Each raster while sprite is displayed
+
+
+  The sprite pointers are fetched every other Phase 1 at the end of each
+  raster line. As required, the additional cycles are used for sprite data
+  fetches. Again, all necessary bus control is provided by the 6566/6567
+  devices.

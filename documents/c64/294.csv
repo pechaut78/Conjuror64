@@ -1,0 +1,12 @@
+question,answer
+"Can the priority of each sprite be individually controlled?","Yes, the priority of each sprite may be individually controlled with respect to the other displayed information from character or bit map modes."
+"What determines the priority of each sprite?","The priority of each sprite is set by the corresponding bit (MnDP) of register 27 ($1B) as follows:"
+"What happens when sprite data bits of '0' are used?","Sprite data bits of '0' are transparent, always permitting any other information to be displayed."
+"What is the highest priority sprite?","Sprite 0 has the highest priority."
+"What happens when two sprites have coincident data?","When sprite data (except transparent data) of two sprites are coincident, the data from the lower number sprite will be displayed."
+"What is the lowest priority sprite?","Sprite 7 has the lowest priority."
+"What is prioritized first in sprite vs. sprite data?","Sprite vs. sprite data is prioritized before priority resolution with character or bit map data."
+"What happens when sprite data is coincident with character or bit map data?","Sprite vs. sprite data is prioritized before priority resolution with character or bit map data."
+"Can transparent sprite data be displayed?","Yes, transparent sprite data will be displayed."
+"What is the purpose of the MnDP register?","The MnDP register is used to set the priority of each sprite."
+"What is the range of sprite numbers?","The sprites have a fixed priority with respect to each other, with sprite 0 having the highest priority and sprite 7 the lowest."

@@ -1,0 +1,11 @@
+question,answer
+"What are the two settings that must be poked to position a sprite on the screen?","The X position and the Y position"
+"What is the purpose of the X coordinate in positioning a sprite?","The horizontal position across the screen"
+"What is the purpose of the Y coordinate in positioning a sprite?","The vertical position up and down"
+"What is the size of a sprite in pixels?","24 across by 21 down"
+"What is the area of the sprite that is displayed when positioning a sprite?","The upper left corner of the entire sprite"
+"What is the purpose of the diagram in Figure 3-5?","To understand how X-Y positioning works"
+"What is the grey area in the diagram of Figure 3-5?","Your television viewing area"
+"What is the white area in the diagram of Figure 3-5?","Positions which are off your viewing screen"
+"What is the unique setting for each sprite in positioning?","The X POKE and Y POKE"
+"What is the purpose of pocking the X and Y settings for each sprite?","To display a sprite in a given location"

@@ -1,0 +1,7 @@
+
+
+  PROCESSOR INTERFACE
+
+    Aside from the special memory accesses described above, the 6566/6567
+  registers can be accessed similar to any other peripheral device. The
+  following processor interface signals are provided:

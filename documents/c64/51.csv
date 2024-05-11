@@ -1,0 +1,11 @@
+question,answer
+"Is there a specific register in the VIC-II chip control register where sprite to data collisions are detected?","The sprite to data collisions are detected in the sprite to data collision register at location 53279 ($D01F in HEX) of the VIC-II chip control register."
+"What happens to the bits in the sprite to data collision register once they are read?","The bits in this register remain set until read (PEEKed). Once read, the register is automatically cleared."
+"Is it a good idea to save the value in a variable until you are finished with it after reading the sprite to data collision register?","Yes, it is a good idea to save the value in a variable until you are finished with it."
+"Is MULTI-COLOR data 01 considered transparent for collisions?","Yes, MULTI-COLOR data 01 is considered transparent for collisions, even though it shows up on the screen."
+"What should you make in multi-color mode when setting up a background screen to avoid collisions?","Make everything that should not cause a collision 01 in multi-color mode."
+"Can a sprite be involved in a collision if its bit in the sprite to data collision register is a 0?","No, if that bit is a 0, then that sprite is not involved in a collision."
+"Is it possible for a sprite to be involved in a collision even if it shows up on the screen?","Yes, a sprite can be involved in a collision even if it shows up on the screen."
+"What happens to the sprite to data collision register after it is read?","The register is automatically cleared after it is read."
+"Is it necessary to read the sprite to data collision register to clear it?","No, the register is automatically cleared after it is read."
+"Can a sprite be involved in a collision if its bit in the sprite to data collision register is a 1?","Yes, if that bit is a 1, then that sprite is involved in a collision."

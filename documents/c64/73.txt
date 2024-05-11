@@ -1,0 +1,12 @@
+
+
+
+SPRITE COLLISION:
+
+    You can detect whether a sprite has collided with another sprite by
+  using this line: IF PEEK(V+30)ANDX=XTHEN [insert action here]. This line
+  checks to see if a particular sprite has collided with ANY OTHER SPRITE,
+  where X equals 1 for sprite 0, 2 for sprite 1, 4 for sprite 2, 8 for
+  sprite 3, 16 for sprite 4, 32 for sprite 5, 64 for sprite 6, and 128 for
+  sprite 7. To check to see if the sprite has collided with a "BACKGROUND
+  CHARACTER" use this line: IF PEEK(V+31)ANDX=XTHEN [insert action here].

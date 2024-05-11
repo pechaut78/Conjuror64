@@ -1,0 +1,17 @@
+
+
+  X POSITION VALUES BEYOND 255:
+
+    X positions run from 0 to 255... and then START OVER from 0 to 255. To
+  put a sprite beyond X position 255 on the far right side of the screen,
+  you must first POKE V+ 16 as shown, THEN POKE a new X valve from 0 to 63,
+  which will place the sprite in one of the X positions at the right side
+  of the screen. To get back to positions 0-255, POKE V+16,0 and POKE in an
+  X value from 0 to 255.
+
+  Y POSITION VALUES:
+
+    Y positions run from 0 to 255, including 0 to 49 off the TOP of the
+  viewing area, 50 to 229 IN the,viewing area, and 230 to 255 off the
+  BOTTOM of the viewing area.
+                                                 

@@ -1,0 +1,11 @@
+question,answer
+"Each sprite takes up how many bytes?","64 bytes"
+"What is the purpose of the SPRITE POINTER?","It controls where each sprite definition is located in memory"
+"What is the range of values that a sprite pointer can hold?","0 to 255"
+"Where are the sprite pointers located in memory?","The lost 8 bytes of the 1K chunk of screen memory"
+"What is the maximum size of memory that a sprite pointer can 'see'?","16K"
+"Why is 64 bytes an even number?","Because it's an even power in binary"
+"What is the purpose of the extra byte at the end of each sprite definition?","It serves as a placeholder"
+"How many bytes are needed to define a sprite?","63 bytes"
+"What is the total size of a sprite definition including the extra byte?","64 bytes"
+"Can a sprite pointer point to any location in memory?","No, it can only point to locations within the 16K block of memory"

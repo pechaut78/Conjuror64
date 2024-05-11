@@ -1,0 +1,9 @@
+question,answer
+"Standard high-resolution graphics give you control of very small dots on the screen.","Each dot in character memory can have 2 possible values, 1 for on and 0 for off."
+"Can you control the color of each dot in standard high-resolution graphics?","Each dot in character memory can have 2 possible values, 1 for on and 0 for off."
+"What happens when a dot is off in standard high-resolution graphics?","When a dot is off, the color of the screen is used in the space reserved for that dot."
+"What is the maximum number of colors that can be used in standard high-resolution graphics?","2"
+"What is the limitation of standard high-resolution graphics in terms of color resolution?","In some ways this limits the color resolution within that space."
+"What is the solution to the problem of colored lines crossing in standard high-resolution graphics?","Multi-color mode gives you a solution to this problem."
+"What is the difference in horizontal resolution between standard high-resolution graphics and multi-color mode?","The only sacrifice is in the horizontal resolution, because each multi-color mode dot is twice as wide as a high-resolution dot."
+"What is the benefit of using multi-color mode over standard high-resolution graphics?","This minimal loss of resolution is more than compensated for by the extra abilities of multi-color mode."

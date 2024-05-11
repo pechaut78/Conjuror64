@@ -1,0 +1,13 @@
+question,answer
+"what is the operation of ASL instruction","Shift Left One Bit"
+"what is the purpose of ASL instruction","Shift Left One Bit (Memory or Accumulator)"
+"what is the format of ASL instruction","C <- |7|6|5|4|3|2|1|0| <- 0"
+"what is the addressing mode of ASL instruction","Accumulator, Zero Page, Zero Page,X, Absolute, Absolute,X"
+"what is the number of bytes of ASL instruction","1, 2, 2, 3, 3"
+"what is the number of cycles of ASL instruction","2, 5, 6, 6, 7"
+"what is the op code of ASL instruction","0A, 06, 16, 0E, 1E"
+"what is the purpose of ASL instruction in Accumulator mode","Shift Left One Bit (Memory or Accumulator)"
+"what is the purpose of ASL instruction in Zero Page mode","Shift Left One Bit (Memory or Accumulator)"
+"what is the purpose of ASL instruction in Zero Page,X mode","Shift Left One Bit (Memory or Accumulator)"
+"what is the purpose of ASL instruction in Absolute mode","Shift Left One Bit (Memory or Accumulator)"
+"what is the purpose of ASL instruction in Absolute,X mode","Shift Left One Bit (Memory or Accumulator)"

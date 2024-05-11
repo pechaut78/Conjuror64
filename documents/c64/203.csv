@@ -1,0 +1,13 @@
+question,answer
+"Send secondary address for LISTEN","This routine is used to send a secondary address to an I/O device after a call to the LISTEN routine is made, and the device is commanded to LISTEN."
+"Call address of SECOND routine","$FF93 (hex) 65427 (decimal)"
+"Registers affected by SECOND routine","A"
+"Preparatory routines for SECOND routine","LISTEN"
+"Error returns for SECOND routine","See READST"
+"Stack requirements for SECOND routine","8"
+"Description of SECOND routine","This routine is used to send a secondary address to an I/O device after a call to the LISTEN routine is made, and the device is commanded to LISTEN."
+"Use of SECOND routine","The routine canNOT be used to send a secondary address after a call to the TALK routine."
+"Secondary address usage","A secondary address is usually used to give setup information to a device before I/O operations begin."
+"ORing secondary address with","$60"
+"How to use SECOND routine","1) load the accumulator with the secondary address to be sent. 2) Call this routine."
+"Example of using SECOND routine",";ADDRESS DEVICE #8 WITH COMMAND (SECONDARY ADDRESS) #15 LDA #8 JSR LISTEN LDA #15 JSR SECOND"

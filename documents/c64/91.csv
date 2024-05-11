@@ -1,0 +1,11 @@
+question,answer
+"Is the accumulator the most important register in the microprocessor?","Yes"
+"What can you do with the accumulator?","Copy the contents of a memory location into the accumulator, copy the contents of the accumulator into a memory location, modify the contents of the accumulator or some other register directly, without affecting any memory"
+"What instructions allow you to copy the contents of a memory location into the accumulator?","Various machine language instructions"
+"What instructions allow you to copy the contents of the accumulator into a memory location?","Various machine language instructions"
+"What can you do with the accumulator without affecting any memory?","Modify the contents of the accumulator or some other register directly"
+"What is the only register that has instructions for performing math?","The accumulator"
+"What is the most important register in the microprocessor?","The accumulator"
+"What can you do with the accumulator in terms of math?","Perform math"
+"What are the instructions for performing math?","Instructions for the accumulator"
+"What is the accumulator used for?","To perform math and other operations"

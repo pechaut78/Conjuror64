@@ -1,0 +1,16 @@
+
+
+
+  SCROLLING
+
+    The display data may be scrolled up to one entire character space in
+  both the horizontal and vertical direction. When used in conjunction with
+  the smaller display window (above), scrolling can be used to create a
+  smooth panning motion of display data while updating the system memory
+  only when a new character row (or column) is required. Scrolling is also
+  used to center a fixed display within the display window.
+
+           BITS         |      REGISTER      |          FUNCTION
+  ----------------------+--------------------+-----------------------------
+         X2,X1,X0       |      22 ($16)      |     Horizontal Position
+         Y2,Y1,Y0       |      17 ($11)      |     Vertical Position

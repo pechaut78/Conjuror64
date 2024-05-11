@@ -1,0 +1,10 @@
+question,answer
+"Command a device on the serial bus to what?","TALK"
+"What is the call address of the TALK function?","$FFB4 (hex) 65460 (decimal)"
+"What communication registers are used by the TALK function?","A"
+"What is the purpose of the TALK function?","Command a device on the serial bus to TALK"
+"What is the stack requirement for the TALK function?","8"
+"What registers are affected by the TALK function?","A"
+"How do you use the TALK function?","Load the accumulator with the device number, then call this routine"
+"What is the range of device numbers that can be loaded into the accumulator?","0 to 31"
+"What happens when the TALK function is called?","The data is transmitted as a command on the serial bus"

@@ -1,0 +1,11 @@
+question,answer
+"Load the accumulator with the number of the logical file to be closed.","Load the accumulator with the number of the logical file to be closed."
+"Call this routine after loading the accumulator with the logical file number.","Call this routine after loading the accumulator with the logical file number."
+"What is the purpose of the CLOSE routine?","Close a logical file."
+"What is the call address of the CLOSE routine?","$FFC3 (hex) 65475 (decimal)"
+"What registers are affected by the CLOSE routine?","A, X, Y"
+"What is the minimum stack requirement for the CLOSE routine?","2+"
+"What is the error return value for the CLOSE routine?","0,240 (See READST)"
+"What is the preparatory routine for the CLOSE routine?","None"
+"What is the communication register for the CLOSE routine?","A"
+"What is the description of the CLOSE routine?","This routine is used to close a logical file after all I/O operations have been completed on that file."

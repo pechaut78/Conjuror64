@@ -1,0 +1,22 @@
+
+
+
+  MULTI-COLOR BIT MAP MODE (BMM = MCM = 1)
+
+    Multi-colored bit map mode is selected by setting the MCM bit in
+  register 22 ($16) to a "1" in conjunction with the BMM bit. Multi-color
+  mode uses the same memory access sequences as standard bit map mode, but
+  interprets the dot data as follows:
+
+        BIT PAIR      |                   DISPLAY COLOR
+  --------------------+----------------------------------------------------
+           00         |  Background #0 color (register 33 ($21))
+           01         |  Upper nybble of video matrix pointer
+           10         |  Lower nybble of video matrix pointer
+           11         |  Video matrix color nybble
+
+  Note that the color nybble (DB11-DB8) IS used for the multi-color bit map
+  mode. Again, as two bits are used to select one dot color, the horizontal
+  dot size is doubled, resulting in a screen resolution of 160H*200V.
+  Utilizing multi-color bit map mode, three independently selected colors
+  can be displayed in each 8*8 block in addition to the background color.

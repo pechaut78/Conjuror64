@@ -1,0 +1,17 @@
+
+
+  ASL          ASL Shift Left One Bit (Memory or Accumulator)           ASL
+                   +-+-+-+-+-+-+-+-+
+  Operation:  C <- |7|6|5|4|3|2|1|0| <- 0
+                   +-+-+-+-+-+-+-+-+                    N Z C I D V
+                                                        / / / _ _ _
+
+  +----------------+-----------------------+---------+---------+----------+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  +----------------+-----------------------+---------+---------+----------+
+  |  Accumulator   |   ASL A               |    0A   |    1    |    2     |
+  |  Zero Page     |   ASL Oper            |    06   |    2    |    5     |
+  |  Zero Page,X   |   ASL Oper,X          |    16   |    2    |    6     |
+  |  Absolute      |   ASL Oper            |    0E   |    3    |    6     |
+  |  Absolute, X   |   ASL Oper,X          |    1E   |    3    |    7     |
+  +----------------+-----------------------+---------+---------+----------+

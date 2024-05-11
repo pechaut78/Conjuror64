@@ -1,0 +1,96 @@
+
+
+
+  ATTACK/DECAY (Register 05)
+
+    Bits 4-7 of this register (ATK0-ATK3) select 1 of 16 ATTACK rates for
+  the Voice 1 Envelope Generator. The ATTACK rate determines how rapidly
+  the output of Voice 1 rises from zero to peak amplitude when the Envelope
+  Generator is Gated. The 16 ATTACK rates are listed in Table 2.
+    Bits 0-3 (DCY0-DCY3) select 1 of 16 DECAY rates for the Envelope
+  Generator. The DECAY cycle follows the ATTACK cycle and the DECAY rate
+  determines how rapidly the output fails from the peak amplitude to the
+  selected SUSTAIN level. The 16 DECAY rates are listed in Table 2.
+
+  SUSTAIN/RELEASE (Register 06)
+
+    Bits 4-7 of this register (STN0-STN3) select 1 of 16 SUSTAIN levels for
+  the Envelope Generator. The SUSTAIN cycle follows the DECAY cycle and the
+  output of Voice 1 will remain at the selected SUSTAIN amplitude as long
+  as the Gate bit remains set. The SUSTAIN levels range from zero to peak
+  amplitude in 16 linear steps, with a SUSTAIN value of 0 selecting zero
+  amplitude and a SUSTAIN value of 15 ($F) selecting the peak amplitude. A
+  SUSTAIN value of 8 would cause Voice I to SUSTAIN at an amplitude one-
+  half the peak amplitude reached by the ATTACK cycle.
+    Bits 0-3 (RLS0-RLS3) select 1 of 16 RELEASE rates for the Envelope
+  Generator. The RELEASE cycle follows the SUSTAIN cycle when the Gate bit
+  is reset to zero. At this time, the output of Voice 1 will fall from the
+  SUSTAIN amplitude to zero amplitude at the selected RELEASE rate. The 16
+  RELEASE rates are identical to the DECAY rates.
+
+  | NOTE: The cycling of the Envelope Generator can be altered at any     |
+  | point via the Gate bit. The Envelope Generator can be Gated and       |
+  | Released without restriction. For example, if the Gate bit is reset   |
+  | before the envelope has finished the ATTACK cycle, the RELEASE cycle  |
+  | will immediately begin, starting from whatever amplitude had been     |
+  | reached. if the envelope is then Gated again (before the RELEASE cycle|
+  | has reached zero amplitude), another ATTACK cycle will begin, starting|
+  | from whatever amplitude had been reached. This technique can be used  |
+  | to generate complex amplitude envelopes via real-time software        |
+  | control.                                                              |
+ 
+
+
+  |      VALUE      |        ATTACK RATE       |    DECAY/RELEASE RATE    |
+  |   DEC   (HEX)   |       (Time/Cycle)       |       (Time/Cycle)       |
+  +-----------------+--------------------------+--------------------------+
+  |     0    (0)    |            2 ms          |            6 ms          |
+  |     1    (1)    |            8 ms          |           24 ms          |
+  |     2    (2)    |           16 ms          |           48 ms          |
+  |     3    (3)    |           24 ms          |           72 ms          |
+  |     4    (4)    |           38 ms          |          114 ms          |
+  |     5    (5)    |           56 ms          |          168 ms          |
+  |     6    (6)    |           68 ms          |          204 ms          |
+  |     7    (7)    |           80 ms          |          240 ms          |
+  |     8    (8)    |          100 ms          |          300 ms          |
+  |     9    (9)    |          250 ms          |          750 ms          |
+  |    10    (A)    |          500 ms          |          1.5 s           |
+  |    11    (B)    |          800 ms          |          2.4 s           |
+  |    12    (C)    |            1 s           |            3 s           |
+  |    13    (D)    |            3 s           |            9 s           |
+  |    14    (E)    |            5 s           |           15 s           |
+  |    15    (F)    |            8 s           |           24 s           |
+  | NOTE: Envelope rates are based on a 1.0-MHz 02 clock. For other 02    |
+  | frequencies, multiply the given rate by 1 MHz/02. The rates refer to  |
+  | the amount of time per cycle. For example, given an ATTACK value of 2,|
+  | the ATTACK cycle would take 16 ms to rise from zero to peak amplitude.|
+  | The DECAY/RELEASE rates refer to the amount of time these cycles would|
+  | take to fall from peak amplitude to zero.                             |
+ 
+
+  VOICE 2
+
+    Registers 07-$0D control Voice 2 and are functionally identical to reg-
+  isters 00-06 with these exceptions:
+
+    1) When selected, SYNC synchronizes Oscillator 2 with Oscillator 1.
+    2) When selected, RING MOD replaces the Triangle output of Oscillator 2
+       with the ring modulated combination of Oscillators 2 and 1.
+
+  VOICE 3
+
+    Registers $0E-$14 control Voice 3 and are functionally identical to
+  registers 00-06 with these exceptions:
+
+    1) When selected, SYNC synchronizes Oscillator 3 with Oscillator 2.
+    2) When selected, RING MOD replaces the Triangle output of Oscillator 3
+       with the ring modulated combination of Oscillators 3 and 2.
+
+    Typical operation of a voice consists of selecting the desired parame-
+  ters: frequency, waveform, effects (SYNC, RING MOD) and envelope rates,
+  then gating the voice whenever the sound is desired. The sound can be
+  sustained for any length of time and terminated by clearing the Gate bit.
+  Each voice can be used separately, with independent parameters and
+  gating, or in unison to create a single, powerful voice. When used in
+  unison, a slight detuning of each oscillator or tuning to musical
+  intervals creates a rich, animated sound.

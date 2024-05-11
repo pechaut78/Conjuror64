@@ -1,0 +1,22 @@
+  SID PIN DESCRIPTION
+
+  CAP1A,CAP1B, (Pins 1,2)/ CAP2A,CAP2B (Pins 3,4)
+
+    These pins are used to connect the two integrating capacitors required
+  by the programmable Filter. C1 connects between pins 1 and 2, C2 between
+  pins 3 and 4. Both capacitors should be the some value. Normal operation
+  of the Filter over the audio range (approximately 30 Hz-12 kHz) is
+  accomplished with a value of 2200 pF for C1 and C2. Polystyrene
+  capacitors are preferred and in complex polyphonic systems, where many
+  SID chips must track each other, matched capacitors are recommended.
+    The frequency range of the Filter can be tailored to specific applica-
+  tions by the choice of capacitor values. For example, a low-cost game may
+  not require full high-frequency response. In this case, larger values
+  for C1 and C2 could be chosen to provide more control over the bass
+  frequencies of the Filter. The maximum Cutoff Frequency of the Filter is
+  given by:
+
+                             FCmax = 2.6E-5/C
+
+  Where C is the capacitor value. The range of the Filter extends 9 octaves
+  below the maximum Cutoff Frequency.

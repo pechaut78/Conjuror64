@@ -1,0 +1,15 @@
+
+
+
+  STX                    STX Store index X in memory                    STX
+
+  Operation: X -> M                                     N Z C I D V
+                                                        _ _ _ _ _ _
+
+  +----------------+-----------------------+---------+---------+----------+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  +----------------+-----------------------+---------+---------+----------+
+  |  Zero Page     |   STX Oper            |    86   |    2    |    3     |
+  |  Zero Page,Y   |   STX Oper,Y          |    96   |    2    |    4     |
+  |  Absolute      |   STX Oper            |    8E   |    3    |    4     |
+  +----------------+-----------------------+---------+---------+----------+

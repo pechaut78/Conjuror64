@@ -1,0 +1,16 @@
+
+
+  BIT             BIT Test bits in memory with accumulator              BIT
+
+  Operation:  A /\ M, M7 -> N, M6 -> V
+
+  Bit 6 and 7 are transferred to the status register.   N Z C I D V
+  If the result of A /\ M is zero then Z = 1, otherwise M7/ _ _ _ M6
+  Z = 0
+
+  +----------------+-----------------------+---------+---------+----------+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  +----------------+-----------------------+---------+---------+----------+
+  |  Zero Page     |   BIT Oper            |    24   |    2    |    3     |
+  |  Absolute      |   BIT Oper            |    2C   |    3    |    4     |
+  +----------------+-----------------------+---------+---------+----------+

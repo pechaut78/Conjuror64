@@ -1,0 +1,24 @@
+
+
+
+  SPRITE DISPLAY PRIORITIES
+
+    Sprites have the ability to cross each other's paths, as well as cross
+  in front of, or behind other objects on the screen. This can give you a
+  truly three dimensional effect for games.
+    Sprite to sprite priority is fixed. That means that sprite 0 has the
+  highest priority, sprite 1 has the next priority, and so on, until we get
+  to sprite 7, which has the lowest priority. In other words, if sprite 1
+  and sprite 6 are positioned so that they cross each other, sprite 1 will
+  be in front of sprite 6.
+    So when you're planning which sprites will appear to be in the fore-
+  ground of the picture, they must be assigned lower sprite numbers than
+  those sprites you want to put towards the back of the scene. Those
+  sprites will be given higher sprite numbers,
+
+  +-----------------------------------------------------------------------+
+  | NOTE: A "window" effect is possible. If a sprite with higher priority |
+  | has "holes" in it (areas where the dots are not set to 1 and thus     |
+  | turned ON), the sprite with the lower priority will show through. This|
+  | also happens with sprite and background data.                         |
+  +-----------------------------------------------------------------------+

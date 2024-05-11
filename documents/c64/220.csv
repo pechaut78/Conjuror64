@@ -1,0 +1,11 @@
+question,answer
+"Can you enter a program in HEX or SYMBOLIC codes with 64MON?","You can enter a program in either HEX or SYMBOLIC codes with 64MON."
+"What is the advantage of using 64MON?","The advantages of this method include easier entry of the machine language routines, debugging aids, and a much faster means of saving and loading."
+"What is the drawback of using 64MON?","The drawback to this method is that it generally requires the BASIC program to load the machine language routine from tape or disk when it is started."
+"Can you save the portion of memory the program is in with 64MON?","Yes, you can save the portion of memory the program is in with 64MON."
+"What is the purpose of 64MON?","This program allows you to enter a program in either HEX or SYMBOLIC codes, and save the portion of memory the program is in."
+"Can you load a machine language routine from tape with 64MON?","Yes, you can load a machine language routine from tape with 64MON."
+"What is the benefit of using 64MON for debugging?","The debugging aids are an advantage of using 64MON."
+"Can you prepare a machine language routine with 64MON?","Yes, you can prepare a machine language routine with 64MON."
+"Is 64MON a machine language section?","No, 64MON is not a machine language section, but it has a machine language section."
+"Can you save and load with 64MON?","Yes, you can save and load with 64MON."
