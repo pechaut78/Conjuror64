@@ -1,0 +1,7 @@
+question,answer
+"What is the assembly language instruction that stores the value in the accumulator into memory at the specified address?","STY                    STY Store index Y in memory                    STY
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Zero Page     |   STY Oper            |    84   |    2    |    3     |
+  |  Zero Page,X   |   STY Oper,X          |    94   |    2    |    4     |
+  |  Absolute      |   STY Oper            |    8C   |    3    |    4     |"

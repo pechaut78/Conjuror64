@@ -1,0 +1,24 @@
+question,answer
+"What is the native language of the Commodore 64?","WHAT IS MACHINE LANGUAGE?
+
+    At the heart of every microcomputer, is a central microprocessor. It's
+  a very special microchip which is the 'brain' of the computer. The
+  Commodore 64 is no exception. Every microprocessor understands its own
+  language of instructions. These instructions are called machine language
+  instructions. To put it more precisely, machine language is the ONLY
+  programming language that your Commodore 64 understands. It is the NATIVE
+  language of the machine.
+    If machine language is the only language that the Commodore 64
+  understands, then how does it understand the CBM BASIC programming
+  language? CBM BASIC is NOT the machine language of the Commodore 64.
+  What, then, makes the Commodore 64 understand CBM BASIC instructions like
+  PRINT and GOTO?
+    To answer this question, you must first see what happens inside your
+  Commodore 64. Apart from the microprocessor which is the brain of the
+  Commodore 64, there is a machine language program which is stored in a
+  special type of memory so that it can't be changed. And, more impor-
+  tantly, it does not disappear when the Commodore 64 is turned off, unlike
+  a program that you may have written. This machine language program is
+  called the OPERATING SYSTEM of the Commodore 64. Your Commodore 64 knows
+  what to do when it's turned on because its OPERATING SYSTEM (program) is
+  automatically 'RUN.'"

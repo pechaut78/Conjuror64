@@ -20,7 +20,6 @@
   multi-color modes) as follows:
 
         BIT PAIR      |                   COLOR DISPLAYED
-  --------------------+----------------------------------------------------
            00         |  Transparent
            01         |  sprite Multi-color #0 (register 37 ($25))
            10         |  sprite Color (registers 39-46 ($27-$2E))

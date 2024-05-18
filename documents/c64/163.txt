@@ -1,10 +1,4 @@
   TAX                TAX Transfer accumulator to index X                TAX
 
-  Operation:  A -> X                                    N Z C I D V
-                                                        / / _ _ _ _
-
-  +----------------+-----------------------+---------+---------+----------+
   | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
   |  Implied       |   TAX                 |    AA   |    1    |    2     |
-  +----------------+-----------------------+---------+---------+----------+

@@ -1,0 +1,21 @@
+question,answer
+"What is the starting location of the VIC-II chip in the Commodore 64's memory?","GRAPHICS LOCATIONS
+
+    Some general information first. There are 1000 possible locations on
+  the Commodore 64 screen. Normally, the screen starts at location 1024
+  ($0400 in HEXadecimal notation) and goes to location 2023. Each of
+  these locations is 8 bits wide. This means that it can hold any integer
+  number from 0 to 255. Connected with screen memory is a group of 1000
+  locations called COLOR MEMORY or COLOR RAM. These start at location 55296
+  ($D800 in HEX) and go up to 56295. Each of the color RAM locations is 4
+  bits wide, which means that it can hold any integer number from 0 to 15.
+  Since there are 16 possible colors that the Commodore 64 can use, this
+  works out well.
+    In addition, there are 256 different characters that can be displayed
+  at any time. For normal screen display, each of the 1000 locations in
+  screen memory contains a code number which tells the VIC-II chip which
+  character to display at that screen location.
+    The various graphics modes are selected by the 47 CONTROL registers in
+  the VIC-II chip. Many of the graphics functions can be controlled by
+  POKEing the correct value into one of the registers. The VIC-II chip is
+  located starting at 53248 ($D000 in HEX) through 53294 ($D02E in HEX)."

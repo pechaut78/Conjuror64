@@ -1,0 +1,17 @@
+question,answer
+"What is the purpose of the IOINIT function?","B-13. Function Name: IOINIT
+
+    Purpose: Initialize I/O devices
+    Call Address: $FF84 (hex) 65412 (decimal)
+    Communication registers: None
+    Preparatory routines: None
+    Error returns:
+    Stack requirements: None
+    Registers affected: A, X, Y
+
+    Description: This routine initializes all input/output devices and
+  routines. It is normally called as part of the initialization procedure
+  of a Commodore 64 program cartridge.
+
+  EXAMPLE:
+    JSR IOINIT"

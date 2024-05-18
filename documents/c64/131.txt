@@ -1,11 +1,7 @@
   CPX                  CPX Compare Memory and Index X                   CPX
-                                                        N Z C I D V
-  Operation:  X - M                                     / / / _ _ _
-
-  +----------------+-----------------------+---------+---------+----------+
+ 
   | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
   |  Immediate     |   CPX *Oper           |    E0   |    2    |    2     |
   |  Zero Page     |   CPX Oper            |    E4   |    2    |    3     |
   |  Absolute      |   CPX Oper            |    EC   |    3    |    4     |
-  +----------------+-----------------------+---------+---------+----------+
+ 

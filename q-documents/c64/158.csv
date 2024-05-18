@@ -1,0 +1,5 @@
+question,answer
+"What is the OP CODE for the instruction SED in 6502?","SED                       SED Set decimal mode                        SED
+ 
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   SED                 |    F8   |    1    |    2     |"

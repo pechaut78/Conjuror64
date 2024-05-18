@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the ROR instruction in 6502?","ROR          ROR Rotate one bit right (memory or accumulator)         ROR
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Accumulator   |   ROR A               |    6A   |    1    |    2     |
+  |  Zero Page     |   ROR Oper            |    66   |    2    |    5     |
+  |  Zero Page,X   |   ROR Oper,X          |    76   |    2    |    6     |
+  |  Absolute      |   ROR Oper            |    6E   |    3    |    6     |
+  |  Absolute,X    |   ROR Oper,X          |    7E   |    3    |    7     |
+    Note: ROR instruction is available on MCS650X microprocessors after
+          June, 1976."

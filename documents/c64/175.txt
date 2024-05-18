@@ -64,19 +64,5 @@
   |  NAME  +---------+---------+                 FUNCTION                 |
   |        |   HEX   | DECIMAL |                                          |
   +--------+---------+---------+------------------------------------------+
-  | SCNKEY |  $FF9F  |  65439  |  Scan keyboard                           |
-  | SCREEN |  $FFED  |  65517  |  Return X,Y organization of screen       |
-  | SECOND |  $FF93  |  65427  |  Send secondary address after LISTEN     |
-  | SETLFS |  $FFBA  |  65466  |  Set logical, first, and second addresses|
-  | SETMSG |  $FF90  |  65424  |  Control KERNAL messages                 |
-  | SETNAM |  $FFBD  |  65469  |  Set file name                           |
-  | SETTIM |  $FFDB  |  65499  |  Set real time clock                     |
-  | SETTMO |  $FFA2  |  65442  |  Set timeout on serial bus               |
-  | STOP   |  $FFE1  |  65505  |  Scan stop key                           |
-  | TALK   |  $FFB4  |  65460  |  Command serial bus device to TALK       |
-  | TKSA   |  $FF96  |  65430  |  Send secondary address after TALK       |
-  | UDTIM  |  $FFEA  |  65514  |  Increment real time clock               |
-  | UNLSN  |  $FFAE  |  65454  |  Command serial bus to UNLISTEN          |
-  | UNTLK  |  $FFAB  |  65451  |  Command serial bus to UNTALK            |
-  | VECTOR |  $FF8D  |  65421  |  Read/set vectored I/O                   |
-  +--------+---------+---------+------------------------------------------+
+
+ 

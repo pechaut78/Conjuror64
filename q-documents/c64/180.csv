@@ -1,0 +1,59 @@
+question,answer
+"What is the purpose of the CHRIN  kernal function?","B-4. Function Name: CHRIN
+
+    Purpose: Get a character from the input channel
+    Call address: $FFCF (hex) 65487 (decimal)
+    Communication registers: A
+    Preparatory routines: (OPEN, CHKIN)
+    Error returns: 0 (See READST)
+    Stack requirements: 7+
+    Registers affected: A, X
+
+    Description: This routine gets a byte of data from a channel already
+  set up as the input channel by the KERNAL routine CHKIN. If the CHKIN has
+  NOT been used to define another input channel, then all your data is
+  expected from the keyboard. The data byte is returned in the accumulator.
+  The channel remains open after the call.
+    Input from the keyboard is handled in a special way. First, the cursor
+  is turned on, and blinks until a carriage return is typed on the
+  keyboard. All characters on the line (up to 88 characters) are stored in
+  the BASIC input buffer. These characters can be retrieved one at a time
+  by calling this routine once for each character. When the carriage return
+  is retrieved, the entire line has been processed. The next time this
+  routine is called, the whole process begins again, i.e., by flashing the
+  cursor.
+
+  How to Use:
+
+  FROM THE KEYBOARD
+
+    1) Retrieve a byte of data by calling this routine.
+    2) Store the data byte.
+    3) Check if it is the last data byte (is it a CR?)
+    4) If not, go to step 1.
+
+  EXAMPLE:
+
+       LDY $#00      ;PREPARE THE Y REGISTER TO STORE THE DATA
+   RD  JSR CHRIN
+       STA DATA,Y    ;STORE THE YTH DATA BYTE IN THE YTH
+                     ;LOCATION IN THE DATA AREA.
+       INY
+       CMP #CR       ;IS IT A CARRIAGE RETURN?
+       BNE RD        ;NO, GET ANOTHER DATA BYTE
+
+  EXAMPLE:
+
+    JSR CHRIN
+    STA DATA
+
+  FROM OTHER DEVICES
+
+    0) Use the KERNAL OPEN and CHKIN routines.
+    1) Call this routine (using a JSR instruction).
+    2) Store the data.
+
+  EXAMPLE:
+
+    JSR CHRIN
+    STA DATA"

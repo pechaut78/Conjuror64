@@ -1,0 +1,10 @@
+
+[
+    {
+        "atom": "CSVMerge",
+        "params": {
+            "directory": "documentsq-documents/c64",
+            "output": "merged_output.csv"
+        }
+    }
+]

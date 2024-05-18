@@ -1,10 +1,6 @@
 
-    By using the <C=> key and the COLOR keys the characters can be changed
-  to any color, including multi-color characters. For example, type this
-  command:
+ By using the <C=> key and the COLOR keys the characters can be changed to any color, including multi-color characters. For example, type this command:
 
-    POKE 53270,PEEK(53270)OR 16:PRINT'<CTRL+3>';: rem lt.red/ multi-color
-  red
+ POKE 53270,PEEK(53270)OR 16:PRINT'<CTRL+3>';: rem lt.red/ multi-color red
 
-    The word READY and anything else you type will be displayed in multi-
-  color mode. Another color control can set you back to regular text.
+ The word READY and anything else you type will be displayed in multi-color mode. Another color control can set you back to regular text.

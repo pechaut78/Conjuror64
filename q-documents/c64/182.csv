@@ -1,0 +1,34 @@
+question,answer
+"What is the purpose of the CIOUT routine in a serial communication system?","B-6. Function Name: CIOUT
+
+    Purpose: Transmit a byte over the serial bus
+    Call address: $FFA8 (hex) 65448 (decimal)
+    Communication registers: A
+    Preparatory routines: LISTEN, [SECOND]
+    Error returns: See READST
+    Stack requirements: 5
+    Registers affected: None
+
+    Description: This routine is used to send information to devices on the
+  serial bus. A call to this routine will put a data byte onto the serial
+  bus using full serial handshaking. Before this routine is called, the
+  LISTEN KERNAL routine must be used to command a device on the serial bus
+  to get ready to receive data. (If a device needs a secondary address, it
+  must also be sent by using the SECOND KERNAL routine.) The accumulator is
+  loaded with a byte to handshake as data on the serial bus. A device must
+  be listening or the status word will return a timeout. This routine
+  always buffers one character. (The routine holds the previous character
+  to be sent back.) So when a call to the KERNAL UNLSN routine is made to
+  end the data transmission, the buffered character is sent with an End Or
+  Identify (EOI) set. Then the UNLSN command is sent to the device.
+  How to Use:
+
+    0) Use the LISTEN KERNAL routine (and the SECOND routine if needed).
+    1) Load the accumulator with a byte of data.
+    2) Call this routine to send the data byte.
+
+  EXAMPLE:
+
+
+    LDA #'X       ;SEND AN X TO THE SERIAL BUS
+    JSR CIOUT"

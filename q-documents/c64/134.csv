@@ -1,0 +1,5 @@
+question,answer
+"What is the assembly language instruction that decrements the value stored in X?","DEX                   DEX Decrement index X by one                    DEX
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   DEX                 |    CA   |    1    |    2     |"

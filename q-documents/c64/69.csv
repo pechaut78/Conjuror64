@@ -1,0 +1,20 @@
+question,answer
+"What is the recommended memory setting for each sprite in the computer's memory?","SPRITE COLORS:
+
+    To make sprite 0 WHITE, type: POKE V+39,1 (use COLOR POKE SETTING shown
+  in chart, and INDIVIDUAL COLOR CODES shown below):
+
+    0-BLACK     4-PURPLE        8-ORANGE        12-MED. GREY
+    1-WHITE     5-GREEN         9-BROWN         13-LT. GREEN
+    2-RED       6-BLUE          10-LT. RED      14-LT. BLUE
+    3-CYAN      7-YELLOW        11-DARK GREY    15-LT. GREY
+
+  MEMORY LOCATION:
+
+    You must 'reserve' a separate 64-BYTE BLOCK of numbers in the
+  computer's memory for each sprite of which 63 BYTES will be used for
+  sprite data. The memory settings shown below are recommended for the
+  'sprite pointer' settings in the chart above. Each sprite will be unique
+  and you'll have to define it as you wish. To make all sprites exactly the
+  same, point the sprites you want to look the same to the same register
+  for sprites."

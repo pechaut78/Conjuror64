@@ -5,7 +5,6 @@ question,answer
 "What is the vocabulary of the BASIC Interpreter?","65 keywords"
 "What are the special characters used in the BASIC Interpreter?","upper and lower case alphabet, digits 0-9, punctuation characters, and special symbols"
 "What does the KERNAL handle in the system?","interrupt level processing"
-"What does the KERNAL also do?","input and output of data"
 "What does the Screen Editor control?","output to the video screen and editing of BASIC program text"
 "What does the Screen Editor intercept?","keyboard input"
 "What does the Screen Editor decide about keyboard input?","whether to act upon characters immediately or pass them on to the BASIC Interpreter"

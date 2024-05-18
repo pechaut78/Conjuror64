@@ -1,0 +1,16 @@
+question,answer
+"What is the purpose of "crunching" a program in the context of sprite programming?","CRUNCHING YOUR SPRITE PROGRAMS                                        
+
+                                                                         
+   Here's a helpful 'crunching' tip: The program described above is      
+   already short, but it can be made even shorter by 'crunching' it      
+   smaller. In our example we list the key sprite settings on separate   
+   program lines so you can see what's happening in the program. In      
+   actual practice, a good programmer would probably write this program  
+   as a TWO LINE PROGRAM... by 'crunching' it as follows:                
+                                                                         
+   10 PRINTCHR$(147):V=53248:POKEV+21,1:POKE2040.13:POKEV+39,1           
+   20 FORS=832TO894:POKES,255:NEXT:POKEV,24:POKEV+1,100                  
+                                                                         
+   For more tips on how to crunch your programs so they fit in less      
+  memory and run more efficiently, see the 'crunching guide' on Page 24."

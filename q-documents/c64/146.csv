@@ -1,0 +1,5 @@
+question,answer
+"What is the instruction that performs no operation and has an opcode?","NOP                         NOP No operation                          NOP
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   NOP                 |    EA   |    1    |    2     |"

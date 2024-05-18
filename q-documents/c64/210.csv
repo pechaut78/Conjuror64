@@ -1,0 +1,26 @@
+question,answer
+"What is the purpose of the TALK kernal function?","Function Name: TALK
+
+    Purpose: Command a device on the serial bus to TALK
+    Call address: $FFB4 (hex) 65460 (decimal)
+    Communication registers: A
+    Preparatory routines: None
+    Error returns: See READST
+    Stack requirements: 8
+    Registers affected: A
+
+    Description: To use this routine the accumulator must first be loaded
+  with a device number between 0 and 31. When called, this routine then
+  ORs bit by bit to convert this device number to a talk address. Then this
+  data is transmitted as a command on the serial bus.
+
+  How to Use:
+
+    1) Load the accumulator with the device number.
+    2) Call this routine.
+
+  EXAMPLE:
+
+    ;COMMAND DEVICE #4 TO TALK
+    LDA #4
+    JSR TALK"

@@ -1,4 +1,4 @@
-  B-37. Function Name: UNLSN
+Function Name: UNLSN
 
     Purpose: Send an UNLISTEN command
     Call address: $FFAE (hex) 65454 (decimal)

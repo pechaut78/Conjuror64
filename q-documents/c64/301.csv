@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the raster register in a display system?","RASTER REGISTER
+
+    The raster register is a dual-function register. A read of the raster
+  register 18 ($12) returns the lower 8 bits of the current raster position
+  (the MSB-RC8 is located in register 17 ($11)). The raster register can be
+  interrogated to implement display changes outside the visible area to
+  prevent display flicker. The visible display window is from raster 51
+  through raster 251 ($033-$0FB). A write to the raster bits (including
+  RC8) is latched for use in an internal raster compare. When the current
+  raster matches the written value, the raster interrupt latch is set."

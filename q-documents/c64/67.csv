@@ -1,0 +1,22 @@
+question,answer
+"What is the method for turning on and off individual sprites without affecting others?","SPRITEMAKING NOTES
+
+            Alternative Sprite Memory Pointers and Memory Locations
+                            Using Cassette Buffer
+  
+  TURNING ON SPRITES:
+
+    You can turn on any individual sprite by using POKE V+21 and the number
+  from the chart... BUT... turning on just ONE sprite will turn OFF any
+  others. To turn on TWO OR MORE sprites, ADD TOGETHER the numbers of the
+  sprites you want to turn on (Example: POKE V+21, 6 turns on sprites 1 and
+  2). Here is a method you can use to turn one sprite off and on without
+  affecting any of the others (useful for animation).
+
+  EXAMPLE:
+
+    To turn off just sprite 0 type: POKE V+21,PEEK V+21AND(255-1). Change
+  the number 1 in (255-1) to 1,2,4,8,16,32,64, or 128 (for sprites 0-7). To
+  re-enable the sprite and not affect the other sprites currently turned
+  on, POKE V+21, PEEK(V+21)OR 1 and change the OR 1 to OR 2 (sprite 2), OR
+  4 (sprite 3), etc."

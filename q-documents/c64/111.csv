@@ -1,0 +1,33 @@
+question,answer
+"What is the primary strategy for approaching a large task in machine language programming?","APPROACHING A LARGE TASK
+
+    When approaching a large task in machine language, a certain amount of
+  subconscious thought has usually taken place. You think about how certain
+  processes are carried out in machine language. When the task is started,
+  it is usually a good idea to write it out on paper. Use block diagrams of
+  memory usage, functional modules of code required, and a program flow.
+  Let's say that you wanted to write a roulette game in machine language.
+  You could outline it something like this:
+
+    o Display title
+    o Ask if player requires instructions
+    o YES - display them-Go to START
+    o NO - Go to START
+    o START Initialize everything
+    o MAIN display roulette table
+    o Take in bets
+    o Spin wheel
+    o Slow wheel to stop
+    o Check bets with result
+    o Inform player
+    o Player any money left?
+    o YES - Go to MAIN
+    o NO - Inform user!, and go to START
+
+
+    This is the main outline. As each module is approached, you can break
+  it down further. If you look at a large indigestable problem as something
+  that can be broken down into small enough pieces to be eaten, then you'll
+  be able to approach something that seems impossible, and have it all fall
+  into place.
+    This process only improves with practice, so KEEP TRYING."

@@ -30,9 +30,8 @@
   codes. All these codes are simply PRINTed just like any other character.
 
   TABLE of Printer Control Character Codes:
-  +----------+------------------------------------------------------------+
+
   | CHR$ CODE|                         PURPOSE                            |
-  +----------+------------------------------------------------------------+
   |    10    |   Line feed                                                |
   |    13    |   RETURN (automatic line feed on CBM printers)             |
   |    14    |   Begin double-width character mode                        |
@@ -45,6 +44,5 @@
   |    27    |   Move to specified dot position                           |
   |     8    |   Begin dot-programmable graphic mode                      |
   |    26    |   Repeat graphics data                                     |
-  +----------+------------------------------------------------------------+
     See your Commodore printer's manual for details on using the command
   codes.

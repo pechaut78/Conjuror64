@@ -2,11 +2,5 @@
 
   CLC                       CLC Clear carry flag                        CLC
 
-  Operation:  0 -> C                                    N Z C I D V
-                                                        _ _ 0 _ _ _
-
-  +----------------+-----------------------+---------+---------+----------+
-  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
-  |  Implied       |   CLC                 |    18   |    1    |    2     |
-  +----------------+-----------------------+---------+---------+----------+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+ Implied       |   CLC                 |    18   |    1    |    2     |

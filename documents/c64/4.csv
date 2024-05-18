@@ -1,9 +1,7 @@
 question,answer
 "What are the graphics abilities of the Commodore 64 based on?", "The 6567 Video Interface Chip (VIC-II chip)"
 "What are the different graphics modes provided by the VIC-II chip?", "40 column by 25 line text display, 320 by 200 dot high resolution display, and SPRITES"
-"What is the purpose of SPRITES in graphics?", "Writing games simple"
-"Can multiple graphics modes be mixed on the same screen?", "Yes"
-"What is the top half of the screen in high resolution mode and the bottom half in text mode?", "Defining"
+"Can multiple graphics modes be mixed on the same screen?", "Yes, 8 sprites by default, but more can be done using some tricks"
 "What are the three categories of graphics display modes in the VIC-II chip?", "A) CHARACTER DISPLAY MODES, B) BIT MAP MODES, C) SPRITES"
 "What are the two types of character display modes?", "Standard Character Mode and Multi-Color Character Mode"
 "What are the two types of bit map modes?", "Standard Bit Map Mode and Multi-Color Bit Map Mode"

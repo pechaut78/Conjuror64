@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the ACPTR kernal function?","Function Name: ACPTR
+
+    Purpose: Get data from the serial bus
+    Call address: $FFA5 (hex) 65445 (decimal)
+    Communication registers: A
+    Preparatory routines: TALK, TKSA
+    Error returns: See READST
+    Stack requirements: 13
+    Registers affected: A, X"

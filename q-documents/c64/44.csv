@@ -1,0 +1,17 @@
+question,answer
+"What are the key considerations and limitations when positioning sprites horizontally in a graphics system?","HORIZONTAL POSITIONING
+
+    Positioning in the horizontal direction is more complicated because
+  there are more than, 256 positions. This means that an extra bit, or 9th
+  bit is used to control the X position. By adding the extra bit when
+  necessary a sprite now has 512 possible positions in the left/right, X,
+  direction. This makes more possible combinations than can be seen on the
+  visible part of the screen. Each sprite can have a position from 0 to
+  511. However, only those values between 24 and 343 are visible on the
+  screen. If the X position of a sprite is greater than 255 (on the right
+  side of the screen), the bit in the X MOST SIGNIFICANT BIT POSITION
+
+  register must be set to a 1 (turned ON). If the X position of a sprite is
+  less than 256 (on the left side of the screen), then the X MSB of that
+  sprite must be 0 (turned OFF). Bits 0 to 7 of the X MSB register
+  correspond to sprites 0 to 7, respectively."

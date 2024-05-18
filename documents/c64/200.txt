@@ -19,11 +19,10 @@
   SAVE to device 1 (the Datassette(TM) recorder). Any attempt to save to
   other devices without using a file name results in an error.
 
-  +-----------------------------------------------------------------------+
-  | NOTE: Device 0 (the keyboard), device 2 (RS-232), and device 3 (the   |
-  | screen) cannot be SAVEd to. If the attempt is made, an error occurs,  |
-  | and the SAVE is stopped.                                              |
-  +-----------------------------------------------------------------------+
+  
+  NOTE: Device 0 (the keyboard), device 2 (RS-232), and device 3 (the 
+  screen) cannot be SAVEd to. If the attempt is made, an error occurs,
+  and the SAVE is stopped.                                            
 
   How to Use:
 

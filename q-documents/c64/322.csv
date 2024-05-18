@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the POTX register in the SID?","POTX (Register $19)
+
+    This register allows the microprocessor to read the position of the
+  potentiometer tied to POTX (pin 24), with values ranging from 0 at
+  minimum resistance, to 255 ($FF) at maximum resistance. The value is
+  always valid and is updated every 512 (02 clock cycles. See the Pin
+  Description section for information on pot and capacitor values."

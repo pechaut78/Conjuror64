@@ -1,0 +1,34 @@
+question,answer
+"What is the indirect indexed addressing mode?","INDIRECT INDEXED
+
+    This only allows usage of the Y register as the index. The actual ad-
+  dress can only be in zero page, and the mode of instruction is called
+  indirect because the zero page address specified in the instruction con-
+  tains the low byte of the actual address, and the next byte to it
+  contains the high order byte.
+
+ EXAMPLE:
+
+    Let us suppose that location $02 contains $45, and location $03 con-
+  tains $1E. If the instruction to load the accumulator in the indirect
+  indexed mode is executed and the specified zero page address is $02, then
+  the actual address will be:
+
+    Low order = contents of $02
+    High order = contents of $03
+    Y register = $00
+
+  Thus the actual address = $1E45 + Y = $1E45.
+    The title of this mode does in fact imply an indirect principle,
+  although this may be difficult to grasp at first sight. Let's look at it
+  another way:
+    'I am going to deliver this letter to the post office at address $02,
+  MEMORY ST., and the address on the letter is $05 houses past $1600,
+  MEMORY street.' This is equivalent to the code:
+
+    LDA #$00      - load low order actual base address
+    STA $02       - set the low byte of the indirect address
+    LDA #$16      - load high order indirect address
+    STA $03       - set the high byte of the indirect address
+    LDY #$05      - set the indirect index (Y)
+    LDA ($02),Y   - load indirectly indexed by Y"

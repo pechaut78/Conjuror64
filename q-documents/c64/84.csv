@@ -1,0 +1,28 @@
+question,answer
+"What information about the SID chip's parameters can be changed dynamically during a note or sound to create many interesting and fun effects?","SOUND  ADVANCED TECHNIQUES
+
+    The SID chip's parameters can be changed dynamically during a note or
+  sound to create many interesting and fun effects. In order to make this
+  easy to do, digitized outputs from oscillator three and envelope
+  generator three are available for you in registers 27 and 28, respec-
+  tively.
+    The output of oscillator 3 (register 27) is directly related to the
+  waveform selected. If you choose the sawtooth waveform of oscillator 3,
+  this register will present a series of numbers incremented (increased
+  step by step) from 0 to 255 at a rate determined by the frequency of
+  oscillator 3. If you choose the triangle waveform, the output will incre-
+  ment from 0 up to 255, then decrement (decrease step by step) back down
+  to 0. If you choose the pulse wave, the output will jump back-and-forth
+  between 0 and 255. Finally, choosing the noise waveform will give you a
+  series of random numbers. When oscillator 3 is used for modulation, you
+  usually do NOT want to hear its output. Setting bit 7 of register 24
+  turns the audio output of voice 3 off. Register 27 always reflects the
+  changing output of the oscillator and is not affected in any way by the
+  envelope (ADSR) generator.
+    Register 25 gives you access to the output of the envelope generator
+  of oscillator 3. It functions in much the same fashion that the output of
+  oscillator 3 does. The oscillator must be turned on to produce any output
+  from this register.
+    Vibrato (a rapid variation in frequency) can be achieved by adding the
+  output of oscillator 3 to the frequency of another oscillator. Example
+  Program 6 illustrates this idea."

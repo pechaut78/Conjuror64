@@ -25,14 +25,7 @@
   Look at the first EIGHT pixels. Each column of pixels has a number (128,
   64, 32, 16, 8, 4, 2, 1). The special type of addition we are going to
   show you is a type of BINARY ARITHMETIC which is used by most computers
-  as a special way of counting. Here's a close-up view of the first eight
-  pixels in the top left hand corner of the sprite:
-
-       |128| 64| 32| 16|  8|  4|  2|  1|
-       +---+---+---+---+---+---+---+---+
-       |@@@|@@@|@@@|@@@|@@@|@@@|@@@|@@@|
-       |@@@|@@@|@@@|@@@|@@@|@@@|@@@|@@@|
-       +---+---+---+---+---+---+---+---+
+  as a special way of counting. 
   STEP 4:
 
   Add up the numbers of the SOLID pixels. This first group of eight pixels
@@ -50,11 +43,7 @@
   the values of the solid pixels. Since only one of these pixels is solid,
   the total value is 128. Enter this as the first DATA number in line 101.
 
-       |128| 64| 32| 16|  8|  4|  2|  1|
-       +---+---+---+---+---+---+---+---+
-       |@@@|   |   |   |   |   |   |   |
-       |@@@|   |   |   |   |   |   |   |
-       +---+---+---+---+---+---+---+---+
+
   STEP 7:
 
   Add up the values of the next group of eight pixels (which is 0 because

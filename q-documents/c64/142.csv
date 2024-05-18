@@ -1,0 +1,14 @@
+question,answer
+"What are the details of the 6502 LDA instruction?","LDA                  LDA Load accumulator with memory                 LDA
+
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Immediate     |   LDA #Oper           |    A9   |    2    |    2     |
+  |  Zero Page     |   LDA Oper            |    A5   |    2    |    3     |
+  |  Zero Page,X   |   LDA Oper,X          |    B5   |    2    |    4     |
+  |  Absolute      |   LDA Oper            |    AD   |    3    |    4     |
+  |  Absolute,X    |   LDA Oper,X          |    BD   |    3    |    4*    |
+  |  Absolute,Y    |   LDA Oper,Y          |    B9   |    3    |    4*    |
+  |  (Indirect,X)  |   LDA (Oper,X)        |    A1   |    2    |    6     |
+  |  (Indirect),Y  |   LDA (Oper),Y        |    B1   |    2    |    5*    |
+  * Add 1 if page boundary is crossed."

@@ -1,0 +1,29 @@
+question,answer
+"What is the primary difference between multi-color bit map mode and standard (HI-RES) bit mapped mode?","MULTI-COLOR BET MAP MODE
+
+    Like multi-color mode characters, multi-color bit map mode allows you
+  to display up to four different colors in each 8 by 8 section of bit map.
+  And as in multi-character mode, there is a sacrifice of horizontal
+  resolution (from 320 dots to 160 dots).
+    Multi-color bit map mode uses an 8K section of memory for the bit map.
+  You select your colors for multi-color bit map mode from (1) the
+  background color register 0, (the screen background color), (2) the video
+  matrix (the upper 4 bits give one possible color, the lower 4 bits an-
+  other), and (3) color memory.
+    Multi-color bit mapped mode is turned ON by setting bit 5 of 53265
+  ($D011) and bit 4 at location 53270 ($D016) to a 1. The following POKE
+  does this:
+
+    POKE 53265,PEEK(53625)OR 32: POKE 53270,PEEK(53270)OR 16
+  
+	Multi-color bit mapped mode is turned OFF by setting bit 5 of 53265
+  ($D011) and bit 4 at location 53270 ($D016) to a 0. The following POKE
+  does this:
+
+    POKE 53265,PEEK(53265)AND 223: POKE 53270,PEEK(53270)AND 239
+
+    As in standard (HI-RES) bit mapped mode, there is a one to one cor-
+  respondence between the 8K section of memory being used for the display,
+  and what is shown on the screen. However, the horizontal dots are two
+  bits wide. Each 2 bits in the display memory area form a dot, which can
+  have one of 4 colors."

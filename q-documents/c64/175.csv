@@ -1,0 +1,67 @@
+question,answer
+"What are the three simple steps to follow when using the KERNAL?","HOW TO USE THE KERNAL
+
+
+    When writing machine language programs it is often convenient to use
+  the routines which are already part of the operating system for input/
+  output, access to the system clock, memory management, and other similar
+  operations. It is an unnecessary duplication of effort to write these
+  routines over and over again, so easy access to the operating system
+  helps speed machine language programming.
+    As mentioned before, the KERNAL is a jump table. This is just a col-
+  lection of JMP instructions to many operating system routines.
+    To use a KERNAL routine you must first make all of the preparations
+  that the routine demands. If one routine says that you must call another
+  KERNAL routine first, then that routine must be called. If the routine
+  expects you to put a number in the accumulator, then that number must be
+  there. Otherwise your routines have little chance of working the way you
+  expect them to work.
+    After all preparations are made, you must call the routine by means of
+  the JSR instruction. All KERNAL routines you can access are structured as
+  SUBROUTINES, and must end with an RTS instruction. When the KERNAL
+  routine has finished its task, control is returned to your program at the
+  instruction after the JSR.
+    Many of the KERNAL routines return error codes in the status word or
+  the accumulator if you have problems in the routine. Good programming
+  practice and the success of your machine language programs demand that
+  you handle this properly. If you ignore an error return, the rest of your
+  program might 'bomb.'
+    That's all there is to do when you're using the KERNAL. Just these
+  three simple steps:
+
+    1) Set up
+    2) Call the routine
+    3) Error handling
+
+    The following conventions are used in describing the KERNAL routines:
+
+  - FUNCTION NAME: Name of the KERNAL routine.
+
+  - CALL ADDRESS: This is the call address of the KERNAL routine, given in
+    hexadecimal.
+
+  - COMMUNICATION REGISTERS: Registers listed under this heading are used
+    to pass parameters to and from the KERNAL routines.
+
+  - PREPARATORY ROUTINES: Certain KERNAL routines require that data be set
+    up before they can operate. The routines needed are listed here.
+
+  - ERROR RETURNS: A return from a KERNAL routine with the CARRY set
+    indicates that an error was encountered in processing. The accumulator
+    will contain the number of the error.
+
+  - STACK REQUIREMENTS: This is the actual number of stack bytes used by
+    the KERNAL routine.
+
+  - REGISTERS AFFECTED: All registers used by the KERNAL routine are listed
+    here.
+
+  - DESCRIPTION: A short tutorial on the function of the KERNAL routine is
+    given here.
+
+                       USER CALLABLE KERNAL ROUTINES
+  +--------+-------------------+------------------------------------------+
+  |        |      ADDRESS      |                                          |
+  |  NAME  +---------+---------+                 FUNCTION                 |
+  |        |   HEX   | DECIMAL |                                          |
+  +--------+---------+---------+------------------------------------------+"

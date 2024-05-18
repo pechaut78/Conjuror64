@@ -16,9 +16,7 @@
   those sprites you want to put towards the back of the scene. Those
   sprites will be given higher sprite numbers,
 
-  +-----------------------------------------------------------------------+
-  | NOTE: A "window" effect is possible. If a sprite with higher priority |
-  | has "holes" in it (areas where the dots are not set to 1 and thus     |
-  | turned ON), the sprite with the lower priority will show through. This|
-  | also happens with sprite and background data.                         |
-  +-----------------------------------------------------------------------+
+NOTE: A "window" effect is possible. If a sprite with higher priority 
+has "holes" in it (areas where the dots are not set to 1 and thus     
+turned ON), the sprite with the lower priority will show through. This
+also happens with sprite and background data.                         

@@ -1,9 +1,4 @@
   RTS                    RTS Return from subroutine                     RTS
-                                                        N Z C I D V
-  Operation:  PC fromS, PC + 1 -> PC                    _ _ _ _ _ _
-
-  +----------------+-----------------------+---------+---------+----------+
+ 
   | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
   |  Implied       |   RTS                 |    60   |    1    |    6     |
-  +----------------+-----------------------+---------+---------+----------+

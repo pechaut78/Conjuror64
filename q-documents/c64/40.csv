@@ -1,0 +1,20 @@
+question,answer
+"What are the three registers used to move a sprite around the screen on a Commodore 64?","SPRITE POSITIONING
+
+    Once you've made a sprite you want to be able to move it around the
+  screen. To do this, your Commodore 64 uses three positioning registers:
+
+    1) SPRITE X POSITION REGISTER
+    2) SPRITE Y POSITION REGISTER
+    3) MOST SIGNIFICANT BIT X POSITION REGISTER
+
+    Each sprite has an X position register, a Y position register, and a
+  bit in the X most significant bit register. This lets you position your
+  sprites very accurately. You can place your sprite in 512 possible X
+  positions and 256 possible Y positions.
+    The X and Y position registers work together, in pairs, as a team. The
+  locations of the X and Y registers appear in the memory map as follows:
+  First is the X register for sprite 0, then the Y register for sprite 0.
+  Next comes the X register for sprite 1, the Y register for sprite 1, and
+  so on. After all 16 X and Y registers comes the most significant bit in
+  the X position (X MSB) located in its own register."

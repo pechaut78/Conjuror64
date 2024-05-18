@@ -1,0 +1,61 @@
+question,answer
+"How can I handle the paddles?","PADDLES
+
+    A paddle is connected to both CIA #1 and the SID chip (MOS 6581 Sound
+  Interface Device) through a game port. The paddle value is read via the
+  SID registers 54297 ($D419) and 54298 ($D41A). PADDLES ARE NOT RELIABLE
+  WHEN READ FROM BASIC ALONE!!!! The best way to use paddles, from BASIC or
+  machine code, is to use the following machine language routine... (SYS to
+  it from BASIC then PEEK the memory locations used by the subroutine).
+
+
+                      ; four paddle read routine (can also be used for two)
+                      ;
+                      ; author - bill hindorff
+                      ;
+porta=$dc00
+ciddra=$dc02
+sid=$d400
+
+*=$c100
+
+buffer  *=*+1
+pdlx    *=*+2
+pdly    *=*+2
+btna    *=*+1
+btnb    *=*+1
+
+* = $c000
+
+pdlrd   ldx #1        ; for four paddles or two analog joysticks
+pdlrd0                ; entry point for one pair (condition x 1st)
+        sei
+        lda ciddra    ; get current value of ddr
+        sta buffer    ; save it away
+        lda #$c0
+        sta ciddra    ; set port a for input
+        lda #$80
+pdlrd1
+        sta porta     ; address a pair of paddles
+        ldy #$80      ; wait a while
+pdlrd2
+        nop
+        dey
+        bpl pdlrd2
+        lda sid+25    ; get x value
+        sta pdlx,x
+        lda sid+26
+        sta pdly,x    ; get y value
+        lda porta     ; time to read paddle fire buttons
+        ora #80       ; make it the same as other pair
+        sta btna      ; bit 2 is pdl x, bit 3 is pdl y
+        lda #$40
+        dex           ; all pairs done?
+        bpl pdlrd1    ; no
+        lda buffer
+        sta ciddra    ; restore previous value of ddr
+        lda porta+1   ; for 2nd pair -
+        sta btnb      ; bit 2 is pdl x, bit 3 is pdl y
+        cli
+        rts
+.end"

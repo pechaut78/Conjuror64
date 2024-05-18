@@ -1,0 +1,29 @@
+question,answer
+"What is the primary function of the Time of Day (TOD) clock?","Time of Day Clock (TOD)
+
+    The TOD clock is a special purpose timer for real-time applications.
+  TOD consists of a 24-hour (AM/PM) clock with 1/10th second resolution. It
+  is organized into 4 registers: 10ths of seconds, Seconds, Minutes and
+  Hours. The AM/PM flag is in the MSB of the Hours register for easy bit
+  testing. Each register reads out in BCD format to simplify conversion for
+  driving displays, etc. The clock requires an external 60 Hz or 50 Hz
+  (programmable) TTL level input on the TOD pin for accurate time-keeping.
+  In addition to time-keeping, a programmable ALARM is provided for
+  generating an interrupt at a desired time. The ALARM registers or located
+  at the same addresses as the corresponding TOD registers. Access to the
+  ALARM is governed by a Control Register bit. The ALARM is write-only; any
+  read of a TOD address will read time regardless of the state of the ALARM
+  access bit.
+    A specific sequence of events must be followed for proper setting and
+  reading of TOD. TOD is automatically stopped whenever a write to the
+  Hours register occurs. The clock will not start again until after a write
+  to the 10ths of seconds register. This assures TOD will always start at
+  the desired time. Since a carry from one stage to the next can occur at
+  any time with respect to a read operation, a latching function is
+  included to keep all Time Of Day information constant during a read
+  sequence. All four TOD registers latch on a read of Hours and remain
+  latched until after a read of 10ths of seconds. The TOD clock continues
+  to count when the output registers are latched. If only one register is
+  to be read, there is no carry problem and the register can be read 'on
+  the fly,' provided that any read of Hours is followed by a read of 10ths
+  of seconds to disable the latching."

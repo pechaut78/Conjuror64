@@ -1,0 +1,6 @@
+question,answer
+"What is the assembly language instruction that increments the index Y by one?","INY                    INY Increment Index Y by one                   INY
+
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   INY                 |    C8   |    1    |    2     |"

@@ -1,0 +1,5 @@
+question,answer
+"What is the primary component of the CPU that consists of eight flags?","THE STATUS REGISTER
+
+    This register consists of eight 'flags' (a flag = something that indi-
+  cates whether something has, or has not occurred)."

@@ -1,0 +1,5 @@
+question,answer
+"What is the assembly language instruction that decrements the index register Y by one?","DEY                   DEY Decrement index Y by one                    DEY
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   DEY                 |    88   |    1    |    2     |"

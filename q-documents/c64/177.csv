@@ -1,0 +1,25 @@
+question,answer
+"What is the purpose of the ACPTR  kernal routine in a Commodore 64 system?","Description: This is the routine to use when you want to get informa-
+  tion from a device on the serial bus, like a disk. This routine gets a
+  byte of data off the serial bus using full handshaking. The data is
+  returned in the accumulator. To prepare for this routine the TALK routine
+  must be called first to command the device on the serial bus to send data
+  through the bus. If the input device needs a secondary command, it must
+  be sent by using the TKSA KERNAL routine before calling this routine.
+  Errors are returned in the status word. The READST routine is used to
+  read the status word.
+
+
+  How to Use:
+
+    0) Command a device on the serial bus to prepare to send data to
+       the Commodore 64. (Use the TALK and TKSA KERNAL routines.)
+    1) Call this routine (using JSR).
+    2) Store or otherwise use the data.
+
+
+  EXAMPLE:
+
+    ;GET A BYTE FROM THE BUS
+    JSR ACPTR
+    STA DATA"

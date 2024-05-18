@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the "Add 1" and "Add 2" notes in the table?","BVC                   BVC Branch on overflow clear                    BVC
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Relative      |   BVC Oper            |    50   |    2    |    2*    |
+  * Add 1 if branch occurs to same page.
+  * Add 2 if branch occurs to different page."

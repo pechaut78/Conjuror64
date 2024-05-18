@@ -1,0 +1,15 @@
+question,answer
+"how do I set multi color mode on a sprite?","SETTING A SPRITE TO MULTI-COLOR MODE
+
+    To switch a sprite into multi-color mode you must turn ON the VIC-II
+  control register at location 53276 ($D01C). The following POKE does this:
+
+    POKE 53276,PEEK(53276)OR(2^SN)
+
+  where SN is the sprite number (0 to 7).
+    To switch a sprite out of multi-color mode you must turn OFF the VIC-II
+  control register at location 53276 ($D01C). The following POKE does this:
+
+    POKE 53276,PEEK(53276)AND(255-2^SN)
+
+  where SN is the sprite number (0 to 7)."

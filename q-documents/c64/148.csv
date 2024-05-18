@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the instruction PHA in 6502?","PHA                   PHA Push accumulator on stack                   PHA
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   PHA                 |    48   |    1    |    3     |"

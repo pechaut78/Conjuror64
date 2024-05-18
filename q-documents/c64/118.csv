@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the "BEQ" instruction in the C64 assembly language code?","BEQ                    BEQ Branch on result zero                      BEQ
+
+ Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles
+  Relative      |   BEQ Oper            |    F0   |    2    |    2*    
+  * Add 1 if branch occurs to same  page.
+  * Add 2 if branch occurs to next  page."

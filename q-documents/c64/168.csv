@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the TYA instruction in the 6502 assembly language?","TYA                TYA Transfer index Y to accumulator                TYA
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   TYA                 |    98   |    1    |    2     |"

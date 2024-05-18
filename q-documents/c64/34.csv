@@ -1,0 +1,21 @@
+question,answer
+"Give the caracteristics of the sprite multi color mode","SPRITE  MULTI-COLOR MODE
+
+    Multi-color mode allows you to have up to 4 different colors in each
+  sprite. However, just like other multi-color modes, horizontal resolution
+  is cut in half. In other words, when you're working with sprite multi-
+  color mode (like in multi-color character mode), instead of 24 dots
+  across the sprite, there are 12 pairs of dots. Each pair of dots is
+  called a BIT PAIR. Think of each bit pair (pair of dots) as a single dot
+  in your overall sprite when it comes to choosing colors for the dots in
+  your sprites. The table below gives you the bit pair values needed to
+  turn ON each of the four colors you've chosen for your sprite:
+
+    BIT PAIR                           DESCRIPTION
+      00        TRANSPARENT, SCREEN COLOR
+      01        SPRITE MULTI-COLOR REGISTER #0 (53285) ($D025)
+      10        SPRITE COLOR REGISTER
+      11        SPRITE MULTI-COLOR REGISTER #I (53286) ($D026)
+ 
+  NOTE: The sprite foreground color is a 10. The character foreground   
+   is a 11."

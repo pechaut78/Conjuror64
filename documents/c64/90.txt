@@ -3,35 +3,19 @@
 
   SIMPLE MEMORY MAP OF THE COMMODORE 64
 
-  +-------------+---------------------------------------------------------+
-  |   ADDRESS   |                      DESCRIPTION                        |
-  +-------------+---------------------------------------------------------+
-  |             |                                                         |
-  |    0 & 1    | -6510 Registers.                                        |
-  |             |                                                         |
-  |     2       | -Start of memory.                                       |
-  |             |                                                         |
-  |     2-1023  | -Memory used by the operating system.                   |
-  |             |                                                         |
-  |  1024-2039  | -Screen memory.                                         |
-  |             |                                                         |
-  |  2040-2047  | -SPRITE pointers.                                       |
-  |             |                                                         |
-  |  2048-40959 | -This is YOUR memory. This is where your BASIC or       |
-  |             |  machine language programs, or both, are stored.        |
-  |             |                                                         |
-  | 40960-49151 | -8K CBM BASIC Interpreter.                              |
-  |             |                                                         |
-  | 49152-53247 | -Special programs RAM area.                             |
-  |             |                                                         |
-  | 53248-53294 | -VIC-II.                                                |
-  |             |                                                         |
-  | 54272-55295 | -SID Registers.                                         |
-  |             |                                                         |
-  | 55296-56296 | -Color RAM.                                             |
-  |             |                                                         |
-  | 56320-57343 | -I/O Registers. (6526's)                                |
-  |             |                                                         |
-  | 57344-65535 | -8K CBM KERNAL Operating System.                        |
-  |             |                                                         |
-  +-------------+---------------------------------------------------------+
+
+  ADDRESS                       DESCRIPTION                       
+                                                                   
+   0 & 1   -6510 Registers.                                                                                                    
+    2      -Start of memory.                                       
+    2-1023 -Memory used by the operating system.                   
+ 1024-2039 -Screen memory.                                         
+ 2040-2047 -SPRITE pointers.                                       
+ 2048-40959-This is YOUR memory. This is where your BASIC or machine language programs, or both, are stored.        
+40960-49151-8K CBM BASIC Interpreter.                              
+49152-53247-Special programs RAM area.                             
+53248-53294-VIC-II.                                                
+54272-55295-SID Registers.                                         
+55296-56296-Color RAM.                                             
+56320-57343-I/O Registers. (6526's)                                                                                                   
+57344-65535-8K CBM KERNAL Operating System.                        

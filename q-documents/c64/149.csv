@@ -1,0 +1,5 @@
+question,answer
+"What is the PHP instruction in 6502?","PHP                 PHP Push processor status on stack                PHP
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   PHP                 |    08   |    1    |    3     |"

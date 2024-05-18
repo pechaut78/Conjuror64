@@ -1,34 +1,15 @@
 
 
 
-  BIT MAPPED GRAPHICS
+BIT MAPPED GRAPHICS
 
-    When writing games, plotting charts for business applications, or other
-  types of programs, sooner or later you get to the point where you want
-  high-resolution displays.
-    The Commodore 64 has been designed to do just that: high resolution is
-  available through bit mapping of the screen. Bit mapping is the method in
-  which each possible dot (pixel) of resolution on the screen is assigned
-  its own bit (location) in memory. If that memory bit is a one, the dot it
-  is assigned to is on. If the bit is set to zero, the dot is off.
-    High-resolution graphic design has a couple of drawbacks, which is why
-  it is not used all the time. First of all, it takes lots of memory to bit
-  map the entire screen. This is because every pixel must have a memory bit
-  to control it. You are going to need one bit of memory for each pixel
-  (or one byte for 8 pixels). Since each character is 8 by 8, and there are
-  40 lines with 25 characters in each line, the resolution is 320 pixels
-  (dots) by 200 pixels for the whole screen. That gives you 64000 separate
-  dots, each of which requires a bit in memory. In other words, 8000 bytes
-  of memory are needed to map the whole screen.
-    Generally, high-resolution operations are made of many short, simple,
-  repetitive routines. Unfortunately, this kind of thing is usually rather
-  slow if you are trying to write high-resolution routines in BASIC. How-
-  ever, short, simple, repetitive routines are exactly what machine lan-
-  guage does best. The solution is to either write your programs entirely
-  in machine language, or call machine language, high-resolution sub-
-  routines from your BASIC program using the SYS command from BASIC. That
-  way you get both the ease of writing in BASIC, and the speed of machine
-  language for graphics. The VSP cartridge is also available to add high-
-  resolution commands to COMMODORE 64 BASIC.
-    All of the examples given in this section will be in BASIC to make them
-  clear. Now to the technical details.
+When writing games, plotting charts for business applications, or other types of programs, sooner or later you get to the point where you want
+high-resolution displays.
+
+The Commodore 64 has been designed to do just that: high resolution is available through bit mapping of the screen. Bit mapping is the method in which each possible dot (pixel) of resolution on the screen is assigned its own bit (location) in memory. If that memory bit is a one, the dot it is assigned to is on. If the bit is set to zero, the dot is off.
+  
+High-resolution graphic design has a couple of drawbacks, which is why it is not used all the time. First of all, it takes lots of memory to bit map the entire screen. This is because every pixel must have a memory bit to control it. You are going to need one bit of memory for each pixel (or one byte for 8 pixels). Since each character is 8 by 8, and there are 40 lines with 25 characters in each line, the resolution is 320 pixels (dots) by 200 pixels for the whole screen. That gives you 64000 separate dots, each of which requires a bit in memory. In other words, 8000 bytes of memory are needed to map the whole screen.
+
+Generally, high-resolution operations are made of many short, simple, repetitive routines. Unfortunately, this kind of thing is usually rather slow if you are trying to write high-resolution routines in BASIC. How-ever, short, simple, repetitive routines are exactly what machine language does best. The solution is to either write your programs entirely in machine language, or call machine language, high-resolution sub-xroutines from your BASIC program using the SYS command from BASIC. That way you get both the ease of writing in BASIC, and the speed of machine language for graphics. The VSP cartridge is also available to add high-resolution commands to COMMODORE 64 BASIC.
+  
+All of the examples given in this section will be in BASIC to make themclear. Now to the technical details.

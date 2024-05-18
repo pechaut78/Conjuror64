@@ -20,16 +20,13 @@
   6510 control port are defined as follows:
 
 
-  +---------+---+------------+--------------------------------------------+
   |  NAME   |BIT| DIRECTION  |                 DESCRIPTION                |
-  +---------+---+------------+--------------------------------------------+
   |  LORAM  | 0 |   OUTPUT   | Control for RAM/ROM at $A000-$BFFF         |
   |  HIRAM  | 1 |   OUTPUT   | Control for RAM/ROM at $E000-$FFFF         |
   |  CHAREN | 2 |   OUTPUT   | Control for I/O/ROM at $D000-$DFFF         |
   |         | 3 |   OUTPUT   | Cassette write line                        |
   |         | 4 |   INPUT    | Cassette switch sense (0=play button down) |
   |         | 5 |   OUTPUT   | Cassette motor control (0=motor spins)     |
-  +---------+---+------------+--------------------------------------------+
 
 
     The proper value for the data direction register is as follows:

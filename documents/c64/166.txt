@@ -1,13 +1,6 @@
 
 
 TXA                TXA Transfer index X to accumulator                TXA
-                                                        N Z C I D V
-  Operation:  X -> A                                    / / _ _ _ _
-
-  +----------------+-----------------------+---------+---------+----------+
+  
   | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
-  |  Implied       |   TXA                 |    8A   |    1    |    2     |
-  +----------------+-----------------------+---------+---------+----------+
-
- 
+  |  Implied       |   TXA                 |    8A   |    1    |    2     | 

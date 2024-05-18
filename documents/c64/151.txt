@@ -3,14 +3,8 @@
 
 PLP               PLP Pull processor status from stack                PLA
 
-  Operation:  P fromS                                   N Z C I D V
-                                                         From Stack
-
-  +----------------+-----------------------+---------+---------+----------+
   | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
   |  Implied       |   PLP                 |    28   |    1    |    4     |
-  +----------------+-----------------------+---------+---------+----------+
 
 
  

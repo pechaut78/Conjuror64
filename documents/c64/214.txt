@@ -1,7 +1,4 @@
-
-
-
-  B-38. Function Name: UNTLK
+Function Name: UNTLK
 
     Purpose: Send an UNTALK command
     Call address: $FFAB (hex) 65451 (decimal)

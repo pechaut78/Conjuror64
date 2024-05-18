@@ -1,7 +1,4 @@
-
-
-
-  B-36. Function Name: UDTIM
+Function Name: UDTIM
 
     Purpose: Update the system clock
     Call address: $FFEA (hex) 65514 (decimal)

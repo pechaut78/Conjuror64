@@ -1,0 +1,5 @@
+question,answer
+"What is the instruction for disabling the interrupt in the 6502 microprocessor?","SEI                 SEI Set interrupt disable status                  SED
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   SEI                 |    78   |    1    |    2     |"

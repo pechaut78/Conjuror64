@@ -1,0 +1,6 @@
+question,answer
+"What are the details for the Jump 6502 instruction?","JMP                     JMP Jump to new location                      JMP
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Absolute      |   JMP Oper            |    4C   |    3    |    3     |
+  |  Indirect      |   JMP (Oper)          |    6C   |    3    |    5     |"

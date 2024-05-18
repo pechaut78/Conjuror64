@@ -1,0 +1,16 @@
+question,answer
+"What is a common method used to write machine language programs?","HOW DO YOU WRITE MACHINE LANGUAGE PROGRAMS?
+
+    Since machine language programs reside in memory, and there is no
+  facility in your Commodore 64 for writing and editing machine language
+  programs, you must use either a program to do this, or write for yourself
+  a BASIC program that 'allows' you to write machine language.
+    The most common methods used to write machine language programs are
+  assembler programs. These packages allow you to write machine language
+  instructions in a standardized mnemonic format, which makes the machine
+  language program a lot more readable than a stream of numbers! Let's
+  review: A program that allows you to write machine language programs in
+  mnemonic format is called an assembler. Incidentally, a program that
+  displays a machine language program in mnemonic format is called a
+  disassembler. Available for your Commodore 64 is a machine language
+  monitor cartridge (with assembler/disassembler, etc.) made by Commodore."

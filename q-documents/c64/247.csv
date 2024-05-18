@@ -1,0 +1,39 @@
+question,answer
+"What is the purpose of the Commodore CP/M cartridge?","Z-80 MICROPROCESSOR CARTRIDGE
+
+  Peripherals are things like Datassette(TM) recorders, disk
+  drives, printers, and modems. All these items can be added to your
+  Commodore 64 through the various ports and sockets on the back of your
+  machine. The thing that makes Commodore peripherals so good is the fact
+  that our peripherals are 'intelligent.' That means that they don't take
+  up valuable Random Access Memory space when they're in use. You're free
+  to use all 64K of memory in your Commodore 64.
+    Another advantage of your Commodore 64 is the fact most programs you
+  write on your Commodore 64 today will be upwardly compatible with any new
+  Commodore computer you buy in the future. This is partially because of
+  the qualities of the computer's Operating System (OS).
+    However, there is one thing that the Commodore OS can't do: make your
+  programs compatible with a computer made by another company.
+    Most of the time you won't even have to think about using another com-
+  pany's computer, because your Commodore 64 is so easy to use. But for the
+  occasional user who wants to take advantage of software that may not be
+  available in Commodore 64 format we have created a Commodore CP/M(R)
+  cartridge.
+    CP/M(R) is not a 'computer dependent' operating system. Instead it uses
+  some of the memory space normally available for programming to run its
+  own operating system. There are advantages and disadvantages to this. The
+  disadvantages are that the programs you write will have to be shorter
+  than the programs you can write using the Commodore 64's built-in
+  operating system. In addition, you can NOT use the Commodore 64's
+  powerful screen editing capabilities. The advantages are that you can now
+  use a large amount of software that has been specifically designed for
+  CP/M(R) and the Z-80 microprocessor, and the programs that you write
+  using the CP/M(R) operating system can be transported and run on any
+  other computer that has CP/M(R) and a Z-80 card.
+    By the way, most computers that have a Z-80 microprocessor require that
+  you go inside the computer to actually install a Z-80 card. With this
+  method you have to be very careful not to disturb the delicate circuitry
+  that runs the rest of the computer. The Commodore CP/M& cartridge
+  eliminates this hassle because our Z-80 cartridge plugs into the back of
+  your Commodore 64 quickly and easily, without any messy wires that can
+  cause problems later."

@@ -1,7 +1,7 @@
 
 
 
-  B-34. Function Name: TALK
+  Function Name: TALK
 
     Purpose: Command a device on the serial bus to TALK
     Call address: $FFB4 (hex) 65460 (decimal)

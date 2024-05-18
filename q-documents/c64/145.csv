@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the LSR instruction in 6502?","LSR          LSR Shift right one bit (memory or accumulator)          LSR
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Accumulator   |   LSR A               |    4A   |    1    |    2     |
+  |  Zero Page     |   LSR Oper            |    46   |    2    |    5     |
+  |  Zero Page,X   |   LSR Oper,X          |    56   |    2    |    6     |
+  |  Absolute      |   LSR Oper            |    4E   |    3    |    6     |
+  |  Absolute,X    |   LSR Oper,X          |    5E   |    3    |    7     |"

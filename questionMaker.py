@@ -1,9 +1,7 @@
-from langchain_core.prompts import ChatPromptTemplate
+
 from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
 from langchain import PromptTemplate
-from langchain.prompts.chat import  ChatPromptTemplate,HumanMessagePromptTemplate
-from langchain.schema import  SystemMessage
 import argparse
 import os,re
 from dotenv import load_dotenv
@@ -14,62 +12,23 @@ model = None
 
 
 prompt = PromptTemplate(
-    template="""you are training an LLM and generating a csv of questions and verbose answers just answer providing pairs no other text like:
-    "question1","answer1"
-    "question2","answer2"
-
-    Important, do not numerorate the questions.
-    only create  questions whose answer is in the text.
-    provide 10 differentunique standalone short questions and long verbose answers about this text: <{text}>. IMPORTANT: only provide questions and answers pairs, no other sentence""",
+    template="""your goal is to create a question that would accept the following text as answer:
+       <{text}>. IMPORTANT: only provide the question, no other sentence""",
     input_variables=["text"],
 )
 
-long_prompt = PromptTemplate(
-    template="""you are training an LLM and generating a csv of questions and verbose answers just answer providing pairs no other text like:
-    "question1","answer1"
-    "question2","answer2"
-    
-    only create  questions whose answer is in the text.
-    Important, do not numerorate the questions.
-    provide 30 different unique standalone short questions and long verbose answers about this text: <{text}>. IMPORTANT: only provide questions and answers pairs, no other sentence""",
-    input_variables=["text"],
-)
 chain = None
 long_chain = None
 
-def remove_before_first_quote(text):
-    # Trouve l'index du premier guillemet
-    first_quote_index = text.find('"')
-    
-    # Vérifie si un guillemet a été trouvé
-    if first_quote_index != -1:
-        return text[first_quote_index:]
-
-def correct_line_breaks(text):
-    # Remplace les sauts de ligne incorrects (sauf ceux après une guillemet fermante)
-    corrected_text = re.sub(r'(?<=")\n\n(?=")', '\n', text)
-    return corrected_text
-
-def correct_internal_quotes(text):
-    # Remplace les guillemets internes, en conservant ceux qui délimitent les éléments
-    # Utilise une expression régulière pour détecter les guillemets non couplés correctement
-    corrected_text = re.sub(r'(?<=[a-z0-9])"(?=[a-z0-9])', "'", text, flags=re.IGNORECASE)
-    return corrected_text
-
 def handleQA(fname,text):
+    text = text.strip().replace('"', "'")
     res = "question,answer\n"
-    if len(text) < 2000:
-        t= chain.invoke({"text": text})
-    else:
-        t = long_chain.invoke({"text": text})
+    t= chain.invoke({"text": text})
 
-    t = remove_before_first_quote(t)
-    t = correct_line_breaks(t)
-    t = correct_internal_quotes(t)
-    print(t)
-    csv_filename = f"{fname}.csv" 
+
+    csv_filename = f"q-{fname}.csv" 
     with open(csv_filename, 'w', encoding='utf-8') as file:
-        file.write(res+t)
+        file.write(res+f'"{t}","' + text+'"')
 
 
 def main():
@@ -95,8 +54,7 @@ def main():
     print(model)
     global chain
     chain = prompt | model | output_parser
-    global long_chain
-    long_chain = long_prompt | model | output_parser
+
 
     for filename in os.listdir(directory):
         if filename.endswith(".txt"):

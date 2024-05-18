@@ -1,4 +1,4 @@
-  B-33. Function Name: STOP
+  Function Name: STOP
 
     Purpose: Check if <STOP> key is pressed
     Call address: $FFE1 (hex) 65505 (decimal)

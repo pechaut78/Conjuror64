@@ -1,0 +1,18 @@
+question,answer
+"Can you talk about the zero page addressing mode?","ADDRESSING MODES
+
+  ZERO PAGE
+
+  Absolute addresses are expressed in terms of a high
+  and a low order byte. The high order byte is often referred to as the
+  page of memory. For example, the address $1637 is in page $16 (22), and
+  $0277 is in page $02 (2). There is, however, a special mode of addressing
+  known as zero page addressing and is, as the name implies, associated
+  with the addressing of memory locations in page zero. These addresses,
+  therefore, ALWAYS have a high order byte of zero. The zero page mode of
+  addressing only expects one byte to describe the address, rather than two
+  when using an absolute address. The zero page addressing mode tells the
+  microprocessor to assume that the high order address is zero. Therefore
+  zero page addressing can reference memory locations whose addresses are
+  between $0000 and $00FF. This may not seem too important at the moment,
+  but you'll need the principles of zero page addressing soon."

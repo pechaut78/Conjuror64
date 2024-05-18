@@ -1,0 +1,16 @@
+question,answer
+"What is the purpose of the two-byte pointers $00F7 and $00F9 in the system?","RECEIVER/TRANSMITTER BUFFER BASE LOCATION POINTERS
+
+
+    $00F7-REBUF-A two-byte pointer to the Receiver Buffer base location.
+    $00F9-ROBUF-A two-byte pointer to the Transmitter Buffer base location.
+
+    The two locations above are set up by the OPEN KERNAL routine, each
+  pointing to a different 256-byte buffer. They are de-allocated by writing
+  a zero into the high order bytes ($00F8 and $00FA), which is done by the
+  CLOSE KERNAL entry. They may also be allocated/de-allocated by the
+  machine language programmer for his/her own purposes, removing/creating
+  only the buffer(s) required. When using a machine language program that
+  allocates these buffers, care must be taken to make sure that the top of
+  memory pointers stay correct, especially if BASIC programs are expected
+  to run at the same time."

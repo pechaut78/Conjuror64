@@ -1,0 +1,38 @@
+question,answer
+"What is the purpose of the stack in the 6510 microprocessor?","THE STACK
+
+    The 6510 microprocessor has what is known as a stack. This is used by
+  both the programmer and the microprocessor to temporarily remember
+  things, and to remember, for example, an order of events. The GOSUB
+  statement in BASIC, which allows the programmer to call a subroutine,
+  must remember where it is being called from, so that when the RETURN
+  statement is executed in the subroutine, the BASIC interpreter 'knows'
+  where to go back to continue executing. When a GOSUB statement is
+  encountered in a program by the BASIC interpreter, the BASIC interpreter
+  'pushes' its current position onto the stack before going to do the
+  subroutine, and when a RETURN is executed, the interpreter 'pulls' off
+  the stack the information that tells it where it was before the
+  subroutine call was made. The interpreter uses instructions like PHA,
+  which pushes the contents of the accumulator onto the stack, and PLA (the
+  reverse) which pulls a value off the stack and into the accumulator. The
+  status register can also be pushed and pulled with the PHP and PLP,
+  respectively.
+
+    The stack is 256 bytes long, and is located in page one of memory. It
+  is therefore from $01 00 to $01 FF. It is organized backwards in memory.
+  In other words, the first position in the stack is at $01 FF, and the
+  last is at $0100. Another register in the 651 0 microprocessor is called
+  the stack pointer, and it always points to the next available location in
+  the stack. When something is pushed onto the stack, it is placed where
+  the stack pointer points to, and the stack pointer is moved down to the
+  next position (decremented). When something is pulled off the stack, the
+  stack pointer is incremented, and the byte pointed to by the stack
+  pointer is placed into the specified register.
+
+  The implied mode means that information isimplied by an instruction itself. In other words, what registers, flags,
+  and memory the instruction is referring to. The examples we have seen are
+  PHA, PLA, PHP, and PLP, which refer to stack processing and the
+  accumulator and status registers, respectively.
+
+
+NOTE: The X register will be referred to as X from now on, and similarly A (accumulator), Y (Y index register), S (stack pointer), and P (processor status).           |"

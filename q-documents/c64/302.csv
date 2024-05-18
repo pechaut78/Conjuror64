@@ -1,0 +1,22 @@
+question,answer
+"What is the purpose of the interrupt register?","INTERRUPT REGISTER
+
+    The interrupt register shows the status of the four sources of
+  interrupt. An interrupt latch in register 25 ($19) is set to '1' when an
+  interrupt source has generated an interrupt request. The four sources of
+  interrupt are:
+
+   LATCH |ENABLE|
+    BIT  | BIT  |                       WHEN SET
+    IRST | ERST | Set when (raster count) = (stored raster count)
+    IMDC | EMDC | Set by sprite-DATA collision register (first collision only)
+    IMMC | EMMC | Set by sprite-sprite collision register (first collision only)
+    ILP  | ELP  | Set by negative transition of LP input (once per frame)
+    IRQ  |      | Set high by latch set and enabled (invert of /IRQ output)
+
+    To enable an interrupt request to set the /IRQ output to '0', the
+  corresponding interrupt enable bit in register 26 ($1A) must be set to
+  '1'. Once an interrupt latch has been set, the latch may be cleared only
+  by writing a '1' to the desired latch in the interrupt register. This
+  feature allows selective handling of video interrupts without software
+  required to 'remember' active interrupts."

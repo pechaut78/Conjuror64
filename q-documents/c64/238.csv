@@ -1,0 +1,24 @@
+question,answer
+"What happens when you close an RS-232 data channel?","CLOSING AN RS-232 DATA CHANNEL
+
+    Closing an RS-232 file discards all data in the buffers at the time of
+  execution (whether or not it had been transmitted or printed out), stops
+  all RS-232 transmitting and receiving, sets the RTS and transmitted data
+  (Sout) lines high, and removes both RS-232 buffers.
+
+
+  BASIC SYNTAX:
+
+    CLOSE lfn
+
+
+  KERNAL ENTRY:
+
+    CLOSE ($FFC3)-See Memory Map for more information on entry and exit
+  conditions.
+
+  | NOTE: Care should be taken to ensure all data is transmitted before   |
+  | closing the channel. A way to check this from BASIC is:               |
+  |                                                                       |
+  | 100 SS=ST: IF(SS=0 OR SS=8) THEN 100                                  |
+  | 110 CLOSE lfn                                                         |"

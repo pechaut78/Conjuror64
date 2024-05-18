@@ -17,7 +17,8 @@
     CHKOUT ($FFC9)-See Memory Map for more information on entry and exit
   conditions.
     CHROUT ($FFD2)-See Memory Map for more information on entry conditions.
-  +-----------------------------------------------------------------------+
+ 
+ 
   | IMPORTANT NOTES: There is no carriage-return delay built into the     |
   | output channel. This means that a normal RS-232 printer cannot        |
   | correctly print, unless some form of hold-off (asking the Commodore 64|
@@ -31,4 +32,4 @@
   | EIA standard (August 1979) for RS-232-C interfaces. The RTS, CTS, and |
   | DCD lines are implemented with the Commodore 64 defined as the Data   |
   | Terminal Device.                                                      |
-  +-----------------------------------------------------------------------+
+ 

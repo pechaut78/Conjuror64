@@ -1,0 +1,53 @@
+question,answer
+"How does the print function works?","OUTPUT TO THE TV
+
+    The simplest form of output in BASIC is the PRINT statement. PRINT uses
+  the TV screen as the output device, and your eyes are the input device
+  because they use the information on the screen.
+    When PRINTing on the screen, your main objective is to format the
+  information on the screen so it's easy to read. You should try to think
+  like a graphic artist, using colors, placement of letters, capital and
+  lower case letters, as well as graphics to best communicate the
+  information. Remember, no matter how smart your program, you want to be
+  able to understand what the results mean to you.
+    The PRINT statement uses certain character codes as 'commands' to the
+  cursor. The <CRSR> key doesn't actually display anything, it just makes
+  the cursor change position. Other commands change colors, clear the
+  screen, and insert or delete spaces. The <RETURN> key has a character
+  code number (CHR$) of 13. A complete table of these codes is contained in
+  Appendix C.
+    There are two functions in the BASIC language that work with the PRINT
+  statement. TAB positions the,cursor on the given position from the left
+  edge of the screen, SPC moves the cursor right a given number of spaces
+  from the current position.
+    Punctuation marks in the PRINT statement serve to separate and format
+  information. The semicolon (;) separates 2 items without any spaces in
+  between. If it is the last thing on a line, the cursor remains after the
+  last thing PRINTed instead of going down to the next line. It suppresses
+  (replaces) the RETURN character that is normally PRINTed at the end of
+  the line.
+    The comma (,) separates items into columns. The Commodore 64 has 4
+  columns of 10 characters each on the screen. When the computer PRINTs a
+  comma, it moves the cursor right to the start of the next column. If it
+  is past the last column of the line, it moves the cursor down to the next
+  line. Like the semicolon, if it is the last item on a line the RETURN is
+  suppressed.
+    The quote marks ('') separate literal text from variables. The first
+  quote mark on the line starts the literal area, and the next quote mark
+  ends it. By the way, you don't have to have a final quote mark at the
+  end of the line.
+    The RETURN code (CHR$ code of 13) makes the cursor go to the next
+  logical line on the screen. This is not always the very next line. When
+  you type past the end of a line, that line is linked to the next line.
+  The computer knows that both lines are really one long line. The links
+  are held in the line link table (see the memory map for how this is set
+  up).
+    A logical line can be 1 or 2 screen lines long, depending on what was
+  typed or PRINTed.  The logical line the cursor is on determines where the
+  <RETURN> key sends it. The logical line at the top of the screen
+  determines if the screen scrolls 1 or 2 lines at a time. There are other
+  ways to use the TV as an output device. The chapter on graphics describes
+  the commands to create objects that move across the screen. The VIC chip
+  section tells how the screen and border colors and sizes are changed. And
+  the sound chapter tells how the TV speaker creates music and special
+  effects."

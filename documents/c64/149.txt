@@ -1,11 +1,5 @@
 
   PHP                 PHP Push processor status on stack                PHP
 
-  Operation:  P toS                                     N Z C I D V
-                                                        _ _ _ _ _ _
-
-  +----------------+-----------------------+---------+---------+----------+
   | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
   |  Implied       |   PHP                 |    08   |    1    |    3     |
-  +----------------+-----------------------+---------+---------+----------+

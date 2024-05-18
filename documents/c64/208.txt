@@ -1,4 +1,4 @@
-  B-32. Function  Name: SETTMO
+  Function  Name: SETTMO
 
     Purpose: Set IEEE bus card timeout flag
     Call address: $FFA2 (hex) 65442 (decimal)
@@ -7,9 +7,9 @@
     Error returns: None
     Stack requirements: 2
     Registers affected: None
-  +-----------------------------------------------------------------------+
-  | NOTE: This routine is used ONLY with an IEEE add-on card!             |
-  +-----------------------------------------------------------------------+
+
+  NOTE: This routine is used ONLY with an IEEE add-on card!      
+  
     Description: This routine sets the timeout flag for the IEEE bus. When
   the timeout flag is set, the Commodore 64 will wait for a device on the
   IEEE port for 64 milliseconds. If the device does not respond to the
@@ -18,12 +18,9 @@
   sequence. When this routine is called when the accumulator contains a 0
   in bit 7, timeouts are enabled. A 1 in bit 7 will disable the timeouts.
 
-  +-----------------------------------------------------------------------+
-  | NOTE: The Commodore 64 uses the timeout feature to communicate that a |
-  | disk file is not found on an attempt to OPEN a file only with an IEEE |
-  | card.                                                                 |
-  +-----------------------------------------------------------------------+
-
+NOTE: The Commodore 64 uses the timeout feature to communicate that a 
+disk file is not found on an attempt to OPEN a file only with an IEEE card.                                                                 |
+  
   How to Use:
 
   TO SET THE TIMEOUT FLAG

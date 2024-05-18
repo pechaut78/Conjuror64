@@ -1,0 +1,33 @@
+question,answer
+"What is the purpose of the SETTIM kernal function?","B-31. Function Name: SETTIM
+
+    Purpose: Set the system clock
+    Call address: $FFDB (hex) 65499 (decimal)
+    Communication registers: A, X, Y
+    Preparatory routines: None
+    Error returns: None
+    Stack requirements: 2
+    Registers affected: None
+
+    Description: A system clock is maintained by an interrupt routine that
+  updates the clock every 1/60th of a second (one 'jiffy'). The clock is
+  three bytes long, which gives it the capability to count up to 5,184,000
+  jiffies (24 hours). At that point the clock resets to zero. Before
+  calling this routine to set the clock, the accumulator must contain the
+  most significant byte, the X index register the next most significant
+  byte, and the Y index register the least significant byte of the initial
+  time setting (in jiffies).
+
+  How to Use:
+    1) Load the accumulator with the MSB of the 3-byte number to set the
+       clock.
+    2) Load the X register with the next byte.
+    3) Load the Y register with the LSB.
+    4) Call this routine.
+
+  EXAMPLE:
+   ;SET THE CLOCK TO 10 MINUTES = 3600 JIFFIES
+   LDA #0               ;MOST SIGNIFICANT
+   LDX #>3600
+   LDY #<3600           ;LEAST SIGNIFICANT
+   JSR SETTIM"

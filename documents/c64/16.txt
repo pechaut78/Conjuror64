@@ -37,12 +37,9 @@
   The bit pairs determine
   this, according to the following chart:
 
-  +----------+--------------------------------------+---------------------+
-  | BIT PAIR |          COLOR REGISTER              |       LOCATION      |
-  +----------+--------------------------------------+---------------------+
-  |    00    |  Background #0 color (screen color)  |   53281 ($D021)     |
-  |    01    |  Background #l color                 |   53282 ($D022)     |
-  |    10    |  Background #2 color                 |   53283 ($D023)     |
-  |    11    |  Color specified by the              |   color RAM         |
-  |          |  lower 3 bits in color memory        |                     |
-  +----------+--------------------------------------+---------------------+
+
+  BIT PAIR - COLOR REGISTER - LOCATION
+  00 - Background #0 color (screen color) - 53281 ($D021) 
+  01 - Background #l color - 53282 ($D022) 
+  10 - Background #2 color - 53283 ($D023) 
+  11 - Color specified by the lower 3 bits in color memory - color RAM      

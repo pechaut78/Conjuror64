@@ -1,0 +1,69 @@
+question,answer
+"What is the 6526 handshaking?","6256 Handshaking
+
+    Handshaking on data transfers can be accomplished using the /PC output
+  pin and the FLAG input pin. PC will go low for one cycle following a read
+  or write of PORT B. This signal can be used to indicate 'data ready' at
+  PORT B or 'data accepted' from PORT B. Handshaking on 16-bit data
+  transfers (using both PORT A and PORT B) is possible by always reading or
+  writing PORT A first. /FLAG is a negative edge sensitive input which can
+  be used for receiving the /PC output from another 6526, or as a general
+  purpose interrupt input. Any negative transition of /FLAG will set the
+  /FLAG interrupt bit.
+
+
+  Interval Timers (Timer A, Timer B)
+
+    Each interval timer consists of a 16-bit read-only Timer Counter and a
+  16-bit write-only Timer Latch. Data written to the timer are latched in
+  the Timer Latch, while data read from the timer are the present contents
+  of the Time Counter. The timers can be used independently or linked for
+  extended operations. The various timer modes allow generation of long
+  time delays, variable width pulses, pulse trains and variable frequency
+  waveforms. Utilizing the CNT input, the timers can count external pulses
+  or measure frequency, pulse width and delay times of external signals.
+  Each timer has an associated control register, providing independent
+  control of the following functions:
+
+  Start/Stop
+
+    A control bit allows the timer to be started or stopped by the micro-
+  processor at any time.
+
+  PB On/Off:
+
+    A control bit allows the timer output to appear on a PORT B output line
+  (PB6 for TIMER A and PB7 for TIMER B). This function overrides the DDRB
+  control bit and forces the appropriate PB line to an output.
+
+  Toggle/Pulse
+
+    A control bit selects the output applied to PORT B. On every timer
+  underflow the output can either toggle or generate a single positive
+  pulse of one cycle duration. The Toggle output is set high whenever the
+  timer is started and is set low by /RES.
+
+  One-Shot/Continuous
+
+    A control bit selects either timer mode. In one-shot mode, the timer
+  will count down from the latched value to zero, generate an interrupt,
+  reload the latched value, then stop. In continuous mode, the timer will
+  count from the latched value to zero, generate' an interrupt, reload the
+  latched value and repeat the procedure continuously.
+
+  Force Load
+
+    A strobe bit allows the timer latch to be loaded into the timer counter
+  at any time, whether the timer is running or not.
+
+  Input Mode:
+
+    Control bits allow selection of the clock used to decrement the timer.
+  TIMER A can count 02 clock pulses or external pulses applied to the CNT
+  pin. TIMER B can count (02 pulses, external CNT pulses, TIMER A underflow
+  pulses or TIMER A underflow pulses while the CNT pin is held high.
+
+    The timer latch is loaded into the timer on any timer underflow, on a
+  force load or following a write to the high byte of the prescaler while
+  the timer is stopped. If the timer is running, a write to the high byte
+  will load the timer latch, but not reload the counter."

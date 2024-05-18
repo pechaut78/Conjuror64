@@ -28,7 +28,6 @@
     CHRIN ($FFCF)-See Memory Map for more information on entry and exit
   conditions.
 
-  +-----------------------------------------------------------------------+
   | NOTES:                                                                |
   |   If the word length is less than 8 bits, all unused bit(s) will be   |
   | assigned a value of zero.                                             |
@@ -44,4 +43,4 @@
   | standard (August 1979) for RS-232-C interfaces. (The Request To Send  |
   | (RTS), CTS, and Received line signal (DCD) lines are implemented with |
   | the Commodore 64 computer defined as the Data Terminal device.)       |
-  +-----------------------------------------------------------------------+
+ 

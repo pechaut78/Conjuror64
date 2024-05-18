@@ -1,0 +1,5 @@
+question,answer
+"What is the assembly language instruction that transfers the value of the index register X to the accumulator in 6502?","TXA                TXA Transfer index X to accumulator                TXA
+  
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   TXA                 |    8A   |    1    |    2     |"

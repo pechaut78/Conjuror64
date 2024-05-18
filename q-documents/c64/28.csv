@@ -1,0 +1,19 @@
+question,answer
+"What is the size of a standard (HI-RES) sprite in terms of dots?","DEFINING A SPRITE
+
+    Sprites are defined like programmable characters are defined. However,
+  since the size of the sprite is larger, more bytes are needed. A sprite
+  is 24 by 21 dots, or 504 dots. This works out to 63 bytes (504/8 bits)
+
+    A way to view how a sprite is created is to take a look at the
+  sprite definition block on the bit level. 
+
+  In a standard (HI-RES) sprite, each bit set to I is displayed in that
+  sprite's foreground color. Each bit set to 0 is transparent and will
+  display whatever data is behind it. This is similar to a standard
+  character.
+    Multi-color sprites are similar to multi-color characters. Horizontal
+  resolution is traded for extra color resolution. The resolution of the
+  sprite becomes 12 horizontal dots by 21 vertical dots. Each dot in the
+  sprite becomes twice as wide, but the number of colors displayable in the
+  sprite is increased to 4."

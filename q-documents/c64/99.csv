@@ -1,0 +1,20 @@
+question,answer
+"What is 64Mon?","64MON
+
+    The 64MON cartridge available from your local dealer, is a program that
+  allows you to escape from the world of CBM BASIC, into the land of
+  machine language. It can display the contents of the internal registers
+  in the 6510 microprocessor, and it allows you to display portions of mem-
+  ory, and change them on the screen, using the screen editor. It also has
+  a built-in assembler and disassembler, as well as many other features
+  that allow you to write and edit machine language programs easily. You
+  don't HAVE to use an assembler to write machine language, but the task is
+  considerably easier with it. If you wish to write machine language
+  programs, it is strongly suggested that you purchase an assembler of some
+  sort. Without an assembler you will probably have to 'POKE' the machine
+  language program into memory, which is totally unadvisable. This manual
+  will give its examples in the format that 64MON uses, from now on. Nearly
+  all assembler formats are the same, therefore the machine language
+  examples shown will almost certainly be compatible with any assembler.
+  But before explaining any of the other features of 64MON, the hexadecimal
+  numbering system must be explained."

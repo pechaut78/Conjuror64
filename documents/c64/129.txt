@@ -1,10 +1,6 @@
 
   CLV                      CLV Clear overflow flag                      CLV
 
-  Operation: 0 -> V                                     N Z C I D V
-                                                        _ _ _ _ _ 0
-  +----------------+-----------------------+---------+---------+----------+
-  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
-  |  Implied       |   CLV                 |    B8   |    1    |    2     |
-  +----------------+-----------------------+---------+---------+----------+
+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+ Implied       |   CLV                 |    B8   |    1    |    2     |

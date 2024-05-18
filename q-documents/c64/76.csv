@@ -1,0 +1,7 @@
+question,answer
+"What is the range of values that the volume control can be set to?","VOLUME CONTROL
+
+    Chip register 24 contains the overall volume control. The volume can be
+  set anywhere between 0 and 15. The other four bits are used for purposes
+  we'll get into later. For now it is enough to know volume is 0 to 15.
+  Look at line 30 to see how it's set in Example Program 1."

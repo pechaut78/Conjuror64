@@ -4,28 +4,24 @@
     Unexpanded sprites are at least partially visible in the 40 column, by
   25 row mode within the following parameters:
 
-                            1 < X < 343
-
-                           30 < Y < 249
+1 < X < 343
+30 < Y < 249
 
   In the 38 column mode, the X parameters change to she following:
 
-                           8 <= X <= 334
+ 8 <= X <= 334
 
   In the 24 row mode, the Y parameters change to the following:
 
-                          34 <= Y <= 245
+ 34 <= Y <= 245
 
-    Expanded sprites are at least partially visible in the 40 column, by 25
+Expanded sprites are at least partially visible in the 40 column, by 25
   row mode within the following parameters:
+  489 >= X <= 343
+  9 >= Y <= 249
 
-                         489 >= X <= 343
-                           9 >= Y <= 249
+In the 38 column mode, the X parameters change to the following:
+496 >= X <= 334
 
-  In the 38 column mode, the X parameters change to the following:
-
-                         496 >= X <= 334
-
-  In the 24 row mode, the Y parameters change to the following:
-
-                          13 <= Y <= 245
+In the 24 row mode, the Y parameters change to the following:
+13 <= Y <= 245

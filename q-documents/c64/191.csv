@@ -1,0 +1,36 @@
+question,answer
+"What is the purpose of the LOAD routine in the Commodore 64 KERNAL?","B-15. Function Name: LOAD
+
+    Purpose: Load RAM from device
+    Call address: $FFD5 (hex) 65493 (decimal)
+    Communication registers: A, X, Y
+    Preparatory routines: SETLFS, SETNAM
+    Error returns: 0,4,5,8,9, READST
+    Stack requirements: None
+    Registers affected: A, X, Y
+
+    Description: This routine LOADs data bytes from any input device di-
+  rectly into the memory of the Commodore 64. It can also be used for a
+  verify operation, comparing data from a device with the data already in
+  memory, while leaving the data stored in RAM unchanged.
+    The accumulator (.A) must be set to 0 for a LOAD operation, or 1 for a
+  verify, If the input device is OPENed with a secondary address (SA) of 0
+  the header information from the device is ignored. In this case, the X
+  and Y registers must contain the starting address for the load. If the
+  device is addressed with a secondary address of 1, then the data is
+  loaded into memory starting at the location specified by the header. This
+  routine returns the address of the highest RAM location loaded.
+    Before this routine can be called, the KERNAL SETLFS, and SETNAM
+  routines must be called.
+
+
+NOTE: You can NOT LOAD from the keyboard (0), RS-232 (2), or the screen (3).
+
+  How to Use:
+
+    0) Call the SETLFS, and SETNAM routines. If a relocated load is de-
+       sired, use the SETLFS routine to send a secondary address of 0.
+    1) Set the A register to 0 for load, 1 for verify.
+    2) If a relocated load is desired, the X and Y registers must be set
+       to the start address for the load.
+    3) Call the routine using the JSR instruction."

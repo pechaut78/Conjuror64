@@ -14,7 +14,6 @@
   turn ON each of the four colors you've chosen for your sprite:
 
     BIT PAIR                           DESCRIPTION
-  -------------------------------------------------------------------------
       00        TRANSPARENT, SCREEN COLOR
       01        SPRITE MULTI-COLOR REGISTER #0 (53285) ($D025)
       10        SPRITE COLOR REGISTER

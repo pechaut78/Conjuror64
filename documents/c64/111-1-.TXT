@@ -1,5 +1,5 @@
       MCS6510 MICROPROCESSOR INSTRUCTION SET - ALPHABETIC SEQUENCE
-  +------------------------------------------------------------------------
+
        ADC   Add Memory to Accumulator with Carry
        AND   "AND" Memory with Accumulator
        ASL   Shift Left One Bit (Memory or Accumulator)

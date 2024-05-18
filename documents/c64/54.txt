@@ -9,13 +9,13 @@
   follows:
 
     LATCH  BIT#             DESCRIPTION
-  -------------------------------------------------------------------------
+
     IRST    0   Set when current raster count = stored raster count
     IMDC    1   Set by SPRITE-DATA collision (1st one only, until reset)
     IMMC    2   Set by SPRITE-SPRITE collision (1st one only, until reset)
      ILP    3   Set by negative transition of light pen (1 per frame)
      IRQ    7   Set by latch set and enabled
-  -------------------------------------------------------------------------
+ 
     Once an interrupt bit has been set, it's "latched" in and must be
   cleared by writing a 1 to that bit in the interrupt register when you're
   ready to handle it. This allows selective interrupt handling, without

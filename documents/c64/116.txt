@@ -1,13 +1,9 @@
 
 
   BCC                     BCC Branch on Carry Clear                     BCC
-                                                        N Z C I D V
-  Operation:  Branch on C = 0                           _ _ _ _ _ _
 
-  +----------------+-----------------------+---------+---------+----------+
-  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
-  |  Relative      |   BCC Oper            |    90   |    2    |    2*    |
-  +----------------+-----------------------+---------+---------+----------+
+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+ Relative      |   BCC Oper            |    90   |    2    |    2*    |
   * Add 1 if branch occurs to same page.
   * Add 2 if branch occurs to different page.

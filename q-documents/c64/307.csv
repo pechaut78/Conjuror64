@@ -1,0 +1,12 @@
+question,answer
+"What is the condition required for accessing the device registers?","DATA BUS (DB7-DB0)
+
+    The eight data bus pins are the bidirectional data port, controlled by
+  /CS, RW, and Phase 0. The data bus can only be accessed while AEC and
+  Phase 0 are high and /CS is low.
+
+  CHIP SELECT (/CS)
+
+    The chip select pin, /CS, is brought low to enable access to the device
+  registers in conjunction with the address and RW pins. /CS low is recog-
+  nized only while AEC and Phase 0 are high."

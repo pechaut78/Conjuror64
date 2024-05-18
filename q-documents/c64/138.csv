@@ -1,0 +1,5 @@
+question,answer
+"What is the assembly language instruction that increments the index register by one?","INX                    INX Increment Index X by one                   INX
+                                                        N Z C I D V
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   INX                 |    E8   |    1    |    2     |"

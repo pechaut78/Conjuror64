@@ -1,0 +1,18 @@
+question,answer
+"What are the zero-page memory locations used for in the RS-232 system interface?","ZERO-PAGE MEMORY LOCATIONS AND USAGE FOR
+  RS-232 SYSTEM INTERFACE
+
+    $00A7-INBIT-Receiver input bit temp storage.
+    $00A8-BITCI-Receiver bit count in.
+    $00A9-RINONE-Receiver flag Start bit check.
+    $00AA-RIDATA-Receiver byte buffer/assembly location.
+    $00AB-RIPRTY-Receiver parity bit storage.
+    $00B4-BITTS-Transmitter bit count out.
+    $00B5-NXTBIT-Transmitter next bit to be sent.
+    $00B6-RODATA-Transmitter byte buffer/disassembly location.
+
+
+    All the above zero-page locations are used locally and are only given
+  as a guide to understand the associated routines. These cannot be used
+  directly by the BASIC or KERNAL level programmer to do RS-232 type
+  things. The system RS-232 routines must be used."

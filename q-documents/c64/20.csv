@@ -1,0 +1,3 @@
+question,answer
+"What is the command that turns off extended color mode in the VIC-II register?","Extended color mode is turned OFF by setting bit 6 of the VIC-II regis-ter to a 0 at location 53265 ($D011). The following statement will do this:
+    POKE 53265,PEEK(53265)AND 191"

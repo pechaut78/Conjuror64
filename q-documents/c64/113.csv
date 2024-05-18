@@ -1,0 +1,14 @@
+question,answer
+"What is the purpose of the ADC instruction in the given table?","ADC               Add memory to accumulator with carry                ADC
+
+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+ Immediate     |   ADC #Oper           |    69   |    2    |    2     |
+ Zero Page     |   ADC Oper            |    65   |    2    |    3     |
+ Zero Page,X   |   ADC Oper,X          |    75   |    2    |    4     |
+ Absolute      |   ADC Oper            |    60   |    3    |    4     |
+ Absolute,X    |   ADC Oper,X          |    70   |    3    |    4*    |
+ Absolute,Y    |   ADC Oper,Y          |    79   |    3    |    4*    |
+ (Indirect,X)  |   ADC (Oper,X)        |    61   |    2    |    6     |
+ (Indirect),Y  |   ADC (Oper),Y        |    71   |    2    |    5*    |
+   * Add 1 if page boundary is crossed."

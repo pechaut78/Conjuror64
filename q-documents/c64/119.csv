@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the BIT instruction in the 6510 assembly language code?","BIT             BIT Test bits in memory with accumulator              BIT
+
+  Bit 6 and 7 are transferred to the status register.   N Z C I D V
+  If the result of A /\ M is zero then Z = 1, otherwise M7/ _ _ _ M6
+  Z = 0
+
+ Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  Zero Page     |   BIT Oper            |    24   |    2    |    3     |
+  Absolute      |   BIT Oper            |    2C   |    3    |    4     |"

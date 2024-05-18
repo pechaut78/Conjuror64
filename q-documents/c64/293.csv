@@ -1,0 +1,17 @@
+question,answer
+"How to control the sprite magnification?","MAGNIFICATION
+
+    Each sprite can be selectively expanded (2X) in both the horizontal and
+  vertical directions. Two registers contain the control bits (MnXE,MnYE)
+  for the magnification control.
+
+
+    REGISTER  |                        FUNCTION
+     23 ($17) | Horizontal expand MnXE-'1'=expand; '0'=normal
+     29 ($1D) | Vertical expand MnYE-'1'=expand; '0'=normal
+
+  When sprites are expanded, no increase in resolution is realized. The same
+  24*21 array (12X21 if multi-colored) is displayed, but the overall sprite
+  dimension is doubled in the desired direction (the smallest sprite dot may
+  be up to 4X standard dot dimension if a sprite is both multi-colored and
+  expanded)."

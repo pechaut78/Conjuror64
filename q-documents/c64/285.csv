@@ -1,0 +1,17 @@
+question,answer
+"What are the key characteristics of the bit map mode in the 6566/6567?","BIT MAP MODE
+
+    In bit map mode, the 6566/6567 fetches data from memory in a different
+  fashion, so that a one-to-one correspondence exists between each
+  displayed dot and a memory bit. The bit map mode provides a screen
+  resolution of 320H * 200V individually controlled display dots. Bit map
+  mode is selected by setting the BMM bit in register 17 ($11) to a '1'.
+  The VIDEO MATRIX is still accessed as in character mode, but the video
+  matrix data is no longer interpreted as character pointers, but rather as
+  color data. The VIDEO MATRIX COUNTER is then also used as an address to
+  fetch the dot data for display from the 8000-byte DISPLAY BASE. The
+  display base address is formed as follows:
+
+
+     A13| A12| A11| A10| A09| A08| A07| A06| A05| A04| A03| A02| A01| A00
+    CB13| VC9| VC8| VC7| VC6| VC5| VC4| VC3| VC2| VC1| VC0| RC2| RC1| RC0"

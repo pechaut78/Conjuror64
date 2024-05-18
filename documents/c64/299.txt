@@ -11,6 +11,5 @@
   used to center a fixed display within the display window.
 
            BITS         |      REGISTER      |          FUNCTION
-  ----------------------+--------------------+-----------------------------
          X2,X1,X0       |      22 ($16)      |     Horizontal Position
          Y2,Y1,Y0       |      17 ($11)      |     Vertical Position

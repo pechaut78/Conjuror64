@@ -1,0 +1,38 @@
+question,answer
+"How can you create your own character sets on the Commodore 64?","PROGRAMMABLE CHARACTERS
+
+    Since the characters are stored in ROM, it would seem that there is no
+  way to change them for customizing characters. However, the memory
+  location that tells the VIC-II chip where to find the characters is a
+  programmable register which can be changed to point to many sections of
+  memory. By changing the character memory pointer to point to RAM, the
+  character set may be programmed for any need.
+    If you want your character set to be located in RAM, there are a few
+  VERY IMPORTANT things to take into account when you decide to actually
+  program your own character sets. In addition, there are two other
+  important points you must know to create your own special characters:
+
+    1) It is an all or nothing process. Generally, if you use your own
+       character set by telling the VIC-II chip to get the character
+       information from the area you have prepared in RAM, the standard
+     Commodore 64 characters are unavailable to you. To solve this, you
+     must copy any letters, numbers, or standard Commodore 64 graphics you
+     intend to use into your own character memory in RAM. You can pick and
+     choose, take only the ones you want, and don't even have to keep them
+     in order!
+
+    2) Your character set takes memory space away from your BASIC program.
+       Of course, with 38K available for a BASIC program, most applications
+       won't have problems.
+   WARNING: You must be careful to protect the character set from being  
+   overwritten by your BASIC program, which also uses the RAM.           
+
+    There are two locations in the Commodore 64 to start your character set
+  that should NOT be used with BASIC: location 0 and location 2048. The
+  first should not be used because the system stores important data on
+  page 0. The second can't be used because that is where your BASIC program
+  starts! However, there are 6 other starting positions for your custom
+  character set.
+    The best place to put your character set for use with BASIC while
+  experimenting is beginning at 12288 ($3000 in HEX). This is done by
+  POKEing the low 4 bits of location 53272 with 12."

@@ -1,0 +1,7 @@
+question,answer
+"What is the starting point for calculating the position of a sprite in a 24x21 dot area?","The position of a sprite is calculated from the TOP LEFT corner of the
+  24 dot by 21 dot area that your sprite can be designed in. It does NOT
+  matter how many or how few dots you use to make up a sprite. Even if only
+  one dot is used as a sprite, and you happen to want it in the middle of
+  the screen, you must still calculate the exact positioning by starting at
+  the top left corner location."

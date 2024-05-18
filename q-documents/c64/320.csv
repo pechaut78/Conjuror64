@@ -1,0 +1,25 @@
+question,answer
+"Can you describe the filter register of the SID?","FILTER
+
+  FC LO/FC HI (Registers $15,$16)
+
+    Together these registers form an 11-bit number (bits 3-7 of FC LO are
+  not used) which linearly controls the Cutoff (or Center) Frequency of the
+  programmable Filter. The approximate Cutoff Frequency ranges from 30
+  Hz to 12 KHz.
+
+  RES/FILT (Register $17)
+
+    Bits 4-7 of this register (RES0-RES3) control the resonance of the
+  filter. Resonance is a peaking effect which emphasizes frequency com-
+  ponents at the Cutoff Frequency of the Filter, causing a sharper sound.
+  There are 16 resonance settings ranging linearly from no resonance (0) to
+  maximum resonance (15 or $F). Bits 0-3 determine which signals will be
+  routed through the Filter:
+    FILT 1 (Bit 0): When set to a zero, Voice 1 appears directly at the
+  audio output and the Filter has no effect on it. When set to a one, Voice
+  1 will be processed through the Filter and the harmonic content of Voice
+  1 will be altered according to the selected Filter parameters.
+    FILT 2 (Bit 1): Same as bit 0 for Voice 2.
+    FILT 3 (Bit 2): Same as bit 0 for Voice 3.
+    FILTEX (Bit 3): Same as bit 0 for External audio input (pin 26)."

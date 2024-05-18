@@ -1,0 +1,9 @@
+question,answer
+"Describe how to position a sprite","SPRITE POSlTlON
+
+    Each sprite is positioned via its X and Y position register (see register
+  map) with a resolution of 512 horizontal and 256 vertical positions. The
+ position of a sprite is determined by the upper-left corner of the array. X
+  locations 23 to 347 ($17-$157) and Y locations 50 to 249 ($32-$F9) are
+  visible. Since not all available sprite positions are entirely visible on
+  the screen, sprites may be moved smoothly on and off the display screen."

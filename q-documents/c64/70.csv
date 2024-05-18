@@ -1,0 +1,21 @@
+question,answer
+"What are some important considerations when setting sprite pointer settings in RAM memory?","DIFFERENT SPRITE POINTER SETTINGS:
+
+    These sprite pointer settings are RECOMMENDATIONS ONLY.
+    Caution: you can set your sprite pointers anywhere in RAM memory but if
+  you set them too 'low' in memory a long BASIC program may overwrite your
+  sprite data, or vice versa. To protect an especially LONG BASIC PROGRAM
+  from overwriting sprite data, you may want to set the sprites at a higher
+  area of memory (for example, 2040,192 for sprite 0 at locations 12288 to
+  12350... 2041,193 at locations 12352 to 12414 for sprite 1 and so on...
+  by adjusting the memory locations from which sprites get their 'data,'
+  you can define as many as 64 different sprites plus a sizable BASIC
+  program. To do this, define several sprite 'shapes' in your DATA
+  statements and then redefine a particular sprite by changing the
+  'pointer' so the sprite you are using is 'pointed' at different areas of
+  memory containing different sprite picture data. See the 'Dancing Mouse'
+  to see how this works. If you want two or more sprites to have THE SAME
+  SHAPE (you can still change position and color of each sprite), use the
+  same sprite pointer and memory location for the sprites you want to match
+  (for example, you can point sprites 0 and 1 to the same location by using
+  POKE 2040,192 and POKE 2041, 192)."

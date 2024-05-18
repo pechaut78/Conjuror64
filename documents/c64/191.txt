@@ -23,11 +23,7 @@
   routines must be called.
 
 
-  +-----------------------------------------------------------------------+
-  | NOTE: You can NOT LOAD from the keyboard (0), RS-232 (2), or the      |
-  | screen (3).                                                           |
-  +-----------------------------------------------------------------------+
-
+NOTE: You can NOT LOAD from the keyboard (0), RS-232 (2), or the screen (3).
 
   How to Use:
 

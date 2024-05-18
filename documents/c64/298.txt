@@ -10,7 +10,6 @@
 
 
     RSEL |      NUMBER OF ROWS        |  CSEL |     NUMBER OF COLUMNS
-  -------+----------------------------+-------+----------------------------
      0   |          24 rows           |   0   |         38 columns
      1   |          25 rows           |   1   |         40 columns
 

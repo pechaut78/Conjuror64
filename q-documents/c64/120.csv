@@ -1,0 +1,8 @@
+question,answer
+"WDescribe the caracteristics of BMI 6502 instruction?","BMI                    BMI Branch on result minus                     BMI
+
+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles
+ Relative      |   BMI Oper            |    30   |    2    |    2*    
+  * Add 1 if branch occurs to same page.
+  * Add 1 if branch occurs to different page."

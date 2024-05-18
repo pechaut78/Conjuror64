@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the video matrix counter?","VCx denotes the video matrix counter outputs, RCx denotes the 3-bit
+  raster line counter and CB13 is from register 24 ($18). The video matrix
+  counter steps through the same 40 locations for eight raster lines, con-
+  tinuing to the next 40 locations every eighth line, while the raster
+  counter increments once for each horizontal video line (raster line).
+  This addressing results in each eight sequential memory locations being
+  formatted as an 8*8 dot block on the video display."

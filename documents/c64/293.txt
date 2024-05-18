@@ -9,7 +9,6 @@
 
 
     REGISTER  |                        FUNCTION
-  ------------+------------------------------------------------------------
      23 ($17) | Horizontal expand MnXE-"1"=expand; "0"=normal
      29 ($1D) | Vertical expand MnYE-"1"=expand; "0"=normal
 

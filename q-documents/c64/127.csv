@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the instruction "CLD" in the 6502 assembly language code?","CLD                      CLD Clear decimal mode                       CLD
+
+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+ Implied       |   CLD                 |    D8   |    1    |    2     |"

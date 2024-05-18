@@ -1,0 +1,12 @@
+question,answer
+"What is the primary limitation of using extended background color mode in terms of character display?","EXTENDED BACKGROUND COLOR MODE
+
+Extended background color mode gives you control over the background color of each individual character, as well as over the foreground color.
+For example, in this mode you could display a blue character with ayellow background on a white screen.
+There are 4 registers available for extended background color mode.
+Each of the registers can be set to any of the 16 colors.
+Color memory is used to hold the foreground color in extended back-ground mode. It is used the same as in standard character mode.
+Extended character mode places a limit on the number of different characters you can display, however. When extended color mode is on, only the first 64 characters in the character ROM (or the first 64 characters in your programmable character set) can be used. This is because two of the bits of the character code are used to select the background color.
+It might work something like this:
+
+The character code (the number you would POKE to the screen) of the letter 'A' is a 1. When extended color mode is on, if you POKED a 1 to the screen, an 'A' would appear. If you POKED a 65 to the screen normally, you would expect the character with character code (CHR$) 129 to appear, which is a reversed 'A.' This does NOT happen in extended color mode. Instead you get the same unreversed 'A' as before, but on a different background color."

@@ -1,0 +1,21 @@
+question,answer
+"What are the key features of the 6526 Complex Interface Adapter (CIA) chip?","6526 COMPLEX INTERFACE ADAPTER
+  (CIA) CHIP SPECIFICATIONS
+
+  DESCRIPTION
+
+    The 6526 Complex Interface Adapter (CIA) is a 65XX bus compatible
+  peripheral interface device with extremely flexible timing and I/O
+  capabilities.
+
+
+  FEATURES
+
+  o 16 Individually programmable 110 lines
+  o 8 or 16-Bit handshaking on read or write
+  o 2 independent, linkable 16-Bit interval timers
+  o 24-hour (AM/PM) time of day clock with programmable alarm
+  o 8-Bit shift register for serial I/O
+  o 2 TTL load capability
+  o CMOS compatible I/O lines
+  o 1 or 2 MHz operation available"

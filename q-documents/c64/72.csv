@@ -1,0 +1,12 @@
+question,answer
+"What is the primary requirement for creating multi-colored sprites in a specific mode?","USING MULTI-COLOR:
+
+    You can create multi-colored sprites although using multi-color mode
+  requires that you use PAIRS of pixels instead of individual pixels in
+  your sprite picture (in other words each colored 'dot' or 'block' in the
+  sprite will consist of two pixels side by side). You have 4 colors to
+  choose from: Sprite Color (chart,above), Multi-Color 1, Multi-Color 2 and
+  'Background Color' (background is achieved by using zero settings which
+  let the background color 'show through'). Consider one horizontal 8-pixel
+  block in a sprite picture. The color of each PAIR of pixels is determined
+  according to whether the left, right, or both pixels are solid."

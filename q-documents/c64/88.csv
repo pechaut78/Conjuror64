@@ -1,0 +1,17 @@
+question,answer
+"What is the primary function of the built-in program that interprets and executes CBM BASIC commands on the Commodore 64?","The C64 OPERATING SYSTEM of the Commodore 64 then allows you to type on the
+  keyboard, and use the built-in SCREEN EDITOR on the Commodore 64. The
+  SCREEN EDITOR allows you to move the cursor, DELete, INSert, etc., and
+  is, in fact, only one part of the operating system that is built in for
+  your convenience.
+    All of the commands that are available in CBM BASIC are simply
+  recognized by another huge machine language program built into your
+  Commodore 64. This huge program 'RUNS' the appropriate piece of machine
+  language depending on which CBM BASIC command is being executed. This
+  program is called the BASIC INTERPRETER, because it interprets each
+  command, one by one, unless it encounters a command it does not
+  understand, and then the familiar message appears:
+
+    ?SYNTAX ERROR
+
+    READY."

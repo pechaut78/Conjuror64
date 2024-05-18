@@ -22,9 +22,8 @@
   (and a secondary address if there was one).
 
   How to Use:
-  +-----------------------------------------------------------------------+
-  | REMEMBER: this routine is NOT NEEDED to send data to the screen.      |
-  +-----------------------------------------------------------------------+
+
+REMEMBER: this routine is NOT NEEDED to send data to the screen.
     0) Use the KERNAL OPEN routine to specify a logical file number, a
        LISTEN address, and a secondary address (if needed).
     1) Load the X register with the logical file number used in the open

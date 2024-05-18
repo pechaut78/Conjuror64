@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the RTS instruction in the 6502 assembly language?","RTS                    RTS Return from subroutine                     RTS
+ 
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   RTS                 |    60   |    1    |    6     |"

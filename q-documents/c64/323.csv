@@ -1,0 +1,4 @@
+question,answer
+"What is the purpose of the POTY sid register?","POTY (Register $1A)
+
+    Same as POTX for the pot tied to POTY (pin 23)."

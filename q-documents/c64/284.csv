@@ -1,0 +1,33 @@
+question,answer
+"What is the extended color mode?","EXTENDED COLOR MODE (ECM = 1, Bmm = MCM = 0)
+
+    The extended color mode allows the selection of individual, background
+  colors for each character region with the normal 8*8 character
+  resolution. This mode is selected by setting the ECM bit of register 17
+  ($11) to '1'. The character dot data is displayed as in the standard mode
+  (foreground color determined by the color nybble is displayed for a '1'
+
+  data bit), but the 2 MSB of the character pointer are used to select the
+  background color for each character region as follows:
+
+
+       CHAR. POINTER  |
+        MS BIT PAIR   |       BACKGROUND COLOR DISPLAYED FOR 0 BIT
+  --------------------+----------------------------------------------------
+           00         |  Background #0 color (register 33 ($21))
+           01         |  Background #l color (register 34 ($22))
+           10         |  Background #2 color (register 35 ($23))
+           11         |  Background #3 color (register 36 ($24))
+
+  Since the two MSB of the character pointers are used for color informa-
+  tion, only 64 different character definitions are available. The 6566/
+  6567 will force CB10 and CB9 to '0' regardless of the original pointer
+  values, so that only the first 64 character definitions will be accessed.
+  With extended color mode each character has one of sixteen individually
+  defined foreground colors and one of the four available background
+  colors.
+
+  +-----------------------------------------------------------------------+
+  | NOTE: Extended color mode and multi-color mode should not be enabled  |
+  | simultaneously.                                                       |
+  +-----------------------------------------------------------------------+"

@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the JSR 6502 instruction ?","JSR          JSR Jump to new location saving return address           JSR
+
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Absolute      |   JSR Oper            |    20   |    3    |    6     |"

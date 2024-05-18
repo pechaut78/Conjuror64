@@ -1,0 +1,14 @@
+question,answer
+"What is the priority of a sprite that will always appear in front of or on top of all other sprites?","SPRITE PRIORITY:
+
+    Priority means one sprite will appear to move 'in front of' or 'behind'
+  another sprite on the display screen. Sprites with more priority always
+  appear to move 'in front of' or 'on top of' sprites with less priority.
+  The rule is that lower numbered sprites have priority over higher
+  numbered sprites. Sprite 0 has priority over all other sprites. Sprite 7
+  has no priority in relation to the other sprites. Sprite 1 has priority
+  over sprites 2-7, etc. If you put two sprites in the some position, the
+  sprite with the higher priority will appear IN FRONT OF the sprite with
+  the lower priority. The sprite with lower priority will either be
+  obscured, or will 'show through' (from 'behind') the sprite with higher
+  priority."

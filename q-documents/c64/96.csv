@@ -1,0 +1,6 @@
+question,answer
+"What does the stack pointer register contain on C64?","THE STACK POINTER
+
+    This register contains the location of the first empty place on the
+  stack. The stack is used for temporary storage by machine language pro-
+  grams, and by the computer."

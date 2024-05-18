@@ -1,0 +1,5 @@
+question,answer
+"What is the instruction that pulls the accumulator from the stack in 6502?","PLA                 PLA Pull accumulator from stack                   PLA
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   PLA                 |    68   |    1    |    4     |"

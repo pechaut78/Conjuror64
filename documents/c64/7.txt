@@ -8,31 +8,32 @@
   used:
   POKE53272,(PEEK(53272)AND15)OR A
   Where "A" has one of the following values:
-  +---------+------------+-----------------------------+
-  |         |            |         LOCATION*           |
-  |    A    |    BITS    +---------+-------------------+
-  |         |            | DECIMAL |        HEX        |
-  +---------+------------+---------+-------------------+
-  |     0   |  0000XXXX  |      0  |  $0000            |
-  |    16   |  0001XXXX  |   1024  |  $0400 (DEFAULT)  |
-  |    32   |  0010XXXX  |   2048  |  $0800            |
-  |    48   |  0011XXXX  |   3072  |  $0C00            |
-  |    64   |  0100XXXX  |   4096  |  $1000            |
-  |    80   |  0101XXXX  |   5120  |  $1400            |
-  |    96   |  0110XXXX  |   6144  |  $1800            |
-  |   112   |  0111XXXX  |   7168  |  $1C00            |
-  |   128   |  1000XXXX  |   8192  |  $2000            |
-  |   144   |  1001XXXX  |   9216  |  $2400            |
-  |   160   |  1010XXXX  |  10240  |  $2800            |
-  |   176   |  1011XXXX  |  11264  |  $2C00            |
-  |   192   |  1100XXXX  |  12288  |  $3000            |
-  |   208   |  1101XXXX  |  13312  |  $3400            |
-  |   224   |  1110XXXX  |  14336  |  $3800            |
-  |   240   |  1111XXXX  |  15360  |  $3C00            |
-  +---------+------------+---------+-------------------+
-  +-----------------------------------------------------------------------+
-  | * Remember that the BANK ADDRESS of the VIC-II chip must be added in. |
-  | You must also tell the KERNAL'S screen editor where the screen is as  |
-  | follows: POKE 648, page (where page = address/256, e.g., 1024/256= 4, |
-  | so POKE 648,4).                                                       |
-  +-----------------------------------------------------------------------+
+$0000
+$0400
+$0800
+$0C00
+$1000
+$1400
+$1800
+$1C00
+$2000
+$2400
+$2400
+$2800 
+$2800 
+$2C00 
+$2C00 
+$3000 
+$3000 
+$3400 
+$3400 
+$3800 
+$3800 
+$3C00 
+$3C00 
+
+* Remember that the BANK ADDRESS of the VIC-II chip must be added in.
+* Remember that the BANK ADDRESS of the VIC-II chip must be added in.
+You must also tell the KERNAL'S screen editor where the screen is as
+follows: POKE 648, page (where page = address/256, e.g., 1024/256= 4,
+so POKE 648,4).

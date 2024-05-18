@@ -1,0 +1,8 @@
+question,answer
+"What is the primary function of the program counter in a C64?","THE PROGRAM COUNTER
+
+    This contains the address of the current machine language instruction
+  being executed. Since the operating system is always 'RUN'ning in the
+  Commodore 64 (or, for that matter, any computer), the program counter is
+  always changing. It could only be stopped by halting the microprocessor
+  in some way."

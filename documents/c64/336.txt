@@ -21,9 +21,7 @@
 
   ABSOLUTE MAXIMUM RATINGS
 
-  +--------------------------+------------+-----------------+-------------+
   |          RATING          |   SYMBOL   |      VALUE      |    UNITS    |
-  +--------------------------+------------+-----------------+-------------+
   |  Supply Voltage          |    VDD     |   -0.3 to +17   |     VDC     |
   |  Supply Voltage          |    VCC     |   -0.3 to +7    |     VDC     |
   |  Input Voltage (analog)  |    Vina    |   -0.3 to +17   |     VDC     |

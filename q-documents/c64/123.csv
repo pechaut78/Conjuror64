@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the BRK instruction in the context of 66502?","BRK                          BRK Force Break                          BRK
+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+ Implied       |   BRK                 |    00   |    1    |    7     |
+  1. A BRK command cannot be masked by setting I."

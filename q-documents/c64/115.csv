@@ -1,0 +1,9 @@
+question,answer
+"What is the instruction that performs a bitwise left shift of the value in the specified memory location or accumulator by one bit?","ASL          ASL Shift Left One Bit (Memory or Accumulator)           ASL
+
+ Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  Accumulator   |   ASL A               |    0A   |    1    |    2     |
+  Zero Page     |   ASL Oper            |    06   |    2    |    5     |
+  Zero Page,X   |   ASL Oper,X          |    16   |    2    |    6     |
+  Absolute      |   ASL Oper            |    0E   |    3    |    6     |
+  Absolute, X   |   ASL Oper,X          |    1E   |    3    |    7     |"

@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the ROL instruction in 6502 assembly language?","ROL          ROL Rotate one bit left (memory or accumulator)          ROL
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Accumulator   |   ROL A               |    2A   |    1    |    2     |
+  |  Zero Page     |   ROL Oper            |    26   |    2    |    5     |
+  |  Zero Page,X   |   ROL Oper,X          |    36   |    2    |    6     |
+  |  Absolute      |   ROL Oper            |    2E   |    3    |    6     |
+  |  Absolute,X    |   ROL Oper,X          |    3E   |    3    |    7     |"

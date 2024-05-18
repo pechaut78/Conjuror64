@@ -1,0 +1,7 @@
+question,answer
+"What is the assembly language form of the CPY instruction in the Zero Page addressing mode?","CPY                  CPY Compare memory and index Y                   CPY
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Immediate     |   CPY *Oper           |    C0   |    2    |    2     |
+  |  Zero Page     |   CPY Oper            |    C4   |    2    |    3     |
+  |  Absolute      |   CPY Oper            |    CC   |    3    |    4     |"

@@ -5,9 +5,8 @@
 
     FORMAT: OPEN file#, device#, number, string
 
-  +--------+---------+---------------------+------------------------------+
+
   | DEVICE | DEVICE# |       NUMBER        |            STRING            |
-  +--------+---------+---------------------+------------------------------+
   |CASSETTE|    1    | 0 = Input           | File Name                    |
   |        |         | 1 = Output          |                              |
   |        |         | 2 = Output with EOT |                              |
@@ -19,4 +18,3 @@
   |        |         |                     | File Type, Read/Write        |
   |        |         | 15 = Command        | Command                      |
   |        |         |      Channel        |                              |
-  +--------+---------+---------------------+------------------------------+

@@ -1,11 +1,6 @@
   ORA                 ORA "OR" memory with accumulator                  ORA
 
-  Operation: A V M -> A                                 N Z C I D V
-                                                        / / _ _ _ _
- 
-  +----------------+-----------------------+---------+---------+----------+
   | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
   |  Immediate     |   ORA #Oper           |    09   |    2    |    2     |
   |  Zero Page     |   ORA Oper            |    05   |    2    |    3     |
   |  Zero Page,X   |   ORA Oper,X          |    15   |    2    |    4     |
@@ -14,5 +9,4 @@
   |  Absolute,Y    |   ORA Oper,Y          |    19   |    3    |    4*    |
   |  (Indirect,X)  |   ORA (Oper,X)        |    01   |    2    |    6     |
   |  (Indirect),Y  |   ORA (Oper),Y        |    11   |    2    |    5     |
-  +----------------+-----------------------+---------+---------+----------+
   * Add 1 on page crossing

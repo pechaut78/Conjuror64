@@ -1,0 +1,31 @@
+question,answer
+"What is the purpose of the CLRCHN kernal routine?","B-10. Function Name: CLRCHN
+
+    Purpose: Clear I/O channels
+    Call address: $FFCC (hex) 65484 (decimal)
+    Communication registers: None
+    Preparatory routines: None
+    Error returns:
+    Stack requirements: 9
+    Registers affected: A, X
+
+    Description: This routine is called to clear all open channels and re-
+  store the I/O channels to their original default values. It is usually
+  called after opening other I/O channels (like a tape or disk drive) and
+  using them for input/output operations. The default input device is 0
+  (keyboard). The default output device is 3 (the Commodore 64 screen).
+    If one of the channels to be closed is to the serial port, an UNTALK
+  signal is sent first to clear the input channel or an UNLISTEN is sent to
+  clear the output channel. By not calling this routine (and leaving lis-
+  tener(s) active on the serial bus) several devices can receive the same
+  data from the Commodore 64 at the same time. One way to take advantage
+  of this would be to command the printer to TALK and the disk to LISTEN.
+  This would allow direct printing of a disk file.
+    This routine is automatically called when the KERNAL CLALL routine is
+  executed.
+
+  How to Use:
+    1) Call this routine using the JSR instruction.
+
+  EXAMPLE:
+    JSR CLRCHN"

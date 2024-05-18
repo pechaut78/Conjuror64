@@ -1,8 +1,0 @@
-question,answer
-"Is there a column for the register name in the register map?","The column labeled 'NAME' contains the register name."
-"Are there multiple registers for data direction?","Yes, there are two registers for data direction, DDR A and DDR B."
-"Is there a timer register for low and high values?","Yes, there are timer registers for low and high values, TA LO and TA HI."
-"Can you find a register for seconds and minutes?","Yes, there are registers for seconds, minutes, and hours, TOD SEC, TOD MIN, and TOD HR."
-"Is there a register for serial data?","Yes, there is a register for serial data, SDR."
-"Can you find a register for interrupt control?","Yes, there is a register for interrupt control, ICR."
-"Are there control registers A and B?","Yes, there are control registers A and B, CRA and CRB."

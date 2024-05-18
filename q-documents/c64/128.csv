@@ -1,0 +1,6 @@
+question,answer
+"What is the  instruction that clears the interrupt disable bit?","CLI                  CLI Clear interrupt disable bit                  CLI
+
+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+ Implied       |   CLI                 |    58   |    1    |    2     |"

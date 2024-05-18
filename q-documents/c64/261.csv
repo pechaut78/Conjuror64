@@ -1,0 +1,38 @@
+question,answer
+"What are the details 6510 microprocessor chip?","6510 MICROPROCESSOR CHIP
+  SPECIFICATIONS
+
+  DESCRIPTION
+
+    The 6510 is a low-cost microcomputer system capable of solving a broad
+  range of small-systems and peripheral-control problems at minimum cost to
+  the user.
+    An 8-bit Bi-Directional I/O Port is located on-chip with the Output
+  Register at Address 0000 and the Data-Direction Register at Address 0001.
+  The I/O Port is bit-by-bit programmable.
+    The Three-State sixteen-bit Address Bus allows Direct Memory Accessing
+  (DMA) and multiprocessor systems sharing a common memory.
+    The internal processor architecture is identical to the MOS Technology
+  6502 to provide software compatibility.
+
+
+  FEATURES OF THE 6510...
+
+  o Eight-Bit Bi-Directional I/O Port
+  o Single +5-volt supply
+  o N-channel, silicon gate, depletion load technology
+  o Eight-bit parallel processing
+  o 56 Instructions
+  o Decimal and binary arithmetic
+  o Thirteen addressing modes
+  o True indexing capability
+  o Programmable stack pointer
+  o Variable length stack
+  o Interrupt capability
+  o Eight-Bit Bi-Directional Data Bus
+  o Addressable memory range of up to 64K bytes
+  o Direct memory access capability
+  o Bus compatible with M6800
+  o Pipeline architecture
+  o 1-MHz and 2-MHz operation
+  o Use with any type or speed memory"

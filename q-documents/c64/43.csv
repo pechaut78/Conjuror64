@@ -1,0 +1,23 @@
+question,answer
+"explain the vertical positionning of sprites","VERTICAL POSITIONING
+
+    Setting up positions in the horizontal direction is a little more
+  difficult than vertical positioning, so we'll discuss vertical (Y)
+  positioning first.
+    There are 200 different dot positions that can be individually pro-
+  grammed onto your TV screen in the Y direction. The sprite Y position
+  registers can handle numbers up to 255. This means that you have more
+  than enough register locations to handle moving a sprite up and down. You
+  also want to be able to smoothly move a sprite on and off the screen.
+  More than 200 values are needed for this.
+    The first on-screen value from the top of the screen, and in the Y
+  direction for an unexpanded sprite is 30. For a sprite expanded in the Y
+  direction it would be 9. (Since each dot is twice as tall, this makes a
+  certain amount of sense, as the initial position is STILL calculated from
+  the top left corner of the sprite.)
+    The first Y value in which a sprite (expanded or not) is fully on the
+  screen (all 21 possible lines displayed) is 50.
+    The last Y value in which an unexpanded sprite is fully on the screen
+  is 229. The last Y value in which an expanded sprite is fully on the
+  screen is 208.
+    The first Y value in which a sprite is fully off the screen is 250."

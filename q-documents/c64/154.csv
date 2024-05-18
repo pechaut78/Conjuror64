@@ -1,0 +1,5 @@
+question,answer
+"What is the instruction that performs a return from interrupt in 6502?","RTI                    RTI Return from interrupt                      RTI
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   RTI                 |    4D   |    1    |    6     |"

@@ -1,0 +1,83 @@
+question,answer
+"How is the bit map mode works on C64?","There are two types of bit mapping available on the Commodore 64.
+  They are:
+
+    1) Standard (high-resolution) bit mapped mode (320-dot by 200-dot
+       resolution)
+
+    2) Multi-color bit mapped mode (160-dot by 200-dot resolution)
+
+    Each is very similar to the character type it is named for: standard
+  has greater resolution, but fewer color selections. On the other hand,
+  multi-color bit mapping trades horizontal resolution for a greater number
+  of colors in an 8-dot by 8-dot square.
+
+  STANDARD HIGH-RESOLUTION BIT MAP MODE
+
+    Standard bit map mode gives you a 320 horizontal dot by 200 vertical
+  dot resolution, with a choice of 2 colors in each 8-dot by 8-dot section.
+  Bit map mode is selected (turned ON) by setting bit 5 of the VIC-II
+  control register to a 1 at location 53265 ($D011 in HEX). The following
+  POKE will do this:
+
+    POKE 53265,PEEK(53265)OR 32
+
+    Bit map mode is turned OFF by setting bit 5 of the VIC-II control
+  register to 0 at location 53265 ($D011), like this:
+
+    POKE 53265,PEEK(53265)AND 223
+
+    Before we get into the details of the bit map mode, there is one more
+  issue to tackle, and that is where to locate the bit map area.
+
+  HOW IT WORKS
+
+    If you remember the PROGRAMMABLE CHARACTERS section you will recall
+  that you were able to set the bit pattern of a character stored in RAM to
+  almost anything you wanted. If at the same time you change the character
+  that is displayed on the screen, you would be able to change a single
+  dot, and watch it happen. This is the basis of bit-mapping. The entire
+  screen is filled with programmable characters, and you make your changes
+  directly into the memory that the programmable characters get their
+  patterns from.
+    Each of the locations in screen memory that were used to control what
+  character was displayed, are now used for color information. For example,
+  instead of POKEing a I in location 1024 to make an 'A' appear in the top
+  left hand corner of the screen, location 1024 now controls the colors of
+  the bits in that top left space.
+    Colors of squares in bit map mode do not come from color memory, as
+  they do in the character modes. Instead, colors are taken from screen
+  memory. The upper 4 bits of screen memory become the color of any bit
+  that is set to 1 in the 8 by 8 area controlled by that screen memory
+  location. The lower 4 bits become the color of any bit that is set to
+  a 0.
+
+  EXAMPLE: Type the following:
+
+  5 BASE=2*4096:POKE53272,PEEK(53272)OR8:REM PUT BIT MAP AT 8192
+  10 POKE53265,PEEK(53265)OR32:REM ENTER BIT MAP MODE
+
+  Now RUN the program.
+    Garbage appears on the screen, right? Just like the normal screen mode,
+  you have to clear the HIGH-RESOLUTION (HI-RES) screen before you use it.
+  Unfortunately, printing a CLR won't work in this case. Instead you have
+  to clear out the section of memory that you're using for your
+  programmable characters. Hit the <RUN/STOP> and <RESTORE> keys, then add
+  the following lines to your program to clear the HI-RES screen:
+
+  20 FORI=BASETOBASE+7999:POKEI,0:NEXT:REM CLEAR BIT
+  30 FORI=1024TO2023:POKEI,3:NEXT:REM SET COLOR TO CYAN AND BLACK
+
+    Now RUN the program again. You should see the screen clearing, then the
+  greenish blue color, cyan, should cover the whole screen. What we want to
+  do now is to turn the dots on and off on the HI-RES screen.
+
+    To SET a dot (turn a dot ON) or UNSET a dot (turn a dot OFF) you must
+  know how to find the correct bit in the character memory that you have to
+  set to a 1. In other words, you have to find the character you need to
+  change, the row of the character, and which bit of the row that you
+  have to change. You need a formula to calculate this.
+    We will use X and Y to stand for the horizontal and vertical positions
+  of a dot, The dot where X=0 and Y=0 is at the upper-left of the display.
+  Dots to the right have higher X values, and the dots toward the bottom
+  have higher Y values."

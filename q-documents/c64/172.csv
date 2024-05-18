@@ -1,0 +1,23 @@
+question,answer
+"What is the breakdown of the Commodore 64's memory map?","I/O BREAKDOWN
+
+    D000-D3FF   VIC (Video Controller)                     1 K Bytes
+    D400-D7FF   SID (Sound Synthesizer)                    1 K Bytes
+    D800-DBFF   Color RAM                                  1 K Nybbles
+    DC00-DCFF   CIA1 (Keyboard)                            256 Bytes
+    DD00-DDFF   CIA2 (Serial Bus, User Port/RS-232)        256 Bytes
+    DE00-DEFF   Open I/O slot #l (CP/M Enable)             256 Bytes
+    DF00-DFFF   Open I/O slot #2 (Disk)                    256 Bytes
+
+    The two open I/O slots are for general purpose user I/O, special pur-
+  pose I/O cartridges (such as IEEE), and have been tentatively designated
+  for enabling the Z-80 cartridge (CP/M option) and for interfacing to a
+  low-cost high-speed disk system.
+    The system provides for 'auto-start' of the program in a Commodore 64
+  Expansion Cartridge. The cartridge program is started if the first nine
+  bytes of the cartridge ROM starting at location 32768 ($8000) contain
+  specific data. The first two bytes must hold the Cold Start vector to be
+  used by the cartridge program. The next two bytes at 32770 ($8002) must
+  be the Warm Start vector used by the cartridge program. The next three
+  bytes must be the letters, CBM, with bit 7 set in each letter. The last
+  two bytes must be the digits '80' in PET ASCII."

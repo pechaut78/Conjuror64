@@ -1,0 +1,7 @@
+question,answer
+"How do you control sprite to background priority?","Sprite to background priority is controllable by the SPRITE-BACK-GROUND priority register located at 53275 ($D01B).
+  Each sprite has a bit in this register. If that bit is 0, that sprite has a higher priority
+  than the background on the screen. In other words, the sprite appears in
+  front of background data. If that bit is a 1, that sprite has a lower
+  priority than the background. Then the sprite appears behind the back-
+  ground data."

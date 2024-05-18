@@ -1,0 +1,10 @@
+question,answer
+"can to blank the screen?","SCREEN BLANKING
+
+    The display screen may be blanked by setting the DEN bit in register
+  17 ($11) to a '0'. When the screen is blanked, the entire screen will be
+  filled with the exterior color as set in register 32 ($20). When blanking
+  is active, only transparent (Phase 1) memory accesses are required, per-
+  mitting full processor utilization of the system bus. sprite data, however,
+  will be accessed if the sprites are not also disabled. The DEN bit must be
+  set to '1' for normal video display."

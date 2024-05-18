@@ -1,0 +1,4 @@
+question,answer
+"What is the command that turns on the Extended color mode in the VIC-II register?","Extended color mode is turned ON by setting bit 6 of the VIC-II regis-ter to a 1 at location 53265 ($D011 in HEX). The following POKE does it:
+
+    POKE 53265,PEEK(53265)OR 64"

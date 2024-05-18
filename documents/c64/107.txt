@@ -27,6 +27,7 @@
   Every branch instruction has an opposite branch instruction. The BEQ
   instruction has an opposite instruction BNE, which means Branch on result
   Not Equal to zero (i.e., Z not set).
+  
     The index registers have a number of associated instructions which
   modify their contents. For example, the INX instruction INcrements the X
   index register. If the X register contained $FF before it was incremented
@@ -35,6 +36,7 @@
   you had performed the increment of the X index that pushed it around to
   zero, you could use the BNE instruction to continue "looping" around,
   until X became zero.
+  
     The reverse of INX, is DEX, which is DEcrement the X index register. If
   the X index register is zero, DEX wraps around to $FF. Similarly, there
   are INY and DEY for the Y index register.
@@ -62,11 +64,10 @@
   instruction can branch to is limited. It can branch from 128 bytes back-
   ward, to 127 bytes forward.
 
-  +-----------------------------------------------------------------------+
-  | NOTE: This is a total range of 255 bytes which is, of course, the     |
-  | maximum range of values one byte can contain.                         |
-  +-----------------------------------------------------------------------+
-
+ 
+  NOTE: This is a total range of 255 bytes which is, of course, the
+  maximum range of values one byte can contain.
+  
     64MON will tell you if you "branch out of range" by refusing to "as-
   semble" that particular instruction. But don't worry about that now be-
   cause it's unlikely that you will have such branches for quite a while.
@@ -74,10 +75,5 @@
   of the "offset" principle as opposed to an absolute address. 64MON allows
   you to type in an absolute address, and it calculates the correct offset.
   This is just one of the "comforts" of using an assembler.
-
-  +-----------------------------------------------------------------------+
-  | NOTE: It is NOT possible to cover every single branch instruction. For|
-  | further information, refer to the Bibliography section in Appendix F. |
-  +-----------------------------------------------------------------------+
 
    

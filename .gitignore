@@ -1,5 +1,6 @@
 .env
-teacher/
+.token
+teacher
 kb_store
 __pycache__
 temp.txt

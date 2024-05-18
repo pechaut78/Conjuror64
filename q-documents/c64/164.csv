@@ -1,0 +1,5 @@
+question,answer
+"What is the instruction that transfers the accumulator to index Y in 6502?","TAY                TAY Transfer accumulator to index Y                TAY
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   TAY                 |    A8   |    1    |    2     |"

@@ -65,9 +65,8 @@
          This method is useful for tasks which must happen concurrently
        with a BASIC program, but has the drawback of being more difficult.
 
-  +-----------------------------------------------------------------------+
-  | NOTE: ALWAYS DISABLE INTERRUPTS BEFORE CHANGING THIS VECTOR!          |
-  +-----------------------------------------------------------------------+
+
+NOTE: ALWAYS DISABLE INTERRUPTS BEFORE CHANGING THIS VECTOR!
 
     5) The CHRGET routine is used by BASIC to get each character/token.
        This makes it simple to add new BASIC commands. Naturally, each new

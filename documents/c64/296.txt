@@ -13,7 +13,6 @@
 
 
      A13| A12| A11| A10| A09| A08| A07| A06| A05| A04| A03| A02| A01| A00
-  ------+----+----+----+----+----+----+----+----+----+----+----+----+------
      MP7| MP6| MP5| MP4| MP3| MP2| MP1| MP0| MC5| MC4| MC3| MC2| MC1| MC0
 
   Where MPx are the sprite pointer bits from the video matrix and MCx are the

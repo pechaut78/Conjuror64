@@ -1,0 +1,9 @@
+question,answer
+"What is the primary function of the input/output port described in the given text?","THE INPUT/OUTPUT PORT
+
+    This register appears at memory locations 0 (for the DATA DIRECTION
+  REGISTER) and 1 (for the actual PORT). It is an 8-bit input/output port.
+  On the Commodore 64 this register is used for memory management, to
+  allow the chip to control more than 64K of RAM and ROM memory.
+    The details of these registers are not given here. They are explained
+  as the principles needed to explain them are explained."

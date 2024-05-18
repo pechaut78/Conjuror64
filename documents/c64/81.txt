@@ -1,5 +1,5 @@
 
-  THE ENVELOPE GENERATOR
+  SID: THE ENVELOPE GENERATOR
 
     The volume of a musical tone changes from the moment you first hear it,
   all the way through until it dies out and you can't hear it anymore. When

@@ -10,7 +10,6 @@
 
    LATCH |ENABLE|
     BIT  | BIT  |                       WHEN SET
-  -------+------+----------------------------------------------------------
     IRST | ERST | Set when (raster count) = (stored raster count)
     IMDC | EMDC | Set by sprite-DATA collision register (first collision only)
     IMMC | EMMC | Set by sprite-sprite collision register (first collision only)

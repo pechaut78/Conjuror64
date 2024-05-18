@@ -1,0 +1,38 @@
+question,answer
+"What is the correct POKE statement to move the screen to a new location?","The location of screen memory can be changed easily by a POKE to
+  control register 53272 ($D018 HEX). However, this register is also used
+  to control which character set is used, so be careful to avoid disturbing
+  that part of the control register. The UPPER 4 bits control the location
+  of screen memory. To move the screen, the following statement should be
+  used:
+  POKE53272,(PEEK(53272)AND15)OR A
+  Where 'A' has one of the following values:
+$0000
+$0400
+$0800
+$0C00
+$1000
+$1400
+$1800
+$1C00
+$2000
+$2400
+$2400
+$2800 
+$2800 
+$2C00 
+$2C00 
+$3000 
+$3000 
+$3400 
+$3400 
+$3800 
+$3800 
+$3C00 
+$3C00 
+
+* Remember that the BANK ADDRESS of the VIC-II chip must be added in.
+* Remember that the BANK ADDRESS of the VIC-II chip must be added in.
+You must also tell the KERNAL'S screen editor where the screen is as
+follows: POKE 648, page (where page = address/256, e.g., 1024/256= 4,
+so POKE 648,4)."

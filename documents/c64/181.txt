@@ -19,13 +19,12 @@
   The data is then sent to the specified output device. The channel is left
   open after the call.
 
-  +-----------------------------------------------------------------------+
-  | NOTE: Care must be taken when using this routine to send data to a    |
-  | specific serial device since data will be sent to all open output     |
-  | channels on the bus. Unless this is desired, all open output channels |
-  | on the serial bus other than the intended destination channel must be |
-  | closed by a call to the KERNAL CLRCHN routine.                        |
-  +-----------------------------------------------------------------------+
+ 
+ NOTE: Care must be taken when using this routine to send data to a    
+ specific serial device since data will be sent to all open output     
+ channels on the bus. Unless this is desired, all open output channels 
+ on the serial bus other than the intended destination channel must be 
+ closed by a call to the KERNAL CLRCHN routine.                        
 
   How to Use:
 

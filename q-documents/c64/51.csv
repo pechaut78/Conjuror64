@@ -1,0 +1,16 @@
+question,answer
+"What is stored in the VIC-II chip control register at location $D01F in HEX that indicates sprite to data collisions?","SPRITE TO DATA COLLISIONS
+
+    Sprite to data collisions are detected in the sprite to data collision
+  register at location 53279 ($D01F in HEX) of the VIC-II chip control
+  register.
+    Each sprite has a bit in this register. If that bit is a 1 , then that
+  sprite is involved in a collision. The bits in this register remain set
+  until read (PEEKed). Once read, the register is automatically cleared, so
+  it is a good idea to save the value in a variable until you are finished
+  with it.
+
+   NOTE: MULTI-COLOR data 01 is considered transparent for collisions,   
+   even though it shows up on the screen. When setting up a background   
+   screen, it is a good idea to make everything that should not cause a  
+   collision 01 in multi-color mode."

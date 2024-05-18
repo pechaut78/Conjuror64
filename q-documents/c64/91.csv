@@ -1,0 +1,11 @@
+question,answer
+"What is the register A on 6502 and 6510?","THE REGISTERS INSIDE THE 6510 MICROPROCESSOR
+
+  THE ACCUMULATOR
+
+    This is THE most important register in the microprocessor. Various ma-
+  chine language instructions allow you to copy the contents of a memory
+  location into the accumulator, copy the contents of the accumulator into
+  a memory location, modify the contents of the accumulator or some other
+  register directly, without affecting any memory. And the accumulator is
+  the only register that has instructions for performing math."

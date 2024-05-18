@@ -43,11 +43,10 @@
     OPEN ($FFC0) (See KERNAL specifications for more information on entry
   conditions and instructions.)
 
-  +-----------------------------------------------------------------------+
-  | IMPORTANT NOTE: In a BASIC program, the RS-232 OPEN command should be |
+
+IMPORTANT NOTE: In a BASIC program, the RS-232 OPEN command should be
   | performed before creating any variables or arrays because an automatic|
   | CLR is performed when an RS-232 channel is OPENed (This is due to the |
   | allocation of 512 bytes at the top of memory.) Also remember that your|
   | program will be destroyed if 512 bytes of space are not available at  |
   | the time of the OPEN statement.                                       |
-  +-----------------------------------------------------------------------+

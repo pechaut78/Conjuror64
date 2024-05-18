@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the CLC instruction in the assembly language?","CLC                       CLC Clear carry flag                        CLC
+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+ Implied       |   CLC                 |    18   |    1    |    2     |"

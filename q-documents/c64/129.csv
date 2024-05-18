@@ -1,0 +1,6 @@
+question,answer
+"What is the assembly language instruction that sets the carry flag to 0 and clears the overflow flag?","CLV                      CLV Clear overflow flag                      CLV
+
+
+Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+ Implied       |   CLV                 |    B8   |    1    |    2     |"

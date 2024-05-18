@@ -1,0 +1,77 @@
+question,answer
+"Can you talk about the C64 memory management?","MEMORY MANAGEMENT ON THE
+  COMMODORE 64
+
+    The Commodore 64 has 64K bytes of RAM. It also has 20K bytes of ROM,
+  containing BASIC, the operating system, and the standard character set.
+  It also accesses input/output devices as a 4K chunk of memory. How is
+  this all possible on a computer with a 16-bit address bus, that is
+  normally only capable of addressing 64K?
+    The secret is in the 6510 processor chip itself. On the chip is an
+  input/output port. This port is used to control whether RAM or ROM or I/O
+  will appear in certain portions of the system's memory. The port is also
+  used to control the Datassette(TM), so it is important to affect only the
+  proper bits.
+    The 6510 input/output port appears at location 1. The data direction
+  register for this port appears at location 0. The port is controlled like
+  any of the other input/output ports in the system... the data direction
+  controls whether a given bit will be an input or an output, and the
+  actual data transfer occurs through the port itself. The lines in the
+  6510 control port are defined as follows:
+
+
+  |  NAME   |BIT| DIRECTION  |                 DESCRIPTION                |
+  |  LORAM  | 0 |   OUTPUT   | Control for RAM/ROM at $A000-$BFFF         |
+  |  HIRAM  | 1 |   OUTPUT   | Control for RAM/ROM at $E000-$FFFF         |
+  |  CHAREN | 2 |   OUTPUT   | Control for I/O/ROM at $D000-$DFFF         |
+  |         | 3 |   OUTPUT   | Cassette write line                        |
+  |         | 4 |   INPUT    | Cassette switch sense (0=play button down) |
+  |         | 5 |   OUTPUT   | Cassette motor control (0=motor spins)     |
+
+
+    The proper value for the data direction register is as follows:
+
+                              BITS 5 4 3 2 1 0
+                              ----------------
+                                   1 0 1 1 1 1
+
+  (where 1 is an output, and 0 is an input).
+
+    This gives a value of 47 decimal. The Commodore 64 automatically sets
+  the data direction register to this value.
+    The control lines, in general, perform the function given in their de-
+  scriptions. However, a combination of control lines are occasionally used
+  to get a particular memory configuration.
+    LORAM (bit 0) can generally be thought of as a control line which banks
+  the 8K byte BASIC ROM in and out of the microprocessor address space.
+  Normally, this line is HIGH for BASIC operation. If this line is
+  programmed LOW, the BASIC ROM will disappear from the memory map and be
+  replaced by 8K bytes of RAM from $A000-$BFFF.
+    HIRAM (bit 1) can generally be thought of as a control line which banks
+  the 8K byte KERNAL ROM in and out of the microprocessor address space.
+  Normally, this line is HIGH for BASIC operation. If this line is
+  programmed LOW, the KERNAL ROM will disappear from the memory map and be
+  replaced by 8K bytes of RAM from $E000-$FFFF.
+    CHAREN (bit 2) is used only to bank the 4K byte character generator ROM
+  in or out of the microprocessor address space. From the processor point
+  of view, the character ROM occupies the same address space as the I/O
+  devices ($D000-$DFFF). When the CHAREN line is set to 1 (as is normal),
+  the I/O devices appear in the microprocessor address space, and the
+  character ROM is not accessable. When the CHAREN bit is cleared to 0, the
+  character ROM appears in the processor address space, and the I/O devices
+  are not accessable. (The microprocessor only needs to access the
+  character ROM when downloading the character set from ROM to RAM. Special
+  care is needed for this... see the section on PROGRAMMABLE CHARACTERS in
+  the GRAPHICS chapter). CHAREN can be overridden by other control lines in
+  certain memory configurations. CHAREN will have no effect on any memory
+  configuration without I/O devices. RAM will appear from $D000-$DFFF
+  instead.
+
+
+  | NOTE: In any memory map containing ROM, a WRITE (a POKE) to a ROM     |
+  | location will store data in the RAM 'under' the ROM. Writing to a ROM |
+  | location stores data in the 'hidden' RAM. For example, this allows a  |
+  | hi-resolution screen to be kept underneath a ROM, and be changed      |
+  | without having to bank the screen back into the processor address     |
+  | space. Of course a READ of a ROM location will return the contents of |
+  | the ROM, not the 'hidden' RAM.                                        |"

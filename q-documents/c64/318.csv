@@ -1,0 +1,75 @@
+question,answer
+"What is the SID CONTROL REGISTER (Register 04)?","CONTROL REGISTER (Register 04)
+
+    This register contains eight control bits which select various options
+  on Oscillator 1.
+    GATE (Bit 0): The GATE bit controls the Envelope Generator for Voice 1.
+  When this bit is set to a one, the Envelope Generator is Gated
+  (triggered) and the ATTACK/DECAY/SUSTAIN cycle is initiated. When the bit
+  is reset to a zero, the RELEASE cycle begins. The Envelope Generator
+  controls the amplitude of Oscillator I appearing at the audio output,
+  therefore, the GATE bit must be set (along with suitable envelope pa-
+  rameters) for the selected output of Oscillator 1 to be audible. A de-
+  tailed discussion of the Envelope Generator can be found at the end of
+  this Appendix.
+    SYNC (Bit 1): The SYNC bit, when set to a one, synchronizes the
+  fundamental frequency of Oscillator 1 with the fundamental frequency of
+  Oscillator 3, producing 'Hard Sync' effects.
+    Varying the frequency of Oscillator 1 with respect to Oscillator 3 pro-
+  duces a wide range of complex harmonic structures from Voice I at the
+  frequency of Oscillator 3. In order for sync to occur, Oscillator 3 must
+  be set to some frequency other than zero but preferably lower than the
+  frequency of Oscillator 1. No other parameters of Voice 3 have any effect
+  on sync.
+    RING MOD (Bit 2): The RING MOD bit, when set to a one, replaces the
+  Triangle waveform output of Oscillator 1 with a 'Ring Modulated'
+  combination of Oscillators 1 and 3. Varying the frequency of Oscillator 1
+  with respect to Oscillator 3 produces a wide range of non-harmonic
+  overtone structures for creating bell or gong sounds and for special ef-
+  fects. In order for ring modulation to be audible, the Triangle waveform
+  of Oscillator 1 must be selected and Oscillator 3 must be set to some
+  frequency other than zero. No other parameters of Voice 3 have any effect
+  on ring modulation.
+    TEST (Bit 3): The TEST bit, when set to a one, resets and locks Oscil-
+  lator 1 at zero until the TEST bit is cleared. The Noise waveform output
+  of Oscillator 1 is also reset and the Pulse waveform output is held at a
+  DC level. Normally this bit is used for testing purposes, however, it can
+  be used to synchronize Oscillator 1 to external events, allowing the
+  generation of highly complex waveforms under real-time software control.
+  (Bit 4): When set to a one, the Triangle waveform output of Oscillator
+  1 is selected. The Triangle waveform is low in harmonics and has a
+  mellow, flute-like quality.
+    (Bit 5): When set to a one, the Sawtooth waveform output of Oscillator
+  1 is selected. The Sawtooth waveform is rich in even and odd harmonics
+  and has a bright, brassy quality.
+    (Bit 6): When set to a one, the Pulse waveform output of Oscillator 1
+  is selected. The harmonic content of this waveform can be adjusted by the
+  Pulse Width registers, producing tone qualities ranging from a bright,
+  hollow square wave to a nasal, reedy pulse. Sweeping the pulse width in
+  real-time produces a dynamic 'phasing' effect which adds a sense of
+  motion to the sound. Rapidly jumping between different pulse widths can
+  produce interesting harmonic sequences.
+    NOISE (Bit 7): When set to a one, the Noise output waveform of
+  Oscillator 1 is selected. This output is a random signal which changes at
+  the frequency of Oscillator 1. The sound quality can be varied from a low
+  rumbling to hissing white noise via the Oscillator 1 Frequency registers.
+  Noise is useful in creating explosions, gunshots, jet engines, wind, surf
+  and other unpitched sounds, as well as snore drums and cymbals. Sweeping
+  the oscillator frequency with Noise selected produces a dramatic rushing
+  effect.
+    One of the output waveforms must be selected for Oscillator 1 to be
+  audible, however, it is NOT necessary to de-select waveforms to silence
+  the output of Voice 1. The amplitude of Voice 1 at the final output is a
+  function of the Envelope Generator only.
+
+
+  +-----------------------------------------------------------------------+
+  | NOTE: The oscillator output waveforms are NOT additive. If more than  |
+  | one output waveform is selected simultaneously, the result will be a  |
+  | logical ANDing of the waveforms. Although this technique can be used  |
+  | to generate additional waveforms beyond the four listed above, it must|
+  | be used with care. If any other waveform is selected while Noise is   |
+  | on, the Noise output can 'lock up ' If this occurs, the Noise output  |
+  | will remain silent until reset by the TEST bit or by bringing RES     |
+  | (pin 5) low.                                                          |
+  +-----------------------------------------------------------------------+"

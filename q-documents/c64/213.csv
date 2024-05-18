@@ -1,0 +1,24 @@
+question,answer
+"What is the purpose of the UNLSN kernal function?","Function Name: UNLSN
+
+    Purpose: Send an UNLISTEN command
+    Call address: $FFAE (hex) 65454 (decimal)
+    Communication registers: None
+    Preparatory routines: None
+    Error returns: See READST
+    Stack requirements: 8
+    Registers affected: A
+
+    Description: This routine commands all devices on the serial bus to
+  stop receiving data from the Commodore 64 (i.e., UNLISTEN). Calling this
+  routine results in an UNLISTEN command being transmitted on the serial
+  bus. Only devices previously commanded to listen are affected. This
+  routine is normally used after the Commodore 64 is finished sending data
+  to external devices. Sending the UNLISTEN commands the listening devices
+  to get off the serial bus so it can be used for other purposes.
+
+  How to Use:
+    1) Call this routine.
+
+  EXAMPLE:
+    JSR UNLSN"

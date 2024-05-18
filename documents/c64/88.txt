@@ -1,7 +1,7 @@
 
 
 
-    The OPERATING SYSTEM of the Commodore 64 then allows you to type on the
+    The C64 OPERATING SYSTEM of the Commodore 64 then allows you to type on the
   keyboard, and use the built-in SCREEN EDITOR on the Commodore 64. The
   SCREEN EDITOR allows you to move the cursor, DELete, INSert, etc., and
   is, in fact, only one part of the operating system that is built in for

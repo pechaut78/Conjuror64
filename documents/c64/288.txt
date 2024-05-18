@@ -9,7 +9,6 @@
   interprets the dot data as follows:
 
         BIT PAIR      |                   DISPLAY COLOR
-  --------------------+----------------------------------------------------
            00         |  Background #0 color (register 33 ($21))
            01         |  Upper nybble of video matrix pointer
            10         |  Lower nybble of video matrix pointer

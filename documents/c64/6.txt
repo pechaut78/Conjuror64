@@ -30,7 +30,6 @@
   your Commodore 64, bits 0 and 1 of location 56576 are automatically set
   to BANK 0 ($0000-$3FFF) for all display information.
 
-  +-----------------------------------------------------------------------+
-  | *NOTE: The Commodore 64 character set is not available to the VIC-II  |
-  | chip in BANKS 1 and 3. (See character memory section.)                |
-  +-----------------------------------------------------------------------+
+  
+  NOTE: The Commodore 64 character set is not available to the VIC-II 
+  chip in BANKS 1 and 3. (See character memory section.)

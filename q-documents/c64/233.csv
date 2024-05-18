@@ -1,0 +1,14 @@
+question,answer
+"describe how the ligth pen works","LIGHT PEN
+
+    The light pen input latches the current screen position into a pair of
+  registers (LPX, LPY) on a low-going edge. The X position register 19
+  ($13) will contain the 8 MSB of the X position at the time of transition.
+  Since the X position is defined by a 512-state counter (9 bits),
+  resolution to 2 horizontal dots is provided. Similarly, the Y position is
+  latched in its register 20 ($14), but here 8 bits provide single raster
+  resolution within the visible display. The light pen latch may be
+  triggered only once per frame, and subsequent triggers within the same
+  frame will have no effect. Therefore, you must take several samples
+  before turning the pen to the screen (3 or more samples average),
+  depending upon the characteristics of your light pen."

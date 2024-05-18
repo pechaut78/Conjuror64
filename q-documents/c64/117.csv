@@ -1,0 +1,7 @@
+question,answer
+"describe the BCS (Branch on Carry Set) operation?","BCS                      BCS Branch on carry set                      BCS
+
+ Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  Relative      |   BCS Oper            |    B0   |    2    |    2*    |
+  * Add 1 if branch occurs to same  page.
+  * Add 2 if branch occurs to next  page."

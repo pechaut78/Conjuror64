@@ -17,6 +17,7 @@
   reverse) which pulls a value off the stack and into the accumulator. The
   status register can also be pushed and pulled with the PHP and PLP,
   respectively.
+
     The stack is 256 bytes long, and is located in page one of memory. It
   is therefore from $01 00 to $01 FF. It is organized backwards in memory.
   In other words, the first position in the stack is at $01 FF, and the
@@ -27,16 +28,11 @@
   next position (decremented). When something is pulled off the stack, the
   stack pointer is incremented, and the byte pointed to by the stack
   pointer is placed into the specified register.
-Up to this point, we have covered immediate, zero page, and absolute
-  mode instructions. We have also covered, but have not really talked
-  about, the "implied" mode. The implied mode means that information is
-  implied by an instruction itself. In other words, what registers, flags,
+
+  The implied mode means that information isimplied by an instruction itself. In other words, what registers, flags,
   and memory the instruction is referring to. The examples we have seen are
   PHA, PLA, PHP, and PLP, which refer to stack processing and the
   accumulator and status registers, respectively.
 
-  +-----------------------------------------------------------------------+
-  | NOTE: The X register will be referred to as X from now on, and        |
-  | similarly A (accumulator), Y (Y index register), S (stack pointer),   |
-  | and P (processor status).                                             |
-  +-----------------------------------------------------------------------+
+
+NOTE: The X register will be referred to as X from now on, and similarly A (accumulator), Y (Y index register), S (stack pointer), and P (processor status).           |

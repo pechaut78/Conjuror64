@@ -1,4 +1,4 @@
-  B-39. Function Name: VECTOR
+Function Name: VECTOR
 
     Purpose: Manage RAM vectors
     Call address: $FF8D (hex) 65421 (decimal)
@@ -16,12 +16,11 @@
   clear, the user list pointed to by the X and Y registers is transferred
   to the system RAM vectors. The RAM vectors are listed in the memory map.
 
-  +-----------------------------------------------------------------------+
-  | NOTE: This routine requires caution in its use. The best way to use it|
-  | is to first read the entire vector contents into the user area, alter |
-  | the desired vectors, and then copy the contents back to the system    |
-  | vectors.                                                              |
-  +-----------------------------------------------------------------------+
+
+ NOTE: This routine requires caution in its use. The best way to use it
+ is to first read the entire vector contents into the user area, alter 
+ the desired vectors, and then copy the contents back to the system    
+ vectors.                                                              
 
   How to Use:
 

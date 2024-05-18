@@ -1,7 +1,7 @@
 
 
 
-  B-35. Function Name: TKSA
+  Function Name: TKSA
 
     Purpose: Send a secondary address to a device commanded to TALK
     Call address: $FF96 (hex) 65430 (decimal)

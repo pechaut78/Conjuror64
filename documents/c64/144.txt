@@ -1,14 +1,9 @@
   LDY                   LDY Load index Y with memory                    LDY
                                                         N Z C I D V
-  Operation:  M -> Y                                    / / _ _ _ _
-
-  +----------------+-----------------------+---------+---------+----------+
   | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
   |  Immediate     |   LDY #Oper           |    A0   |    2    |    2     |
   |  Zero Page     |   LDY Oper            |    A4   |    2    |    3     |
   |  Zero Page,X   |   LDY Oper,X          |    B4   |    2    |    4     |
   |  Absolute      |   LDY Oper            |    AC   |    3    |    4     |
   |  Absolute,X    |   LDY Oper,X          |    BC   |    3    |    4*    |
-  +----------------+-----------------------+---------+---------+----------+
   * Add 1 when page boundary is crossed.

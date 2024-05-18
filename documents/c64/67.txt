@@ -4,15 +4,8 @@
 
             Alternative Sprite Memory Pointers and Memory Locations
                             Using Cassette Buffer
-  +---------------+-------+-------+-------+-------------------------------+
-  | Put in Memory |SPRT 0 |SPRT 1 |SPRT 2 | If you're using 1 to 3 sprites|
-  | (Set pointers)|2040,13|2041,14|2042,15| you can use these memory      |
-  +---------------+-------+-------+-------+ locations in the cassette     |
-  | Sprite Pixel  | 832   | 896   | 960   | buffer (832 to 1023) but for  |
-  | Locations for | to 894| to 958|to 1022| more than 3 sprites we suggest|
-  | Blocks 13-15  |       |       |       | using locations from 12288 to |
-  +---------------+-------+-------+-------+ 12798 (see chart).            |
-  TURNING ON SPRITES:                     +-------------------------------+
+  
+  TURNING ON SPRITES:
 
     You can turn on any individual sprite by using POKE V+21 and the number
   from the chart... BUT... turning on just ONE sprite will turn OFF any

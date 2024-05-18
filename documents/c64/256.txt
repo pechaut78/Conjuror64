@@ -1,9 +1,8 @@
 
 
-                              FILTER SETTINGS
-               +------------+--------------------------------+
+                            SID  FILTER SETTINGS
+
                |  Location  |            Contents            |
-               +------------+--------------------------------+
                |    54293   |  Low cutoff frequency (0-7)    |
                |    54294   |  High cutoff frequency (0-255) |
                |    54295   |  Resonance (bits 4-7)          |

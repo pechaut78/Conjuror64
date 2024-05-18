@@ -1,0 +1,18 @@
+question,answer
+"What is the maximum addressable memory location that a sprite pointer can point to?","SPRITE POINTERS
+
+    Even though each sprite takes only 63 bytes to define, one more byte
+  is needed as a place holder at the end of each sprite. Each sprite, then,
+  takes up 64 bytes. This makes it easy to calculate where in memory your
+  sprite definition is, since 64 bytes is an even number and in binary it's
+  an even power.
+    Each of the 8 sprites has a byte associated with it called the SPRITE
+  POINTER. The sprite pointers control where each sprite definition is lo-
+  cated in memory. These 8 bytes are always located as the lost 8 bytes
+  of the 1K chunk of screen memory. Normally, on the Commodore 64, this
+  means they begin at location 2040 ($07F8 in HEX). However, if you move
+  the screen, the location of your sprite pointers will also move.
+    Each sprite pointer can hold a number from 0 to 255. This number points
+  to the definition for that sprite. Since each sprite definition takes
+  64 bytes, that means that the pointer can 'see' anywhere in the 16K
+  block of memory that the VIC-II chip can access (since 256*64=16K)."

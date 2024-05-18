@@ -1,0 +1,39 @@
+question,answer
+"HWhat is the purpose of the CHROUT routine in the KERNAL?","B-5. Function Name: CHROUT
+
+    Purpose: Output a character
+    Call address: $FFD2 (hex) 65490 (decimal)
+    Communication registers: A
+    Preparatory routines: (CHKOUT,OPEN)
+    Error returns: 0 (See READST)
+    Stack requirements: 8+
+    Registers affected: A
+
+    Description: This routine outputs a character to an already opened
+  channel. Use the KERNAL OPEN and CHKOUT routines to set up the output
+  channel before calling this routine, If this call is omitted, data is
+  sent to the default output device (number 3, the screen). The data byte
+  to be output is loaded into the accumulator, and this routine is called.
+  The data is then sent to the specified output device. The channel is left
+  open after the call.
+
+ 
+ NOTE: Care must be taken when using this routine to send data to a    
+ specific serial device since data will be sent to all open output     
+ channels on the bus. Unless this is desired, all open output channels 
+ on the serial bus other than the intended destination channel must be 
+ closed by a call to the KERNAL CLRCHN routine.                        
+
+  How to Use:
+
+    0) Use the CHKOUT KERNAL routine if needed, (see description above).
+    1) Load the data to be output into the accumulator.
+    2) Call this routine.
+
+  EXAMPLE:
+
+    ;DUPLICATE THE BASIC INSTRUCTION CMD 4,'A';
+    LDX #4          ;LOGICAL FILE #4
+    JSR CHKOUT      ;OPEN CHANNEL OUT
+    LDA #'A
+    JSR CHROUT      ;SEND CHARACTER"

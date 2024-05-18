@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the instruction "PLP" in 6502?","PLP               PLP Pull processor status from stack                PLA
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   PLP                 |    28   |    1    |    4     |"

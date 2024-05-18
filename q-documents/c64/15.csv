@@ -1,0 +1,19 @@
+question,answer
+"What is the primary advantage of using multi-color mode graphics over standard high-resolution graphics?","MULTI-COLOR MODE GRAPHICS
+
+    Standard high-resolution graphics give you control of very small dots
+  on the screen. Each dot in character memory can have 2 possible values,
+  1 for on and 0 for off. When a dot is off, the color of the screen is
+  used in the space reserved for that dot. If the dot is on, the dot is
+  colored with the character color you have chosen for that screen posi-
+  tion. When you're using standard high-resolution graphics, all the dots
+  within each 8X8 character can either have background color or foreground
+  color. In some ways this limits the color resolution within that space.
+  For example, problems may occur when two different colored lines cross.
+    Multi-color mode gives you a solution to this problem. Each dot in
+  multi-color mode can be one of 4 colors: screen color (background color
+  register #0), the color in background register #1, the color in back-
+  ground color register #2, or character color. The only sacrifice is in
+  the horizontal resolution, because each multi-color mode dot is twice as
+  wide as a high-resolution dot. This minimal loss of resolution is more
+  than compensated for by the extra abilities of multi-color mode."

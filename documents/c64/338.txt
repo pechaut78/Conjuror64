@@ -3,9 +3,7 @@
 
   SID WRITE CYCLE
 
-  +----------+----------------------------+-------+-------+-------+-------+
   |  SYMBOL  |           NAME             |  MIN  |  TYP  |  MAX  | UNITS |
-  +----------+----------------------------+-------+-------+-------+-------+
   |   Tw     |   Write Pulse Width        |  300  |   -   |   -   |   ns  |
   |   Twh    |   Write Hold Time          |    0  |   -   |   -   |   ns  |
   |   Taws   |   Address Set-up Time      |    0  |   -   |   -   |   ns  |
@@ -13,4 +11,3 @@
   |   Tch    |   Chip Select Hold Time    |    0  |   -   |   -   |   ns  |
   |   Tvd    |   Valid Data               |   80  |   -   |   -   |   ns  |
   |   Tdh    |   Data Hold Time           |   10  |   -   |   -   |   ns  |
-  +----------+----------------------------+-------+-------+-------+-------+

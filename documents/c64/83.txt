@@ -19,38 +19,15 @@
   filter will pass the frequencies below cutoff and attenuate those above.
 
 
-                             |
-                      AMOUNT | -----+
-                      PASSED |       \
-                             |        \
-                             |         \
-                             +------|-------
-                                FREQUENCY
-
     Finally, the chip is equipped with a bandpass filter, which passes a
   narrow band of frequencies around the cutoff, and attenuates all others.
 
-
-                             |
-                      AMOUNT |      +
-                      PASSED |     / \
-                             |    /   \
-                             |   /     \
-                             +------|-------
-                                FREQUENCY
 
     The high- and low-pass filters can be combined to form a notch reject
   filter which passes frequencies away from the cutoff while attenuating
   at the cutoff frequency.
 
 
-                             |
-                      AMOUNT | --+     +---
-                      PASSED |    \   /
-                             |     \ /
-                             |      +
-                             +------|-------
-                                FREQUENCY
 
     Register 24 determines which type filter you want to use. This is in
   addition to register 24's function as the overall volume control. Bit 6

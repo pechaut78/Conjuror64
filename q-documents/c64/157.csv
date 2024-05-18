@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the SEC instruction in the 6502 microprocessor?","SEC                        SEC Set carry flag                         SEC
+
+  | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
+  |  Implied       |   SEC                 |    38   |    1    |    2     |"

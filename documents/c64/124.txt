@@ -3,12 +3,7 @@
 
   BVC                   BVC Branch on overflow clear                    BVC
 
-  Operation:  Branch on V = 0                           N Z C I D V
-                                                        _ _ _ _ _ _
-  +----------------+-----------------------+---------+---------+----------+
   | Addressing Mode| Assembly Language Form| OP CODE |No. Bytes|No. Cycles|
-  +----------------+-----------------------+---------+---------+----------+
   |  Relative      |   BVC Oper            |    50   |    2    |    2*    |
-  +----------------+-----------------------+---------+---------+----------+
   * Add 1 if branch occurs to same page.
   * Add 2 if branch occurs to different page.

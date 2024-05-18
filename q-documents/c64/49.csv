@@ -1,0 +1,8 @@
+question,answer
+"What feature of the VIC-II chip allows for the detection of collisions between sprites and background data?","COLLISION DETECTS
+
+    One of the more interesting aspects of the VIC-II chip is its collision
+  detection abilities. Collisions can be detected between sprites, or be-
+  tween sprites and background data. A collision occurs when a non-zero
+  part of a sprite overlaps a non-zero portion of another sprite or char-
+  acters on the screen."

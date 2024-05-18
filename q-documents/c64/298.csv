@@ -1,0 +1,19 @@
+question,answer
+"What is the number of rows and columns displayed on the screen when the RSEL bit is set to 1 and the CSEL bit is set to 1?","ROW/COLUMN SELECT
+
+    The normal display consists of 25 rows of 40 characters (or character
+  regions) per row. For special display purposes, the display window may be
+  reduced to 24 rows and 38 characters. There is no change in the format of
+  the displayed information, except that characters (bits) adjacent to the
+  exterior border area will now be covered by the border. The select bits
+  operate as follows:
+
+
+    RSEL |      NUMBER OF ROWS        |  CSEL |     NUMBER OF COLUMNS
+     0   |          24 rows           |   0   |         38 columns
+     1   |          25 rows           |   1   |         40 columns
+
+  The RSEL bit is in register 17 ($11) and the CSEL bit is in register 22
+  ($16). For standard display the larger display window is normally used,
+  while the smaller display window is normally used in conjunction with
+  scrolling."

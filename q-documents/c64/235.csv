@@ -1,0 +1,53 @@
+question,answer
+"How do I open an RS-232 communication?","OPENING AN RS-232 CHANNEL
+
+    Only one RS-232 channel should be open at any time; a second OPEN
+  statement will cause the buffer pointers to be reset. Any characters in
+  either the transmit buffer or the receive buffer will be lost.
+    Up to 4 characters can be sent in the filename field. The first two are
+  the control and command register characters; the other two are reserved
+  for future system options. Baud rate, parity, and other options can be
+  selected through this feature.
+    No error-checking is done on the control word to detect a non-
+  implemented baud rate. Any illegal control word will cause the system
+  output to operate at a very slow rate (below 50 baud).
+
+  BASIC SYNTAX:
+
+    OPEN lfn,2,0,'<control register><command register><opt baud low><opt
+  baud high>'
+    lfn-The logical file number (lfn) then can be any number from 1 through
+  255. But be aware of the fact that if you choose a logical file number
+  that is greater than 127, then a line feed will follow all carriage
+  returns.
+               
+    <control register>- Is a single byte character (see Figure 6-1, Control
+  Register Map) required to specify the baud rates. If the lower 4 bits of
+  the baud rate is equal to zero (0), the <opt baud low><opt baud high>
+  characters give you a rate based on the following:
+    <opt baud low>=<system frequency/rate/2-100-<opt baud high>*256
+    <opt baud high>=INT((system frequency/rate/2-100)/256
+
+ 
+                    
+  The formulas above are based on the fact that:
+
+    system frequency = 1.02273E6 NTSC (North American TV standard)
+                     = 0.98525E6 PAL (U.K. and most European TV standard)
+
+    <command register>- Is a single byte character (see Figure 6-2, Command
+  Register Map) that defines other terminal parameters. This character is
+  NOT required.
+
+  KERNAL ENTRY:
+
+    OPEN ($FFC0) (See KERNAL specifications for more information on entry
+  conditions and instructions.)
+
+
+IMPORTANT NOTE: In a BASIC program, the RS-232 OPEN command should be
+  | performed before creating any variables or arrays because an automatic|
+  | CLR is performed when an RS-232 channel is OPENed (This is due to the |
+  | allocation of 512 bytes at the top of memory.) Also remember that your|
+  | program will be destroyed if 512 bytes of space are not available at  |
+  | the time of the OPEN statement.                                       |"

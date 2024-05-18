@@ -1,0 +1,28 @@
+question,answer
+"describe the 6526 Interrupt Control Register?","Interrupt Control (ICR)
+
+    There are five sources of interrupts on the 6526: underflow from TIMER
+  A, underflow from TIMER B, TOD ALARM, Serial Port full/empty and /FLAG.
+  A single register provides masking and interrupt information. The
+  interrupt Control Register consists of a write-only MASK register and a
+  read-only DATA register. Any interrupt will set the corresponding bit in
+  the DATA register. Any interrupt which is enabled by the MASK register
+  will set the IR bit (MSB) of the DATA register and bring the /IRQ pin
+  low. In a multi-chip system, the IR bit can be polled to detect which
+  chip has generated an interrupt request. The interrupt DATA register is
+  cleared and the /IRQ line returns high following a read of the DATA
+  register. Since each interrupt sets an interrupt bit regardless of the
+  MASK, and each interrupt bit can be selectively masked to prevent the
+  generation of a processor interrupt, it is possible to intermix polled
+  interrupts with true interrupts. However, polling the IR bit will cause
+  the DATA register to clear, therefore, it is up to the user to preserve
+  the information contained in the DATA register if any polled interrupts
+  were present.
+    The MASK register provides convenient control of individual mask bits.
+  When writing to the MASK register, if bit 7 (SET/CLEAR) of the data
+written is a ZERO, any mask bit written with a one will be cleared, while
+  those mask bits written with a zero will be unaffected. If bit 7 of the
+  data written is a ONE, any mask bit written with a one will be set, while
+  those mask bits written with a zero will be unaffected. In order for an
+  interrupt flag to set IR and generate an Interrupt Request, the corre-
+  sponding MASK bit must be set."

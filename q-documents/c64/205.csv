@@ -1,0 +1,33 @@
+question,answer
+"What is the purpose of the SETMSG kernal routine?","B-29. Function Name: SETMSG
+
+    Purpose: Control system message output
+    Call address: $FF90 (hex) 65424 (decimal)
+    Communication registers: A
+    Preparatory routines: None
+    Error returns: None
+    Stack requirements: 2
+    Registers affected: A
+
+    Description: This routine controls the printing of error and control
+  messages by the KERNAL. Either print error messages or print control mes-
+  sages can be selected by setting the accumulator when the routine is
+  called. FILE NOT FOUND is an example of an error message. PRESS PLAY ON
+  CASSETTE is an example of a control message.
+    Bits 6 and 7 of this value determine where the message will come from.
+  If bit 7 is 1, one of the error messages from the KERNAL is printed. If
+  bit 6 is set, control messages are printed.
+
+  How to Use:
+
+    1) Set accumulator to desired value.
+    2) Call this routine.
+
+  EXAMPLE:
+
+    LDA #$40
+    JSR SETMSG          ;TURN ON CONTROL MESSAGES
+    LDA #$80
+    JSR SETMSG          ;TURN ON ERROR MESSAGES
+    LDA #0
+    JSR SETMSG          ;TURN OFF ALL KERNAL MESSAGES"
