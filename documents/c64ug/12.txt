@@ -1,0 +1,6 @@
+
+
+<RETURN> key
+
+  The <RETURN> key signals the computer  to look at the information  that
+you typed and enters that information into memory.

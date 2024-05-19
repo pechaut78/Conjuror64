@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the NXTBIT register located at address $00B5?","NXTBIT    address $00B5        is: RS232 Next Bit to send/Tape Read - End of Tape."

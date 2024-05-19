@@ -1,0 +1,6 @@
+
+
+basic: ABS(X)  (absolute value)
+
+  ABS  returns  the absolute value of the number,  without its sign (+ or
+-). The answer is always positive.

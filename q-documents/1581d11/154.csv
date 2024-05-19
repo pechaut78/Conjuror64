@@ -1,0 +1,5 @@
+question,answer
+"What is the error message and explanation for a disk controller's inability to locate the header of a requested data block?","1581 disk: Controller commands error code READ ERROR (block header not found)
+    The  disk  controller  is  unable to locate the header of the
+    requested data block.  Caused by an illegal block or a header
+    that has been destroyed. Usually unrecoverable."

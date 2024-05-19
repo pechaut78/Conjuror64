@@ -1,0 +1,25 @@
+question,answer
+"What is the purpose and syntax of the SAVE command in Commodore 64 BASIC?","basic: SAVE
+
+  This  command  will  store  the program currently in memory on cassette
+or  disk.  If  you  just  type SAVE and RETURN, the program will be SAVEd
+on  cassette.  The  computer  has no way of knowing if there is a program
+already  on  that  tape, so be careful with your tapes or you may erase a
+valuable program.
+  If you type SAVE followed by a name in quotes or a string variable, the
+computer  will  give  the  program  that  name,  so it can be more easily
+located  and retrieved in the future.  The name may also be followed by a
+device number.
+  After  the  device  number,  there  can be a comma and a second number,
+either  0  or  1. If the second number is 1, the Commodore 64 will put an
+END-OF-TAPE  marker  after  your  program.  This signals the computer not
+to  look  any  further on the tape if you were to give an additional LOAD
+command.  If  you  try  to  LOAD  a program and the computer finds one of
+these markers, you will get a FILE NOT FOUND ERROR.
+
+  SAVE              Stores program to tape without name
+  SAVE 'HELLO'      Stores on tape with name HELLO
+  SAVE A$           Stores on tape with name A$
+  SAVE 'HELLO',8    Stores on disk with name HELLO
+  SAVE 'HELLO',1,1  Stores on tape with name HELLO and follows
+                    program with END-OF-TAPE marker"

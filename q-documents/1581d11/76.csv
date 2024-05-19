@@ -1,0 +1,13 @@
+question,answer
+"What is the purpose of using index files in conjunction with sequential and relative files?","1581 disk:  THE VALUE OF INDEX FILES
+
+  In the last two chapters you have learned how to use sequential
+and relative files separately.  But they are often used together,
+with the sequential file used to keep brief records of which name
+in  the  relative  file is stored in each record number. That way
+the  contents  of  the  sequential file can be read into a string
+array and sorted alphabetically. After sorting, a technique known
+as a binary search can be used to quickly find an entered name in
+the  array,  and  read  in  or write the associated record in the
+relative  file.  Advanced  programs can maintain two or more such
+index files, sorted in differing ways simultaneously."

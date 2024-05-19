@@ -1,0 +1,2 @@
+question,answer
+"What does the bit 3 of address $D417 represent in the device configuration?","address $D417	bits 3 is: 	Filter External Input: 1 = Yes, 0 = No"

@@ -1,0 +1,11 @@
+
+1581 disk: Controller commands error code 72: DISK FULL
+    Either  the  diskette or its directory is full.  DISK FULL is
+    sent  when  two  blocks  are  still  available,  allowing the
+    current  file  to be closed.  If you get this message and the
+    directory  shows any blocks left,  you have too many separate
+    files  in  your  directory,  and  will  need to combine some,
+    delete any that are no longer needed, or copy some to another
+    diskette.
+
+7

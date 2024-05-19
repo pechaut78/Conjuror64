@@ -1,0 +1,6 @@
+
+
+basic: EXP(X)
+
+  Returns the value of the mathematical constant e (2.71827183) raised to
+the power of X.

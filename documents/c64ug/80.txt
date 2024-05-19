@@ -1,0 +1,14 @@
+
+
+
+basic: ON
+
+  This command turns the GOTO and GOSUB commands into special versions of
+the IF statement. ON is followed by a formula, which is evaluated. If the
+result of the calculation is one, the first line on the list is executed;
+if the result is 2, the second line is executed, and so on. If the result
+is 0,  negative,  or  larger  than  the  list  of numbers,  the next line
+executed will be the statement following the ON statement.
+
+  10 INPUT X
+  20 ON X GOTO 10,20,30,40,50

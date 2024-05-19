@@ -1,0 +1,2 @@
+
+address $0001 bit 5	is: Cassette Motor Control O = ON, 1 = OFF

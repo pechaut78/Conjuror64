@@ -1,0 +1,2 @@
+
+address $DD0D bit 4 is:	FLAG1 NMI (User/RS-232 Received Data Input)

@@ -1,0 +1,57 @@
+question,answer
+"What is the procedure to adjust the color settings on a Commodore 64 computer using the keyboard controls?","C64 Color Adjustment
+
+  There  is  a simple way to get a pattern of colors on the TV so you can
+easily  adjust  the  set.  Even  though  you may not be familiar with the
+operation  of the computer right now,  just follow along,  and you'll see
+how easy it is to use the Commodore 64.
+  First,  look on the left side of the keyboard and locate the key marked
+<CTRL>.  This  stands for ConTRoL and is used,  in conjunction with other
+keys, to instruct the computer to do a specific task.
+
+  To  use  a  control  function,  you  hold  down  the  <CTRL>  key while
+depressing a second key.
+  Try this:  hold the <CTRL> key  while also depressing the <9> key. Then
+release both keys. Nothing obvious should have happened, but if you touch
+any  key  now,  the  screen  will show the character displayed in reverse
+type, rather than normal type -- like the opening message or anything you
+typed earlier.
+  Hold down the <SPACE BAR>. What happens? If you did the above procedure
+correctly,  you  should  see  a light blue bar move across the screen and
+then move down to the next line as long as the <SPACE BAR> is depressed.
+
+     **** COMMODORE 64 BASIC V2 ****
+  64K RAM SYSTEM  38911 BASIC BYTES FREE
+
+  READY.
+
+  Now,  hold <CTRL>  while depressing any of the other number keys.  Each
+of  them  has a color  marked on the front.  Anything displayed from this
+point will be in that color. For example, hold <CTRL> and the <8> key and
+release both. Now hold the <SPACE BAR>.
+  Watch the display.  The bar is now in yellow!  In a like manner you can
+change  the  bar  to  any  of  the colors indicated on the number keys by
+holding <CTRL> and the appropriate key.
+  Change the bar to a few more different colors and then adjust the color
+and  tint  controls  on  your  TV  so  the display matches the colors you
+selected.
+  The display should appear something like this:
+
+     **** COMMODORE 64 BASIC V2 ****
+  64K RAM SYSTEM  38911 BASIC BYTES FREE
+
+  READY.
+  _________________________     <------ <3> Red bar
+  _______ ____________ ____     <------ <3>,<6>,<7> Red, Green, Blue bars
+  __________ ______________     <------ <7>,<8> Blue, Yellow bars
+  ____________                  <------ <8> Yellow bar
+
+  At  this  point  everything is properly adjusted and working correctly.
+The following chapters will introduce you to the BASIC language. However,
+you can  immediately start using some of the many prewritten applications
+and  games available for the Commodore 64  without knowing anything about
+computer programming.
+  Each  of  these packages contains detailed information about how to use
+the  program.  It is suggested,  though,  that you read through the first
+few  chapters  of  this  manual  to  become  more familiar with the basic
+operation of your new system."

@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the $98 command in the 1581 disk controller job commands?","1581 disk Controller Job commands: ERRLEDON_DV
+   $98     Enables error LED blinking."

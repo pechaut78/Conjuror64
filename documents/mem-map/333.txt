@@ -1,0 +1,2 @@
+
+RIPRTY    address $00AB        is: RS232 Input parity/Tape temporary.

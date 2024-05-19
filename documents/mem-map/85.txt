@@ -1,0 +1,2 @@
+
+Address $4277		is:	Envelope Generator 1: Attack / Decay Cycle Control

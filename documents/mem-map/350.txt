@@ -1,0 +1,2 @@
+
+STAL      address $00C1-00C2   is: Start Address for LOAD and Cassette Write.

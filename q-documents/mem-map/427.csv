@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location at address $030D in a Commodore 64 computer?","SXREG     address $030D        is: Storage for 6510 X-Register during SYS."

@@ -1,0 +1,2 @@
+
+address $4283	bits		6	is: Select Pulse Waveform, 1 = On

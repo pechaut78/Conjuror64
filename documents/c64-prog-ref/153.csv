@@ -1,0 +1,13 @@
+question,answer
+"What is the purpose of ROR instruction?","Rotate one bit right (memory or accumulator)"
+"What are the addressing modes for ROR instruction?","Accumulator, Zero Page, Zero Page,X, Absolute, Absolute,X"
+"What is the number of bytes for ROR instruction in Accumulator mode?","1"
+"What is the number of cycles for ROR instruction in Accumulator mode?","2"
+"What is the number of bytes for ROR instruction in Zero Page mode?","2"
+"What is the number of cycles for ROR instruction in Zero Page mode?","5"
+"What is the number of bytes for ROR instruction in Zero Page,X mode?","2"
+"What is the number of cycles for ROR instruction in Zero Page,X mode?","6"
+"What is the number of bytes for ROR instruction in Absolute mode?","3"
+"What is the number of cycles for ROR instruction in Absolute mode?","6"
+"What is the number of bytes for ROR instruction in Absolute,X mode?","3"
+"What is the number of cycles for ROR instruction in Absolute,X mode?","7"

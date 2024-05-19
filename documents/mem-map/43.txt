@@ -1,0 +1,2 @@
+
+address $D018 bits 3-1 is: Character Dot-Data Base	Address (inside VIC)

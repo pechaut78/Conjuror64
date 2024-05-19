@@ -1,0 +1,2 @@
+
+RIBUF     address $00F7-00F8   is: RS232 Input Buffer Pointer.

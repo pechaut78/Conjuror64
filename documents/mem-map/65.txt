@@ -1,0 +1,2 @@
+
+address $3288		is:			Sprite 1 Color

@@ -1,0 +1,6 @@
+
+
+basic: LOG(X)  (logarithm)
+
+  Will  return  the natural log of X.  The natural log to the base e (see
+EXP(X)). To convert to log base 10, simply divide by LOG(10).

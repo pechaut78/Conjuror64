@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the ILOAD instruction at address $0330-0331 in the Commodore 64 Kernal?","ILOAD     address $0330-0331   is: Vector: Indirect entry to Kernal LOAD    Routine ($F4A5)."

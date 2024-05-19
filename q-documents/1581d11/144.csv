@@ -1,0 +1,4 @@
+question,answer
+"What is the function of the TPWRT_DV command in a disk controller job?","1581 disk Controller Job commands: TPWRT_DV
+      $B4     Writes    a    physical   address   without
+                      transferring from the job queue buffer."

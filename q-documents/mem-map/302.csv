@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the CHRGET routine?","CHRGET address  $0073-008A  is:   Subroutine: Get next Byte of BASIC Text."

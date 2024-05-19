@@ -1,0 +1,2 @@
+question,answer
+"What does the TVSFLG flag at address $02A6 ?","TVSFLG    address $02A6        is: Flag: TV Standard: $00 = NTSC, $01 = PAL."

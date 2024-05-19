@@ -1,0 +1,46 @@
+
+
+
+1581 disk: ERROR CHECKING
+
+  In Basic 2.0,  when the red drive light flashes, you must write
+a small program to find out what the error is. This causes you to
+lose  any  program variables already in memory.  The following is
+the error check program:
+
+  10 OPEN 15,8,15
+  20 INPUT#15,EN,EM$,ET,ES
+  30 PRINT EN,EM$,ET,ES
+  40 CLOSE 15
+
+  This  little  program  reads  the error channel into four BASIC
+variables  (described  below),  and  prints  the  results  on the
+screen.  A message is displayed whether there is an error or not,
+but if there was an error, the program clears it from disk memory
+and stops the error light from blinking.
+  Once  the  message  is  on  the  screen,  you can look it up in
+Appendix B to see what it means, and what to do about it.
+  For those of you who are writing programs,  the  following is a
+small error-checking subroutine you can include in your programs:
+
+  59980 REM READ ERROR CHANNEL
+  59990 INPUT#15,EN,EM$,ET,ES
+  60000 IF EN>1 THEN PRINT EN,EM$,ET,ES: STOP
+  60010 RETURN
+
+  This  assumes  file  15  was opened earlier in the program, and
+that it will be closed at the end of the program.
+  The  subroutine  reads  the  error channel and puts the results
+into  the  named  variables  --  EN  (Error  Number),  EM$ (Error
+Message),  ET (Error Track),  and ES (Error Sector). Of the four,
+only  EM$  has  to  be a string.  You could choose other variable
+names, although these have become traditional for this use.
+  Two error numbers are harmless -- 0 means everything is OK, and
+1  tells  how  many  files  were  erased  by  a  SCRATCH  command
+(described  later  in  this  chapter).  If  the  error  status is
+anything else,  line 60000 prints the error message and halts the
+program.
+  Because  this  is  a  subroutine,  you access it with the BASIC
+GOSUB  command,  either  in immediate mode or from a program. The
+RETURN  statement  in line 60010 will jump back to immediate mode
+or the next statement in your program, whichever is appropriate.

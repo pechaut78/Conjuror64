@@ -1,0 +1,5 @@
+question,answer
+"What is the error message and explanation for a CRC error in the header of a requested data block on a disk controller?","1581 disk: Controller commands error code 27: READ ERROR (CRC error in header)
+    The  controller  detected an error in the header bytes of the
+    requested  data  block.  The  block  was  not  read into disk
+    memory."

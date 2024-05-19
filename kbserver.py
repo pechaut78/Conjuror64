@@ -109,7 +109,7 @@ Informations disponibles :
     # _str = rag.getChaniWithMessageHistory().invoke(
     #     { "input": "What does cosine mean?"},
     #     config={
-    #         "configurable": {"session_id": "session_id","user_id": "user_id", "conversation_id": "conversation_id"}
+    #         "configurable": {"session_id": "session_id","user_id": "user_id","conversation_id": "conversation_id"}
     #     },
     # )
     # print(_str)

@@ -1,0 +1,2 @@
+
+address $3293		is:			Sprite 6 Color

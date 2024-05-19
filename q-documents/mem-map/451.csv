@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory block located at addresses $0340-037E?","SPR13     address $0340-037E   is: Sprite #13."

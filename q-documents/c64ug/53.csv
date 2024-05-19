@@ -1,0 +1,18 @@
+question,answer
+"How do sprites work on the Commodore 64 and how are they controlled?","basic:  Sprite Creation
+
+  Sprites are controlled by a separate picture-maker in the Commodore 64.
+This  picture maker handles the video display.  It does all the hard work
+of  creating  and  keeping  track  of  characters and graphics,  creating
+colors, and moving around.
+  This display circuit has 46 different 'ON/OFF' locations which act like
+internal  memory  locations.  Each  of these locations breaks down into a
+series of 8 blocks. And each block can either be 'ON' or 'OFF'. We'll get
+into  more  detail  about this later.  By POKEing the appropriate decimal
+value  in  the  proper  memory location you can control the formation and
+movement of your sprite creations.
+  In  addition  to accessing many of the picture making locations we will
+also be using some of the Commodore 64's main memory to store information
+(data) that defines the sprites. Finally, eight memory locations directly
+after  the  screen memory will be used to tell the computer exactly which
+memory area each sprite will get its data from."

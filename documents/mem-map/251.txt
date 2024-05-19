@@ -1,0 +1,3 @@
+
+
+VALTYP address  $000D       is:   Data type Flag: $00 = Numeric, $FF = String.

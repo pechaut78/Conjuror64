@@ -1,0 +1,60 @@
+
+
+
+1581 disk: FORMAT FOR THE MEMORY-READ COMMAND:
+
+  PRINT#15,"M-R"CHR$(<address)CHR$(>address)CHR$(# of bytes)
+
+where  "<address"  is the low order part,  and  ">address" is the
+high order part of the address in disk memory to be read.  If the
+optional  "# of bytes"  is specified,  it selects how many memory
+locations will be read in,  from 1-256  (# of bytes = 0 for 256).
+Otherwise, 1 character will be read.
+
+  The next byte read using the GET# statement through channel #15
+(the  error  channel),  will  be  from  that  address in the disk
+controller's memory, and successive bytes will be from successive
+memory locations.
+  Any  INPUT#  from  the error channel will give peculiar results
+when you're using this command. This can be cleared up by sending
+any other command to the disk, except another memory command.
+
+EXAMPLES:
+
+  To  see  how many tries the disk will make to read a particular
+sector,  and  whether  "bumps"  to  track  one  and  back will be
+attempted before declaring the sector unreadable, you can use the
+following  lines.  They  will read a special variable in the zero
+page  of  disk  memory,  called  REVCNT.  It  is  located  at $30
+hexadecimal.
+
+110 OPEN 15,8,15                            Open command channel.
+120 PRINT#15,"M-R"CHR$(48)CHR$(0)           Same as G=PEEK(48).
+130 GET#15,G$: IF G$="" THEN G$=CHR$(0)
+140 G=ASC(G$)
+150 B=G AND 128:B$="ON":IF B THEN B$="OFF"  Check bit 7.
+160 T=G AND 31: PRINT"# OF TRIES IS";T      Check bits 0-5
+170 PRINT "BUMPS ARE";B$                    and give results.
+180 CLOSE 15                                Tidy up after.
+190 END
+
+Here's  a  more  general  purpose  program that reads one or more
+locations anywhere in disk memory:
+
+110 OPEN 15,8,15                            Open command channel.
+120 INPUT "# OF BYTES TO READ (0=END)";NL   Enter number of bytes
+                                            wanted
+130 IF NL<1 THEN CLOSE 15: END              unless done.
+140 IF NL>255 THEN 120                      or way out of line.
+150 INPUT "STARTING AT ADDRESS";AD          Enter starting
+                                            address.
+160 AH=INT(AD/256): AL=AD-AH*256            Convert it into disk
+                                            form.
+170 PRINT#15,"M-R"CHR$(AL)CHR$(AH)CHR$(NL)  Actual Memory-Read.
+180 FOR I=1 TO NL                           Loop until have all
+                                            the data,
+190 GET#15,A$: IF A$="" THEN A$=CHR$(0)
+200 PRINT ASC(A$);                          printing it as we go,
+210 NEXT I
+220 PRINT
+230 GOTO 120                                forever.

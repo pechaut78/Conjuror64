@@ -1,0 +1,4 @@
+question,answer
+"What is the function of the TWRT_DV command in a 1581 disk controller job?","1581 disk Controller Job commands: TWRT_DV
+       $AC     Writes    a    logical    address   without
+                      transferring from the job queue buffer."

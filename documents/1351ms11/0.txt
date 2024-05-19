@@ -1,0 +1,33 @@
+The  Commodore  1351  Mouse(TM)  is a controller designed for use
+with  the  Commodore 64(R)  or  Commodore 128(TM)  computers.  It
+features two buttons on the top, and a ball on the underside that
+is rolled upon a flat surface to manipulate onscreen activity.
+
+The  mouse  has  two  modes  of  operation  --  joystick mode and
+proportional mode.
+
+In  joystick  mode,  the  mouse  emulates  a  joystick and can be
+used  with all joystick-compatible  software.  In this mode,  the
+left  button  is  the fire button and the right button is usually
+ignored.
+
+In   proportional  mode,  the  mouse  uses  a  new  technique  to
+communicate   mouse   movement  to  the  controlling  application
+software.  That requires  the software to know the mouse is there
+and  how to read it.  For example,  the GEOS(TM) operating system
+can  use  many  different  input  drivers.  One  of  them  is the
+Commodore  Mouse  driver,  which  can  be  used  with the 1351 in
+proportional mode.
+
+The  1351  provides a proportional mode  so that applications can
+have a fast,  responsive pointer that moves easily on the screen.
+Joystick mode acts as a fallback for those for those applications
+that don't have installable device drivers. You can therefore use
+the mouse as a joystick for older software, and take advantage of
+the   benefits   provided   by   proportional   mode  with  newer
+applications.
+
+The mouse automatically powers up in proportional mode. To choose
+joystick mode,  plug  the  mouse into either joystick port on the
+side  of  the  computer  and  hold  down the right button  as the
+computer is powered up.

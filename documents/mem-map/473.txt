@@ -1,0 +1,3 @@
+
+
+kernal routine address for membot	= $ff9c

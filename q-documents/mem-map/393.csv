@@ -1,0 +1,2 @@
+question,answer
+"What is the function and behavior of the RPTFLG at address $028A?","RPTFLG    address $028A        is: Flag: Repeat keys; $00 = Cursors, INST/DEL &  Space repeat, $40 no Keys repeat, $80 all  Keys repeat ($00)."

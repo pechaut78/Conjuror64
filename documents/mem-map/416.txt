@@ -1,0 +1,2 @@
+
+TLNIDX    address $02A5        is: Temporary for Line Index.

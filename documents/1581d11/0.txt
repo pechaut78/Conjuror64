@@ -1,0 +1,18 @@
+  The  Commodore 1581  is a versatile 3.5" disk drive that can be
+used with a variety of computers,  including  the  COMMODORE 128,
+the COMMODORE 64, the Plus 4, COMMODORE 16, and VIC 20.
+  Also,  in  addition to the convenience of 3.5" disks,  the 1581
+offers the following features:
+
+  o Standard  and  fast  serial data transfer rates  --  The 1581
+    automatically selects the proper data transfer rate  (fast or
+    slow) to match the operating modes available on the Commodore
+    128 computer.
+
+  o Double-sided, double-density MFM data recording  --  Provides
+    more than 800K formatted storage capacity per disk (400K+ per
+    side).
+
+  o Special high-speed burst commands -- These commands, used for
+    machine language programs, transfer data several times faster
+    than the standard or fast serial rates.

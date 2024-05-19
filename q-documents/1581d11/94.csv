@@ -1,0 +1,44 @@
+question,answer
+"What are the USER commands available on the 1581 disk and what are their functions?","1581 disk:  USER COMMANDS
+
+  Most  USER commands are intended to be used as machine language
+JMP  or  BASIC  SYS  commands  to  machine language programs that
+reside inside the disk memory.  However,  some of them have other
+uses  as  well.  The USER1 and USER2 commands are used to replace
+the  BLOCK-READ  and BLOCK- WRITE commands, UI re-starts the 1581
+without  changing many variables,  UJ cold-starts the 1581 almost
+as if it had been turned off and on again.
+
+USER Command                       Function
+-----------------------------------------------------------------
+U0                     restores default user jump table
+U0 + (CMD)             burst utility command
+                       (see Chapter 9 Burst Commands)
+U1 or UA               block read replacement
+U2 or UB               block write replacement
+U3 or UC               jump to $0500
+U4 or UD               jump to $0503
+U5 or UE               jump to $0506
+U6 or UF               jump to $0509
+U7 or UG               jump to $050C
+U8 or UH               jump to $050F
+U9 or UI               jump to ($FFFA) reset tables
+U: or UJ               power up vector
+-----------------------------------------------------------------
+
+  By loading these memory locations with another machine language
+JMP  command,  such as JMP $0520,  you can create longer routines
+that  operate in the disk's memory along with an easy-to-use jump
+table.
+
+FORMAT FOR USER COMMANDS:
+
+  PRINT#15,'Ucharacter';
+
+where  'character' defines one of the preset user commands listed
+above.
+
+EXAMPLES:
+
+  PRINT#15,'U:';             Form of DOS RESET command
+  PRINT#15,'U3';             Execute program at start of buffer 2"

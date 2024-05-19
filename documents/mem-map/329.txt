@@ -1,0 +1,2 @@
+
+INBIT     address $00A7        is: RS232 temporary for received Bit/Tape temporary.

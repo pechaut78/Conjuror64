@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory address range $026D-0276 in the Commodore 64's Kernal?","SAT       address $026D-0276   is: Kernal Table: Active File Secondary Addresses."

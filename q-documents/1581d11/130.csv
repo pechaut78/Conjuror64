@@ -1,0 +1,4 @@
+question,answer
+"What is the purpose of the DISKIN_DV command in a disk controller job?","1581 disk Controller Job commands: DISKIN_DV
+     $92     Determines  if  there is a disk inserted in
+                      the drive."

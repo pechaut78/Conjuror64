@@ -1,0 +1,8 @@
+question,answer
+"What is the syntax to multiply two numbers in a programming language?","basic: MULTIPLICATION
+
+  If  you  wanted  to  multiply  12  times  12,  use  the asterisk (*) to
+represent multiplication. You would type:
+
+  PRINT 12 * 12            <----- Hit <RETURN>
+  144"

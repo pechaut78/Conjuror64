@@ -1,0 +1,53 @@
+
+
+basic:  Variables
+
+  Variables  are  some  of  the  most  used  features  of any programming
+language,  because  variables  can represent much more information in the
+computer.  Understanding how variables operate will make computing easier
+and allow us to accomplish feats that would not be possible otherwise.
+  Imagine a number of boxes within the computer that can hold a number or
+a string of text characters.  Each of these boxes is to be labeled with a
+name  that  we choose.  That name is called a variable and represents the
+information in the respective box.
+  For example, if we say:
+
+  10 X% = 15
+  20 X = 23.5
+  30 X$ = "THE SUM OF X% + X ="
+
+  The computer might represent the variables like this:
+
+  X%  15
+
+  X   23.5
+
+  X$  THE SUM OF X% + X =
+
+  A  variable  name  represents  the  box,  or memory location, where the
+current  value  of  the variable is stored. As you can see, we can assign
+either  an  integer  number, floating point number, or a text string to a
+variable.
+  The '%' symbol  following  a  variable name indicates the variable will
+represent  an  integer  number.  The following are valid integer variable
+names:
+
+  A%
+  X%
+  A1%
+  NM%
+
+  The  '$'  following  the  variable  name  indicates  the  variable will
+represent a text string. The following are examples of string variables:
+
+  A$
+  X$
+  MI$
+
+  Floating  point  variables  follow  the  same  format,  with  the  type
+indicator:
+
+  A1
+  X
+  Y
+  MI

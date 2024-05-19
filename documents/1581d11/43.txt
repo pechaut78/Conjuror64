@@ -1,0 +1,37 @@
+1581 disk with basic 7,0: COLLECT
+
+  The  COLLECT  command  recalculates  the Block Availability Map
+(BAM)  of  the  current  diskette,  allocating only those sectors
+still  being  used by valid,  properly closed files and programs.
+All other sectors  (blocks) are left unallocated and free for re-
+use, and all improperly closed files are automatically scratched.
+However,  this  brief  description  of  COLLECT  doesn't indicate
+either  the  power or the danger of the command.  Its power is in
+restoring  to  good  health  many  diskettes whose directories or
+Block Availability Maps have become muddled.  Any time the blocks
+used  by  the  files  on a diskette plus the blocks shown as free
+don't  add  up to the 3160 available on a fresh diskette, COLLECT
+is  needed  (with  one  exception below).  Similarly,  any time a
+diskette   contains  an  improperly  closed  file  (splat  file),
+indicated  by  an  asterisk  (*)  next  to  its  file type in the
+directory, that diskette needs to be collected.  In fact, but for
+the one exception below,  it  is a good idea to COLLECT diskettes
+whenever  you are concerned about their integrity.  Just note the
+number  of  blocks  free  in  the diskette's directory before and
+after  using  COLLECT.  If the totals differ,  there was indeed a
+problem,  and the diskette should probably be copied onto a fresh
+diskette  file-by-file,  using  a  copy  program described in the
+previous section, rather than using backup program.
+  The  exception  is diskettes containing direct access files, as
+described in Chapter 6.  Most direct access (random) files do not
+allocate  their  sectors  in a way COLLECT command can recognize.
+Thus,  collecting  such a diskette may result in unallocating all
+direct access files,  with  loss of all their contents when other
+files are added.  Unless specifically instructed otherwise, never
+COLLECT  a  diskette containing direct access files. (Note: these
+are  not  the  same as the relative files described in Chapter 5.
+COLLECT may be used on relative files without difficulty.)
+
+FORMAT FOR THE COLLECT COMMAND:
+
+  COLLECT [,Ddrive#][,Udevice#]

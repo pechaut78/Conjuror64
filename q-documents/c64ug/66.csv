@@ -1,0 +1,6 @@
+question,answer
+"What is the effect of the CLR command in BASIC?","basic: CLR
+
+  This command will erase any variables in memory, but leaves the program
+itself intact.  This command is automatically executed when a RUN command
+is given."

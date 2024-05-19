@@ -1,0 +1,2 @@
+
+address $DD01 bit 4 is	User / RS-232 Carrier Detect

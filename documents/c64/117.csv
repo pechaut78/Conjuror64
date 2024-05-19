@@ -1,9 +1,0 @@
-question,answer
-"BCS Branch on carry set", "BCS Branch on carry set operation"
-"BCS Branch on carry set operation explanation", "BCS Branch on carry set operation explanation: Branch on C = 1"
-"What is the purpose of BCS Branch on carry set", "The purpose of BCS Branch on carry set is to branch on carry set operation"
-"What is the format of BCS Branch on carry set", "The format of BCS Branch on carry set is BCS Oper"
-"What is the number of bytes in BCS Branch on carry set", "The number of bytes in BCS Branch on carry set is 2"
-"What is the number of cycles in BCS Branch on carry set", "The number of cycles in BCS Branch on carry set is 2*"
-"What is the condition for adding 1 in BCS Branch on carry set", "The condition for adding 1 in BCS Branch on carry set is if branch occurs to same page"
-"What is the condition for adding 2 in BCS Branch on carry set", "The condition for adding 2 in BCS Branch on carry set is if branch occurs to next page"

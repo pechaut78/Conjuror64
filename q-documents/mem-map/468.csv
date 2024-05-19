@@ -1,0 +1,2 @@
+question,answer
+"What is the memory address of the kernel routine for the GETIN function in the Commodore 64?","kernal routine address for getin	= $ffe4"

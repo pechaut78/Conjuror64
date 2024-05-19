@@ -1,0 +1,77 @@
+
+
+FORMAT FOR THE RECORD# COMMAND:
+
+  BASIC 7.0: RECORD#file#,record number[,offset]
+  BASIC 2.0: PRINT#15,"P"+CHR$(channel#+96)+CHR$(<record#)+
+             CHR$(>record#)+CHR$(offset)
+
+where  "file#"  is  the  file#  specified  in  the  current DOPEN
+statement for the specified file,  "record number" is the desired
+record number,  "channel#" is the channel number specified in the
+current OPEN statement for the specified file,  "<record#" is the
+low  byte  of the desired record number,  expressed as a two-byte
+integer,  ">record#"  is  the  high  byte  of  the desired record
+number,  and an optional "offset" value,  if present, is the byte
+within  the  record  at  which  a  following Read or Write should
+begin.
+  To fully understand this command,  you must understand how most
+integers  are  stored  in computers based on the 6502 and related
+microprocessors.   In   the   binary   arithmetic   used  by  the
+microprocessor,  it  is  possible to express any unsigned integer
+from  0-255  in  a single byte.  It is also possible to store any
+unsigned integer from 0-65535 in two bytes, with one byte holding
+the  part  of the number that is evenly divisible by 256, and any
+remainder  in the other byte.  In machine language,  such numbers
+are  written backwards,  with the low-order byte  (the remainder)
+first,  followed  by  the  high-order byte.  In assembly language
+programs written with the Commodore Assembler,  the low part of a
+two-byte  number  is  indicated  by  preceding its label with the
+less-than character (<).  Similarly,  the high part of the number
+is indicated by greater-than (>).
+
+|   To avoid the remote possibility of corrupting relative file |
+| data, it is necessary to give RECORD# command once before the |
+| Read or Write access and once after the access.               |
+|   Although  this  is  not  necessary  for  the  1581,   other |
+| Commodore drives require it. To make your programs compatible |
+| with those other drives, it's a good idea to use it.          |
+
+EXAMPLES:
+
+  In  BASIC  7.0,  to  position the record pointer for file #2 to
+record number 3, type:
+
+  RECORD#2,3
+
+  In BASIC 2.0,  to position the record pointer for channel #2 to
+record number 3, type:
+
+  PRINT#15,"P"+CHR$(98)+CHR$(3)+CHR$(0)
+
+The  CHR$(98)  comes from adding the constant (96) to the desired
+channel  number  (2).  (96+2=98)  Although the command appears to
+work  even  when  96  is  not  added  to  the channel number, the
+constant is normally added to maintain compatibility with the way
+RECORD# works in BASIC 7.0.
+  Since  3  is  less  than  256,  the  high  byte  of  its binary
+representation is 0, and the entire value fits into the low byte.
+Since you want to read or write from the beginning of the record,
+no offset value is needed.
+  Since these calculations quickly become tedious,  most programs
+are  written to do them for you.  Here is an example of a program
+which  inputs  a  record number and converts it into the required
+low-byte/high-byte form:
+
+  450 INPUT"RECORD NUMBER DESIRED";RE
+  460 IF RE<1 OR RE>65535 THEN 450
+  470 RH=INT(RE/256)
+  480 RL=RE-256*RH
+  490 PRINT#15,"P"+CHR$(98)+CHR$(RL)+CHR$(RH)
+
+Assuming  RH  and  RL  are calculated as in the previous example,
+programs  may  also  use  variables  for  the channel, record and
+offset required:
+
+  570 INPUT"CHANNEL, RECORD, OFFSET DESIRED";CH,RE,OF
+  630 PRINT#15,"P"+CHR$(CH+96)+CHR$(RL)+CHR$(RH)+CHR$(OF)

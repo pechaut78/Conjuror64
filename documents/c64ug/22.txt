@@ -1,0 +1,23 @@
+
+
+<C=> COMMODORE KEY key
+
+  The Commodore key <C=> performs a number of functions. First, it allows
+you to move between the text and graphic display modes.
+  When  the computer is first turned on,  it is in the upper case/graphic
+mode,  that  is,  everything  you  type is in upper case letters.  As was
+mentioned, using the <SHIFT> key in this mode will display the graphic on
+the right side of the keys.
+  If you hold down the <C=> key and <SHIFT> key,  the display will change
+to upper and lower case. Now, if you hold down the <C=> key and any other
+key with a graphic symbol,  the graphic shown on the left side of the key
+will be displayed.
+  To get back into the upper case/graphic mode hold down the <C=> key and
+<SHIFT> key again.
+  The second function of the <C=> key is to  allow you access to a second
+set  of  eight  text colors.  By holding down the <C=> key and any of the
+number keys,  any text now typed will be in the alternate color available
+from  the  key  you depressed.  Chapter 5 lists the text colors available
+from each key.
+
+`

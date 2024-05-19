@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory space located at addresses $00FB-00FE?","FREKZP    address $00FB-00FE   is: Free Zero Page space for User Programs."

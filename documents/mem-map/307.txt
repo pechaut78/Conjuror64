@@ -1,0 +1,2 @@
+
+STKEY     address $0091        is: Flag: $7F = STOP key.

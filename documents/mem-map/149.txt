@@ -1,0 +1,2 @@
+
+address $DC00 bits 7-6	is: Read Paddles on Port A / B (01 = Port A, 10 = Port B)

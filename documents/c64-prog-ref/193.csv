@@ -1,0 +1,11 @@
+question,answer
+"Set the top of RAM?","This routine is used to set the top of RAM."
+"What is the call address of MEMTOP?","$FF99 (hex) 65433 (decimal)"
+"What registers are affected by MEMTOP?","X, Y"
+"What is the purpose of MEMTOP?","Set the top of RAM"
+"What happens when MEMTOP is called with the accumulator carry bit set?","the pointer to the top of RAM will be loaded into the X and Y registers"
+"What happens when MEMTOP is called with the accumulator carry bit clear?","the contents of the X and Y registers are loaded in the top of memory pointer, changing the top of memory"
+"What is the stack requirement for MEMTOP?","2"
+"What are the communication registers for MEMTOP?","X, Y"
+"What is the preparatory routine for MEMTOP?","None"
+"What are the error returns for MEMTOP?","None"

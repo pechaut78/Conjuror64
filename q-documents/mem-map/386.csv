@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location at address $0281-0282?","MEMSTR    address $0281-0282   is: Pointer: Bottom of Memory for Operating System ($0800)."

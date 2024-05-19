@@ -1,0 +1,33 @@
+
+
+
+1581 disk: PATTERN MATCHING
+
+  You  can  use  special  pattern-matching  characters  to load a
+program   from  a  partial  name  or  to  provide  the  selective
+directories described earlier.
+  The  two  characters  used in pattern matching are the asterisk
+(*)  and  the question mark  (?).  They act something like a wild
+card in a game of cards.  The difference between the two  is that
+the  asterisk  makes  all  characters in  and beyond its position
+wild,  while  the question mark makes only its own position wild.
+Here are some examples and their results:
+
+  LOAD"A*",8  loads the first file on disk that begins with an A,
+  regardless of what follows
+
+  DLOAD"SM?TH"  loads  the  first  file that starts with SM, ends
+  with TH, and one other character between
+
+  DIRECTORY"Q*"  loads  a  directory  of  files whose names begin
+  with Q
+
+  LOAD"*",8  is a special case. When an asterisk is used alone as
+  a name,  it matches the last file used  (on the C64 and C128 in
+  C64 mode).
+
+  LOAD "0:*",8 loads the first file on the diskette (C64 and C128
+  in C64 mode).
+
+  DLOAD"*"  loads the first file on the diskette (Plus/4 and C128
+  in C128 mode).

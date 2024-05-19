@@ -1,0 +1,8 @@
+
+
+basic: SYS
+
+  SYS  is  followed  by  a  decimal  number or numeric value in the range
+0-65535.  The  program  will  then  begin  executing the machine language
+program  starting  at  that  memory  location. This is similar to the USR
+function, but does not allow parameter passing.

@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bit 1 at address $4276?","address $4276	bit 1 is 	Synchronize Osc. 1 with Osc. 3 Frequency, 1 = On"

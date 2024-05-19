@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the register at address $D417?","address $D417	bits 2 is:	Filter Voice 3 Output: 1 = Yes, 0 = No Filter Voice 2 Output: 1 = Yes, 0 = No"

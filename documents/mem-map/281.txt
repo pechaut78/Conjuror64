@@ -1,0 +1,3 @@
+
+
+FORPNT address  $0049-004A  is:   Pointer: Index Variable for FOR/NEXT loop.

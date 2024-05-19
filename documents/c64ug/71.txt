@@ -1,0 +1,7 @@
+
+
+
+basic: END
+
+  When a program encounters an END statement, the program halts, as if it
+ran out of lines. You may use CONT to restart the program.

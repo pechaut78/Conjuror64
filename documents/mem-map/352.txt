@@ -1,0 +1,2 @@
+
+LSTX      address $00C5        is: Matrix value of last Key pressed; No Key = $40.

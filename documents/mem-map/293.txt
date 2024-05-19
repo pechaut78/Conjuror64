@@ -1,0 +1,3 @@
+
+
+SGNFLG address  $0067       is:   Pointer: Series Evaluation Constant.

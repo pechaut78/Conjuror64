@@ -1,0 +1,59 @@
+
+
+CREATING A RELATIVE FILE
+
+  When a relative file is to be used for the first time, its OPEN
+statement will create the file; after that, the OPEN statement is
+used to reopen the file for both reading and writing.
+
+FORMAT STATEMENT TO OPEN A RELATIVE FILE:
+
+  BASIC 7.0: DOPEN#file#,"file name",Lrecord length
+             [,Ddrive#][,Udevice#]
+  BASIC 2.0: OPENfile#,device#,channel#,"drive#:file name,L,"+
+             CHR$(record length)
+
+where  "file#" is the file number,  normally an integer between 1
+and 127; "device#" is the device number to be used, normally 8 on
+the  1581;  "channel#"  selects  a particular channel along which
+communications  for this file can take place,  normally between 2
+and 14;  "drive#" is the drive number,  always 0 on the 1581; and
+"file name" is the name of the file,  with a maximum length of 16
+characters.  Pattern  matching characters are allowed in the name
+when accessing an existing file, but not when creating a new one.
+The  record  length is the size of each record within the file in
+bytes used, including carriage returns, quotation marks and other
+special characters.
+
+
+|  o Do not precede the file name  (in BASIC 7.0)  or the drive |
+| number  (in BASIC 2.0)  with  the "at" sign (@);  there is no |
+| reason to replace a relative file.                            |
+|  o L record length (in BASIC 7.0) or ,L,"+CHR$(record length) |
+| (in BASIC 2.0) is only required when a relative file is first |
+| created,  though it may be used later,  so long as the record |
+| length is the same as when the file was first created.  Since |
+| relative files may be read from or written to alternately and |
+| with  equal  case,  there is no need to specify Read or Write |
+| mode when opening a relative file.                            |
+|  o "file#",  "device#"  and  "channel#" must be valid numeric |
+| constants, variables or expressions.  The rest of the command |
+| must be a valid string literal,  variable  or  expression. In |
+| BASIC 7.0 DOPEN, whenever a variable or expression is used as |
+| a file name it must be surrounded by parentheses.             |
+
+EXAMPLES:
+
+  To create or reopen a relative file named  "GRADES",  of record
+length 100 use:
+
+  BASIC 7.0: DOPEN#2,"GRADES",L100,D0,U8
+  BASIC 2.0: OPEN 2,8,2,"GRADES,L,"+CHR$(100)
+
+  To  reopen  an  unknown relative file of the user's choice that
+has already been created, use:
+
+  BASIC 7.0:  200 INPUT"WHICH FILE";FI$
+              210 DOPEN#5,(FI$),D0,U8
+  BASIC 2.0:  200 INPUT"WHICH FILE";FI$
+              210 OPEN 5,8,5,FI$

@@ -1,0 +1,2 @@
+
+address $D417	bits 3 is: 	Filter External Input: 1 = Yes, 0 = No

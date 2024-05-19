@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the TBTCNT at address $00A4?","TBTCNT    address $00A4        is: Pulse Counter Tape Read or Write/Serial Bus shift Counter."

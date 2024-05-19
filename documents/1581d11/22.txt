@@ -1,0 +1,13 @@
+
+
+1581 disk: FORMAT FOR THE VALIDATE COMMAND:
+
+  PRINT#15,"VALIDATE0"
+
+or abbreviated as:
+
+  PRINT#15,"V0"
+
+where  "0"  is the drive number.  As usual, it is assumed file 15
+has  been  opened to the command channel and will be closed after
+the command has been executed.

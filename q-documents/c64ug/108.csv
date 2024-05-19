@@ -1,0 +1,4 @@
+question,answer
+"What is the function of the RIGHT$ command in BASIC?","basic: RIGHT$(X$,X)
+
+  Returns the rightmost X characters in X$."

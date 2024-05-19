@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $DC0C ?","address $DC0C	is: Synchronous Serial I/O Data Buffer"

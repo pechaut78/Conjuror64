@@ -1,0 +1,23 @@
+question,answer
+"What is the process and syntax for loading a program from a disk on a computer?","LOADING PROGRAMS FROM DISK
+
+  Loading a program from disk follows the same format. Type:
+
+  LOAD 'PROGRAM NAME',8
+
+  The  8  is  the  code for the disk, so you're just letting the computer
+know that you want the program loaded from the disk.
+  After  you  hit  <RETURN>  the disk will start whirring and the display
+shows:
+
+  SEARCHING FOR PROGRAM NAME
+  LOADING
+  READY.
+  _
+
+NOTE:
+  When   you   load  a  new  program  into  the  computer's  memory,  any
+instructions  that  were  in the computer previously will be erased. Make
+sure  you  save  a  program  you're  working on before loading a new one.
+Once a program has been loaded, you can RUN it, LIST, or make changes and
+re-save the new version."

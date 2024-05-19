@@ -1,0 +1,2 @@
+
+RIDBE     address $029B        is: RS232 Index to End of Input Buffer.

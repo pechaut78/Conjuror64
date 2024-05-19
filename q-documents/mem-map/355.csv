@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the INDX address $00C8 ?","INDX      address $00C8        is: Pointer: End of Line for Input (Used to suppress trailing spaces)."

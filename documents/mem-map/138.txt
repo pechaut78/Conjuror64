@@ -1,0 +1,2 @@
+
+address $D418 bit 4	is: Select Filter Low-Pass Mode: 1 = On

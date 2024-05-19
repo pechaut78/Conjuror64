@@ -1,0 +1,5 @@
+
+address $D414  bits 3-0	is: Select Release Cycle Duration: 0-15
+
+
+address $D415 is Filter Cutoff Frequency: Low-Nybble (Bits 2-0)

@@ -1,0 +1,33 @@
+DISKETTE DIRECTORY
+
+  A directory is a list of the files on a diskette.  To  view the
+directory on the  C128 or Plus/4,  type the word  DIRECTORY  on a
+blank line and press the  [RETURN]  key or simply press the  [F3]
+key  on  the C128.  That doesn't erase anything in memory, so you
+can  call up a directory anytime  --  even from within a program.
+The C64 directory command, LOAD"$",8 (press [RETURN]) LIST (press
+[RETURN]), does erase what's in memory.
+  If a directory doesn't all fit on the screen, it will scroll up
+until  it  reaches the last line.  If you want to pause, stop, or
+slow  down  the  scrolling,  refer  to your particular computer's
+user's manual for instructions as to which keys to use.
+  To  get  an  idea  of  what  a  directory  looks like, load the
+directory from the Test/Demo diskette.
+  The 0 on the left-hand side of the top line is the drive number
+of the 1581.  The diskette name is next, followed by the diskette
+id  --  both  of  which  are  determined  when  the  diskette  is
+formatted.
+  The  3D  at the end of the top line means the 1581 uses version
+3D of Commodore's disk operating system (DOS).
+  Each   of   the   remaining  lines  provides  three  pieces  of
+information  about the files on the diskette.  At the left end of
+each  line  is  the size of the file in blocks of 254 characters.
+Four  blocks  are  equivalent  to  almost 1K of memory inside the
+computer.  The  middle  of the line contains the name of the file
+enclosed in quotation marks.  All characters within the quotation
+marks  are  part  of  the  filename.  The right side of each line
+contains a three-letter abbreviation of the file type.  The types
+of files are described in later chapters.
+  The  bottom  line  of  a  directory  shows  how many blocks are
+available  for  use.  This  number  ranges  from  3160 on a newly
+formatted diskette to 0 on one that is completely full.

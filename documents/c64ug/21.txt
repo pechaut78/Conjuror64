@@ -1,0 +1,8 @@
+
+
+<RUN/STOP> key
+
+  Normally,  depressing the <RUN/STOP>  key  will stop the execution of a
+BASIC program. It signals the computer to STOP doing something. Using the
+<RUN/STOP> key in the shifted mode will allow you to automatically load a
+program from tape.

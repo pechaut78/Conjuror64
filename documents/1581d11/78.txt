@@ -1,0 +1,29 @@
+1581 disk:  OPENING A DATA CHANNEL FOR DIRECT ACCESS
+
+  When  working  with  direct access data,  you need two channels
+open to the disk:  the  command channel we've used throughout the
+book,  and  another for data.  The command channel is opened with
+the  usual  OPEN 15,8,15  or  equivalent.  A  direct  access data
+channel  is  opened  much like other files,  except that the hash
+sign (#),  optionally followed by a memory buffer number, is used
+as a file name.
+
+FORMAT FOR DIRECT ACCESS FILE OPEN STATEMENTS:
+
+  OPEN file#,device#,channel#,"#buffer#"
+
+where "file#" is the file number,  "device#" is the disk's device
+number,  normally  8;  "channel#" is the channel number, a number
+between  2 and 14  not used by other files open at the same time;
+and  "buffer#",  if present,  is a 0,  1,  2,  3,  4,  5,  or  6,
+specifying  the  memory  buffer  within  the 1581 to use for this
+file's data.
+
+EXAMPLES:
+
+To specify which disk buffer to use:
+
+  OPEN 4,8,4,"#2"
+
+If  you  don't  specify  which to use  (OPEN 5,8,5,"#"), the 1581
+selects one.

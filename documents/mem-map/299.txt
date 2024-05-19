@@ -1,0 +1,3 @@
+
+
+ARISGN address  $006F       is:   Sign of result of Arithmetic Evaluation.

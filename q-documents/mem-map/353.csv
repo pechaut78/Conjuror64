@@ -1,0 +1,2 @@
+question,answer
+"What is stored at memory address $00C6 in the C64?","NDX       address $00C6        is: Number of Characters in Keyboard Buffer queue."

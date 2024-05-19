@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the register located at address $DC0D?","address $DC0D	is: CIA Interrupt Control Register (ReadIRQs/Write Mask)"

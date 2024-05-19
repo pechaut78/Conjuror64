@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the RIPRTY register at address $00AB?","RIPRTY    address $00AB        is: RS232 Input parity/Tape temporary."

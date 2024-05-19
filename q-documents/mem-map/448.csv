@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the ISAVE vector in the Commodore 64 Kernal?","ISAVE     address $0332-0333   is: Vector: Indirect entry to Kernal SAVE     Routine ($F5ED)."

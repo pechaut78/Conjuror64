@@ -1,0 +1,2 @@
+
+SPR11     address $02C0-02FE   is: Sprite #11 Data Area.  (SCREEN + $03F8 + SPR number) POKE 1024+1016+0,11  to use Sprite#0 DATA from ($02C0-$02FE).

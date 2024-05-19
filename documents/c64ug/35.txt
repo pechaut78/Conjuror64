@@ -1,0 +1,9 @@
+
+
+
+basic: SUBTRACTION
+
+  To subtract, use the conventional minus (-) sign. Type:
+
+  PRINT 12 - 9             
+  3

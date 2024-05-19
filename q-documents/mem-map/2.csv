@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bit 0 at address $0001?","address $0001 bit 0	is: /LORAM Signal (0=Switch	BASIC ROM Out)"

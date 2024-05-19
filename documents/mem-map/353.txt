@@ -1,0 +1,2 @@
+
+NDX       address $00C6        is: Number of Characters in Keyboard Buffer queue.

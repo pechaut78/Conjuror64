@@ -1,0 +1,2 @@
+
+IBSOUT    address $0326-0327   is: Vector: Indirect entry to Kernal CHROUT     Routine ($F1CA).

@@ -1,0 +1,339 @@
+Your new Commodore 1702 color monitor gives you a superior color
+picture that enhances your computing experience.  This monitor is
+simple to hook up to your computer and is easy to adjust.
+
+Please read this brief manual carefully before you try to use your
+monitor.  The manual shows you how to install and use the monitor
+correctly.  It also explains how to use the picture control knobs,
+which are like the control knobs on a color TV.
+
+Be sure to heed any warnings in this manual, and do NOT remove the
+back cover or otherwise attempt to service this monitor.  If you have
+problems with your monitor that are not covered in this manual, see
+your Commodore dealer or a qualified technician.
+
+
+
+
+
+CONNECTING THE 1702 MONITOR TO A COMPUTER
+The monitor connection cable connects your monitor to a Commodore
+personal computer.  Before you connect the cable, turn off the power
+to both your personal computer and the monitor.
+
+There are two different cables that you can use to connect the monitor
+to your computer.
+
+1. One kind of cable has three jacks that connect to the BACK of the
+monitor.
+
+2. The other cable has two jacks that connect to the FRONT of the
+monitor.
+
+The kind of cable you'll use depends on your computer.  To find out
+which kind of cable you should use, look at the audio/video connector
+on your computer (see your computer's user manual if you don't know
+where this connector is).
+
+1. If the audio/video connector has EIGHT little holes, use the
+three-jack cable.
+
+2. If the connector has FIVE little holes, use the two-jack cable.
+
+To connect a three-jack cable to the rear panel of the monitor, follow
+these instructions, which clarify the diagram:
+
+1. Plug the eight PIN DIN connector (the larger end of the cable) into
+the audio/video connector port on your computer.  Just push the cable
+end in.
+
+2. Plug the RCA pin plugs (the jacks) of the cable into the rear
+terminals on the monitor.  The jacks and the terminals are color-
+coded:
+
+* the audio output jack (WHITE) plugs into the AUDIO IN terminal
+(WHITE) on the monitor
+* the luminance output jack (YELLOW) plugs into the LUMA terminal
+(YELLOW)
+* the chroma output jack (RED) plugs into the CHROMA terminal (RED)
+
+3. Switch the SIGNAL SELECTOR to the REAR position.
+
+
+
+
+
+
+To connect a two-jack cable to the front of the 1702. monitor, follow these
+steps:
+
+1. Plug the five PIN DIN connector (the larger end of the cable) into
+the audio/video connector port on your computer.  Just push the cable
+in.
+
+2. Plug the VIDEO IN and AUDIO IN jacks into the VIDEO INPUT and AUDIO
+INPUT terminals on the front of the monitor under the screen.
+
+3. Switch the SIGNAL SELECTOR to the FRONT position. The SIGNAL
+SELECTOR is a switch on the REAR PANEL.  After you follow these simple
+steps, your 1702is ready for useasa video monitor for your personal
+computer.
+
+
+
+
+
+
+TURNING ON YOUR 1702 MONITOR
+When you finish connecting your monitor according to the instructions,
+follow these simple steps:
+
+1. Turn on the monitor by pushing down the power switch. The POWER
+INDICATOR LIGHT on the front of the monitor shows you when the power
+is on.  Always turn on the monitor BEFORE you turn on the computer.
+
+Later, when you're ready to turn the power off, just press the power
+button again.  The button will pop back up and the power light will go
+out.
+
+2. Turn on your personal computer.  You can tell that both the monitor
+and the computer are working correctly when the monitor displays a
+message like this one, which appears when you're using a Commodore 64:
+
+[ Graphic partially omitted: Black and white front view of monitor
+showing characters, screen, and border. ]
+
+ .-------------------------------------------------------.
+ |                                                       |
+ |   .-----------------------------------------------.   |
+ |   |   .---------------------------------------.   |   |
+ |   |   |                                       |   |   |
+ |   |   | ****COMMODORE 64 BASIC V2****         |   |   |
+ |   |   | 64K RAM SYSTEM 38911 BASIC BYTES FREE . . . . . . Character
+ |   |   | READY.                                |   |   |
+ |   |   | #                               . . . . . . . . . Screen
+ |   |   |                                       |   |   |
+ |   |   |                                       |   |   |
+ |   |   |                                       | . . . . . Border
+ |   |   |                                       |   |   |
+
+
+Different computers display other opening messages.  If you don't know
+what message to expect, see your computer's user manual.
+
+
+
+
+
+You can adjust your 1702 monitor's picture with the seven manual control
+buttons located behind the panel beneath the monitor screen.  The
+panel opens from the top; just flip open the cover by releasing it at
+the top.
+
+
+
+
+
+
+1702 monitor TINT CONTROL
+Turn this knob to the left to add more red, and to the right to add
+more green color.
+
+The normal setting forthis knob is at the center, which is the click-
+stop position.
+
+When you're adjusting the color, concentrate on one or two colors,
+such as brown and purple.
+
+
+
+
+
+
+1702 monitor COLOR CONTROL
+Turn this knob to the left to pale colors, and to the right to
+brighten colors.  The normal setting is at the center, which is the
+click-stop position.
+
+
+
+
+
+1702 monitor BRIGHTNESS CONTROL
+Turn this knob to the right to brighten the picture.  The normal
+setting is at the center.
+
+
+
+
+1702 monitor CONTRAST CONTROL
+Turn this knob to the right to increase contrast.  The normal setting
+is at the center.
+
+
+
+
+
+1702 monitor HORIZONTAL POSITION CONTROL
+Turn this knob to the right to move the center of the picture to the
+right, and turn it to the left to move the center of the picture to
+the left.
+
+
+
+
+
+1702 monitor VERTICAL POSITION CONTROL
+Turn this knob to stop vertical rolling of the picture.
+
+
+
+
+
+1702 monitor VOLUME CONTROL
+Turn this knob to the right to increase sound volume and to the left
+to decrease volume.
+
+
+
+
+
+
+1702 monitor SAFETY PRECAUTIONS
+
+Electrical energy can perform many useful functions.  This unit has
+been engineered and manufactured to assure your personal safety.  But
+improper use can result in potential electrical shock or fire hazards.
+In order not to defeat the safeguards incorporated in this monitor,
+observe the following basic rules for its installation, use and
+servicing.  And also follow all warnings and instructions marked on
+your video monitor.
+
+
+
+
+
+
+1702 monitor INSTALLATION
+
+1. Your set is equipped with a polarized AC line plug (one blade of
+the plug is wider than the other).
+
+This safety feature allows the plug to fit into the power outlet only
+one way.  Should you be unable to insert the plug fully into the
+outlet, try reversing the plug.  Should it still fail to fit, contact
+your electrician.
+
+2. Operate the set only from a power source as indicated on the set or
+refer to the user's manual for this information.  If you are not sure
+of the type of power supply to your home, consult your dealer or local
+power company.
+
+3. Overloaded AC outlets and extension cords are dangerous, and so are
+frayed power cords and broken plugs.  They may result in a shock or
+fire hazard.  Call your service technician for replacement.
+
+4. Do not allow anything to rest or roll over the power cord, and do
+not place the set where power cord is subject to traffic or abuse.
+This may result in a shock or fire hazard.
+
+5. Do not use this set near water -- for example, near a bathtub,
+washbowl, kitchen sink, or laundry tub, in a wet basement, or near a
+swimming pool, etc.
+
+6. Sets are provided with ventilation openings in the cabinet to allow
+heat generated during operation to be released.  If these openings are
+blocked, heat built up within the set can cause failures which may
+result in a fire hazard.  Therefore:
+
+* Never block the bottom ventilation slots by placing it on a bed,
+sofa, rug, etc.;
+* Never place a set in a "built-in" enclosure unless proper
+ventilation is provided;
+* Never cover the openings with cloth or other material;
+* Never place the set near or over a radiator or heat register.
+
+
+
+
+
+
+USE 1702 monitor 
+
+. Always turn the set off if it is necessary to leave the room for
+more than a short period of time.  Never leave a set on when leaving
+the house.  A possible malfunction may result in a fire hazard.
+
+. Caution children about dropping or pushing objects into the set's
+cabinet openings.  Some internal parts carry hazardous voltages and
+contact can result in a fire or electrical shock.
+
+. Unplug the set from the wall outlet before cleaning the face of
+the picture tube.  Use a slightly damp (not wet) cloth.  Do not use an
+aerosol directly on the picture tube since it may overspray and cause
+electrical shock.
+
+. Never add accessories to a set that has not been designed for this
+purpose.  Such additions may result in a shock hazard.
+
+. For added protection of the set during a lightning storm or when
+the set is to be left unattended for an extended period of time,
+unplug it from the wall outlet.  This will prevent possible shock and
+fire hazards due to lightning storms or power line surges.
+
+. Do not bring magnetic devices such as magnets or motors near the
+picture tube.  These things have a bad effect on the color purity of
+the picture.
+
+. Sometimes you may feel static electricity when you touch the
+surface of the picture tube.  However, this is normal for any TV set
+and is harmless to the human body.
+
+
+
+
+
+
+1702 monitor SERVICE
+
+15. Unplug the set from the wall outlet and refer servicing to
+qualified service personnel under the following conditions:
+
+A. When the power cord or plug is damaged or frayed.
+
+B. If liquid has been spilled into the set.
+
+C. If the set has been exposed to rain or water.
+
+D. If the set does not operate normally by following the operating
+instructions.  Adjust only those controls that are covered in the
+operating instructions, as improper adjustment of other controls may
+result in damage and will often require extensive work by a qualified
+technician to restore the set to normal operation.
+
+E. If the set has been dropped or the cabinet has been damaged.
+
+F. When the set exhibits a distinct change in performance -- this
+indicates a need for servicing.
+
+G. If snapping or popping from the set is continuous or frequent while
+the set is operating.  It is normal for some sets to make occasional
+snapping or popping sounds, particularly when being turned on or off.
+
+
+16. Do not attempt to service this set yourself, as opening or
+removing covers may expose you to dangerous voltage or other hazards.
+Refer all servicing to qualified service personnel.
+
+17. When replacement parts are required, have the service technician
+verify in writing that the replacements he uses have the same safety
+characteristics as the original parts.  Use of manufacturer's
+specified replacements can prevent fire, shock, or other hazards.
+
+18. Upon completion of any service or repairs to the set, please ask
+the service technician to perform the safety check described in the
+manufacturers' service literature.
+
+19. When a video monitor reaches the end of its useful life, improper
+disposal could result in a picture tube implosion.  Ask a qualified
+service technician to dispose of the set.

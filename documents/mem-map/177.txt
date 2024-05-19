@@ -1,0 +1,2 @@
+
+address $DC0E bit 7	is: Time-of-Day Clock Frequency: 1 = 50 Hz, 0 = 60 Hz

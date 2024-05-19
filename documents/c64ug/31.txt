@@ -1,0 +1,16 @@
+SAVING PROGRAMS ON TAPE
+
+  After entering a program, if you wish to save it on tape, type:
+
+  SAVE "PROGRAM NAME"
+
+  "PROGRAM NAME" can be up to 16 characters long.  After you hit <RETURN>
+the computer will respond with:
+
+  PRESS PLAY AND RECORD ON TAPE
+
+  Press both the record and play keys on the datassette.  The screen will
+blank, turning the color of the border.
+  After  the  program  is  saved on tape, the READY prompt will reappear,
+indicating  that  you can start working on another program,  or just turn
+off the computer for a while.

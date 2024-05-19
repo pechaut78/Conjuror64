@@ -1,0 +1,11 @@
+question,answer
+"What is the primary function of the Commodore 64's keyboard?","allows you to type on the keyboard"
+"What is the built-in editor on the Commodore 64?","SCREEN EDITOR"
+"What are some of the basic functions of the SCREEN EDITOR?","move the cursor, DELete, INSert, etc."
+"What is the purpose of the BASIC INTERPRETER?","interprets each command, one by one"
+"What happens if the BASIC INTERPRETER encounters a command it does not understand?","the familiar message appears: ?SYNTAX ERROR"
+"What is the name of the program that runs the appropriate machine language depending on the CBM BASIC command?","BASIC INTERPRETER"
+"What is the name of the huge machine language program that runs the CBM BASIC commands?","huge machine language program"
+"What is the purpose of the SCREEN EDITOR in the Commodore 64?","allows you to move the cursor, DELete, INSert, etc."
+"What is the name of the message that appears when the BASIC INTERPRETER encounters an unknown command?","?SYNTAX ERROR"
+"What is the purpose of the READY message in the Commodore 64?","indicates the system is ready for the next command"

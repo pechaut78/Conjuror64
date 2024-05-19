@@ -1,0 +1,10 @@
+question,answer
+"How do you erase a locked file on a diskette that cannot be deleted with the SCRATCH command?","1581 disk: Locked Files
+
+  Occasionally,  a diskette will contain a locked file; one which
+cannot  be  erased with the  SCRATCH  command.  Such files may be
+recognized  by  the  '<'  character which immediately follows the
+file type in their directory entry. If you wish to erase a locked
+file, you will have to use a sector editor program to clear bit 6
+of  the  file-type  byte  in the directory entry on the diskette.
+Conversely, to lock a file, you would set bit 6 of the same byte."

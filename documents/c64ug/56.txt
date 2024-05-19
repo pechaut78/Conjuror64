@@ -1,0 +1,28 @@
+
+basic: Arrays are lists of variables with the same name,  using extra  numbers
+to specify the element of the array.  Arrays are defined  using  the  DIM
+statement, and may contain floating point, integer,  or string variables.
+The array variable name is followed by a set of parentheses ( ) enclosing
+the number of variables in the list.
+
+  A(7), BZ%(11), A$(50), PT(20,20)
+
+  NOTE:  There are three variable names which are reserved for use by the
+Commodore 64, and may not be defined by you.  These variables are: ST, TI
+and  TI$.   ST  is  a  status  variable  which  relates  to  input/output
+operations.  The value of ST will change  if there is a problem loading a
+program from disk or tape.
+  TI and TI$ are variables which relate to the real-time clock built into
+the Commodore 64. The variable TI is updated every 1/60th of a second. It
+starts at 0 when the computer is turned on, and is reset only by changing
+the value of TI$.
+  TI$  is a string which is constantly updated by the system.  The  first
+two characters contain the number of hours , the  3rd and 4th  characters
+the number of minutes,  and  the 5th and 6th characters are the number of
+seconds.  This  variable  can  be  given  any numeric value,  and will be
+updated from that point.
+
+  TI$ = "101530" sets the clock to 10:15 and 30 seconds AM.
+
+  This clock is erased when the computer is turned  off,  and  starts  at
+zero when the system is turned back on.

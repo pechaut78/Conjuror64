@@ -1,0 +1,2 @@
+
+address $4276	bit 2 is 	Ring Modulate Osc. 1 with Osc. 3 Output, 1 = On

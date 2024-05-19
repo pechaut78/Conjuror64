@@ -1,0 +1,2 @@
+
+TBTCNT    address $00A4        is: Pulse Counter Tape Read or Write/Serial Bus shift Counter.

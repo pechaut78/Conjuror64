@@ -1,0 +1,3 @@
+address - BITS - DESCRIPTION
+$0000	0		7-0	MOS 6510 Data Direction
+Register (xx101111) Bit= 1: Output, Bit=0: Input, x=Don't Care

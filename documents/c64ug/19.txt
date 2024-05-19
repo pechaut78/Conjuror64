@@ -1,0 +1,8 @@
+
+
+
+FUNCTION KEYS key
+
+  The  four  function  keys  on  the  right  side  of the keyboard can be
+"programmed"  to  handle  a variety of functions.  They can be defined in
+many ways to handle repetitive tasks.

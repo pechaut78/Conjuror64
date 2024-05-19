@@ -1,0 +1,12 @@
+question,answer
+"How does the INPUT# statement in BASIC differ from the INPUT statement, and what are some limitations of using INPUT# to read data from a file?","1581 disk with basic 7,0: READING FILE DATA: USING INPUT#
+
+  Once  information has been written properly to a diskette file,
+it  may  be read back into the computer with an INPUT# statement.
+Just  as  the  PRINT# statement is much like the PRINT statement,
+INPUT#  is  nearly  identical to  INPUT,  except that the list of
+items  following  the  command  word comes from a particular file
+instead of the keyboard.  Both statements are subject to the same
+limitations-halting  input after a comma or colon,  not accepting
+data  items  too  large  to  fit in BASIC's input buffer, and not
+accepting non-numeric data into a numeric variable."

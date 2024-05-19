@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the BITC1 register located at address $00A8?","BITC1     address $00A8        is: RS232 Input Bit count/Tape temporary."

@@ -1,0 +1,8 @@
+question,answer
+"PHP processor status is pushed with which opcode?","08"
+"what is PHP doing ?","Push Processor Status on Stack"
+"PHP processor status is pushed in which bytes?","1"
+"PHP processor status is pushed in which cycles?","3"
+"PHP processor status is pushed in which addressing mode?","Implied"
+"PHP processor status is pushed in which assembly language form?","PHP"
+"PHP processor status is pushed in which operation?","P toS"

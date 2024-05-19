@@ -1,0 +1,38 @@
+question,answer
+"What is the format and protocol of the READ command in a disk assembly, including the byte structure, switches, and conventions?","1581 disk in assembly :  CMD 1 -- READ
+
+ BYTE    BIT 7    6      5      4      3      2      1      0
+-----------------------------------------------------------------
+  00       0      1      0      1      0      1      0      1
+-----------------------------------------------------------------
+  01       0      0      1      1      0      0      0      0
+-----------------------------------------------------------------
+  02       L      E      X      S      0      0      0      N
+-----------------------------------------------------------------
+  03                       DESTINATION TRACK
+-----------------------------------------------------------------
+  04                       DESTINATION SECTOR
+-----------------------------------------------------------------
+  05                       NUMBER OF SECTORS
+-----------------------------------------------------------------
+  06                      NEXT TRACK (OPTIONAL)
+-----------------------------------------------------------------
+
+RANGE: All  values  are  determined by the particular disk format
+       and format of translation table.
+
+SWITCHES: L -- logical flag(1=do logical to physical translation)
+          E -- ignore error (1 = ignore)
+          S -- side select
+          N -- drive number
+
+PROTOCOL: Burst handshake.
+
+CONVENTIONS: Before you can READ or WRITE to a diskette,  it must
+             be logged-in using either the  INQUIRE DISK or QUERY
+             DISK FORMAT command (both are described later). This
+             must be done once each time you change diskettes.
+
+OUTPUT: One burst status byte,  followed  by burst data,  is sent
+        for each sector transferred.  An error prevents data from
+        being sent unless the E bit is set."

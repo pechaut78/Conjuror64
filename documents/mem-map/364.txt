@@ -1,0 +1,2 @@
+
+PNTR      address $00D3        is: Cursor Column on current Line, including Wrap-round Line, if any.

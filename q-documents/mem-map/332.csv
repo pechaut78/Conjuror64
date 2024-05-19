@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location at address $00AA?","RIDATA    address $00AA        is: RS232 Input Byte Buffer/Tape temporary."

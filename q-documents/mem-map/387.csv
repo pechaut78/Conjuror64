@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location at address $0283-0284?","MEMSIZ    address $0283-0284   is: Pointer: Top of Memory for Operating   System ($A000)."

@@ -1,0 +1,6 @@
+question,answer
+"What is the first action taken by the KERNAL on power-up?","The KERNAL first resets the stack pointer, and clears decimal mode."
+"What happens if an autostart ROM cartridge is present at location $8000 HEX?","Normal initialization is suspended, and control is transferred to the cartridge code."
+"What is set up in the RAM TEST routine?","The top and bottom of memory pointers are set."
+"What is the purpose of the RAM TEST routine?","It is a nondestructive test starting at location $0300 and working upward."
+"What is used to start BASIC?","The indirect at $A000 is used to start BASIC."

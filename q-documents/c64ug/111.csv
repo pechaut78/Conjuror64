@@ -1,0 +1,6 @@
+question,answer
+"What does the FRE(X) function return in terms of memory availability?","basic: FRE(X)
+
+  This  function  returns the number of unused bytes available in memory,
+regardless  of the value of X.  Note that FRE(X) will read out n negative
+numbers if the number of unused bytes is over 32K."

@@ -1,0 +1,14 @@
+
+
+
+<INST/DEL> key
+
+  If  you  hit  the  <INST/DEL>  key,  the cursor will move back a space,
+erasing  (DELeting)  the  previous  character you typed. If you're in the
+middle of a line, the character to the left is deleted and the characters
+to the right automatically move together to close up the space.
+  A <SHIFT>ed <INST/DEL> allows you to INSerT information on a line.  For
+example,  if you noticed a typing mistake  in the beginning of a line  --
+perhaps you left out part of the name  -- you could use the <CRSR> key to
+move back to the error  and then hit <INST/DEL>  to insert a space.  Then
+just type in the missing later.

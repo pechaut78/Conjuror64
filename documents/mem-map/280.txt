@@ -1,0 +1,3 @@
+
+
+VARPNT address  $0047-0048  is:   Pointer: to value of (VARNAM) if Integer, to descriptor if String.

@@ -1,0 +1,4 @@
+question,answer
+"What can you do with the X Index Register?","There are instructions for nearly all of the transformations you can make to the accumulator."
+"What can you copy into the X register?","copy the contents of a memory location into the X register"
+"What can you copy from the X register?","copy the contents of the X register into a memory location"

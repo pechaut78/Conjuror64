@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $0304-0305 in the Commodore 64?","ICRNCH    address $0304-0305   is: Vector: Indirect entry to BASIC Tokenise Routine ($A57C)."

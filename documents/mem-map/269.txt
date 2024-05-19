@@ -1,0 +1,3 @@
+
+
+STREND address  $0031-0032  is:   Pointer: End of BASIC Arrays + 1.

@@ -1,0 +1,8 @@
+question,answer
+"Each sprite is positioned via its X and Y position register with a resolution of what?","Each sprite is positioned via its X and Y position register with a resolution of 512 horizontal and 256 vertical positions."
+"What is the resolution of the X position register?","The resolution of the X position register is 512 horizontal positions."
+"What is the resolution of the Y position register?","The resolution of the Y position register is 256 vertical positions."
+"What is the range of X locations that are visible?","The range of X locations that are visible is 23 to 347 ($17-$157)."
+"What is the range of Y locations that are visible?","The range of Y locations that are visible is 50 to 249 ($32-$F9)."
+"Can all available sprite positions be entirely visible on the screen?","No, not all available sprite positions are entirely visible on the screen."
+"Can sprites be moved smoothly on and off the display screen?","Yes, sprites may be moved smoothly on and off the display screen."

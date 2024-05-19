@@ -1,0 +1,2 @@
+
+address $DC00 bits 3-2	is: Paddle Fire Buttons

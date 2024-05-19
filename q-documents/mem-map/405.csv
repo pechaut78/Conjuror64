@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the BITNUM variable located at address $0298?","BITNUM    address $0298        is: RS232 Number of Bits left to send."

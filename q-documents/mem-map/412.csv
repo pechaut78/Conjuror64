@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the ENABL command at address $02A1?","ENABL     address $02A1        is: RS232 Enables."

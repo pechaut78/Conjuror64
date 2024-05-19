@@ -1,0 +1,4 @@
+question,answer
+"What is the function of the FORMATDK_DV command in a disk controller job?","1581 disk Controller Job commands: FORMATDK_DV
+   $F0     Formats  the disk with the default physical
+                      format."

@@ -1,0 +1,5 @@
+
+1581 disk: Controller commands error code 71: DIRECTORY ERROR
+    The  BAM  (Block  Availability  Map) on the diskette does not
+    match  the  copy in disk memory.  To correct,  Initialize the
+    diskette.

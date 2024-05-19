@@ -1,0 +1,27 @@
+
+
+
+LOADING PROGRAMS FROM TAPE
+
+  Loading  a program back from tape or disk is just as simple.  For tape,
+rewind the tape back to the beginning and type:
+
+  LOAD "PROGRAM NAME"
+
+  If  you  don't remember the program name,  just type LOAD and the first
+program on the tape will be loaded into memory.
+  After you press <RETURN> the computer will respond with:
+
+  PRESS PLAY ON TAPE
+
+  After  you  depress  the  play  key, the screen will blank, turning the
+border color of the screen as the computer searches for the program.
+  When the program is found, the screen will display:
+
+  FOUND PROGRAM NAME
+
+To  actually  load  the  program,  depress the <C=> key. To abandon the
+loading  procedure,  hit  <RUN/STOP>.  If  you hit the Commodore key, the
+screen  will  again  turn  the  border color while the program is loaded.
+After  the  loading procedure is completed, the screen will return to the
+normal state and the READY prompt will reappear.

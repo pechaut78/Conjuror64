@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $00B2-00B3?","TAPE1     address $00B2-00B3   is: Pointer: Start Address of Tape Buffer ($033C)."

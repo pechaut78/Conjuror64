@@ -1,0 +1,6 @@
+question,answer
+"What does the BASIC function POS(X) return?","basic: POS(X)
+
+  This function returns the number of the column (0-39) at which the next
+PRINT statement will begin on the screen. X may have any value and is not
+used."

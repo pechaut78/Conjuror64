@@ -1,0 +1,2 @@
+question,answer
+"What is the address of the kernel routine that handles the CLALL instruction?","kernal routine address for clall	= $ffe7"

@@ -1,0 +1,2 @@
+
+address D016 bit 5 is	ALWAYS SET THIS BIT TO 0 !

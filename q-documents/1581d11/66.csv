@@ -1,0 +1,24 @@
+question,answer
+"What is the recommended approach when opening a relative file for the first time to ensure reliable usage and avoid potential issues?","USING RELATIVE FILES: RECORD# COMMAND
+
+  When  a  relative file is opened for the first time,  it is not
+quite ready for use. Both to save time when using the file later,
+and to assure  that the file will work reliably,  it is necessary
+to  create  several records before closing the file for the first
+time.  At  a  minimum,  enough records to fill more than two disk
+sectors (512 bytes) should be written. In practice, most programs
+go ahead  and create as many records as the program is eventually
+expected  to  use.  That  approach  has the additional benefit of
+avoiding  such  problems  as  running out of room on the diskette
+before the entire file is completed.
+  If  you  simply  begin  writing  data to a just-opened relative
+file,  it will act much like a sequential file,  putting the data
+elements  written  by  the  first  PRINT# statement in record #1,
+those  written by the second PRINT# statement in record #2 and so
+on.  This  means  each  record must be written by a single PRINT#
+statement,  using  embedded  carriage  returns within the data to
+separate  fields  that  will  be  read  in via one or more INPUT#
+statements later. However, it is far better to explicitly specify
+which record number is desired via a RECORD# command to the disk.
+This  allows  you to access records in any desired order, hopping
+anywhere in a file with equal ease."

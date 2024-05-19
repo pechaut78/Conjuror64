@@ -1,0 +1,18 @@
+question,answer
+"What is the purpose and functionality of the Track Cache Buffer in the 1581 disk drive?","1581 disk:  TRACK CACHE BUFFER
+
+  One  of  the  improvements  in  the  1581  design over previous
+Commodore  disk  drives  which makes the device more efficient is
+the Track Cache buffer. This buffer is located from $0C00 through
+$1FFF.  All  disk  accesses involve an entire physical track at a
+time.  If  a single sector is needed from a particular track, the
+entire  track is read into RAM.  Consequently,  any more requests
+for sectors from the same track require only a RAM data transfer,
+rather  than  a  search  of  the  track on the disk again. Sector
+writes  are also speeded up considerably,  since each consecutive
+write  to  sectors  on  the same track requires only a RAM to RAM
+data transfer. After data is written into the Track Cache Buffer,
+it  is not written to the disk until one of the following occurs:
+1) a request is made for access of a sector on a different track,
+2) a  'dump  track  buffer'  command is issued,  or  3) after 250
+milliseconds of no serial bus activity."

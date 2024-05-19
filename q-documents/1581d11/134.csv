@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the $9A command in a 1581 disk controller job?","1581 disk Controller Job commands: ERRLEDOFF_DV  
+$9A     Disables error LED blinking."

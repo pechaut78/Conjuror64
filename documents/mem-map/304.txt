@@ -1,0 +1,2 @@
+
+TXTPTR    address $007A-007B   is: Pointer: Current Byte of BASIC Text.

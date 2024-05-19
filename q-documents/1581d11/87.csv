@@ -1,0 +1,23 @@
+question,answer
+"What are the internal disk commands that expert programmers can use to directly alter the workings of the 1581 disk drive?","1581 disk:  INTERNAL DISK COMMANDS
+
+
+  Expert  programmers  can  give commands that directly alter the
+workings of the  1581,  much as skilled programmers can alter the
+workings of BASIC inside the computer with PEEKs,  POKEs  and SYS
+calls.  It  is  also  possible to write machine language programs
+that  load  and  run entirely within the 1581,  either by writing
+them into disk memory from  the  computer,  or  by  loading  them
+directly  from diskette into the desired disk memory buffer. This
+is  similar  to  loading and running machine language programs in
+your computer.
+  As when learning to use PEEK,  POKE  and  SYS in your computer,
+extreme caution is advised in using the commands in this chapter.
+They are essentially machine language commands,  and  lack all of
+BASIC's safeguards.  If anything goes wrong, you may have to turn
+the disk drive off and on again  (after removing the diskette) to
+regain  control.  Do not practice these commands on any important
+diskette.  Rather,  make a spare copy and work with that. Knowing
+how  to program a 6502 in machine language will help greatly, and
+you  will  also need a good memory map of the 1581.  A brief 1581
+map appears below."

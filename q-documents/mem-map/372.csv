@@ -1,0 +1,2 @@
+question,answer
+"What is the function and location of the KEYTAB command ?","KEYTAB    address $00F5-00F6   is: Vector: Current Keyboard decoding Table. ($EB81)"

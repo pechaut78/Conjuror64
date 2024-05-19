@@ -1,0 +1,26 @@
+basic:  Editing Tips
+
+  If you make a mistake on a line, you have a number of editing options.
+
+1. You can retype a line anytime,  and the  computer  will  automatically
+   substitute the new line for the old one.
+2. An unwanted line can be erased by simply typing the  line  number  and
+   <RETURN>.
+3. You can also easily edit an existing line,  using the cursor keys  and
+   editing keys.
+
+   Suppose you made a typing mistake in a line of the example. To correct
+it without retyping the entire line, try this:
+  Type LIST, then using the <SHIFT> and <CRSR UP/DOWN> keys together move
+the  cursor  up  until  it  is  positioned  on  the line that needs to be
+changed.
+  Now,  use  the  cursor-right  key  to  move the cursor to the character
+you  want  to  change,  typing the change over the old character. Now hit
+<RETURN> and the corrected line will replace the old one.
+  If you need more space on the line, position the cursor where the space
+is needed and hit  <SHIFT>  and  <INST/DEL>  at the same time and a space
+will  open  up.  Now  just  type  in  the  additional information and hit
+<RETURN>.  Likewise,  you  can  delete unwanted characters by placing the
+cursor to the right of the unwanted character and hitting the  <INST/DEL>
+key.
+ 

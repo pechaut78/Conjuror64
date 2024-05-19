@@ -1,0 +1,2 @@
+
+TRDTMP    address $02A3        is: Temporary storage during Tape READ.

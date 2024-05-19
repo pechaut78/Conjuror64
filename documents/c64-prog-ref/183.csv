@@ -1,0 +1,7 @@
+question,answer
+"Initialize the Commodore 64 screen editor","This routine sets up the KERNAL screen editor."
+"What is the purpose of the CINT function?","Initialize screen editor & 6567 video chip"
+"What is the call address of the CINT function?","$FF81 (hex) 65409 (decimal)"
+"What registers are affected by the CINT function?","A, X, Y"
+"What is the stack requirement for the CINT function?","4"
+"What is the description of the CINT function?","This routine sets up the 6567 video controller chip in the Commodore 64 for normal operation."

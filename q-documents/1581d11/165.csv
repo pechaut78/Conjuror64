@@ -1,0 +1,5 @@
+question,answer
+"What error message is displayed when using pattern matching characters in a file name while trying to save or open a file for writing?","1581 disk: Controller commands error code 33: SYNTAX ERROR (invalid file name)
+    Pattern  matching  characters  cannot  be  used  in  the SAVE
+    command  or when Opening files for the purpose of Writing new
+    data. Spell out the file name."

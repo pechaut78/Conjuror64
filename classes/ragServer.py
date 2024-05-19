@@ -57,7 +57,7 @@ class ragServer:
         def cleanSimilarities(sims):
             cleaned_text ="context:["
             for elem in sims:
-                cleaned_text += "\n"+ elem.page_content.replace("\\n", " ").replace("\\xa0", " ").strip()
+                cleaned_text += "\n"+ elem.page_content.replace("\\n"," ").replace("\\xa0"," ").strip()
                 cleaned_text =  re.sub(r'\n+', '\n', cleaned_text)
             cleaned_text += "]"
 
@@ -114,12 +114,12 @@ class ragServer:
         
        
         self.chat_retriever_chain = (
-             {"input": lambda x: x.get("rephrased_input", "Hello")} | retriever
+             {"input": lambda x: x.get("rephrased_input","Hello")} | retriever
         )
         #self.chat_retriever_chain = create_history_aware_retriever(self.model, self.store.as_retriever(), condense_question_prompt)
         
         def format_docs(d):
-            l = d.get("input", "Hello")
+            l = d.get("input","Hello")
             print(l)
             return l
         
@@ -186,9 +186,9 @@ class ragServer:
 
     def invoke_mem(self, text):
         print(self.chain.invoke(
-            {"ability": "math", "question": "What does cosine mean?","chat_history":"[]"},
+            {"ability": "math","question": "What does cosine mean?","chat_history":"[]"},
             config={
-                "configurable": {"user_id": "user_id", "conversation_id": "conversation_id"}
+                "configurable": {"user_id": "user_id","conversation_id": "conversation_id"}
             },
 
 

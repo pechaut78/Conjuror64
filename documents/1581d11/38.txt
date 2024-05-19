@@ -1,0 +1,12 @@
+
+1581 disk with basic 7,0: in depth scratch:
+
+  SCRATCH  is  a powerful command and should be used with caution
+to be sure you delete only the files you really want erased. When
+using  it  with  a  pattern,  we  suggest  you first use the same
+pattern in a  DIRECTORY  command,  to be sure exactly which files
+will  be  deleted.  That  way you'll have no unpleasant surprises
+when you use the same pattern in the SCRATCH command.
+  If you accidentally SCRATCH a file you shouldn't have, there is
+still  a  chance of saving it by using the "UNSCRATCH" program on
+your Test/Demo diskette.

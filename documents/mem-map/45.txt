@@ -1,0 +1,1 @@
+address $D019 Bit 1 is: VIC Interrupt Flag Register (Bit = 1: IRQ Occurred)

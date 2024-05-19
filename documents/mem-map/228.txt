@@ -1,0 +1,2 @@
+
+address $DD0E bit 4 is:	Force Load Timer A: 1 = Yes

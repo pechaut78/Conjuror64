@@ -1,0 +1,10 @@
+
+
+
+1581 disk with basic 7,0:FORMAT FOR THE SAVE COMMAND:
+
+  DSAVE "file name"[,Ddrive#][,Udevice#]
+
+  This  command  will  not  work in copying programs that are not
+written  in  BASIC.  To copy these machine-language programs, you
+can use the BSAVE command or the built-in Monitor S command.

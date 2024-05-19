@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $00C3-00C4?","MEMUSS    address $00C3-00C4   is: Pointer: Type 3 Tape LOAD and general use."

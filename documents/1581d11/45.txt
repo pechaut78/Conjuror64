@@ -1,0 +1,6 @@
+
+
+
+1581 disk with basic 7,0:FORMAT FOR THE DCLEAR COMMAND:
+
+  DCLEAR [Ddrive#]

@@ -1,0 +1,4 @@
+
+1581 disk: Controller commands error code 64: FILE TYPE MISMATCH
+    The  requested file access is not possible using files of the
+    type named. Reread the chapter covering that file type.

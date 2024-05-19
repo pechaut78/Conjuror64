@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the memory region located at address $033C-03FB?","TBUFFR    address $033C-03FB   is: Tape I/O Buffer."

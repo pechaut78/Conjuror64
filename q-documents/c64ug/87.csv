@@ -1,0 +1,7 @@
+question,answer
+"What happens when a program encounters a RETURN statement, and what error occurs if no GOSUB was previously issued?","basic: RETURN
+
+  This  statement  is  always  used  in conjunction with GOSUB.  When the
+program  encounters  a  RETURN,  it  will go to the statement immediately
+following the GOSUB command.  If no GOSUB was previously issued, a RETURN
+WITHOUT GOSUB ERROR will occur."

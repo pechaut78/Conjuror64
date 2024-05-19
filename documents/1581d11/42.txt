@@ -1,0 +1,49 @@
+1581 disk with basic 7,0: RENAMING AND SCRATCHING TROUBLESOME FILES
+
+  Eventually,  you  may  run  across  a  file  which  has a crazy
+filename,  such as a comma by itself (",") or one that includes a
+Shifted  Space.  Or  perhaps you will find one that includes non-
+printing  characters.  Any  of  these  can be troublesome.  Comma
+files,  for  instance,  are  an exception to the rule that no two
+files can have the same name.  Since  it shouldn't be possible to
+make  a  file whose name is only a comma,  the disk never expects
+you to do it again.
+  Files  with  a   Shifted  Space  in  their  name  can  also  be
+troublesome,  because  the  disk  interprets the Shifted Space as
+signaling  the end of the file name,  and prints whatever follows
+after  the  quotation  mark  that  marks the end of a name in the
+directory.  This  technique can be useful by allowing you to have
+a long file name,  and  making the disk recognize a small part of
+it  as  being  the same as the whole thing without using pattern-
+matching characters.
+  In any case,  if  you have a troublesome filename,  you can use
+the  CHR$()  function  to  specify troublesome characters without
+typing  them  directly.  This  may allow you to build them into a
+RENAME  command.  If  this  fails,  you may also use the pattern-
+matching characters  discussed for a SCRATCH command.  This gives
+you  a  way  to  specify  the  name without using the troublesome
+characters at all, but also means loss of your file.
+  For  example,  if  you  have  managed  to  create  a file named
+""MOVIES",  with an extra quotation mark at the front of the file
+name,  you can rename it to  "MOVIES" using the CHR$() equivalent
+of a quotation mark in the RENAME command:
+
+  RENAME (CHR$(34)+"MOVIES") TO "MOVIES"
+
+The  CHR$(34)  forces  a  quotation  mark into the command string
+without  upsetting  BASIC.  The  procedure  for  a file name that
+includes a Shifted Space is similar, but uses CHR$(160).
+  In cases  where even this doesn't work,  for  example,  if your
+diskette contains a comma file,  (one named ",")  you can get rid
+of it this way:
+
+  SCRATCH "?"
+
+  This example deletes all files with one-character names.
+
+  Depending  on  the  exact  problem,  you  may  have  to be very
+creative in choosing pattern-matching characters that will affect
+only  the desired file,  and may have to rename other files first
+to keep them from being scratched.
+  In  some  cases,  it  may  be easier to copy desired files to a
+different diskette and leave the troublesome files behind.

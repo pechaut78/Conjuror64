@@ -1,0 +1,36 @@
+question,answer
+"What are the basic syntax and usage of the POKE and PRINT statements in a programming language?","basic: POKE
+
+  POKE is always followed by two numbers, or formulas. The first location
+is a memory location; the second number is a decimal value from 0 to 255,
+which  will  be  placed in the memory location,  replacing any previously
+stored value.
+
+  10 POKE 53281,0
+  20 S = 4096 * 13
+  30 POKE S + 29, 8
+
+PRINT
+
+  The  PRINT  statement  is  the  first one most people learn to use, but
+there  are  a  number of variations to be aware of. PRINT can be followed
+by:
+
+  Text String with quotes
+  Variable names
+  Functions
+  Punctuation marks
+
+  Punctuation  marks  are used to help format the data on the screen. The
+comma   divides  the  screen  into  four  columns,  while  the  semicolon
+suppresses  all  spacing.  Either mark can be last symbol on a line. This
+results  in the next thing PRINTed acting as if it were a continuation of
+the same PRINT statement.
+
+  10 PRINT 'HELLO'
+  20 PRINT 'HELLO', A$
+  30 PRINT A + B
+  40 PRINT J;
+  50 PRINT A, B, C, D
+
+  Also see: POS, SPC and TAB functions."

@@ -1,0 +1,23 @@
+question,answer
+"What is the concept in Commodore 64 programming that allows you to directly manipulate specific memory locations to change various aspects of the computer's behavior, such as screen colors and object definitions?","basic:  PEEKs and POKEs
+
+  Just  as  variables  could be thought of as a representation of 'boxes'
+within the machine where you placed your information,  you can also think
+of  some  specially  defined  'boxes'  within the computer that represent
+specific memory locations.
+
+  The  Commodore 64  looks  at  these  memory  locations  to see what the
+screen's background and border color should be, what characters are to be
+displayed on the screen -- and where -- and a host of other tasks.
+  By  placing,  'POKEing',  a  different  value  into  the  proper memory
+location,  we can change colors, define and move objects, and even create
+music.
+
+  Above  we  showed just four locations,  two of which control the screen
+and background colors. Try typing this:
+
+  POKE 53281,7 <RETURN>
+
+  The  background  color  of  the screen will change to yellow because we
+placed the value '7' --  for yellow --  in the location that controls the
+background color of the screen."

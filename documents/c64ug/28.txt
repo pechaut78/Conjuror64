@@ -1,0 +1,17 @@
+
+
+DISK:  Using your disk drive,  carefully insert the preprogrammed disk
+so  that  the label on the disk is facing up and is closest to you.  Look
+for  a  little notch on the disk (it might be covered with a little piece
+of tape). If  you're inserting the disk properly the notch will be on the
+left side.  Once the disk is inside  close the protective gate by pushing
+down on the lever.  Now type  LOAD "PROGRAM NAME",8  and hit the <RETURN>
+key. The disk will make noise and your screen will say:
+
+  SEARCHING FOR PROGRAM NAME
+  LOADING
+  READY.
+  _
+
+  When  the  READY  comes  on  and  the  _ is on, just type RUN, and your
+prepackaged software is ready to use.

@@ -1,0 +1,3 @@
+
+
+VERCK  address  $000A       is:   Flag: 0 = Load, 1 = Verify.

@@ -1,0 +1,13 @@
+
+C64 Rinitialize
+
+<SHIFT> and <CLR/HOME>.  The screen should clear and the cursor
+will  be  positioned  in  the  "home" spot (upper left-hand corner of the
+screen).
+  Now, simultaneously hold <C=> and the <7> key. This sets the text color
+back to light blue.  There is one more step needed to get everything back
+to normal. Hold <CTRL> and <0> (Zero not Oh!). This sets the display mode
+back  to  normal.  If  you  remember,  we turned REVERSE type on with the
+<CTRL><9> to create the color bars (the color bars were actually reversed
+spaces).  If  we were in the normal text mode during the color test,  the
+cursor would have moved, but just left blank spaces.

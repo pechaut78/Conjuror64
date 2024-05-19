@@ -1,0 +1,8 @@
+question,answer
+"What are two common BASIC error messages that may occur when working with data files, and how do they relate to INPUT# and PRINT# statements?","1581 disk with basic 7,0:  MORE ABOUT INPUT#
+
+  After you begin using data files regularly,  you  may encounter
+two BASIC error messages.  They are  'STRING TOO LONG ERROR'  and
+'FILE DATA ERROR'.  Both  are  likely  to halt your program at an
+INPUT#  statement,  but  may also have been caused by errors in a
+PRINT# statement when the file was written."

@@ -1,0 +1,37 @@
+1581 disk:  BLOCK-EXECUTE
+
+  This  rarely-used  command  will  load  a  sector  containing a
+machine  language routine into a memory buffer from diskette, and
+execute  it  from  the first location within the buffer,  until a
+ReTurn from Subroutine (RTS) instruction ends the command.
+
+FORMAT FOR THE BLOCK-EXECUTE COMMAND:
+
+  PRINT#15,"B-E:";channel#;drive#;track#;sector#
+
+where  "channel#"  is  the channel number specified when the file
+into which the block will be loaded was opened,  "drive#"  is the
+drive number,  and  "track#"  and  "sector#" are respectively the
+track  and sector numbers containing the desired block of data to
+be loaded into the file buffer and executed there.
+
+ALTERNATE FORMATS:
+
+  PRINT#15,"B-E:";channel#;drive#;track#;sector#
+  PRINT#15,"B-E:channel#,drive#,track#,sector#"
+
+EXAMPLES:
+
+  Assuming  you've  written a machine language program onto Track
+1,  Sector 8  of  a diskette,  and would like to run it in buffer
+number 1  in  disk  memory  (starting  at $0400 hexadecimal), you
+could do so as follows:
+
+110 OPEN 15,8,15               Open command channel.
+120 OPEN 2,8,2,"#1"            Open direct access channel to
+                               buffer 1.
+130 PRINT#15,"B-E:";2;0;1;8    Load Track1, Sector 8 in it
+                               & execute.
+140 CLOSE 2                    Tidy up after.
+150 CLOSE 15
+160 END

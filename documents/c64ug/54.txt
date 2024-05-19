@@ -1,0 +1,40 @@
+basic: Sprites
+
+ you need to know what
+picture making locations control the functions you need. These locations,
+called registers, could be illustrated in this manner:
+
+  Register(s)   Description
+
+   0            X coordinate of sprite 0
+   1            Y coordinate of sprite 0
+   2 - 15       Paired like 0 and 1 for sprites 1-7
+  16            Most Significant Bit -- X coordinate
+  21            Sprite appear: 1 = appear, 0 = disappear
+  29            Expand sprite in "X" Direction
+  23            Expand sprite in "Y" Direction
+  39-46         Sprite 0-7 color
+
+  In  addition  to  this  information you need to know from which 64 byte
+section sprites will get their data (1 byte is used).
+  This data is handled by 8 locations directly after screen memory:
+
+        | 2040 | 2041 | 2042 | 2043 | 2044 | 2045 | 2046 | 2047 |
+     SPRITE 0      1      2      3      4      5      6      7
+
+  Now let's outline the exact procedure to get things moving  and finally
+write a program.
+  There  are  only a few things necessary to actually create  and move an
+object.
+
+  1. Make the proper sprite(s) appear on the screen by POKEing into
+     location 21 a 1 for the bit which turns on the sprite.
+  2. Set sprite pointer (locations 2040-2047) to where sprite data should
+     be read from.
+  3. POKE actual data into memory.
+  4. Through a loop, update X and Y coordinates to move sprite around.
+  5. You can, optionally, expand the object, change colors,  or perform a
+     variety  of  special  functions.  Using  location  29 to expand your
+     sprite in the "X" direction and location 23 in the "Y" direction.
+
+  

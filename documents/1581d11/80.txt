@@ -1,0 +1,58 @@
+1581 disk:  BLOCK-WRITE
+
+The  purpose  of  a BLOCK-WRITE is to save the contents of a file
+buffer  into  a  specified sector.  It is thus the reverse of the
+BLOCK-READ  command.  Although  the  BLOCK-WRITE command (B-W) is
+still  part of the DOS command set,  it is nearly always replaced
+by the U2 command.
+
+FORMAT FOR THE BLOCK-WRITE COMMAND:
+
+  PRINT#15,"U2";channel#;drive#;track#;sector#
+
+where  "channel#"  is the channel number specified  when the file
+into  which  the  block will be read was opened;  "drive#" is the
+drive number;  and  "track#"  and  "sector#" are respectively the
+track  and  sector  numbers that should receive the block of data
+being saved from the file buffer.
+
+ALTERNATE FORMATS:
+
+  PRINT#15,"U2:"channel#;drive#;track#;sector#
+  PRINT#15,"UB:"channel#;drive#;track#;sector#
+  PRINT#15,"U2:channel#,drive#,track#,sector#"
+
+EXAMPLES:
+
+  To restore  Track 40,  Sector 3  of the directory from the disk
+buffer filled by a BLOCK-READ, use:
+
+  PRINT#15,"U2";5;0;40;3
+
+You'll return to this example on the next page,  after  you learn
+to alter the directory in a useful way.
+  You  can  also  use  a  BLOCK-WRITE to write a name in Track 1,
+Sector 1,  a  rarely-used  sector.  This  can be used as a way of
+marking a diskette  as belonging to you.  Here is a program to do
+it, using the alternate form of the BLOCK-WRITE command:
+
+  110 INPUT"YOUR NAME";NA$            Enter a name.
+  120 OPEN 15,8,15                    Open command channel.
+  130 OPEN 4,8,4,"#"                  Open direct access channel.
+  140 PRINT#4,NA$                     Write name to buffer.
+  150 PRINT#15,"U2";4;0;1;1           Write buffer to Track1,
+  160 CLOSE 4                         Sector 1 of diskette.
+  170 CLOSE 15                        Tidy up after.
+  180 END
+
+As with the  BLOCK-READ command,  there is a  BLOCK-WRITE command
+identical in function to  "U2"  that does not check the track and
+sector parameters for valid bounds before attempting to write the
+sector. Its format is:
+
+  PRINT#15,"B-o";channel#;drive#;track#;sector#
+  (The character after the B- is a shifted W.)
+
+                       or
+
+  PRINT#15,"B-";CHR$(215);channel#;drive#;track#;sector#

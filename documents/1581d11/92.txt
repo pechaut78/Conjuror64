@@ -1,0 +1,21 @@
+1581 disk:  MEMORY-EXECUTE
+
+  Any routine in disk memory,  either  in  RAM  or  ROM,  can  be
+executed with the MEMORY-EXECUTE command. It is the equivalent of
+the  BASIC  SYS call to a machine language program or subroutine,
+but works in disk memory instead of within the computer.
+
+FORMAT FOR THE MEMORY-EXECUTE COMMAND:
+
+  PRINT#15,"M-E"CHR$(<address)CHR$(>address)
+
+where  "<address"  is the low order part,  and  ">address" is the
+high order part of the address in disk memory  at which execution
+is to begin.
+
+  Most  uses  require intimate knowledge of the inner workings of
+the  DOS,  and  preliminary  setup  with other commands,  such as
+MEMORY-WRITE.
+
+  The  routine  should  end  with an RTS to return control to the
+1581.

@@ -1,0 +1,41 @@
+question,answer
+"What is the format and protocol for the CMD 2 -- WRITE command in a disk assembly?","1581 disk in assembly : CMD 2 -- WRITE
+
+ BYTE    BIT 7    6      5      4      3      2      1      0
+-----------------------------------------------------------------
+  00       0      1      0      1      0      1      0      1
+-----------------------------------------------------------------
+  01       0      0      1      1      0      0      0      0
+-----------------------------------------------------------------
+  02       L      E      X      S      0      0      1      N
+-----------------------------------------------------------------
+  03                       DESTINATION TRACK
+-----------------------------------------------------------------
+  04                       DESTINATION SECTOR
+-----------------------------------------------------------------
+  05                       NUMBER OF SECTORS
+-----------------------------------------------------------------
+  06                      NEXT TRACK (OPTIONAL)
+-----------------------------------------------------------------
+
+RANGE: All  values  are  determined by the particular disk format
+       and format of translation table.
+
+SWITCHES: L -- logical flag(1=do logical to physical translation)
+          E -- ignore error (1 = ignore)
+          S -- side select
+          N -- drive number
+
+PROTOCOL: Burst  data  to  the drive,  then host must perform the
+          following:  fast  serial input,  pull the clock low and
+          wait  for  the  burst status byte,  pull clock high, go
+          output for multi-sector transfers and continue.
+
+CONVENTIONS: Before you can READ or WRITE to a diskette,  it must
+             be logged-in using either the  INQUIRE DISK or QUERY
+             DISK FORMAT command (both are described later). This
+             must be done once each time you change diskettes.
+
+INPUT: Host must transfer burst data.
+
+OUTPUT: One burst status byte following each WRITE operation."

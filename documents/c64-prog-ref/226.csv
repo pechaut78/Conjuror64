@@ -1,0 +1,11 @@
+question,answer
+"What is the primary function of a modem?","translate character codes into audio pulses and vice-versa"
+"What is the purpose of the OPEN statement in a modem?","sets up the parameters to match the speed and format of the other computer"
+"What determines the baud rate, number of data bits, and number of stop bits in a modem?","the bit positions of the first character code"
+"What is the optional second code in a modem used for?","specifies the parity and duplex of the transmission"
+"What is the standard set of character codes used by most computers?","ASCII"
+"Why is character translation necessary when communicating with other computers?","because Commodore 64 character codes are different from ASCII"
+"What is the importance of knowing the receiving device when writing programs that communicate with other computers?","to ensure the receiving computer knows what to do with the characters"
+"What is an example of a program that automatically types in account numbers and secret passwords?","a terminal program"
+"Why is it important to carefully count the number of characters and RETURN characters in a program?","so the receiving computer knows what to do with them"
+"What is the main difference between outputting to a modem and outputting to a screen?","the need for character translation"

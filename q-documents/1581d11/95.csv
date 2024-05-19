@@ -1,0 +1,15 @@
+question,answer
+"What is the format and requirements for using the UTILITY LOADER command to load a user-type file into drive RAM?","1581 disk:  UTILITY LOADER
+
+  This command loads a user-type  (USR)  file into the drive RAM.
+The  first  two  bytes  of the file must contain the low and high
+addresses   respectively.   The  third  byte  is  the  amount  of
+characters to follow.  In the addition,  a trailing checksum byte
+must be included. The load address is the starting address.
+
+FORMAT FOR THE UTILITY LOADER COMMAND:
+
+  PRINT#15,'&0:filename'
+
+  To return from this routine,  the  program  should  end with an
+RTS."

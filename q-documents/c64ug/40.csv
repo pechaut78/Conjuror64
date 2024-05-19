@@ -1,0 +1,16 @@
+question,answer
+"What are the steps to start programming in BASIC on a Commodore 64?","basic: how to start ?
+
+Clear the screen by holding down the <SHIFT> key, and then depressing the
+<CLR/HOME> key.
+Type NEW and press <RETURN>. (This just clears out any numbers that might
+have been left in the computer from your experimenting.)
+Now type the following exactly as shown  (remember to hit <RETURN>  after
+each line)
+
+  10 ? 'COMMODORE 64'
+  20 GOTO 10
+
+  Now, type RUN and hit <RETURN> -- watch what happens.  Your screen will
+come alive with COMMODORE 64. After you've finished watching the display,
+hit <RUN/STOP> to stop the program."

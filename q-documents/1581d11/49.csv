@@ -1,0 +1,49 @@
+question,answer
+"What are the different ways to open a sequential file in BASIC 7.0 and BASIC 2.0, and how can you read and write to these files?","1581 disk with basic 7,0:EXAMPLES OF OPENING SEQUENTIAL FILES:
+
+  To create a sequential file of phone numbers, you could use:
+
+  BASIC 7.0:  DOPEN#2,'PHONES',D0,U8,W
+  BASIC 2.0:  OPEN 2,8,2,'0:PHONES,SEQUENTIAL,WRITE'
+              or
+              OPEN 2,8,2,'0:PHONES,S,W'
+
+  On  the  chance  you've  already  got  a  'PHONES'  file on our
+diskette, you can avoid a 'FILE EXISTS' error message by doing an
+@OPEN:
+
+  BASIC 7.0:  DOPEN#2,'@PHONES',D0,U8,W
+  BASIC 2.0:  OPEN 2,8,2,'@0:PHONES,S,W'
+
+This  erases  all  your old phone numbers,  so make sure that any
+information  that  may  be  deleted  is  of  no importance. After
+writing  our  phone  file,  remove  the diskette and turn off the
+system.  To recall the data in the file, reopen it with something
+like:
+
+  BASIC 7.0:  DOPEN#8,'PHONES',D0,U8
+  BASIC 2.0:  OPEN 8,8,8,'0:PHONES,S,R'
+
+It doesn't matter  whether the file and channel numbers match the
+ones we used before,  but the file name does have to match.  It's
+possible  to  use an abbreviation form of the file name, if there
+are no other files that would have the same abbreviation:
+
+  BASIC 7.0:  DOPEN#10,'PH*',D0,U8
+  BASIC 2.0:  OPEN 10,8,6,'0:PH*,S,R'
+
+  If you have too many phone numbers,  they  might not fit in one
+file.  In  that  case,  use  several similar file names and let a
+program choose the correct file.
+
+  BASIC 7.0:  100 INPUT'WHICH PHONE NUMBERS FILE (1-3)';PH
+              110 IF PH<>1 AND PH<>2 AND PH<>3 THEN 100
+              120 DOPEN#4,'PHONE'+STR$(PH),D0,U8
+
+  BASIC 2.0:  100 INPUT'WHICH PHONE NUMBERS FILE (1-3)';PH
+              110 IF PH<>1 AND PH<>2 AND PH<>3 THEN 100
+              120 OPEN 4,8,2,'PHONE'+STR$(PH)+',S,R'
+
+You can omit the drive number on an OPEN command  to read a file.
+Doing  so  allows those with dual drives to search both diskettes
+for the file."

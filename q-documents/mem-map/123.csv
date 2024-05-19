@@ -1,0 +1,2 @@
+question,answer
+"What does the $D413 bits 7-4 register control ?","address $D413 bits 7-4 is:	Select Attack Cycle Duration: 0-15"

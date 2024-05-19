@@ -1,0 +1,2 @@
+
+address $4283	bits4 is:	Select Triangle Waveform, 1 = On

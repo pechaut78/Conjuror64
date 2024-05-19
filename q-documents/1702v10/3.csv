@@ -1,0 +1,37 @@
+question,answer
+"What are the steps to turn on your 1702 monitor and personal computer, and what should you expect to see on the monitor screen?","TURNING ON YOUR 1702 MONITOR
+When you finish connecting your monitor according to the instructions,
+follow these simple steps:
+
+1. Turn on the monitor by pushing down the power switch. The POWER
+INDICATOR LIGHT on the front of the monitor shows you when the power
+is on.  Always turn on the monitor BEFORE you turn on the computer.
+
+Later, when you're ready to turn the power off, just press the power
+button again.  The button will pop back up and the power light will go
+out.
+
+2. Turn on your personal computer.  You can tell that both the monitor
+and the computer are working correctly when the monitor displays a
+message like this one, which appears when you're using a Commodore 64:
+
+[ Graphic partially omitted: Black and white front view of monitor
+showing characters, screen, and border. ]
+
+ .-------------------------------------------------------.
+ |                                                       |
+ |   .-----------------------------------------------.   |
+ |   |   .---------------------------------------.   |   |
+ |   |   |                                       |   |   |
+ |   |   | ****COMMODORE 64 BASIC V2****         |   |   |
+ |   |   | 64K RAM SYSTEM 38911 BASIC BYTES FREE . . . . . . Character
+ |   |   | READY.                                |   |   |
+ |   |   | #                               . . . . . . . . . Screen
+ |   |   |                                       |   |   |
+ |   |   |                                       |   |   |
+ |   |   |                                       | . . . . . Border
+ |   |   |                                       |   |   |
+
+
+Different computers display other opening messages.  If you don't know
+what message to expect, see your computer's user manual."

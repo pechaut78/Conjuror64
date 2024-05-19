@@ -1,0 +1,19 @@
+
+
+
+basic: INPUT#
+
+  INPUT#  is  similar  to INPUT,  but takes data from a previously OPENed
+file or device.
+
+  10 INPUT#1, A
+
+LET
+
+  LET  is  hardly  ever  used  in programs, since it is optional, but the
+statement is the heart of all BASIC programs.  The variable name which is
+to  be  assigned  the  result of a calculation is on the left side of the
+equal sign, and the formula in the right.
+
+  10 LET A = 5
+  20 LET D$ = "HELLO"

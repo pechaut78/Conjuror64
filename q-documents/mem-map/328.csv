@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location at address $00A6 in a Commodore 64 computer?","BUFPNT    address $00A6        is: Pointer: Tape I/O buffer."

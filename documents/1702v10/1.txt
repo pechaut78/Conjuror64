@@ -1,0 +1,44 @@
+
+
+CONNECTING THE 1702 MONITOR TO A COMPUTER
+The monitor connection cable connects your monitor to a Commodore
+personal computer.  Before you connect the cable, turn off the power
+to both your personal computer and the monitor.
+
+There are two different cables that you can use to connect the monitor
+to your computer.
+
+1. One kind of cable has three jacks that connect to the BACK of the
+monitor.
+
+2. The other cable has two jacks that connect to the FRONT of the
+monitor.
+
+The kind of cable you'll use depends on your computer.  To find out
+which kind of cable you should use, look at the audio/video connector
+on your computer (see your computer's user manual if you don't know
+where this connector is).
+
+1. If the audio/video connector has EIGHT little holes, use the
+three-jack cable.
+
+2. If the connector has FIVE little holes, use the two-jack cable.
+
+To connect a three-jack cable to the rear panel of the monitor, follow
+these instructions, which clarify the diagram:
+
+1. Plug the eight PIN DIN connector (the larger end of the cable) into
+the audio/video connector port on your computer.  Just push the cable
+end in.
+
+2. Plug the RCA pin plugs (the jacks) of the cable into the rear
+terminals on the monitor.  The jacks and the terminals are color-
+coded:
+
+* the audio output jack (WHITE) plugs into the AUDIO IN terminal
+(WHITE) on the monitor
+* the luminance output jack (YELLOW) plugs into the LUMA terminal
+(YELLOW)
+* the chroma output jack (RED) plugs into the CHROMA terminal (RED)
+
+3. Switch the SIGNAL SELECTOR to the REAR position.

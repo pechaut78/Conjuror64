@@ -1,0 +1,2 @@
+question,answer
+"What is the address of the kernel routine for I/O base in hexadecimal notation?","kernal routine address for iobase	= $fff3"

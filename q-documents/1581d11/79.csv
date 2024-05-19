@@ -1,0 +1,66 @@
+question,answer
+"What is the purpose of the BLOCK-READ command in DOS?","1581 disk:  BLOCK-READ
+
+  The  purpose  of  a  BLOCK-READ  is  to  load the contents of a
+specified  sector  into  a  file buffer.  Although the BLOCK-READ
+command (B-R) is still part of the DOS command set,  it is nearly
+always replaced the U1 command (See Chapter 6).
+
+FORMAT FOR THE BLOCK-READ COMMAND:
+
+  PRINT#15,'U1';channel#;drive#;track#;sector#
+
+where  'channel#'  is  the channel number specified when the file
+into  which  the  block will be read was opened,  'drive#' is the
+drive number,  and  'track#'  and  'sector#' are respectively the
+track  and sector numbers containing the desired block of data to
+be read into the file buffer.
+
+ALTERNATE FORMATS:
+
+  PRINT#15,'U1:'channel#;drive#;track#;sector#
+  PRINT#15,'UA:'channel#;drive#;track#;sector#
+  PRINT#15,'U1:channel#,drive#,track#,sector#'
+
+EXAMPLE:
+
+  Here  is  a  complete program to read a sector into disk memory
+using  U1,  and  from  there into computer memory via GET#. (If a
+carriage  return will appear at least once in every 88 characters
+of data, INPUT# may be used in place of GET#).
+
+  110 MB=7936: REM $1F00            Define a memory buffer.
+  120 INPUT'TRACK TO READ';T        Select a track
+  130 INPUT'SECTOR TO READ';S       and sector.
+  140 OPEN 15,8,15                  Open command channel.
+  150 OPEN 5,8,5,'#'                Open direct access channel.
+  160 PRINT#15,'U1';5;0;T;S         Read sector into disk buffer.
+  170 FOR I=MB TO MB+255            Use a loop to
+  180 GET#5,A$: IF A$=''            copy disk buffer
+      THEN A$=CHR$(0)               into computer memory.
+  190 POKE I,ASC(A$)
+  200 NEXT
+  210 CLOSE 5:CLOSE 15              Tidy up after.
+  220 END
+
+  As the loop progresses, the contents of the specified track and
+sector are copied into computer memory,  beginning at the address
+set by variable MB in line 160,  and  may be examined and altered
+there.
+
+  The  DOS  always checks that the track and sector parameters of
+the  BLOCK-READ  command are within the proper range.  If they're
+not,  a '66, ILLEGAL TRACK AND SECTOR'  error occurs.  In certain
+instances it might be necessary to access a track and sector that
+are not within what the DOS considers the proper bounds.  This is
+a  special  case  and,  unless  absolutely  necessary,  should be
+avoided. Nonetheless, there is a command identical in function to
+'U1' that doesn't check to see if the track and sector parameters
+are within bounds before attempting to read it. Its format is:
+
+  PRINT#15,'B-_';channel#;drive#;track#;sector#
+  (The character following the B- is a shifted R.)
+
+                        or
+
+  PRINT#15,'B-';CHR$(210);channel#;drive#;track#;sector#"

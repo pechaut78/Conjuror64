@@ -1,0 +1,21 @@
+
+
+
+1581 disk Controller Job commands: BUFMOVE_DV
+    $9E     Moves data between the job queue buffer and
+                      the track cache buffer. The track parameter
+                      in  the  job  queue denotes the position in
+                      the track cache buffer to transfer to/from.
+                      The sector parameter denotes the following:
+                        Bit 7 :  Direction  (1 = to  track  cache
+                                 buffer)
+                        Bit 6 :  Mark Flag  (set/clear the 'track
+                                 cache modified' flag)
+                        Bit 5 :  Transfer (1 = do the transfer)
+                        Bits 4-0:# of 256 byte blocks to transfer
+                      With bit 7 set,  the corresponding physical
+                      track  position  in  the  job queue (HDRS2)
+                      must  be updated for the purpose of telling
+                      the  controller  what  physical  track  the
+                      track cache buffer belongs to.  In addition
+                      the side var (SIDS) must also be updated.

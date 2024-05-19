@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the TSFCNT at address $00A3?","TSFCNT    address $00A3        is: Bit Counter Tape Read or Write/Serial Bus EOI (End Of Input) Flag."

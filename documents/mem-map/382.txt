@@ -1,0 +1,2 @@
+
+LAT       address $0259-0262   is: Kernal Table: Active logical File numbers.

@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the data bus pins?","The eight data bus pins are the bidirectional data port, controlled by /CS, RW, and Phase 0."
+"What is the condition for accessing the data bus?","The data bus can only be accessed while AEC and Phase 0 are high and /CS is low."
+"What is the function of the /CS pin?","The chip select pin, /CS, is brought low to enable access to the device registers in conjunction with the address and RW pins."
+"What happens when /CS is low?","/CS low is recognized only while AEC and Phase 0 are high."
+"What is the condition for recognizing /CS low?","Only while AEC and Phase 0 are high."
+"What is the purpose of Phase 0?","The data bus can only be accessed while AEC and Phase 0 are high and /CS is low."
+"What is the purpose of AEC?","The data bus can only be accessed while AEC and Phase 0 are high and /CS is low."
+"What is the condition for accessing the device registers?","The chip select pin, /CS, is brought low to enable access to the device registers in conjunction with the address and RW pins."

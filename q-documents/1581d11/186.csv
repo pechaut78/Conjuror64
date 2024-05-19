@@ -1,0 +1,4 @@
+question,answer
+"What error message is displayed when trying to select a partition that does not meet the criteria of a directory partition?","1581 disk: Controller commands error code 77: SELECTED PARTITION ILLEGAL
+    An attempt has been made to select a partition  that does not
+    meet the criteria of a directory partition."

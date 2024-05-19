@@ -1,0 +1,2 @@
+
+KOUNT     address $028B        is: Repeat Key: Speed Counter ($04).

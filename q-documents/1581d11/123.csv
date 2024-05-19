@@ -1,0 +1,4 @@
+question,answer
+"What is the purpose of the RESET_DV command in a disk controller job?","1581 disk Controller Job commands: RESET_DV
+      $82     Resets  the  disk controller and associated
+                      variables."

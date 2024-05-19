@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location at address $030E in a Commodore 64 computer?","SYREG     address $030E        is: Storage for 6510 Y-Register during SYS."

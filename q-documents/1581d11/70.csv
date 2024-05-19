@@ -1,0 +1,9 @@
+question,answer
+"What are the commands used to read and write relative file data, and how do they differ from sequential file programming?","1581 disk: WRITING RELATIVE FILE DATA
+
+  The commands used  to read and write relative file data are the
+same  PRINT#,  INPUT#,  and  GET# commands  used in the preceding
+chapter  on  sequential files.  Each command is used as described
+there.  However,  some  aspects of relative file access do differ
+from  sequential  file  programming,  and  we  will  cover  those
+differences here."

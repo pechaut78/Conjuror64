@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory region from address $0100 to $01FF?","STACK     address $0100-01FF   is: 6510 Hardware Stack Area."

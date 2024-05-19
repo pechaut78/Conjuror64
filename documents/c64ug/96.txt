@@ -1,0 +1,8 @@
+
+
+basic: INT(X)
+
+  Returns the truncated value of X, that is,  with all the decimal places
+to the right of the decimal point removed. The result will always be less
+than, or equal to, X. Thus, any negative numbers with decimal places will
+become the integer less than their current value.

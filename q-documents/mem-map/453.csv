@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory range $03C0-03FE?","SPR15     address $03C0-03FE   is: Sprite #15."

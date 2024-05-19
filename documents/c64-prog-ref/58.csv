@@ -1,0 +1,9 @@
+question,answer
+"Can a program be made shorter?","Yes, it can be made even shorter by 'crunching' it smaller."
+"How can a program be made more efficient?","By 'crunching' it as follows: 10 PRINTCHR$(147):V=53248:POKEV+21,1:POKE2040.13:POKEV+39,1"
+"What is the purpose of 'crunching' a program?","To make it fit in less memory and run more efficiently."
+"What is the key to writing a short program?","Listing the key sprite settings on separate program lines."
+"Can a program be made to run faster?","Yes, by 'crunching' it as follows: 10 PRINTCHR$(147):V=53248:POKEV+21,1:POKE2040.13:POKEV+39,1"
+"What is the benefit of 'crunching' a program?","It makes the program fit in less memory and run more efficiently."
+"Can a program be made to use less memory?","Yes, by 'crunching' it smaller."
+"Can a program be made to use less memory and run faster?","Yes, by 'crunching' it as follows: 10 PRINTCHR$(147):V=53248:POKEV+21,1:POKE2040.13:POKEV+39,1"

@@ -1,0 +1,41 @@
+question,answer
+"What is the BASIC 7.0 code to create a program that accepts user input for a record number, name, street, city and state, and zip code, and then writes this data to a file with fixed-length fields?","To  use  the  above  program  lines  for the version with fixed
+length fields, we would alter a few lines as follows:
+
+BASIC 7.0:
+
+start tok64 /128 writf128.prg
+  100 input'enter record number';re
+  110 :
+  120 dopen#3,'myrelfile',l88
+  130 bl$='{160*27}'
+  140 input'name';na$
+  145 ln=len(na$)
+  150 if ln>27 then 140
+  155 na$=na$+left$(bl$,27-ln)
+  160 input'street';sa$
+  165 ln=len(sa$)
+  170 if ln>27 then 160
+  175 sa$=sa$+left$(bl$,27-ln)
+  180 input'city & state';cs$
+  185 ln=len(cs$)
+  190 if ln>23 then 180
+  195 cs$=cs$+left$(bl$,23-ln)
+  200 input'zip code';zp$
+  205 ln=len(zp$)
+  210 if ln>10 then 200
+  215 zp$=zp$+left$(bl$,10-ln)
+  220 da$=na$+sa$+cs$+zp$
+  260 :
+  270 :
+  280 record#3,(re),1
+  290 if ds=50 then print#3,chr$(255):gosub 1000:goto 280
+  300 gosub 1000
+  310 print#3,da$
+  320 gosub 1000
+  330 record#3,(re),1
+  340 gosub 1000
+  350 dclose#3:end
+ 1000 if ds<20 then return
+ 1002 :
+ 1010 print'error:';ds$:dclose#3:end"

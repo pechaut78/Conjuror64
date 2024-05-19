@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory address range $002F-0030 in a Commodore 64 computer?","ARYTAB address  $002F-0030  is:   Pointer: Start of BASIC Arrays."

@@ -1,0 +1,6 @@
+
+1581 disk: Controller commands error code 60: WRITE FILE OPEN
+    A  write  file that has not been closed is being reopened for
+    reading.  This file must be immediately rescued, as described
+    in  BASIC  Hint #2  in  Chapter 2,  or it will become a splat
+    (improperly closed) file and probably be lost.

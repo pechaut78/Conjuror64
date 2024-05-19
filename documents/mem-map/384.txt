@@ -1,0 +1,2 @@
+
+SAT       address $026D-0276   is: Kernal Table: Active File Secondary Addresses.

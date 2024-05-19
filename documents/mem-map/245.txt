@@ -1,0 +1,3 @@
+
+
+ENDCHR address  $0008       is:   Flag: Scan for Quote at end of String.

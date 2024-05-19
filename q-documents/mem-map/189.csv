@@ -1,0 +1,2 @@
+question,answer
+"What is the function of memory addresses $DD00-DDFF in a Commodore 64 computer?","addresses $DD00-DDFF	are:		MOS 6526 Complex Interface Adapter (CIA) #2"

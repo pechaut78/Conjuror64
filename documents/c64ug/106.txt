@@ -1,0 +1,6 @@
+
+
+basic: LEN(X$)
+
+  Returned will be the number of characters  (including  spaces and other
+symbols) in the string X$.

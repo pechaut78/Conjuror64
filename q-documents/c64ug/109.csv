@@ -1,0 +1,5 @@
+question,answer
+"What is the function of the BASIC command "STR$(X)"?","basic: STR$(X)
+
+  This will return a string  which is identical to the PRINTed version of
+X."

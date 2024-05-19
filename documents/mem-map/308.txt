@@ -1,0 +1,2 @@
+
+SVXT      address $0092        is: Timing Constant for Tape.

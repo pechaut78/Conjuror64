@@ -1,0 +1,17 @@
+question,answer
+"What is the purpose and syntax of the VERIFY command ?","1581 disk:  VERIFY
+
+  The  VERIFY  command can be used to make certain that a program
+file  was  properly  saved  to disk.  It works much like the LOAD
+command,  except  that  it  only  compares  each character in the
+program  against  the  equivalent  character  in  the  computer's
+memory, instead of actually being copied into memory.
+  If  the  disk  copy of the program differs even a tiny bit from
+the copy in memory, 'VERIFY ERROR' will be displayed, to tell you
+that the copies differ. This doesn't mean either copy is bad, but
+if they were supposed to be identical, there is a problem.
+  Naturally,  there's no point in trying to VERIFY a disk copy of
+a program after the original is no longer in memory. With nothing
+to compare to,  an apparent error will always be announced,  even
+though  the  disk copy is automatically verified as it is written
+to the diskette."

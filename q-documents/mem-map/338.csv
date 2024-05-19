@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the BITTS register located at address $00B4?","BITTS     address $00B4        is: RS232 Write bit count/Tape Read timing Flag."

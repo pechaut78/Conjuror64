@@ -1,0 +1,2 @@
+
+address $DD0E bit 3 is:	Timer A Run Mode: 1 = One-Shot, s

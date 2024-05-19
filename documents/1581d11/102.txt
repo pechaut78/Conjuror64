@@ -1,0 +1,36 @@
+
+
+
+1581 disk in assembly:  FORMAT
+
+ BYTE    BIT 7    6      5      4      3      2      1      0
+-----------------------------------------------------------------
+  00       0      1      0      1      0      1      0      1
+-----------------------------------------------------------------
+  01       0      0      1      1      0      0      0      0
+-----------------------------------------------------------------
+  02       M      X      X      X      0      1      1      N
+-----------------------------------------------------------------
+  03   SECTOR SIZE           *(OPTIONAL, DEF-02,512 BYTE SECTORS)
+-----------------------------------------------------------------
+  04   LAST TRACK NUMBER      (OPTIONAL, DEF-79)
+-----------------------------------------------------------------
+  05   NUMBER OF SECTORS    **(OPTIONAL, DEF DEPENDS ON BYTE 03)
+-----------------------------------------------------------------
+  06   STARTING TRACK         (OPTIONAL, DEF-0)
+-----------------------------------------------------------------
+  07   FILL BYTE              (OPTIONAL, DEF-$E5)
+-----------------------------------------------------------------
+  08   STARTING SECTOR        (OPTIONAL, DEF-1)
+-----------------------------------------------------------------
+
+SWITCHES: M -- mode (1 = will accept BYTES 03-08,0 = will format,
+          create directory and BAM)
+          N -- drive number
+
+PROTOCOL: Conventional.
+
+CONVENTIONS: CMD 4 must be followed with CMD 3  or  CMD 6 once to
+             log the disk in.
+
+OUTPUT: None. Status will be updated within the drive.

@@ -1,0 +1,7 @@
+
+
+
+1581 disk Controller Job commands: MOTON_DV
+      $84     Turns on the spindle motor  (overlays a $01
+                      in the Job Queue after the spin-up sequence
+                      is complete).

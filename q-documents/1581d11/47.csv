@@ -1,0 +1,49 @@
+question,answer
+"What is the purpose of the OPEN statement in Commodore BASIC and how does it interact with various devices in a Commodore computer system?","1581 disk with basic 7,0:  OPENING A FILE
+
+  One  of  the most powerful tools in Commodore BASIC is the OPEN
+statement.  With it, you may send data almost anywhere, much like
+a telephone switchboard.  As you might expect, a command that can
+do  this  much  is  fairly  complex.  You  have already used OPEN
+statements regularly in some of your diskette commands.
+  Before you study the format of the OPEN statement, let's review
+some of the possible devices in a Commodore computer system.
+
+Device#:  Name:   Used for:
+-----------------------------------------------------------------
+0     Keyboard    Receiving input from the computer operator
+1     DATASSETTE  Sending and receiving information from cassette
+2     RS232       Sending and receiving information from a modem
+3     Screen      Sending output to a video display
+4,5   Printer     Sending output to a hard copy printer
+8-11  Disk Drive  Sending and receiving information from diskette
+-----------------------------------------------------------------
+
+  Because of the flexibility of the OPEN statement it is possible
+for  a  single  program  statement  to  contact  any one of these
+devices,  or  even  others,  depending  on  the value of a single
+character in the command. If the character is kept in a variable,
+the  device can even change each time that part of the program is
+used,  sending  data alternately and with equal ease to diskette,
+cassette, printer and screen.
+
+
+|   In  the  last  chapter  you  learned  how to check for disk |
+| errors  after  disk  commands  in  a  program.  It is equally |
+| important  to check for disk errors after using file-handling |
+| statements.  Failure  to  detect  a  disk  error before using |
+| another file-handling statement could cause loss of data, and |
+| failure of the BASIC program.                                 |
+|   The  easiest  way  to check the disk is to follow all file- |
+| handling statements with a GOSUB statement  to an error check |
+| subroutine.                                                   |
+|                                                               |
+| EXAMPLE:                                                      |
+|                                                               |
+|   BASIC 7.0:  840 DOPEN#4,'DEGREE DAY DATA',D0,U8,W           |
+|               850 GOSUB 59990: REM CHECK FOR DISK ERRORS      |
+|                                                               |
+|   BASIC 2.0:  840 OPEN 4,8,4,'0:DEGREE DAY DATA,S,W'          |
+|               850 GOSUB 59990: REM CHECK FOR DISK ERRORS      |
+|                                                               |
++---------------------------------------------------------------+"

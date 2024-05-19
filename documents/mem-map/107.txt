@@ -1,0 +1,2 @@
+
+address $D40D	bits 7-4 is:	Select Sustain Cycle Duration: O-15

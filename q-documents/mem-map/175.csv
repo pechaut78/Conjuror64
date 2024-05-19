@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the bit 0 in the $DC0D address?","address $DC0D bit 0 is	Timer A Interrupt"

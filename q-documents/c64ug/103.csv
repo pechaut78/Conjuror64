@@ -1,0 +1,4 @@
+question,answer
+"What does the BASIC function ASC(X$) return?","basic: ASC(X$)
+
+  This function will return the ASCII code of the first character of X$."

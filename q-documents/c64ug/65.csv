@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the CLOSE command in a programming language?","basic: CLOSE
+
+  This  command  completes  and closes any files used by OPEN statements.
+The number following CLOSE is the file number to be closed.
+
+  CLOSE 2           Only file #2 is closed"

@@ -1,0 +1,11 @@
+
+
+
+basic: NEW
+
+  This  command  erases  the  entire  program in memory,  and also clears
+out  any  variables  that  may  have  been  used.  Unless the program was
+SAVEd, it is lost. BE CAREFUL WHEN YOU USE THIS COMMAND.
+  The NEW command can also be used as a BASIC program statement. When the
+program reaches this line,  the program is erased.  This is useful if you
+want to leave everything neat when the program is done.

@@ -1,0 +1,25 @@
+
+
+1581 disk with basic 7,0: RELATIVE DATA FILES
+
+
+  Sequential files are very useful  when you're just working with
+a continuous stream of data --  i.e. information that can be read
+or written all at once.  However, sequential files are not useful
+in some situations.  For  example,  after writing a large list of
+mail labels,  you wouldn't want to have to reread the entire list
+each time you need a person's record. Instead, you need some kind
+of random access, a way to get to a particular label in your file
+without having to read through all those preceding it.
+  As  an  example,  compare  a  record  turntable with a cassette
+recorder. You have to listen to a cassette from beginning to end,
+but  a  turntable  needle  can  be  picked  up  at  any time, and
+instantly moved to any spot on the record.  Your disk drive works
+like a turntable in that respect.  In this chapter you will learn
+about a type of file that reflects this flexibility.
+  Actually,  two  different  types  of random access files may be
+used on Commodore disk drives:  relative files  and random files.
+Relative  files  are  much more convenient for most data handling
+operations,  but  true  random  access  file  commands  are  also
+available  to  advanced users,  and will be discussed in the next
+chapter.

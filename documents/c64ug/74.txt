@@ -1,0 +1,10 @@
+
+
+basic: GET#
+
+  The GET# statement is used with a previously OPENed device or file,  to
+input one character at a time from that device or file.
+
+  GET #1,A$
+
+This would input one character from a data file.

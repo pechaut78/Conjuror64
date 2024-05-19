@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the HIBASE address $0288 in the context of Commodore 64 memory layout?","HIBASE    address $0288        is: High Byte of Screen Memory Address ($04)."

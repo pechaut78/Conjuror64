@@ -1,0 +1,94 @@
+question,answer
+"What are the rules and procedures for creating and managing partitions and sub-directories on a 1581 disk?","1581 disk:  PARTITIONS AND SUB-DIRECTORIES
+
+  The 1581 allows the user to create partition areas on the disk.
+Partitions were originally implemented to provide a mechanism for
+easily  protecting  a  particular  section  of  the disk. That is
+useful  for  permanently  allocating  part of the disk for things
+such as BOOT sectors, CP/M work area, or reserving space for user
+defined random files.
+  Normally,  sectors on the disk can be marked as used by setting
+the appropriate bit in the RAM  (most easily done with the BLOCK-
+ALLOCATE  command).  That prevents them from being overwritten. A
+VALIDATE command, however, will de-allocate this area. To protect
+these  special  blocks from being de-allocated during a VALIDATE,
+place them in a user defined partition area. The VALIDATE command
+in  the  1581  automatically  skips  over  file  entries that are
+partition files (file type = CBM),  which guarantees the intended
+area is, and remains, allocated.
+  Partition areas are given names by the user when first created.
+They appear in the main directory as file type CBM.
+  A partition area is created by the following command:
+
+  PRINT#15,'/0:partition name,'+CHR$(starting track)+CHR$
+  (starting sector)+CHR$(<# of sectors)+CHR$(># of sectors)+',C'
+
+  Large  enough  partitions  can also be used as sub-directories.
+There are, however, certain limitations if a partition area is to
+be used as a sub-directory area.
+
+  1) The partition are must be at least 120 sectors in size.
+  2) The starting sector must be 0.
+  3) The ending sector must be a multiple of 40.
+  4) The area to be allocated cannot contain track 40 (the
+     original system track).
+
+  Partitions  can  also  be  created with a partition. This means
+that  sub-sub-directories can be created if their partitions meet
+the above rules. 
+
+  Partition  areas  which meet the qualifications of being a sub-
+directory can then be selected by the following command:
+
+  PRINT#15,'/0:partition name'
+
+  Once  selected,  the  partition  are  cannot  be used as a sub-
+directory until it is formatted.  The  HEADER or NEW commands are
+used  to  format  this  sub-disk  area.  Make  sure that you have
+successfully  selected  this partition area before formatting. If
+not, the wrong directory area will be reformatted.  You can check
+if  the  area  was  successfully  selected  by checking the error
+channel. If everything went OK, the error channel would read:
+
+  02, SELECTED PARTITION,first track#,last track#
+
+  If   the   area  you  attempt  to  select  does  not  meet  the
+qualifications of a sub-directory,  then  the error channel would
+return:
+
+  77, SELECTED PARTITION ILLEGAL,00,00
+
+  Only  one  level of sub-directory can be selected at a time. To
+get from the ROOT to PART21 you would have to execute the command
+twice.
+
+  PRINT#15,'/0:PART2'
+  PRINT#15,'/0:PART21'
+
+  Directories  can only be traversed in the forward direction. To
+get  to  sub-directory  which  is  on  a node above the presently
+selected node of the tree, you must select the ROOT directory and
+work your way down the tree, selecting a branch at a time. To get
+to the ROOT directory directly from any node type:
+
+  PRINT#15,'/'
+
+  When the user selects a particular sub-directory area,  it then
+becomes  the  default  working  area.  Accesses  to  the disk for
+directories, loading files, saving files, etc.,  will all be done
+within  this  area.  Files  outside  of  the  selected  area  are
+effectively invisible.
+  File  and  local BAM information for sub-directories are stored
+within  the  sub-directory  areas themselves.  The information is
+stored  on  the  first allocated track of the partition area, and
+has the same format as track 40.  When  creating  partitions  and
+sub-directories  within  sub-directories it is the responsibility
+of  the  user  to  make  sure  that  he  doesn't  overwrite  this
+information!  The  DOS  only  checks  to make sure that you don't
+attempt  to  overwrite  this  information  for the ROOT directory
+(track 40).  It  is  up  to  the  user  to  make  sure  that this
+information isn't corrupted in the sub-directories.
+  Partitioned  areas  can  be freed up  simply by  SCRATCHING the
+partition  file  entry  in  the  appropriate  directory.  If  the
+partition was being used as a sub-directory,  all of the files in
+that sub-directory will be lost."

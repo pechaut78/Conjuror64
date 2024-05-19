@@ -1,0 +1,5 @@
+
+1581 disk: Controller commands error code 63: FILE EXISTS
+    A  file  with  the  same name as has been requested for a new
+    file already exists on the diskette. Duplicate file names are
+    not allowed. Select another name.

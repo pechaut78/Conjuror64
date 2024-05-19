@@ -1,0 +1,16 @@
+
+
+
+basic: IF ... THEN
+
+  IF ... THEN lets the computer analyze a situation and take two possible
+courses of action,  depending on the outcome.  If the expression is true,
+the  statement  following  THEN  is  executed.  This  may  be  any  BASIC
+statement.
+  If the expression is false, the program goes directly to the next line.
+  The expression being evaluated may be a variable or formula,  in  which
+case it is considered true if nonzero,  and false if zero.  In most cases,
+there  is an expression involving relational operators  (=, <, >, <=, >=,
+<>, AND, OR, NOT).
+
+  10 IF X > 10 THEN END

@@ -1,0 +1,5 @@
+
+1581 disk: Controller commands error code 66: ILLEGAL TRACK AND SECTOR
+    The  DOS has attempted to access a track or sector which does
+    not  exist.  May  indicate  a faulty link pointer in the data
+    block.

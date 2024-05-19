@@ -1,0 +1,28 @@
+question,answer
+"What is the purpose and precautions of using the VALIDATE command on a diskette?","1581 disk:  VALIDATE
+
+  The VALIDATE command recalculates the  Block  Availability  Map
+(BAM)  of  the  current  diskette,  allocating only those sectors
+still  being  used by valid,  properly-closed files and programs.
+All other sectors  (blocks) are left unallocated and free for re-
+use, and all improperly closed files are automatically scratched.
+This  brief  description  of its workings doesn't indicate either
+the power or the danger of the VALIDATE command.  Its power is in
+restoring  to  good  health  many  diskettes whose directories or
+block availability maps have become muddled.  Any time the blocks
+used  by  the  files  on a diskette plus the blocks shown as free
+don't add up to the 3160 available on a fresh diskette,  VALIDATE
+is  needed,  with  one  exception  below.  Similarly,  any time a
+diskette   contains   an  improperly-closed  file  (splat  file),
+indicated  by  an  asterisk  (*)  next  to  its  file type in the
+directory,  that diskette needs to be validated. In fact, but for
+the  one  exception,  it  is  a  good  idea to VALIDATE diskettes
+whenever you are the least bit concerned about their integrity.
+  The  exception  is diskettes containing direct access files, as
+described in Chapter 6.  Most direct access (random) files do not
+allocate  their  sectors  in  a  way  the  VALIDATE  command  can
+recognize.  Thus, using VALIDATE on such a diskette may result in
+unallocating  all  direct  access  files,  with loss of all their
+contents   when  other  files  are  added.   Unless  specifically
+instructed otherwise, never use VALIDATE on a diskette containing
+direct access files."

@@ -1,0 +1,6 @@
+question,answer
+"What is the function of the SEEK_DV command in a 1581 disk controller job?","1581 disk Controller Job commands: SEEK_DV
+       $8C     Seeks  to  a  particular   physical   track
+                      (cylinder).   The  current  physical  track
+                      position   should   be  put  in  the  track
+                      parameter of HDRS."

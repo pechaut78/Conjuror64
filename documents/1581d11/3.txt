@@ -1,0 +1,33 @@
+
+
+
+1581 disk: SELECTIVE DIRECTORIES
+
+  By altering the directory  LOAD command,  you can create a sub-
+directory that lists a single selected type of file. For example,
+you  could  request  a list of all sequential data files (Chapter
+4), or one of all the relative data files (Chapter 5). The format
+for this command is:
+
+  LOAD"$0:pattern=filetype",8    (for the C64)
+
+where pattern specifies a particular group of files, and filetype
+is  the  one-letter  abbreviation  for  the types of files listed
+below:
+
+  P = Program
+  S = Sequential
+  R = Relative
+  U = User
+
+The command for the C128 and Plus/4 is this:
+
+  DIRECTORY"pattern=filetype"
+
+Some examples:
+
+  LOAD"$0:*=R",8  and  DIRECTORY"*=R" display all relative files.
+
+  LOAD"$0:Z*=R",8  and  DIRECTORY"Z*=R"  display  a sub-directory
+  consisting of all relative files  that start with the letter Z.
+  (the asterisk (*) is explained in the Section 1.10.)

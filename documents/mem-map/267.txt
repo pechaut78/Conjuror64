@@ -1,0 +1,3 @@
+
+
+VARTAB address  $002D-002E  is:   Pointer: Start of BASIC Variables.

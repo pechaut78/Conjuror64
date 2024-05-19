@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location at address $030F in a Commodore 64 computer?","SPREG     address $030F        is: Storage for 6510 Status Register during SYS."

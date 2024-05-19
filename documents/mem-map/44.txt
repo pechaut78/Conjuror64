@@ -1,0 +1,2 @@
+
+address $D018 bits 0 is:	Select upper/lower Character Set

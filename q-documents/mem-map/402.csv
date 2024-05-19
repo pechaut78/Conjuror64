@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the M51CDR register at address $0294?","M51CDR    address $0294        is: RS232 Pseudo 6551 command Register Image."

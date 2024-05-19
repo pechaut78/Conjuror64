@@ -1,0 +1,2 @@
+
+PRTY      address $009B        is: Parity of Byte Output to Tape.

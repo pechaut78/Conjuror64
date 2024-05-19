@@ -1,0 +1,2 @@
+
+HIBASE    address $0288        is: High Byte of Screen Memory Address ($04).

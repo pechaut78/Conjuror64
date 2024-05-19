@@ -1,0 +1,15 @@
+
+
+basic: EXPONENTIATION
+
+  In  a  like fashion,  you can easily raise a number to a power (this is
+the same as multiplying a number by itself  a specified number of times).
+The '^' (up arrow) signifies exponentiation.
+
+  PRINT 12 ^ 5
+  248832
+
+  This is the same as typing:
+
+  PRINT 12 * 12 * 12 * 12 * 12
+  248832

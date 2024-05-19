@@ -1,0 +1,39 @@
+
+
+
+1581 disk:  RENAME
+
+  The RENAME command allows you to alter the name of a program or
+other file in the diskette directory. Since only the directory is
+affected, RENAME works very quickly.
+
+FORMAT FOR RENAME COMMAND:
+
+  PRINT#15,"RENAME0:new name=old name"
+
+or it may be abbreviated as:
+
+  PRINT#15,"R0:new name=old name"
+
+where  "new name" is the name you want the file to have, and "old
+name"  is  the name it has now.  "new name" may be any valid file
+name,  up  to  16  characters  in length.  It is assumed you have
+already opened file 15 to the command channel.
+  One  caution  --  be  sure  the  file you are renaming has been
+properly closed before you rename it.
+
+EXAMPLES:
+
+Just before saving a new copy of a "calendar" program,  you might
+type:
+
+  PRINT#15,"R0:CALENDAR/BACKUP=CALENDAR"
+
+Or to move a program called  "BOOT",  currently the first program
+on a diskette to someplace else in the directory, you might type:
+
+  PRINT#15,"R0:TEMP=BOOT"
+
+followed by a COPY command (described later),  which turns "TEMP"
+into a new copy of  "BOOT",  and finishing with a SCRATCH command
+to get rid of the original copy of "BOOT".

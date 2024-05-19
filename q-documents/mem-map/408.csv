@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the RIDBS register at address $029C ?","RIDBS     address $029C        is: RS232 Pointer: High Byte of Address of Input Buffer."

@@ -1,0 +1,2 @@
+
+TVSFLG    address $02A6        is: Flag: TV Standard: $00 = NTSC, $01 = PAL.

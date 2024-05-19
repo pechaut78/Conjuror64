@@ -1,0 +1,5 @@
+
+
+1702 monitor VOLUME CONTROL
+Turn this knob to the right to increase sound volume and to the left
+to decrease volume.

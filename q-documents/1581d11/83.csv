@@ -1,0 +1,56 @@
+question,answer
+"What is the purpose of the BLOCK-ALLOCATE command in direct access commands, and how is it used to mark a sector as 'already used' on a diskette?","1581 disk:  ALLOCATING BLOCKS
+
+  Once  you  have  written  something in a particular sector on a
+diskette  with  the  help of direct access commands, you may wish
+to mark that sector as  'already used',  to keep other files from
+being written there. Blocks thus allocated will be safe until the
+diskette is validated.
+
+FORMAT FOR BLOCK-ALLOCATE COMMAND:
+
+  PRINT#15,'BLOCK-ALLOCATE';drive#;track#;sector#
+
+usually abbreviated as: PRINT#15,'B-A';drive#;track#;sector#
+
+where  'drive#' is the drive number,  and  'track#' and 'sector#'
+are  the track and sector containing the block of data to be read
+into the file buffer.
+
+ALTERNATE FORMAT:
+
+  PRINT#15,'B-A:';drive#;track#;sector#
+
+EXAMPLE:
+
+  If  you  try  to allocate a block that isn't available, the DOS
+will set the error message to number  65,  NO BLOCK,  and set the
+track  and  sector  numbers  in  the  error  message  to the next
+available track and sector number.  Therefore, before selecting a
+block to write,  try  to allocate that block.  If the block isn't
+available,  read  the next available block from the error channel
+and allocate it instead.  However, do not allocate data blocks in
+the  directory  track.  If  the  track  number returned is 0, the
+diskette is full.
+  Here is a program  that allocates a place to store a message on
+a diskette.
+
+  100 OPEN 15,8,15             Open command channel.
+  110 OPEN 5,8,5,'#'           Open direct access channel.
+  120 PRINT#5,'I THINK
+      THEREFORE I AM'          Write a message to buffer.
+  130 T=1: S=1                 Start at first track & sector.
+  140 PRINT#15,'B-A';0;T;S     Try allocating it.
+  150 INPUT#15,EN,EM$,ET,ES    See if it worked.
+  160 IF EN=0 THEN 210         If so, we're almost done.
+  170 IF EN<>65 THEN PRINT     'NO BLOCK'
+      EN,EM$,ET,ES: STOP       means already allocated.
+  180 IF ET=0 THEN PRINT       If next track is 0,
+      'DISK FULL': STOP        we're out of room.
+  190 IF ET=40 THEN ET=41:ES=0 Don't allocate the directory.
+  200 T=ET: S=ES: GOTO 140     Try suggested track & sector next.
+  210 PRINT#15,'U2';5;0;T;S    Write buffer to allocated
+                               sector.
+  220 PRINT 'STORED AT:';T,S   Say where message went
+  220 CLOSE 5: CLOSE 15        and tidy up.
+  230 END"

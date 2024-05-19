@@ -1,0 +1,12 @@
+question,answer
+"what does STY stand for?","Store Y"
+"What is the purpose of the STY operation?","to store index Y in memory"
+"What is the abbreviation for the STY operation?","STY"
+"What is the assembly language form of the STY operation?","STY Oper"
+"What is the OP CODE for the STY operation in Zero Page mode?","84"
+"How many bytes does the STY operation in Zero Page mode use?","2"
+"How many cycles does the STY operation in Zero Page mode take?","3"
+"What is the OP CODE for the STY operation in Absolute mode?","8C"
+"How many bytes does the STY operation in Absolute mode use?","3"
+"How many cycles does the STY operation in Absolute mode take?","4"
+"What is the addressing mode for the STY operation in Zero Page,X mode?","Zero Page,X"

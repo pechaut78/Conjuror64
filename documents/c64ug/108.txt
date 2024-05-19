@@ -1,0 +1,5 @@
+
+
+basic: RIGHT$(X$,X)
+
+  Returns the rightmost X characters in X$.

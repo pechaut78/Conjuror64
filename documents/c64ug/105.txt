@@ -1,0 +1,5 @@
+
+
+basic: LEFT$(X$,X)
+
+  Returns a string containing the leftmost X characters of X$.

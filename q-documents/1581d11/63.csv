@@ -1,0 +1,40 @@
+question,answer
+"What is the concept of organizing data in a relative file, and how does it differ from sequential files in terms of structure and access speed?","1581 disk with basic 7,0: FILES, RECORDS, AND FIELDS
+
+  When learning about sequential files,  you  did not worry about
+the organization of data within a file,  so long as the variables
+used to write the file  matched up properly with those which read
+it  back  into the computer.  But in order for relative access to
+work,  you need a more structured and predictable environment for
+our data.
+  The  structure  you  will  use  is  similar to that used in the
+traditional filing cabinet. In a traditional office, all customer
+records might be kept in a single file cabinet. Within this file,
+each  customer  has a personal record in a file folder with their
+name on it,  that contains everything the office knows about that
+person.  Likewise,  within  each  file folder,  there may be many
+small  slips  of  paper,  each  containing one bit of information
+about  that customer,  such as a home phone number or the date of
+the most recent purchase.
+  In  a  computerized office,  the file cabinet is gone,  but the
+concept of a file containing all the information about a group or
+topic  remains.  The file folders are gone too, but the notion of
+subdividing the file into individual records remains. The slip of
+paper  within  the  personal  records  are gone too,  replaced by
+subdivisions  within  the records,  called fields.  Each field is
+large enough to hold one piece of information about one record in
+the  file.  Thus,  within  each  file there are many records, and
+within each record there are typically many fields.
+  A  relative  file takes care of organizing the records for you,
+numbering them from 1 to the highest record number,  by ones, but
+the fields are up to you to organize.  Each record will be of the
+same size, but the 1581 won't insist that they all be divided the
+same way. On the other hand, they normally will be subdivided the
+same  way,  and  if it can be known in advance exactly where each
+field  starts  within  each  record,  there are even fast ways to
+access  a  desired  field within a record without reading through
+the  other  fields.  As  all  of this implies,  access speed is a
+primary reason for putting information into a relative disk file.
+Some  well-written  relative  file  programs are able to find and
+read  the record of one desired person out of a thousand in under
+15 seconds, a feat no sequential file program could match."

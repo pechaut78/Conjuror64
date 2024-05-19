@@ -1,0 +1,10 @@
+1581 disk:  If  BASIC  halts with an error when you have files open, BASIC
+aborts  them  without closing them properly on the disk. To close
+them properly on the disk, you must type:
+
+  CLOSE 15: OPEN 15,8,15,"I": CLOSE 15
+
+This  opens  the command channel and immediately closes it, along
+with all other disk files.  Failure to close a disk file properly
+both  in  BASIC  and  on the disk may result in losing the entire
+file.

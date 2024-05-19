@@ -1,0 +1,2 @@
+
+address $D40D	bits 3-0 is:	Select Release Cycle Duration: O-15

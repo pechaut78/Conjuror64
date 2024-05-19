@@ -1,0 +1,73 @@
+
+
+
+1581 disk with basic 7,0:FORMAT FOR THE PRINT# COMMAND:
+
+  PRINT#file#,data list
+
+where "file#" is the same file number given in the desired file's
+current  OPEN statement.  During any given access of a particular
+file, the file number must remain constant because it serves as a
+shorthand  way  of relating all other file-handling commands back
+to the correct OPEN statement.  Given a file number, the computer
+can look up everything else about a file that matters.
+  The "data list" is the same as for a PRINT statement  -- a list
+of  constants,  variables and/or expressions,  including numbers,
+strings or both. However, it's better if each PRINT# statement to
+disk  include  only  one  data item.  If you wish to include more
+items,  they  should be separated by a carriage return character,
+not  a comma.  Semicolons are permitted,  but not recorded in the
+file, and do not result in any added spaces in the file. Use them
+to  separate  items in the list that might otherwise be confused,
+such  as  a  string  variable  immediately  following  a  numeric
+variable.
+
+|   Do  not  leave  a  space between PRINT  and  #,  and do not |
+| abbreviate  the  command as ?#.  The correct abbreviation for |
+| PRINT# is pR.                                                 |
+
+EXAMPLES:
+
+  To record a few grades for John Paul Jones,  using a sequential
+disk file #1 previously opened for writing, use:
+
+  200 FOR CLASS=1 TO COURSES
+  210 PRINT#1,GRADE$(CLASS)
+  220 GOSUB 59990: REM CHECK FOR DISK ERRORS
+  230 NEXT CLASS
+
+assuming your program includes an error check subroutine like the
+one in the last chapter.
+  In  using  PRINT#,  there is an exception to the requirement to
+check  for  disk errors after every file-handling statement. When
+using PRINT#, a single check after an entire set of data has been
+written  will  still  detect  the error,  so long as the check is
+made before any other file-handling statement  or disk command is
+used.  You may be familiar with PRINT statements in which several
+items follow each other:
+
+  400 PRINT NAME$,STREET$,CITY$
+
+To  get  those  same variables onto sequential disk file number 5
+instead  of  the screen,  the best approach would be to use three
+separate PRINT# statements, as follows:
+
+  400 PRINT#5,NAME$
+  410 PRINT#5,STREET$
+  420 PRINT#5,CITY$
+
+If you need to combine them, here is a safe way to do it:
+
+  400 PRINT#5,NAME$;CHR$(13);STREET$;CHR$(13);CITY$
+
+CHR$(13)  is  the  carriage  return  character,  and has the same
+effect  as  putting  the print items in separate lines. If you do
+this  often,  some  space  and  time  may  be saved by previously
+defining a variable as equal to CHR$(13):
+
+   10 CR$=CHR$(13)
+  400 PRINT#5,NAME$;CR$;STREET$;CR$;CITY$
+
+  The  basic idea is that a proper sequential disk-file write, if
+redirected  to  the  screen,  will display only one data item per
+line, with each succeeding item on the next line.

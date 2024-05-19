@@ -1,0 +1,51 @@
+
+1581 disk:  MACHINE LANGUAGE PROGRAMS
+
+
+  Here  is  a  list  of  host  computer  disk-related  Kernal ROM
+subroutines  and  a  practical  example of their use in a program
+that reads a sequential file into memory from disk.  Most require
+advance  setup  of  one  or  more  processor  registers or memory
+locations  and  all  are  called  with  the assembly language JSR
+command.
+  For a more  complete  description  as to what each routine does
+and how parameters are set for each routine, see the Programmer's
+Reference Guide for your specific computer.
+
+
+                 DISK-RELATED KERNAL SUBROUTINES
+
+Label        Address                    Functions
+-----------------------------------------------------------------
+SETLFS  =    $FFBA     ; SET LOGICAL, FIRST & SECOND ADDRESSES
+SETNAM  =    $FFBD     ; SET LENGTH & ADDRESS OF FILENAME
+OPEN    =    $FFC0     ; OPEN LOGICAL FILE
+CLOSE   =    $FFC3     ; CLOSE LOGICAL FILE
+CHKIN   =    $FFC6     ; SELECT CHANNEL FOR INPUT
+CHKOUT  =    $FFC9     ; SELECT CHANNEL FOR OUTPUT
+CLRCHN  =    $FFCC     ; CLEAR ALL CHANNELS & RESTORE DEFAULT I/O
+CHRIN   =    $FFCF     ; GET BYTE FROM CURRENT INPUT DEVICE
+CHROUT  =    $FFD2     ; OUTPUT BYTE TO CURRENT OUTPUT DEVICE
+        ;
+START   LDA  #4        ; SET LENGTH & ADDRESS
+        LDX  #<FNADR   ; OF FILE NAME, LOW
+        LDY  #>FNADR   ; & HIGH BYTES
+        JSR  SETNAM    ; FOR NAME SETTER
+        LDA  #3        ; SET FILE NUMBER
+        LDX  #8        ; DISK DEVICE NUMBER
+        LDY  #0        ; AND SECONDARY ADDRESS
+        JSR  SETLFS    ; AND SET THEM
+        JSR  OPEN      ; OPEN 3,8,0,"TEST"
+        LDX  #3
+        JSR  CHKIN     ; SELECT FILE 3 FOR INPUT
+NEXT    JSR  CHRIN     ; GET NEXT BYTE FROM FILE
+        BEQ  END       ; UNTIL FINISH OR FAIL
+        JSR  CHROUT    ; OUTPUT BYTE TO SCREEN
+        JMP  NEXT      ; AND LOOP BACK FOR MORE
+        ;
+END     LDA  #3        ; WHEN DONE
+        JSR  CLOSE     ; CLOSE FILE
+        JSR  CLRCHN    ; RESTORE DEFAULT I/O
+        RTS            ; BACK TO BASIC
+        ;
+FNADR   .BYT "TEST"    ; STORE FILE NAME HERE

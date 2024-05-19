@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the plus sign (+) in arithmetic operations?","basic: ADDITION
+
+  The plus sign (+) signals addition: we instructed the computer to print
+the result of 12 added to 12.  Other arithmetic operations take a similar
+form to addition.  Remember to always hit <RETURN> after typing PRINT and
+the calculation."

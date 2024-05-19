@@ -1,0 +1,41 @@
+question,answer
+"What is the memory map and functionality of the Commodore 1581 disk drive?","1581 disk:  1581 MEMORY MAP
+
+Location                        Purpose
+-----------------------------------------------------------------
+0000-00FF       Zero page work area, job queue, variables
+0100-01FF       Stack, variables, vectors
+0200-02FF       Command buffer, tables, variables
+0300-09FF       Data buffers (0-6)
+0A00-0AFF       BAM for tracks 0-39
+0B00-0BFF       BAM for tracks 40-79
+0C00-1FFF       Track cache buffer
+4000-5FFF       8520A CIA
+6000-7FFF       WD177X FDC
+8000-FEFF       32K byte ROM, DOS and controller routines
+FF00-FFFF       Jump table, vectors
+-----------------------------------------------------------------
+|   The  1581,  as  well  as  other  Commodore  peripherals, is |
+| designed   to   support   interfacing  via  software  command |
+| structures.  The software commands provided in the 1581 allow |
+| for   a   smooth   and  controllable  interface  between  the |
+| peripheral  and  CPU.  Although  Commodore  has  provided the |
+| mechanism  enabling  users  to  load  and  execute  their own |
+| machine language programs within the 1581 system, please keep |
+| in mind that Commodore reserves the right to change ROM, RAM, |
+| I/O and hardware structure at any time.  Consequently, if the |
+| defined software interface is bypassed,  future compatibility |
+| of  the  user's machine language software within the 1581 may |
+| be in question. The 1581 was not designed primarily as a user |
+| programmable  device,  but Commodore recognizes that  certain |
+| operations   (such  as  copy  protection)  cannot  be  easily |
+| achieved without this ability.                                |
+
+
+  If  you  find  it  necessary to use machine language within the
+1581,  use  the jump table listed in this chapter and Chapter 10.
+That  will  lessen the possibility of incompatibility if a future
+version of the 1581 changes internally.  Also, let the controller
+work for you on the physical level by requesting its help via the
+JOB QUEUE.  That  too  will  greatly  increase  the likelihood of
+future compatibility."

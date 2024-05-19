@@ -1,0 +1,16 @@
+
+
+
+basic: NEXT
+
+  NEXT  is  always  used in conjunction with the FOR statement.  When the
+program  reaches a NEXT statement,  it checks the FOR statement to see if
+the limit of the loop has been reached.  If the loop is not finished, the
+loop  variable  is increased by the specified STEP value.  If the loop is
+finished,  execution  proceeds  with  the  statement following NEXT.
+  NEXT  may  be  followed by a variable name,  or list of variable names,
+separated by commas.  If there are no names listed, the last loop started
+is the one being completed. If variables are given, they are completed in
+order from left to right.
+
+  10 FOR X = 1 TO 100: NEXT

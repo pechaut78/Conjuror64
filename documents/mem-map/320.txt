@@ -1,0 +1,2 @@
+
+MSGFLG    address $009D        is: Flag: $00 = Program mode: Suppress Error  Messages, $40 = Kernal Error Messages only, $80 = Direct mode: Full Error Messages.

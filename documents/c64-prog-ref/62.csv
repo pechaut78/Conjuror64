@@ -1,0 +1,3 @@
+question,answer
+"Displaying a sprite beyond the 255th X position requires a special POKE which sets the most significant bit of the X position and starts over at the 256th pixel position across the screen.","True"
+"What is the starting point for the X counter when displaying a sprite beyond the 255th X position?","The 256th pixel position across the screen"

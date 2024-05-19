@@ -1,0 +1,5 @@
+question,answer
+"What does the DETWP_DV disk controller job command $B6 do?","1581 disk Controller Job commands: DETWP_DV
+      $B6     Checks   if  the  disk  inserted  is  write
+                      protected.  Returns  $00  if  disk  is  not
+                      protected, else $08."

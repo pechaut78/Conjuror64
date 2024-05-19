@@ -1,0 +1,23 @@
+
+
+
+basic:  GET
+
+  GET  allows  you  to  input  one  character at a time from the keyboard
+without  hitting  <RETURN>.  This  really  speeds  entering  data in many
+applications.  Whatever  key  is hit is assigned variable to the variable
+you specify with GET.
+  The following routine illustrates how GET works:
+
+  NEW
+
+   1 PRINT "{CLR/HOME}"
+  10 GET A$: IF A$ = "" THEN 10
+  20 PRINT A$;        
+  30 GOTO 10          
+
+If you RUN the program,  the screen will clear  and each time you hit a
+key, will  print  it  on  the  display,  and  then GET another
+character. It is important to note that the character entered will not be
+displayed  unless you specifically PRINT it to the screen,  as we've done
+here.

@@ -1,0 +1,4 @@
+question,answer
+"What error message is displayed when a user enters an invalid command in DOS?","1581 disk: Controller commands error code 31: SYNTAX ERROR (invalid command)
+    The  DOS  does not recognize the command.  It must begin with
+    the first character sent. Check your typing and try again."

@@ -1,0 +1,33 @@
+question,answer
+"What is the format and protocol of the INQUIRE STATUS command in a disk assembly?","1581 disk in assembly: INQUIRE STATUS
+
+ BYTE    BIT 7    6      5      4      3      2      1      0
+-----------------------------------------------------------------
+  00       0      1      0      1      0      1      0      1
+-----------------------------------------------------------------
+  01       0      0      1      1      0      0      0      0
+-----------------------------------------------------------------
+  02       W      C      M      0      1      1      0      N
+-----------------------------------------------------------------
+  03                  NEW STATUS (W-BIT CLEAR)
+-----------------------------------------------------------------
+  04                  NEW ORA MASK (M-BIT SET)
+-----------------------------------------------------------------
+  05                  NEW AND MASK (M-BIT SET)
+-----------------------------------------------------------------
+
+SWITCHES: W -- write switch (0 = write)
+          M -- write AND/OR mask (04 new OR mask (M-bit set),  05
+          new AND mask (M-bit set))
+          C -- change (C=1 and W=0 -- log in disk, C=1 and W=1 --
+          return  whether  disk was logged,  i.e. $B error or old
+          status)
+          N -- drive number
+          X -- don't care
+
+PROTOCOL: Burst handshake (W=1), conventional (W=0).
+
+CONVENTIONS: This  is  a  method  of  reading  or writing current
+             status, and changing the status mask value.
+
+OUTPUT: None (W=0), Burst status byte (W=1)."

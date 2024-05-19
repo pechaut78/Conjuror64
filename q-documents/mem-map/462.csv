@@ -1,0 +1,2 @@
+question,answer
+"What is the memory address of the KERNAL routine for outputting a character to the default output device in a Commodore 64?","kernal routine address for chrout	= $ffd2"

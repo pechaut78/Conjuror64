@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the memory address $00AC-00AD?","SAL       address $00AC-00AD   is: Pointer: Tape Buffer/Screen scrolling."

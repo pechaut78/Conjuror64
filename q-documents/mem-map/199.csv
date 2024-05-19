@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the bit 7 of the I/O port address $DD01 in a Commodore 64 computer?","address $DD01 bit 7 is	User / RS-232 Data Set Ready"

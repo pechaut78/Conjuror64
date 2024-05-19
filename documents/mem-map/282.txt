@@ -1,0 +1,3 @@
+
+
+VARTXT address  $004B-004C  is:   Temporary storage for TXTPTR during READ, INPUT and GET.

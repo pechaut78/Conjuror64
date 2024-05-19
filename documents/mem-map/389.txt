@@ -1,0 +1,2 @@
+
+COLOR     address $0286        is: Current Character Colour code.

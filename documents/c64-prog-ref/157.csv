@@ -1,0 +1,10 @@
+question,answer
+"SEC does what?","The SEC instruction sets the carry flag."
+"SEC OP CODE?","The OP code of the SEC instruction is 38."
+"SEC: No. Bytes","The number of bytes required to execute the SEC instruction is 1."
+"SEC: No. Cycles","The number of cycles required to execute the SEC instruction is 2."
+"SEC: Addressing Mode","The addressing mode of the SEC instruction is implied."
+"SEC: Instruction Description","The SEC instruction sets the carry flag."
+"SEC: Carry Flag","The SEC instruction sets the carry flag."
+"SEC: Flag Setting","The SEC instruction sets the carry flag."
+"SEC: Flag Operation","The SEC instruction sets the carry flag."

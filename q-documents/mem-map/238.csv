@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the address range $DF00-DFFF ?","address $DF00-DFFF are	Reserved for Future I/O Expansion"

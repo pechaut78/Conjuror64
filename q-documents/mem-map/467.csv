@@ -1,0 +1,2 @@
+question,answer
+"What is the kernel routine address for the CLRCHN function in the Commodore 64?","kernal routine address for clrchn	= $ffcc"

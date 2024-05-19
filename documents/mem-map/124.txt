@@ -1,0 +1,2 @@
+
+address $D413 bits 3-0 is:	Select Decay Cycle Duration: 0-15

@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location $008B-008F?","RNDX      address $008B-008F   is: Floating RND Function Seed Value."

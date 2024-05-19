@@ -1,0 +1,8 @@
+question,answer
+"What is the function of the SP_READ command in a 1581 disk controller job?","1581 disk Controller Job commands: SP_READ
+       $A4     Reads   the   specified   physical   sector
+                      directly  into  RAM starting at #0 ($0300).
+                      It does not use the track cache buffer. The
+                      sector   is   always  read  from  the  disk
+                      regardless  of  the current contents of the
+                      track cache."

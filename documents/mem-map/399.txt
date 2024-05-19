@@ -1,0 +1,2 @@
+
+MODE      address $0291        is: Flag: Upper/Lower Case change: $00 = Disabled, $80 = Enabled ($00).

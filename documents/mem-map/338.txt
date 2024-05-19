@@ -1,0 +1,2 @@
+
+BITTS     address $00B4        is: RS232 Write bit count/Tape Read timing Flag.

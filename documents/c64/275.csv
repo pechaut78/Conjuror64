@@ -1,8 +1,0 @@
-question,answer
-"Handshaking on data transfers can be accomplished using the /PC output pin and the FLAG input pin.","What are the two pins used for handshaking on data transfers?"
-"Timer A and Timer B are independent timers that can be used independently or linked for extended operations.","What is the purpose of Timer A and Timer B?"
-"The timers can be used to generate long time delays, variable width pulses, pulse trains and variable frequency waveforms.","What can the timers be used for?"
-"The timers have an associated control register, providing independent control of the following functions: Start/Stop, PB On/Off, Toggle/Pulse, One-Shot/Continuous, and Force Load.","What functions can the timer control register control?"
-"The timer latch is loaded into the timer on any timer underflow, on a force load or following a write to the high byte of the prescaler while the timer is stopped.","When is the timer latch loaded into the timer?"
-"The timer can count 02 clock pulses or external pulses applied to the CNT pin.","What can the timer count?"
-"The timer latch is loaded into the timer on any timer underflow, on a force load or following a write to the high byte of the prescaler while the timer is stopped.","When is the timer latch loaded into the timer?"

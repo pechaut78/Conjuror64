@@ -1,0 +1,2 @@
+
+XMAX      address $0289        is: Maximum number of Bytes in Keyboard Buffer ($0A).

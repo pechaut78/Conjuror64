@@ -1,0 +1,3 @@
+
+
+INTFLG address  $000E       is:   Data type Flag: $00 = Floating point, $80 = Integer.

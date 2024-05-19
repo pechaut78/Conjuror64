@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bit 2 of the $DC0E address ?","address $DC0E bit 2 is:	Timer A Output Mode to PB6: 1 = Toggle,0 = Pulse"

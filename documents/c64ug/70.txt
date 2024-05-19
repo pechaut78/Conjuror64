@@ -1,0 +1,17 @@
+
+
+basic: DIM
+
+  When you use more than 11 elements of an array,  you must execute a DIM
+statement for the array.  Keep in mind that the whole array takes up room
+in  memory,  so  don't  create  an  array  much  larger than you'll need.
+To  figure  the number of variables created with DIM,  multiply the total
+number of elements in each dimension of the array.
+
+  10 DIM A$(40), B7(15), CC%(4,4,4)
+             ^       ^         ^
+             |       |         |
+   41 elements  16 elements  125 elements
+
+  You  can  dimension more than one array in a DIM statement. However, be
+careful not to dimension an array more than once.

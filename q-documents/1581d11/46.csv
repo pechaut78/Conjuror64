@@ -1,0 +1,41 @@
+question,answer
+"What is a sequential data file and how does it work on a diskette?","1581 disk with basic 7,0: SEQUENTIAL DATA FILES
+
+
+  A file on a diskette is just like a file cabinet in your office
+-- an organized place to put things. Nearly everything you put on
+a diskette goes in one kind of file or another. So far all you've
+used are program files,  but there are others.  In  this  chapter
+you'll learn about sequential data files.
+  The primary purpose of a data file  is to store the contents of
+program variables, so they won't be lost when the program ends. A
+sequential  data  file  is  one  in  which  the  contents  of the
+variables are stored 'in sequence',  one right after another. You
+may  already  be  familiar  with  sequential  files  from using a
+DATASSETTE,  because  sequential  files on diskette are just like
+the  data  files  used  on  cassettes.  Whether  on  cassette  or
+diskette, sequential files must be read from beginning to end.
+  When  sequential  files  are  created,  information  (data)  is
+transferred  byte-by-byte,  through  a buffer,  onto the magnetic
+media.  Once  in  the disk drive, program files,  sequential data
+files,  and user files all work sequentially.  Even the directory
+acts like a sequential file.
+  To use sequential files properly, we will learn some more BASIC
+words  in  the next few pages.  Then we'll put them together in a
+simple but useful program.
+
+
+|   Besides  sequential  data  files,  two other file types are |
+| recorded sequentially on a diskette.  They are program files, |
+| and user files.  When you save a program on a diskette, it is |
+| saved  in  order  from  beginning  to  end,   just  like  the |
+| information in a sequential data file. The main difference is |
+| in the commands you use to access it.  User files can be even |
+| more similar to sequential data files.  User files are almost |
+| never used,  but like program files, they could be treated as |
+| though  they  were  sequential  data  files  and  some can be |
+| accessed with the same commands.                              |
+|   For the advanced user,  the similarity  of the various file |
+| types  offers  the possibility of reading a program file into |
+| the computer a byte (character) at a time and rewriting it to |
+| the diskette in a modified form.                              |"

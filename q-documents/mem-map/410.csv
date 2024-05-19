@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the register located at address $029E?","RODBE     address $029E        is: RS232 Index to End of Output Buffer."

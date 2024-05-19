@@ -1,0 +1,42 @@
+question,answer
+"What is the command and its format to erase unwanted files and free up disk space in a C64 system?","1581 disk:  SCRATCH
+
+  The SCRATCH command allows you to erase unwanted files and free
+the space they occupied for use by other files. It can be used to
+erase either a single file  or several files at once via pattern-
+matching.
+
+FORMAT FOR THE SCRATCH COMMAND:
+
+  PRINT#15,'SCRATCH0:pattern'
+
+or abbreviate it as:
+
+  PRINT#15,'S0:pattern'
+
+'pattern'  can  be any file name or combination of characters and
+wildcard characters.  As usual, it is assumed the command channel
+has  already  been  opened  as  file 15.  Although not absolutely
+necessary,  it  is  best  to  include the drive number in SCRATCH
+commands.
+  If  you  check  the  error channel after a SCRATCH command, the
+value  for  ET  (error  track)  will tell you how many files were
+scratched.  For example,  if your diskette contains program files
+named  'TEST',  'TRAIN',  'TRUCK' and 'TAIL', you may SCRATCH all
+four,  along  with any other files beginning with the letter 'T',
+by using the command:
+
+  PRINT#15,'S0:T*'
+
+Then, to prove they are gone, you can type:
+
+  GOSUB 59990
+
+to  call  the  error  checking  subroutine  given earlier in this
+chapter.  If  the  four listed were the only files beginning with
+'T', you will see:
+
+  01, FILES SCRATCHED,04,00
+  READY.
+
+The '04' tells you 4 files were scratched."

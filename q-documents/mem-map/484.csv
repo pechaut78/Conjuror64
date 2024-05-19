@@ -1,0 +1,2 @@
+question,answer
+"What is the kernel routine address for the second interrupt vector in the 6502 microprocessor?","kernal routine address for second	= $ff93"

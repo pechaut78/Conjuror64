@@ -1,0 +1,19 @@
+
+
+
+basic: GOSUB
+
+  This statement is similar to GOTO,  except the computer remembers which
+program line it last executed before the GOSUB. When a line with a RETURN
+statement  is  encountered,  the  program  jumps  back  to  the statement
+immediately following the GOSUB.  This is useful if there is a routine in
+your program that occurs in several parts of the program.
+Instead of typing the routine over and over, execute GOSUBs each time the
+routine is needed.
+
+  20 GOSUB 800
+
+GOTO or GO TO
+
+  When a statement with the GOTO command is reached,  the next line to be
+executed will be the one with the line number following the word GOTO.

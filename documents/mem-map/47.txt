@@ -1,0 +1,2 @@
+
+address $D019 Bit 3	is: Light-Pen Triggered IRQ Flag

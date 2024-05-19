@@ -1,0 +1,13 @@
+
+
+1581 disk Controller Job commands: WRTSD_DV
+      $90     Writes  the  job  queue's  buffer data to a
+                      particular  logical track,  sector.  If the
+                      same  track  is already in the track cache,
+                      then  this  involves  only transferring the
+                      job  queue  buffer  data to the track cache
+                      buffer.  If  a different track's data is in
+                      the  disk  (only  if  it was modified), the
+                      desired  track  read  into  the track cache
+                      buffer,  and finally the job queue buffer's
+                      data transferred to the track cache.

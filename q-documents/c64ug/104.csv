@@ -1,0 +1,5 @@
+question,answer
+"What is the function in Visual Basic that returns a string character whose ASCII code is a specified value?","basic: CHR$(X)
+
+  This is the opposite of ASC, and returns a string character whose ASCII
+code is X."

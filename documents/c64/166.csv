@@ -1,9 +1,0 @@
-question,answer
-"TXA Transfer index X to accumulator","TXA Transfer index X to accumulator"
-"TXA Transfer index X to accumulator operation","TXA Transfer index X to accumulator operation"
-"What is the operation of TXA?","TXA Transfer index X to accumulator"
-"What is the purpose of TXA?","TXA Transfer index X to accumulator"
-"What is the assembly language form of TXA?","Assembly Language Form: TXA"
-"What is the OP CODE of TXA?","OP CODE: 8A"
-"How many bytes does TXA take?","No. Bytes: 1"
-"How many cycles does TXA take?","No. Cycles: 2"

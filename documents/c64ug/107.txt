@@ -1,0 +1,6 @@
+
+
+basic: MID$(X$,S,X)
+
+  This will return a string containing X characters starting from the Sth
+character in X$.

@@ -1,0 +1,4 @@
+question,answer
+"What is the purpose of the $9C command in the disk controller job commands?","1581 disk Controller Job commands: SIDE_DV
+       $9C     Sets  up the side select electronics to the
+                      value specified (in SIDS)."

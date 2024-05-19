@@ -1,0 +1,2 @@
+question,answer
+"What is the function of address $DD00 bits 1-0 ?","address $DD00 bit 1-0 is:	VIC Chip System Memory Bank Select (Default = 11)"

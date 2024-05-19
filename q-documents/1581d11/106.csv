@@ -1,0 +1,39 @@
+question,answer
+"What is the format and functionality of the CHGUTL UTILITY commands and parameters?","1581 disk in assembly: CHGUTL UTILITY
+
+ BYTE    BIT 7    6      5      4      3      2      1      0
+-----------------------------------------------------------------
+  00       0      1      0      1      0      1      0      1
+-----------------------------------------------------------------
+  01       0      0      1      1      0      0      0      0
+-----------------------------------------------------------------
+  02       X      X      X      1      1      1      1      0
+-----------------------------------------------------------------
+  03     UTILITY COMMANDS: 'B','S','R','T','V',#DEV,'MR','MW'
+-----------------------------------------------------------------
+  04     COMMAND PARAMETER
+-----------------------------------------------------------------
+
+SWITCHES: X -- don't care
+
+UTILITY COMMANDS; 'B' -- serial bus mode
+                  'S' -- DOS sector interleave
+                  'R' -- DOS retries
+                  'T' -- ROM signature analysis
+                  'V' -- verify select
+                  #DEV -- device#
+
+Note: Byte 02 is equivalent to '>'.
+
+EXAMPLES: 'U0>B1' = Fast Serial, 'U0>B0' = Slow Serial
+          'U0>S' + CHR$(SECTOR INTERLEAVE)
+          'U0>R' + CHR$(RETRIES)
+          'U0>T' (If the ROM signature failed, the activity LED
+                 blinks 4 times)
+          'U0>V0' = Disk Verify ON, 'U0>V1' = Disk Verify OFF
+          'U0>' + CHR$(#DEV), where #DEV = 4 - 30
+          'U0>MR' + CHR$(>memory address) + (# of pages)*
+          'U0>MW' + CHR$(>memory address) + (# of pages)*
+
+ * Burst memory read and memory write use standard burst protocol
+   (without status byte)."

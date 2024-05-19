@@ -1,0 +1,32 @@
+
+
+
+1581 disk:  SAVE WITH REPLACE
+
+  If a file already exists, it can't be saved again with the same
+name  because  the  disk  drive only allows one copy of any given
+file name per diskette. It is possible to get around this problem
+using the  RENAME and  SCRATCH commands described later. However,
+if  all  you  wish to do is replace a program or data file with a
+revised  version,  another  command  is more convenient. Known as
+SAVE-WITH-REPLACE, or @SAVE.  This option tells the disk drive to
+replace any file it finds in the diskette directory with the same
+name, substituting the new file for the old version.
+
+FORMAT FOR SAVE WITH REPLACE:
+
+  SAVE "@drive#:file name",device#
+
+where all the parameters are as usual except for adding a leading
+"at" sign (@). The "drive#:" is required here.
+
+EXAMPLE:
+
+  SAVE"@0:REVISED PROGRAM",8
+
+  The  actual  procedure   is  that  the  new  version  is  saved
+completely, then the old version is erased. Because it works this
+way,  there  is  little  danger  a  disaster such as losing power
+midway  through  the  process  would destroy both the old and new
+copies  of the file.  Nothing happens to the old copy until after
+the new copy is saved properly.

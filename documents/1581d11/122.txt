@@ -1,0 +1,7 @@
+
+
+
+1581 disk Controller Job commands: EXBUF_DV
+      $E0     Executes  the code in the corresponding job
+                      queue buffer after the motor is up to speed
+                      and the head is on track.

@@ -1,0 +1,39 @@
+question,answer
+"What is the breakdown of the status byte in a 1581 disk assembly, including the meaning of each bit and the possible values for mode, drive number, sector size, and controller status?","1581 disk in assembly: STATUS BYTE BREAKDOWN
+
+ BIT 7    6       5       4       3       2       1       0
+-----------------------------------------------------------------
+ MODE     DN     SECTOR SIZE         [ CONTROLLER STATUS]
+-----------------------------------------------------------------
+*MODE -- 1 = Alien Disk Format  (non-default physical format,  or
+         default  physical  format  without   Directory  and  BAM
+         information)
+         0 = Resident Disk Format  (default  physical format with
+         Directory and BAM information)
+ DN  --  drive number
+
+*Resident Disk Format is based on whether required information is
+ present in BAM/DIRECTORY track.
+
+SECTOR SIZE
+             00 ........ 128 BYTE SECTORS (NOT SUPPORTED)
+             01 ........ 256 BYTE SECTORS
+             10 ........ 512 BYTE SECTORS (DEFAULT)
+             11 ........ 1024 BYTE SECTORS
+
+CONTROLLER STATUS
+             000X ...... OK
+             0010 ...... CAN'T FIND HEADER BLOCK
+             0011 ...... NO ADDRESS MARK
+             0100 ...... DATA BLOCK NOT PRESENT
+             0101 ...... DATA CRC ERROR
+             0110 ...... FORMAT ERROR
+             0111 ...... VERIFY ERROR
+             1000 ...... WRITE PROTECT ERROR
+             1001 ...... HEADER BLOCK CRC ERROR
+             1010 ...... WRITE PROTECTED
+             1011 ...... DISK CHANGE
+             1100 ...... DISK FORMAT NOT LOGICAL
+             1101 ...... RESERVED
+             1110 ...... SYNTAX ERROR
+             1111 ...... NO DRIVE PRESENT"

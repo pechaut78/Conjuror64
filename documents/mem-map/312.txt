@@ -1,0 +1,2 @@
+
+SYNO      address $0096        is: Cassette Sync. number.

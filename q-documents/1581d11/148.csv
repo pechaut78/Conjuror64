@@ -1,0 +1,65 @@
+question,answer
+"What are the jump table vectors and their corresponding descriptions for the 1581 disk controller?","1581 disk:  Indirect Vector Jump Table
+Name             Location  Description
+-----------------------------------------------------------------
+JIDLE              $FF00   Main  idle  loop.  When  a  Controller
+                           command is completed  the IDLE routine
+                           is executed. It first checks to see if
+                           there are any more jobs pending in the
+                           Job Queue. If so, it executes them. If
+                           not,  it sits in the idle loop waiting
+                           for  something  to  happen,   such  as
+                           another  job being put into the queue,
+                           ATN  line going low,  disk inserted or
+                           removed, etc.
+JIRQ               $FF03   Interrupt routine. Interrupts normally
+                           occur  from  the following sources  --
+                           ATN  line going low,  Fast Serial Byte
+                           is   shifted   in,   timer  time  out,
+                           execution of a BRK instruction.
+JNMI               $FF06   Does  a  'soft'  reset  (UI  command).
+                           Default   vectors  and  variables  are
+                           restored.  Searches for 'COPYRIGHT CBM
+                           86'  USR  type  file  to  boot. No RAM
+                           check or ROM checksum is done. Device#
+                           switches are read.
+JVERDIR            $FF09   VALIDATE command (collect).
+JINTDRV            $FF0C   INITIALIZE command.
+JPART              $FF0F   Routine to create or switch partitions
+JMEM               $FF12   Memory  Read/Memory  Write  (M-R, M-W)
+                           commands.
+JBLOCK             $FF15   Performs all  BLOCK commands,  such as
+                           ALLOCATE,  FREE, READ, WRITE, EXECUTE,
+                           POINTER.
+JUSER              $FF18   USER command.
+JRECORD            $FF1B   RECORD   command   for  relative  file
+                           positioning.
+JUTLODR            $FF1E   Utility loader command (&).
+JDSKCPY            $FF21   COPY command.
+JRENAME            $FF24   RENAME command.
+JSCRTCH            $FF27   SCRATCH command.
+JNEW               $FF2A   NEW/Format command.
+ERROR              $FF2D   Controller error handler routine.
+JATNSRV            $FF30   Serial Bus attention (ATN) server.
+JTALK              $FF33   Serial Bus talk routine.
+JLISTEN            $FF36   Serial Bus listen routine.
+JLCC               $FF39   Controller routine.
+JTRANS_TS          $FF3C   Logical to physical sector translation
+                           routine.
+CMDERR             $FF3F   DOS error handler routine.
+
+JSTROBE_CONTROLLER $FF54   Direct Controller call.
+JCBMBOOT           $FF57   CBM autoloader routine.
+JCBMBOOTRTN        $FF5A   Return   from   CBM   autoloader  with
+                           autoloader disabled.
+JSIGNATURE         $FF5D   Signature analysis routine.
+JDEJAVU            $FF60   Switch    for   autoloader   boot   on
+                           INITIALIZE   or   BURST INQUIRE/QUERY.
+                           Enter   with   carry   set  to  enable
+                           autoloader, carry clear to disable it.
+JSPINOUT           $FF63   SPIN,  SPOUT.   Sets  up  fast  serial
+                           direction  as  input or output.  Carry
+                           set to do SPOUT, cleared to do SPIN.
+JALLOCBUFF         $FF66   Allocates   RAM  buffers.   Call  with
+                           buffer#  in  reg A  (1 = buffer 0, 2 =
+                           buffer 1...)."

@@ -1,0 +1,8 @@
+
+
+basic: READ
+
+  READ  is  used to assign information from DATA statements to variables,
+so the information may be put to use. Care must be taken to avoid READing
+strings where READ is expecting a number, which will give a TYPE MISMATCH
+ERROR.

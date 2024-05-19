@@ -1,0 +1,16 @@
+question,answer
+"What is the importance of delaying the reading of the POT register in the C64 and C128 when using a mouse driver, and how can it be ensured?","SID Register Cautions
+
+In  the  C64 & C128,  the  SID  POT  lines  are connected to both
+joystick  ports.  A 4066 analog switch is used  to switch the POT
+lines  between  the  two  ports based on one of the keyboard scan
+lines.  This  means that the normal keyscan interrupt temporarily
+affects the values returned in the POT registers.  Therefore,  in
+order  to  perform  reliable  conversions,  the POT lines must be
+connected  to  the mouse for a period >1.6 millisecond before the
+value in the POT register is valid.
+
+The best way to insure this is to wedge the mouse driver software
+into the IRQ handler prior  to the polled keyscan.  This more-or-
+less assures that the keyscan lines have been sufficiently stable
+before the POT register is read by the mouse drivers."

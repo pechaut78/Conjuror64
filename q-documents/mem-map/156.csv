@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the bit 6 of the $DC01 register ?","address $DC01 bit 6	Timer A: Toggle/Pulse Output"

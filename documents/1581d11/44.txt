@@ -1,0 +1,13 @@
+1581 disk with basic 7,0: DCLEAR
+
+  One command that should not often be needed on the 1581, but is
+still of occasional value is DCLEAR.  On the 1581, and nearly all
+other Commodore drives, this function is performed automatically,
+whenever a new diskette is inserted.
+  The result of an DCLEAR,  whether forced by a command,  or done
+automatically  by  the  disk,  is  a  re-reading  of  the current
+diskette's BAM  into a disk buffer.  This information must always
+be  correct  in  order  for the disk to store new files properly.
+However,  since the chore is handled automatically, the only time
+you'd  need  to  use the command is if something happened to make
+the information in the drive buffers unreliable.

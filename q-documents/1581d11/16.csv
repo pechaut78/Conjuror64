@@ -1,0 +1,36 @@
+question,answer
+"What precautions should be taken when using the SCRATCH command to delete files, and how to recover from accidentally deleting a file or a "splat" file?","1581 disk: Scratch in-depth
+
+  SCRATCH  is  a powerful command and should be used with caution
+to be sure you delete only the files you really want erased. When
+using  it  with  a  pattern,  we  suggest  you first use the same
+pattern in a  DIRECTORY  command,  to be sure exactly which files
+will  be  deleted.  That  way you'll have no unpleasant surprises
+when you use the same pattern in the SCRATCH command.
+  If you accidentally SCRATCH a file you shouldn't have, there is
+still  a  chance of saving it by using the 'UNSCRATCH' program on
+your Test/Demo diskette.
+
+More about Splats
+
+  Never SCRATCH a splat file.  These are files  that show up in a
+directory listing with an asterisk (*)  just before the file type
+for  an entry.  The asterisk (or splat) means that file was never
+properly  closed,  and  thus  there  is  no valid chain of sector
+links for the SCRATCH command to follow in erasing the file.
+  If you  SCRATCH such a file,  odds are you will improperly free
+up  sectors  that are still needed by other programs or files and
+cause  permanent damage to those later when you add more files to
+the  diskette.  If you find a splat file,  or if you discover too
+late  that  you have scratched such a file,  immediately validate
+the diskette using the  VALIDATE  command described later in this
+chapter.  If  you  have  added  any  files  to the diskette since
+scratching  the  splat  file,  it is best to immediately copy the
+entire  diskette onto another fresh diskette,  but do this with a
+copy  program  rather than with a backup program.  Otherwise, the
+same problem will be recreated on the new diskette.  When the new
+copy is done,  compare the number of blocks free in its directory
+to  the  number  free  on  the original diskette.  If the numbers
+match, no damage has been done.  If not, very likely at least one
+file  on  the  diskette  has  been  corrupted,  and all should be
+checked immediately."

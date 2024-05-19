@@ -1,0 +1,13 @@
+question,answer
+"How does the Commodore 64's screen memory map work and how can characters be displayed on the screen?","basic: SCREEN MEMORY MAP
+
+  Since  the  computer's screen is capable of holding 1000 characters (40
+columns by 25 lines)  there are 1000 memory locations set aside to handle
+what  is placed on the screen.  The layout of the screen could be thought
+of as a grid, with each square representing a memory location.
+  And  since  each location in memory can contain a number from 0 to 255,
+there  are  256  possible  values for each memory location.  These values
+represent  the  different  characters  the  Commodore 64 can display (see
+Appendix E).  By  POKEing  the  value  for a character in the appropriate
+screen  memory  location,  that character will be displayed in the proper
+position."

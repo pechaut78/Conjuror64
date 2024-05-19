@@ -1,0 +1,20 @@
+SPLAT FILES
+
+  One  indicator you may occasionally notice on a directory line,
+after  you  begin  saving  programs  and  files,  is  an asterisk
+appearing  just  before  the file type of a file that is 0 blocks
+long.  This  indicates  the file was not properly closed after it
+was created, and that it should not be relied upon. These "splat"
+files normally need to be erased from the diskette and rewritten.
+However,  do not use the SCRATCH command to get rid of them. They
+can  only  be  safely erased by the VALIDATE or COLLECT commands.
+One  of  these  should  normally be used whenever a splat file is
+noticed on a diskette. All of these commands are described in the
+following chapters.
+  There  are  two  exceptions  to the above warning:  one is that
+VALIDATE  and  COLLECT  cannot  be  used  on  some diskettes that
+include direct access  (random) files  (Chapter 6).  The other is
+that  if  the information in the splat file was crucial and can't
+be  replaced,  there is a way to rescue whatever part of the file
+was  properly  written.  This  option  is  described  in the next
+chapter.

@@ -1,0 +1,2 @@
+question,answer
+"What does BIT 5 of address D011 control in bit map mode?","Address	D011	BIT 5 is Bit Map Mode. 1 = Enable"

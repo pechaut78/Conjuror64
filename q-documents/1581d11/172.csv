@@ -1,0 +1,5 @@
+question,answer
+"What is the error code 61 in DOS and what does it indicate?","1581 disk: Controller commands error code 61: FILE NOT OPEN
+    A file is being accessed that has not been opened by the DOS.
+    In some such cases no error message is generated.  Rather the
+    request is simply ignored."

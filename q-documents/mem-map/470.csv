@@ -1,0 +1,2 @@
+question,answer
+"What is the address of the kernel routine for ioinit in the Commodore 64?","kernal routine address for ioinit	= $ff84"

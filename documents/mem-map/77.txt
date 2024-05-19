@@ -1,0 +1,2 @@
+
+address $4276	bit 7 is 	Select Random Noise Waveform, 1 = On

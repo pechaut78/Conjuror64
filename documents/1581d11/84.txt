@@ -1,0 +1,28 @@
+1581 disk:  FREEING BLOCKS
+
+  The  BLOCK-FREE  command is the opposite of  BLOCK-ALLOCATE. It
+frees  a  block  that you don't need any more,  for re-use by the
+DOS.  BLOCK-FREE  updates  the BAM to show a particular sector is
+not in use, rather than actually erasing any data.
+
+FORMAT FOR BLOCK-FREE COMMAND:
+
+  PRINT#15,"BLOCK-FREE";drive#;track#;sector#
+
+abbreviated as: PRINT#15,"B-F";drive#;track#;sector#
+
+where  "drive#" is the drive number,  and  "track#" and "sector#"
+are  respectively  the  track  and  sector numbers containing the
+desired block of data to be read into the file buffer.
+
+ALTERNATE FORMAT:
+
+  PRINT#15,"B-F:";drive#;track#;sector#
+
+EXAMPLE:
+
+  To  free  the  sector  in which we wrote our name in the BLOCK-
+WRITE example, and allocated in the first BLOCK-ALLOCATE example,
+we could use the following command:
+
+  PRINT#15,"B-F";0;1;1

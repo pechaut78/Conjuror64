@@ -1,0 +1,10 @@
+question,answer
+"What does TXS do?",TXS Transfer index X to stack pointer
+"What is the operation of TXS?",X -> S
+"What is the assembly language form of TXS?",TXS
+"What is the OP CODE of TXS?",9A
+"What is the number of bytes of TXS?",1
+"What is the number of cycles of TXS?",2
+"What is the addressing mode of TXS?",Implied
+"What is the assembly language form of the operation?",TXS
+"What is the operation of TXS in assembly language?",X -> S

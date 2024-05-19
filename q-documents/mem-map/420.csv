@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the IERROR vector at address $0300-0301 in a Commodore 64 computer?","IERROR    address $0300-0301   is: Vector: Indirect entry to BASIC Error Message, (X) points to Message ($E38B)."

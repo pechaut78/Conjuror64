@@ -1,0 +1,38 @@
+basic: OPERATORS
+
+  The arithmetic operators include the following signs:
+
+  +  Addition
+  -  Subtraction
+  *  Multiplication
+  /  Division
+  ^  Raising to a power (exponentiation)
+
+  On a line  containing  more than one operator,  there is a set order in
+which operations always occur. If several operations are used together on
+the  same  line,  the  computer  assigns  priorities  as follows:  First,
+exponentiation. Next, multiplication and division, and last, addition and
+subtraction.
+  You can change the order of operations  by enclosing within parentheses
+the calculation to be performed first. Operations enclosed in parentheses
+will take place before other operations.
+  There are also operations for equalities and inequalities:
+
+  =  Equal To
+  <  Less Than
+  >  Greater Than
+  <= Less Than or Equal To
+  >= Greater Than or Equal To
+  <> Not Equal To
+
+  Finally, there are three logical operators:
+
+  AND
+  OR
+  NOT
+
+  These are used most  often  to  join  multiple  formulas  in  IF...THEN
+statements. For example:
+
+  IF A=B AND C=D THEN 100  (Requires both parts to be true)
+  IF A=B OR  C=D THEN 100  (Allows either part to be true)

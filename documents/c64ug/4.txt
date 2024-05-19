@@ -1,0 +1,5 @@
+
+No additional connections are required to use the c64 with your TV. The antenna switchbox will
+connect the computer to the TV when the slide switch is in the "computer"
+position.  When  the switch is in the "TV" position your set will operate
+normally.

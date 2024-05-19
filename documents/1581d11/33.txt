@@ -1,0 +1,15 @@
+1581 disk with basic 7,0: COPY
+
+  The COPY command allows you to make a spare copy of any program
+or file on a diskette. However, on a single derive like the 1581,
+the  copy  must  be on the same diskette,  which means it must be
+given a different name from the file copied.  The source file and
+other files on the diskette are not changed. Files must be closed
+before they can be copied or concatenated.
+
+FORMAT FOR THE COPY COMMAND:
+
+  COPY [Ddrive#,]"old file name" TO [Ddrive#,]"new file name"
+       [,Udevice#]
+
+where both drive#s would be 0 if included.

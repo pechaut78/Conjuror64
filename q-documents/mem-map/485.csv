@@ -1,0 +1,2 @@
+question,answer
+"What is the kernel routine address for the SETLFS command in Commodore 64 BASIC?","kernal routine address for setlfs	= $ffba"

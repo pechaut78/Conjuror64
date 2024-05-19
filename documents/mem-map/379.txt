@@ -1,0 +1,2 @@
+
+STACK     address $0100-01FF   is: 6510 Hardware Stack Area.

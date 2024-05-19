@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bit 0 at address $DC0E ?","address $DC0E bit 0 is:	Start/Stop Timer A: 1 = Start, 0 = Stop"

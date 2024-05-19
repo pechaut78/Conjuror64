@@ -1,0 +1,5 @@
+
+1581 disk: Controller commands error code 61: FILE NOT OPEN
+    A file is being accessed that has not been opened by the DOS.
+    In some such cases no error message is generated.  Rather the
+    request is simply ignored.

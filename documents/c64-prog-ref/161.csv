@@ -1,0 +1,12 @@
+question,answer
+"what does STX do?","Stores the contents of the X register into memory."
+"What is the operation code for STX in Zero Page mode?","86"
+"What is the number of bytes required for STX in Zero Page mode?","2"
+"What is the number of cycles required for STX in Zero Page mode?","3"
+"What is the operation code for STX in Absolute mode?","8E"
+"What is the number of bytes required for STX in Absolute mode?","3"
+"What is the number of cycles required for STX in Absolute mode?","4"
+"What is the addressing mode for STX in Zero Page,Y mode?","Zero Page,Y"
+"What is the operation code for STX in Zero Page,Y mode?","96"
+"What is the number of bytes required for STX in Zero Page,Y mode?","2"
+"What is the number of cycles required for STX in Zero Page,Y mode?","4"

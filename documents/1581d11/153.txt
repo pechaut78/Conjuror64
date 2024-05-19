@@ -1,0 +1,3 @@
+
+1581 disk: Controller commands error code PARTITION SELECTED (not an error)
+    The disk partition requested has been selected.

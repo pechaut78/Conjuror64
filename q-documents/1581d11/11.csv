@@ -1,0 +1,21 @@
+question,answer
+"What is the syntax and limitations of the SAVE command in Commodore computers?","1581 disk:  To reset drive, type: OPEN 15,8,15,'UJ':CLOSE 15.
+
+
+1581 disk:  SAVE
+
+  The  SAVE  command  preserves  a program or file on a formatted
+diskette for latter use.
+
+FORMAT FOR THE SAVE COMMAND:
+
+  SAVE 'drive#:file name',device#
+
+where   'file  name'  is  any  string  expression  of  up  to  16
+characters,  preceded  by  the  drive  number  and  a  colon, and
+followed by the device number of the disk, normally 8.
+  However,  the  SAVE  command  will not work in copying programs
+that  are  not in the BASIC text area,  such as 'DOS 5.1' for the
+C64.  To copy it and similar machine-language programs,  you will
+need a machine-language monitor program, such as the one resident
+in the C128."

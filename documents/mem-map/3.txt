@@ -1,0 +1,2 @@
+
+address $0001 bit 1	is: /HIRAM Signal (0=Switch Kernal ROM Out)

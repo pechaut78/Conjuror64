@@ -1,0 +1,2 @@
+
+ROPRTY    address $00BD        is: RS232 Output Parity/Tape Byte to be Input or Output.

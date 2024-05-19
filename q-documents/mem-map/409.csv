@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the RODBS register at address $029D ?","RODBS     address $029D        is: RS232 Pointer: High Byte of Address of Output  Buffer."

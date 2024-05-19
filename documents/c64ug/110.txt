@@ -1,0 +1,13 @@
+
+
+basic: VAL(X$)
+
+  This function converts X$ into a number, and is essentially the inverse
+operation  from STR$.  The string is examined from the leftmost character
+to  the  right,  for  as  many  characters  as are in recognizable number
+format.
+
+  10 X = VAL("123.456")             X = 123.456
+  10 X = VAL("12A13B")              X = 12
+  10 X = VAL("RIU017")              X = 0
+  10 X = VAL("-1.23.45.67")         X = -1.23

@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the ISTOP vector in the Commodore 64 Kernal?","ISTOP     address $0328-0329   is: Vector: Indirect entry to Kernal STOP     Routine ($F6ED)."

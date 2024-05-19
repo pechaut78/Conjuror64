@@ -1,0 +1,2 @@
+
+addresses D500-D7FF	are 	SID IMAGES

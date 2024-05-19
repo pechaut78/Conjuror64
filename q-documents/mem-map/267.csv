@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory address range $002D-$002E in a typical Commodore 64 system?","VARTAB address  $002D-002E  is:   Pointer: Start of BASIC Variables."

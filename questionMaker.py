@@ -1,7 +1,7 @@
 
 from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
-from langchain import PromptTemplate
+from langchain.prompts import PromptTemplate
 import argparse
 import os,re
 from dotenv import load_dotenv

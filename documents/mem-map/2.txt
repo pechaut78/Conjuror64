@@ -1,0 +1,2 @@
+
+address $0001 bit 0	is: /LORAM Signal (0=Switch	BASIC ROM Out)

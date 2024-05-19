@@ -1,0 +1,2 @@
+
+address $D418 bit 7	is: Cut-Off Voice 3 Output: 1 = Off, 0 = On

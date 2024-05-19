@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the ICLOSE vector at address $031C-031D in the Kernal?","ICLOSE    address $031C-031D   is: Vector: Indirect entry to Kernal CLOSE Routine ($F291)."

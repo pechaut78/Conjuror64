@@ -1,0 +1,15 @@
+
+
+
+1581 disk with basic 7,0:FORMAT FOR THE CONCAT COMMAND:
+
+  CONCAT [Ddrive#,]"add file" TO [Ddrive#,] "master file"
+         [,Udevice#]
+
+where  the  optional  "drive#"  would be 0 in both cases. The old
+"master file"  is  deleted and replaced with a new  "master file"
+which  is  the concatenation of the old  "master file"  and  "add
+file".
+
+| The  length  of  a  command string (command and filenames) is |
+| limited to 41 characters.                                     |

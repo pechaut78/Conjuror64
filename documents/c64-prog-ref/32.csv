@@ -1,0 +1,8 @@
+question,answer
+"Can a sprite be turned off by setting its bit in the VIC-II control register?","A sprite is turned off by setting its bit in the VIC-II control register at 53269 ($D015 in HEX) to a 0."
+"What is the address of the VIC-II control register?","The VIC-II control register is located at address 53269 ($D015 in HEX)."
+"How do you turn off a sprite?","A sprite is turned off by setting its bit in the VIC-II control register at 53269 ($D015 in HEX) to a 0."
+"What is the POKE command to turn off a sprite?","The POKE command to turn off a sprite is POKE 53269,PEEK(53269)AND(255-2^SN), where SN is the sprite number from 0 to 7."
+"What is the purpose of the POKE command in turning off a sprite?","The POKE command is used to turn off a sprite by setting its bit in the VIC-II control register at 53269 ($D015 in HEX) to a 0."
+"Can you turn off a sprite using a POKE command?","Yes, a sprite can be turned off using a POKE command, such as POKE 53269,PEEK(53269)AND(255-2^SN), where SN is the sprite number from 0 to 7."
+"Can you turn off multiple sprites using a single POKE command?","No, a separate POKE command is required for each sprite to be turned off."

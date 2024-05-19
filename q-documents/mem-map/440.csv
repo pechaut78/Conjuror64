@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the ICLCHR address $0322-0323 in the Kernal routine?","ICLRCH    address $0322-0323   is: Vector: Indirect entry to Kernal CLRCHN     Routine ($F333)."

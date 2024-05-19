@@ -1,0 +1,5 @@
+question,answer
+"SEI stands for?","SEI Set interrupt disable status"
+"SEI OP CODE?","OP CODE 78"
+"SEI No. Bytes ?","No. Bytes 1"
+"SEI No. Cycles ?","No. Cycles 2"

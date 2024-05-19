@@ -1,0 +1,50 @@
+question,answer
+"What is the purpose and syntax of the MEMORY-WRITE command in the context of the 1581 disk drive?","1581 disk:  MEMORY-WRITE
+
+  The  MEMORY-WRITE  command is the equivalent of the  BASIC POKE
+command,  but has its effect in disk memory instead of within the
+computer.  M-W  allows you to write up to 35 bytes at a time into
+disk  memory.  The  MEMORY-EXECUTE  and some USER commands can be
+used to run any programs written this way:
+
+FORMAT FOR THE MEMORY-WRITE COMMAND:
+
+  PRINT#15,'M-W'CHR$(<address)CHR$(>address)CHR$(# of bytes)
+           CHR$(data byte(s))
+
+where  '<address'  is the low order part,  and  '>address' is the
+high order part of the address  in disk memory  to begin writing,
+'# of bytes'  is  the  number  of  memory  locations that will be
+written (from 1-35),  and 'data byte' is 1 or more byte values to
+be written into disk memory, each as a CHR$() value.
+
+EXAMPLES:
+
+We  can  use  this line to turn off the 'bumps' when loading DOS-
+protected  programs  (i.e.,  programs  that  have  been protected
+against  being  copied by creating and checking for specific disk
+errors).
+
+  PRINT#15,'M-W'CHR$(48)CHR$(0)CHR$(1)CHR$(133)
+
+  The following line can be used to recover bad sectors,  such as
+when  an  important  file  has  been  damaged  and cannot be read
+normally:
+
+  PRINT#15,'M-W'CHR$(48)CHR$(0)CHR$(1)CHR$(31)
+
+  These two examples may be very useful under some circumstances.
+They   are   the   equivalent   of   POKE 48,133  and  POKE 48,31
+respectively,  but  in  disk memory,  not inside the computer. As
+mentioned in the previous section's first example, location 48 in
+the  1581  disk  drive  signifies  two separate activities to the
+drive,  all related to error recovery.  Bit 7  (the high bit), if
+set means no  'bumps'  (don't move the read head to track 1). The
+bottom six bits are the count of how many times the disk will try
+to  read  each  sector  before  and  after trying seeks and bumps
+before  giving  up.  Since  31  is the largest number that can be
+expressed  in  six  bits,  that  is  the  maximum number of tries
+allowed.
+  From this example,  you  can see the value of knowing something
+about  PEEKS,  POKES,  and  machine-language before using direct-
+access disk commands, as well as their potential power."

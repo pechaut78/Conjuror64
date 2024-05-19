@@ -1,0 +1,9 @@
+
+
+
+basic: RESTORE
+
+  When  executed  in  a  program,  the pointer to which an item in a DATA
+statement will be READ next is reset to the first item in the list.  This
+gives you ability to re-READ the information. RESTORE stands by itself on
+a line.

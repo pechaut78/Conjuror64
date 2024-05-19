@@ -1,0 +1,2 @@
+question,answer
+"What is the function and configuration of the mode at address $0291?","MODE      address $0291        is: Flag: Upper/Lower Case change: $00 = Disabled, $80 = Enabled ($00)."

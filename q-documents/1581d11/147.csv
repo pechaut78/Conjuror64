@@ -1,0 +1,19 @@
+question,answer
+"What are the return codes and their descriptions for a disk controller job?","1581 disk:  Controller JOB Return Codes
+
+Name            Code  Description
+OK_DV            $0x  No error.
+MISHD_DV_ER      $02  Can't find header block.
+NOADAM_DV_ER     $03  No address mark detected.
+MISDBLK_DV_ER    $04  Data block not present.
+CRCDBLK_DV_ER    $05  CRC error encountered in data block.
+FMT_DV_ER        $06  Format error.
+VERERR_DV_ER     $07  Verify error.
+WRTPR_DV_ER      $08  Attempt to write to a write protected disk.
+CRCHD_DV_ER      $09  CRC error encountered in header block.
+                 $0A  Reserved.
+DSKCHG_DV_W      $0B  Disk was changed/disk ID mismatch.
+DSKNTLOG_DV_ER   $0C  Disk format not logical.
+CONTROLLER_DV_ER $0D  Floppy disk controller IC error.
+SYNTAX_DV_ER     $0E  Syntax error. Invalid job number.
+NODSKPRS_DV_ER   $0F  No disk is present in the drive."

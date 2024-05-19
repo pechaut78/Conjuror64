@@ -1,0 +1,2 @@
+question,answer
+"What is the address of the kernel routine for the 'listen' function in a Commodore 64?","kernal routine address for listen	= $ffb1"

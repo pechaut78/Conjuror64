@@ -1,0 +1,10 @@
+question,answer
+"STA stands for ?","Store accumulator in memory"
+"Addressing Mode","Addressing Mode"
+"STA Oper","Store Accumulator"
+"STA Oper,X","Store Accumulator with X"
+"STA Oper","Store Accumulator"
+"STA Oper,X","Store Accumulator with X"
+"STA Oper, Y","Store Accumulator with Y"
+"STA (Oper,X)","Store Accumulator with X"
+"STA (Oper),Y","Store Accumulator with Y"

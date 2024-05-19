@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory address range $0259-0262 in the Commodore 64 Kernal?","LAT       address $0259-0262   is: Kernal Table: Active logical File numbers."

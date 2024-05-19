@@ -1,0 +1,2 @@
+
+address $D40C bits 7-4	is: Select Attack Cycle Duration: O-15

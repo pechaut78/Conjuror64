@@ -1,0 +1,15 @@
+
+
+basic: SIN(X)  (sine)
+
+  SIN(X) is the trigonometric sine function.  The result will be the sine
+of X, where X is an angle in radians.
+
+SQR(X)  (square root)
+
+  This  function will return the square root of X,  where X is a positive
+number or 0. If X is negative, an ILLEGAL QUANTITY ERROR results.
+
+TAN(X)  (tangent)
+
+  The result will be the tangent of X, where X is an angle in radians.

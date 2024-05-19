@@ -1,0 +1,2 @@
+
+address $DC0E bit 5 is:	Timer A Counts: 1 = CNT Signals, 0 = System 02 Clock

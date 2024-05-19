@@ -1,0 +1,2 @@
+
+BITNUM    address $0298        is: RS232 Number of Bits left to send.

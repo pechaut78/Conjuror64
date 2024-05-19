@@ -1,0 +1,2 @@
+question,answer
+"What type of memory is stored in the address range D800-DBFF?","addresses D800-DBFF	are	Color RAM (Nybbles)"

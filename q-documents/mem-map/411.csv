@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location $029F-02A0?","IRQTMP    address $029F-02A0   is: Temporary store for IRQ Vector during Tape  operations."

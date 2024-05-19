@@ -1,0 +1,2 @@
+
+address $DD0F bit 7 is:	Set Alarm/TOD-Clock: 1 = Alarm, 0 = Clock

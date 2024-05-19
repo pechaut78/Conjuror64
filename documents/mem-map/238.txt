@@ -1,0 +1,2 @@
+
+address $DF00-DFFF are	Reserved for Future I/O Expansion

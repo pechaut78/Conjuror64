@@ -1,0 +1,31 @@
+question,answer
+"How does the storage of numeric data on diskettes in BASIC 7.0 differ from its storage in computer memory, and what are some strategies for optimizing disk space when writing numeric data to files?","1581 disk with basic 7,0: NUMERIC DATA STORAGE ON DISKETTE
+
+
+  Inside the computer,  the space  occupied by a numeric variable
+depends  only  on  its  type.  Simple numeric variables use seven
+bytes  (character locations) of memory.  Real array variables use
+five bytes per array element,  and integer array elements use two
+bytes each.  In contrast,  when a numeric variable or any type is
+written to a file,  the space it occupies depends entirely on its
+length, not its type.  This is because numeric data is written to
+a  file  in  the form of a string,  as if the STR$() function had
+been  performed on it.  The first character will be a blank space
+if the number is positive,  and a minus sign (-) if the number is
+negative.   Then  comes  the  number,  digit-by-digit.  The  last
+character is a cursor right character.
+  This  format allows the disk data to be read back into a string
+or  numeric  variable  later.  It is,  however,  wasteful of disk
+space,  and  it can be difficult to anticipate the space required
+by  numbers  of  unknown  length.  For this reason, some programs
+convert all numeric variables into strings before writing them to
+diskette,  and  use  string  functions  to  remove  any  unneeded
+characters in advance.  Doing so still allows those data elements
+to be read back into a numeric variable by INPUT# later, although
+file  data  errors  may  be  avoided  by  reading  all data in as
+strings, and converting to numbers using the VAL() function after
+the information is inside the computer.
+  For example, 'N$=RIGHT$(STR$(N),LEN(STR$(N))-1)' will convert a
+positive  number  N  into a string  N$  without the usual leading
+space for its numeric sign.  Then instead of  writing  PRINT#5,N,
+you would use PRINT#5,N$."

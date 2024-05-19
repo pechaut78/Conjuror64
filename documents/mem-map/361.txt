@@ -1,0 +1,2 @@
+
+BLNON     address $00CF        is: Flag: Cursor Status; $00 = Off, $01 = On.

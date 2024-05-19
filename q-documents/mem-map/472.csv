@@ -1,0 +1,2 @@
+question,answer
+"What is the memory address of the Commodore 64's kernal routine for loading?","kernal routine address for load	= $ffd5"

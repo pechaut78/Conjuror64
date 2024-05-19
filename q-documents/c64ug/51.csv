@@ -1,0 +1,18 @@
+question,answer
+"What is the formula to calculate the memory location on the Commodore 64 screen, and how would you use it to determine the memory location of a ball bouncing on the screen at column 20, row 12?","basic:   Screen  memory  in  the Commodore 64 normally begins at memory location
+1024,  and ends at location 2023.  Location 1024 is the upper left corner
+of the screen. Location 1025 is the position of the next character to the
+right  of that,  and so on down the row.  Location 1063 is the right-most
+position of the first row. The next location following the last character
+on a row is the first character on the next row down.
+
+  Now,  let's  say that you're controlling a ball bouncing on the screen.
+The ball is in the middle of the screen,  column 20, row 12.  The formula
+for calculation of the memory location on the screen is:
+
+  POINT = 1024 + X + 40 * Y
+
+where X is the column and Y is the row.
+  Therefore, the memory location of the ball is:
+  POKE 1524, 81
+  POKE 55796, 1"

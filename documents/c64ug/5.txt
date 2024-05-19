@@ -1,0 +1,26 @@
+
+
+c64 Optional Connections
+
+  Since the Commodore 64 furnishes a channel of high fidelity sound,  you
+may wish to play it through a quality amplifier to realize the best sound
+possible.   In addition,  the  Commodore  64  also  provides  a  standard
+"composite" video signal, which can be fed into a television monitor.
+  These  options  are made possible by the audio/video output jack on the
+rear panel  of the Commodore 64.  The easiest way to gain access to these
+signals is by using a standard 5-Pin DIN audio cable (not supplied). This
+cable connects directly to the audio/video connector on the computer. Two
+of  the  four pins on the opposite end of the cable contain the audio and
+video signals.  Optionally,  you can construct your own cable,  using the
+pinouts shown in Appendix I as a guide.
+  Normally,  the  BLACK  connector  of  the  DIN cable supplies the AUDIO
+signal.  This  plug  may  be  connected  to  the  AUXILIARY  input  of an
+amplifier,  or the AUDIO IN connector of a monitor or other video system,
+such as a video cassette recorder (VCR).
+  The  WHITE  or  RED connector usually supplies the direct VIDEO signal.
+This  plug is connected to the VIDEO IN connector of the monitor or video
+input section of some other video system, such as a VCR.
+  Depending  on  the manufacturer of your DIN cable,  the color coding of
+the plugs may be different.  Use the pinouts shown in Appendix I to match
+up the proper plugs  if you don't get an audio or video signal  using the
+suggested connections.

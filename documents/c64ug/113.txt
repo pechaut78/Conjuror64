@@ -1,0 +1,5 @@
+
+
+basic: SPC(X)
+
+  This is used in a PRINT statement to skip X spaces forward.

@@ -1,0 +1,6 @@
+
+
+basic: STR$(X)
+
+  This will return a string  which is identical to the PRINTed version of
+X.

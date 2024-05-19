@@ -1,0 +1,33 @@
+
+
+basic: OPEN
+
+  Then  OPEN  statement allows the Commodore 64 to access devices such as
+the cassette recorder and disk for data,  a printer,  or even the screen.
+OPEN  is followed by a number (0-255),  to which all following statements
+will  refer.  There is usually a second number after the first,  which is
+the device number.
+  The device numbers are:
+
+  0   Screen
+  1   Cassette
+  4   Printer
+  8   Disk
+
+  Following the device number may be a third number, separated again by a
+third number, separated again by a comma, which is the secondary address.
+In the case of the cassette,  this is 0 for read,  1 for write, and 2 for
+write with end-of-tape marker.
+  In the case of the disk,  the number refers to the buffer,  or channel,
+number.  In  the  printer,  the  secondary address controls features like
+expanded printing. See the Commodore 64 Programmer's Reference Manual for
+more details.
+
+  10 OPEN 1,0           OPENs the SCREEN as a device
+  20 OPEN 2,1,0,"D"     OPENs the cassette for reading,
+                        file to be searched for is D
+  30 OPEN 3,4           OPENs the printer
+  40 OPEN 4,8,15        OPENs the data channel on the disk
+
+  Also see: CLOSE, CMD, GET#, INPUT#, and PRINT#, system variable ST, and
+Appendix B.

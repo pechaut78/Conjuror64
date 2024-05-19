@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the SAVE WITH REPLACE command in a disk drive?","1581 disk with basic 7,0: SAVE WITH REPLACE
+
+  If a file already exists, it can't be saved again with the same
+name  because  the  disk  drive allows only one copy of any given
+file name per diskette. It is possible to get around this problem
+using the  RENAME  and  SCRATCH  commands described later in this
+chapter.  If all you wish to do is replace a program or data file
+with a revised version, another command is more convenient. Known
+as SAVE-WITH-REPLACE, or @SAVE.  This option tells the disk drive
+to  replace  any file it finds in the diskette directory with the
+same name, substituting the new file for the old version."

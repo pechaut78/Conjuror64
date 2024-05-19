@@ -1,0 +1,2 @@
+
+address $DC01 bit 4	Joystick 1 Fire Button: 1 = Fire 3-2	Paddle Fire Buttons 3-0	Joystick 1 Direction

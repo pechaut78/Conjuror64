@@ -1,0 +1,28 @@
+
+[
+    {
+        "atom": "Input",
+        "params": {
+            "input": "q-documents/"
+        }
+    },
+    {
+        "atom": "CSVMerge",
+        "params": {
+            "output": "csv/qmerged_output.csv"
+        }
+    },
+    {
+        "atom": "CSVEnforceStr",
+        "params": {
+            "output": "csv/qmerged_output.csv"
+        }
+    },
+    {
+        "atom": "CSVAddContext",
+        "params": {
+            "output": "csv/qmerged_output.csv",
+            "context": "In the context of the C64, "
+        }
+    }
+]

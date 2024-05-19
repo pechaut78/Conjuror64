@@ -1,0 +1,2 @@
+question,answer
+"What is the function of address $D40D in a pulse waveform controller?","address $D40D	bits			6 is	Select Pulse Waveform, 1 = On"

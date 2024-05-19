@@ -1,0 +1,2 @@
+
+GDCOL     address $0287        is: Background Colour under Cursor.

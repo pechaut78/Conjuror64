@@ -1,0 +1,7 @@
+
+1581 disk: Controller commands error code 26: WRITE PROTECT ON
+    The controller has been requested to write a data block while
+    the  write-protect  sensor  is  uncovered.  Usually caused by
+    writing  to  a  diskette  whose write protect notch is pushed
+    back  to  expose  the hole to prevent changing the diskette's
+    contents.

@@ -1,0 +1,59 @@
+
+
+
+PRINT and Calculations
+
+  Now  that  you've  gotten  through  a  couple  of  the  more  difficult
+operations  you need  in order to keep the programs you like,  lets start
+making some programs for you to save.
+  Try typing the following exactly as shown:
+
+  PRINT "COMMODORE 64"     <----- Type this line and hit <RETURN>
+  COMMODORE 64            <------ Computer typed
+
+  READY.
+  _
+
+  If  you  make  a  typing  mistake,  use the <INST/DEL> key to erase the
+character  immediately  to the left of the cursor. You can delete as many
+characters as necessary.
+  Let's  see  what  went on in the example above.  First,  you instructed
+(commanded) the computer to PRINT whatever was inside the quote marks. By
+hitting  <RETURN>  you  told  the computer to do  what you instructed and
+COMMODORE 64 was printed on the screen.
+  When you use the PRINT statement in this form,  whatever is enclosed in
+quotes is printed exactly as you typed it.
+  If the computer responded with:
+
+  ?SYNTAX ERROR
+
+ask yourself if you made a mistake in typing,  or forgot the quote marks.
+The  computer  is  precise  and  expects  instructions  to  be given in a
+specific form.
+  But don't get worried; just remember to enter things as we present them
+in the examples and you'll get along great with the Commodore 64.
+  Remember, you can't hurt the computer by typing on it, and the best way
+to learn BASIC is to try different things and see what happens.
+  PRINT  is  one  of  the  most useful and powerful commands in the BASIC
+language.  With  it,  you  can  display  just  about  anything  you wish,
+including graphics and results of computations.
+  For example,  try the following.  Clear the screen  by holding down the
+<SHIFT> key  and  <CLR/HOME> key and type (be sure to use the '1' key for
+one, not a letter 'I'):
+
+  PRINT 12 + 12            
+  24                      
+
+  READY.
+  _
+
+  What you've discovered is  that the Commodore 64 is a calculator in its
+basic form.  The result of "24" was calculated and printed automatically.
+In  fact,  you can also perform  subtraction,  multiplication,  division,
+exponentiation, and  advanced  math  functions such as calculating square
+roots, etc. And you're not limited to a single calculation on a line, but
+more on that later.
+  Note  that in the above form,  PRINT behaved differently from the first
+example.  In  this  case,  a value or result of a calculation is printed,
+rather  than  the  exact message you entered because the quote marks were
+omitted.

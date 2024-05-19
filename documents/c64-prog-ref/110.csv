@@ -1,0 +1,10 @@
+question,answer
+"Look at other peoples' machine language programs to learn","One of the best ways to learn machine language is to look at other peoples' machine language programs."
+"Write your own machine language program","Having looked at other machine language programs, you MUST write your own."
+"Use utilities to aid in writing machine language programs","You should also use the utilities that are available, either IN your computer, or in a program, that aid you in writing, editing, or tracking down errors in a machine language program."
+"What are the advantages of writing programs in machine language","Advantages of writing programs in machine language: Speed - Machine language is hundreds, and in some cases thousands of times faster than a high level language such as BASIC."
+"Can machine language programs be made totally 'watertight'","A machine language program can be made totally 'watertight,' i.e., the user can be made to do ONLY what the program allows, and no more."
+"What is the KERNAL","The KERNAL is an example of a utility that allows you to check the keyboard, print text, control peripheral devices like disk drives, printers, modems, etc., manage memory and the screen."
+"Why is machine language faster than high level languages","Machine language is hundreds, and in some cases thousands of times faster than a high level language such as BASIC."
+"What is the importance of machine language programming","In essence, the computer can only be maximized by the machine language programmer."
+"Can machine language programs crash the BASIC interpreter","With a high level language, you are relying on the user not 'crashing' the BASIC interpreter by entering, for example, a zero which later causes a: ?DIVISION BY ZERO ERROR IN LINE 830"

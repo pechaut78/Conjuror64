@@ -1,0 +1,57 @@
+
+
+
+Proportional Mode
+
+In proportional mode the mouse operates as follows:
+1) Mouse  movement  is  tracked internally within the mouse.  The
+   position of the mouse MOD 64  is  transmitted to the SID  POTX
+   and  POTY  registers  every  512  microsecond  and requires no
+   software intervention.
+   The  POTX  register  is  used  to read X position of the mouse
+   and the POTY register is used to read Y position of the mouse.
+   The register contents are as follows:
+
+                    +-------------------------------+
+   Bit Position     | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+                    +---+---+---+---+---+---+---+---+
+   POT Register     | X | P5| P4| P3| P2| P1| P0| N |
+                    +-------------------------------+
+   where:
+        X ......... is a don't care bit.
+        P5-P0 ..... is the mouse position MOD 64.
+        N ......... is a special (noise) bit (keep reading...).
+
+2) The  left  mouse  button  is  mapped to what would be the fire
+   button on a joystick.
+3) The  right  mouse  button  is  mapped to what would be that UP
+   direction on a joystick.
+
+Software Interface
+
+1) Because  the  left and right buttons appear as joystick lines,
+   reading  them  from  software is a simple exercise in polling.
+   Note that as with a joystick,  the buttons will interfere with
+   the  keyboard  map,  and  software  should make some effort to
+   distinguish between point short in the keyboard matrix  (i.e.,
+   a  key  being  depressed),  and  a  whole  row or column being
+   grounded (i.e., a joystick type of signal).
+2) The  position information is not difficult to handle.  Ideally
+   is  should be installed as part of the 60 Hz interrupt routine
+   (preferably  at  the  beginning  --  see  the  section  on SID
+   Register Cautions).
+   This strategy is as follows:
+   1) Read the mouse position MOD 64.
+   2) Determine  if  the mouse has moved by comparing the current
+      position with a saved copy of the previous position.
+   3) If  the mouse has moved,  then modify your pointer position
+      appropriately.
+      You  should  note,  that even if the mouse is still,  it is
+      possible for the POT register  to oscillate between $80 and
+      $7F.  This  would result in the mouse position as jittering
+      between two points.
+
+In  order  to  ascertain  whether  the mouse has moved the software
+should read the low order bit of the POT register.
+
+All of this can be seen in the supplied mouse driver code.

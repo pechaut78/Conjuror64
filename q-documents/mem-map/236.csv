@@ -1,0 +1,6 @@
+question,answer
+"What is at address $DD0F bits 6-5?","address $DD0F bits 6-5	is: Timer B Mode Select:
+00 = Count System 02 Clock Pulses
+01 = Count Positive CNT Transitions
+10 = Count Timer A Underflow Pulses
+11 = Count Timer A Underflows While CNT Positive"

@@ -1,0 +1,7 @@
+
+
+basic: PEEK(X)
+
+  Used  to  find  out  contents  of  memory  location  X,  in  the  range
+0-65535,  giving  a  result from 0-255. PEEK is often used in conjunction
+with the POKE statement.

@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the INPPTR address $0043-0044?","INPPTR address  $0043-0044  is:   Pointer: Temporary storage of Pointer during  INPUT Routine."

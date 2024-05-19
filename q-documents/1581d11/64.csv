@@ -1,0 +1,16 @@
+question,answer
+"What are the limitations and benefits of using relative files in DOS?","FILE LIMITS
+
+  With  relative  files,  you  don't  have to worry about exactly
+where  on  the  diskette's surface a given record will be stored,
+or  whether  it will fit properly within the current disk sector,
+or need to be extended onto the next available sector.  DOS takes
+care of all that for you.  All you need to do is specify how long
+each  record  is,  in bytes,  and how many records you will need.
+DOS  will do the rest,  and organize things in such a way that it
+can  quickly find any record in the file,  as soon as it is given
+the record number (ordinal position within the file).
+  The  only  limit that will concern you is that each record must
+be  the  same  size,  and  the  record  length you choose must be
+between 2 and 254 characters.  Naturally the entire file also has
+to fit on your diskette, along with any other existing file(s)."

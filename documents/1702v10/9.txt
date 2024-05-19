@@ -1,0 +1,6 @@
+
+
+1702 monitor HORIZONTAL POSITION CONTROL
+Turn this knob to the right to move the center of the picture to the
+right, and turn it to the left to move the center of the picture to
+the left.

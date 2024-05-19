@@ -1,0 +1,7 @@
+basic: MULTIPLICATION
+
+  If  you  wanted  to  multiply  12  times  12,  use  the asterisk (*) to
+represent multiplication. You would type:
+
+  PRINT 12 * 12            <----- Hit <RETURN>
+  144

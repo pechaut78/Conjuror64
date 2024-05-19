@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the FBUFPT address $0071-0072?","FBUFPT address  $0071-0072  is:   Pointer: Used during CRUNCH/ASCII conversion."

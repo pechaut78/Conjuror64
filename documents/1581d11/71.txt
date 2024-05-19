@@ -1,0 +1,52 @@
+1581 disk: DESIGNING A RELATIVE RECORD
+
+  As  stated earlier in this chapter,  each relative record has a
+fixed length, including all special characters. Within that fixed
+length, there are two popular ways to organize various individual
+fields of information. One is free-format, with individual fields
+varying in length from record to record, and each field separated
+from the next by a carriage return character  (each of which does
+take  up  one character space in the record).  The other approach
+is to use fixed-length fields,  that may  or may not be separated
+by carriage returns. If fixed length fields are not all separated
+by  carriage returns,  you will either need to be sure a carriage
+return is included within each 88-character portion of the record
+(88 is for BASIC 2, 160 is for BASIC 7). If this is not done, you
+will  have  to  use  the  GET#  command  to read the record, at a
+significant cost in speed.
+  Since  each  relative record is most easily written by a single
+PRINT# statement,  the recommended approach is to build a copy of
+the current record in memory before writing it to disk. It can be
+collected into a single string variable  with the help of BASIC's
+many string-handling functions,  and then all written out at once
+from that variable.
+  Here  is  an  example.  If  we are writing a 4-line mail label,
+consisting of 4 fields named  "NAME",  "STREET",  "CITY & STATE",
+and "ZIP CODE", and have a total record size of 87 characters, we
+can organize it in either of two ways:
+
+  WITH FIXED LENGTH  FIELDS         WITH VARIABLE LENGTH FIELDS
+
+Field Name     Length             Field Name        Length
+
+NAME           27 characters      NAME              31 characters
+STREET         27 characters      STREET            31 characters
+CITY & STATE   23 characters      CITY & STATE      26 characters
+ZIP CODE       10 characters      ZIP CODE          11 characters
+----------------------------      -------------------------------
+Total length   87 characters      Potential length  99 characters
+                                  Edited length     87 characters
+
+  With fixed length records,  the field lengths add up to exactly
+the  record  length.  Since  the  total length is just within the
+input  buffer size limitation,  no carriage return characters are
+needed.  With variable length records,  you can take advantage of
+the  variability  of  actual  address  lengths.  While  one  name
+contains  27  letters,  another  may  have only 15,  and the same
+variability exists in street and city lengths.  Although variable
+length records lose one character per field for carriage returns,
+they  can  take advantage of the difference between maximum field
+length  and  average  field length.  A program that uses variable
+record  lengths must calculate the total length of each record as
+it is entered,  to be sure the total of all fields doesn't exceed
+the space available.

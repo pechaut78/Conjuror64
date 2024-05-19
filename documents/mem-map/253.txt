@@ -1,0 +1,3 @@
+
+
+GARBFL address  $000F       is:   Flag: DATA scan/List Quote/Garbage collection.

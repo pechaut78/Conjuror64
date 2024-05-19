@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location at address $00CD in the system?","BLNCT     address $00CD        is: Timer: Count down for Cursor blink toggle."

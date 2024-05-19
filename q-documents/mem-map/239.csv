@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the register located at address $0000?","D6510  address  $0000       is:   6510 On-chip Data Direction Register."

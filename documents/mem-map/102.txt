@@ -1,0 +1,2 @@
+
+address $4283	bits1 = On is:	Synchronize Osc. 2 with Osc. 1 Frequency,

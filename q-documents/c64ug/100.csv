@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the SGN(X) function in basic programming?","basic: SGN(X)  (sign)
+
+  This function returns the sign (positive, negative, or zero) of X.  The
+result will be +1 if positive, 0 if zero, and -1 if negative."

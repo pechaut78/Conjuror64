@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bits 3-0 at address $DC00?","address $DC00 bits 3-0	is: Joystick A Direction (0-15)"

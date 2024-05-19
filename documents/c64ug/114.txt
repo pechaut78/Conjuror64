@@ -1,0 +1,6 @@
+
+
+basic: TAB(X)
+
+  TAB is also used in a PRINT statement; the next item to be PRINTed will
+be in column X.

@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bit 4 of the $DC0D address in a Commodore 64 computer?","address $DC0D bit 4 is	FLAG1 IRQ (Cassette Read / Serial Bus SRQInput)"

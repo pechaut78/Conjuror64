@@ -1,0 +1,3 @@
+
+
+FBUFPT address  $0071-0072  is:   Pointer: Used during CRUNCH/ASCII conversion.

@@ -1,0 +1,3 @@
+
+
+TXTTAB address  $002B-002C  is:   Pointer: Start of BASIC Text Area ($0801).

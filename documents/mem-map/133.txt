@@ -1,0 +1,2 @@
+
+address $D417	bits 0	is Filter Voice 1 Output: 1 = Yes, 0 = No

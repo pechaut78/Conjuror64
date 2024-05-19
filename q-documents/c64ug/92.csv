@@ -1,0 +1,4 @@
+question,answer
+"What is the mathematical function that returns the angle, measured in radians, whose tangent is X?","basic: ATN(X)  (arctangent)
+
+  Returns the angle, measured in radians, whose tangent is X."

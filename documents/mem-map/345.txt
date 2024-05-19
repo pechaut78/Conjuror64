@@ -1,0 +1,2 @@
+
+FNADR     address $00BB-00BC   is: Pointer: Current File name Address.

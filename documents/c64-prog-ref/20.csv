@@ -1,0 +1,7 @@
+question,answer
+"Extended color mode is turned OFF by setting what bit of the VIC-II register?","bit 6"
+"What is the location of the VIC-II register that needs to be modified to turn off extended color mode?","53265"
+"What is the hexadecimal value that needs to be written to the VIC-II register to turn off extended color mode?","191"
+"What is the condition to turn off extended color mode?","setting bit 6 of the VIC-II register to a 0"
+"What is the statement that turns off extended color mode?","POKE 53265,PEEK(53265)AND 191"
+"What is the register that needs to be modified to turn off extended color mode?","VIC-II register"

@@ -1,0 +1,2 @@
+question,answer
+"What does bit 7 of address $DD0E represent?","address $DD0E bit 7 is:	Time-of-Day Clock Frequency: 1 = 50 Hz, 0 = 60 Hz"

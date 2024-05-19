@@ -1,0 +1,2 @@
+
+C3PO      address $0094        is: Flag: Serial Bus - Output Character buffered.

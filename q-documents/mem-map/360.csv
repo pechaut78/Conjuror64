@@ -1,0 +1,2 @@
+question,answer
+"What does the GDBLN at address $00CE represent ?","GDBLN     address $00CE        is: Character under Cursor while Cursor Inverted."

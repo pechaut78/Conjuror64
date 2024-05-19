@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location $0100-013E?","BAD       address $0100-013E   is: Tape Input Error log."

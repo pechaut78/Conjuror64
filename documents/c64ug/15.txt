@@ -1,0 +1,11 @@
+
+
+<CRSR> key
+
+  There are two keys marked <CRSR> (CuRSoR), one with up and down arrows,
+the other with left and right arrows.  You can use these keys to move the
+cursor up and down or left and right.  In the unshifted mode,  the <CRSR>
+keys  will  let  you  move  the  cursor down and to the right.  Using the
+<SHIFT> key and <CRSR> keys allows the cursor to be moved either up or to
+the  left.  The  cursor keys have a special repeat feature that keeps the
+cursor moving until you release the key.

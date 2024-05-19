@@ -1,0 +1,10 @@
+
+
+basic: USR(X)
+
+  When  this  function  is used,  the program jumps to a machine language
+program  whose  starting  point  is  contained  in memory locations.  The
+parameter X is passed to the machine language program,  which will return
+another  value  back  to  the  BASIC  program.  Refer to the Commodore 64
+Programmer's Reference Manual  for  more  details  on  this  function and
+machine language programming.

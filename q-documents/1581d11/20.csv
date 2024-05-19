@@ -1,0 +1,37 @@
+question,answer
+"What is the syntax and usage of the COPY command on a Commodore 1581 disk drive?","1581 disk:  COPY
+
+  The COPY command allows you to make a spare copy of any program
+or file on a diskette.  On a single drive like the 1581, the copy
+must  be  on  the  same diskette,  which means it must be given a
+different name from the file copied. It's also used to combine up
+to  four sequential data file  (linking the files one to another,
+end  to end in a chain).  Files are linked in the order and other
+files  on  the  diskette  are  not changed.  Files must be closed
+before they are copied or linked.
+
+FORMAT FOR THE COPY COMMAND:
+
+  PRINT#15,'COPYdrive#:new file=old file'
+
+EXAMPLES:
+
+  PRINT#15,'COPY0:BACKUP=ORIGINAL'
+
+or abbreviated as:
+
+  PRINT#15,'Cdrive#:new file=old file'
+
+  PRINT#15,'C0:BACKUP=ORIGINAL'
+
+where  'drive#'  is the drive number  'new file'  is the copy and
+'old file' is the original.
+
+FORMAT FOR THE COMBINE OPTION:
+
+  PRINT#15,'Cdrive#:new file=file 1,file 2,file 3,file 4'
+
+where 'drive#' is always 0,
+
+| The  length  of  a  command string (command and filenames) is |
+| limited to 41 characters.                                     |"

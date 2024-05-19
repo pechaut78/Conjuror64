@@ -1,0 +1,2 @@
+
+RNDX      address $008B-008F   is: Floating RND Function Seed Value.

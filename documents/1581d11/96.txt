@@ -1,0 +1,16 @@
+1581 disk:  AUTO BOOT LOADER
+
+  During some operations  (power-up reset,  burst INQUIRE,  burst
+QUERY,  an  initialize command)  the 1581 will automatically look
+for  a  file or the disk named  'COPYRIGHT CBM 86'  that is a USR
+type-file.  The format of the file is the same  as that described
+previously for the utility loader.  If it is present, the file is
+automatically loaded and executed.
+
+  The  automatic  loading  of this file can be disabled by either
+renaming it, setting the appropriate flag in the RAM sectors (see
+Appendix C),  or  by  setting  a  flag variable in RAM to disable
+further autoboots (see JDEJAVU jump table vector in Chapter 10).
+
+  At  the  end of the autobooted program it should return control
+to the 1581 via the JCBMBOOTRTN jump table vector.

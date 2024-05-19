@@ -1,0 +1,14 @@
+
+
+
+1581 disk with basic 7,0:FORMAT FOR THE BSAVE COMMAND:
+
+  BSAVE "file name"[,Ddrive#][,Udevice#][,Bbank#]
+                   [,Pstarting address][TO Pending address+1]
+
+where  the  usual options are the same and bank# is one of the 16
+banks of the C128.  The address to be saved are given in decimal.
+Note  that  the ending address must be 1 location beyond the last
+location to be saved.
+  To access a built-in monitor, type MONITOR.  To exit a monitor,
+type X alone on a line.

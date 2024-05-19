@@ -1,0 +1,1 @@
+address $DD00 bit 2 is: 	RS-232 Data Output (User Port)

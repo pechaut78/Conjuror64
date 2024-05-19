@@ -1,9 +1,0 @@
-question,answer
-"Can the Commodore 64 have more than one joystick connected?","Yes, the Commodore 64 has two 9-pin Game Ports which allow the use of joysticks, paddies, or a light pen."
-"What is the purpose of the 6526 CIA chip?","The 6526 CIA chip is used to handle the paddle fire buttons and keyboard scanning."
-"What are the five distinct switches on a digital joystick?","The five distinct switches on a digital joystick are used for direction and the fire button. The switches are arranged as shown: (Top) FIRE (Switch 4), UP (Switch 0), LEFT (Switch 2), RIGHT (Switch 3), and DOWN (Switch 1)."
-"How are the joystick switches represented in memory?","The joystick switches are represented in memory locations 56320 and 56321."
-"What is the purpose of the fire button on a joystick?","The fire button is used to change the bit (bit 4 in this case) to a 0 when pressed."
-"What is the purpose of the subroutine in BASIC?","The subroutine is used to read the joystick from BASIC."
-"What is the purpose of the variable JV in the subroutine?","The variable JV is used to get the joystick value and form the direction value."
-"What are the possible values for JV?","The possible values for JV correspond to the directions: NONE, UP, DOWN, LEFT, RIGHT, UP & LEFT, DOWN & LEFT, RIGHT & DOWN, and UP & RIGHT."

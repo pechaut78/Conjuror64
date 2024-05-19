@@ -1,0 +1,14 @@
+
+
+
+1581 disk with basic 7,0:FORMAT FOR SAVE WITH REPLACE:
+
+  DSAVE "@file name"[,Ddrive#][,Udevice#]
+
+  The  actual  procedure  is  this  --  the  new version is saved
+completely,  then  the old version is scratched and its directory
+entry altered to point to the new version.  Because it works this
+way,  there  is little danger a disaster such as having the power
+going  off  midway through the process would destroy both the old
+and new copies of the file. Nothing happens to the old copy until
+after the new copy is saved properly.

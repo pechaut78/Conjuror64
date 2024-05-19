@@ -1,0 +1,6 @@
+question,answer
+"what is the location of the VIC-II control register to unexpand a sprite in the horizontal direction","53277"
+"What is the operation to unexpand a sprite in the horizontal direction","POKE 53277,PEEK(53277)AND (255-2^SN)"
+"To unexpand a sprite in the horizontal direction, the corresponding bit in the VIC-II control register at location 53277 ($D01D in HEX) must be turned OFF (set to a 0)."
+"What is the range of sprite numbers for unexpanding a sprite in the horizontal direction","0 to 7"
+"To unexpand a sprite in the horizontal direction, the corresponding bit in the VIC-II control register at location 53277 ($D01D in HEX) must be turned OFF (set to a 0)."

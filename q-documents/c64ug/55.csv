@@ -1,0 +1,16 @@
+question,answer
+"What are the types of variables used in Commodore 64 BASIC and how are they specified?","basic: VARIABLES
+
+  The Commodore 64 uses three types of variables in BASIC. These are real
+numeric, integer numeric, and string (alphanumeric) variables.
+  Variable  names  may consist of a single letter, a letter followed by a
+number, or two letters.
+  An  integer  variable  is specified by using the percent (%) sign after
+the  variable name.  String variable have the dollar sign ($) after their
+name.
+
+Examples
+
+  Real Variable Names: A, A5, BZ
+  Integer Variable Names: A%, A5%, BZ%
+  String Variable Names: A$, A5$, BZ$"

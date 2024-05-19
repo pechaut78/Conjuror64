@@ -1,0 +1,16 @@
+
+
+
+basic: INPUT
+
+  The  INPUT  statement  allows  the  program  to get data from the user,
+assigning  that  data  to  a  variable.  The  program  will stop, print a
+question  mark  (?)  on  the screen, and wait for the user to type in the
+answer and hit RETURN.
+  INPUT  is  followed  by  a  variable name, or a list of variable names,
+separated by commas.  A message may be placed within quote marks,  before
+the  list of variable names to be INPUT.  If more than one variable is to
+be INPUT, they must be separated by commas when typed.
+
+  10 INPUT "PLEASE ENTER YOUR FIRST NAME";A$
+  20 PRINT "ENTER YOUR CODE NUMBER";: INPUT B

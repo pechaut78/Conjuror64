@@ -1,0 +1,17 @@
+
+
+basic: VERIFY
+
+  This  command  causes  the  computer  to  check  the program on disk or
+tape  against  the  one  in  memory.  This  is  proof that the program is
+actually SAVEd,  in case the tape or disk is bad, or something went wrong
+during  the  SAVE.  VERIFY  without anything after the command causes the
+Commodore  64  to  check  the  next  program on tape, regardless of name,
+against the program in memory.
+  VERIFY  followed by a program name,  or a string variable,  will search
+for that program and then check. Device numbers can also be included with
+the verify command.
+
+  VERIFY            Checks the next program on tape
+  VERIFY "HELLO"    Searches for HELLO, checks against memory
+  VERIFY "HELLO",8  Searches for HELLO on disk, then checks

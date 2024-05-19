@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the bit 7 of the I/O register at address $DD00 in the Commodore 64?","address $DD00 bit 7is	Serial Bus Data Input"

@@ -1,0 +1,2 @@
+question,answer
+"What is the address of the kernel routine that restores the system?","kernal routine address for restor	= $ff8a"

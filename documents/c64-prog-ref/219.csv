@@ -1,0 +1,8 @@
+question,answer
+"By what method can machine language programs be added to a BASIC program?","DATA STATEMENTS"
+"How many methods are there to add machine language programs to a BASIC program?","3"
+"What is the easiest method to add machine language routines?","DATA STATEMENTS"
+"What is the drawback of using DATA STATEMENTS method?","taking up more memory space"
+"What is the advantage of using DATA STATEMENTS method?","fairly easy to debug"
+"What is the drawback of using DATA STATEMENTS method?","the wait while the program is POKED in"
+"What is the best use of DATA STATEMENTS method?","for smaller routines"

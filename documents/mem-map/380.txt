@@ -1,0 +1,2 @@
+
+BSTACK    address $013F-01FF   is: BASIC Stack Area.

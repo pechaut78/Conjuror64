@@ -1,0 +1,10 @@
+question,answer
+"What is the format and syntax of the DATA statement in a programming language?","basic: DATA
+
+  This  statement  is  followed  by  a  list  of items to be used by READ
+statements.  Items  may  be numeric values or text strings, and items are
+separated  by commas.  String items need not be inside quote marks unless
+they contain space,  colon, or comma.  If two commas have nothing between
+them, the value will be READ as a zero for a number, or an empty string.
+
+  DATA 12, 14.5, 'HELLO, MOM', 3.14, PART1"

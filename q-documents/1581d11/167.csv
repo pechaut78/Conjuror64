@@ -1,0 +1,5 @@
+question,answer
+"What is the error message displayed when a syntax error occurs in a controller command?","1581 disk: Controller commands error code 39: SYNTAX ERROR (invalid command)
+    The  DOS  does  not  recognize  a command sent to the command
+    channel  (secondary  address  15).  Check your typing and try
+    again."

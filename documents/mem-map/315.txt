@@ -1,0 +1,2 @@
+
+LDTND     address $0098        is: Number of Open Files/Index to File Table.

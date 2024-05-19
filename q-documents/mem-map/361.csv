@@ -1,0 +1,2 @@
+question,answer
+"What is the meaning and possible values of the Flag at memory address $00CF?","BLNON     address $00CF        is: Flag: Cursor Status; $00 = Off, $01 = On."

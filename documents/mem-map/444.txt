@@ -1,0 +1,2 @@
+
+IGETIN    address $032A-032B   is: Vector: Indirect entry to Kernal GETIN     Routine ($F13E).

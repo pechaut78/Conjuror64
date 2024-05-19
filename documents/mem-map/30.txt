@@ -1,0 +1,2 @@
+
+Address	D011	BIT 3 is Select 24/25 Row Text Display: 1 = 25 Rows

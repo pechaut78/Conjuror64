@@ -1,0 +1,2 @@
+
+M51AJB    address $0295-0296   is: RS232 Non-standard Bits/Second.

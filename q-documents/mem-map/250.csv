@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the DIMFLG at address $000C?","DIMFLG address  $000C       is:   Flag: Default Array dimension."

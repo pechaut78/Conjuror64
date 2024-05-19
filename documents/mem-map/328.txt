@@ -1,0 +1,2 @@
+
+BUFPNT    address $00A6        is: Pointer: Tape I/O buffer.

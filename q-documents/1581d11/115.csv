@@ -1,0 +1,16 @@
+question,answer
+"What happens when the READ_DV command is executed on a disk controller job?","1581 disk Controller Job commands: READ_DV
+       $80     Reads  a particular logical sector into the
+                      job queue buffer  (only if the disk has not
+                      been  changed).  If  the  desired sector is
+                      already in the track cache buffer,  then no
+                      disk  activity  is  required  (the  data is
+                      merely  transferred  from  the  track cache
+                      memory to the job queue buffer memory).  If
+                      the  desired  sector  is  not  in the track
+                      cache,  then  the  current  track  cache is
+                      dumped  to  disk   (only  if  it  has  been
+                      modified),  the  desired track is read into
+                      the track cache, and finally the particular
+                      sector's data is transferred from the track
+                      cache memory to the job queue buffer."

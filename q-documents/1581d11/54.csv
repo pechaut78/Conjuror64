@@ -1,0 +1,40 @@
+question,answer
+"What is the syntax and usage of the INPUT# statement in BASIC, and how can it be used to read data from a file?","1581 disk with basic 7,0: FORMAT FOR THE INPUT# STATEMENT:
+
+  INPUT#file#,variable list
+
+where 'file#' is the same file number given in the desired file's
+current OPEN statement,  and 'variable list' is one or more valid
+BASIC  variable  names.  If  more  than one data element is to be
+input  by a particular INPUT# statement,  each variable name must
+be separated from others by a comma.
+
+EXAMPLES:
+
+To read back in the grades written with the PRINT# example, use:
+
+  300 FOR CLASS = 1 TO COURSES
+  310 INPUT#1,GRADE$(CLASS)
+  320 GOSUB 59990: REM CHECK FOR DISK ERRORS
+  330 NEXT CLASS
+
+assuming your program includes an error check subroutine like the
+one in the last chapter.
+  To  read  back  in  the  address data written by another PRINT#
+example, it is safest to use:
+
+  800 INPUT#5,NAME$
+  810 GOSUB 59990: REM CHECK FOR DISK ERRORS
+  820 INPUT#5,STREET$
+  830 GOSUB 59990: REM CHECK FOR DISK ERRORS
+  840 INPUT#5,CITY$
+  850 GOSUB 59990: REM CHECK FOR DISK ERRORS
+
+but many programs cheat on safety a bit and use
+
+  800 INPUT#5,NAME$,STREET$,CITY$
+  810 GOSUB 59990: REM CHECK FOR DISK ERRORS
+
+This  is  done  primarily  when  top  speed  in  the  program  is
+essential, and there is little risk of reading improper data from
+the file."

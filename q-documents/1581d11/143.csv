@@ -1,0 +1,4 @@
+question,answer
+"What is the function of the TPREAD_DV command in a 1581 disk controller job?","1581 disk Controller Job commands: TPREAD_DV
+     $B2     Reads    a    physical    address   without
+                      transferring to the job queue buffer."

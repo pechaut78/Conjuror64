@@ -1,0 +1,2 @@
+
+NXTBIT    address $00B5        is: RS232 Next Bit to send/Tape Read - End of Tape.

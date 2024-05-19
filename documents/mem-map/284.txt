@@ -1,0 +1,3 @@
+
+
+TEMPF3 address  $004E-0052  is:   Temporary storage for FLPT value.

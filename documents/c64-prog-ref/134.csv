@@ -1,0 +1,11 @@
+question,answer
+"what is DEX doing?","Operation:  X - 1 -> X"
+"DEX: OP CODE","CA"
+"DEX: No. Bytes","1"
+"DEX: No. Cycles","2"
+"DEX: Addressing Mode","Implied"
+"DEX: Assembly Language Form","DEX"
+"DEX: Operation","X - 1 -> X"
+"DEX: Number of Cycles","2"
+"DEX: Number of Bytes","1"
+"DEX: OP CODE","CA"

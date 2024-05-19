@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the register located at address $D01A?","address $D01A	is:			IRQ Mask Register: 1 = Interrupt Enabled"

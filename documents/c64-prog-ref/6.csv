@@ -1,0 +1,10 @@
+question,answer
+"Can the VIC-II chip access 16K of memory at a time?","Yes"
+"What is the total amount of memory in the Commodore 64?","64K"
+"What is the purpose of the BANK SELECT bits?","To access all sections of memory"
+"What chip contains the BANK SELECT bits?","The 6526 COMPLEX INTERFACE ADAPTER CHIP #2 (CIA #2)"
+"How are the BANK SELECT bits controlled?","Using POKE and PEEK BASIC statements, or using assmebly"
+"What is the purpose of setting bits 0 and 1 of location 56578?","To make sure they are outputs"
+"What is the effect of setting bits 0 and 1 of location 56576?","To change banks"
+"What is the default bank setting when the Commodore 64 is powered on?","BANK 0 ($0000-$3FFF)"
+"What is the purpose of being aware of the current bank the VIC-II chip is pointing at?","To know where character data patterns come from, where the screen is, where sprites come from, etc."

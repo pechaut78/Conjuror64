@@ -1,9 +1,0 @@
-question,answer
-"Get information from a device on the serial bus","This routine gets a byte of data off the serial bus using full handshaking."
-"Use the TALK routine to command a device on the serial bus to send data","The TALK routine must be called first to command the device on the serial bus to send data through the bus."
-"Get a byte of data off the serial bus","This routine gets a byte of data off the serial bus using full handshaking."
-"Return the data in the accumulator","The data is returned in the accumulator."
-"Use the TKSA KERNAL routine for a secondary command","If the input device needs a secondary command, it must be sent by using the TKSA KERNAL routine before calling this routine."
-"Read the status word for errors","Errors are returned in the status word. The READST routine is used to read the status word."
-"Call the ACPTR routine to get a byte of data","Call this routine (using JSR)."
-"Store or use the data after getting it","Store or otherwise use the data."

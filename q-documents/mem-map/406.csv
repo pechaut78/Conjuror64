@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $0299-029A?","BAUDOF    address $0299-029A   is: RS232 Baud Rate; Full Bit time microseconds."

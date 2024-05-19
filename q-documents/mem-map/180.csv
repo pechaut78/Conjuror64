@@ -1,0 +1,2 @@
+question,answer
+"What does bit 4 of address $DC0E represent ?","address $DC0E bit 4 is:	Force Load Timer A: 1 = Yes"

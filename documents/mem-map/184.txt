@@ -1,0 +1,2 @@
+
+address $DC0E bit 0 is:	Start/Stop Timer A: 1 = Start, 0 = Stop

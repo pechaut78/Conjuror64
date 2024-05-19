@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location at address $00C5 in a keyboard matrix?","LSTX      address $00C5        is: Matrix value of last Key pressed; No Key = $40."

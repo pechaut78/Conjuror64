@@ -1,0 +1,10 @@
+
+
+
+1581 disk: Controller commands error code 3: DOS MISMATCH (COPYRIGHT CBM DOS V10 1581)
+    If  the  disk-error status is checked when the drive is first
+    turned  on,  before  a  directory  or  other command has been
+    given,  this message will appear.  In that use,  it is not an
+    error,  but rather an easy way to see which version of DOS is
+    in use. If the message appears at other times, an attempt has
+    been made to write to a diskette with an incompatible format.

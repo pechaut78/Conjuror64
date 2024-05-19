@@ -1,0 +1,6 @@
+question,answer
+"What is the meaning of error code 22 in a disk controller command?","1581 disk: Controller commands error code 22: READ ERROR (data block not found)
+    The  disk  controller  has been requested to read or verify a
+    data   block  that  was  not  properly  written.   Occurs  in
+    conjunction  with  BLOCK  commands  and  indicates an illegal
+    track and/or sector request."

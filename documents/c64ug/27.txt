@@ -1,0 +1,11 @@
+
+
+CASSETTES:  Use  your  DATASSETTE  recorder  and  the  ordinary  audio
+cassettes  that  came as part of your prepackaged program.  Make sure the
+tape is completely rewound to the beginning of the first side.  Then just
+type  LOAD.  The  computer  will  answer with PRESS PLAY ON TAPE,  so you
+respond  by  pressing play on your datassette machine.  At this point the
+computer  screen  will go blank until the program is found.  The computer
+will say  FOUND (PROGRAM NAME)  on the screen.  Now you press down on the
+<C=> key.  This will actually load the program into the computer.  If you
+want to stop the loading simply press <RUN/STOP> key.

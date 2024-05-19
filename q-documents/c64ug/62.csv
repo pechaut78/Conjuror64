@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the RUN command in a programming language?","basic: RUN
+
+  This  command  causes  execution  of  a  program,  once  the program is
+loaded  into  memory.  If  there  is  no  line  number following RUN, the
+computer  will  start  with  the  lowest line number. If a line number is
+designated, the program will start executing from the specified line.
+
+  RUN               Starts program at lowest line number
+  RUN 100           Starts execution at line 100
+  RUN X             UNDEFINED STATEMENT ERROR. You must always specify an
+                    actual line number, not a variable representation"

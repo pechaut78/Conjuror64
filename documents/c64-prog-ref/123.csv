@@ -1,0 +1,11 @@
+question,answer
+"Can a BRK command be masked by setting I?","No"
+"What is the number of bytes used by the BRK command?","1"
+"What is the number of cycles used by the BRK command?","7"
+"What is the assembly language form of the BRK command?","BRK"
+"What is the operation of the BRK command?","Forced Interrupt"
+"What is the effect of setting I on a BRK command?","Cannot be masked"
+"What is the opcode of the BRK command?","00"
+"What is the addressing mode of the BRK command?","Implied"
+"What is the purpose of the BRK command?","Forced Interrupt PC + 2 to S P to S"
+"What is the number of cycles used by the BRK command in hexadecimal?","7"

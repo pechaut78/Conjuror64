@@ -1,0 +1,2 @@
+
+address D016 bit 2-0 is:	Smooth Scroll to X Pos

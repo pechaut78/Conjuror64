@@ -1,0 +1,3 @@
+
+
+SUBFLG address  $0010       is:   Flag: Subscript reference/User Function call.

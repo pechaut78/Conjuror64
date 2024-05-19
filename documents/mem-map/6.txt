@@ -1,0 +1,2 @@
+
+address $0001 bit 4	is: Cassette Switch Sense: 1 = Switch Closed

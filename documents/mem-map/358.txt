@@ -1,0 +1,2 @@
+
+BLNSW     address $00CC        is: Flag: Cursor blink; $00 = Enabled, $01 =  Disabled.

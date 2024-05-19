@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory address $004B-004C ?","VARTXT address  $004B-004C  is:   Temporary storage for TXTPTR during READ, INPUT and GET."

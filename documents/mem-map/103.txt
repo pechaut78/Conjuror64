@@ -1,0 +1,2 @@
+
+address $D40C	is		Envelope Generator 2: Attack / Decay Cycle Control

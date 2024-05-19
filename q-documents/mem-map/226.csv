@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bit 6 of the address $DD0E ?","address $DD0E bit 6 is:	Serial Port I/O Mode Output, 0 = Input"

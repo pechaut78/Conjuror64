@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the address range $00BB-00BC?","FNADR     address $00BB-00BC   is: Pointer: Current File name Address."

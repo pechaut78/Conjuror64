@@ -1,0 +1,5 @@
+
+1581 disk: Controller commands error code 34: SYNTAX ERROR (no file given)
+    The  file  name was left out of a command or the DOS does not
+    recognize  it  as  such.  Typically,  a  colon (:)  has  been
+    omitted. Try again.

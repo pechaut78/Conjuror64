@@ -1,0 +1,9 @@
+question,answer
+"Indexing plays an important part in the running of which microprocessor?","6510"
+"What is indexing defined as in the context of the 6510 microprocessor?","creating an actual address from a base address plus the contents of either the X or Y index registers"
+"What is the purpose of the X or Y index registers in indexing?","to create an actual address"
+"What is the mnemonic format of an absolute indexed instruction?","the same as an absolute instruction except a ',X' or ',Y' denoting the index is added to the address"
+"What is the result of executing an LDA instruction in the absolute X indexed mode?","the actual location that is loaded into the A register"
+"What are the different modes of addressing available on the 6510 microprocessor?","absolute indexed, zero page indexed, indirect indexed, and indexed indirect"
+"What is the purpose of the ',X' or ',Y' in an absolute indexed instruction?","to denote the index"
+"What is the result of executing an LDA instruction in the indirect indexed mode?","the actual location that is loaded into the A register"

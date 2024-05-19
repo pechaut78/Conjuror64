@@ -1,0 +1,2 @@
+
+SPR14     address $0380-03BE   is: Sprite #14.

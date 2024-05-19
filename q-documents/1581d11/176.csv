@@ -1,0 +1,8 @@
+question,answer
+"What is the error code 65 on a disk controller and how should you respond to it?","1581 disk: Controller commands error code 65: NO BLOCK
+    Occurs  in  conjunction  with  B-A.  The  sector you tried to
+    allocate  is already allocated.  The track and sector numbers
+    returned  are  the next higher track and sector available. If
+    the  track  number  returned is 0,  all remaining sectors are
+    full. If the diskette is not full yet,  try a lower track and
+    sector."

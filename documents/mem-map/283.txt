@@ -1,0 +1,3 @@
+
+
+OPMASK address  $004D       is:   Mask used during FRMEVL.

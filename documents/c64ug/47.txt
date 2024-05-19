@@ -1,0 +1,26 @@
+
+
+
+basic: PRINTing Colors
+
+you  can  change  text colors by simply holding the <CTRL> key and one of
+the color keys.  
+
+You have a full range of 16 text colors to work with.  Using <CTRL> key
+and a number key, the following colors are available:
+
+     1        2        3        4        5       6        7        8
+   Black    White     Red     Cyan    Purple   Green    Blue    Yellow
+
+  If  you  hold  down the <C=> key along with the appropriate number key,
+these additional eight colors can be used:
+
+     1        2        3        4        5       6        7        8
+   Orange   Brown   Lt.Red    Gray 1  Gray 2  Lt.Green  Lt.Blue  Gray 3
+
+Type NEW,  and experiment with the following.  Hold down the <CTRL> key
+and  at  the  same  time hit the <1> key.  Next,  hit the <R> key without
+holding down the <CTRL> key.  Now,  while again depressing the <CTRL> key
+at the same time hit the <2> key.  Release the <CTRL> key and hit the <A>
+key. Move through the numbers, alternating with the letters, and type out
+the word RAINBOW as follows:

@@ -1,0 +1,2 @@
+
+address $DC0D bit 4 is	FLAG1 IRQ (Cassette Read / Serial Bus SRQInput)

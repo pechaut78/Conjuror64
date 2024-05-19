@@ -1,0 +1,2 @@
+question,answer
+"What is stored at memory address $0098 ?","LDTND     address $0098        is: Number of Open Files/Index to File Table."

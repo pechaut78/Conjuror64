@@ -1,0 +1,11 @@
+question,answer
+"What happens when you try to write to a non-existent record in a relative file in DOS?","1581 disk: EXPANDING A RELATIVE FILE
+
+  If  you  underestimate your needs and want to expand a relative
+file later, simply request the record number you need, even if it
+doesn't  currently exist in the file.  If there is no such record
+yet,  DOS  will create it as soon as you try to write information
+in  it,  and  also automatically create any other missing records
+below it in number.  When the first record beyond the current end
+record  is  written,  the  DOS  returns  '50, RECORD NOT PRESENT'
+error. This is expected and correct."

@@ -1,0 +1,2 @@
+question,answer
+"What is the address of the kernel routine for saving in a Commodore 64?","kernal routine address for save	= $ffd8"

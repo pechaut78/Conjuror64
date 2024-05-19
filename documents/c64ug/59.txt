@@ -1,0 +1,11 @@
+basic: LIST
+
+  The  LIST  command  allows  you  to look at lines of a BASIC program in
+memory.  You  can  ask  for  the  entire program to be displayed, or only
+certain line numbers.
+
+  LIST              Shows entire program
+  LIST 10-          Shows only from line 10 until end
+  LIST 10           Shows only line 10
+  LIST -10          Shows lines from beginning until 10
+  LIST 10-20        Shows line from 10 to 20, inclusive

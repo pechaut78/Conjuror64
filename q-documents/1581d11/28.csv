@@ -1,0 +1,14 @@
+question,answer
+"What is the format for using the SAVE command on a Commodore 1581 disk with BASIC 7.0?","1581 disk with basic 7,0:FORMAT FOR A MONITOR SAVE:
+
+  S 'drive#:file name',device#,starting address,ending address+1
+
+where 'drive#:' is the drive number,  0 on the 1581;  'file name'
+is any valid file name up to 14 characters long  (16 if you leave
+out the drive# and the colon that follows it); 'device#' is a two
+digit device number,  normally  08 on the 1581  (the leading 0 is
+required); and the addresses to be saved are given in Hexadecimal
+(base 16), but without a leading dollar sign (for the Plus/4). On
+the C128, the addresses need not be in Hexadecimal. Note that the
+ending address listed must be 1 location beyond the last location
+to be saved."

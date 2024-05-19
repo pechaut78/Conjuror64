@@ -1,0 +1,15 @@
+question,answer
+"What is the purpose and usage of the CMD command in BASIC programming?","basic: CMD
+
+  CMD sends the output which normally would go to the screen (i.e., PRINT
+statements,  LISTs,  but  not  POKEs  onto the screen)  to another device
+instead.  This could be a printer,  or a data file on tape or disk.  This
+device or file must be OPENed first.  The CMD command must be followed by
+a number or numeric variable referring to the file.
+
+  OPEN 1,4          OPENs device #4, which is the printer
+  CMD 1             All normal output now goes to printer
+  LIST              The program listing now goes to
+                    the printer, not the screen
+
+  To send output back to the screen, CLOSE the file with CLOSE 1."

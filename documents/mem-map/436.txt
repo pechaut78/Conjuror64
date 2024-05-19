@@ -1,0 +1,2 @@
+
+IOPEN     address $031A-031B   is: Vector: Indirect entry to Kernal OPEN Routine ($F34A).

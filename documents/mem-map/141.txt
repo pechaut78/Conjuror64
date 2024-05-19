@@ -1,0 +1,2 @@
+
+address $D41A	is:	Analog/Digital Converter Game Paddle 2 (0-255)

@@ -1,0 +1,9 @@
+question,answer
+"What is the operation of the RTS instruction?","The RTS instruction returns from a subroutine."
+"What is the opcode of the RTS instruction?","The opcode of the RTS instruction is 60."
+"What is the number of bytes used by the RTS instruction?","The RTS instruction uses 1 byte."
+"What is the number of cycles required to execute the RTS instruction?","The RTS instruction requires 6 cycles."
+"What is the addressing mode of the RTS instruction?","The addressing mode of the RTS instruction is implied."
+"What is the purpose of the RTS instruction?","The purpose of the RTS instruction is to return from a subroutine."
+"What is the format of the RTS instruction?","The format of the RTS instruction is PC from S, PC + 1 -> PC."
+"What is the cycle time of the RTS instruction?","The cycle time of the RTS instruction is not specified."

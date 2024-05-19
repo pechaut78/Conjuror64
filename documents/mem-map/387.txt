@@ -1,0 +1,2 @@
+
+MEMSIZ    address $0283-0284   is: Pointer: Top of Memory for Operating   System ($A000).

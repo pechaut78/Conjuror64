@@ -1,0 +1,2 @@
+
+RIDBS     address $029C        is: RS232 Pointer: High Byte of Address of Input Buffer.

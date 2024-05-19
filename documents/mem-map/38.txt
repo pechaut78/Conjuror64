@@ -1,0 +1,1 @@
+address D016 bit 4	is Multi-Color Mode: 1 = Enable (Text or Bit-Map)

@@ -1,0 +1,18 @@
+
+
+
+basic: DEF FN
+
+  This  command  allows you to define a complex calculation as a function
+with a short name.  In the case of a long formula that is used many times
+within the program, this can save time and space.
+  This  function  name  will  be  FN and any legal variable name  (1 or 2
+characters long).  First you must define the function using the statement
+DEF  followed  by  the  function  name.  Following  the  name is a set of
+parentheses enclosing a numeric variable. Then follows the actual formula
+that  you want to define,  with the variable in the proper spot.  You can
+then "call" the formula, substituting any number for the variable.
+
+  10 DEF FN A(X) = 12 * ( 34.75 - X / .3 )
+  20 PRINT FN A(7)
+             

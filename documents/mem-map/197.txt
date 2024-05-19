@@ -1,0 +1,2 @@
+
+address $DD00 bit 1-0 is:	VIC Chip System Memory Bank Select (Default = 11)

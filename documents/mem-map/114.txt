@@ -1,0 +1,2 @@
+
+address $D40D	bits			7 is	Select Random Noise Waveform, 1 = On

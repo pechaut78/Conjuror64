@@ -1,0 +1,2 @@
+question,answer
+"What is the kernel routine address for the SETMO instruction in a Commodore 64?","kernal routine address for settmo	= $ffa2"

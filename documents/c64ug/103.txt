@@ -1,0 +1,6 @@
+
+
+
+basic: ASC(X$)
+
+  This function will return the ASCII code of the first character of X$.

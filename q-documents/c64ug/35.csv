@@ -1,0 +1,7 @@
+question,answer
+"What is the syntax to subtract 9 from 12 in a programming language?","basic: SUBTRACTION
+
+  To subtract, use the conventional minus (-) sign. Type:
+
+  PRINT 12 - 9             
+  3"

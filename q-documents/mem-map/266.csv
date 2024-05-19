@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory address range $002B-$002C in a Commodore 64 computer?","TXTTAB address  $002B-002C  is:   Pointer: Start of BASIC Text Area ($0801)."

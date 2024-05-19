@@ -1,0 +1,5 @@
+1581 disk with basic 7,0: SAVE
+
+  This  command  will save a program or file so you can reuse it.
+The  diskette  must  be  formatted before you can save it to that
+diskette.

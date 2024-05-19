@@ -1,0 +1,4 @@
+question,answer
+"For sprites: Can you POKE an X position?","To place the sprite at one of these positions, just type the X-POSITION POKE for the sprite you're using. For example, to POKE sprite I at the farthest left X position IN THE VIEWING AREA, type: POKE V+2,24."
+"What are the possible values of X for Positioning sprites?","The possible values of X are 0 to 255, counting from left to right. Values 0 to 23 place all or part of the sprite OUT OF THE VIEWING AREA off the left side of the screen... values 24 to 255 place the sprite IN THE VIEWING AREA up to the 255th position."
+"How do you access screen positions beyond the 255th position?","To get beyond the 255th position across the screen, you need to make a SECOND POKE using the numbers in the 'RIGHT X' row of the chart (Figure 3-5)."

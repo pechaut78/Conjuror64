@@ -1,0 +1,6 @@
+
+
+basic: CHR$(X)
+
+  This is the opposite of ASC, and returns a string character whose ASCII
+code is X.

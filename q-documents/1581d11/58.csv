@@ -1,0 +1,37 @@
+question,answer
+"How can commas and colons be safely included within a data element when using INPUT or INPUT# statements in BASIC?","1581 disk with basic 7,0: COMMAS (,) AND COLONS (:)
+
+  commas  and colons can cause trouble in a
+file,  because they delimit  (end) the data element in which they
+appear  and cause any remaining characters in the data element to
+be read into the next INPUT# variable.  They have the same effect
+in an INPUT statement,  causing the common  'EXTRA IGNORED' error
+message.  However,  sometimes  you  really  need a comma or colon
+within a data element,  such as a name written as  'Last, First'.
+The cure  is to precede such data elements with a quotation mark.
+After a quotation mark,  in either an  INPUT or INPUT# statement,
+all   other  characters  except  a  carriage  return  or  another
+quotation mark are accepted as part of the current data element.
+
+EXAMPLES:
+
+  To force a quotation mark into a data element  going to a file,
+append a CHR$(34) to the start of the data element. For example:
+
+  PRINT#2,CHR$(34)+'DOE,JOHN'
+
+or
+
+  PRINT#2,CHR$(34);'DOE,JOHN'
+
+If  you  do  this  often,  some  space  and time may be saved by
+previously  defining  a  variable as equal to CHR$(34) as we did
+earlier with CHR$(13):
+
+   20 QT$=CHR$(34)
+  ...
+  400 PRINT#5,QT$+NAME$
+
+  In  each  case,  the added quotation mark will be stripped from
+the data  by the  INPUT  or  INPUT#  statement,  but the comma or
+colon will remain part of the data."

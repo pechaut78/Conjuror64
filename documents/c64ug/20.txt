@@ -1,0 +1,9 @@
+
+
+<CTRL> key
+
+  The  <CTRL>  key,  which  stands for ConTRoL, allows you to set colors,
+and  perform  other  specialized  functions. You hold the <CTRL> key down
+while  depressing  another  designated key to get a control function. You
+had an opportunity to try the <CTRL> key  when you changed text colors to
+create different color bars during the setup procedure.

@@ -1,0 +1,9 @@
+
+
+
+basic: REM  (Remark)
+
+  REMark  is a note to whomever is reading a LIST of the program.  It may
+explain  a section of the program,  or give additional instructions.  REM
+statements  in no way affect the operation of the program,  except to add
+to its length. REM may be followed by any text.

@@ -1,0 +1,2 @@
+question,answer
+"What is the function of memory address $DC00 in a Commodore 64 computer?","address $DC00 is:	Data Port A (Keyboard, Joystick, Paddles,Light-Pen)"

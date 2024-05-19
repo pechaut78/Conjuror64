@@ -1,0 +1,49 @@
+question,answer
+"What is the protocol and code for burst read and write operations in a 1581 disk system?","1581 disk: BURST TRANSFER PROTOCOL
+
+  Before  using  the following burst transfer routines,  you must
+determine  whether  or  not the peripheral is a fast device.  The
+Fast   Serial  (byte  mode)  protocol  makes  that  determination
+internally  when  you  include a query routine (send-cmd-string).
+This  routine  addresses the peripheral as a listener and thereby
+determines its speed.
+
+
+BURST READ
+
+send-cmd-string;                      (*determine speed*)
+if device-fast then
+    serial-in;                        (*serial port input*)
+    repeat                            (*repeat for all sectors*)
+        read-error;                   (*retrieve error byte*)
+    toggle-clock;                     (*wait for status*)
+    wait-byte;                        (*wait for byte*)
+    if status = ok then
+        toggle-clock;                 (*start double buffer*)
+        repeat                        (*repeat for sector-size*)
+            wait-byte;                (*get data*)
+            toggle-clock;             (*start next*)
+            store-byte;               (*save data*)
+        until last-byte;              (*last byte ?*)
+    until last-sector;                (*until last sector*)
+    set-clock-high;                   (*restore clock*)
+else
+    read-1581;                        (*send unit read*)
+
+
+BURST WRITE
+
+send-cmd-string;                      (*determine speed*)
+if device-fast then
+    repeat                            (*repeat for all sectors*)
+        serial-out;                   (*serial port out*)
+            repeat                    (*repeat for sector-size*)
+                send-byte;            (*send byte*)
+            until last-byte;          (*last byte ?*)
+        serial-in;                    (*serial port in*)
+        set-clock-low;                (*ready for status*)
+        read-err;                     (*controller error ?*)
+        set-clock-high;               (*restore clock*)
+    until last-sector;                (*until last sector*)
+else
+    write-1581;                       (*send unit write*)"

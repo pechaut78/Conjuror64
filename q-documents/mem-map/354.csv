@@ -1,0 +1,2 @@
+question,answer
+"What is the function and possible values of the flag located at address $00C7?","RVS       address $00C7        is: Flag: Reverse On/Off; On = $01, Off = $00."

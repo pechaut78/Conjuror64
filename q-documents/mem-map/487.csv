@@ -1,0 +1,2 @@
+question,answer
+"What is the memory address of the kernel routine for setting the filename in Commodore 64?","kernal routine address for setnam	= $ffbd"

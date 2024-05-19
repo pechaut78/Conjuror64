@@ -1,0 +1,6 @@
+question,answer
+"What is the syntax for opening a sequential file in BASIC 7.0 and BASIC 2.0?","1581 disk with basic 7,0: FORMAT FOR THE DISK OPEN STATEMENT FOR SEQUENTIAL FILES:
+
+  BASIC 7.0: DOPEN#file#,'file name'[,Ddrive#][,Udevice#][,W]
+  BASIC 2.0: OPEN file#,device#,channel#,'drive#:file name,
+                                          file type,direction'"

@@ -1,0 +1,6 @@
+question,answer
+"What is the meaning of the "Controller commands error code 00" message on a disk?","1581 disk: Controller commands error code 00 
+	OK (not an error)
+    This  is  the  message  that  usually  appears when the error
+    channel is checked. It means there is no current error in the
+    disk unit."

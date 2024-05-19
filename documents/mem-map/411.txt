@@ -1,0 +1,2 @@
+
+IRQTMP    address $029F-02A0   is: Temporary store for IRQ Vector during Tape  operations.

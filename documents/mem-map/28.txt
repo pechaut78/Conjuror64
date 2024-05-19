@@ -1,0 +1,2 @@
+
+Address	D011	BIT 5 is Bit Map Mode. 1 = Enable

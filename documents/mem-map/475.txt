@@ -1,0 +1,3 @@
+
+
+kernal routine address for open	= $ffc0

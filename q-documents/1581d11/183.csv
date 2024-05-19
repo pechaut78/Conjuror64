@@ -1,0 +1,5 @@
+question,answer
+"What error message is displayed when trying to access a blank diskette in a 1581 disk controller without formatting it first?","1581 disk: Controller commands error code 74: DRIVE NOT READY
+    An  attempt  has  been  made  to  access the 1581 single disk
+    without a formatted diskette in place. Blank diskettes cannot
+    be used until they have been formatted."

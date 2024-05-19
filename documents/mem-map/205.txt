@@ -1,0 +1,2 @@
+
+address $DD01 bit 1 is	User / RS-232 Request to Send

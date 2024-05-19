@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the 6566/6567 devices?","multi-purpose color video controller devices for use in both computer video terminals and video game applications"
+"What is the size of the memory that can be accessed by the devices?","up to 16K of memory for display information"
+"What type of bus is used to access the control registers?","a standard 8-bit microprocessor bus (65XX)"
+"How many control registers are present in the devices?","47 control registers"
+"What is the purpose of the microprocessor bus in the devices?","to access the control registers"

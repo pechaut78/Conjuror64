@@ -1,0 +1,3 @@
+
+
+TANSGN address  $0012       is:   Flag: TAN sign/Comparative result.

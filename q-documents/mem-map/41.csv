@@ -1,0 +1,2 @@
+question,answer
+"What is the description of memory address $D017 in the C64 memory map?","address $D017	is:		Sprites 0-7 Expand 2x Vertical (Y)"

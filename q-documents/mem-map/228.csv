@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bit 4 of the $DD0E address ?","address $DD0E bit 4 is:	Force Load Timer A: 1 = Yes"

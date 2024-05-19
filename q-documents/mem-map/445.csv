@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $032C-032D?","ICLALL    address $032C-032D   is: Vector: Indirect entry to Kernal CLALL     Routine ($F32F)."

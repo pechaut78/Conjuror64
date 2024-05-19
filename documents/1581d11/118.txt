@@ -1,0 +1,8 @@
+
+
+
+1581 disk Controller Job commands: SEEKHD_DV
+     $B0     Logs  in a disk by reading information from
+                      the  first  header  encountered on the disk
+                      into RAM so that it can be used by the DOS.
+                      The track cache buffer is not updated.

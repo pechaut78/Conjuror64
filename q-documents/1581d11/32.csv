@@ -1,0 +1,16 @@
+question,answer
+"What is the syntax and usage of the DVERIFY command in BASIC 7.0?","1581 disk with basic 7,0:FORMAT FOR THE DVERIFY COMMAND:
+
+  DVERIFY 'file name'[,Ddrive#][,Udevice#]
+
+  The  following  version of the command verifies a file that was
+just saved:
+
+  DVERIFY'*'
+
+  This  command  won't  work  properly  after  SAVE-WITH-REPLACE,
+because  the  last  file used was the one deleted,  and the drive
+will try to compare the deleted file to the program in memory. No
+harm will result, but 'VERIFY ERROR' will always be announced. To
+use  DVERIFY after @SAVE,  include at least part of the file name
+that is to be verified in the pattern."

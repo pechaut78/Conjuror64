@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the bit 0 of the I/O address $DD01 in a Commodore 64?","address $DD01 bit 0 is	User / RS-232 Received Data"

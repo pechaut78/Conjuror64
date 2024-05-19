@@ -1,0 +1,2 @@
+
+address $DC00 bits 3-0	is: Joystick A Direction (0-15)

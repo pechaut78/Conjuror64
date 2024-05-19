@@ -1,0 +1,9 @@
+
+
+
+basic: DIVISION
+
+  Division uses the familiar "/". For example, to divide 144 by 12, type:
+
+  PRINT 144 / 12           <----- Hit <RETURN>
+  12

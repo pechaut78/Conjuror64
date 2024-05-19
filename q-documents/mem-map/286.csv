@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the JMPER address $0054-0056?","JMPER  address  $0054-0056  is:   Jump Vector used in Function Evaluation -  JMP followed by Address ($4C,$LB,$MB)."

@@ -1,0 +1,2 @@
+
+TIMOUT    address $0285        is: Serial IEEE Bus timeout defeat Flag.

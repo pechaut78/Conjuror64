@@ -1,0 +1,4 @@
+question,answer
+"What does error code 67 on a disk controller indicate?","1581 disk: Controller commands error code 67: ILLEGAL SYSTEM T OR S
+    This special error message indicates an illegal system  track
+    or sector."

@@ -1,0 +1,37 @@
+question,answer
+"what is the format for the VERIFY command?","FORMAT FOR THE VERIFY COMMAND:
+
+  VERIFY 'drive#:pattern',device#,relocate flag
+
+where  'drive#:'  is  an optional drive number,  'pattern' is any
+string expression that evaluates to a file name,  with or without
+pattern-matching  characters,  and  'device#'  is the disk device
+number, normally 8. If the relocate flag is present and equals 1,
+the  file  will  be verified where originally saved,  rather than
+relocated into the BASIC text area.
+
+A useful alternate form of the command is:
+
+  VERIFY '*',device#
+
+It  verifies  the last files used without having to type its name
+or drive number. However, it won't work properly after SAVE-WITH-
+REPLACE,  because the last file used was the one deleted, and the
+drive  will  try  to  compare  the deleted file to the program in
+memory.  No  harm will result,  but 'VERIFY ERROR' will always be
+announced.  To  use VERIFY after @SAVE,  include at least part of
+the file name that is to be verified in the pattern.
+
+  One  other  note  about  VERIFY  -- when you VERIFY a relocated
+BASIC  file,  an  error  will  nearly always be announced, due to
+changes  in  the  link  pointers  of  BASIC  programs made during
+relocation.  It  is best to VERIFY files saved from the same type
+of  machine,  and  identical  memory  size.  For example, a BASIC
+program  saved from a Plus/4 can't be verified easily with a C64,
+even  when  the  program  would  work fine on both machines. This
+shouldn't  matter,  as the only time you'll be verifying files on
+machines  other  than  the  one  which wrote them is when you are
+comparing  two  disk  files  to see if they are the same. This is
+done by loading one and verifying against the other, and can only
+be  done  on the same machine and memory size as the one on which
+the files were first created."

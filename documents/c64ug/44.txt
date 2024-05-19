@@ -1,0 +1,34 @@
+
+
+
+basic: INPUT
+
+
+To get an idea of how INPUT works,  type  NEW  <RETURN>  and enter this
+short program:
+
+  10 INPUT A$
+  20 PRINT "YOU TYPED: ";A$
+  30 PRINT
+  40 GOTO 10
+  RUN
+  ? COMMODORE 64 
+  YOU TYPED: COMMODORE 64 
+
+  What  happens  when  you  run this simple program. A question mark will
+appear,  indicating  that  the  computer  is  waiting  for  you  to  type
+something. Enter any character, or group of characters, from the keyboard
+and  hit  <RETURN>.  The  computer  will  then  respond with "YOU TYPED:"
+followed by the information you entered.
+You  can  INPUT  either numeric or string variables,  and even have the
+INPUT statement prompt the user with a message. The format of INPUT is:
+
+  INPUT "PROMPT MESSAGE";VARIABLE
+
+
+Or, just:
+
+  INPUT VARIABLE
+
+NOTE:  To  get out of this program hold down the <RUN/STOP> and <RESTORE>
+keys.

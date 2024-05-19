@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $0090 in the Commodore 64?","STATUS    address $0090        is: Kernal I/O Status Word  ST."

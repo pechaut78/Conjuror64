@@ -1,0 +1,17 @@
+
+1581 disk:  DIRECT ACCESS COMMANDS
+
+
+  Direct  access  commands  specify  individual  sectors  on  the
+diskette,  reading  and  writing  information entirely under your
+direction.  This  gives them almost complete flexibility in data-
+handling programs, but imposes tremendous responsibilities on the
+programmer.  As a result,  they are normally used only in complex
+commercial  programs  able to properly organize data without help
+from the disk drive itself.
+  A far more common use of direct access commands is  in  utility
+programs  used  to  view and alter parts of the diskette that are
+not normally seen directly.  For  instance,  such commands can be
+used to change the name of a diskette  without erasing all of its
+programs,  to lock a program so it can't be erased,  or hide your
+name in a location where it won't be expected.

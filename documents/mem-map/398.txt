@@ -1,0 +1,2 @@
+
+KEYLOG    address $028F-0290   is: Vector: Routine to determine Keyboard table to use based on Shift Key Pattern ($EB48).

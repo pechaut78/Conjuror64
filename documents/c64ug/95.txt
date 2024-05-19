@@ -1,0 +1,6 @@
+
+
+basic: FN xx(X)
+
+  Returns  the  value  of  the  user-defined function xx created in a DEF
+FN xx(X) statement.

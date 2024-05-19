@@ -1,0 +1,2 @@
+question,answer
+"What does the MSGFLG at address $009D control in a program?","MSGFLG    address $009D        is: Flag: $00 = Program mode: Suppress Error  Messages, $40 = Kernal Error Messages only, $80 = Direct mode: Full Error Messages."

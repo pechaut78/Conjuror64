@@ -1,0 +1,14 @@
+
+
+
+1581 disk:  1581 INTERNAL OPERATION
+
+
+This  chapter  describes  some  of the internal operations of the
+1581  --  how things work on the 'other side of the fence' of the
+host computer.  Experienced programmers may find this information
+useful.  The information learned in previous chapters (especially
+Chapter 7)  combined with that presented in this chapter provides
+a  wide  realm  of  possibilities for the creative and persistent
+programmer. Please be reminded, however, of the NOTE presented at
+the beginning of Chapter 7 regarding future compatibility.

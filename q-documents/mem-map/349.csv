@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the component located at address $00C0?","CAS1      address $00C0        is: Tape Motor Switch."

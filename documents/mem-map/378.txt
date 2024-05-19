@@ -1,0 +1,2 @@
+
+BAD       address $0100-013E   is: Tape Input Error log.

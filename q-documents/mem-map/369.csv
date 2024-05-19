@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location at address $00D8?","INSRT     address $00D8        is: Count of number of inserts outstanding."

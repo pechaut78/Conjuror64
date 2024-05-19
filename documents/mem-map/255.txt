@@ -1,0 +1,3 @@
+
+
+INPFLG address  $0011       is:   Input Flag: $00 = INPUT, $40 = GET, $98 = READ.

@@ -1,0 +1,26 @@
+
+
+1581 disk: CHANGING THE DEVICE NUMBER
+
+  Two  switches  on the back of the 1581 enable you to change the
+device#  of  the drive.  You can use a screwdriver,  pen,  or any
+other  small tool to set the switches.  The following table shows
+the settings required for each device number:
+
+            +------------+------------+-------------+
+            |    Left    |    Right   |   Device#   |
+            +------------+------------+-------------+
+            |     UP     |     UP     |      8      |
+            |    DOWN    |     UP     |      9      |
+            |     UP     |    DOWN    |      10     |
+            |    DOWN    |    DOWN    |      11     |
+            +------------+------------+-------------+
+
+  Another  way  to temporarily change the device number of a disk
+drive is via a program.  When power is first turned on, the drive
+reads  an  I/O  location  whose  value  is  controlled by the two
+switches  on  its circuit board,  and writes the device number it
+reads  there  into  memory  locations  119  and  120.   Any  time
+thereafter, you may write over that device number with a new one,
+which will be effective until it is changed again, or the 1581 is
+reset.

@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the bit 4 at address $DD00?","address $DD00 bit 4 is: 	Serial Bus Clock Pulse Output"

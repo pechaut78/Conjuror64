@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $0324-0325 in the Commodore 64 Kernal?","IBASIN    address $0324-0325   is: Vector: Indirect entry to Kernal CHRIN     Routine ($F157)."

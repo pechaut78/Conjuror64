@@ -1,0 +1,8 @@
+
+
+
+1581 disk Controller Job commands: SEEK_DV
+       $8C     Seeks  to  a  particular   physical   track
+                      (cylinder).   The  current  physical  track
+                      position   should   be  put  in  the  track
+                      parameter of HDRS.

@@ -1,0 +1,16 @@
+question,answer
+"What is the syntax and functionality of the RENAME command in a disk with BASIC 7.0?","1581 disk with basic 7,0: RENAME
+
+  The RENAME command allows you to alter the name of a program or
+other file in the diskette directory. Since only the directory is
+affected, RENAME works very quickly.  If you try to RENAME a file
+by using a file name already in the directory,  the computer will
+respond  with  a  'FILE EXISTS'  error.  A file  must be properly
+closed before it can be renamed.
+
+FORMAT FOR RENAME COMMAND:
+
+  RENAME [Ddrive#,] 'old name' TO [Ddrive#,] 'new name'
+         [,Udevice#]
+
+where both drive#s, if included, would be 0."

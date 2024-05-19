@@ -1,0 +1,10 @@
+question,answer
+"Where is the Operating System contained?","in Read Only Memory (ROM) chips"
+"What are the three separate program modules that make up the Operating System?","The BASIC Interpreter, The KERNAL, and The Screen Editor"
+"What is the purpose of the BASIC Interpreter?","to analyse BASIC statement syntax and perform required calculations and/or data manipulation"
+"How big is the vocabulary of the BASIC Interpreter?","65 keywords"
+"What are the special characters used in the BASIC Interpreter?","upper and lower case alphabet, digits 0-9, punctuation characters, and special symbols"
+"What does the KERNAL handle in the system?","interrupt level processing"
+"What does the Screen Editor control?","output to the video screen and editing of BASIC program text"
+"What does the Screen Editor intercept?","keyboard input"
+"What does the Screen Editor decide about keyboard input?","whether to act upon characters immediately or pass them on to the BASIC Interpreter"

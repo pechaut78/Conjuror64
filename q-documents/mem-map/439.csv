@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $0320-0321 in the Commodore 64 Kernal?","ICKOUT    address $0320-0321   is: Vector: Indirect entry to Kernal CHKOUT Routine ($F250)."

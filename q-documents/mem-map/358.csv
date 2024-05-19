@@ -1,0 +1,2 @@
+question,answer
+"What is the function and possible values of the BLNSW address $00CC?","BLNSW     address $00CC        is: Flag: Cursor blink; $00 = Enabled, $01 =  Disabled."

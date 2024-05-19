@@ -1,0 +1,3 @@
+
+
+LASTPT address  $0017-0018  is:   Last temporary String Address.

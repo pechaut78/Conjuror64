@@ -1,0 +1,2 @@
+question,answer
+"What is the memory address of the kernel routine for the TALK command in Commodore 64 BASIC?","kernal routine address for talk	= $ffb4"

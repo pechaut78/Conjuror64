@@ -1,0 +1,11 @@
+
+basic: CONT (Continue)
+
+  This command is used to restart the execution of a  program  which  has
+been stopped by either using the <STOP> key, a STOP statement,  or an END
+statement within the program. The program will restart at the exact place
+from where it left off.
+  CONT will not work if you have changed or added lines  to  the  program
+(or even just moved the cursor),  or if the  program  halted  due  to  an
+error, or if you caused an error before trying to restart the program. In
+these cases you will get a CAN'T CONTINUE ERROR.

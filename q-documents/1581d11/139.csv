@@ -1,0 +1,6 @@
+question,answer
+"What is the function of the SP_WRITE command in a 1581 disk controller job?","1581 disk Controller Job commands: SP_WRITE
+      $A6     Writes  to  the  specified  physical sector
+                      directly.  It does not use the track cache.
+                      Data  to  be  written  starts  at buffer #0
+                      ($0300)."

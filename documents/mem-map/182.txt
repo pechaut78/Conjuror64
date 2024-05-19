@@ -1,0 +1,2 @@
+
+address $DC0E bit 2 is:	Timer A Output Mode to PB6: 1 = Toggle,0 = Pulse

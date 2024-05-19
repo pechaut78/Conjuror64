@@ -1,0 +1,2 @@
+
+RINONE    address $00A9        is: RS232 Flag: Start Bit check/Tape temporary.

@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the User Defined Vector located at address $032E-032F?","USRCMD    address $032E-032F   is: User Defined Vector ($FE66)."

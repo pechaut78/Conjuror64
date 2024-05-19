@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location $030C in a Commodore 64 computer?","SAREG     address $030C        is: Storage for 6510 Accumulator during SYS."

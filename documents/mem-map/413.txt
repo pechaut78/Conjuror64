@@ -1,0 +1,2 @@
+
+TODSNS    address $02A2        is: TOD sense during Tape I/O.

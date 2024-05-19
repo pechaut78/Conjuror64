@@ -1,0 +1,4 @@
+question,answer
+"What is the function of the basic statement "SPC(X)" in a PRINT statement?","basic: SPC(X)
+
+  This is used in a PRINT statement to skip X spaces forward."

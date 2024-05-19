@@ -1,0 +1,28 @@
+
+[
+    {
+        "atom": "Input",
+        "params": {
+            "input": "documents/c64-prog-ref"
+        }
+    },
+    {
+        "atom": "CSVMerge",
+        "params": {
+            "output": "csv/merged_output.csv"
+        }
+    },
+    {
+        "atom": "CSVEnforceStr",
+        "params": {
+            "output": "csv/merged_output.csv"
+        }
+    },
+    {
+        "atom": "CSVAddContext",
+        "params": {
+            "output": "csv/merged_output.csv",
+            "context": "In the context of the C64, "
+        }
+    }
+]

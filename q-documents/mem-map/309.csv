@@ -1,0 +1,2 @@
+question,answer
+"What is the format and description of the VERCKK command?","VERCKK    address $0093        is: Flag: 0 = Load, 1 = Verify."

@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $028C?","DELAY     address $028C        is: Repeat Key: First repeat delay Counter ($10)."

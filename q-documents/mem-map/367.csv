@@ -1,0 +1,2 @@
+question,answer
+"What is stored at memory address $00D6 ?","TBLX      address $00D6        is: Current Screen Line number of Cursor."

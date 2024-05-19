@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bit 0 at address $4276?","address $4276	bit 0 is 	Gate Bit: 1 = Start Att/Dec/Sus, 0 = Start Release"

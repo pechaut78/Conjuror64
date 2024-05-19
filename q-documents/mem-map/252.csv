@@ -1,0 +1,2 @@
+question,answer
+"What does the INTFLG at address $000E represent in a data type?","INTFLG address  $000E       is:   Data type Flag: $00 = Floating point, $80 = Integer."

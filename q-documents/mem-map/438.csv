@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the ICHKIN vector at address $031E-031F?","ICHKIN    address $031E-031F   is: Vector: Indirect entry to Kernal CHKIN  Routine ($F20E)."

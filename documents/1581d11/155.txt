@@ -1,0 +1,7 @@
+
+1581 disk: Controller commands error code  21: READ ERROR (drive not ready)
+    The  disk  controller  is unable to detect a sync mark on the
+    desired track.  Caused by misalignment, or a diskette that is
+    absent,  unformatted or improperly seated.  Can also indicate
+    hardware  failure.  Unless  caused by one of the above simple
+    causes, this error is usually unrecoverable.

@@ -1,0 +1,10 @@
+question,answer
+"Positioning in the horizontal direction is more complicated because?","There are more than 256 positions, which is more than a byte."
+"What is the maximum number of possible positions in the left/right direction?","512 possible positions."
+"For a sprite,What is the range of visible positions on the screen?","Between 24 and 343."
+"What happens if the X position of a sprite is greater than 255?","The bit in the X MOST SIGNIFICANT BIT POSITION register must be set to a 1."
+"What happens if the X position of a sprite is less than 256?","The X MSB of that sprite must be 0."
+"What do bits 0 to 7 of the X MSB register correspond to?","Sprites 0 to 7."
+"What is the purpose of the X MSB register?","To control the X position of a sprite."
+"What is the range of sprite positions?","From 0 to 511."
+"What is the significance of the 9th bit?","It is used to control the X position."

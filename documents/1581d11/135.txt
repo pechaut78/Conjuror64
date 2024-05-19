@@ -1,0 +1,6 @@
+
+
+
+1581 disk Controller Job commands: SIDE_DV
+       $9C     Sets  up the side select electronics to the
+                      value specified (in SIDS).

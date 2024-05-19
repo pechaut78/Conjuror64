@@ -1,0 +1,9 @@
+question,answer
+"Can characters be changed to any color?","Yes, by using the <C=> key and the COLOR keys."
+"What is the command to change the character color?","POKE 53270,PEEK(53270)OR 16:PRINT'<CTRL+3>';: rem lt.red/ multi-color red"
+"What is the alternative to regular text?","Another color control can set you back to regular text."
+"Can you change the character color to multi-color?","Yes, by using the <C=> key and the COLOR keys."
+"What is the purpose of the COLOR keys?","To change the character color to any color."
+"Can you change the character color to any color?","Yes, by using the <C=> key and the COLOR keys."
+"What is the command to change the character color?","POKE 53270,PEEK(53270)OR 16:PRINT'<CTRL+3>';: rem lt.red/ multi-color red"
+"Can you set the character color back to regular text?","Yes, by using another color control."

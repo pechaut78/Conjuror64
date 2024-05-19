@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the INBIT register at address $00A7?","INBIT     address $00A7        is: RS232 temporary for received Bit/Tape temporary."

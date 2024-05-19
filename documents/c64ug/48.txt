@@ -1,0 +1,13 @@
+
+
+
+  KEYBOARD    COLOR      DISPLAY         KEYBOARD    COLOR      DISPLAY
+  ---------------------------------------------------------------------
+  <CTRL><1>   BLACK                      <C=><1>     ORANGE
+  <CTRL><2>   WHITE                      <C=><2>     BROWN
+  <CTRL><3>   RED                        <C=><3>     LT. RED
+  <CTRL><4>   CYAN                       <C=><4>     GRAY 1
+  <CTRL><5>   PURPLE                     <C=><5>     GRAY 2
+  <CTRL><6>   GREEN                      <C=><6>     LT. GREEN
+  <CTRL><7>   BLUE                       <C=><7>     LT. BLUE
+  <CTRL><8>   YELLOW                     <C=><8>     GRAY 3

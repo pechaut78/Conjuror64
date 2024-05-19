@@ -1,0 +1,4 @@
+question,answer
+"What is the syntax and usage of the DCLEAR command in a CP/M system?","1581 disk with basic 7,0:FORMAT FOR THE DCLEAR COMMAND:
+
+  DCLEAR [Ddrive#]"

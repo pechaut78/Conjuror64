@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory address range $0019-0021 ?","TEMPST address  $0019-0021  is:   Stack for temporary Strings."

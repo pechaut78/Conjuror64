@@ -1,0 +1,10 @@
+question,answer
+"What is the default mode of the Commodore 64 when it is first turned on?","Standard character mode"
+"What is the purpose of defining new character shapes in RAM?","To display special graphics characters"
+"What chip is responsible for accessing screen memory and color memory?","VIC-II"
+"What is the purpose of the VIC-II chip in displaying characters on the screen?","To determine the character code and color"
+"What is the starting address of the 8-byte block holding the character pattern?","Translated by the VIC-II chip"
+"What is the formula for calculating the character address?","SCREEN CODE*8+(CHARACTER SET*2048)+(BANK*16384)"
+"What is the purpose of the Bank Select Bits in calculating the character address?","To take into account the base address"
+"What is the typical use of the POKE command in character mode?","To set the character code in screen memory"
+"What is the typical location of the 8-byte block holding the character pattern?","In character memory"

@@ -1,0 +1,7 @@
+
+1581 disk: Controller commands error code 50: RECORD NOT PRESENT
+    The requested record number has not been created yet. This is
+    not  an  error  in  a  new relative file or one that is being
+    intentionally expanded. It results from reading past the last
+    existing  record,  or  positioning  to  a non-existent record
+    number with the RECORD# command.

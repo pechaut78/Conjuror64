@@ -1,0 +1,5 @@
+question,answer
+"What is the function of the TRKWRT_DV command in a 1581 disk controller job?","1581 disk Controller Job commands: TRKWRT_DV     $A2
+     Dumps  the  track  cache buffer to the disk
+                      (only  if  the track cache modified flag is
+                      set)."

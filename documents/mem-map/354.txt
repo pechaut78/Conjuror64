@@ -1,0 +1,2 @@
+
+RVS       address $00C7        is: Flag: Reverse On/Off; On = $01, Off = $00.

@@ -1,0 +1,2 @@
+
+ENABL     address $02A1        is: RS232 Enables.

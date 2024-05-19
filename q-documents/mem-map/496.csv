@@ -1,0 +1,2 @@
+question,answer
+"What is the address of the kernel routine for the vector table in a typical 6502-based system?","kernal routine address for vector	= $ff8d"

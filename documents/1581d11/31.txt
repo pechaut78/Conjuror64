@@ -1,0 +1,12 @@
+1581 disk with basic 7,0: VERIFY
+
+  This  command  makes  a  byte-by-byte comparison of the program
+currently   in   memory  against  a  program  on  diskette.  This
+comparison includes the BASIC line links,  which may be different
+for different types of memory configurations.  What this means is
+that  a  program  saved to disk on a C64 and reloaded into a C128
+wouldn't   verify  properly  because  the  line  links  point  to
+different  memory  locations.  If  the  disk  copy of the program
+differs at all from the copy in memory,  a "VERIFY ERROR" will be
+displayed. This doesn't mean either copy is bad, but if they were
+supposed to be identical, there is a problem.

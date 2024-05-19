@@ -1,0 +1,8 @@
+question,answer
+"What are the graphics abilities of the Commodore 64 based on?","The 6567 Video Interface Chip (VIC-II chip)"
+"What are the different graphics modes provided by the VIC-II chip?","40 column by 25 line text display, 320 by 200 dot high resolution display, and SPRITES"
+"Can multiple graphics modes be mixed on the same screen?","Yes, it can be done using some tricks"
+"What are the three categories of graphics display modes in the VIC-II chip?","A) CHARACTER DISPLAY MODES, B) BIT MAP MODES, C) SPRITES"
+"What are the two types of character display modes?","Standard Character Mode and Multi-Color Character Mode"
+"What are the two types of bit map modes?","Standard Bit Map Mode and Multi-Color Bit Map Mode"
+"What are the two types of sprites?","Standard Sprites and Multi-Color Sprites"

@@ -1,0 +1,2603 @@
+address - BITS - DESCRIPTION
+$0000	0		7-0	MOS 6510 Data Direction
+Register (xx101111) Bit= 1: Output, Bit=0: Input, x=Don't Care
+
+
+
+
+
+
+
+
+address $0001 bit	1			MOS 6510 Micro-Processor On-Chip I/O Port
+
+
+
+
+address $0001 bit 0	is: /LORAM Signal (0=Switch	BASIC ROM Out)
+
+
+
+
+address $0001 bit 1	is: /HIRAM Signal (0=Switch Kernal ROM Out)
+
+
+
+
+address $0001 bit 2	is: /CHAREN Signal (0=Swith Char. ROM In)
+
+
+
+
+address $0001 bit 3	is: Cassette Data Output Line
+
+
+
+
+address $0001 bit 4	is: Cassette Switch Sense: 1 = Switch Closed
+
+
+
+
+address $0001 bit 5	is: Cassette Motor Control O = ON, 1 = OFF
+
+
+
+
+address $0001 bit 6-7 is:	Undefined
+
+
+
+address $D000 is Sprite 0 X Pos
+
+
+
+
+address $D001 is Sprite 0 Y Pos
+
+
+
+
+address $D002 is Sprite 1 X Pos
+
+
+
+
+
+address $D003 is Sprite 1 Y Pos
+
+
+
+
+address $D004 is Sprite 2 X Pos
+
+
+
+
+address $D005 is Sprite 2 Y Pos
+
+
+
+
+
+address $D006 is Sprite 3 X Pos
+
+
+
+
+address $D007 is Sprite 3 Y Pos
+
+
+
+
+address $D008 is Sprite 4 X Pos
+
+
+
+
+address $D009 is Sprite 4 Y Pos
+
+
+
+
+address $D00A is Sprite 5 X Pos
+
+
+
+
+address $D00B is Sprite 5 Y Pos
+
+
+
+
+address $D00C is Sprite 6 X Pos
+
+
+
+
+address $D00D is Sprite 6 Y Pos
+
+
+
+
+address $D00E is Sprite 7 X Pos
+
+
+
+
+address $D00F is Sprite 7 Y Pos
+
+
+
+
+address $D010 is Sprites 0-7 X Pos (msb of X coord.)
+
+
+
+
+
+Address	D011	BIT 7 is Raster Compare: (Bit 8)	See 53266
+
+
+
+
+Address	D011	BIT 6 is Extended Color Text Mode 1 = Enable
+
+
+
+
+Address	D011	BIT 5 is Bit Map Mode. 1 = Enable
+
+
+
+
+Address	D011	BIT 4 is Blank Screen to Border Color: 0 = Blank
+
+
+
+
+Address	D011	BIT 3 is Select 24/25 Row Text Display: 1 = 25 Rows
+
+
+
+
+Address	D011	BIT 2-0	is Smooth Scroll to Y Dot-Position (0-7)
+
+
+
+
+
+
+
+address D012 is:	Read Raster / Write Raster Value for Compare IRQ
+
+
+
+
+address D013 is:	Light-Pen Latch X Pos
+
+
+
+
+address D014 is:	Light-Pen Latch Y Pos
+
+
+
+
+address D015 is:	Sprite display Enable: 1 = Enable
+
+
+
+
+address D016 bit 7-6 is	Unused
+
+
+
+
+address D016 bit 5 is	ALWAYS SET THIS BIT TO 0 !
+
+
+
+address D016 bit 4	is Multi-Color Mode: 1 = Enable (Text or Bit-Map)
+
+
+
+
+address D016 bit 3 is Select 38/40 Column Text Display: 1 = 40 Cols
+
+
+
+
+address D016 bit 2-0 is:	Smooth Scroll to X Pos
+
+
+
+
+
+address $D017	is:		Sprites 0-7 Expand 2x Vertical (Y)
+
+
+
+
+address $D018 bits 7-4 is: Video Matrix Base Address (inside VIC)
+
+
+
+
+address $D018 bits 3-1 is: Character Dot-Data Base	Address (inside VIC)
+
+
+
+
+address $D018 bits 0 is:	Select upper/lower Character Set
+
+
+
+address $D019 Bit 1 is: VIC Interrupt Flag Register (Bit = 1: IRQ Occurred)
+
+
+
+
+address $D019 Bit 7	is: Set on Any Enabled VIC IRQ Condition
+
+
+
+
+address $D019 Bit 3	is: Light-Pen Triggered IRQ Flag
+
+
+
+
+address $D019 Bit 2	is: Sprite to Sprite Collision IRQ Flag
+
+
+
+address $D019 Bit 1	is: Sprite to Background Collision IRQ Flag
+
+
+
+
+address $D019 Bit 0	is: Raster Compare IRQ Flag
+
+
+
+
+address $D01A	is:			IRQ Mask Register: 1 = Interrupt Enabled
+
+
+
+
+address $3275		is:			Sprite to Background Display Priority:	1 = Sprite
+
+
+
+
+address $3276		is:			Sprites 0-7 Multi-Color Mode Select:1 = M.C.M.
+
+
+
+
+address $3277		is:			Sprites 0-7 Expand 2x Horizontal (X)
+
+
+
+address $3278		is:			Sprite to Sprite Collision Detect
+
+
+
+address $3279		is:			Sprite to Background Collision Detect
+
+
+
+address $3280		is:			Border Color
+
+
+
+address $3281		is:			Background Color 0
+
+
+
+
+address $3282		is:			Background Color 1
+
+
+
+
+address $3283		is:			Background Color 2
+
+
+
+address $3284		is:			Background Color 3
+
+
+
+
+address $3285			is:		Sprite Multi-Color Register 0
+
+
+
+
+address $3286		is:			Sprite Multi-Color Register 1
+
+
+
+
+address $3287		is:			Sprite 0 Color
+
+
+
+
+address $3288		is:			Sprite 1 Color
+
+
+
+
+address $3289		is:			Sprite 2 Color
+
+
+
+
+address $3290		is:			Sprite 3 Color
+
+
+
+
+address $3291		is:			Sprite 4 Color
+
+
+
+
+address $3292		is:			Sprite 5 Color
+
+
+
+
+address $3293		is:			Sprite 6 Color
+
+
+
+
+address $3294		is:			Sprite 7 Color
+
+
+
+
+address $4272		is:			Voice 1: Frequency Control - Low-Byte
+
+
+
+
+address $4273		is:			Voice 1: Frequency Control - High-Byte
+
+
+
+
+address $4274		is:			Voice 1: Pulse Waveform	Width - Low-Byte
+
+
+
+
+address $4275			is:	    bits 7-4	Unused 3-0	Voice 1: Pulse Waveform Width - High-Nybble
+
+
+
+address $4276		is: 	Voice 1: Control Register
+
+
+
+
+address $4276	bit 7 is 	Select Random Noise Waveform, 1 = On
+
+
+
+
+address $4276	bit 6 is 	Select Pulse Waveform, 1 = On
+
+
+
+
+address $4276	bit 5 is 	Select Sawtooth Waveform, 1 = On
+
+
+
+
+address $4276	bit 4 is 	Select Triangle Waveform, 1 = On
+
+
+
+
+address $4276	bit 3 is 	Test Bit: 1 = Disable Oscillator 1
+
+
+
+
+address $4276	bit 2 is 	Ring Modulate Osc. 1 with Osc. 3 Output, 1 = On
+
+
+
+
+address $4276	bit 1 is 	Synchronize Osc. 1 with Osc. 3 Frequency, 1 = On
+
+
+
+
+address $4276	bit 0 is 	Gate Bit: 1 = Start Att/Dec/Sus, 0 = Start Release
+
+
+
+
+Address $4277		is:	Envelope Generator 1: Attack / Decay Cycle Control
+
+
+
+
+Address $4277    bits          7-4  is:   Select Attack Cycle Duration: 0-15
+
+
+
+
+Address $4277 bits	3-0	is: Select Decay Cycle Duration: 0-15
+
+
+
+
+address $4278			Envelope Generator 1: Sustain / Release Cycle Control
+
+
+
+
+address $4278      bits        7-4  is:   Select Sustain Cycle Duration: 0-15
+
+
+
+
+address $4278      bits        3-0  is:   Select Release Cycle Duration: 0-15
+
+
+
+
+address $4279	is:		Voice 2: Frequency Control - Low-Byte
+
+
+
+
+address $4280	is:		Voice 2: Frequency Control - High-Byte
+
+
+
+
+address $4281	is		Voice 2: Pulse Waveform Width - Low-Byte
+
+
+
+address $4282	bits	7-4	is: Unused
+
+
+
+address $4283	bits 3-0 is: Voice 2: Pulse Waveform Width - High-Nybble
+
+
+address $4283			Voice 2: Control Register
+
+
+
+
+address $4283	bits		7	Select Random Noise Waveform, 1 = On
+
+
+
+
+address $4283	bits		6	is: Select Pulse Waveform, 1 = On
+
+
+
+
+address $4283	bits5 is:	Select Sawtooth Waveform, 1 = On
+
+
+
+
+address $4283	bits4 is:	Select Triangle Waveform, 1 = On
+
+
+
+
+address $4283	bits3 is:	Test Bit: 1 = Disable Oscillator 1
+
+
+
+
+address $4283	bits2 is:	Ring Modulate Osc. 2 with Osc. 1 Output,
+
+
+
+
+address $4283	bits1 = On is:	Synchronize Osc. 2 with Osc. 1 Frequency,
+
+
+
+
+address $D40C	is		Envelope Generator 2: Attack / Decay Cycle Control
+
+
+
+
+address $D40C bits 7-4	is: Select Attack Cycle Duration: O-15
+
+
+
+
+address $D40C bits 3-0	is: Select Decay Cycle Duration: 0-15
+
+
+
+address $D40D	is:	Envelope Generator 2: Sustain / Release Cycle Control
+
+
+
+
+address $D40D	bits 7-4 is:	Select Sustain Cycle Duration: O-15
+
+
+
+
+address $D40D	bits 3-0 is:	Select Release Cycle Duration: O-15
+
+
+
+
+
+address $D40E	is 			Voice 3: Frequency Control - Low-Byte
+
+
+
+
+address $D40F	is 			Voice 3: Frequency Control - High-Byte
+
+
+
+
+address $D410	is 			Voice 3: Pulse Waveform Width - Low-Byte
+
+
+
+
+address $D411	is 		7-4	Unused 3-0	Voice 3: Pulse Waveform Width - High-Nybble
+
+
+
+
+address $D40D	 $D412 is:			Voice 3: Control Register
+
+
+
+
+address $D40D	bits			7 is	Select Random Noise Waveform, 1 = On
+
+
+
+
+address $D40D	bits			6 is	Select Pulse Waveform, 1 = On
+
+
+
+
+address $D40D	bits			5 is	Select Sawtooth Waveform, 1 = On
+
+
+
+
+address $D40D	bits			4 is	Select Triangle Waveform, 1 = On
+
+
+
+
+address $D40D	bits			3 is	Test Bit: 1 = Disable Oscillator 1
+
+
+
+
+address $D40D	bits			2 is	Ring Modulate Osc. 3 with Osc. 2 Output, 1 = On
+
+
+
+
+address $D40D	bits			1 is	Synchronize Osc. 3 with Osc. 2 Frequency, 1 = On
+
+
+
+
+address $D40D	bits			0 is	Gate Bit: 1 = Start Att/Dec/Sus, 0 = Start Release
+
+
+
+
+
+address $D413 is:	Envelope Generator 3: Attac/Decay Cycle Control
+
+
+
+
+address $D413 bits 7-4 is:	Select Attack Cycle Duration: 0-15
+
+
+
+
+address $D413 bits 3-0 is:	Select Decay Cycle Duration: 0-15
+
+
+
+
+address $D414 is			Envelope Generator 3: Sustain / Release Cycle Control
+
+
+
+address $D414 bits 7-4	is: Select Sustain Cycle Duration: 0-15
+
+
+
+
+address $D414  bits 3-0	is: Select Release Cycle Duration: 0-15
+
+
+address $D415 is Filter Cutoff Frequency: Low-Nybble (Bits 2-0)
+
+
+
+
+address $D416	is:	Filter Cutoff Frequency: High-Byte
+
+
+
+address $D417	is:	Filter Resonance Control / Voice Input Control
+
+
+
+
+address $D417	bits 7-4 is	Select Filter Resonance: 0-15
+
+
+
+
+address $D417	bits 3 is: 	Filter External Input: 1 = Yes, 0 = No
+
+
+
+
+address $D417	bits 2 is:	Filter Voice 3 Output: 1 = Yes, 0 = No Filter Voice 2 Output: 1 = Yes, 0 = No
+
+
+
+
+address $D417	bits 0	is Filter Voice 1 Output: 1 = Yes, 0 = No
+
+
+
+
+address $D418	Select Filter Mode and Volume
+
+
+
+
+address $D418 bit 7	is: Cut-Off Voice 3 Output: 1 = Off, 0 = On
+
+
+
+
+address $D418 bit 6	is: Select Filter High-Pass Mode: 1 = On
+
+
+
+
+address $D418 bit 5	is: Select Filter Band-Pass Mode: 1 = On
+
+
+
+
+address $D418 bit 4	is: Select Filter Low-Pass Mode: 1 = On
+
+
+
+
+address $D418 bits 3-0 are	Select Output Volume: 0-15
+
+
+
+
+
+address $D419	is:	Analog/Digital Converter: Game Paddle 1 (0-255)
+
+
+
+
+address $D41A	is:	Analog/Digital Converter Game Paddle 2 (0-255)
+
+
+
+
+address $D41B	is:	Oscillator 3 Random Number Generator
+
+
+
+
+address $D41C	is:	Envelope Generator 3 Output
+
+
+
+
+addresses D500-D7FF	are 	SID IMAGES
+
+
+
+
+addresses D800-DBFF	are	Color RAM (Nybbles)
+
+
+
+
+addesszq DC00-DCFF	are 	MOS 6526 Complex Interface Adapter (CIA) #1
+
+
+
+
+address $DC00 is:	Data Port A (Keyboard, Joystick, Paddles,Light-Pen)
+
+
+
+
+address $DC00 bits 7-0	is: Write Keyboard Column Values for Keyboard Scan
+
+
+
+
+address $DC00 bits 7-6	is: Read Paddles on Port A / B (01 = Port A, 10 = Port B)
+
+
+
+
+address $DC00 bits 4	is: Joystick A Fire Button: 1 = Fire
+
+
+
+
+address $DC00 bits 3-2	is: Paddle Fire Buttons
+
+
+
+
+address $DC00 bits 3-0	is: Joystick A Direction (0-15)
+
+
+
+
+address $DC01 is:	Data Port B (Keyboard, Joystick, Paddles): Game Port 1
+
+
+
+
+address $DC01 bits 7-0	Read Keyboard Row Values for Keyboard Scan
+
+
+
+
+address $DC01 bit 7	Timer B Toggle/Pulse Output
+
+
+
+
+address $DC01 bit 6	Timer A: Toggle/Pulse Output
+
+
+
+
+address $DC01 bit 4	Joystick 1 Fire Button: 1 = Fire 3-2	Paddle Fire Buttons 3-0	Joystick 1 Direction
+
+
+
+
+address $DC02	is: Data Direction Register - Port A (56320)
+
+
+
+
+address $DC03	is: Data Direction Register - Port B (56321)
+
+
+
+
+address $DC04	is: Timer A: Low-Byte
+
+
+
+
+address $DC05	is: Timer A: High-Byte
+
+
+
+
+address $DC06	is: Timer B: Low-Byte
+
+
+
+
+address $DC07	is: Timer B: High-Byte
+
+
+
+
+address $DC08	is: Time-of-Day Clock: 1/10 Seconds
+
+
+
+
+address $DC09	is: Time-of-Day Clock: Seconds
+
+
+
+
+address $DC0A	is: Time-of-Day Clock: Minutes
+
+
+
+
+address $DC0B	is: Time-of-Day Clock: Hours + AM/PM Flag (Bit 7)
+
+
+
+
+address $DC0C	is: Synchronous Serial I/O Data Buffer
+
+
+
+address $DC0D	is: CIA Interrupt Control Register (ReadIRQs/Write Mask)
+
+
+
+
+address $DC0D bit 7 is	IRQ Flag (1 = IRQ Occurred) / Set-Clear Flag
+
+
+
+
+address $DC0D bit 4 is	FLAG1 IRQ (Cassette Read / Serial Bus SRQInput)
+
+
+
+
+address $DC0D bit 3 is	Serial Port Interrupt
+
+
+
+
+address $DC0D bit 2 is	Time-of-Day Clock Alarm Interrupt
+
+
+
+
+address $DC0D bit 1 is	Timer B Interrupt
+
+
+
+
+address $DC0D bit 0 is	Timer A Interrupt
+
+
+
+
+address $DC0E	is	CIA Control Register A
+
+
+
+
+address $DC0E bit 7	is: Time-of-Day Clock Frequency: 1 = 50 Hz, 0 = 60 Hz
+
+
+
+
+address $DC0E bit 6 is:	Serial Port I/O Mode Output, 0 = Input
+
+
+
+
+address $DC0E bit 5 is:	Timer A Counts: 1 = CNT Signals, 0 = System 02 Clock
+
+
+
+
+address $DC0E bit 4 is:	Force Load Timer A: 1 = Yes
+
+
+
+
+address $DC0E bit 3 is:	Timer A Run Mode: 1 = One-Shot,0 = Continuous
+
+
+
+
+address $DC0E bit 2 is:	Timer A Output Mode to PB6: 1 = Toggle,0 = Pulse
+
+
+
+
+address $DC0E bit 1 is:	Timer A Output on PB6: 1 = Yes, 0 = No
+
+
+
+
+address $DC0E bit 0 is:	Start/Stop Timer A: 1 = Start, 0 = Stop
+
+
+
+
+address $DC0F	is:		CIA Control Register B
+
+
+
+
+address $DC0F bits 7	is: Set Alarm/TOD-Clock: 1 = Alarm, 0 = Clock
+
+
+
+
+address $DC0F bits 6-5	is: Timer B Mode Select: 00 = Count System 02 Clock Pulses, 01 = Count Positive CNT Transitions, 10 = Count Timer A Underflow Pulses, 11 = Count Timer A Underflows While CNT Positive
+
+
+
+
+address $DC0F bits 4-0	is: Same as CIA Control Reg. A - for Timer B
+
+
+
+
+
+addresses $DD00-DDFF	are:		MOS 6526 Complex Interface Adapter (CIA) #2
+
+
+
+
+address $DD00 is: Data Port A (Serial Bus, RS-232, VIC Memory Control)
+
+
+
+
+address $DD00 bit 7is	Serial Bus Data Input
+
+
+
+
+address $DD00 bit 6 is: 	Serial Bus Clock Pulse Input
+
+
+
+
+address $DD00 bit 5 is: 	Serial Bus Data Output
+
+
+
+
+address $DD00 bit 4 is: 	Serial Bus Clock Pulse Output
+
+
+
+
+address $DD00 bit 3 is: 	Serial Bus ATN Signal Output
+
+
+
+address $DD00 bit 2 is: 	RS-232 Data Output (User Port)
+
+
+
+
+address $DD00 bit 1-0 is:	VIC Chip System Memory Bank Select (Default = 11)
+
+
+
+
+address $DD01 is:		Data Port B (User Port, RS-232)
+
+
+
+
+address $DD01 bit 7 is	User / RS-232 Data Set Ready
+
+
+
+
+address $DD01 bit 6 is	User / RS-232 Clear to Send
+
+
+
+
+address $DD01 bit 5 is	User
+
+
+
+
+address $DD01 bit 4 is	User / RS-232 Carrier Detect
+
+
+
+
+address $DD01 bit 3 is	User / RS-232 Ring Indicator
+
+
+
+
+address $DD01 bit 2 is	User / RS-232 Data Terminal Ready
+
+
+
+
+address $DD01 bit 1 is	User / RS-232 Request to Send
+
+
+
+
+address $DD01 bit 0 is	User / RS-232 Received Data
+
+
+
+
+address $DD02 is:	Data Direction Register - Port A
+
+
+
+
+address $DD03 is:	Data Direction Register - Port B
+
+
+
+
+address $DD04 is:	Timer A: Low-Byte
+
+
+
+
+address $DD05 is:	Timer A: High-Byte
+
+
+
+
+address $DD06 is:	Timer B: Low-Byte
+
+
+
+
+address $DD07 is:	Timer B: High-Byte
+
+
+
+
+address $DD08 is:	Time-of-Day Clock: 1/10 Seconds
+
+
+
+
+address $DD09 is:	Time-of-Day Clock: Seconds
+
+
+
+
+address $DD0A is:	Time-of-Day Clock: Minutes
+
+
+
+
+address $DD0B is:	Time-of-Day Clock: Hours + AM/PM Flag (Bit 7)
+
+
+
+
+address $DD0C is:	Synchronous Serial I/O Data Buffer
+
+
+
+
+address $DD0D is:	CIA Interrupt Control Register (Read NMls/Write Mask)
+
+
+
+
+address $DD0D bit 7 is:	NMI Flag (1 = NMI Occurred) / Set-Clear Flag
+
+
+
+
+address $DD0D bit 4 is:	FLAG1 NMI (User/RS-232 Received Data Input)
+
+
+
+
+address $DD0D bit 3 is:	Serial Port Interrupt
+
+
+
+
+address $DD0D bit 1 is:	Timer B Interrupt
+
+
+
+
+address $DD0D bit 0 is:	Timer A Interrupt
+
+
+
+
+
+address $DD0E	is:		CIA Control Register A
+
+
+
+
+address $DD0E bit 7 is:	Time-of-Day Clock Frequency: 1 = 50 Hz, 0 = 60 Hz
+
+
+
+
+address $DD0E bit 6 is:	Serial Port I/O Mode Output, 0 = Input
+
+
+
+
+address $DD0E bit 5 is:	Timer A Counts: 1 = CNT Signals, 0 = System 02 Clock
+
+
+
+
+address $DD0E bit 4 is:	Force Load Timer A: 1 = Yes
+
+
+
+
+address $DD0E bit 3 is:	Timer A Run Mode: 1 = One-Shot, s
+
+
+
+
+address $DD0E bit 2 is:	Timer A Output Mode to PB6: 1 = Toggle,0 = Pulse
+
+
+
+
+address $DD0E bit 1 is:	Timer A Output on PB6: 1 = Yes, 0 = No
+
+
+
+
+address $DD0E bit 0 is:	Start/Stop Timer A: 1 = Start, 0 = Stop
+
+
+
+
+
+address $DD0F	is: CIA Control Register B
+
+
+
+
+address $DD0F bit 7 is:	Set Alarm/TOD-Clock: 1 = Alarm, 0 = Clock
+
+
+
+
+address $DD0F bits 4-0 is:	Same as CIA Control Reg. A - for Timer B
+
+
+
+
+address $DD0F bits 6-5	is: Timer B Mode Select:
+00 = Count System 02 Clock Pulses
+01 = Count Positive CNT Transitions
+10 = Count Timer A Underflow Pulses
+11 = Count Timer A Underflows While CNT Positive
+
+
+
+
+
+address $DE00-DEFF are: 	Reserved for Future I/O Expansion
+
+
+
+
+address $DF00-DFFF are	Reserved for Future I/O Expansion
+
+
+
+
+
+
+
+D6510  address  $0000       is:   6510 On-chip Data Direction Register.
+
+
+
+
+
+R6510  address  $0001       is:   6510 On-chip 8-bit Input/Output Register.
+
+
+
+
+
+TEMP   address  $0002       is:   Unused. Free for user programs.
+
+
+
+
+
+ADRAY1 address  $0003-0004  is:   Jump Vector: Convert FAC to Integer in (A/Y) ($B1AA).
+
+
+
+
+
+ADRAY2 address  $0005-0006  is:   Jump Vector: Convert Integer in (A/Y) to Floating point in (FAC); ($B391).
+
+
+
+
+
+CHARAC address  $0007       is:   Search Character/Temporary Integer during INT.
+
+
+
+
+
+ENDCHR address  $0008       is:   Flag: Scan for Quote at end of String.
+
+
+
+
+
+INTEGR address  $0007-0008  is:   Temporary Integer during OR/AND.
+
+
+
+
+
+TRMPOS address  $0009       is:   Screen Column for last TAB.
+
+
+
+
+
+VERCK  address  $000A       is:   Flag: 0 = Load, 1 = Verify.
+
+
+
+
+
+COUNT  address  $000B       is:   Input Buffer Pointer/Number of Subscripts.
+
+
+
+
+
+DIMFLG address  $000C       is:   Flag: Default Array dimension.
+
+
+
+
+
+VALTYP address  $000D       is:   Data type Flag: $00 = Numeric, $FF = String.
+
+
+
+
+
+INTFLG address  $000E       is:   Data type Flag: $00 = Floating point, $80 = Integer.
+
+
+
+
+
+GARBFL address  $000F       is:   Flag: DATA scan/List Quote/Garbage collection.
+
+
+
+
+
+SUBFLG address  $0010       is:   Flag: Subscript reference/User Function call.
+
+
+
+
+
+INPFLG address  $0011       is:   Input Flag: $00 = INPUT, $40 = GET, $98 = READ.
+
+
+
+
+
+TANSGN address  $0012       is:   Flag: TAN sign/Comparative result.
+
+
+
+
+
+CHANNL address  $0013       is:   File number of current Input Device.
+
+
+
+
+
+LINNUM address  $0014-0015  is:   Temporary: Integer value.
+
+
+
+
+
+TEMPPT address  $0016       is:   Pointer: Temporary String Stack.
+
+
+
+
+
+LASTPT address  $0017-0018  is:   Last temporary String Address.
+
+
+
+
+
+TEMPST address  $0019-0021  is:   Stack for temporary Strings.
+
+
+
+
+
+INDEX  address  $0022-0025  is:   Utility Pointer Area.
+
+
+
+
+
+INDEX1 address  $0022-0023  is:   First Utility Pointer.
+
+
+
+
+
+INDEX2 address  $0024-0025  is:   Secong Utility Pointer.
+
+
+
+
+
+RESHO  address  $0026-002A  is:   Floating point product of Multiply and Divide.
+
+
+
+
+
+TXTTAB address  $002B-002C  is:   Pointer: Start of BASIC Text Area ($0801).
+
+
+
+
+
+VARTAB address  $002D-002E  is:   Pointer: Start of BASIC Variables.
+
+
+
+
+
+ARYTAB address  $002F-0030  is:   Pointer: Start of BASIC Arrays.
+
+
+
+
+
+STREND address  $0031-0032  is:   Pointer: End of BASIC Arrays + 1.
+
+
+
+
+
+FRETOP address  $0033-0034  is:   Pointer: Bottom of String space.
+
+
+
+
+
+FRESPC address  $0035-0036  is:   Utility String Pointer.
+
+
+
+
+
+MEMSIZ address  $0037-0038  is:   Pointer: Highest Address available to BASIC ($A000).
+
+
+
+
+
+CURLIN address  $0039-003A  is:   Current BASIC Line number.
+
+
+
+
+
+OLDLIN address  $003B-003C  is:   Previous BASIC Line number.
+
+
+
+
+
+OLDTXT address  $003D-003E  is:   Pointer: BASIC Statement for CONT.
+
+
+
+
+
+DATLIN address  $003F-0040  is:   Current DATA Line number.
+
+
+
+
+
+DATPTR address  $0041-0042  is:   Pointer: Used by READ - current DATA Item Address.
+
+
+
+
+
+INPPTR address  $0043-0044  is:   Pointer: Temporary storage of Pointer during  INPUT Routine.
+
+
+
+
+
+VARNAM address  $0045-0046  is:   Name of Variable being sought in Variable Table.
+
+
+
+
+
+VARPNT address  $0047-0048  is:   Pointer: to value of (VARNAM) if Integer, to descriptor if String.
+
+
+
+
+
+FORPNT address  $0049-004A  is:   Pointer: Index Variable for FOR/NEXT loop.
+
+
+
+
+
+VARTXT address  $004B-004C  is:   Temporary storage for TXTPTR during READ, INPUT and GET.
+
+
+
+
+
+OPMASK address  $004D       is:   Mask used during FRMEVL.
+
+
+
+
+
+TEMPF3 address  $004E-0052  is:   Temporary storage for FLPT value.
+
+
+
+
+
+FOUR6  address  $0053       is:   Length of String Variable during Garbege collection.
+
+
+
+
+
+JMPER  address  $0054-0056  is:   Jump Vector used in Function Evaluation -  JMP followed by Address ($4C,$LB,$MB).
+
+
+
+
+
+TEMPF1 address  $0057-005B  is:   Temporary storage for FLPT value.
+
+
+
+
+
+TEMPF2 address  $005C-0060  is:   Temporary storage for FLPT value.
+
+
+
+
+
+FAC    address  $0061-0066  is:   Main Floating point Accumulator.
+
+
+
+
+
+FACEXP address  $0061       is:   FAC Exponent.
+
+
+
+
+
+FACHO  address  $0062-0065  is:   FAC Mantissa.
+
+
+
+
+
+FACSGN address  $0066       is:   FAC Sign.
+
+
+
+
+
+SGNFLG address  $0067       is:   Pointer: Series Evaluation Constant.
+
+
+
+
+
+BITS   address  $0068       is:   Bit Overflow Area during normalisation Routine.
+
+
+
+
+
+AFAC   address  $0069-006E  is:   Auxiliary Floating point Accumulator.
+
+
+
+
+
+ARGEXP address  $0069       is:   AFAC Exponent.
+
+
+
+
+
+ARGHO  address  $006A-006D  is:   AFAC Mantissa.
+
+
+
+
+
+ARGSGN address  $006E       is:   AFAC Sign.
+
+
+
+
+
+ARISGN address  $006F       is:   Sign of result of Arithmetic Evaluation.
+
+
+
+
+
+FACOV  address  $0070       is:   FAC low-order rounding.
+
+
+
+
+
+FBUFPT address  $0071-0072  is:   Pointer: Used during CRUNCH/ASCII conversion.
+
+
+
+
+
+CHRGET address  $0073-008A  is:   Subroutine: Get next Byte of BASIC Text.
+
+
+
+
+
+
+
+
+CHRGOT    address $0079        is: Entry to Get same Byte again.
+
+
+
+
+TXTPTR    address $007A-007B   is: Pointer: Current Byte of BASIC Text.
+
+
+
+
+RNDX      address $008B-008F   is: Floating RND Function Seed Value.
+
+
+
+
+STATUS    address $0090        is: Kernal I/O Status Word  ST.
+
+
+
+
+STKEY     address $0091        is: Flag: $7F = STOP key.
+
+
+
+
+SVXT      address $0092        is: Timing Constant for Tape.
+
+
+
+
+VERCKK    address $0093        is: Flag: 0 = Load, 1 = Verify.
+
+
+
+
+C3PO      address $0094        is: Flag: Serial Bus - Output Character buffered.
+
+
+
+
+BSOUR     address $0095        is: Buffered Character for Serial Bus.
+
+
+
+
+SYNO      address $0096        is: Cassette Sync. number.
+
+
+
+
+TEMPX     address $0097        is: Temporary storage of X Register during CHRIN.
+
+
+
+
+TEMPY     address $0097        is: Temporary storage of Y Register during RS232 fetch.
+
+
+
+
+LDTND     address $0098        is: Number of Open Files/Index to File Table.
+
+
+
+
+DFLTN     address $0099        is: Default Input Device (0).
+
+
+
+
+DFLTO     address $009A        is: Default Output Device (3).
+
+
+
+
+PRTY      address $009B        is: Parity of Byte Output to Tape.
+
+
+
+
+DPSW      address $009C        is: Flag: Byte received from Tape.
+
+
+
+
+MSGFLG    address $009D        is: Flag: $00 = Program mode: Suppress Error  Messages, $40 = Kernal Error Messages only, $80 = Direct mode: Full Error Messages.
+
+
+
+
+FNMIDX    address $009E        is: Index to Cassette File name/Header ID for Tape write.
+
+
+
+
+PTR1      address $009E        is: Tape Error log pass 1.
+
+
+
+
+PTR2      address $009F        is: Tape Error log pass 2.
+
+
+
+
+TIME      address $00A0-00A2   is: Real-time jiffy Clock (Updated by IRQ Interrupt approx. every 1/60 of Second);  Update Routine: UDTIMK ($F69B).
+
+
+
+
+TSFCNT    address $00A3        is: Bit Counter Tape Read or Write/Serial Bus EOI (End Of Input) Flag.
+
+
+
+
+TBTCNT    address $00A4        is: Pulse Counter Tape Read or Write/Serial Bus shift Counter.
+
+
+
+
+CNTDN     address $00A5        is: Tape Synchronising count down.
+
+
+
+
+BUFPNT    address $00A6        is: Pointer: Tape I/O buffer.
+
+
+
+
+INBIT     address $00A7        is: RS232 temporary for received Bit/Tape temporary.
+
+
+
+
+BITC1     address $00A8        is: RS232 Input Bit count/Tape temporary.
+
+
+
+
+RINONE    address $00A9        is: RS232 Flag: Start Bit check/Tape temporary.
+
+
+
+
+RIDATA    address $00AA        is: RS232 Input Byte Buffer/Tape temporary.
+
+
+
+
+RIPRTY    address $00AB        is: RS232 Input parity/Tape temporary.
+
+
+
+
+SAL       address $00AC-00AD   is: Pointer: Tape Buffer/Screen scrolling.
+
+
+
+
+EAL       address $00AE-00AF   is: Tape End Address/End of Program.
+
+
+
+
+CMPO      address $00B0-00B1   is: Tape timing Constants.
+
+
+
+
+TAPE1     address $00B2-00B3   is: Pointer: Start Address of Tape Buffer ($033C).
+
+
+
+
+BITTS     address $00B4        is: RS232 Write bit count/Tape Read timing Flag.
+
+
+
+
+NXTBIT    address $00B5        is: RS232 Next Bit to send/Tape Read - End of Tape.
+
+
+
+
+RODATA    address $00B6        is: RS232 Output Byte Buffer/Tape Read Error Flag.
+
+
+
+
+FNLEN     address $00B7        is: Number of Characters in Filename.
+
+
+
+
+LA        address $00B8        is: Current File - Logical File number.
+
+
+
+
+SA        address $00B9        is: Current File - Secondary Address.
+
+
+
+
+FA        address $00BA        is: Current File - First Address (Device number). OPEN LA,FA,SA;  OPEN 1,8,15,"I0":CLOSE 1
+
+
+
+
+FNADR     address $00BB-00BC   is: Pointer: Current File name Address.
+
+
+
+
+ROPRTY    address $00BD        is: RS232 Output Parity/Tape Byte to be Input or Output.
+
+
+
+
+FSBLK     address $00BE        is: Tape Input/Output Block count.
+
+
+
+
+MYCH      address $00BF        is: Serial Word Buffer.
+
+
+
+
+CAS1      address $00C0        is: Tape Motor Switch.
+
+
+
+
+STAL      address $00C1-00C2   is: Start Address for LOAD and Cassette Write.
+
+
+
+
+MEMUSS    address $00C3-00C4   is: Pointer: Type 3 Tape LOAD and general use.
+
+
+
+
+LSTX      address $00C5        is: Matrix value of last Key pressed; No Key = $40.
+
+
+
+
+NDX       address $00C6        is: Number of Characters in Keyboard Buffer queue.
+
+
+
+
+RVS       address $00C7        is: Flag: Reverse On/Off; On = $01, Off = $00.
+
+
+
+
+INDX      address $00C8        is: Pointer: End of Line for Input (Used to suppress trailing spaces).
+
+
+
+
+LXSP      address $00C9-00CA   is: Cursor X/Y (Line/Column) position at start of  Input.
+
+
+
+
+SFDX      address $00CB        is: Flag: Print shifted Characters.
+
+
+
+
+BLNSW     address $00CC        is: Flag: Cursor blink; $00 = Enabled, $01 =  Disabled.
+
+
+
+
+BLNCT     address $00CD        is: Timer: Count down for Cursor blink toggle.
+
+
+
+
+GDBLN     address $00CE        is: Character under Cursor while Cursor Inverted.
+
+
+
+
+BLNON     address $00CF        is: Flag: Cursor Status; $00 = Off, $01 = On.
+
+
+
+
+CRSW      address $00D0        is: Flag: Input from Screen = $03, or Keyboard =  $00.
+
+
+
+
+PNT       address $00D1-00D2   is: Pointer: Current Screen Line Address.
+
+
+
+
+PNTR      address $00D3        is: Cursor Column on current Line, including Wrap-round Line, if any.
+
+
+
+
+QTSW      address $00D4        is: Flag: Editor in Quote Mode; $00 = Not.
+
+
+
+
+LNMX      address $00D5        is: Current logical Line length: 39 or 79.
+
+
+
+
+TBLX      address $00D6        is: Current Screen Line number of Cursor.
+
+
+
+
+SCHAR     address $00D7        is: Screen value of current Input Character/Last Character Output.
+
+
+
+
+INSRT     address $00D8        is: Count of number of inserts outstanding.
+
+
+
+
+LDTB1     address $00D9-00F2   is: Screen Line link Table/Editor temporaries.  High Byte of Line Screen Memory Location.
+
+
+
+
+USER      address $00F3-00F4   is: Pointer: Current Colour RAM Location.
+
+
+
+
+KEYTAB    address $00F5-00F6   is: Vector: Current Keyboard decoding Table. ($EB81)
+
+
+
+
+RIBUF     address $00F7-00F8   is: RS232 Input Buffer Pointer.
+
+
+
+
+ROBUF     address $00F9-00FA   is: RS232 Output Buffer Pointer.
+
+
+
+
+FREKZP    address $00FB-00FE   is: Free Zero Page space for User Programs.
+
+
+
+
+BASZPT    address $00FF        is: BASIC temporary Data Area.
+
+
+
+
+ASCWRK    address $00FF-010A   is: Assembly Area for Floating point to ASCII     conversion.
+
+
+
+
+BAD       address $0100-013E   is: Tape Input Error log.
+
+
+
+
+STACK     address $0100-01FF   is: 6510 Hardware Stack Area.
+
+
+
+
+BSTACK    address $013F-01FF   is: BASIC Stack Area.
+
+
+
+
+BUF       address $0200-0258   is: BASIC Input Buffer (Input Line from Screen).
+
+
+
+
+LAT       address $0259-0262   is: Kernal Table: Active logical File numbers.
+
+
+
+
+FAT       address $0263-026C   is: Kernal Table: Active File First Addresses  (Device numbers).
+
+
+
+
+SAT       address $026D-0276   is: Kernal Table: Active File Secondary Addresses.
+
+
+
+
+KEYD      address $0277-0280   is: Keyboard Buffer Queue (FIFO).
+
+
+
+
+MEMSTR    address $0281-0282   is: Pointer: Bottom of Memory for Operating System ($0800).
+
+
+
+
+MEMSIZ    address $0283-0284   is: Pointer: Top of Memory for Operating   System ($A000).
+
+
+
+
+TIMOUT    address $0285        is: Serial IEEE Bus timeout defeat Flag.
+
+
+
+
+COLOR     address $0286        is: Current Character Colour code.
+
+
+
+
+GDCOL     address $0287        is: Background Colour under Cursor.
+
+
+
+
+HIBASE    address $0288        is: High Byte of Screen Memory Address ($04).
+
+
+
+
+XMAX      address $0289        is: Maximum number of Bytes in Keyboard Buffer ($0A).
+
+
+
+
+RPTFLG    address $028A        is: Flag: Repeat keys; $00 = Cursors, INST/DEL &  Space repeat, $40 no Keys repeat, $80 all  Keys repeat ($00).
+
+
+
+
+KOUNT     address $028B        is: Repeat Key: Speed Counter ($04).
+
+
+
+
+DELAY     address $028C        is: Repeat Key: First repeat delay Counter ($10).
+
+
+
+
+SHFLAG    address $028D        is: Flag: Shift Keys: Bit 1 = Shift, Bit 2 = CBM, Bit 3 = CTRL; ($00 = None, $01 = Shift, etc.).
+
+
+
+
+LSTSHF    address $028E        is: Last Shift Key used for debouncing.
+
+
+
+
+KEYLOG    address $028F-0290   is: Vector: Routine to determine Keyboard table to use based on Shift Key Pattern ($EB48).
+
+
+
+
+MODE      address $0291        is: Flag: Upper/Lower Case change: $00 = Disabled, $80 = Enabled ($00).
+
+
+
+
+AUTODN    address $0292        is: Flag: Auto scroll down: $00 = Disabled ($00).
+
+
+
+
+M51CTR    address $0293        is: RS232 Pseudo 6551 control Register Image.
+
+
+
+
+M51CDR    address $0294        is: RS232 Pseudo 6551 command Register Image.
+
+
+
+
+M51AJB    address $0295-0296   is: RS232 Non-standard Bits/Second.
+
+
+
+
+RSSTAT    address $0297        is: RS232 Pseudo 6551 Status Register Image.
+
+
+
+
+BITNUM    address $0298        is: RS232 Number of Bits left to send.
+
+
+
+
+BAUDOF    address $0299-029A   is: RS232 Baud Rate; Full Bit time microseconds.
+
+
+
+
+RIDBE     address $029B        is: RS232 Index to End of Input Buffer.
+
+
+
+
+RIDBS     address $029C        is: RS232 Pointer: High Byte of Address of Input Buffer.
+
+
+
+
+RODBS     address $029D        is: RS232 Pointer: High Byte of Address of Output  Buffer.
+
+
+
+
+RODBE     address $029E        is: RS232 Index to End of Output Buffer.
+
+
+
+
+IRQTMP    address $029F-02A0   is: Temporary store for IRQ Vector during Tape  operations.
+
+
+
+
+ENABL     address $02A1        is: RS232 Enables.
+
+
+
+
+TODSNS    address $02A2        is: TOD sense during Tape I/O.
+
+
+
+
+TRDTMP    address $02A3        is: Temporary storage during Tape READ.
+
+
+
+
+TD1IRQ    address $02A4        is: Temporary D1IRQ Indicator during Tape READ.
+
+
+
+
+TLNIDX    address $02A5        is: Temporary for Line Index.
+
+
+
+
+TVSFLG    address $02A6        is: Flag: TV Standard: $00 = NTSC, $01 = PAL.
+
+
+
+
+TEMP      address $02A7-02FF   is: Unused.
+
+
+
+
+SPR11     address $02C0-02FE   is: Sprite #11 Data Area.  (SCREEN + $03F8 + SPR number) POKE 1024+1016+0,11  to use Sprite#0 DATA from ($02C0-$02FE).
+
+
+
+
+IERROR    address $0300-0301   is: Vector: Indirect entry to BASIC Error Message, (X) points to Message ($E38B).
+
+
+
+
+IMAIN     address $0302-0303   is: Vector: Indirect entry to BASIC Input Line and Decode ($A483).
+
+
+
+
+ICRNCH    address $0304-0305   is: Vector: Indirect entry to BASIC Tokenise Routine ($A57C).
+
+
+
+
+IQPLOP    address $0306-0307   is: Vector: Indirect entry to BASIC LIST  Routine ($A71A).
+
+
+
+
+IGONE     address $0308-0309   is: Vector: Indirect entry to BASIC Character dispatch Routine ($A7E4).
+
+
+
+
+IEVAL     address $030A-030B   is: Vector: Indirect entry to BASIC Token  evaluation ($AE86).
+
+
+
+
+SAREG     address $030C        is: Storage for 6510 Accumulator during SYS.
+
+
+
+
+SXREG     address $030D        is: Storage for 6510 X-Register during SYS.
+
+
+
+
+SYREG     address $030E        is: Storage for 6510 Y-Register during SYS.
+
+
+
+
+SPREG     address $030F        is: Storage for 6510 Status Register during SYS.
+
+
+
+
+USRPOK    address $0310        is: USR Function JMP Instruction ($4C).
+
+
+
+
+USRADD    address $0311-0312   is: USR Address ($LB,$MB).
+
+
+
+
+TEMP      address $0313        is: Unused.
+
+
+
+
+CINV      address $0314-0315   is: Vector: Hardware IRQ Interrupt Address ($EA31).
+
+
+
+
+CNBINV    address $0316-0317   is: Vector: BRK Instruction Interrupt Address  ($FE66).
+
+
+
+
+NMINV     address $0318-0319   is: Vector: Hardware NMI Interrupt Address ($FE47).
+
+
+
+
+IOPEN     address $031A-031B   is: Vector: Indirect entry to Kernal OPEN Routine ($F34A).
+
+
+
+
+ICLOSE    address $031C-031D   is: Vector: Indirect entry to Kernal CLOSE Routine ($F291).
+
+
+
+
+ICHKIN    address $031E-031F   is: Vector: Indirect entry to Kernal CHKIN  Routine ($F20E).
+
+
+
+
+ICKOUT    address $0320-0321   is: Vector: Indirect entry to Kernal CHKOUT Routine ($F250).
+
+
+
+
+ICLRCH    address $0322-0323   is: Vector: Indirect entry to Kernal CLRCHN     Routine ($F333).
+
+
+
+
+IBASIN    address $0324-0325   is: Vector: Indirect entry to Kernal CHRIN     Routine ($F157).
+
+
+
+
+IBSOUT    address $0326-0327   is: Vector: Indirect entry to Kernal CHROUT     Routine ($F1CA).
+
+
+
+
+ISTOP     address $0328-0329   is: Vector: Indirect entry to Kernal STOP     Routine ($F6ED).
+
+
+
+
+IGETIN    address $032A-032B   is: Vector: Indirect entry to Kernal GETIN     Routine ($F13E).
+
+
+
+
+ICLALL    address $032C-032D   is: Vector: Indirect entry to Kernal CLALL     Routine ($F32F).
+
+
+
+
+USRCMD    address $032E-032F   is: User Defined Vector ($FE66).
+
+
+
+
+ILOAD     address $0330-0331   is: Vector: Indirect entry to Kernal LOAD    Routine ($F4A5).
+
+
+
+
+ISAVE     address $0332-0333   is: Vector: Indirect entry to Kernal SAVE     Routine ($F5ED).
+
+
+
+
+TEMP      address $0334-033B   is: Unused.
+
+
+
+
+TBUFFR    address $033C-03FB   is: Tape I/O Buffer.
+
+
+
+
+SPR13     address $0340-037E   is: Sprite #13.
+
+
+
+
+SPR14     address $0380-03BE   is: Sprite #14.
+
+
+
+
+SPR15     address $03C0-03FE   is: Sprite #15.
+
+
+
+
+TEMP      address $03FC-03FF   is: Unused.
+
+
+
+
+VICSCN    address $0400-07E7   is: Default Screen Video Matrix.
+
+
+
+
+TEMP      address $07E8-07F7   is: Unused.
+
+
+
+
+SPNTRS    address $07F8-07FF   is: Default Sprite Data Pointers.
+
+
+
+
+
+kernal routine address for acptr	= $ffa5
+
+
+
+
+
+kernal routine address for chkin	= $ffc6
+
+
+
+
+
+kernal routine address for chkout	= $ffc9
+
+
+
+
+
+kernal routine address for chrin	= $ffcf
+
+
+
+
+
+kernal routine address for chrout	= $ffd2
+
+
+
+
+
+kernal routine address for ciout	= $ffa8
+
+
+
+
+
+kernal routine address for cint	= $ff81
+
+
+
+
+
+kernal routine address for clall	= $ffe7
+
+
+
+
+
+kernal routine address for close	= $ffc3
+
+
+
+
+
+kernal routine address for clrchn	= $ffcc
+
+
+
+
+
+kernal routine address for getin	= $ffe4
+
+
+
+
+
+kernal routine address for iobase	= $fff3
+
+
+
+
+
+kernal routine address for ioinit	= $ff84
+
+
+
+
+
+kernal routine address for listen	= $ffb1
+
+
+
+
+
+kernal routine address for load	= $ffd5
+
+
+
+
+
+kernal routine address for membot	= $ff9c
+
+
+
+
+
+kernal routine address for memtop	= $ff99
+
+
+
+
+
+kernal routine address for open	= $ffc0
+
+
+
+
+
+kernal routine address for plot	= $fff0
+
+
+
+
+
+kernal routine address for ramtas	= $ff87
+
+
+
+
+
+kernal routine address for rdtim	= $ffde
+
+
+
+
+
+kernal routine address for readst	= $ffb7
+
+
+
+
+
+kernal routine address for restor	= $ff8a
+
+
+
+
+
+kernal routine address for save	= $ffd8
+
+
+
+
+
+kernal routine address for scnkey	= $ff9f
+
+
+
+
+
+kernal routine address for screen	= $ffed
+
+
+
+
+
+kernal routine address for second	= $ff93
+
+
+
+
+
+kernal routine address for setlfs	= $ffba
+
+
+
+
+
+kernal routine address for setmsg	= $ff90
+
+
+
+
+
+kernal routine address for setnam	= $ffbd
+
+
+
+
+
+kernal routine address for settim	= $ffdb
+
+
+
+
+
+kernal routine address for settmo	= $ffa2
+
+
+
+
+
+kernal routine address for stop	= $ffe1
+
+
+
+
+
+kernal routine address for talk	= $ffb4
+
+
+
+
+
+kernal routine address for tksa	= $ff96
+
+
+
+
+
+kernal routine address for udtim	= $ffea
+
+
+
+
+
+kernal routine address for unlsn	= $ffae
+
+
+
+
+
+kernal routine address for untlk	= $ffab
+
+
+
+
+
+kernal routine address for vector	= $ff8d

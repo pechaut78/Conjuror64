@@ -1,0 +1,8 @@
+
+1581 disk: Controller commands error code 70: NO CHANNEL (available)
+    The requested channel is not available or all channels are in
+    use. A maximum of three sequential files or one relative file
+    plus one sequential file may be opened at one time,  plus the
+    command channel. Do not omit the drive number in a sequential
+    OPEN command, or only two sequential files can be used. Close
+    all files as soon as you no longer need them.

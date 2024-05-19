@@ -1,0 +1,3 @@
+
+
+DIMFLG address  $000C       is:   Flag: Default Array dimension.

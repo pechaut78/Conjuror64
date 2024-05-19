@@ -1,0 +1,14 @@
+question,answer
+"What is the purpose and syntax of the GET statement in BASIC programming?","basic: GET
+
+  The  GET  statement  allows  you  to  get  data from the keyboard,  one
+character at a time. When GET is executed, the character that is typed is
+assigned to the variable.  If no character is typed,  then a null (empty)
+character is assigned.
+  GET  is  followed by a variable name,  usually a string variable.  If a
+numeric  variable  was  used and a nonnumeric key depressed,  the program
+would halt with an error message.  The GET statement may be placed into a
+loop,  checking for  any result.  This loop will continue  until a key is
+hit.
+
+  10 GET A$: IF  A$ = ''  THEN 10"

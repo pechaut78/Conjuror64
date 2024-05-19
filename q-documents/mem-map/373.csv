@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the RIBUF address $00F7-00F8 ?","RIBUF     address $00F7-00F8   is: RS232 Input Buffer Pointer."

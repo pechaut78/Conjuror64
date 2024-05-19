@@ -1,0 +1,11 @@
+question,answer
+"What is the reason behind the 'STRING TOO LONG' error in Commodore's BASIC 7.0 when reading data from a disk file?","1581 disk with basic 7,0: 'STRING TOO LONG' ERROR
+
+  A BASIC string may be up to 255 characters long,  although  the
+longest string you can enter via a single INPUT statement is just
+under two lines of text. This lower limitation is due to the size
+of the input buffer in Commodore's serial bus computers. The same
+limit  applies  to  INPUT#  statements.  If a single data element
+(string  or  number)  being  read from a disk file into an INPUT#
+statement  contains  more  than  88  (BASIC 2)  and 160 (BASIC 7)
+characters, BASIC will halt with a 'STRING TOO LONG ERROR'."

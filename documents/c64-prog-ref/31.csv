@@ -1,0 +1,11 @@
+question,answer
+"What is the name of the VIC-II control register that controls sprite enable?","The VIC-II control register at location 53269 ($D015 in HEX) is known as the SPRITE ENABLE register."
+"What is the purpose of the SPRITE ENABLE register?","Each of the sprites has a bit in this register which controls whether that sprite is ON or OFF."
+"How do you turn on sprite 1?","To turn on sprite 1, for example, it is necessary to turn that bit to a 1."
+"What is the command to turn on sprite 1?","POKE 53269,PEEK(53269)OR 2"
+"What is the general statement to turn on a sprite?","POKE 53269,PEEK(53269)OR (2^SN)"
+"What is the importance of turning on a sprite?","A sprite must be turned ON before it can be seen."
+"What is the range of sprite numbers?","from 0 to 7"
+"What is the purpose of the POKE command?","To turn on a sprite"
+"What is the role of the OR operator in the POKE command?","To turn on a sprite"
+"What is the significance of the 2 in the POKE command?","To turn on sprite 1"

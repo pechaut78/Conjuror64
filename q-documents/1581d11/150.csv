@@ -1,0 +1,25 @@
+question,answer
+"What is the format for temporarily changing the disk device number in Commodore computers?","1581 disk: FORMAT FOR TEMPORARILY CHANGING THE DISK DEVICE NUMBER:
+
+  PRINT#15,'U0>'+CHR$(n)
+
+  Where n = 8 to 30
+
+EXAMPLE:
+
+  Here is a program that sets any device number:
+
+   5 INPUT 'OLD DEVICE NUMBER';ODV
+  10 INPUT 'NEW DEVICE NUMBER';DV
+  20 IF DV<8 OR DV>30 THEN 10
+  30 OPEN 15,ODV,15,'U0>'+CHR$(DV): CLOSE 15
+
++---------------------------- NOTE -----------------------------+
+|   If  you  will  be  using  two  disk  drives,  and  want  to |
+| temporarily change the device number of one, you will need to |
+| run the above program with the disk drive whose device number |
+| not to be changed turned off. After the program has been run, |
+| you may turn that drive back on.  If you need to connect more |
+| than  two  drives at once,  you will need to use the hardware |
+| method of changing device numbers.                            |
++---------------------------------------------------------------+"

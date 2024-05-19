@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the basic function FN xx(X) in a programming language?","basic: FN xx(X)
+
+  Returns  the  value  of  the  user-defined function xx created in a DEF
+FN xx(X) statement."

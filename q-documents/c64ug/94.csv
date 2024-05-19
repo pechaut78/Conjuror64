@@ -1,0 +1,5 @@
+question,answer
+"What is the mathematical function that returns the value of e (approximately 2.718) raised to the power of a given number?","basic: EXP(X)
+
+  Returns the value of the mathematical constant e (2.71827183) raised to
+the power of X."

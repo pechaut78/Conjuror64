@@ -1,0 +1,17 @@
+question,answer
+"What is the output of the DUMP TRACK CACHE BUFFER command in a CMD 8 disk assembly?","1581 disk in assembly:CMD 8 -- DUMP TRACK CACHE BUFFER
+
+ BYTE    BIT 7    6      5      4      3      2      1      0
+-----------------------------------------------------------------
+  00       0      1      0      1      0      1      0      1
+-----------------------------------------------------------------
+  01       0      0      1      1      0      0      0      0
+-----------------------------------------------------------------
+  02       F      S      X      1      1      1      0      1
+-----------------------------------------------------------------
+  03                         PHYSICAL TRACK
+-----------------------------------------------------------------
+
+SWITCHES: X -- don't care
+          S -- side select
+          F -- (1 = write even if not 'dirty')"

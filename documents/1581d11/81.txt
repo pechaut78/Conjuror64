@@ -1,0 +1,49 @@
+1581 disk:  THE ORIGINAL BLOCK-READ AND BLOCK-WRITE COMMANDS
+
+  Although  the  BLOCK-READ  and  BLOCK-WRITE commands are nearly
+always  replaced  by  the  U1  and  U2 commands respectively, the
+original  commands  can  still  be  used,  as  long  as you fully
+understand their effects. Unlike U1 and U2, B-R and B-W allow you
+to read or write less than a full sector. In the case of B-R, the
+first  byte  of  the  selected  sector  is used to set the buffer
+pointer (see next section), and determines how many bytes of that
+sector are read into a disk memory buffer. A program may check to
+be sure it  doesn't attempt to read past the end of data actually
+loaded  into  the  buffer,  by watching for the value of the file
+status  variable  ST  to change from 0 to 64.  When the buffer is
+written  back  to diskette by B-W,  the first byte written is the
+current  value  of  the buffer pointer.  Only that many bytes are
+written into the specified sector. B-R and B-W may thus be useful
+in working with custom-designed file structures.
+
+FORMAT FOR THE ORIGINAL BLOCK-READ AND BLOCK-WRITE COMMANDS:
+
+  PRINT#15,"BLOCK-READ";channel#;drive#;track#;sector#
+
+abbreviated as: PRINT#15,"B-R";channel#;drive#;track#;sector#
+
+and
+
+  PRINT#15,"BLOCK-WRITE";channel#;drive#;track#;sector#
+
+abbreviated as: PRINT#15,"B-W";channel#;drive#;track#;sector#
+
+where  "channel#"  is  the channel number specified when the file
+into  which  the  block will be read was opened,  "drive#" is the
+drive number, and "track#" and "sector#" are the track and sector
+numbers containing the desired block of data to be partially read
+into or written from the file buffer.
+
+
+|   In a true BLOCK-READ, the first byte of the selected sector |
+| is  used  to  determine how many bytes of that sector to read |
+| into the disk  memory buffer.  It thus cannot be used to read |
+| an entire sector  into the buffer,  as the first data byte is |
+| always  interpreted  as  being  number of characters to read, |
+| rather than part of the data.                                 |
+|   Similarly,  in  a  true  BLOCK-WRITE,  when  the  buffer is |
+| written  back  to  diskette,  the  first  byte written is the |
+| current value of the  buffer  pointer.  Only  that many bytes |
+| are written into the specified  sector.  It cannot be used to |
+| rewrite an entire sector onto diskette unchanged, because the |
+| first data byte is overwritten by the buffer pointer.         |

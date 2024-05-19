@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose and syntax of the PRINT# statement in BASIC programming?","basic: PRINT#
+
+  There are a few differences between this statement and PRINT. PRINT# is
+followed by a number,  which refers to the device or data file previously
+OPENed.  This number is followed by a comma and a list to be printed. The
+comma and semicolon have the same effect as they do in PRINT. Please note
+that some devices may not work with TAB and SPC.
+
+  100 PRINT#1, 'DATA VALUES'; A%, B1, C$"

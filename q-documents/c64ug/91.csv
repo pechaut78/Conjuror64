@@ -1,0 +1,5 @@
+question,answer
+"What is the function that returns the absolute value of a number, without its sign, and always returns a positive answer?","basic: ABS(X)  (absolute value)
+
+  ABS  returns  the absolute value of the number,  without its sign (+ or
+-). The answer is always positive."

@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $031A-031B in the Commodore 64 Kernal?","IOPEN     address $031A-031B   is: Vector: Indirect entry to Kernal OPEN Routine ($F34A)."

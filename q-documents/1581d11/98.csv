@@ -1,0 +1,24 @@
+question,answer
+"What are the key features and considerations of the Burst Command Instruction Set (BCIS) for the 1581 disk?","1581 disk:  BURST COMMANDS
+
+
+  The  Burst  Command  Instruction  Set  (BCIS)  is  a  series of
+powerful,  versatile,  and complex commands that enables the user
+to format,  read,  and write in numerous formats.  Burst commands
+are sent via kernal calls, but the handshaking of data is done by
+the user for maximum performance. There is no parameter checking,
+so exercise care  when using the BCIS.  For instance,  if a burst
+read  with an illegal track address is sent to a 1581,  the drive
+will keep trying to find the invalid track.  Reading  and writing
+in other formats is automatic if the commands are given in proper
+sequence. Please become thoroughly familiar with all the commands
+and follow the examples given in this chapter.  It's important to
+follow the handshake conventions exactly for maximum performance.
+  With the exception of  READ  and  WRITE,  burst commands do not
+translate  from  logical to physical track and sector.  All track
+and  sector  parameters  refer to physical locations (see Chapter
+10).  Burst  sector  READ  and  WRITE  commands provide a flag to
+enable logical to physical translation.  If the flag is set,  the
+drive  does  the  translation  and  the default logical number of
+bytes  per  sector  (256)  is transferred instead of the physical
+number of bytes per sector (512)."

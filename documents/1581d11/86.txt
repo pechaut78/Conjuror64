@@ -1,0 +1,17 @@
+
+
+
+1581 disk:  USING RANDOM FILES
+
+  By combining the commands in this chapter,  it  is  possible to
+develop a file-handling program that uses random files.  What you
+need to know now is how to keep track of which blocks on the disk
+such a file has used. (Even though you know a sector has not been
+allocated by your random file,  you  must  also be sure it wasn't
+allocated by another unrelated file on the diskette.)
+  The  most  common way of recording which sectors have been used
+by  a  random  file is in a sequential file.  The sequential file
+stores a list of record numbers, with the track, sector, and byte
+location of each record.  This means three channels are needed by
+a random file:  one  for the command channel,  one for the random
+data, and the last for the sequential data.

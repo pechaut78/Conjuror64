@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location at address $00B6?","RODATA    address $00B6        is: RS232 Output Byte Buffer/Tape Read Error Flag."

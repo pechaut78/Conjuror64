@@ -1,0 +1,27 @@
+question,answer
+"What is the command to format a new diskette on a Commodore computer?","HOW TO PREPARE A NEW DISKETTE
+
+  A diskette needs a pattern of circular magnetic tracks in order
+for  the  drive's  read/write  head  to  find  things on it. This
+pattern is not on your diskettes  when you buy them,  but you can
+use  the  HEADER  command  or  the  NEW  command  to  add it to a
+diskette.  That  is  known  as  formatting the disk.  This is the
+command to use with the C128 in C128 mode or Plus/4:
+
+  HEADER 'diskette name',Iid,Ddrive#[,Udevice#]
+
+where 'diskette name' is any desired name for the diskette, up to
+16  characters  long  (including spaces).  'id'  can  be  any two
+characters as long as they don't form a BASIC keyword (such as IF
+or  ON)  either  on  their own or with the capital I before them.
+'drive#' is 0.  'device#' is 8, unless you have changed it as per
+instructions in Appendix A  (the 1581 assumes 8 even if you don't
+type it in).
+
+  The command for the C64, VIC 20, or C128 in C64 mode is this:
+
+  OPEN 15,device#,15,'NEWdrive#:diskette name,id'
+  CLOSE 15
+
+  The  device#,  drive#,  diskette  name,  and id are the same as
+described above."

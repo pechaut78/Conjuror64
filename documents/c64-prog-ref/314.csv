@@ -1,0 +1,12 @@
+question,answer
+"What are the three synthesizer voices in the 6581?","The 6581 consists of three synthesizer voices which can be used independently or in conjunction with each other"
+"What is the purpose of the Tone Oscillator in the 6581?","The Tone Oscillator controls the pitch of the voice over a wide range"
+"What is the function of the Envelope Generator in the 6581?","The Envelope Generator creates an amplitude envelope with programmable rates of increasing and decreasing volume"
+"What is the purpose of the Amplitude Modulator in the 6581?","The Amplitude Modulator controls the volume dynamics of the oscillator under the direction of the Envelope Generator"
+"What is the purpose of the Filter in the 6581?","The Filter is provided for generating complex, dynamic tone colors via subtractive synthesis"
+"What is the purpose of the third Oscillator in the 6581?","The third Oscillator can act as a random number generator for games or as a source of modulation information for creating vibrato, frequency/filter sweeps and similar effects"
+"What are the two A/D converters used for in the 6581?","The two A/D converters are used for interfacing SID with potentiometers, which can be used for 'paddles' in a game environment or as front panel controls in a music synthesizer"
+"What is the purpose of SID's ability to process external audio signals?","SID can process external audio signals, allowing multiple SID chips to be daisy-chained or mixed in complex polyphonic systems"
+"What is the purpose of the SID chip's ability to read the changing output of the third Oscillator and Envelope Generator?","These outputs can be used as a source of modulation information for creating vibrato, frequency/filter sweeps and similar effects"
+"What is the purpose of the SID chip's ability to act as a random number generator?","The third Oscillator can act as a random number generator for games"
+"What is the purpose of the SID chip's ability to interface with potentiometers?","The two A/D converters are used for interfacing SID with potentiometers, which can be used for 'paddles' in a game environment or as front panel controls in a music synthesizer"

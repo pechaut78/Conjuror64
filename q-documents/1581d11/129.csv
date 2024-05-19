@@ -1,0 +1,7 @@
+question,answer
+"What is the description of the FORMAT_DV command in a 1581 disk controller job?","1581 disk Controller Job commands: FORMAT_DV
+     $8E     Formats  one  physical track (one half of a
+                      cylinder).   The   head   must   be  placed
+                      physically  over  the  proper cylinder, and
+                      the  head  electronics must be selected for
+                      the side desired."

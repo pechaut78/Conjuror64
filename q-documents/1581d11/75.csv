@@ -1,0 +1,106 @@
+question,answer
+"What is the BASIC code to read a relative record from a disk file in both variable and fixed length fields formats?","1581 disk:  READING A RELATIVE RECORD
+
+  Once  a  relative record has been written properly to diskette,
+reading it back  into computer memory  is fairly simple,  but the
+procedure  again  varies,  depending  on whether it uses fixed or
+variable  length  fields.  Here  are  the program lines needed to
+read  back  the  variable fields created above from record number
+RE in file and channel 3:
+
+BASIC 7.0:
+
+start tok64 /128 readv128.prg
+   10 :
+   20 dopen#3,'myrelfile',l88
+   30 input'enter record number';re
+   40 :
+   50 :
+   60 record#3,(re),1
+   70 gosub 1000
+   80 input#3,na$,sa$,cs$,zp$
+   90 gosub 1000
+  100 record#3,(re),1
+  110 gosub 1000
+  120 print na$:print sa$
+  130 print cs$:print zp$
+  140 dclose#3:end
+ 1000 if ds<20 then return
+ 1002 :
+ 1010 print'error:';ds$:dclose#3:end
+
+BASIC 2.0:
+
+start tok64 readv64.prg
+   10 open 15,8,15
+   20 open 3,8,3,'myrelfile,l,'+chr$(88)
+   30 input'enter record number';re
+   40 rh=int(re/256)
+   50 rl=re-256*rh
+   60 print#15,'p'+chr$(96+3)+chr$(rl)+chr$(rh)+chr$(1)
+   70 gosub 1000
+   80 input#3,na$,sa$,cs$,zp$
+   90 gosub 1000
+  100 print#15,'p'+chr$(96+3)+chr$(rl)+chr$(rh)+chr$(1)
+  110 gosub 1000
+  120 print na$:print sa$
+  130 print cs$:print zp$
+  140 close 3:close 15:end
+ 1000 input#15,en,em$,et,es
+ 1002 if en<20 then return
+ 1010 print'error:';em$:close 3:close 15:end
+
+
+  Here are the lines  needed to read back  the version with fixed
+length fields:
+
+BASIC 7.0:
+
+start tok64 /128 readf128.prg
+   10 :
+   20 dopen#3,'myrelfile',l88
+   30 input'enter record number';re
+   40 :
+   50 :
+   60 record#3,(re),1
+   70 gosub 1000
+   80 input#3,da$
+   90 gosub 1000
+  100 record#3,(re),1
+  110 gosub 1000
+  112 na$=left$(da$,27)
+  114 sa$=mid$(da$,28,27)
+  116 cs$=mid$(da$,55,23)
+  118 zp$=right$(da$,10)
+  120 print na$:print sa$
+  130 print cs$:print zp$
+  140 dclose#3:end
+ 1000 if ds<20 then return
+ 1002 :
+ 1010 print'error:';ds$:dclose#3:end
+
+
+BASIC 2.0:
+
+start tok64 readf64.prg
+   10 open 15,8,15
+   20 open 3,8,3,'myrelfile,l,'+chr$(88)
+   30 input'enter record number';re
+   40 rh=int(re/256)
+   50 rl=re-256*rh
+   60 print#15,'p'+chr$(96+3)+chr$(rl)+chr$(rh)+chr$(1)
+   70 gosub 1000
+   80 input#3,da$
+   90 gosub 1000
+  100 print#15,'p'+chr$(96+3)+chr$(rl)+chr$(rh)+chr$(1)
+  110 gosub 1000
+  112 na$=left$(da$,27)
+  114 sa$=mid$(da$,28,27)
+  116 cs$=mid$(da$,55,23)
+  118 zp$=right$(da$,10)
+  120 print na$:print sa$
+  130 print cs$:print zp$
+  140 close 3:close 15:end
+ 1000 input#15,en,em$,et,es
+ 1002 if en<20 then return
+ 1010 print'error:';em$:close 3:close 15:end"

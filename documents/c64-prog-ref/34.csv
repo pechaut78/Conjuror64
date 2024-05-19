@@ -1,0 +1,8 @@
+question,answer
+"Multi-color mode allows how many different colors in each sprite?","up to 4"
+"What happens to the horizontal resolution in multi-color mode?","it is cut in half"
+"What is the term for a pair of dots in multi-color mode?","a bit pair"
+"What is the total number of dots across the sprite in multi-color mode?","12 pairs"
+"What is the term for the values needed to turn ON each of the four colors?","bit pair values"
+"What is the purpose of the sprite foreground color?","it is a 10"
+"What is the purpose of the character foreground color?","it is a 11"

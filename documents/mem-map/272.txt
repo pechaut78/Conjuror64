@@ -1,0 +1,3 @@
+
+
+MEMSIZ address  $0037-0038  is:   Pointer: Highest Address available to BASIC ($A000).

@@ -1,0 +1,4 @@
+question,answer
+"What error message is displayed when a disk controller command exceeds 58 characters?","1581 disk: Controller commands error code 32: SYNTAX ERROR (long line)
+    The   command   sent  is  longer  than  58  characters.   Use
+    abbreviated disk commands."

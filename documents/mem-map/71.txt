@@ -1,0 +1,2 @@
+
+address $3294		is:			Sprite 7 Color

@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory location at address $0097?","TEMPX     address $0097        is: Temporary storage of X Register during CHRIN."

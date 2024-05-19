@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the "bits1" parameter at memory address $4283 ?","address $4283	bits1 = On is:	Synchronize Osc. 2 with Osc. 1 Frequency,"

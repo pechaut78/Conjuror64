@@ -1,0 +1,2 @@
+
+FNLEN     address $00B7        is: Number of Characters in Filename.

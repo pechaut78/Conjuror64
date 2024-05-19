@@ -1,0 +1,2 @@
+
+address $D418 bit 6	is: Select Filter High-Pass Mode: 1 = On

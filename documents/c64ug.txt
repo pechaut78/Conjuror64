@@ -1,0 +1,2216 @@
+Before  attaching  anything to the computer,  check the contents of the
+Commodore  64  container.  Besides  a  manual,  you  should  find  the
+following items:
+
+  1. Commodore 64
+  2. Power supply (black box with an AC plug and supply cord)
+  3. Video cable
+  4. TV Switchbox (small silver box with short antenna leads).
+
+  If any items are missing  check back with your dealer immediately for a
+replacement.
+
+
+
+
+
+SIDE PANEL CONNECTIONS
+
+  1. POWER SOCKET.  The  free  end  of the cable from the power supply is
+     attached here to supply power to the Commodore 64.
+  2. POWER SWITCH. Turns on power to the Commodore 64.
+  3. GAME PORTS.  Each  game  connector  can  accept  a  joystick or game
+     controller  paddle,  while the lightpen can only be plugged into the
+     game port closest to the front of your computer.
+
+
+
+
+
+REAR CONNECTIONS
+
+  4. CARTRIDGE SLOT.  The rectangular slot to the left accepts program or
+     game cartridges.
+  5. CHANNEL SELECTOR.  Use  this  switch  to select which TV channel the
+     computer's picture will be displayed on.
+  6. TV CONNECTOR.  This connector supplies both the picture and sound to
+     your television set.
+  7. AUDIO & VIDEO OUTPUT.  This  connector supplies direct audio,  which
+     can  be connected to a high quality sound system,  and a "composite"
+     video signal, which can be fed into a television "monitor".
+  8. SERIAL PORT.  You can attach a printer or single disk drive directly
+     to the Commodore 64 through this connector.
+  9. CASSETTE INTERFACE.  A  DATASSETTE  recorder  can be attached to the
+     computer  so  you  can  save  information entered for use at a later
+     time.
+ 10. USER PORT.  Various interface cartridges can be attached to the user
+     port, such as the VICMODEM, or RS 232 communication cartridge.
+
+
+
+
+
+CONNECTIONS TO YOUR TV
+Connect the computer to your TV as shown below.
+1. Attach one end of the TV cable to the phono type TV signal jack at the
+   rear of the Commodore 64. Just push it in. Either end of the cable can
+   be used.
+2. Connect the other end of the cable to the antenna switchbox. Just push
+   it in.
+3. If you have a VHF antenna, disconnect it from your TV set.
+4. Connect your VHF antenna cable to the screw terminals labeled "antenna
+   input"  on  the  switchbox.  If your antenna cable is the round 75-ohm
+   coax  type,  use  a 75-ohm to 300-ohm adapter (not supplied) to attach
+   your antenna cable to the switchbox.
+5. Connect the twin lead output cable of the antenna switchbox to the VHF
+   antenna  terminals  of  your  TV set.  If your set is one of the newer
+   types  with  a round 75-ohm VHF connector,  you will need a 300-ohm to
+   75-ohm converter (not supplied) to connect the switchbox to the 75-ohm
+   VHF antenna input on the set.
+6. Set  the  TV's  VHF  tuner  to  the  channel  number  indicated on the
+   computer's  channel selector switch (channel 3  move the switch to the
+   left,  channel 4  move the switch to the right).  If a strong local TV
+   signal  is present on one of these channels,  select the other channel
+   to avoid possible interference.
+7. Plug  the  power supply cable into the power socket on the side of the
+   Commodore 64.  Just  push  it in.  It is "keyed" to allow insertion in
+   only one direction, so you can't connect the power cord the wrong way.
+   The power supply converts household current into the form the computer
+   uses.
+
+
+
+
+No additional connections are required to use the c64 with your TV. The antenna switchbox will
+connect the computer to the TV when the slide switch is in the "computer"
+position.  When  the switch is in the "TV" position your set will operate
+normally.
+
+
+
+
+
+c64 Optional Connections
+
+  Since the Commodore 64 furnishes a channel of high fidelity sound,  you
+may wish to play it through a quality amplifier to realize the best sound
+possible.   In addition,  the  Commodore  64  also  provides  a  standard
+"composite" video signal, which can be fed into a television monitor.
+  These  options  are made possible by the audio/video output jack on the
+rear panel  of the Commodore 64.  The easiest way to gain access to these
+signals is by using a standard 5-Pin DIN audio cable (not supplied). This
+cable connects directly to the audio/video connector on the computer. Two
+of  the  four pins on the opposite end of the cable contain the audio and
+video signals.  Optionally,  you can construct your own cable,  using the
+pinouts shown in Appendix I as a guide.
+  Normally,  the  BLACK  connector  of  the  DIN cable supplies the AUDIO
+signal.  This  plug  may  be  connected  to  the  AUXILIARY  input  of an
+amplifier,  or the AUDIO IN connector of a monitor or other video system,
+such as a video cassette recorder (VCR).
+  The  WHITE  or  RED connector usually supplies the direct VIDEO signal.
+This  plug is connected to the VIDEO IN connector of the monitor or video
+input section of some other video system, such as a VCR.
+  Depending  on  the manufacturer of your DIN cable,  the color coding of
+the plugs may be different.  Use the pinouts shown in Appendix I to match
+up the proper plugs  if you don't get an audio or video signal  using the
+suggested connections.
+
+
+
+
+
+Audio System
+  If you purchased peripheral equipment, such as a VIC 1541 disk drive or
+a VIC 1525E printer,  you may wish to connect it at this time.  Refer  to
+the  user's  manuals  supplied  with  any  additional  equipment  for the
+procedure for connecting it to the computer.
+
+
+
+USING THE COMMODORE 64
+
+1. Turn  on  the computer using the rocker switch on the right-side panel
+   when you're looking at the computer from the front.
+2. After a few moments the following will be displayed on the TV screen:
+
+      **** COMMODORE 64 BASIC V2 ****
+   64K RAM SYSTEM  38911 BASIC BYTES FREE
+
+   READY.
+   _  
+
+Cursor signals Commodore 64 is waiting for your input
+
+3. If your TV has a manual fine tuning knob,  adjust the TV until you get
+   a clear picture.
+4. You  may also want to adjust the color and tint controls on the TV for
+   the best display. You can use the color adjustment procedure described
+   later to get everything setup properly.  When you first get a picture,
+   the  screen  should appear mostly dark blue,  with a light blue border
+   and letters.
+
+TROUBLESHOOTING CHART
+
+| Symptom               Cause                 Remedy                    |
+| Indicator Light      Computer not "On"     Make sure power switch     |
+| not "On"                                   is in "On" position        |
+|                                                                       |
+|                      Power cable not       Check power socket for     |
+|                      not plugged in        loose or disconnected      |
+|                                            power cable                |
+|                                                                       |
+|                      Power supply not      Check connection with      |
+|                      plugged in            wall outlet                |
+|                                                                       |
+|                      Bad fuse in           Take system to authorized  |
+|                      computer              dealer for replacement of  |
+|                                            fuse                       |
+|                                                                       |
+|                      TV on wrong           Check other channel        |
+|                      channel               for picture (3 or 4)       |
+|                                                                       |
+|                      Incorrect             Computer hooks up to       |
+|                      hookup                VHF antenna terminals      |
+|                                                                       |
+|                      Video cable not       Check TV output cable      |
+|                      plugged in            connection                 |
+|                                                                       |
+|                      Computer set for      Set computer for same      |
+|                      wrong channel         channel as TV (3 or 4)     |
+|                                                                       |
+| Random patterns on   Cartridge not         Reinsert cartridge after   |
+| TV with cartridge    properly inserted     turning off power          |
+| in place                                                              |
+|                                                                       |
+| Picture without      Poorly tuned TV       Retune TV                  |
+| color                                                                 |
+|                                                                       |
+| Picture with         Bad color             Adjust color/hue/          |
+| poor color           adjustment on TV      brightness controls on TV  |
+|                                                                       |
+| Sound with excess    TV volume up high     Adjust volume of TV        |
+| background noise                                                      |
+|                                                                       |
+| Picture OK,          TV volume too low     Adjust volume of TV        |
+| but no sound                                                          |
+|                                                                       |
+|                      Aux. output not       Connect sound jack to      |
+|                      properly connected    aux. input on amplifier    |
+|                                            and select aux. input      |
+
+
+
+
+
+
+TIP:  The  COMMODORE 64  was designed  to be used by everyone.  But we at
+Commodore  recognize  that  computer  users may,  occasionally,  run into
+difficulties.  To  help  answer  your  questions  and  give  you some fun
+programming  ideas,  Commodore  has  created several publications to help
+you.  You might also find that it's a good idea to join a Commodore Users
+Club  to  help  you  meet some other COMMODORE 64 owners who can help you
+gain knowledge and experience.
+
+
+
+
+
+
+CURSOR
+
+  The  flashing  square  under  READY  is called the cursor and indicates
+where what you type on the keyboard  will be displayed on the screen.  As
+you  type,  the cursor will move ahead one space,  as the original cursor
+position  is  replaced  with  the character you typed.  Try typing on the
+keyboard and watch as characters you type are displayed on the TV screen.
+
+
+
+
+
+
+C64 Color Adjustment
+
+  There  is  a simple way to get a pattern of colors on the TV so you can
+easily  adjust  the  set.  Even  though  you may not be familiar with the
+operation  of the computer right now,  just follow along,  and you'll see
+how easy it is to use the Commodore 64.
+  First,  look on the left side of the keyboard and locate the key marked
+<CTRL>.  This  stands for ConTRoL and is used,  in conjunction with other
+keys, to instruct the computer to do a specific task.
+
+  To  use  a  control  function,  you  hold  down  the  <CTRL>  key while
+depressing a second key.
+  Try this:  hold the <CTRL> key  while also depressing the <9> key. Then
+release both keys. Nothing obvious should have happened, but if you touch
+any  key  now,  the  screen  will show the character displayed in reverse
+type, rather than normal type -- like the opening message or anything you
+typed earlier.
+  Hold down the <SPACE BAR>. What happens? If you did the above procedure
+correctly,  you  should  see  a light blue bar move across the screen and
+then move down to the next line as long as the <SPACE BAR> is depressed.
+
+     **** COMMODORE 64 BASIC V2 ****
+  64K RAM SYSTEM  38911 BASIC BYTES FREE
+
+  READY.
+
+  Now,  hold <CTRL>  while depressing any of the other number keys.  Each
+of  them  has a color  marked on the front.  Anything displayed from this
+point will be in that color. For example, hold <CTRL> and the <8> key and
+release both. Now hold the <SPACE BAR>.
+  Watch the display.  The bar is now in yellow!  In a like manner you can
+change  the  bar  to  any  of  the colors indicated on the number keys by
+holding <CTRL> and the appropriate key.
+  Change the bar to a few more different colors and then adjust the color
+and  tint  controls  on  your  TV  so  the display matches the colors you
+selected.
+  The display should appear something like this:
+
+     **** COMMODORE 64 BASIC V2 ****
+  64K RAM SYSTEM  38911 BASIC BYTES FREE
+
+  READY.
+  _________________________     <------ <3> Red bar
+  _______ ____________ ____     <------ <3>,<6>,<7> Red, Green, Blue bars
+  __________ ______________     <------ <7>,<8> Blue, Yellow bars
+  ____________                  <------ <8> Yellow bar
+
+  At  this  point  everything is properly adjusted and working correctly.
+The following chapters will introduce you to the BASIC language. However,
+you can  immediately start using some of the many prewritten applications
+and  games available for the Commodore 64  without knowing anything about
+computer programming.
+  Each  of  these packages contains detailed information about how to use
+the  program.  It is suggested,  though,  that you read through the first
+few  chapters  of  this  manual  to  become  more familiar with the basic
+operation of your new system.
+
+
+
+
+
+
+
+
+C64 Keyboard
+
+  Now that you've got everything set up and adjusted,  please  take a few
+moments  to  familiarize  yourself  with  the keyboard which is your most
+important means of communication with the Commodore 64.
+  You  will  find  the keyboard similar to a standard typewriter keyboard
+found  in  most  areas.  There  are,  however, a number of new keys which
+control specialized functions. What follows is a brief description of the
+various  keys  and how they function.  The detailed operation of each key
+will be covered in later sections.
+
+
+
+
+
+<RETURN> key
+
+  The <RETURN> key signals the computer  to look at the information  that
+you typed and enters that information into memory.
+
+
+
+
+
+
+<SHIFT> key
+
+  The <SHIFT> key works like that on a standard typewriter. Many keys are
+capable of displaying two letters or symbols  and two graphic characters.
+In  the  "upper/lower case" mode the <SHIFT> key gives you standard upper
+case  characters.  In the "upper case/graphic" mode  the <SHIFT> key will
+display the graphic character on the right hand side of the front part of
+the key.
+  In the case of special YELLOW function keys,  the <SHIFT> key will give
+you the function marked on the front of the key.
+
+
+
+
+
+EDITING key
+
+  No  one  is  perfect,  and  the Commodore 64 takes that into account. A
+number  of  editing  keys  let  you  correct  typing  mistakes  and  move
+information around on the screen.
+
+
+
+
+
+<CRSR> key
+
+  There are two keys marked <CRSR> (CuRSoR), one with up and down arrows,
+the other with left and right arrows.  You can use these keys to move the
+cursor up and down or left and right.  In the unshifted mode,  the <CRSR>
+keys  will  let  you  move  the  cursor down and to the right.  Using the
+<SHIFT> key and <CRSR> keys allows the cursor to be moved either up or to
+the  left.  The  cursor keys have a special repeat feature that keeps the
+cursor moving until you release the key.
+
+
+
+
+
+
+<INST/DEL> key
+
+  If  you  hit  the  <INST/DEL>  key,  the cursor will move back a space,
+erasing  (DELeting)  the  previous  character you typed. If you're in the
+middle of a line, the character to the left is deleted and the characters
+to the right automatically move together to close up the space.
+  A <SHIFT>ed <INST/DEL> allows you to INSerT information on a line.  For
+example,  if you noticed a typing mistake  in the beginning of a line  --
+perhaps you left out part of the name  -- you could use the <CRSR> key to
+move back to the error  and then hit <INST/DEL>  to insert a space.  Then
+just type in the missing later.
+
+
+
+
+
+
+<CLR/HOME> key
+
+  <CLR/HOME>  positions  the cursor at the "HOME" position of the screen,
+which is the upper left-hand corner.  A shifted <CLR/HOME> will clear the
+screen and place the cursor in the home position.
+
+
+
+
+
+<RESTORE>  key
+
+  <RESTORE>  operates as the name implies.  It stores the computer to the
+normal  state  it was in before you changed things with a program or some
+command. A lot more will be said on this in later chapters.
+
+
+
+
+
+
+FUNCTION KEYS key
+
+  The  four  function  keys  on  the  right  side  of the keyboard can be
+"programmed"  to  handle  a variety of functions.  They can be defined in
+many ways to handle repetitive tasks.
+
+
+
+
+
+<CTRL> key
+
+  The  <CTRL>  key,  which  stands for ConTRoL, allows you to set colors,
+and  perform  other  specialized  functions. You hold the <CTRL> key down
+while  depressing  another  designated key to get a control function. You
+had an opportunity to try the <CTRL> key  when you changed text colors to
+create different color bars during the setup procedure.
+
+
+
+
+
+<RUN/STOP> key
+
+  Normally,  depressing the <RUN/STOP>  key  will stop the execution of a
+BASIC program. It signals the computer to STOP doing something. Using the
+<RUN/STOP> key in the shifted mode will allow you to automatically load a
+program from tape.
+
+
+
+
+
+<C=> COMMODORE KEY key
+
+  The Commodore key <C=> performs a number of functions. First, it allows
+you to move between the text and graphic display modes.
+  When  the computer is first turned on,  it is in the upper case/graphic
+mode,  that  is,  everything  you  type is in upper case letters.  As was
+mentioned, using the <SHIFT> key in this mode will display the graphic on
+the right side of the keys.
+  If you hold down the <C=> key and <SHIFT> key,  the display will change
+to upper and lower case. Now, if you hold down the <C=> key and any other
+key with a graphic symbol,  the graphic shown on the left side of the key
+will be displayed.
+  To get back into the upper case/graphic mode hold down the <C=> key and
+<SHIFT> key again.
+  The second function of the <C=> key is to  allow you access to a second
+set  of  eight  text colors.  By holding down the <C=> key and any of the
+number keys,  any text now typed will be in the alternate color available
+from  the  key  you depressed.  Chapter 5 lists the text colors available
+from each key.
+
+`
+
+
+
+
+C64 Rinitialize
+
+<SHIFT> and <CLR/HOME>.  The screen should clear and the cursor
+will  be  positioned  in  the  "home" spot (upper left-hand corner of the
+screen).
+  Now, simultaneously hold <C=> and the <7> key. This sets the text color
+back to light blue.  There is one more step needed to get everything back
+to normal. Hold <CTRL> and <0> (Zero not Oh!). This sets the display mode
+back  to  normal.  If  you  remember,  we turned REVERSE type on with the
+<CTRL><9> to create the color bars (the color bars were actually reversed
+spaces).  If  we were in the normal text mode during the color test,  the
+cursor would have moved, but just left blank spaces.
+
+
+
+
+
+
+C64 Reset
+There is a simple way to
+reset the machine  to the normal display.  First press the <RUN/STOP> key
+and then press the <RESTORE> key.  <RUN/STOP> must always be held down in
+order to use the <RESTORE> key function.
+  This will clear the screen and return everything to normal. If there is
+a  program  in  the computer,  it will be left untouched.  This is a good
+sequence to remember, especially if you do a lot of programming.
+  If  you  wish  to  reset  the machine as if it were turned off and then
+switched on again, type,  SYS 64759  and press <RETURN>. Be careful using
+this  command!  It  will  wipe  out  any  program  or information that is
+currently in the computer.
+
+
+
+
+
+
+
+Loading and Saving Programs
+
+  One  of  the most important features of the Commodore 64 is the ability
+to save and load programs to and from cassette tape or disk.
+  This  capability allows you to save the programs you write for use at a
+later time, or purchase prewritten programs to use with the Commodore 64.
+  Make  sure  that  either  the  disk  drive or cassette unit is attached
+properly.
+
+
+
+
+
+
+CARTRIDGES: The Commodore 64 computer has a line of programs and games
+on cartridge.  The programs offer a wide variety of business and personal
+applications  and  the  games  are  just  like real arcade games  --  not
+imitations. To load these games, first turn on your TV set. Next turn OFF
+your  Commodore 64.  YOU MUST TURN OFF YOUR COMMODORE 64 BEFORE INSERTING
+OR  REMOVING  CARTRIDGES  OR  YOU  MAY  DAMAGE  THE CARTRIDGE AND/OR YOUR
+COMMODORE 64! Third insert the cartridge.  Now turn your Commodore 64 on.
+Finally  type  the  appropriate START key as is listed on the instruction
+sheet that comes with each game.
+
+
+
+
+
+CASSETTES:  Use  your  DATASSETTE  recorder  and  the  ordinary  audio
+cassettes  that  came as part of your prepackaged program.  Make sure the
+tape is completely rewound to the beginning of the first side.  Then just
+type  LOAD.  The  computer  will  answer with PRESS PLAY ON TAPE,  so you
+respond  by  pressing play on your datassette machine.  At this point the
+computer  screen  will go blank until the program is found.  The computer
+will say  FOUND (PROGRAM NAME)  on the screen.  Now you press down on the
+<C=> key.  This will actually load the program into the computer.  If you
+want to stop the loading simply press <RUN/STOP> key.
+
+
+
+
+
+DISK:  Using your disk drive,  carefully insert the preprogrammed disk
+so  that  the label on the disk is facing up and is closest to you.  Look
+for  a  little notch on the disk (it might be covered with a little piece
+of tape). If  you're inserting the disk properly the notch will be on the
+left side.  Once the disk is inside  close the protective gate by pushing
+down on the lever.  Now type  LOAD "PROGRAM NAME",8  and hit the <RETURN>
+key. The disk will make noise and your screen will say:
+
+  SEARCHING FOR PROGRAM NAME
+  LOADING
+  READY.
+  _
+
+  When  the  READY  comes  on  and  the  _ is on, just type RUN, and your
+prepackaged software is ready to use.
+
+
+
+
+
+
+LOADING PROGRAMS FROM TAPE
+
+  Loading  a program back from tape or disk is just as simple.  For tape,
+rewind the tape back to the beginning and type:
+
+  LOAD "PROGRAM NAME"
+
+  If  you  don't remember the program name,  just type LOAD and the first
+program on the tape will be loaded into memory.
+  After you press <RETURN> the computer will respond with:
+
+  PRESS PLAY ON TAPE
+
+  After  you  depress  the  play  key, the screen will blank, turning the
+border color of the screen as the computer searches for the program.
+  When the program is found, the screen will display:
+
+  FOUND PROGRAM NAME
+
+To  actually  load  the  program,  depress the <C=> key. To abandon the
+loading  procedure,  hit  <RUN/STOP>.  If  you hit the Commodore key, the
+screen  will  again  turn  the  border color while the program is loaded.
+After  the  loading procedure is completed, the screen will return to the
+normal state and the READY prompt will reappear.
+
+
+
+
+
+
+LOADING PROGRAMS FROM DISK
+
+  Loading a program from disk follows the same format. Type:
+
+  LOAD "PROGRAM NAME",8
+
+  The  8  is  the  code for the disk, so you're just letting the computer
+know that you want the program loaded from the disk.
+  After  you  hit  <RETURN>  the disk will start whirring and the display
+shows:
+
+  SEARCHING FOR PROGRAM NAME
+  LOADING
+  READY.
+  _
+
+NOTE:
+  When   you   load  a  new  program  into  the  computer's  memory,  any
+instructions  that  were  in the computer previously will be erased. Make
+sure  you  save  a  program  you're  working on before loading a new one.
+Once a program has been loaded, you can RUN it, LIST, or make changes and
+re-save the new version.
+
+
+
+
+
+
+
+SAVING PROGRAMS ON TAPE
+
+  After entering a program, if you wish to save it on tape, type:
+
+  SAVE "PROGRAM NAME"
+
+  "PROGRAM NAME" can be up to 16 characters long.  After you hit <RETURN>
+the computer will respond with:
+
+  PRESS PLAY AND RECORD ON TAPE
+
+  Press both the record and play keys on the datassette.  The screen will
+blank, turning the color of the border.
+  After  the  program  is  saved on tape, the READY prompt will reappear,
+indicating  that  you can start working on another program,  or just turn
+off the computer for a while.
+
+
+
+
+
+
+SAVING PROGRAMS ON DISK
+
+  Saving a program on disk is even simpler. Type:
+
+  SAVE "PROGRAM NAME",8
+
+  The  8  is  the code for the disk,  so you're just letting the computer
+know you want the program saved to disk.
+  After you press  <RETURN>  the disk will start to turn and the computer
+will respond with:
+
+  SAVING PROGRAM NAME
+  OK
+  READY.
+  _
+
+
+
+
+
+
+PRINT and Calculations
+
+  Now  that  you've  gotten  through  a  couple  of  the  more  difficult
+operations  you need  in order to keep the programs you like,  lets start
+making some programs for you to save.
+  Try typing the following exactly as shown:
+
+  PRINT "COMMODORE 64"     <----- Type this line and hit <RETURN>
+  COMMODORE 64            <------ Computer typed
+
+  READY.
+  _
+
+  If  you  make  a  typing  mistake,  use the <INST/DEL> key to erase the
+character  immediately  to the left of the cursor. You can delete as many
+characters as necessary.
+  Let's  see  what  went on in the example above.  First,  you instructed
+(commanded) the computer to PRINT whatever was inside the quote marks. By
+hitting  <RETURN>  you  told  the computer to do  what you instructed and
+COMMODORE 64 was printed on the screen.
+  When you use the PRINT statement in this form,  whatever is enclosed in
+quotes is printed exactly as you typed it.
+  If the computer responded with:
+
+  ?SYNTAX ERROR
+
+ask yourself if you made a mistake in typing,  or forgot the quote marks.
+The  computer  is  precise  and  expects  instructions  to  be given in a
+specific form.
+  But don't get worried; just remember to enter things as we present them
+in the examples and you'll get along great with the Commodore 64.
+  Remember, you can't hurt the computer by typing on it, and the best way
+to learn BASIC is to try different things and see what happens.
+  PRINT  is  one  of  the  most useful and powerful commands in the BASIC
+language.  With  it,  you  can  display  just  about  anything  you wish,
+including graphics and results of computations.
+  For example,  try the following.  Clear the screen  by holding down the
+<SHIFT> key  and  <CLR/HOME> key and type (be sure to use the '1' key for
+one, not a letter 'I'):
+
+  PRINT 12 + 12            
+  24                      
+
+  READY.
+  _
+
+  What you've discovered is  that the Commodore 64 is a calculator in its
+basic form.  The result of "24" was calculated and printed automatically.
+In  fact,  you can also perform  subtraction,  multiplication,  division,
+exponentiation, and  advanced  math  functions such as calculating square
+roots, etc. And you're not limited to a single calculation on a line, but
+more on that later.
+  Note  that in the above form,  PRINT behaved differently from the first
+example.  In  this  case,  a value or result of a calculation is printed,
+rather  than  the  exact message you entered because the quote marks were
+omitted.
+
+
+
+
+
+
+
+basic: ADDITION
+
+  The plus sign (+) signals addition: we instructed the computer to print
+the result of 12 added to 12.  Other arithmetic operations take a similar
+form to addition.  Remember to always hit <RETURN> after typing PRINT and
+the calculation.
+
+
+
+
+
+
+basic: SUBTRACTION
+
+  To subtract, use the conventional minus (-) sign. Type:
+
+  PRINT 12 - 9             
+  3
+
+
+
+
+
+
+
+basic: MULTIPLICATION
+
+  If  you  wanted  to  multiply  12  times  12,  use  the asterisk (*) to
+represent multiplication. You would type:
+
+  PRINT 12 * 12            <----- Hit <RETURN>
+  144
+
+
+
+
+
+
+basic: DIVISION
+
+  Division uses the familiar "/". For example, to divide 144 by 12, type:
+
+  PRINT 144 / 12           <----- Hit <RETURN>
+  12
+
+
+
+
+
+basic: EXPONENTIATION
+
+  In  a  like fashion,  you can easily raise a number to a power (this is
+the same as multiplying a number by itself  a specified number of times).
+The '^' (up arrow) signifies exponentiation.
+
+  PRINT 12 ^ 5
+  248832
+
+  This is the same as typing:
+
+  PRINT 12 * 12 * 12 * 12 * 12
+  248832
+
+
+
+
+
+
+  BASIC  has  number  of  shortcut ways of doing things.  One such way is
+abbreviating BASIC commands (or keywords).  A '?' can be used in place of
+PRINT,  for example.  As we go on you'll be presented with many commands;
+Appendix D shows the abbreviations for each and what will be displayed on
+the screen when you type the abbreviated form.
+
+many calculations
+may be performed on the same line, and they can be of mixed types.
+  You could calculate this problem:
+
+  ? 3 + 5 - 7 + 2          (The '?' replaces the word PRINT)
+  3
+
+
+
+
+
+
+
+
+basic: how to start ?
+
+Clear the screen by holding down the <SHIFT> key, and then depressing the
+<CLR/HOME> key.
+Type NEW and press <RETURN>. (This just clears out any numbers that might
+have been left in the computer from your experimenting.)
+Now type the following exactly as shown  (remember to hit <RETURN>  after
+each line)
+
+  10 ? "COMMODORE 64"
+  20 GOTO 10
+
+  Now, type RUN and hit <RETURN> -- watch what happens.  Your screen will
+come alive with COMMODORE 64. After you've finished watching the display,
+hit <RUN/STOP> to stop the program.
+
+
+
+
+
+
+
+basic:  Editing Tips
+
+  If you make a mistake on a line, you have a number of editing options.
+
+1. You can retype a line anytime,  and the  computer  will  automatically
+   substitute the new line for the old one.
+2. An unwanted line can be erased by simply typing the  line  number  and
+   <RETURN>.
+3. You can also easily edit an existing line,  using the cursor keys  and
+   editing keys.
+
+   Suppose you made a typing mistake in a line of the example. To correct
+it without retyping the entire line, try this:
+  Type LIST, then using the <SHIFT> and <CRSR UP/DOWN> keys together move
+the  cursor  up  until  it  is  positioned  on  the line that needs to be
+changed.
+  Now,  use  the  cursor-right  key  to  move the cursor to the character
+you  want  to  change,  typing the change over the old character. Now hit
+<RETURN> and the corrected line will replace the old one.
+  If you need more space on the line, position the cursor where the space
+is needed and hit  <SHIFT>  and  <INST/DEL>  at the same time and a space
+will  open  up.  Now  just  type  in  the  additional information and hit
+<RETURN>.  Likewise,  you  can  delete unwanted characters by placing the
+cursor to the right of the unwanted character and hitting the  <INST/DEL>
+key.
+ 
+
+
+
+
+
+basic:  Variables
+
+  Variables  are  some  of  the  most  used  features  of any programming
+language,  because  variables  can represent much more information in the
+computer.  Understanding how variables operate will make computing easier
+and allow us to accomplish feats that would not be possible otherwise.
+  Imagine a number of boxes within the computer that can hold a number or
+a string of text characters.  Each of these boxes is to be labeled with a
+name  that  we choose.  That name is called a variable and represents the
+information in the respective box.
+  For example, if we say:
+
+  10 X% = 15
+  20 X = 23.5
+  30 X$ = "THE SUM OF X% + X ="
+
+  The computer might represent the variables like this:
+
+  X%  15
+
+  X   23.5
+
+  X$  THE SUM OF X% + X =
+
+  A  variable  name  represents  the  box,  or memory location, where the
+current  value  of  the variable is stored. As you can see, we can assign
+either  an  integer  number, floating point number, or a text string to a
+variable.
+  The '%' symbol  following  a  variable name indicates the variable will
+represent  an  integer  number.  The following are valid integer variable
+names:
+
+  A%
+  X%
+  A1%
+  NM%
+
+  The  '$'  following  the  variable  name  indicates  the  variable will
+represent a text string. The following are examples of string variables:
+
+  A$
+  X$
+  MI$
+
+  Floating  point  variables  follow  the  same  format,  with  the  type
+indicator:
+
+  A1
+  X
+  Y
+  MI
+
+
+
+
+basic: variable names: 
+
+  In  assigning  a  name  to a variable there are a few things to keep in
+mind.  First,  a  variable name can have one or two characters. The first
+character  must  be  an  alphabetic  character  from  A to Z;  the second
+character  can  be either alphabetic or numeric (in the range 0 to 9).  A
+third character can be included to indicate the type of variable (integer
+or text string), '%' or '$'.
+  You can use variable names  having more than two alphabetic characters,
+but  only the first two are recognized by the computer.  So PA and PARTNO
+are the same and would refer to the same variable box.
+  The  last  rule  for  variable names is simple:  they can't contain any
+BASIC keywords  (reserved  words)  such as GOTO, RUN, etc.  Refer back to
+Appendix D for a complete list of BASIC reserved words.
+
+
+
+
+
+
+basic: INPUT
+
+
+To get an idea of how INPUT works,  type  NEW  <RETURN>  and enter this
+short program:
+
+  10 INPUT A$
+  20 PRINT "YOU TYPED: ";A$
+  30 PRINT
+  40 GOTO 10
+  RUN
+  ? COMMODORE 64 
+  YOU TYPED: COMMODORE 64 
+
+  What  happens  when  you  run this simple program. A question mark will
+appear,  indicating  that  the  computer  is  waiting  for  you  to  type
+something. Enter any character, or group of characters, from the keyboard
+and  hit  <RETURN>.  The  computer  will  then  respond with "YOU TYPED:"
+followed by the information you entered.
+You  can  INPUT  either numeric or string variables,  and even have the
+INPUT statement prompt the user with a message. The format of INPUT is:
+
+  INPUT "PROMPT MESSAGE";VARIABLE
+
+
+Or, just:
+
+  INPUT VARIABLE
+
+NOTE:  To  get out of this program hold down the <RUN/STOP> and <RESTORE>
+keys.
+
+
+
+
+
+
+basic:  GET
+
+  GET  allows  you  to  input  one  character at a time from the keyboard
+without  hitting  <RETURN>.  This  really  speeds  entering  data in many
+applications.  Whatever  key  is hit is assigned variable to the variable
+you specify with GET.
+  The following routine illustrates how GET works:
+
+  NEW
+
+   1 PRINT "{CLR/HOME}"
+  10 GET A$: IF A$ = "" THEN 10
+  20 PRINT A$;        
+  30 GOTO 10          
+
+If you RUN the program,  the screen will clear  and each time you hit a
+key, will  print  it  on  the  display,  and  then GET another
+character. It is important to note that the character entered will not be
+displayed  unless you specifically PRINT it to the screen,  as we've done
+here.
+
+
+
+
+
+basic:  Random Numbers and Other Functions
+
+The RND instruction is generating random numbers
+
+  PRINT INT(6*RND(1))+1,
+
+The general formula for generating a set of random numbers in a certain
+range is:
+
+  NUMBER=INT(LOWER+(UPPER-LOWER+1)*RND(1))
+
+
+
+
+
+
+basic: PRINTing Colors
+
+you  can  change  text colors by simply holding the <CTRL> key and one of
+the color keys.  
+
+You have a full range of 16 text colors to work with.  Using <CTRL> key
+and a number key, the following colors are available:
+
+     1        2        3        4        5       6        7        8
+   Black    White     Red     Cyan    Purple   Green    Blue    Yellow
+
+  If  you  hold  down the <C=> key along with the appropriate number key,
+these additional eight colors can be used:
+
+     1        2        3        4        5       6        7        8
+   Orange   Brown   Lt.Red    Gray 1  Gray 2  Lt.Green  Lt.Blue  Gray 3
+
+Type NEW,  and experiment with the following.  Hold down the <CTRL> key
+and  at  the  same  time hit the <1> key.  Next,  hit the <R> key without
+holding down the <CTRL> key.  Now,  while again depressing the <CTRL> key
+at the same time hit the <2> key.  Release the <CTRL> key and hit the <A>
+key. Move through the numbers, alternating with the letters, and type out
+the word RAINBOW as follows:
+
+
+
+
+
+
+  KEYBOARD    COLOR      DISPLAY         KEYBOARD    COLOR      DISPLAY
+  ---------------------------------------------------------------------
+  <CTRL><1>   BLACK                      <C=><1>     ORANGE
+  <CTRL><2>   WHITE                      <C=><2>     BROWN
+  <CTRL><3>   RED                        <C=><3>     LT. RED
+  <CTRL><4>   CYAN                       <C=><4>     GRAY 1
+  <CTRL><5>   PURPLE                     <C=><5>     GRAY 2
+  <CTRL><6>   GREEN                      <C=><6>     LT. GREEN
+  <CTRL><7>   BLUE                       <C=><7>     LT. BLUE
+  <CTRL><8>   YELLOW                     <C=><8>     GRAY 3
+
+
+
+
+
+basic:  PEEKs and POKEs
+
+  Just  as  variables  could be thought of as a representation of "boxes"
+within the machine where you placed your information,  you can also think
+of  some  specially  defined  "boxes"  within the computer that represent
+specific memory locations.
+
+  The  Commodore 64  looks  at  these  memory  locations  to see what the
+screen's background and border color should be, what characters are to be
+displayed on the screen -- and where -- and a host of other tasks.
+  By  placing,  "POKEing",  a  different  value  into  the  proper memory
+location,  we can change colors, define and move objects, and even create
+music.
+
+  Above  we  showed just four locations,  two of which control the screen
+and background colors. Try typing this:
+
+  POKE 53281,7 <RETURN>
+
+  The  background  color  of  the screen will change to yellow because we
+placed the value '7' --  for yellow --  in the location that controls the
+background color of the screen.
+
+
+
+
+
+
+
+basic: SCREEN MEMORY MAP
+
+  Since  the  computer's screen is capable of holding 1000 characters (40
+columns by 25 lines)  there are 1000 memory locations set aside to handle
+what  is placed on the screen.  The layout of the screen could be thought
+of as a grid, with each square representing a memory location.
+  And  since  each location in memory can contain a number from 0 to 255,
+there  are  256  possible  values for each memory location.  These values
+represent  the  different  characters  the  Commodore 64 can display (see
+Appendix E).  By  POKEing  the  value  for a character in the appropriate
+screen  memory  location,  that character will be displayed in the proper
+position.
+
+
+
+
+
+
+
+basic:   Screen  memory  in  the Commodore 64 normally begins at memory location
+1024,  and ends at location 2023.  Location 1024 is the upper left corner
+of the screen. Location 1025 is the position of the next character to the
+right  of that,  and so on down the row.  Location 1063 is the right-most
+position of the first row. The next location following the last character
+on a row is the first character on the next row down.
+
+  Now,  let's  say that you're controlling a ball bouncing on the screen.
+The ball is in the middle of the screen,  column 20, row 12.  The formula
+for calculation of the memory location on the screen is:
+
+  POINT = 1024 + X + 40 * Y
+
+where X is the column and Y is the row.
+  Therefore, the memory location of the ball is:
+  POKE 1524, 81
+  POKE 55796, 1
+
+
+
+
+
+
+
+COLOR MEMORY MAP
+
+For every spot on the Commodore 64's
+screen  there are two memory locations,  one for the character code,  and
+the  other  for  the color code.  The color memory map begins at location
+55296 (top left-hand  corner),  and continues on for 1000 locations.  The
+same color codes, from 0-15, that we used to change border and background
+colors can be used here to directly change character colors.
+
+
+
+
+
+
+basic:  Sprite Creation
+
+  Sprites are controlled by a separate picture-maker in the Commodore 64.
+This  picture maker handles the video display.  It does all the hard work
+of  creating  and  keeping  track  of  characters and graphics,  creating
+colors, and moving around.
+  This display circuit has 46 different "ON/OFF" locations which act like
+internal  memory  locations.  Each  of these locations breaks down into a
+series of 8 blocks. And each block can either be "ON" or "OFF". We'll get
+into  more  detail  about this later.  By POKEing the appropriate decimal
+value  in  the  proper  memory location you can control the formation and
+movement of your sprite creations.
+  In  addition  to accessing many of the picture making locations we will
+also be using some of the Commodore 64's main memory to store information
+(data) that defines the sprites. Finally, eight memory locations directly
+after  the  screen memory will be used to tell the computer exactly which
+memory area each sprite will get its data from.
+ 
+
+
+
+basic: Sprites
+
+ you need to know what
+picture making locations control the functions you need. These locations,
+called registers, could be illustrated in this manner:
+
+  Register(s)   Description
+
+   0            X coordinate of sprite 0
+   1            Y coordinate of sprite 0
+   2 - 15       Paired like 0 and 1 for sprites 1-7
+  16            Most Significant Bit -- X coordinate
+  21            Sprite appear: 1 = appear, 0 = disappear
+  29            Expand sprite in "X" Direction
+  23            Expand sprite in "Y" Direction
+  39-46         Sprite 0-7 color
+
+  In  addition  to  this  information you need to know from which 64 byte
+section sprites will get their data (1 byte is used).
+  This data is handled by 8 locations directly after screen memory:
+
+        | 2040 | 2041 | 2042 | 2043 | 2044 | 2045 | 2046 | 2047 |
+     SPRITE 0      1      2      3      4      5      6      7
+
+  Now let's outline the exact procedure to get things moving  and finally
+write a program.
+  There  are  only a few things necessary to actually create  and move an
+object.
+
+  1. Make the proper sprite(s) appear on the screen by POKEing into
+     location 21 a 1 for the bit which turns on the sprite.
+  2. Set sprite pointer (locations 2040-2047) to where sprite data should
+     be read from.
+  3. POKE actual data into memory.
+  4. Through a loop, update X and Y coordinates to move sprite around.
+  5. You can, optionally, expand the object, change colors,  or perform a
+     variety  of  special  functions.  Using  location  29 to expand your
+     sprite in the "X" direction and location 23 in the "Y" direction.
+
+  
+
+
+
+
+
+
+
+
+basic: VARIABLES
+
+  The Commodore 64 uses three types of variables in BASIC. These are real
+numeric, integer numeric, and string (alphanumeric) variables.
+  Variable  names  may consist of a single letter, a letter followed by a
+number, or two letters.
+  An  integer  variable  is specified by using the percent (%) sign after
+the  variable name.  String variable have the dollar sign ($) after their
+name.
+
+Examples
+
+  Real Variable Names: A, A5, BZ
+  Integer Variable Names: A%, A5%, BZ%
+  String Variable Names: A$, A5$, BZ$
+
+  
+
+
+
+
+basic: Arrays are lists of variables with the same name,  using extra  numbers
+to specify the element of the array.  Arrays are defined  using  the  DIM
+statement, and may contain floating point, integer,  or string variables.
+The array variable name is followed by a set of parentheses ( ) enclosing
+the number of variables in the list.
+
+  A(7), BZ%(11), A$(50), PT(20,20)
+
+  NOTE:  There are three variable names which are reserved for use by the
+Commodore 64, and may not be defined by you.  These variables are: ST, TI
+and  TI$.   ST  is  a  status  variable  which  relates  to  input/output
+operations.  The value of ST will change  if there is a problem loading a
+program from disk or tape.
+  TI and TI$ are variables which relate to the real-time clock built into
+the Commodore 64. The variable TI is updated every 1/60th of a second. It
+starts at 0 when the computer is turned on, and is reset only by changing
+the value of TI$.
+  TI$  is a string which is constantly updated by the system.  The  first
+two characters contain the number of hours , the  3rd and 4th  characters
+the number of minutes,  and  the 5th and 6th characters are the number of
+seconds.  This  variable  can  be  given  any numeric value,  and will be
+updated from that point.
+
+  TI$ = "101530" sets the clock to 10:15 and 30 seconds AM.
+
+  This clock is erased when the computer is turned  off,  and  starts  at
+zero when the system is turned back on.
+
+
+
+
+
+
+
+basic: OPERATORS
+
+  The arithmetic operators include the following signs:
+
+  +  Addition
+  -  Subtraction
+  *  Multiplication
+  /  Division
+  ^  Raising to a power (exponentiation)
+
+  On a line  containing  more than one operator,  there is a set order in
+which operations always occur. If several operations are used together on
+the  same  line,  the  computer  assigns  priorities  as follows:  First,
+exponentiation. Next, multiplication and division, and last, addition and
+subtraction.
+  You can change the order of operations  by enclosing within parentheses
+the calculation to be performed first. Operations enclosed in parentheses
+will take place before other operations.
+  There are also operations for equalities and inequalities:
+
+  =  Equal To
+  <  Less Than
+  >  Greater Than
+  <= Less Than or Equal To
+  >= Greater Than or Equal To
+  <> Not Equal To
+
+  Finally, there are three logical operators:
+
+  AND
+  OR
+  NOT
+
+  These are used most  often  to  join  multiple  formulas  in  IF...THEN
+statements. For example:
+
+  IF A=B AND C=D THEN 100  (Requires both parts to be true)
+  IF A=B OR  C=D THEN 100  (Allows either part to be true)
+
+
+
+
+
+
+
+
+basic: CONT (Continue)
+
+  This command is used to restart the execution of a  program  which  has
+been stopped by either using the <STOP> key, a STOP statement,  or an END
+statement within the program. The program will restart at the exact place
+from where it left off.
+  CONT will not work if you have changed or added lines  to  the  program
+(or even just moved the cursor),  or if the  program  halted  due  to  an
+error, or if you caused an error before trying to restart the program. In
+these cases you will get a CAN'T CONTINUE ERROR.
+
+
+
+
+
+
+
+basic: LIST
+
+  The  LIST  command  allows  you  to look at lines of a BASIC program in
+memory.  You  can  ask  for  the  entire program to be displayed, or only
+certain line numbers.
+
+  LIST              Shows entire program
+  LIST 10-          Shows only from line 10 until end
+  LIST 10           Shows only line 10
+  LIST -10          Shows lines from beginning until 10
+  LIST 10-20        Shows line from 10 to 20, inclusive
+
+
+
+
+
+basic: LOAD
+
+  This  command  is  used  to  transfer  a program from tape or disk into
+memory  so  the  program  can  be  used.  If  you  just type LOAD and hit
+RETURN,  the  first  program found on the cassette unit will be placed in
+memory.  The  command  may  be followed by a program name enclosed within
+quotes.  The  name  may  then  be  followed  by  a  comma and a number or
+numeric  variable,  which  acts  as a device number to indicate where the
+program is coming from.
+
+  If  no  device  number  is  given,  the Commodore 64 assumes device #1,
+which  is  the  cassette  unit.  The  other device commonly used with the
+LOAD command is the disk device, which is device #8.
+
+  LOAD              Reads in the next program on tape
+  LOAD "HELLO"      Searches tape for program called HELLO,
+                    and loads program, if found
+  LOAD A$           Looks for program whose name is in the variable A$
+  LOAD "HELLO",8    Looks for program called HELLO on the disk drive
+  LOAD "*",8        Looks for first program on disk
+
+
+
+
+
+
+basic: NEW
+
+  This  command  erases  the  entire  program in memory,  and also clears
+out  any  variables  that  may  have  been  used.  Unless the program was
+SAVEd, it is lost. BE CAREFUL WHEN YOU USE THIS COMMAND.
+  The NEW command can also be used as a BASIC program statement. When the
+program reaches this line,  the program is erased.  This is useful if you
+want to leave everything neat when the program is done.
+
+
+
+
+
+
+basic: RUN
+
+  This  command  causes  execution  of  a  program,  once  the program is
+loaded  into  memory.  If  there  is  no  line  number following RUN, the
+computer  will  start  with  the  lowest line number. If a line number is
+designated, the program will start executing from the specified line.
+
+  RUN               Starts program at lowest line number
+  RUN 100           Starts execution at line 100
+  RUN X             UNDEFINED STATEMENT ERROR. You must always specify an
+                    actual line number, not a variable representation
+
+
+
+
+
+basic: SAVE
+
+  This  command  will  store  the program currently in memory on cassette
+or  disk.  If  you  just  type SAVE and RETURN, the program will be SAVEd
+on  cassette.  The  computer  has no way of knowing if there is a program
+already  on  that  tape, so be careful with your tapes or you may erase a
+valuable program.
+  If you type SAVE followed by a name in quotes or a string variable, the
+computer  will  give  the  program  that  name,  so it can be more easily
+located  and retrieved in the future.  The name may also be followed by a
+device number.
+  After  the  device  number,  there  can be a comma and a second number,
+either  0  or  1. If the second number is 1, the Commodore 64 will put an
+END-OF-TAPE  marker  after  your  program.  This signals the computer not
+to  look  any  further on the tape if you were to give an additional LOAD
+command.  If  you  try  to  LOAD  a program and the computer finds one of
+these markers, you will get a FILE NOT FOUND ERROR.
+
+  SAVE              Stores program to tape without name
+  SAVE "HELLO"      Stores on tape with name HELLO
+  SAVE A$           Stores on tape with name A$
+  SAVE "HELLO",8    Stores on disk with name HELLO
+  SAVE "HELLO",1,1  Stores on tape with name HELLO and follows
+                    program with END-OF-TAPE marker
+
+
+
+
+
+basic: VERIFY
+
+  This  command  causes  the  computer  to  check  the program on disk or
+tape  against  the  one  in  memory.  This  is  proof that the program is
+actually SAVEd,  in case the tape or disk is bad, or something went wrong
+during  the  SAVE.  VERIFY  without anything after the command causes the
+Commodore  64  to  check  the  next  program on tape, regardless of name,
+against the program in memory.
+  VERIFY  followed by a program name,  or a string variable,  will search
+for that program and then check. Device numbers can also be included with
+the verify command.
+
+  VERIFY            Checks the next program on tape
+  VERIFY "HELLO"    Searches for HELLO, checks against memory
+  VERIFY "HELLO",8  Searches for HELLO on disk, then checks
+
+
+
+
+
+
+basic: CLOSE
+
+  This  command  completes  and closes any files used by OPEN statements.
+The number following CLOSE is the file number to be closed.
+
+  CLOSE 2           Only file #2 is closed
+
+
+
+
+
+
+basic: CLR
+
+  This command will erase any variables in memory, but leaves the program
+itself intact.  This command is automatically executed when a RUN command
+is given.
+
+
+
+
+
+basic: CMD
+
+  CMD sends the output which normally would go to the screen (i.e., PRINT
+statements,  LISTs,  but  not  POKEs  onto the screen)  to another device
+instead.  This could be a printer,  or a data file on tape or disk.  This
+device or file must be OPENed first.  The CMD command must be followed by
+a number or numeric variable referring to the file.
+
+  OPEN 1,4          OPENs device #4, which is the printer
+  CMD 1             All normal output now goes to printer
+  LIST              The program listing now goes to
+                    the printer, not the screen
+
+  To send output back to the screen, CLOSE the file with CLOSE 1.
+
+
+
+
+
+basic: DATA
+
+  This  statement  is  followed  by  a  list  of items to be used by READ
+statements.  Items  may  be numeric values or text strings, and items are
+separated  by commas.  String items need not be inside quote marks unless
+they contain space,  colon, or comma.  If two commas have nothing between
+them, the value will be READ as a zero for a number, or an empty string.
+
+  DATA 12, 14.5, "HELLO, MOM", 3.14, PART1
+
+
+
+
+
+
+basic: DEF FN
+
+  This  command  allows you to define a complex calculation as a function
+with a short name.  In the case of a long formula that is used many times
+within the program, this can save time and space.
+  This  function  name  will  be  FN and any legal variable name  (1 or 2
+characters long).  First you must define the function using the statement
+DEF  followed  by  the  function  name.  Following  the  name is a set of
+parentheses enclosing a numeric variable. Then follows the actual formula
+that  you want to define,  with the variable in the proper spot.  You can
+then "call" the formula, substituting any number for the variable.
+
+  10 DEF FN A(X) = 12 * ( 34.75 - X / .3 )
+  20 PRINT FN A(7)
+             
+
+
+
+
+
+basic: DIM
+
+  When you use more than 11 elements of an array,  you must execute a DIM
+statement for the array.  Keep in mind that the whole array takes up room
+in  memory,  so  don't  create  an  array  much  larger than you'll need.
+To  figure  the number of variables created with DIM,  multiply the total
+number of elements in each dimension of the array.
+
+  10 DIM A$(40), B7(15), CC%(4,4,4)
+             ^       ^         ^
+             |       |         |
+   41 elements  16 elements  125 elements
+
+  You  can  dimension more than one array in a DIM statement. However, be
+careful not to dimension an array more than once.
+
+
+
+
+
+
+basic: END
+
+  When a program encounters an END statement, the program halts, as if it
+ran out of lines. You may use CONT to restart the program.
+
+
+
+
+
+basic: FOR ... TO ... STEP
+
+  This statement works with the NEXT statement to repeat a section of the
+program a set number of times. The format is:
+
+  FOR (Var. Name)=(Start of Count) TO (End of Count) STEP (Count By)
+
+  The  loop  variable  will  be  added  to  or subtracted from during the
+program.  Without any STEP specified,  STEP is assumed to be 1. The start
+count and end count are the limits to the value of the loop variable.
+
+  10 FOR L = 1 to 10 STEP .1
+  20 PRINT L
+  30 NEXT L
+
+  The end of the loop value may be followed by the word STEP  and another
+number or variable.  In this case, the value following STEP is added each
+time instead of 1. This allows you to count backwards, or by fractions.
+
+
+
+
+
+
+basic: GET
+
+  The  GET  statement  allows  you  to  get  data from the keyboard,  one
+character at a time. When GET is executed, the character that is typed is
+assigned to the variable.  If no character is typed,  then a null (empty)
+character is assigned.
+  GET  is  followed by a variable name,  usually a string variable.  If a
+numeric  variable  was  used and a nonnumeric key depressed,  the program
+would halt with an error message.  The GET statement may be placed into a
+loop,  checking for  any result.  This loop will continue  until a key is
+hit.
+
+  10 GET A$: IF  A$ = ""  THEN 10
+
+
+
+
+
+basic: GET#
+
+  The GET# statement is used with a previously OPENed device or file,  to
+input one character at a time from that device or file.
+
+  GET #1,A$
+
+This would input one character from a data file.
+
+
+
+
+
+
+basic: GOSUB
+
+  This statement is similar to GOTO,  except the computer remembers which
+program line it last executed before the GOSUB. When a line with a RETURN
+statement  is  encountered,  the  program  jumps  back  to  the statement
+immediately following the GOSUB.  This is useful if there is a routine in
+your program that occurs in several parts of the program.
+Instead of typing the routine over and over, execute GOSUBs each time the
+routine is needed.
+
+  20 GOSUB 800
+
+GOTO or GO TO
+
+  When a statement with the GOTO command is reached,  the next line to be
+executed will be the one with the line number following the word GOTO.
+
+
+
+
+
+
+basic: IF ... THEN
+
+  IF ... THEN lets the computer analyze a situation and take two possible
+courses of action,  depending on the outcome.  If the expression is true,
+the  statement  following  THEN  is  executed.  This  may  be  any  BASIC
+statement.
+  If the expression is false, the program goes directly to the next line.
+  The expression being evaluated may be a variable or formula,  in  which
+case it is considered true if nonzero,  and false if zero.  In most cases,
+there  is an expression involving relational operators  (=, <, >, <=, >=,
+<>, AND, OR, NOT).
+
+  10 IF X > 10 THEN END
+
+
+
+
+
+
+basic: INPUT
+
+  The  INPUT  statement  allows  the  program  to get data from the user,
+assigning  that  data  to  a  variable.  The  program  will stop, print a
+question  mark  (?)  on  the screen, and wait for the user to type in the
+answer and hit RETURN.
+  INPUT  is  followed  by  a  variable name, or a list of variable names,
+separated by commas.  A message may be placed within quote marks,  before
+the  list of variable names to be INPUT.  If more than one variable is to
+be INPUT, they must be separated by commas when typed.
+
+  10 INPUT "PLEASE ENTER YOUR FIRST NAME";A$
+  20 PRINT "ENTER YOUR CODE NUMBER";: INPUT B
+
+
+
+
+
+
+basic: INPUT#
+
+  INPUT#  is  similar  to INPUT,  but takes data from a previously OPENed
+file or device.
+
+  10 INPUT#1, A
+
+LET
+
+  LET  is  hardly  ever  used  in programs, since it is optional, but the
+statement is the heart of all BASIC programs.  The variable name which is
+to  be  assigned  the  result of a calculation is on the left side of the
+equal sign, and the formula in the right.
+
+  10 LET A = 5
+  20 LET D$ = "HELLO"
+
+
+
+
+
+
+basic: NEXT
+
+  NEXT  is  always  used in conjunction with the FOR statement.  When the
+program  reaches a NEXT statement,  it checks the FOR statement to see if
+the limit of the loop has been reached.  If the loop is not finished, the
+loop  variable  is increased by the specified STEP value.  If the loop is
+finished,  execution  proceeds  with  the  statement following NEXT.
+  NEXT  may  be  followed by a variable name,  or list of variable names,
+separated by commas.  If there are no names listed, the last loop started
+is the one being completed. If variables are given, they are completed in
+order from left to right.
+
+  10 FOR X = 1 TO 100: NEXT
+
+
+
+
+
+
+basic: ON
+
+  This command turns the GOTO and GOSUB commands into special versions of
+the IF statement. ON is followed by a formula, which is evaluated. If the
+result of the calculation is one, the first line on the list is executed;
+if the result is 2, the second line is executed, and so on. If the result
+is 0,  negative,  or  larger  than  the  list  of numbers,  the next line
+executed will be the statement following the ON statement.
+
+  10 INPUT X
+  20 ON X GOTO 10,20,30,40,50
+
+
+
+
+
+basic: OPEN
+
+  Then  OPEN  statement allows the Commodore 64 to access devices such as
+the cassette recorder and disk for data,  a printer,  or even the screen.
+OPEN  is followed by a number (0-255),  to which all following statements
+will  refer.  There is usually a second number after the first,  which is
+the device number.
+  The device numbers are:
+
+  0   Screen
+  1   Cassette
+  4   Printer
+  8   Disk
+
+  Following the device number may be a third number, separated again by a
+third number, separated again by a comma, which is the secondary address.
+In the case of the cassette,  this is 0 for read,  1 for write, and 2 for
+write with end-of-tape marker.
+  In the case of the disk,  the number refers to the buffer,  or channel,
+number.  In  the  printer,  the  secondary address controls features like
+expanded printing. See the Commodore 64 Programmer's Reference Manual for
+more details.
+
+  10 OPEN 1,0           OPENs the SCREEN as a device
+  20 OPEN 2,1,0,"D"     OPENs the cassette for reading,
+                        file to be searched for is D
+  30 OPEN 3,4           OPENs the printer
+  40 OPEN 4,8,15        OPENs the data channel on the disk
+
+  Also see: CLOSE, CMD, GET#, INPUT#, and PRINT#, system variable ST, and
+Appendix B.
+
+
+
+
+
+
+basic: POKE
+
+  POKE is always followed by two numbers, or formulas. The first location
+is a memory location; the second number is a decimal value from 0 to 255,
+which  will  be  placed in the memory location,  replacing any previously
+stored value.
+
+  10 POKE 53281,0
+  20 S = 4096 * 13
+  30 POKE S + 29, 8
+
+PRINT
+
+  The  PRINT  statement  is  the  first one most people learn to use, but
+there  are  a  number of variations to be aware of. PRINT can be followed
+by:
+
+  Text String with quotes
+  Variable names
+  Functions
+  Punctuation marks
+
+  Punctuation  marks  are used to help format the data on the screen. The
+comma   divides  the  screen  into  four  columns,  while  the  semicolon
+suppresses  all  spacing.  Either mark can be last symbol on a line. This
+results  in the next thing PRINTed acting as if it were a continuation of
+the same PRINT statement.
+
+  10 PRINT "HELLO"
+  20 PRINT "HELLO", A$
+  30 PRINT A + B
+  40 PRINT J;
+  50 PRINT A, B, C, D
+
+  Also see: POS, SPC and TAB functions.
+
+
+
+
+
+basic: PRINT#
+
+  There are a few differences between this statement and PRINT. PRINT# is
+followed by a number,  which refers to the device or data file previously
+OPENed.  This number is followed by a comma and a list to be printed. The
+comma and semicolon have the same effect as they do in PRINT. Please note
+that some devices may not work with TAB and SPC.
+
+  100 PRINT#1, "DATA VALUES"; A%, B1, C$
+
+
+
+
+
+basic: READ
+
+  READ  is  used to assign information from DATA statements to variables,
+so the information may be put to use. Care must be taken to avoid READing
+strings where READ is expecting a number, which will give a TYPE MISMATCH
+ERROR.
+
+
+
+
+
+
+basic: REM  (Remark)
+
+  REMark  is a note to whomever is reading a LIST of the program.  It may
+explain  a section of the program,  or give additional instructions.  REM
+statements  in no way affect the operation of the program,  except to add
+to its length. REM may be followed by any text.
+
+
+
+
+
+
+basic: RESTORE
+
+  When  executed  in  a  program,  the pointer to which an item in a DATA
+statement will be READ next is reset to the first item in the list.  This
+gives you ability to re-READ the information. RESTORE stands by itself on
+a line.
+
+
+
+
+
+
+basic: RETURN
+
+  This  statement  is  always  used  in conjunction with GOSUB.  When the
+program  encounters  a  RETURN,  it  will go to the statement immediately
+following the GOSUB command.  If no GOSUB was previously issued, a RETURN
+WITHOUT GOSUB ERROR will occur.
+
+
+
+
+
+
+basic: STOP
+
+  This statement will halt program execution.  The message,  BREAK IN xxx
+will  be  displayed,  where  xxx is the line number containing STOP.  The
+program may be restarted by using the CONT command. STOP is normally used
+in debugging a program.
+
+
+
+
+
+basic: SYS
+
+  SYS  is  followed  by  a  decimal  number or numeric value in the range
+0-65535.  The  program  will  then  begin  executing the machine language
+program  starting  at  that  memory  location. This is similar to the USR
+function, but does not allow parameter passing.
+
+
+
+
+
+
+basic: WAIT
+
+  WAIT  is  used  to  halt  the  program  until  the contents of a memory
+location changes in a specific way. WAIT is followed by a memory location
+(X) and up to two variables. The format is:
+
+  WAIT X,Y,Z
+
+  The  contents  of the memory location are first exclusive-ORed with the
+third  number,  if  present,  and  then  logically  ANDed with the second
+number.  If  the  result  is  zero,  the program goes back to that memory
+location  and  checks  again.  When  the  result  is nonzero, the program
+continues with the next statement.
+
+
+
+
+
+basic: ABS(X)  (absolute value)
+
+  ABS  returns  the absolute value of the number,  without its sign (+ or
+-). The answer is always positive.
+
+
+
+
+
+basic: ATN(X)  (arctangent)
+
+  Returns the angle, measured in radians, whose tangent is X.
+
+
+
+
+
+basic: COS(X)  (cosine)
+
+  Returns  the  value of the cosine of X, where X is an angle measured in
+radians.
+
+
+
+
+
+basic: EXP(X)
+
+  Returns the value of the mathematical constant e (2.71827183) raised to
+the power of X.
+
+
+
+
+
+basic: FN xx(X)
+
+  Returns  the  value  of  the  user-defined function xx created in a DEF
+FN xx(X) statement.
+
+
+
+
+
+basic: INT(X)
+
+  Returns the truncated value of X, that is,  with all the decimal places
+to the right of the decimal point removed. The result will always be less
+than, or equal to, X. Thus, any negative numbers with decimal places will
+become the integer less than their current value.
+
+
+
+
+
+basic: LOG(X)  (logarithm)
+
+  Will  return  the natural log of X.  The natural log to the base e (see
+EXP(X)). To convert to log base 10, simply divide by LOG(10).
+
+
+
+
+
+basic: PEEK(X)
+
+  Used  to  find  out  contents  of  memory  location  X,  in  the  range
+0-65535,  giving  a  result from 0-255. PEEK is often used in conjunction
+with the POKE statement.
+
+
+
+
+
+
+basic: RND(X)  (random number)
+
+  RND(X)  returns  a  random  number  in  the range 0-1. The first random
+number  should  be  generated by the formula RND(-TI) to start things off
+differently  every  time.  After  this,  X  should be a 1 or any positive
+number.  If  X  is zero, the result will be the same random number as the
+last one.
+  A  negative  value  for  X  will  reseed  the generator. The use of the
+same  negative  number  for  X  will  result  in  the  same  sequence  of
+"random" numbers.
+  The formula for generating a number between X and Y is:
+
+  N = RND(1) * (Y-X) + X
+
+where,
+  Y is the upper limit,
+  X is the lower range of numbers desired.
+
+
+
+
+
+basic: SGN(X)  (sign)
+
+  This function returns the sign (positive, negative, or zero) of X.  The
+result will be +1 if positive, 0 if zero, and -1 if negative.
+
+
+
+
+
+basic: SIN(X)  (sine)
+
+  SIN(X) is the trigonometric sine function.  The result will be the sine
+of X, where X is an angle in radians.
+
+SQR(X)  (square root)
+
+  This  function will return the square root of X,  where X is a positive
+number or 0. If X is negative, an ILLEGAL QUANTITY ERROR results.
+
+TAN(X)  (tangent)
+
+  The result will be the tangent of X, where X is an angle in radians.
+
+
+
+
+
+basic: USR(X)
+
+  When  this  function  is used,  the program jumps to a machine language
+program  whose  starting  point  is  contained  in memory locations.  The
+parameter X is passed to the machine language program,  which will return
+another  value  back  to  the  BASIC  program.  Refer to the Commodore 64
+Programmer's Reference Manual  for  more  details  on  this  function and
+machine language programming.
+
+
+
+
+
+
+basic: ASC(X$)
+
+  This function will return the ASCII code of the first character of X$.
+
+
+
+
+
+basic: CHR$(X)
+
+  This is the opposite of ASC, and returns a string character whose ASCII
+code is X.
+
+
+
+
+
+basic: LEFT$(X$,X)
+
+  Returns a string containing the leftmost X characters of X$.
+
+
+
+
+
+basic: LEN(X$)
+
+  Returned will be the number of characters  (including  spaces and other
+symbols) in the string X$.
+
+
+
+
+
+basic: MID$(X$,S,X)
+
+  This will return a string containing X characters starting from the Sth
+character in X$.
+
+
+
+
+
+basic: RIGHT$(X$,X)
+
+  Returns the rightmost X characters in X$.
+
+
+
+
+
+basic: STR$(X)
+
+  This will return a string  which is identical to the PRINTed version of
+X.
+
+
+
+
+
+basic: VAL(X$)
+
+  This function converts X$ into a number, and is essentially the inverse
+operation  from STR$.  The string is examined from the leftmost character
+to  the  right,  for  as  many  characters  as are in recognizable number
+format.
+
+  10 X = VAL("123.456")             X = 123.456
+  10 X = VAL("12A13B")              X = 12
+  10 X = VAL("RIU017")              X = 0
+  10 X = VAL("-1.23.45.67")         X = -1.23
+
+
+
+
+basic: FRE(X)
+
+  This  function  returns the number of unused bytes available in memory,
+regardless  of the value of X.  Note that FRE(X) will read out n negative
+numbers if the number of unused bytes is over 32K.
+
+
+
+
+
+basic: POS(X)
+
+  This function returns the number of the column (0-39) at which the next
+PRINT statement will begin on the screen. X may have any value and is not
+used.
+
+
+
+
+
+basic: SPC(X)
+
+  This is used in a PRINT statement to skip X spaces forward.
+
+
+
+
+
+basic: TAB(X)
+
+  TAB is also used in a PRINT statement; the next item to be PRINTed will
+be in column X.
+
+
+
+
+ ABS     A <SHIFT+B>                
+ NOT     N <SHIFT+O>
+ AND     A <SHIFT+N>                
+ ASC     A <SHIFT+S>                
+ OPEN    O <SHIFT+P>
+ ATN     A <SHIFT+T>                
+ CHR$    C <SHIFT+H>                
+ PEEK    P <SHIFT+E>
+ CLOSE   CL <SHIFT+O>               
+ POKE    P <SHIFT+O>
+ CLR     C <SHIFT+L>                
+ CMD     C <SHIFT+M>                
+ PRINT   ? 
+ CONT    C <SHIFT+O>                
+ PRINT#  P <SHIFT+R>
+ READ    R <SHIFT+E>
+ DATA    D <SHIFT+A>                
+ DEF     D <SHIFT+E>                
+ RESTORE RE <SHIFT+S>
+ DIM     D <SHIFT+I>                
+ RETURN  RE <SHIFT+T>
+ END     E <SHIFT+N>                
+ RIGHT$  R <SHIFT+I>
+ EXP     E <SHIFT+X>                
+ RND     R <SHIFT+N>
+ RUN     R <SHIFT+U>
+ FOR     F <SHIFT+O>                
+ SAVE    S <SHIFT+A>
+ FRE     F <SHIFT+R>                
+ SGN     S <SHIFT+G>
+ GET     G <SHIFT+E>                
+ SIN     S <SHIFT+I>
+ SPC     S <SHIFT+P>
+ GOSUB   GO <SHIFT+S>               
+ SQR     S <SHIFT+Q>
+ GOTO    G <SHIFT+O>                
+ STEP    ST <SHIFT+E>
+ STOP    S <SHIFT+T>
+ INPUT#  I <SHIFT+N>                
+ STR$    ST <SHIFT+R>
+ SYS     S <SHIFT+Y>
+ LEFT$   LE <SHIFT+F>               
+ TAB(    T <SHIFT+A>
+ LET     L <SHIFT+E>                
+ THEN    T <SHIFT+H>
+ LIST    L <SHIFT+I>  
+ LOAD    L <SHIFT+O>                
+ TIME$   TI$
+ USR     U <SHIFT+S>
+ MID$    M <SHIFT+I>                
+ VAL     V <SHIFT+A>
+ VERIFY  V <SHIFT+E>
+ NEXT    N <SHIFT+E>                
+ WAIT    W <SHIFT+A>

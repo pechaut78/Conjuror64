@@ -1,0 +1,18 @@
+question,answer
+"How does the mouse operate in joystick mode?","In joystick mode the mouse operates as follows:
+1) If the mouse is moved, then the appropriate joystick lines are
+   activated for a period of 20 ms. Thus moving the mouse is like
+   pushing the joystick in the appropriate direction.
+2) The  left  mouse  button  is  mapped to what would be the fire
+   button on a joystick.
+3) The  right  mouse button is mapped into the SID POTX register.
+   If  the  button  is depressed  then the SID POTX register will
+   contain a number <$80. If the button is not depressed then SID
+   POTX will contain a number >=$80.
+4) See the section on SID Register Cautions.
+
+Software Interface
+
+For  most  applications,  the  interface for joystick mode should
+be  just  as  any joystick driver, and the right button should be
+ignored."

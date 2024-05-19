@@ -1,0 +1,5 @@
+
+1581 disk: Controller commands error code2 4: READ ERROR (byte sector header)
+    The  data  or  header  has  been read into disk memory, but a
+    hardware  error has been created by an invalid bit pattern in
+    the data byte.

@@ -1,0 +1,2 @@
+
+PTR1      address $009E        is: Tape Error log pass 1.

@@ -1,0 +1,2 @@
+
+address $DC00 is:	Data Port A (Keyboard, Joystick, Paddles,Light-Pen)

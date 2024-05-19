@@ -1,0 +1,29 @@
+question,answer
+"What is the difference between the logical and physical disk format of the Commodore 1581 disk drive?","1581 disk:  LOGICAL VERSUS PHYSICAL FORMAT
+
+  All  DOS  operations  of  the 1581 are done in 256 byte blocks.
+These blocks appear as individually numbered sectors on the disk.
+By  going  through the DOS interface via the commands outlined in
+this manual, the logical disk format is as follows:
+
+  single sided
+  80 tracks (track 1 through track 80)
+  40 x 256 byte sectors per track (sector 0 through sector 39)
+
+  Internally,  however,  the 1581 has a different view of things.
+The disk is actually formatted as follows:
+
+  double sided (side 0 and side 1)
+  80 tracks per side (track 0 through track 79)
+  10 x 512 byte sectors per track (sector 1 through sector 10)
+
+  That  is  the  physical  disk  format created whenever a HEADER
+(NEW)  command  is  sent  to the 1581 from the host computer. The
+physical  format  is different from the logical so that more data
+can be squeezed onto each disk.
+
+  All commands sent from the host computer are parsed through the
+DOS  (except the BURST commands) and refer to the logical format.
+Software  inside the 1581 automatically takes care of the logical
+to  physical translations necessary to retrieve the data properly
+from the disk."

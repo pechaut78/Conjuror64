@@ -1,0 +1,2 @@
+
+address $D01A	is:			IRQ Mask Register: 1 = Interrupt Enabled

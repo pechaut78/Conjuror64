@@ -1,0 +1,3 @@
+
+
+FACEXP address  $0061       is:   FAC Exponent.

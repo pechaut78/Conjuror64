@@ -1,0 +1,2 @@
+
+address D016 bit 3 is Select 38/40 Column Text Display: 1 = 40 Cols

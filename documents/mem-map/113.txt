@@ -1,0 +1,2 @@
+
+address $D40D	 $D412 is:			Voice 3: Control Register

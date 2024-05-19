@@ -1,0 +1,2 @@
+question,answer
+"What does the $D413 address bits 3-0 control ?","address $D413 bits 3-0 is:	Select Decay Cycle Duration: 0-15"

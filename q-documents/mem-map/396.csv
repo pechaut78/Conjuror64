@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the SHFLAG at memory address $028D?","SHFLAG    address $028D        is: Flag: Shift Keys: Bit 1 = Shift, Bit 2 = CBM, Bit 3 = CTRL; ($00 = None, $01 = Shift, etc.)."

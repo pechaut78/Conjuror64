@@ -1,0 +1,6 @@
+question,answer
+"What is the error message and explanation for a DOS error code 30?","1581 disk: Controller commands error code 30: SYNTAX ERROR (general syntax)
+    The  DOS  cannot  interpret  the  command sent to the command
+    channel.  Typically,  this  is caused by an illegal number of
+    file  names or an illegal pattern.  Check your typing and try
+    again."

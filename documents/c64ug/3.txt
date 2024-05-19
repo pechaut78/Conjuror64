@@ -1,0 +1,29 @@
+
+
+CONNECTIONS TO YOUR TV
+Connect the computer to your TV as shown below.
+1. Attach one end of the TV cable to the phono type TV signal jack at the
+   rear of the Commodore 64. Just push it in. Either end of the cable can
+   be used.
+2. Connect the other end of the cable to the antenna switchbox. Just push
+   it in.
+3. If you have a VHF antenna, disconnect it from your TV set.
+4. Connect your VHF antenna cable to the screw terminals labeled "antenna
+   input"  on  the  switchbox.  If your antenna cable is the round 75-ohm
+   coax  type,  use  a 75-ohm to 300-ohm adapter (not supplied) to attach
+   your antenna cable to the switchbox.
+5. Connect the twin lead output cable of the antenna switchbox to the VHF
+   antenna  terminals  of  your  TV set.  If your set is one of the newer
+   types  with  a round 75-ohm VHF connector,  you will need a 300-ohm to
+   75-ohm converter (not supplied) to connect the switchbox to the 75-ohm
+   VHF antenna input on the set.
+6. Set  the  TV's  VHF  tuner  to  the  channel  number  indicated on the
+   computer's  channel selector switch (channel 3  move the switch to the
+   left,  channel 4  move the switch to the right).  If a strong local TV
+   signal  is present on one of these channels,  select the other channel
+   to avoid possible interference.
+7. Plug  the  power supply cable into the power socket on the side of the
+   Commodore 64.  Just  push  it in.  It is "keyed" to allow insertion in
+   only one direction, so you can't connect the power cord the wrong way.
+   The power supply converts household current into the form the computer
+   uses.

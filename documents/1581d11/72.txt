@@ -1,0 +1,74 @@
+1581 disk: WRITING THE RECORD
+
+  Here  is  an  example of program lines to enter variable length
+fields for the above file design,  build them into a string,  and
+send them to record number RE  in file number 3  (assumed to be a
+relative file that uses channel number 3).
+
+BASIC 7.0:
+
+start tok64 /128 writv128.prg
+  100 input"enter record number";re
+  110 :
+  120 dopen#3,"myrelfile",l88
+  130 cr$=chr$(13)
+  140 input"name";na$
+  150 if len(na$)>30 then 140
+  160 input"street";sa$
+  170 if len(sa$)>30 then 160
+  180 input"city & state";cs$
+  190 if len(cs$)>25 then 180
+  200 input"zip code";zp$
+  210 if len(zp$)>10 then 200
+  220 da$=na$+cr$+sa$+cr$+cs$+cr$+zp$
+  230 if len(da$)<88 then 260
+  240 print"record too long"
+  250 goto 140
+  260 :
+  270 :
+  280 record#3,(re),1
+  290 if ds=50 then print#3,chr$(255):gosub 1000:goto 280
+  300 gosub 1000
+  310 print#3,da$
+  320 gosub 1000
+  330 record#3,(re),1
+  340 gosub 1000
+  350 dclose#3:end
+ 1000 if ds<20 then return
+ 1002 :
+ 1010 print"error:";ds$:dclose#3:end
+
+
+BASIC 2.0:
+
+start tok64 writev64.prg
+  100 input"enter record number";re
+  110 open 15,8,15
+  120 open 3,8,3,"myrelfile,l,"+chr$(88)
+  130 cr$=chr$(13)
+  140 input"name";na$
+  150 if len(na$)>30 then 140
+  160 input"street";sa$
+  170 if len(sa$)>30 then 160
+  180 input"city & state";cs$
+  190 if len(cs$)>25 then 180
+  200 input"zip code";zp$
+  210 if len(zp$)>10 then 200
+  220 da$=na$+cr$+sa$+cr$+cs$+cr$+zp$
+  230 if len(da$)<88 then 260
+  240 print"record too long"
+  250 goto 140
+  260 rh=int(re/256)
+  270 rl=re-256*rh
+  280 print#15,"p"+chr$(96+3)+chr$(rl)+chr$(rh)+chr$(1)
+  290 gosub 1000:if en=50 then print#3,chr$(255):gosub 1000:\
+      goto 280
+  300 gosub 1000
+  310 print#3,da$
+  320 gosub 1000
+  330 print#15,"p"+chr$(96+3)+chr$(rl)+chr$(rh)+chr$(1)
+  340 gosub 1000
+  350 close 3:close 15:end
+ 1000 input#15,en,em$,et,es
+ 1002 if en<20 then return
+ 1010 print"error:";em$:close 3:close 15:end

@@ -1,0 +1,2 @@
+
+IMAIN     address $0302-0303   is: Vector: Indirect entry to BASIC Input Line and Decode ($A483).

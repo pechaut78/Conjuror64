@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the register located at address $028E ?","LSTSHF    address $028E        is: Last Shift Key used for debouncing."

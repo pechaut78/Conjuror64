@@ -1,0 +1,5 @@
+question,answer
+"What error message is displayed when trying to create a new file with a duplicate name on a diskette?","1581 disk: Controller commands error code 63: FILE EXISTS
+    A  file  with  the  same name as has been requested for a new
+    file already exists on the diskette. Duplicate file names are
+    not allowed. Select another name."

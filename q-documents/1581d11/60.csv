@@ -1,0 +1,102 @@
+question,answer
+"What is the purpose and syntax of the GET# statement in BASIC, and how is it used to retrieve data from a disk drive?","1581 disk with basic 7,0: READING FILE DATA: USING GET#
+
+  The  GET#  statement  retrieves  data  from the disk drive, one
+character  at a time.  Like the similar keyboard GET statement in
+BASIC,  it  only  accepts  a  single  character  into a specified
+variable. However, unlike the GET statement, it doesn't just fall
+through  to  the next statement if there is no data to be gotten.
+The  primary  use  of  GET# is to retrieve from diskette any data
+that  cannot be read into an INPUT# statement,  either because it
+is  too  long  to  fit in the input buffer or because it includes
+troublesome characters.
+
+FORMAT FOR THE GET# STATEMENT:
+
+  GET#file#,variable list
+
+where 'file#' is the same file number given in the desired file's
+current OPEN statement,  and 'variable list' is one or more valid
+BASIC  variable  names.  If  more  than one data element is to be
+input by a particular GET# statement,  each variable name must be
+separated from others by a comma.
+  In practice,  you will almost never see a GET or GET# statement
+containing  more  than  one  variable  name.  If  more  than  one
+character  is  needed,  a  loop  is  used  rather than additional
+variables.  Also  as in the INPUT# statement,  it is safer to use
+string  variables  when  the file to be read might contain a non-
+numeric character.
+  Data in a GET# statement comes in byte-by-byte,  including such
+normally  invisible  characters  as  the Carriage Return, and the
+various cursor controls.  All but one will be read properly.  The
+exception is CHR$(0),  the ASCII Null character.  It is different
+from an empty string  (one of the form A$=''),  even though empty
+strings are often referred to as null strings.  Unfortunately, in
+a GET# statement,  CHR$(0) is converted into an empty string. The
+cure is to test for an empty string after a GET#, and replace any
+that  are  found  with  CHR$(0) instead.  The first example below
+illustrates the method.
+
+EXAMPLES:
+
+  To  read  a file that may contain a CHR$(0),  such as a machine
+language program file, you could correct any CHR$(0) bytes with
+
+  1100 GET#3,G$:IF G$='' THEN G$=CHR$(0)
+
+  If an overlong string has managed to be recorded in a file,  it
+may be read back safely into the computer with GET#, using a loop
+such as this
+
+  3300 B$=''
+  3310 GET#1,A$
+  3320 IF A$<>CHR$(13) THEN B$=B$+A$: GOTO 3310
+
+The limit for such a technique is 255 characters.  It will ignore
+CHR$(0),  but that may be an advantage in building a text string.
+If CHR$(0) is required in the file, then add the following line:
+
+  3315 IF A$='' THEN A$=CHR$(0)
+
+  GET# may be useful in recovering damaged files,  or files  with
+unknown contents. The BASIC reserved variable ST (the file STatus
+variable)  can  be used to indicate when all of a properly closed
+file has been read.
+
+  500 GET#2,S$
+  510 SU=ST: REM REMEMBER FILE STATUS
+  520 PRINT S$;
+  530 IF SU=0 THEN 500: REM IF THERE'S MORE TO BE READ
+  540 IF SU<>64 THEN PRINT'STATUS ERROR: ST =';SU
+
+Copying  ST into  SU is often an unnecessary precaution, but must
+be done  if any other file-handling statement appears between the
+one which read from the file  and the one that loops back to read
+again.  For example, it would be required if line 520 was changed
+to
+
+  520 PRINT#1,S$;
+
+Otherwise,  the  file status checked in line 530 would be that of
+the write file, not the read file.
+
+  The  following  table applies to single errors or a combination
+of two or more errors.
+
+|       POSSIBLE VALUES OF THE FILE STATUS VARIABLE 'ST',       |
+|                       AND THEIR MEANINGS                      |
+|                                                               |
+| IF ST=                        THEN                            |
+|    0     All is OK                                            |
+|    1     Receiving device was not available                   |
+|          (time out on talker)                                 |
+|    2     Transmitting device was not available                |
+|          (time out on listener)                               |
+|    4     Cassette data file block was too short               |
+|    8     Cassette data file block was too long                |
+|   16     Unrecoverable read error from cassette, verify error |
+|   32     Cassette checksum error -- one or more faulty        |
+|          characters were read                                 |
+|   64     End of file reached (EOI detected)                   |
+|  128     Device not present, or end of tape mark found        |
+|          on cassette                                          |"

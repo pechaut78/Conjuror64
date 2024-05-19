@@ -1,0 +1,2 @@
+
+CAS1      address $00C0        is: Tape Motor Switch.

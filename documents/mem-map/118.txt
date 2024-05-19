@@ -1,0 +1,2 @@
+
+address $D40D	bits			3 is	Test Bit: 1 = Disable Oscillator 1

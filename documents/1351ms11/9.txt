@@ -1,0 +1,104 @@
+;
+;       C128 MOUSE DRIVER FOR BASIC 7.0 APPLICATIONS
+;
+IIRQ    = $0314
+VIC     = $D000         ; VIC REGISTERS
+SID     = $D400         ; SID REGISTERS
+POTX    = SID+$19
+POTY    = SID+$1A
+;
+ACTIVE  = $117E         ; IF ZERO, THEN MOVE SPRITE
+;
+XPOS    = VIC+$00       ; LOW ORDER X POSITION
+YPOS    = VIC+$01       ; Y POSITION
+XPOSMSB = VIC+$10       ; BIT 0 IS HIGH ORDER X POSITION
+;
+        *=$18F0
+IIRQ2   *=*+2
+OPOTX   *=*+1
+OPOTY   *=*+1
+NEWVALUE        *=*+1
+OLDVALUE        *=*+1
+;
+        * = $1800
+;
+INSTALL LDA IIRQ+1
+        CMP #>MIRQ
+        BEQ L90
+        PHP
+        SEI
+        LDA IIRQ
+        STA IIRQ2
+        LDA IIRQ+1
+        STA IIRQ2+1
+
+        LDA #<MIRQ
+        STA IIRQ
+        LDA #>MIRQ
+        STA IIRQ+1
+;
+        PLP
+L90     RTS
+;
+MIRQ    CLD             ; JUST IN CASE.....
+        LDA ACTIVE      ; IF    BASIC IS MOVING SPRITE
+        BNE L90         ;       LET BASIC HAVE IT ( WHY NOT ? )
+        LDA POTX        ; GET DELTA VALUES FOR X
+        LDY OPOTX
+        JSR MOVCHK
+        STY OPOTX
+;
+        CLC             ; MODIFY LOW ORDER X POSITION
+        ADC XPOS
+        STA XPOS
+        TXA
+        ADC #$00
+        AND #%00000001
+        EOR XPOSMSB
+        STA XPOSMSB
+;
+        LDA POTY        ; GET DELTA VALUE FOR Y
+        LDY OPOTY
+        JSR MOVCHK
+        STY OPOTY
+;
+        SEC             ; MODIFY Y POSITION ( DECREASE Y FOR
+                        ;                     INCRESE IN POT )
+        EOR #$FF
+        ADC YPOS
+        STA YPOS
+;
+        JMP (IIRQ2)     ; CONTINUE W/ IRQ OPERATION
+;
+; MOVCHK
+;       ENTRY   Y    = OLD VALUE OF POT REGISTER
+;               A    = CURRENT VALUE OF POT REGISTER
+;       EXIT    Y    = VALUE TO USE FOR OLD VALUE
+;               X, A = DELTA VALUE FOR POSITION
+;
+MOVCHK  STY OLDVALUE    ; SAVE OLD &  NEW VALUES
+        STA NEWVALUE
+        LDX #0          ; PRELOAD X W/ 0
+;
+        SEC             ; A <=  MOD64( NEW-OLD )
+        SBC OLDVALUE
+        AND #%01111111
+        CMP #%01000000  ; IF      > 0
+        BCS L50
+        LSR A           ;         A <= A/2
+        BEQ L80         ;         IF      <> 0
+        LDY NEWVALUE    ;                 Y <= NEWVALUE
+        RTS             ;                 RETURN
+;
+L50     ORA #%11000000  ; ELSE    OR IN HIGH ORDER BITS
+        CMP #$FF        ;         IF      <> -1
+        BEQ L80
+        SEC             ;                 A <= A/2
+        ROR A
+        LDX #$FF        ;                 X <= -1
+        LDY NEWVALUE    ;                 Y <= NEWVALUE
+        RTS             ;                 RETURN
+;
+L80     LDA #0          ; A <= 0
+        RTS             ; RETURN W/ Y = OLD VALUE
+;

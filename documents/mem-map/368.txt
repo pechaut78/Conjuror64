@@ -1,0 +1,2 @@
+
+SCHAR     address $00D7        is: Screen value of current Input Character/Last Character Output.

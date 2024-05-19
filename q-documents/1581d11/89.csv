@@ -1,0 +1,14 @@
+question,answer
+"What is the disk command that allows you to read bytes from disk memory into the computer, similar to the BASIC PEEK() function?","1581 disk:  MEMORY-READ
+
+  The 6502 has an address  space  from  $0000-$FFFF.  You can get
+direct  access  to  any  location  within  this  by  using memory
+commands. MEMORY-READ allows you to select which byte or bytes to
+read from disk memory into the computer.  The MEMORY-READ command
+is  the  equivalent  of the BASIC PEEK() function,  but reads the
+disk's memory instead of the computer's memory.
+
+
+|   Unlike other disk commands, those in this chapter cannot be |
+| spelled out in full. Thus, M-R is correct, but MEMORY-READ is |
+| not a permitted alternate wording.                            |"

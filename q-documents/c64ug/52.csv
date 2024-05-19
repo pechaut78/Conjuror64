@@ -1,0 +1,9 @@
+question,answer
+"What is the memory map structure used to store character and color information on the Commodore 64's screen?","COLOR MEMORY MAP
+
+For every spot on the Commodore 64's
+screen  there are two memory locations,  one for the character code,  and
+the  other  for  the color code.  The color memory map begins at location
+55296 (top left-hand  corner),  and continues on for 1000 locations.  The
+same color codes, from 0-15, that we used to change border and background
+colors can be used here to directly change character colors."

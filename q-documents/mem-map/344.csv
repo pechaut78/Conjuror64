@@ -1,0 +1,2 @@
+question,answer
+"What is at address $00BA","FA        address $00BA        is: Current File - First Address (Device number). OPEN LA,FA,SA;  OPEN 1,8,15,'I0':CLOSE 1"

@@ -1,0 +1,6 @@
+
+
+
+1581 disk Controller Job commands: DISKIN_DV
+     $92     Determines  if  there is a disk inserted in
+                      the drive.

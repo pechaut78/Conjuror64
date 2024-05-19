@@ -1,0 +1,25 @@
+
+
+
+1581 disk: INITIALIZE
+
+  When  a  diskette is inserted into the drive,  its directory is
+automatically  re-read  into  a  disk  buffer.  You would use the
+command only if that information became unreliable.
+
+FORMAT FOR THE INITIALIZE COMMAND:
+
+  PRINT#15,"INITIALIZEdrive#"
+
+or it may be abbreviated to
+
+  PRINT#15,"Idrive#"
+
+EXAMPLE:
+
+  PRINT#15,"I0"
+
+  PRINT#15,"INITIALIZE0"
+
+where the command channel is assumed to be opened by file 15, and
+"drive#" is 0.

@@ -1,0 +1,2 @@
+question,answer
+"What is the function of bit 1 at address $DC0E ?","address $DC0E bit 1 is:	Timer A Output on PB6: 1 = Yes, 0 = No"

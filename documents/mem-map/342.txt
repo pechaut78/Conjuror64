@@ -1,0 +1,2 @@
+
+LA        address $00B8        is: Current File - Logical File number.

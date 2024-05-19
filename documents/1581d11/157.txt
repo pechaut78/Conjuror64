@@ -1,0 +1,4 @@
+
+1581 disk: Controller commands error code 23: READ ERROR (CRC error in data block)
+    There is an error in the data.  The sector has been read into
+    disk memory, but its CRC is wrong.

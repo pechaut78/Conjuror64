@@ -1,0 +1,6 @@
+
+
+basic: COS(X)  (cosine)
+
+  Returns  the  value of the cosine of X, where X is an angle measured in
+radians.

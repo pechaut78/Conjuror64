@@ -1,0 +1,28 @@
+
+[
+    {
+        "atom": "Input",
+        "params": {
+            "input": "csv"
+        }
+    },
+    {
+        "atom": "CSVMerge",
+        "params": {
+            "output": "dataset.csv"
+        }
+    },{
+        "atom": "CSVllamaFormat",
+        "params": {
+            "output": "dataset.csv"
+        }
+    },
+    {
+        "atom": "HFDatasetUpload",
+        "params": {
+            "input": "dataset.csv",
+            "hf_path": "Conjuror64/C64-inst-format",
+            "token_file": ".token"
+        }
+    }
+]

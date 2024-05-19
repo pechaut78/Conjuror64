@@ -1,0 +1,21 @@
+
+
+
+1581 disk with basic 7,0: "FILE DATA" ERROR
+
+  The  other  error  message   "FILE DATA ERROR"   is  caused  by
+attempting  to  read  a  non-numeric  character  into  a  numeric
+variable.  To a computer, a number is the characters 0 through 9,
+the  "+"  and  "-"  signs,  the  decimal  point  (.),  the  SPACE
+character, and the letter "E" used in scientific notation. If any
+other character appears in an INPUT# to a numeric variable, "FILE
+DATA ERROR"  will  be  displayed  and the program will halt.  The
+usual  causes  of  this error are a mismatch between the order in
+which variables are written to  and  read from a file,  a missing
+carriage return within a  PRINT#  statement that writes more than
+one data item,  or a data item  that includes either a comma or a
+colon without a preceding quotation mark.  Once a file data error
+has occurred, you should correct it by reading the data item into
+a  string  variable,  and converting it back to a number with the
+BASIC VAL() statement  after removing non-numeric characters with
+the string functions described in your computer user's manual.

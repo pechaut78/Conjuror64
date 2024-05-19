@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory address $0007-0008 ?","INTEGR address  $0007-0008  is:   Temporary Integer during OR/AND."

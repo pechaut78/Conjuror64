@@ -1,0 +1,35 @@
+1581 disk: EXPLANATION OF PROCEDURES
+
+send-cmd-string   sends  one  byte  of  the  command to determine
+                  whether the drive is fast or slow.
+
+toggle-clock      changes the state of the clock line.
+
+set-clock-high    changes the state of the clock to logic 1.
+
+set-clock-low     changes the state of the clock to logic 0.
+
+wait-byte         polls the 8520 for a byte ready.
+
+read-error        calls toggle-clock and wait-byte,  then returns
+                  to the main if there are no errors.
+
+store-data        stores data in a particular memory location.
+
+last-byte         depending  on  sector size,  will increment and
+                  compare value to sector size.
+
+serial-in         sets the 8520 serial port and driver circuit to
+                  input mode.
+
+read-err          calls wait-byte and evaluates the status of the
+                  previous controller job.
+
+serial-out        sets the 8520 serial port and driver circuit to
+                  output mode.
+
+send-byte         sends a byte of data to the 1581.
+
+read-1581         sends a typical unit read to a 1581.
+
+write-1581        sends a typical unit write to a 1581.

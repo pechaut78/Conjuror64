@@ -1,0 +1,3 @@
+question,answer
+"What is the function of the PSEEK_DV command in a 1581 disk controller job?","1581 disk Controller Job commands: PSEEK_DV
+      $A8     Seeks to the specified physical track."

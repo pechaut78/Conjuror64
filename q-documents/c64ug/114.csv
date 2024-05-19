@@ -1,0 +1,5 @@
+question,answer
+"What is the function of TAB(X) in a print statement in BASIC program?","basic: TAB(X)
+
+  TAB is used in a PRINT statement; the next item to be PRINTed will
+be in column X."

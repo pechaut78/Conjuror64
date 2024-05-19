@@ -1,0 +1,13 @@
+question,answer
+"What are the steps to reset a Commodore 64 computer to its normal display, and how can you completely reset the machine as if it were turned off and on again?","C64 Reset
+There is a simple way to
+reset the machine  to the normal display.  First press the <RUN/STOP> key
+and then press the <RESTORE> key.  <RUN/STOP> must always be held down in
+order to use the <RESTORE> key function.
+  This will clear the screen and return everything to normal. If there is
+a  program  in  the computer,  it will be left untouched.  This is a good
+sequence to remember, especially if you do a lot of programming.
+  If  you  wish  to  reset  the machine as if it were turned off and then
+switched on again, type,  SYS 64759  and press <RETURN>. Be careful using
+this  command!  It  will  wipe  out  any  program  or information that is
+currently in the computer."

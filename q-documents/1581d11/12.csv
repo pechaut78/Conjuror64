@@ -1,0 +1,18 @@
+question,answer
+"What is the format for a monitor save command on a 1581 disk?","1581 disk: FORMAT FOR A MONITOR SAVE:
+
+  S 'drive#:file name',device#,starting address,ending address+1
+
+where 'drive#:' is the drive number,  0 on the 1581;  'file name'
+is any valid file name up to 14 characters long  (leaving two for
+the  drive  number  and  colon);  'device#' is a two digit device
+number,  normally 08 (the leading 0 is required); and the address
+to be saved are given in Hexadecimal but without a leading dollar
+sign  ($).  Note  the  ending address listed must be one location
+beyond the last location to be saved.
+
+EXAMPLE:
+
+  Here is the required syntax to SAVE a copy of 'DOS 5.1':
+
+  S '0:DOS 5.1',08,CC00,D000"

@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the address $DC00 bits 7-0 in a keyboard scan?","address $DC00 bits 7-0	is: Write Keyboard Column Values for Keyboard Scan"

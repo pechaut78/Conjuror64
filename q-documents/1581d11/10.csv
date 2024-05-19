@@ -1,0 +1,9 @@
+question,answer
+"What is the meaning of the "Error 73" message that appears when reading the disk error channel?","1581 disk:  One  disk  error  message  is  not  always an error. Error 73,
+'COPYRIGHT CBM DOS V10 1581'  will  appear  if  you read the disk
+error  channel  before sending any disk commands when you turn on
+your computer.  This is a handy way to check which version of DOS
+you  are  using.  However,  if  this message appears later, after
+other disk commands, it means there is a mismatch between the DOS
+used  to  format  your diskette and the DOS in your drive. DOS is
+Disk Operating System."

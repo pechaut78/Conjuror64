@@ -1,0 +1,2 @@
+question,answer
+"What does the PNTR at address $00D3 represent ?","PNTR      address $00D3        is: Cursor Column on current Line, including Wrap-round Line, if any."

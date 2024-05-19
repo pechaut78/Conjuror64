@@ -1,0 +1,2 @@
+
+address $D418 bit 5	is: Select Filter Band-Pass Mode: 1 = On

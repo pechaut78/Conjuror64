@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the DATPTR address $0041-0042?","DATPTR address  $0041-0042  is:   Pointer: Used by READ - current DATA Item Address."

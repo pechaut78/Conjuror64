@@ -1,0 +1,105 @@
+question,answer
+"What is the primary interface between the host computer and the 1581 system, responsible for managing file creation, modification, and deletion, and keeping track of file names and free space on the disk?","1581 disk:  CONTROLLER JOB QUEUE
+
+  The  software  in  the  1581's  ROM can be broken down into two
+major  components  --  the DOS and the Controller.  The DOS (Disk
+Operating  System)  is  the  software  interface between the host
+computer  and  the  1581 system.  The DOS keeps track of the file
+management details necessary to create,  modify and delete files.
+It  monitors  the  amount of free space left on a disk, and keeps
+track of the file names in the directory. It remembers where each
+file starts, and ensures that none of them overlap. When the host
+sends commands,  the DOS checks make sure that the syntax and the
+parameters  are  valid.  The  DOS  is very complex,  and its code
+occupies the majority of the ROM.
+
+  The  Controller,  on  the  other hand,  knows nothing about the
+concept of files. The Controller deals only in the physical world
+of  the  disk  itself.  It is responsible for reading and writing
+each of the individual sectors on the disk.
+
+  The  DOS  and  Controller  communicate  to each other primarily
+through  a  'mailbox',  known  as the Job Queue.  Because the DOS
+deals more in the abstract, or logical, world, it does not access
+the physical disk itself. If the DOS requires access to the disk,
+it must ask the controller to do it.  The DOS places a Controller
+Command  Code into the Job Queue and then waits for the requested
+operation  to  be  completed.  The Controller polls the Job Queue
+every 10 milliseconds  (the polling rate is determined by timer B
+of  8520)  looking for something to do.  If there is a job in the
+queue,  the Controller executes the job and returns a status byte
+to the DOS.  To speed things up, the polling of the job queue can
+be  bypassed  by  a  direct  jump  to JSTROBE_CONTROLLER at $FF54
+(refer to the section describing the Vectored Jump Table). A call
+to JSTROBE_CONTROLLER requires the command in the accumulator and
+the job queue offset in the x register.
+
+  Most  of  the tasks that the Controller can be asked to perform
+require parameters. The parameters are also placed in a 'mailbox'
+location  for  the  Controller  to  access  (prior to placing the
+command byte into the queue, of course).  These parameters can be
+either the physical or the logical parameters,  depending on what
+the command expects to see. Logical parameters are placed in HDRS
+as  two consecutive bytes of track,  sector.  Physical parameters
+are  also  placed  in  HDRS,  but  in  addition  the side must be
+specified  (in  SIDS).  Commands  that require logical parameters
+must  translate  them  into  physical parameters at some point in
+their  execution.  The  logical  parameters  are  translated into
+physical parameters by a vectored routine called TRANSTS, and are
+written into  HDRS2  and  SIDS.  The DOS will always pass logical
+parameters, and uses only the Controller commands that allowed to
+put  jobs  in  its  own  queue,  so  it  needs  to  pass physical
+parameters as well as logical.
+
+               Mailbox Locations of the Controller
+-----------------------------------------------------------------
+Name     Address  Purpose
+-----------------------------------------------------------------
+JOBS      $0002   JOB queue for Controller commands (JOBS 0-8).
+            .     Each JOB uses 1 byte. The last 2 locations
+            .     ($09,$0A) are reserved for BAM jobs only!
+          $000A
+HDRS      $000B   Logical or physical track, sector for each of
+            .     the jobs in the JOB queue (2 bytes per job).
+            .
+          $001C
+HDRS2     $01BC   Translated (physical) track, sector for each
+            .     of the jobs in the JOB queue (2 bytes per job).
+            .
+          $01CD
+SIDS      $01CE   Physical side for each of the jobs
+            .     in the job queue (1 byte per job).
+            .
+          $01D6
+CACHE     $008B   Pointer to BUFFCACHE below.
+CACHEOFF  $009F   Offset into the track cache buffer.
+            .     (1 byte per job).
+            .
+          $00A7
+BUFFCACHE $0C00   20 pages for track cache.
+            .
+            .
+          $1FFF
+
+  Associated with each of the nine  Job Queue  locations  (Jobs 0
+through 8) are nine 256 byte buffers (buffers 0-8),  beginning at
+location  $0300.  Data passed from/to a particular Job during its
+execution  is  located  in  the  buffer  which corresponds to the
+position  of  the  Controller  Job  Code  in  the  Job Queue. For
+example,  if the  Controller  Code  in  Job Queue  position 2 (at
+location  $0004)  requests that a logical sector of data be read,
+the data is put into Buffer 2 (at location $0500).
+
+  Table 1 is a list of Controller Job Codes  that can be put into
+the  Job Queue.  Table 2 is a list of the codes that are returned
+by the Controller once the job has been executed. The return code
+is  placed  into  the  Job Queue in the same memory location that
+contained the Controller Job Code. Consequently, the procedure to
+use the Controller is the following:
+
+  1) Write  any  parameters  needed by the Job into the parameter
+     variables (HDRS, HDRS2, SIDS).
+  2) Write the Controller Code into the Job Queue (JOBS).
+  3) Wait  for  the  job  to  be  completed by simply polling the
+     location in JOBS where the Job code was put, and waiting for
+     it to change (bit 7 will be reset to 0)."

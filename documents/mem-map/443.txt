@@ -1,0 +1,2 @@
+
+ISTOP     address $0328-0329   is: Vector: Indirect entry to Kernal STOP     Routine ($F6ED).

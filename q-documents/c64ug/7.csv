@@ -1,0 +1,71 @@
+question,answer
+"What are the steps to set up and troubleshoot a Commodore 64 computer?","USING THE COMMODORE 64
+
+1. Turn  on  the computer using the rocker switch on the right-side panel
+   when you're looking at the computer from the front.
+2. After a few moments the following will be displayed on the TV screen:
+
+      **** COMMODORE 64 BASIC V2 ****
+   64K RAM SYSTEM  38911 BASIC BYTES FREE
+
+   READY.
+   _  
+
+Cursor signals Commodore 64 is waiting for your input
+
+3. If your TV has a manual fine tuning knob,  adjust the TV until you get
+   a clear picture.
+4. You  may also want to adjust the color and tint controls on the TV for
+   the best display. You can use the color adjustment procedure described
+   later to get everything setup properly.  When you first get a picture,
+   the  screen  should appear mostly dark blue,  with a light blue border
+   and letters.
+
+TROUBLESHOOTING CHART
+
+| Symptom               Cause                 Remedy                    |
+| Indicator Light      Computer not 'On'     Make sure power switch     |
+| not 'On'                                   is in 'On' position        |
+|                                                                       |
+|                      Power cable not       Check power socket for     |
+|                      not plugged in        loose or disconnected      |
+|                                            power cable                |
+|                                                                       |
+|                      Power supply not      Check connection with      |
+|                      plugged in            wall outlet                |
+|                                                                       |
+|                      Bad fuse in           Take system to authorized  |
+|                      computer              dealer for replacement of  |
+|                                            fuse                       |
+|                                                                       |
+|                      TV on wrong           Check other channel        |
+|                      channel               for picture (3 or 4)       |
+|                                                                       |
+|                      Incorrect             Computer hooks up to       |
+|                      hookup                VHF antenna terminals      |
+|                                                                       |
+|                      Video cable not       Check TV output cable      |
+|                      plugged in            connection                 |
+|                                                                       |
+|                      Computer set for      Set computer for same      |
+|                      wrong channel         channel as TV (3 or 4)     |
+|                                                                       |
+| Random patterns on   Cartridge not         Reinsert cartridge after   |
+| TV with cartridge    properly inserted     turning off power          |
+| in place                                                              |
+|                                                                       |
+| Picture without      Poorly tuned TV       Retune TV                  |
+| color                                                                 |
+|                                                                       |
+| Picture with         Bad color             Adjust color/hue/          |
+| poor color           adjustment on TV      brightness controls on TV  |
+|                                                                       |
+| Sound with excess    TV volume up high     Adjust volume of TV        |
+| background noise                                                      |
+|                                                                       |
+| Picture OK,          TV volume too low     Adjust volume of TV        |
+| but no sound                                                          |
+|                                                                       |
+|                      Aux. output not       Connect sound jack to      |
+|                      properly connected    aux. input on amplifier    |
+|                                            and select aux. input      |"

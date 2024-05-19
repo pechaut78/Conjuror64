@@ -1,0 +1,2 @@
+question,answer
+"What does bit 3 of address $DC0E represent ?","address $DC0E bit 3 is:	Timer A Run Mode: 1 = One-Shot,0 = Continuous"

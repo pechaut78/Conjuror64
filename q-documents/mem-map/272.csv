@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $0037-0038 in a Commodore 64 computer?","MEMSIZ address  $0037-0038  is:   Pointer: Highest Address available to BASIC ($A000)."

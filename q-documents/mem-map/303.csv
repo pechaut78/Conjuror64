@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the CHRGOT instruction with address $0079?","CHRGOT    address $0079        is: Entry to Get same Byte again."

@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory address $00A0-00A2?","TIME      address $00A0-00A2   is: Real-time jiffy Clock (Updated by IRQ Interrupt approx. every 1/60 of Second);  Update Routine: UDTIMK ($F69B)."

@@ -1,0 +1,2 @@
+question,answer
+"What is the format of the Valtyp address $000D?","VALTYP address  $000D       is:   Data type Flag: $00 = Numeric, $FF = String."

@@ -1,0 +1,2 @@
+
+FAT       address $0263-026C   is: Kernal Table: Active File First Addresses  (Device numbers).

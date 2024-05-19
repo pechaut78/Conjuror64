@@ -1,0 +1,14 @@
+
+
+
+1581 disk:COMPLETING RELATIVE FILE CREATION
+
+  Now that you have learned how to use both the  OPEN and RECORD#
+commands,  you  are  almost  ready  to properly create a relative
+file. The only additional fact you need to know is that CHR$(255)
+is  a  special character in a relative file.  It is the character
+used  by  the  DOS  to fill relative records as they are created,
+before a program fills them with other information.  Thus, if you
+want  to  write the last record,  you expect to need in your file
+with  dummy  data  that  will not interfere with your later work,
+CHR$(255)  is  the  obvious  choice. 

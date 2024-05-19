@@ -1,0 +1,5 @@
+
+
+
+1581 disk Controller Job commands: MOTOFFI_DV
+    $8A     Turns the spindle motor off immediately.

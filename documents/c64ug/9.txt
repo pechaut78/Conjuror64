@@ -1,0 +1,10 @@
+
+
+
+CURSOR
+
+  The  flashing  square  under  READY  is called the cursor and indicates
+where what you type on the keyboard  will be displayed on the screen.  As
+you  type,  the cursor will move ahead one space,  as the original cursor
+position  is  replaced  with  the character you typed.  Try typing on the
+keyboard and watch as characters you type are displayed on the TV screen.

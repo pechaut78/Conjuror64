@@ -1,0 +1,9 @@
+question,answer
+"What happens when a '0' bit is displayed in standard mode?","Standard mode allows any background data to show through when a '0' bit is displayed."
+"How is sprite data interpreted in multi-color mode?","In multi-color mode, sprite data is interpreted in pairs."
+"What is the interpretation of sprite data in multi-color mode?","The sprite data is interpreted as follows: BIT PAIR | COLOR DISPLAYED."
+"How many colors can be displayed in each sprite in multi-color mode?","Up to 3 colors can be displayed in each sprite in addition to transparent."
+"Which colors are shared among all the sprites in multi-color mode?","Two of the colors are shared among all the sprites in the multi-color mode."
+"What is the resolution of the sprite in multi-color mode?","The resolution of the sprite is reduced to 12X21 in multi-color mode."
+"How are horizontal dots affected in multi-color mode?","Each horizontal dot is expanded to twice the standard size in multi-color mode."
+"How many colors can be displayed in each sprite in addition to transparent?","Up to 3 colors can be displayed in each sprite in addition to transparent."

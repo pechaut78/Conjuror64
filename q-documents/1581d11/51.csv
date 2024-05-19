@@ -1,0 +1,22 @@
+question,answer
+"What is the importance of closing a file after using it ?","1581 disk with basic 7,0: CLOSING A FILE
+
+  After you finish using a data file,  it  is extremely important
+that you CLOSE it.  During the process of writing a file, data is
+accumulated  in  a  memory  buffer,  and  only written out to the
+diskette when the buffer fills.
+  Working this way, there is almost always a small amount of data
+in  the  buffer  that  has  not been written to diskette yet, and
+which would simply be lost if the computer system were tuned off.
+Similarly,  there  are  diskette  housekeeping  matters,  such as
+updating the BAM  (Block Availability Map) of sectors used by the
+current file,  which are not performed during the ordinary course
+of  writing  a  file.  This  is  the  reason  for  having a CLOSE
+statement.  When  you  are done with a file,  the CLOSE statement
+will  write  the  rest of the data buffer out to diskette, update
+the  BAM,  and complete the file's entry in the directory. Always
+close  a  data file when you are done using it.  Failure to do so
+may cause loss of the entire file.
+  However,  do not close the disk command channel until all other
+files  have been closed.  The command channel should be the first
+file opened, and the last file closed in any program."

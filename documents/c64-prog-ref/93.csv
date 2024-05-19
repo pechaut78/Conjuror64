@@ -1,0 +1,4 @@
+question,answer
+"What can you do with the contents of the Y Index Register?","copy the contents of the Y register into a memory location"
+"What is the purpose of the instructions for the Y Index Register?","There are instructions for nearly all of the transformations you can make to the accumulator, and the X register"
+"What can you do with the Y Index Register and the X register?","There are instructions for nearly all of the transformations you can make"

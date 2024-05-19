@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory address range $0031-0032 in a Commodore 64 computer?","STREND address  $0031-0032  is:   Pointer: End of BASIC Arrays + 1."

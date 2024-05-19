@@ -1,0 +1,2 @@
+
+address $D417	bits 7-4 is	Select Filter Resonance: 0-15

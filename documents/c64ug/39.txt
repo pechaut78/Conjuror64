@@ -1,0 +1,15 @@
+
+
+
+  BASIC  has  number  of  shortcut ways of doing things.  One such way is
+abbreviating BASIC commands (or keywords).  A '?' can be used in place of
+PRINT,  for example.  As we go on you'll be presented with many commands;
+Appendix D shows the abbreviations for each and what will be displayed on
+the screen when you type the abbreviated form.
+
+many calculations
+may be performed on the same line, and they can be of mixed types.
+  You could calculate this problem:
+
+  ? 3 + 5 - 7 + 2          (The '?' replaces the word PRINT)
+  3

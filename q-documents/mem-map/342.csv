@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $00B8?","LA        address $00B8        is: Current File - Logical File number."

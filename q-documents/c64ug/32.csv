@@ -1,0 +1,16 @@
+question,answer
+"What is the command to save a program to disk, and what does the number 8 represent in the command?","SAVING PROGRAMS ON DISK
+
+  Saving a program on disk is even simpler. Type:
+
+  SAVE 'PROGRAM NAME',8
+
+  The  8  is  the code for the disk,  so you're just letting the computer
+know you want the program saved to disk.
+  After you press  <RETURN>  the disk will start to turn and the computer
+will respond with:
+
+  SAVING PROGRAM NAME
+  OK
+  READY.
+  _"

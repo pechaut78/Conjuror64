@@ -1,0 +1,2 @@
+
+address $4276	bit 1 is 	Synchronize Osc. 1 with Osc. 3 Frequency, 1 = On

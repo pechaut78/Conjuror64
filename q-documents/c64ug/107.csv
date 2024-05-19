@@ -1,0 +1,5 @@
+question,answer
+"What is the syntax and purpose of the MID$ function in BASIC programming?","basic: MID$(X$,S,X)
+
+  This will return a string containing X characters starting from the Sth
+character in X$."

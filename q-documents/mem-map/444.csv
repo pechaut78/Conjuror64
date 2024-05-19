@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the IGETIN vector in the Commodore 64 Kernal?","IGETIN    address $032A-032B   is: Vector: Indirect entry to Kernal GETIN     Routine ($F13E)."

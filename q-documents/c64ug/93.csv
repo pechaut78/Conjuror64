@@ -1,0 +1,5 @@
+question,answer
+"What is the function that returns the value of the cosine of an angle measured in radians?","basic: COS(X)  (cosine)
+
+  Returns  the  value of the cosine of X, where X is an angle measured in
+radians."

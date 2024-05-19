@@ -1,0 +1,2 @@
+
+RIDATA    address $00AA        is: RS232 Input Byte Buffer/Tape temporary.

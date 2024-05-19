@@ -1,0 +1,4 @@
+question,answer
+"What is the function of the LEFT$ command in BASIC?","basic: LEFT$(X$,X)
+
+  Returns a string containing the leftmost X characters of X$."

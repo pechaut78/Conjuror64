@@ -1,0 +1,2 @@
+
+RSSTAT    address $0297        is: RS232 Pseudo 6551 Status Register Image.

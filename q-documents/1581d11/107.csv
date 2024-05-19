@@ -1,0 +1,29 @@
+question,answer
+"What is the format and protocol of the FASTLOAD UTILITY disk in assembly?","1581 disk in assembly: FASTLOAD UTILITY
+
+ BYTE    BIT 7    6      5      4      3      2      1      0
+-----------------------------------------------------------------
+  00       0      1      0      1      0      1      0      1
+-----------------------------------------------------------------
+  01       0      0      1      1      0      0      0      0
+-----------------------------------------------------------------
+  02       P      X      X      1      1      1      1      1
+-----------------------------------------------------------------
+  03                          FILE NAME
+-----------------------------------------------------------------
+
+SWITCHES: P -- sequential file bit (P = 1,  does not have to be a
+          program file)
+          X -- don't care
+
+PROTOCOL: Burst handshake.
+
+OUTPUT: Burst status byte preceding each sector transferred.
+
+STATUS IS AS FOLLOWS:   0000000X -- OK
+                      * 00000010 -- file not found
+                     ** 00011111 -- EOI
+
+*  Values between 3 and 15 should be considered a file read error
+** The  byte  following the EOI status byte is the number of data
+   bytes to follow."

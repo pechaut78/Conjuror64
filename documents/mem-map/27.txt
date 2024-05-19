@@ -1,0 +1,2 @@
+
+Address	D011	BIT 6 is Extended Color Text Mode 1 = Enable

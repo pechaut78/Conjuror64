@@ -1,0 +1,4 @@
+question,answer
+"What does TYA do?","TYA Transfer index Y to accumulator"
+"What is the number of bytes of TYA?",1
+"What is the number of cycles of TYA?",2

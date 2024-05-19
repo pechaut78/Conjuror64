@@ -1,0 +1,43 @@
+
+1581 disk with basic 7,0: DEMONSTRATION OF SEQUENTIAL FILES (BASIC 7.0)
+
+  Use  the  following  program  for  your  first experiments with
+sequential  files.  Comments  have  been added to help you better
+understand it.
+
+ 150 cr$=chr$(13)                 Make a carriage return variable
+ 170 print chr$(147):rem clear
+     screen
+ 190 print"** write a file **"
+ 210 print
+ 220 dopen#2,"@seq file",w        Open demo file with replace
+ 230 gosub 500                    Check for disk errors
+ 240 print"enter a word,
+     then a number"
+ 250 print"or 'end,0' to stop"
+ 260 print
+ 270 input a$,b                   Accept a string & number
+                                  from keyboard
+ 280 print#2,a$;cr$;b             Write them to the disk file
+ 290 gosub 500
+ 300 if a$<>"end" then 270
+ 310 print
+ 320 dclose#2                     Tidy up
+ 340 print"** read same file
+     back **"
+ 360 print
+ 370 dopen#2,"seq file"           Reopen same file for reading
+ 380 gosub 500
+ 390 input#2,a$,b                 Read next string & number
+                                  from file
+ 400 rs=st
+ 410 gosub 500
+ 420 print a$,b                   Display file contents
+ 430 if rs=0 then 390             until done,
+ 440 if rs<>64 then
+     print"status=";rs            unless there's an error
+ 450 dclose#2                     Then quit
+ 460 end
+ 480 rem ** error check s/r **
+ 500 if ds>0 then print ds$:stop
+ 510 return

@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory address range $07F8-07FF?","SPNTRS    address $07F8-07FF   is: Default Sprite Data Pointers."

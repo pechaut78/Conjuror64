@@ -1,0 +1,7 @@
+1581 disk with basic 7,0: SCRATCH
+
+  The  SCRATCH  command allows you to erase unwanted programs and
+files  from  your diskettes,  and free up the space they occupied
+for  use  by  other  files and programs.  It can be used to erase
+either  a  single  file,  or  several  files at once via pattern-
+matching.

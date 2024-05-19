@@ -1,0 +1,2 @@
+question,answer
+"What is the purpose of the memory range $DE00-DEFF?","address $DE00-DEFF are: 	Reserved for Future I/O Expansion"

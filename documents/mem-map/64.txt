@@ -1,0 +1,2 @@
+
+address $3287		is:			Sprite 0 Color

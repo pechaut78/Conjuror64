@@ -1,0 +1,52 @@
+question,answer
+"What is the purpose of the buffer pointer in disk memory and how is it used to access and edit individual bytes within a block?","1581 disk:  THE BUFFER POINTER
+
+  The buffer pointer points to where the next  READ or WRITE will
+begin within a disk memory buffer.  By moving the buffer pointer,
+you can access individual bytes within a block in any order. This
+allows  you to edit any portion of a sector,  or organize it into
+fields, like a relative record.
+
+FORMAT FOR THE BUFFER-POINTER COMMAND:
+
+  PRINT#15,'BUFFER-POINTER';channel#;byte
+
+usually abbreviated as: PRINT#15,'B-P';channel#;byte
+
+where  'channel#'  is  the channel number specified when the file
+reserving the buffer was opened,  and  'byte'  is  the  character
+number within the buffer at which to point (from 0 through 255).
+
+ALTERNATE FORMATS:
+
+  PRINT#15,'B-P:'channel#;byte
+  PRINT#15,'B-P:channel#,byte'
+
+EXAMPLE:
+
+  Here  is  a  program  that locks the first program or file on a
+diskette.  It works by reading the start of the directory  (Track
+40, Sector 3) into disk memory, setting the buffer pointer to the
+first  file  type  byte  (see Appendix C for details of directory
+organization), locking it by setting bit 6 and rewriting it.
+
+  110 OPEN 15,8,15                 Open command channel.
+  120 OPEN 5,8,5,'#'               Open direct access channel.
+  130 PRINT#15,'U1';5;0;40;3       Read Track 40, Sector 3.
+  140 PRINT#15,'B-P';5;2           Point to Byte 2 of the buffer.
+  150 GET#5,A$: IF A$=''
+      THEN A$=CHR$(0)              Read it into memory.
+  160 A=ASC(A$) OR 64              Turn on bit 6 to lock.
+  170 PRINT#15,'B-P';5;2           Point to Byte 2 again.
+  180 PRINT#5,CHR$(A);             Overwrite it in buffer.
+  190 PRINT#15,'U2';5;0;40;3       Rewrite buffer to diskette.
+  200 CLOSE 5                      Tidy up after.
+  210 CLOSE 15
+  220 END
+
+After the above program is run,  the  first file on that diskette
+can  no  longer be erased.  If you later need to erase that file,
+rerun the same program, but substitute the revised line 160 below
+to unlock the file again:
+
+  160 A=ASC(A$) AND 191            Turn off bit 6 to unlock."

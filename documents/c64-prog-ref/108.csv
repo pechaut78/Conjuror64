@@ -1,0 +1,4 @@
+question,answer
+"What is the instruction to call a subroutine in machine language?","JSR (Jump to Sub-Routine)"
+"What is the address of the machine language subroutine that prints a character to the screen?","$FFD2"
+"What is the purpose of the CBM ASCII code in the accumulator before calling the print subroutine?","To specify the character to be printed"

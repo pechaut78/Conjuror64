@@ -1,0 +1,5 @@
+
+1581 disk: Controller commands error code 33: SYNTAX ERROR (invalid file name)
+    Pattern  matching  characters  cannot  be  used  in  the SAVE
+    command  or when Opening files for the purpose of Writing new
+    data. Spell out the file name.

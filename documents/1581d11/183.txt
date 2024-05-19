@@ -1,0 +1,5 @@
+
+1581 disk: Controller commands error code 74: DRIVE NOT READY
+    An  attempt  has  been  made  to  access the 1581 single disk
+    without a formatted diskette in place. Blank diskettes cannot
+    be used until they have been formatted.

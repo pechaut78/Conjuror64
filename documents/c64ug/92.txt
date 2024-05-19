@@ -1,0 +1,5 @@
+
+
+basic: ATN(X)  (arctangent)
+
+  Returns the angle, measured in radians, whose tangent is X.

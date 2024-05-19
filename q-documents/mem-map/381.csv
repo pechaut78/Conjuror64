@@ -1,0 +1,2 @@
+question,answer
+"What is the function of the memory address range $0200-0258 in a Commodore 64 computer?","BUF       address $0200-0258   is: BASIC Input Buffer (Input Line from Screen)."

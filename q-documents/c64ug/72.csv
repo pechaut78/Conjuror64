@@ -1,0 +1,19 @@
+question,answer
+"What is the syntax and functionality of the FOR loop statement in a programming language?","basic: FOR ... TO ... STEP
+
+  This statement works with the NEXT statement to repeat a section of the
+program a set number of times. The format is:
+
+  FOR (Var. Name)=(Start of Count) TO (End of Count) STEP (Count By)
+
+  The  loop  variable  will  be  added  to  or subtracted from during the
+program.  Without any STEP specified,  STEP is assumed to be 1. The start
+count and end count are the limits to the value of the loop variable.
+
+  10 FOR L = 1 to 10 STEP .1
+  20 PRINT L
+  30 NEXT L
+
+  The end of the loop value may be followed by the word STEP  and another
+number or variable.  In this case, the value following STEP is added each
+time instead of 1. This allows you to count backwards, or by fractions."

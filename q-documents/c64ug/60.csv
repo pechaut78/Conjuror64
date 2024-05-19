@@ -1,0 +1,21 @@
+question,answer
+"What is the purpose and syntax of the LOAD command in Commodore 64?","basic: LOAD
+
+  This  command  is  used  to  transfer  a program from tape or disk into
+memory  so  the  program  can  be  used.  If  you  just type LOAD and hit
+RETURN,  the  first  program found on the cassette unit will be placed in
+memory.  The  command  may  be followed by a program name enclosed within
+quotes.  The  name  may  then  be  followed  by  a  comma and a number or
+numeric  variable,  which  acts  as a device number to indicate where the
+program is coming from.
+
+  If  no  device  number  is  given,  the Commodore 64 assumes device #1,
+which  is  the  cassette  unit.  The  other device commonly used with the
+LOAD command is the disk device, which is device #8.
+
+  LOAD              Reads in the next program on tape
+  LOAD 'HELLO'      Searches tape for program called HELLO,
+                    and loads program, if found
+  LOAD A$           Looks for program whose name is in the variable A$
+  LOAD 'HELLO',8    Looks for program called HELLO on the disk drive
+  LOAD '*',8        Looks for first program on disk"

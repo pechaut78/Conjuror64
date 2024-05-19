@@ -1,0 +1,11 @@
+
+C64 Keyboard
+
+  Now that you've got everything set up and adjusted,  please  take a few
+moments  to  familiarize  yourself  with  the keyboard which is your most
+important means of communication with the Commodore 64.
+  You  will  find  the keyboard similar to a standard typewriter keyboard
+found  in  most  areas.  There  are,  however, a number of new keys which
+control specialized functions. What follows is a brief description of the
+various  keys  and how they function.  The detailed operation of each key
+will be covered in later sections.

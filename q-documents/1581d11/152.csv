@@ -1,0 +1,6 @@
+question,answer
+"What message appears when the error channel is checked after using the SCRATCH command?","1581 disk: Controller commands error code FILES SCRATCHED
+
+    This  is  the  message that appears when the error channel is
+    checked  after  using  the SCRATCH command.  The track number
+    tells how many files were erased."

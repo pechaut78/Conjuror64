@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory region from address $02A7 to $02FF?","TEMP      address $02A7-02FF   is: Unused."

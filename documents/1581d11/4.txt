@@ -1,0 +1,7 @@
+1581 disk: PRINTING A DIRECTORY
+
+  To printout a directory, use the following:
+
+  LOAD"$",8
+  OPEN 4,4:CMD 4:LIST
+  PRINT#4:CLOSE 4

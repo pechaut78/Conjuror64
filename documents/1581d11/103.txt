@@ -1,0 +1,38 @@
+1581 disk in assembly: QUERY DISK FORMAT
+
+ BYTE    BIT 7    6      5      4      3      2      1      0
+-----------------------------------------------------------------
+  00       0      1      0      1      0      1      0      1
+-----------------------------------------------------------------
+  01       0      0      1      1      0      0      0      0
+-----------------------------------------------------------------
+  02       F      X      T      S      1      0      1      N
+-----------------------------------------------------------------
+  03               OFFSET      (OPTIONAL, F-BIT SET)
+-----------------------------------------------------------------
+
+SWITCHES: F -- force flag  (F = 1 steps the head  with the offset
+          specified in byte 03)
+          T -- sector table (T = 1, send sector table)
+          N -- drive number
+          X -- don't care
+          S -- side select
+
+PROTOCOL: Burst handshake.
+
+CONVENTIONS: Determines  the  diskette  format  on any particular
+             track.   Also   logs  non-standard  diskettes  (i.e.
+             minimum sector addresses other than one).
+
+OUTPUT:  * burst status byte (no bytes will follow if there is an
+           error)
+        ** burst status byte  (no bytes will follow  if there was
+           an error in compiling MFM format information)
+           number of sectors (on a particular track)
+           logical track (track number found in the disk header)
+           minimum sector (sector with the lowest value address)
+           maximum sector (sector with the highest value address)
+           interleave (always returns 1)
+           sector table (with T bit set, sector table is sent)
+ * status from track offset zero
+** if F bit is set, status is from offset track

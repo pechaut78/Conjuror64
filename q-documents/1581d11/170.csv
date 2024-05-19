@@ -1,0 +1,8 @@
+question,answer
+"What error message and solution are provided when a file is too large to be created on a diskette?","1581 disk: Controller commands error code 52: FILE TOO LARGE
+    There isn't room left on the diskette to create the requested
+    relative record.  To avoid this error, create the last record
+    number  that  will be needed as you first create the file. If
+    the file is too large for the diskette,  either split it into
+    two files on two diskettes,  or use abbreviations in the data
+    to allow shorter records."

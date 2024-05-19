@@ -1,0 +1,4 @@
+
+1581 disk: Controller commands error code 76: CONTROLLER ERROR
+    The  floppy  disk controller  IC (WD177x)  is not functioning
+    properly.

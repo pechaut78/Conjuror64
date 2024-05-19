@@ -1,0 +1,35 @@
+
+
+
+1581 disk with basic 7,0: FORMAT FOR THE SCRATCH COMMAND:
+
+  SCRATCH "pattern"[,Ddrive#][,Udevice#]
+
+where  "pattern"  is  any  valid  file  name  or pattern-matching
+character.
+
+  You will be asked as a precaution:
+
+  ARE YOU SURE?_
+
+If you ARE sure, simply press Y and RETURN.  If not, press RETURN
+alone or type any other answer, and the command will be canceled.
+  The  number  of files that were scratched will be automatically
+displayed.  For example,  if your diskette contains program files
+named "TEST",  "TRAIN",  "TRUCK", and "TAIL", you may SCRATCH all
+four,  along  with any other files beginning with the letter "T",
+by using the command:
+
+  SCRATCH "T*"
+
+and  if  the  four listed were the only files beginning with "T",
+you will see:
+
+  01, FILES SCRATCHED,04,00
+  READY
+  _
+
+The "04" tells you 4 files were scratched.
+
+  You can perform a  SCRATCH within a program,  but there will be
+no prompt message displayed.

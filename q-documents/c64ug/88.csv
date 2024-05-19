@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose and behavior of the STOP statement in a program?","basic: STOP
+
+  This statement will halt program execution.  The message,  BREAK IN xxx
+will  be  displayed,  where  xxx is the line number containing STOP.  The
+program may be restarted by using the CONT command. STOP is normally used
+in debugging a program."

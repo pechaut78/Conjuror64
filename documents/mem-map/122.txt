@@ -1,0 +1,3 @@
+
+
+address $D413 is:	Envelope Generator 3: Attac/Decay Cycle Control

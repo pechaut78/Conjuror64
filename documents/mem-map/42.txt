@@ -1,0 +1,2 @@
+
+address $D018 bits 7-4 is: Video Matrix Base Address (inside VIC)

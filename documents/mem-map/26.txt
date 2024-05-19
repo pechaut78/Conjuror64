@@ -1,0 +1,3 @@
+
+
+Address	D011	BIT 7 is Raster Compare: (Bit 8)	See 53266

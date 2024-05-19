@@ -1,0 +1,6 @@
+question,answer
+"What error message is generated when the data to be written exceeds the record size?","1581 disk: Controller commands error code 51: OVERFLOW IN RECORD
+    The  data  to  be  written  in the current record exceeds the
+    record size. The excess has been truncated (cut off). Be sure
+    to include all special characters  (such as carriage returns)
+    in calculating record sizes."

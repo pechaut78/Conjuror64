@@ -1,0 +1,2 @@
+question,answer
+"What is the description of the memory location $0326-0327 in the Commodore 64's Kernal ROM?","IBSOUT    address $0326-0327   is: Vector: Indirect entry to Kernal CHROUT     Routine ($F1CA)."

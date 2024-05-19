@@ -1,0 +1,3 @@
+
+
+FOUR6  address  $0053       is:   Length of String Variable during Garbege collection.
