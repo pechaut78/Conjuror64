@@ -1,0 +1,7 @@
+
+
+
+address              $E1BE          OPEN
+Perform OPEN
+
+The BASIC OPEN statement calls the Kernal OPEN routine.

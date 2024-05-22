@@ -1,0 +1,11 @@
+question,answer
+"what happens when trying to save a file with the same name as an existing one on a C64 disk?","If a file already exists, it can't be saved again with the same name because the disk drive allows only one copy of any given file name per diskette."
+"what is the purpose of the SAVE-WITH-REPLACE command?","This option tells the disk drive to replace any file it finds in the diskette directory with the same name, substituting the new file for the old version."
+"how can you replace a program or data file with a revised version on a C64 disk?","Another command is more convenient, known as SAVE-WITH-REPLACE, or @SAVE."
+"what is the limitation of file naming on a C64 disk?","The disk drive allows only one copy of any given file name per diskette."
+"what are the alternative commands to SAVE-WITH-REPLACE for managing file versions on a C64 disk?","The RENAME and SCRATCH commands can be used to get around the problem of file naming limitations."
+"what does the SAVE-WITH-REPLACE command do to the old version of a file on a C64 disk?","It substitutes the new file for the old version."
+"why is SAVE-WITH-REPLACE useful on a C64 disk?","It allows you to replace a program or data file with a revised version."
+"in what scenario would you use the SAVE-WITH-REPLACE command on a C64 disk?","When you wish to replace a program or data file with a revised version."
+"what is the syntax for the SAVE-WITH-REPLACE command on a C64 disk?","The command is known as @SAVE."
+"can you have multiple files with the same name on a C64 disk?","No, the disk drive allows only one copy of any given file name per diskette."

@@ -1,0 +1,12 @@
+
+The stack pointer points to an area of memory called the
+stack which is used for subroutines and for short-term data
+storage. The stack is described in detail later.
+The processor status register gives information about the
+result of the last executed instruction. This register is
+the foundation for the decision making and conditional
+branching instructions. Seven of the eight bits of the
+status register are used as flags. You can examine and
+conditionally branch depending on the setting of a
+particular flag. A flag can be either set (=1) or clear
+(=0). 

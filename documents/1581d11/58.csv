@@ -1,0 +1,11 @@
+question,answer
+"what happens when commas and colons are used in a file","commas and colons can cause trouble in a file, because they delimit (end) the data element in which they appear and cause any remaining characters in the data element to be read into the next INPUT# variable."
+"how do commas and colons affect an INPUT statement","they have the same effect in an INPUT statement, causing the common 'EXTRA IGNORED' error message."
+"what is the solution when a comma or colon is needed within a data element","the cure is to precede such data elements with a quotation mark, after which all other characters except a carriage return or another quotation mark are accepted as part of the current data element."
+"how can a quotation mark be forced into a data element going to a file","append a CHR$(34) to the start of the data element, for example: PRINT#2,CHR$(34)+\"DOE,JOHN\" or PRINT#2,CHR$(34);\"DOE,JOHN\""
+"what is the benefit of defining a variable as equal to CHR$(34)","some space and time may be saved by previously defining a variable as equal to CHR$(34), for example: 20 QT$=CHR$(34) ... 400 PRINT#5,QT$+NAME$, in each case, the added quotation mark will be stripped from the data by the INPUT or INPUT# statement, but the comma or colon will remain part of the data."
+"what happens to the added quotation mark when using INPUT or INPUT# statement","the added quotation mark will be stripped from the data by the INPUT or INPUT# statement, but the comma or colon will remain part of the data."
+"what is the purpose of using CHR$(34) in a program","it is used to add a quotation mark to a data element, allowing commas and colons to be used within the data element."
+"how does the use of CHR$(34) affect the behavior of the INPUT# statement","it allows the INPUT# statement to accept commas and colons as part of the data element, rather than treating them as delimiters."
+"what is the difference between using CHR$(34) and not using it in a program","without CHR$(34), commas and colons would cause the INPUT# statement to delimit the data element, whereas with CHR$(34), they are treated as part of the data element."
+"can commas and colons be used in a data element without CHR$(34)","no, without CHR$(34), commas and colons would cause the INPUT# statement to delimit the data element, resulting in errors."

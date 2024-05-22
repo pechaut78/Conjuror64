@@ -1,0 +1,5 @@
+
+
+
+address         $B245          BSERR
+Print BAD SUBSCRIPT Error Message

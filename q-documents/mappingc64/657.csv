@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the memory location at address $FD15?","address              $FD15          RESTOR
+Restore RAM Vectors for Default I/O Routines
+
+This documented Kernal routine can be entered through the jump table
+at 65418 ($FF8A).
+
+It sets the values for the 16 RAM vectors to the interrupt and
+important Kernal I/O routines in the table that starts at 788 ($314)
+to the standard values held in the ROM table at 64816 ($FD30)."

@@ -1,0 +1,10 @@
+
+
+
+address              $F0A4
+Stop CIA #2 RS-232 NMIs for Serial/Cassette Routines
+
+This subroutine turns off the NMIs that drive the RS-232 routines
+before any I/O is done using the serial bus or cassette device.  Such
+interrupts could throw off the timing of those I/O routines, and
+interfere with the transmission of data.

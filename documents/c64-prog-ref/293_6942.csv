@@ -1,0 +1,11 @@
+question,answer
+"what is the function of the MnXE register in the Commodore 64?","The MnXE register is used to control the horizontal expansion of a sprite, where a value of '1' enables expansion and a value of '0' sets it to normal size."
+"How does the vertical expansion of a sprite work on the Commodore 64?","The vertical expansion of a sprite is controlled by the MnYE register, where a value of '1' enables expansion and a value of '0' sets it to normal size, allowing the sprite to be doubled in the vertical direction."
+"What is the effect of expanding a sprite on the Commodore 64?","Expanding a sprite on the Commodore 64 does not increase the resolution, but rather doubles the overall sprite dimension in the desired direction, with the smallest sprite dot potentially becoming up to 4 times the standard dot dimension if the sprite is both multi-colored and expanded."
+"What is the default size of a sprite on the Commodore 64?","The default size of a sprite on the Commodore 64 is a 24x21 array, which can be doubled in size through expansion."
+"How do you enable horizontal expansion of a sprite on the Commodore 64?","To enable horizontal expansion of a sprite on the Commodore 64, you need to set the MnXE register to '1', which will double the sprite's size in the horizontal direction."
+"What is the register address for controlling vertical expansion of a sprite?","The register address for controlling vertical expansion of a sprite is $1D, which corresponds to the MnYE register."
+"What is the effect of setting MnXE to '0'?","Setting MnXE to '0' sets the sprite to its normal size, disabling horizontal expansion."
+"Can a sprite be expanded in both horizontal and vertical directions on the Commodore 64?","Yes, a sprite can be expanded in both horizontal and vertical directions on the Commodore 64 by setting both MnXE and MnYE registers to '1'."
+"What is the size of a multi-colored sprite on the Commodore 64?","A multi-colored sprite on the Commodore 64 is a 12x21 array, which can be doubled in size through expansion."
+"How do you control the magnification of a sprite on the Commodore 64?","The magnification of a sprite on the Commodore 64 is controlled through the MnXE and MnYE registers, which allow for selective expansion in the horizontal and vertical directions."

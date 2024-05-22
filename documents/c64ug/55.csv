@@ -1,0 +1,11 @@
+question,answer
+"What are the three types of variables used in Commodore 64 BASIC?","The Commodore 64 uses three types of variables in BASIC, namely real numeric, integer numeric, and string (alphanumeric) variables."
+"How are integer variables specified in Commodore 64 BASIC?","An integer variable is specified by using the percent (%) sign after the variable name."
+"What is the purpose of the dollar sign ($) in string variable names?","The dollar sign ($) is used after the name of a string variable to distinguish it from other types of variables."
+"What are the rules for naming variables in Commodore 64 BASIC?","Variable names may consist of a single letter, a letter followed by a number, or two letters."
+"How do you declare a real numeric variable in Commodore 64 BASIC?","Real numeric variables do not require any special notation, and can be declared simply by using a valid variable name."
+"What is the difference between a real numeric variable and an integer variable?","Real numeric variables can hold decimal values, while integer variables can only hold whole numbers."
+"Can a variable name consist of more than two letters in Commodore 64 BASIC?","No, variable names in Commodore 64 BASIC are limited to a single letter, a letter followed by a number, or two letters."
+"How do you declare a string variable in Commodore 64 BASIC?","A string variable is declared by using the dollar sign ($) after the variable name."
+"What is an example of a valid integer variable name in Commodore 64 BASIC?","A valid integer variable name would be A%, A5%, or BZ%."
+"What is an example of a valid string variable name in Commodore 64 BASIC?","A valid string variable name would be A$, A5$, or BZ$."

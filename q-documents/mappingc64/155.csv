@@ -1,0 +1,19 @@
+question,answer
+"What is the purpose of the memory location at address $295-$296?","address       $295-$296      M51AJB
+RS-232: Nonstandard Bit Timing
+
+These locations are provided for storing a nonstandard user-defined
+baud rate, to be used when the low nybble of the control register at
+659 ($293) is set to 0.  They were presumable provided to conform to
+the nodel of the 6551 UART device, which allows a nonstandard baud
+rate to be generated from an external reference crystal.  However, the
+software emulation of that feature is not provided in the current
+version of the Kernal, and thus these locations are currently
+nonfunctional.
+
+Nonetheless, Commodore has specified that if the nonstandard baud rate
+feature is implemented, the value placed here should equal the system
+clock frequency divided by the baud rate divided by 2 minus 100,
+stored in low byte, high byte order.  The system clock frequency for
+American television monitors (NTSC standard) is 1.02273 MHz, and for
+European monitors (PAL standard) .98525 MHz."

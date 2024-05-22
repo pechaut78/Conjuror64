@@ -1,0 +1,11 @@
+question,answer
+"What command can be used after a stop or end statement to restart the flow of the program from that point?","The CONT C(SHIFTED O) command statement can be used after a stop or end statement to restart the flow of the program from that point in C64 Basic."
+"What mathematical function is available in C64 Basic?","The COS NONE function is a mathematical function available in C64 Basic."
+"What are DATA D(SHIFTED A) statements used for in C64 Basic?","DATA D(SHIFTED A) statements in C64 Basic are used in conjunction with the READ statement to store strings or numeric values."
+"How can the flow of a program be resumed from a specific point in C64 Basic?","The CONT C(SHIFTED O) command statement can be used after a stop or end statement to restart the flow of the program from that point in C64 Basic."
+"What is the function of the COS NONE function in C64 Basic?","The COS NONE function is a mathematical function that is used to calculate the cosine of an angle in C64 Basic."
+"What kind of values can be stored using DATA D(SHIFTED A) statements in C64 Basic?","DATA D(SHIFTED A) statements in C64 Basic can be used to store strings or numeric values."
+"What statement is used in C64 Basic to restart the flow of a program from a specific point?","The CONT C(SHIFTED O) command statement is used in C64 Basic to restart the flow of a program from a specific point."
+"What is the purpose of the CONT C(SHIFTED O) statement in C64 Basic?","The CONT C(SHIFTED O) statement in C64 Basic is used after a stop or end statement to restart the flow of the program from that point."
+"What is the role of the READ statement in conjunction with DATA D(SHIFTED A) statements in C64 Basic?","The READ statement is used in conjunction with DATA D(SHIFTED A) statements in C64 Basic to retrieve the stored strings or numeric values."
+"How can a program be resumed from a specific point in C64 Basic?","The CONT C(SHIFTED O) command statement can be used after a stop or end statement to restart the flow of the program from that point in C64 Basic."

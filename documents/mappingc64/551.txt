@@ -1,0 +1,5 @@
+
+
+
+address              $E8A1
+If at the Beginning of a Screen Line, Move Cursor to Previous Line

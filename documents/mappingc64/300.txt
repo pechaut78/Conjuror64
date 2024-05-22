@@ -1,0 +1,9 @@
+
+
+
+address         $B465          STRD
+Perform STR$
+
+STR$ first checks to make sure that the parameter is a number, and
+then calls the routines that convert floating point to ASCII and crate
+the pointers to a string constant.

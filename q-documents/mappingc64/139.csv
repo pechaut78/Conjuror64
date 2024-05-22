@@ -1,0 +1,20 @@
+question,answer
+"What is the purpose of the memory location at address $283-284?","address       $283-284       MEMSIZ
+Pointer: O.S. End of Memory
+
+When the power is first turned on, or a cold start RESET is performed,
+the Kernal routine RAMTAS (64848, $FD50) performs a nondestructive
+test of RAM from 1024 ($400) up, stopping when the test fails,
+indicating the presence of ROM.  This will normally occur at 40960
+($A000), the location of the BASIC ROM.  The top of user RAM pointer
+is then set to point to that first ROM location.
+
+After BASIC has been started, the system will alter this location only
+when an RS-232 channel (device number 2) is OPENed or CLOSEd.  As 512
+bytes of memory are required for the RS-232 transmission and reception
+buffers, this pointer, as well as the end of BASIC pointer at 55
+($37), is lowered to create room for those buffers when the device is
+opened.  CLOSing the device resets these pointers.
+
+The Kernal routine MEMTOP (65061, $FE25) may be used to read or set
+this pointer."

@@ -1,0 +1,88 @@
+
+
+
+Locating the Screen in RAM on the C64
+
+In the 64K of RAM available tliere are 8 different places 
+where the high resolution screen could be located (65536/ 
+8000 = 8,192). However, in the standard system using 
+BASIC, only the first two of the eight possible locations 
+can be used. (This is because it is the Video Interface Con- 
+troller chip (or ViC chip for short) which controls the high 
+resolution screen, and in the standard system the VIC chip 
+can only see the first I6K of RAM.) 
+
+The two locations which we can use for the high resolution 
+screen start at addresses and 8192 decimal, (The number 
+8192 is used because it is 2" which a computer finds more 
+convenient than the number 8000.) Unfortunately, the 
+operating system uses most of the low memory locations, 
+so the only available place to locate the high resolution screen 
+is at address 8192 to 16192, 
+
+You've probably noticed that this falls right in the middle 
+of the BASIC text area, so in order to prevent BASIC from 
+overwriting the screen, we must move the bottom of BASIC 
+up past address 16193 decimal. As we saw in Chapter 6 
+this is not too difficult, and the following lines, which must 
+be entered in direct mode, will move the bottom of BASIC 
+up to address 16384 decimal. (This is the closest we can 
+get to 16193 because the bottom of BASIC can only be 
+moved in 256 byte blocks.) 
+
+The result of moving BASIC by this amount is that we 
+have lost 14K of program space even though the screen only 
+takes up 8K. it is now possible however, to store the data 
+for 32 Sprites in the space between address 2048 decimal 
+and 4096 decimal. (It is not possible to put Sprite data 
+between addresses 4096. decimal and 8192 decimal because 
+the VIC chip maintains an image of the character set ROM in 
+this area.) 
+
+As we mentioned earlier, it is the VIC chip which con- 
+trols the high resolution screen, and to find out where the 
+screen is located it looks at bit 3 of the VIC Memory Control 
+register which is located at address 53272 decimal. 
+
+If this bit is then the screen starts at address 0000, if 
+the bit is I then the screen starts at address 8192 decimal. 
+This means that when we are using BASIC we must always 
+set this bit. 
+
+For example, to locate the high resolution scrren at address 
+8192 decimal POKE: POKE 53272, PEEK (53272) OR 8. 
+
+All we need to do now is to tell the VIC chip to switch 
+to high resolution mode. This can be done by setting bit 5 
+of the VIC Control register which is located at address 53265 
+decimal. If this bit is a 1 then the screen is in high resolution 
+mode, if it is a then it is in normal text mode. 
+
+For example, to switch to high resolution mode we must 
+use the following POKE: POKE 53265 , PEEK (53265) OR 32. 
+
+(Chapter 10 contains a machine code routine which locates 
+the high resolution screen at address 8192 and switches to 
+high resolution mode.) 
+
+The VIC chip will now stop displaying the normal text 
+screen and will begin displaying the high resolution screen. 
+This introduces an immediate problem because you can no 
+longer see what you are typing! If you are fairly careful 
+though, you shouldn't have any problems. 
+
+The screen itself will probably be full of garbage, and this 
+comes from two sources. Firstly, memory locations 8192 
+decimal to 16192 decimal are probably full of rubbish and 
+this will be displayed as red dots on a black background. In 
+addition, any characters that were being displayed on the 
+normal text screen are now displayed as different coloured 
+dots. This happens because the normal text screen memory 
+is now used to store the colour information for the high 
+resolution screen (more about this later). 
+
+Obviously before we can begin using the screen we must 
+clear out this rubbish. The coloured squares can easily be 
+removed by printing a clear screen character (SHIFT/CLR) 
+although they will reappear if you type anything on the 
+keyboard. 

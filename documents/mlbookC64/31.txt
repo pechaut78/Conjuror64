@@ -1,0 +1,28 @@
+
+ Conditional branching instructions
+Next we introduce the instructions that allow you to make
+programming decisions. The foundations of these decisions
+are the conditions of the flags. The following four flags
+can be used to make decisions: the Z flag, the N flag,
+the C flag, and the V flag.
+For each flag there are two conditional branch commands:
+the first branches if the flag is set, the second if the
+flag is clear. The operand of each conditional branch
+instruction specifies the location where the micro
+processor is to get the next operation code should the
+condition tested for be true.
+The 6510 microprocessor uses the relative addressing mode
+for conditional branch instructions. The operand is not
+an absolute memory address, but rather an address
+relative to the current contents of the program counter.
+This relative address is an 8-bit value. The relative
+address is added to the contents of the program counter
+and the branch is made to that computed address if the
+condition tested for is true.
+With this 8-bit value you can represent 256 different
+numbers, so you can branch to any of 256 possible
+locations. The relative address causes a branch forward
+if the 8-bit value is positive and causes a branch
+backward if the 8-bit value is negative. So relative
+addressing can perform backward branching by allowing the
+use of negative operands.

@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the GETIN function?","The purpose of the GETIN function is to get a character from the keyboard queue and return it as an ASCII value in the accumulator."
+"what is the call address of the GETIN function?","The call address of the GETIN function is $FFE4 (hex) or 65508 (decimal)."
+"what preparatory routines are required for the GETIN function?","The preparatory routines required for the GETIN function are CHKIN and OPEN."
+"what happens if the keyboard queue is empty when calling the GETIN function?","If the keyboard queue is empty when calling the GETIN function, the value returned in the accumulator will be zero."
+"how many characters can the keyboard buffer hold?","The keyboard buffer can hold up to ten characters."
+"what happens to additional characters when the buffer is full?","When the buffer is full, additional characters are ignored until at least one character has been removed from the queue."
+"how does the GETIN function handle RS-232 channels?","For RS-232 channels, the GETIN function only uses the A register and returns a single character, and the validity of the character should be checked using the READST routine."
+"what is the purpose of the SCNKEY routine?","The SCNKEY routine is an interrupt-driven keyboard scan routine that automatically puts characters into the keyboard queue."
+"how do you use the GETIN function in a program?","To use the GETIN function, you call it using a JSR instruction, check for a zero in the accumulator to check if the buffer is empty, and then process the data."
+"what is the purpose of the BASIN routine?","The BASIN routine is used for channels such as serial, cassette, or screen, and is called instead of GETIN for these channels."

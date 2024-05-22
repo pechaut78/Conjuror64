@@ -1,0 +1,11 @@
+question,answer
+"What can be assigned to a variable in C64 Basic?","A variable in C64 Basic can be assigned the value of long numbers. This allows for faster and more accurate typing."
+"What is the benefit of using variables in C64 Basic?","The real power of variables in C64 Basic lies in the fact that their values can be changed. Reassigning one variable can save the work of retyping several lines."
+"Can variables in C64 Basic hold more than one value?","No, variables in C64 Basic can only hold one value at a time."
+"What happens when a variable's value is changed in C64 Basic?","When a variable's value is changed in C64 Basic, it is updated with the new value, allowing for the reuse of that variable in place of retyping the new value several times."
+"What is an example of reusing a variable in C64 Basic?","An example of reusing a variable in C64 Basic would be assigning the value of a long number to a variable, then changing the value of that variable to a different long number instead of retyping the new number several times."
+"Is it necessary to use variables in C64 Basic?","No, it is not necessary to use variables in C64 Basic, but they can make programming faster and more efficient by reducing the amount of typing required."
+"Can variables be used for more than just numbers in C64 Basic?","No, variables in C64 Basic can only be assigned the value of long numbers. They cannot be used for other data types such as strings or arrays."
+"What is the maximum value that can be assigned to a variable in C64 Basic?","The maximum value that can be assigned to a variable in C64 Basic is determined by the memory capacity of the C64 computer."
+"Can variables be declared with a specific data type in C64 Basic?","No, variables in C64 Basic do not have a specific data type. They can only be assigned the value of long numbers."
+"What is an advantage of using variables over constants in C64 Basic?","An advantage of using variables over constants in C64 Basic is that variables can be changed, allowing for more flexibility in programming, while constants cannot be changed once they are set."

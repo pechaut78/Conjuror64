@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the LISTEN function?","The purpose of the LISTEN function is to command a device on the serial bus to receive data."
+"What is the call address of the LISTEN function?","The call address of the LISTEN function is $FFB1 (hex) or 65457 (decimal)."
+"What register is used to store the device number in the LISTEN function?","The accumulator (A) is used to store the device number in the LISTEN function."
+"What is the range of device numbers that can be used with the LISTEN function?","The range of device numbers that can be used with the LISTEN function is between 0 and 31."
+"How does the LISTEN function convert the device number to a listen address?","The LISTEN function ORs the number bit by bit to convert it to a listen address."
+"What happens to the specified device after calling the LISTEN function?","The specified device will go into listen mode and be ready to accept information after calling the LISTEN function."
+"What is the JSR instruction used for in the LISTEN function?","The JSR instruction is used to call the LISTEN function."
+"How do you load the device number before calling the LISTEN function?","You load the device number by using the LDA instruction, for example: LDA #8."
+"What is the error return mechanism for the LISTEN function?","The error return mechanism for the LISTEN function is the same as the READST function."
+"What is an example of how to use the LISTEN function?","An example of how to use the LISTEN function is: LDA #8; JSR LISTEN, which commands device #8 to listen."

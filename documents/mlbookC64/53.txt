@@ -1,0 +1,9 @@
+
+
+ROL
+All bits are shifted one position to the left. The carry
+flag is transferred into the now-vacant bit 0. The
+pushed-out seventh bit is placed into the carry. We get a
+result of $97 and a cleared carry. Here again the
+contents of the accumulator are doubled; any overflow is
+placed into the carry.

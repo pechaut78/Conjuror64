@@ -1,0 +1,16 @@
+
+
+
+address              $F69B          UDTIM
+Update the Software Clock and Check for the STOP Key
+
+UDTIM is a documented Kernal routine which can be entered through the
+jump table at 65514 ($FFEA).
+
+It is normally called by the IRQ interrupt handler once every sixtieth
+of a second.  It adds one to the value in the three-byte software
+jiffy clock at 160-162 ($A0-$A2), and sets the clock back to zero when
+it reaches the 24 hour point.  In addition, it scans the keyboard row
+in which the STOP key is located, and stores the current value of that
+key in location 145 ($91).  This variable is used by the STOP routine
+which checks for the STOP key.

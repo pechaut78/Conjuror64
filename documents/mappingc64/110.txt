@@ -1,0 +1,12 @@
+
+
+
+address          $CD            BLNCT
+Timer: Countdown to Blink Cursor
+
+The interrupt routine that blinks the cursor uses this location to
+tell when it's time for a blink.  First the number 20 is put here, and
+every jiffy (1/60 second) the value here is decreased by one, until it
+reaches zero.  Then the cursor is blinked, the number 20 is put back
+here, and the cycle starts all over again.  Thus, under normal
+circumstances, the cursor blinks three times per second.

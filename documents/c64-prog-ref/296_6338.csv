@@ -1,0 +1,11 @@
+question,answer
+"Where are the sprite pointers located in the video matrix?","The sprite pointers are located at the end of the video matrix, with locations 1016-1023 (VM base+$3F8 to VM base+$3FF) used for sprite pointers 0-7, respectively."
+"How many bytes of memory are used to store the data for each sprite?","The data for each sprite is stored in 63 consecutive bytes of memory."
+"What is the purpose of the sprite byte counter?","The sprite byte counter provides six bits that, together with the eight-bit sprite pointer from the video matrix, define the entire 14-bit address field to access the sprite data."
+"How many bits are used to address the sprite data?","A total of 14 bits are used to address the sprite data, consisting of the eight-bit sprite pointer from the video matrix and the six bits from the sprite byte counter."
+"What triggers the fetches of sprite data?","The fetches of sprite data begin when the Y position register of a sprite matches the current raster line count."
+"How many bytes of sprite data are displayed on each raster line?","Three bytes of sprite data are displayed on each raster line."
+"What is the role of the internal counters in sprite data access?","The internal counters automatically step through the 63 bytes of sprite data, displaying three bytes on each raster line."
+"How are the sprite pointers read from the video matrix?","The sprite pointers are read from the video matrix at the end of every raster line."
+"What is the relationship between the sprite pointer and the sprite byte counter in addressing sprite data?","The sprite pointer from the video matrix and the sprite byte counter together define the entire 14-bit address field to access the sprite data."
+"What is the significance of the video matrix locations 1016-1023?","The video matrix locations 1016-1023 (VM base+$3F8 to VM base+$3FF) are used for sprite pointers 0-7, respectively."

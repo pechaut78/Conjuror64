@@ -1,0 +1,11 @@
+question,answer
+"what is sprite priority in the context of c64 graphics?","Sprite priority refers to the order in which sprites are displayed on the screen, with lower numbered sprites having priority over higher numbered sprites, meaning they will appear to move in front of or on top of sprites with lower priority."
+"how do sprites with different priorities interact with each other on the screen?","When two sprites are in the same position, the sprite with higher priority will appear in front of the sprite with lower priority, potentially obscuring it or allowing it to show through from behind."
+"what is the priority of sprite 0 compared to other sprites?","Sprite 0 has priority over all other sprites, meaning it will always appear in front of or on top of any other sprite."
+"what happens when two sprites with different priorities overlap on the screen?","The sprite with higher priority will appear in front of the sprite with lower priority, potentially obscuring it or allowing it to show through from behind."
+"how does the priority of sprite 7 compare to other sprites?","Sprite 7 has no priority in relation to the other sprites, meaning it will not necessarily appear in front of or behind any other sprite."
+"what is the rule for determining sprite priority?","The rule is that lower numbered sprites have priority over higher numbered sprites, with sprite 0 having priority over all other sprites."
+"can a sprite with lower priority appear in front of a sprite with higher priority?","No, a sprite with lower priority will always appear behind a sprite with higher priority, either being obscured or showing through from behind."
+"what happens when sprite 1 and sprite 2 are in the same position on the screen?","Sprite 1 will appear in front of sprite 2, because sprite 1 has higher priority."
+"how does the priority of sprites affect their display on the screen?","The priority of sprites determines the order in which they are displayed on the screen, with higher priority sprites appearing in front of lower priority sprites."
+"in what order are sprites displayed on the screen based on their priority?","Sprites are displayed on the screen in order of their priority, with lower numbered sprites (higher priority) appearing in front of higher numbered sprites (lower priority)."

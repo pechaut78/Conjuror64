@@ -1,0 +1,13 @@
+
+
+
+address              $F875
+Common Code for Reading a Data Block from Tape and Writing a Block to Tape
+
+This routine sets the actual reading or writing of a block of data.
+It sets CIA #1 Timer B to call the IRQ which drives the actual reading
+or writing routine, saves the old IRQ vector, and sets the new IRQ
+vector to the read or write routine.  It also blanks the screen so
+that the video chip's memory addressing (which normally takes away
+some of the 6510 microprocessor's addressing time) will not interfere
+with the timing of the routines.

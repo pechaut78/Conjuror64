@@ -1,0 +1,9 @@
+
+
+address            $D             VALTYP
+Flag: Type of Data (String or Numeric)
+
+This flag is used internally to indicate whether data being operated
+upon is string or numeric.  A value of 255 ($FF) in this location
+indicates string data, while a 0 indicates numeric data.  This
+determination is made every time a variable is located or created.

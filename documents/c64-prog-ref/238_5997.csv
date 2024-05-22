@@ -1,0 +1,11 @@
+question,answer
+"What happens to the data in the buffers when closing an RS-232 file?","When closing an RS-232 file, all data in the buffers is discarded, regardless of whether it had been transmitted or printed out."
+"What is the effect on transmitting and receiving when closing an RS-232 file?","When closing an RS-232 file, all RS-232 transmitting and receiving is stopped."
+"What happens to the RTS and transmitted data lines when closing an RS-232 file?","When closing an RS-232 file, the RTS and transmitted data (Sout) lines are set high."
+"What is the BASIC syntax to close an RS-232 file?","The BASIC syntax to close an RS-232 file is CLOSE lfn, where lfn is the logical file number."
+"What is the KERNAL entry point to close an RS-232 file?","The KERNAL entry point to close an RS-232 file is CLOSE ($FFC3), see the Memory Map for more information on entry and exit conditions."
+"Why is it important to ensure all data is transmitted before closing the channel?","It is important to ensure all data is transmitted before closing the channel because any unsent data will be lost when the channel is closed."
+"How can you check in BASIC if all data has been transmitted before closing the channel?","You can check in BASIC if all data has been transmitted before closing the channel by checking the status of the serial port with SS=ST, and if SS is 0 or 8, then all data has been transmitted."
+"What is the purpose of the code snippet '100 SS=ST: IF(SS=0 OR SS=8) THEN 100'?","The purpose of the code snippet '100 SS=ST: IF(SS=0 OR SS=8) THEN 100' is to wait until all data has been transmitted before closing the channel."
+"What happens to the RS-232 buffers when closing an RS-232 file?","When closing an RS-232 file, both RS-232 buffers are removed."
+"Why is it important to close an RS-232 file?","It is important to close an RS-232 file to stop all RS-232 transmitting and receiving, and to discard any remaining data in the buffers."

@@ -1,0 +1,11 @@
+question,answer
+"What is the property of C64 Basic variables regarding the assignment of values?","In C64 Basic, assigning a value to one variable does not affect the values of other variables, as they are independent."
+"Can two variables in C64 Basic have the same value?","Yes, two variables in C64 Basic can have the same value, even though they are independent."
+"What happens to the value of a variable in C64 Basic when it is not assigned a new one?","The value of a variable in C64 Basic remains the same until it is explicitly assigned a new one."
+"Is it possible for a variable in C64 Basic to have multiple values at the same time?","No, a variable in C64 Basic can only have one value at a time."
+"What is the property of numbers in C64 Basic regarding the assignment of new values?","Numbers in C64 Basic cannot be assigned new values."
+"How do C64 Basic variables maintain their values?","C64 Basic variables maintain their values until they are assigned new ones."
+"Can the value of a variable in C64 Basic be changed indirectly through another variable?","No, the value of a variable in C64 Basic cannot be changed indirectly through another variable, as they are independent."
+"What is the limitation of a variable in C64 Basic regarding the number of values it can have?","A variable in C64 Basic can only have one value at a time."
+"What is the behavior of numbers in C64 Basic when it comes to assigning new values?","Numbers in C64 Basic cannot be assigned new values."
+"What is the impact of not assigning a new value to a variable in C64 Basic?","If a new value is not assigned to a variable in C64 Basic, its value remains the same."

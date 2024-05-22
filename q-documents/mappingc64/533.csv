@@ -1,0 +1,15 @@
+question,answer
+"What is the purpose of the memory location at address $E505?","address              $E505          SCREEN
+Store Number of Screen Rows and Columns in .Y and .X
+
+This is a documented Kernal routine which is vectored in the jump
+table at 65517 ($FFED), and is provided to allow for program
+compatibility between computers.
+
+When called, this subroutine returns the number of screen columns in
+the .X register, and the number of screen rows in .Y.  Thus, a program
+can detect the screen format of the machine on which it is running,
+and make sure that text output is formatted accordingly.
+
+The present version of this routine loads the .X register with 40
+($28) and the .Y register with 25 ($19)."

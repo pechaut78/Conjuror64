@@ -1,0 +1,10 @@
+
+
+Tape Interface
+The tape interface consists of a single line each for
+data input and output, motor control and key sense.
+The raw data is read from and written to the data
+lines, and all encoding and decoding of the data
+stream is done in software. 3 of the required lines are
+connected to the processor port at zero page location
+1, and one (data input) is connected to CIA 2.

@@ -1,0 +1,30 @@
+question,answer
+"What is the purpose of the memory location at address $13F-$1FF?","address       $13F-$1FF
+
+This area is exclusively for the microprocessor stack.  Some BASIC
+commands, such as FOR-NEXT loops require many stack entries at a time.
+Therefore, BASIC frequently checks the stack before pushing entries
+on, and returns an OUT OF MEMORY error if an operation would result in
+less than 62 bytes of available stack memory.
+
+Each FOR statement causes 18 bytes to be pushed onto the stack, which
+come off in the following order:
+
+First comes a one-byte constant of 129 ($81).  Next is a two-byte
+pointer to the address of the subject variable (the X of FOR X=1 to
+10).  This is followed by the five-byte floating point representation
+of the TO value.  Finally comes the two-byte line number of the line
+to which the program returns after a NEXT, and the two-byte address of
+the next character to read in that line after the FOR statement.
+
+Each GOSUB call places five bytes on the stack.  The first byte to
+come off is a one-byte constant of 141 ($8D).  The next two bytes
+contain the line number of the statement to which the program will
+RETURN after the subroutine ends.  And the final two bytes are a
+pointer to the address of the BASIC program text for that statement in
+which the program RETURNs.
+
+DEF also leaves a five-byte entry on the stack.  It is the same as
+that described for GOSUB, except that instead of a constant byte of
+141, the first number is a dummy byte, whose value has no
+significance."

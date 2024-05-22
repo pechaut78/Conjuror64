@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $BE?","address           $BE            FSBLK
+Cassette Read/Write Block Count
+
+Used by the tape routines to count the number of copies of a data
+block remaining to be read or written."

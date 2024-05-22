@@ -1,0 +1,11 @@
+question,answer
+"what are the types of commands that expert programmers can give to directly alter the workings of the 1581?","Expert programmers can give commands that directly alter the workings of the 1581, much as skilled programmers can alter the workings of BASIC inside the computer with PEEKs, POKEs and SYS calls."
+"what is the similarity between loading and running machine language programs in the 1581 and in a computer?","It is similar to loading and running machine language programs in your computer."
+"what is the recommended precaution when using the commands in this chapter?","Extreme caution is advised in using the commands in this chapter, as they are essentially machine language commands, and lack all of BASIC's safeguards."
+"what should you do if anything goes wrong while using these commands?","If anything goes wrong, you may have to turn the disk drive off and on again (after removing the diskette) to regain control."
+"what is recommended to avoid losing important data when practicing these commands?","Do not practice these commands on any important diskette. Rather, make a spare copy and work with that."
+"what knowledge is helpful to have when working with these commands?","Knowing how to program a 6502 in machine language will help greatly, and you will also need a good memory map of the 1581."
+"what is provided at the end of the chapter to aid in working with these commands?","A brief 1581 map appears below."
+"what is the purpose of having a good memory map of the 1581?","You will also need a good memory map of the 1581 to work with these commands."
+"in what way can machine language programs be loaded and run entirely within the 1581?","Machine language programs can be loaded and run entirely within the 1581, either by writing them into disk memory from the computer, or by loading them directly from diskette into the desired disk memory buffer."
+"what is the similarity between the commands in this chapter and PEEKs, POKEs and SYS calls in BASIC?","The commands in this chapter are essentially machine language commands, similar to PEEKs, POKEs and SYS calls in BASIC."

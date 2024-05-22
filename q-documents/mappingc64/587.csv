@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $EDFE?","address              $EDFE          UNLSN
+Send UNLISTED to a Device on the Serial Bus
+
+This is a documented Kernal routine whose entry in the jump table is
+65454 ($FFAE).  It sends the UNLISTEN code (63, $3F) on the serial
+bus.  This commands any LISTENers to get off the serial bus, and frees
+up the bus for other users."

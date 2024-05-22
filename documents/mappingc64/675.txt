@@ -1,0 +1,5 @@
+
+
+
+address              $FF1A
+Load the Timer with Prescaler Values from the Baud Rate Lookup Table

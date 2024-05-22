@@ -1,0 +1,171 @@
+
+The PRINT Statement
+
+So far you have typed several lines that started with a ques
+tion mark and contained numbers and operators. Every time
+you pressed the RETURN key, the computer responded by
+displaying a number on the screen.
+Whenever the computer displays something on the screen,
+it is said to be printing to the screen. You use the question
+mark to tell the computer to print to the screen.
+Now we let you in on the question mark's secret identity.
+Try doing some of the earlier examples again, this time using
+the word PRINT in place of the question mark.
+PRINT64
+PRINT2+3*4
+PRINT is the BASIC statement understood by the com
+puter. The question mark is just a short form of that state
+ment. For our purposes right now, PRINT and the question
+mark mean the same thing.
+Why does the PRINT statement have a shorter form?
+Well, typing in a long program can be boring and time-
+consuming. Also, the more you type, the more likely you are
+to make errors. So, anything you can do to reduce the amount
+of typing you have to do is a real plus.
+PRINT requires that you press five keys, and the PRINT
+statement is used often. The question mark requires only one
+keystroke, and that's about as short as you can get! So feel
+free to substitute the question mark for the longer form,
+PRINT, as you type in the examples in this book.
+Incidentally, the term print is left over from the days
+before video terminals, when the computer's display device
+was a printer. Nowadays we can use our television set or
+monitor to see the information, and PRINT has come to mean
+"displaying information on the screen."
+
+Summary
+• The PRINT statement instructs the computer to display in
+formation on the screen. It is a frequently used statement in
+BASIC programming.
+• The question mark is interpreted by the computer to mean
+the same thing as the PRINT statement.
+
+
+The POKE Statement
+POKE is used often be cause it lets your programs make changes in special locations
+inside the 64. POKE can be used to do a wide variety of
+things, so it is very powerful. For instance, you use POKE to
+create color graphics and sound on your Commodore 64.
+The format, or syntax, of the POKE statement is the
+keyword, POKE, followed by a number (or expression), then a
+comma, and finally a second number (or expression). The first
+number designates a memory or hardware location in the
+computer. Memory locations are used to store information
+such as a program, the screen display, and system software.
+Hardware locations control things like the color of the screen,
+or the pitch of a music note. Each location contains a number
+that ranges in value from 0 to 255. The location is said to be
+changed when the value which it contains is changed to a
+new value.
+Your Commodore 64 has a total of 65536 of these loca
+tions. Each location has a distinct number, from 0 to 65535.
+This means that location 0 is the first location. This idea may
+take a little getting used to, because when you count things,
+you usually start with 1. Just remember, zero is a number, too.
+And when you're counting memory locations or the values in
+those locations, you begin with zero.
+Each location serves a different purpose. For example, lo
+cation 53281 is a hardware location that controls the color of
+the screen background. There are 16 colors, represented by
+numbers in the range 0-15. (Remember, the first color is rep
+resented by 0.) If location 53281 contains a value of 6, the
+screen background is blue. That's the screen background color LJ
+you see when you turn the computer on.
+The color of the screen can be changed to red by putting
+a value of 2 into location 53281. The POKE statement is used |_!
+to do this. First you may want to change the character color to
+white by holding down the CTRL key and pressing the 2 key.
+This will enable you to see the characters better. Then enter: [_j
+POKE 53281,2
+The first number in the statement indicates the location to
+be changed, and the second number tells what new value the
+location should contain.
+To change the screen color back to the original blue, enter
+this statement:
+POKE 53281,6
+Notice that when the screen background changed to red,
+the screen border remained light blue (represented by the value
+14). The color of the screen border is controlled by locajtion
+53280. Change the screen border to red with this statement:
+POKE 53280,2
+While we have been using only numbers in our POKE
+statements, expressions can be used in place of the numbers,
+so the statement shown below is an alternate way of setting
+the background color to red.
+POKE 53280+1, 6/3
+You may want to experiment further and see what other
+colors can be put on the screen. Keep in mind, though, that
+your characters are white. So if you want to change the screen
+background to white, first change your character color by
+holding down CTRL and pressing the 1 key (for black). Other
+wise, your characters will be the same color as the back
+ground, and the screen will appear to be blank.
+Also remember that the 64 can display only 16 different
+colors, using the numbers 0-15. If you POKE locations 53280
+and 53281 with a value larger than 15, you will not get any
+new colors. Instead, numbers beyond 15 simply repeat the
+colors obtained with values from 0 to 15. POKE 53280,2 and
+POKE 53280,18 both set the border color to red.
+If you try to POKE a location with a value outside the
+range from 0 to 255, you will get an ILLEGAL QUANTITY
+error.
+I }
+\ i
+; j
+""■J
+. Ij
+18
+ r
+= *
+|—I
+1'
+r8^
+]
+Statements
+When you are through experimenting, set these locations
+back to their initial values by holding down the RUN/STOP
+key and pressing the RESTORE key.
+Here is a very important word of caution. The POKE
+statement is very powerful, but with added power comes
+added responsibility. You should not carelessly change
+unknown locations. It is not possible to physically damage
+your Commodore 64 by randomly POKEing locations, but you
+can accidentally force the computer to ignore your keyboard
+entries, so that it appears to stop functioning completely. This
+is called a system crash.
+To set everything back to normal, you must turn the com
+puter off and then back on. Pressing RUN/STOP and RE
+STORE will reset some things, but it will not always get the
+computer back on track after a stray POKE. To be safe, you
+should POKE only those locations described in this book and
+in other Commodore 64 literature. Crashing the computer is
+really no big deal; just be thankful the damage is not
+permanent.
+Summary
+• The Commodore 64 has 65536 memory locations. They are
+numbered from 0 to 65535.
+• Some locations are used to hold information for your use.
+Other locations are related to the hardware. The examples
+use hardware locations that control the screen border and
+background colors.
+Each location contains a value from 0 to 255.
+The POKE statement is used to replace the contents of a
+location with a new value.
+• The syntax for the POKE statement is the keyword POKE, a
+number or expression indicating which location is to be
+changed, a comma, and a second number or expression
+which is the new value to be placed into the location.
+• The wise programmer will avoid carelessly POKEing
+unknown locations. Although RUN/STOP and RESTORE
+will reset some things like screen color, they may not undo
+the results of stray POKE statements. The only sure way to
+restore the system in such a situation is to turn it off and
+then on again. Fortunately, crashing the computer does not
+cause permanent damage.
+
+C64 basic: A variable consists of a name and a value.
+• Letters of the alphabet may be used as names for variables.
+• The value of a variable can be changed. This is what
+distinguishes a variable from a number.
+• A numeric variable can have any value that is valid for a
+number.

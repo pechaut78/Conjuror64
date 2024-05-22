@@ -1,0 +1,16 @@
+
+Control Transfer
+Next to the absolute JMP instruction, there is an indirect version that jumps over a vector (e.g. JMP
+($FFFC)). JSR (jump to subroutine) only has an absolute version, and stores the address of the next instruction minus one on the stack. RTS (return from
+subroutine) takes the address from the stack, adds
+one, and moves it into the program counter. The ”minus one” logic was chosen because it could save one
+cycle in the implementation of JSR.
+A hardware interrupt, unless disabled by a set interrupt (I) flag, pushes the address of the next instruction minus one (just like JSR), pushes the processor
+status afterwards, disables interrupts, and jumps over
+the vector at $FFFE/$FFFF. RTI return from interrupt) is the same as the combination of PLP and RTS.
+BRK causes a software interrupt and behaves the
+same as a hardware interrupt, except that it sets the B
+flag on the stack to 1 (a hardware interrupt sets it to 0)
+NMIs behave the same as IRQs, but they cannot be
+masked, and they use the $FFFA/$FFFB vector. The
+reset vector is at $FFFC/$FFFD.

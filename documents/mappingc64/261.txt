@@ -1,0 +1,10 @@
+
+
+
+address         $ABBF          INPUT
+Perform INPUT
+
+The INPUT routine checks to make sure that direct mode is not active,
+prints prompts, receives a line of input from the device, and jumps to
+the common code in READ that assigns the input to the variables which
+were named.

@@ -1,0 +1,10 @@
+
+
+Zero-page indexed addressing
+Indexed addressing can also be used together with
+zero-page addressing, thereby carrying over the
+advantages of zero-page addressing to indexed
+addressing. Note that this addressing mode works
+with the X-register only. A typical instruction
+might look like this:
+LDA $BAfX

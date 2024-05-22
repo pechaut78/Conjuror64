@@ -1,0 +1,21 @@
+
+C -Carry The carry flag contains the carry generated
+by an addition, and is set if the result is greater
+than 255 and therefore cannot be contained in eight
+bits of the accumulator.
+Z - Zero The zero flag is set if the result of an
+operation is zero.
+I- Interrupt Disable This flag determines if
+interrupts are permitted in a program. This flag
+does not interest us at the moment.
+D -Decimal The decimal flag determines if arithmetic
+is carried out in the decimal mode.
+B -Break The break flag indicates if execution was
+halted by a BRK instruction.
+V-overflow The V flag indicates overflow when
+calculating with signed numbers.
+N -Negative This flag is set if the result of an
+operation results in a value greater than 127 (bit
+7 is set). The designation negative comes from the
+fact that values over $7F can be interpreted as
+negative numbers.

@@ -1,0 +1,8 @@
+
+
+
+address         $B5BD
+Check for Most Eligible String to Collect
+
+This part of the garbage collection routine checks to see if the
+current string is the highest in memory.

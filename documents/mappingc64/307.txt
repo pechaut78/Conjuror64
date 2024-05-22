@@ -1,0 +1,9 @@
+
+
+
+address         $B67A          MOVINS
+Move a String in Memory
+
+This is the routine which is used to move a string to the bottom of
+the string text area for the above routine.  It is generally used as a
+utility routine to move strings.

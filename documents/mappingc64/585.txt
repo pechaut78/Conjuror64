@@ -1,0 +1,14 @@
+
+
+
+address              $EDDD          CIOUT
+Send a Byte to an I/O Device over the Serial Bus
+
+This is a documented Kernal routine which can be entered from the jump
+table at 65448 ($FFA8).  Its purpose is to send a byte of data over
+the serial bus.  In order for the data to be received, the serial
+device must have first been commanded to LISTEN and been given a
+secondary address if necessary.  This routine always buffers the
+current character, and defers sending it until the next byte is
+buffered.  When the UNLISTEN command is sent, the last byte will be
+sent with an End or Identify (EOI).

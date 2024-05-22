@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the L flag in the CMD 1 -- READ protocol?","The L flag is a logical flag that determines whether to perform logical to physical translation, where 1 indicates that the translation should be performed."
+"what is the function of the DESTINATION TRACK byte in the CMD 1 -- READ protocol?","The DESTINATION TRACK byte specifies the track number of the destination of the read operation."
+"what is the purpose of the E flag in the CMD 1 -- READ protocol?","The E flag is an error flag that determines whether to ignore errors during the read operation, where 1 indicates that errors should be ignored."
+"what is the protocol used in the CMD 1 -- READ command?","The protocol used in the CMD 1 -- READ command is a burst handshake protocol."
+"what is the purpose of the NEXT TRACK byte in the CMD 1 -- READ protocol?","The NEXT TRACK byte is an optional byte that specifies the next track number to be read, allowing for sequential reading of multiple tracks."
+"what is the format of the output data in the CMD 1 -- READ protocol?","The output data in the CMD 1 -- READ protocol consists of a burst status byte followed by burst data, sent for each sector transferred."
+"what is the purpose of the S flag in the CMD 1 -- READ protocol?","The S flag is a side select flag that determines which side of the diskette to read from."
+"what is the purpose of the N flag in the CMD 1 -- READ protocol?","The N flag specifies the drive number to use for the read operation."
+"what is the prerequisite for reading or writing to a diskette using the CMD 1 -- READ protocol?","Before reading or writing to a diskette, it must be logged-in using either the INQUIRE DISK or QUERY DISK FORMAT command."
+"what determines the values of the bytes in the CMD 1 -- READ protocol?","The values of the bytes in the CMD 1 -- READ protocol are determined by the particular disk format and format of translation table."

@@ -1,0 +1,42 @@
+question,answer
+"What is the purpose of the memory location at address $D01B?","address              $D01B          SPBGPR
+Sprite to Foreground Display Priority Register
+
+Bit 0:  Select display priority of Sprite 0 to foreground (0=sprite
+        appears in front of foreground)
+Bit 1:  Select display priority of Sprite 1 to foreground (0=sprite
+        appears in front of foreground)
+Bit 2:  Select display priority of Sprite 2 to foreground (0=sprite
+        appears in front of foreground)
+Bit 3:  Select display priority of Sprite 3 to foreground (0=sprite
+        appears in front of foreground)
+Bit 4:  Select display priority of Sprite 4 to foreground (0=sprite
+        appears in front of foreground)
+Bit 5:  Select display priority of Sprite 5 to foreground (0=sprite
+        appears in front of foreground)
+Bit 6:  Select display priority of Sprite 6 to foreground (0=sprite
+        appears in front of foreground)
+Bit 7:  Select display priority of Sprite 7 to foreground (0=sprite
+        appears in front of foreground)
+
+If a sprite is positioned to appear at a spot on the screen that is
+already occupied by text or bitmap graphics, a conflict arises.  The
+contents of this register determines which one will be displayed in
+such a situation.  If the bit that corresponds to a particular sprite
+is set to 0, the sprite will be displayed in front of the foreground
+graphics data.  If that bit is set to 1, the foreground data will be
+displayed in front of the sprite.  The default value that this
+register is set to at power-on is 0, so all sprites start out with
+priority over foreground graphics.
+
+Note that for the purpose of priority, the 01 bit-pair of multicolor
+graphics modes is considered to display a background color, and
+therefore will be shown behind sprite graphics even if the foreground
+graphics data takes priority.  Also, between the sprites themselves
+there is a fixed priority.  Each sprite has priority over all
+higher-number sprites, so that Sprite 0 is displayed in front of all
+the others.
+
+The use of priority can aid in creating three-dimensional effects, by
+allowing some objects on the screen to pass in front of or behind
+other objects."

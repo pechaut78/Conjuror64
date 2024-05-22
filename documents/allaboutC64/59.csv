@@ -1,0 +1,11 @@
+question,answer
+"What does a one-dimensional array require in the DIM statement?","A one-dimensional array requires only one number inside the parentheses of the DIM statement. It also only needs one number to form a subscript."
+"How are two-dimensional arrays typically thought of?","Two-dimensional arrays are typically thought of in terms of rows and columns."
+"What is needed for a two-dimensional array in the DIM statement?","A two-dimensional array requires two numbers in the DIM statement."
+"What is the BAD SUBSCRIPT error in C64 Basic?","The BAD SUBSCRIPT error occurs in C64 Basic when a subscript contains too few or too many numbers for the dimension of an array, or if a subscript number exceeds the maximum number specified in the DIM statement."
+"How many numbers are required for an array of more than two dimensions in the DIM statement?","Arrays of more than two dimensions require multiple numbers in the DIM statement, corresponding to the number of dimensions of the array."
+"What is the effect of having too few or too many numbers in a subscript for an array?","Having too few or too many numbers in a subscript for an array will result in the BAD SUBSCRIPT error."
+"What is the effect of a subscript number exceeding the maximum number specified in the DIM statement?","This will result in the BAD SUBSCRIPT error."
+"What is the purpose of the DIM statement in C64 Basic?","The DIM statement in C64 Basic is used to specify the size of an array."
+"What is the syntax for a one-dimensional array in the DIM statement?","The syntax for a one-dimensional array in the DIM statement is DIM arrayname(size)"
+"What is the syntax for a two-dimensional array in the DIM statement?","The syntax for a two-dimensional array in the DIM statement is DIM arrayname(rowsize, columnsize)"

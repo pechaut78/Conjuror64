@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the 4-bit register in a sprite?","Each sprite has a separate 4-bit register to determine the sprite color, which determines how the sprite is displayed on the screen."
+"What is the difference between STANDARD and MULTI-COLOR sprite modes?","In STANDARD mode, a '0' bit of sprite data allows background data to show through and a '1' bit is displayed as the sprite color, whereas in MULTI-COLOR mode, the sprite data is interpreted in pairs to display different colors."
+"How does the MnMC bit affect the sprite display?","When the MnMC bit is '1', the corresponding sprite is displayed in the multi-color mode, where the sprite data is interpreted in pairs to display different colors."
+"What is the resolution of a sprite in MULTI-COLOR mode?","In MULTI-COLOR mode, the resolution of the sprite is reduced to 12x21, with each horizontal dot expanded to twice the standard size so that the overall sprite size does not change."
+"What is the purpose of the sprite Multi-color register 28 ($1C)?","The sprite Multi-color register 28 ($1C) is used to select each sprite as a multi-color sprite via the MnMC bits."
+"How many colors can be displayed in a sprite in MULTI-COLOR mode?","Up to 3 colors can be displayed in each sprite in MULTI-COLOR mode, in addition to transparent, but two of the colors are shared among all the sprites in this mode."
+"What is the significance of the '00' bit pair in MULTI-COLOR mode?","In MULTI-COLOR mode, the '00' bit pair represents transparent, allowing background data to show through."
+"What is the significance of the '10' bit pair in MULTI-COLOR mode?","In MULTI-COLOR mode, the '10' bit pair represents the sprite Color, which is determined by the corresponding sprite Color register."
+"What is the purpose of registers 39-46 ($27-$2E) in MULTI-COLOR mode?","Registers 39-46 ($27-$2E) are used to store the sprite Color, which is displayed when the '10' bit pair is encountered in MULTI-COLOR mode."
+"How does the sprite size change in MULTI-COLOR mode?","In MULTI-COLOR mode, the overall sprite size does not change, despite the reduced resolution, because each horizontal dot is expanded to twice the standard size."

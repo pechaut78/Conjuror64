@@ -1,0 +1,13 @@
+
+
+C64 Basic:
+• The use of a variable name after NEXT is optional but
+recommended, because it helps catch errors which otherwise
+might go unnoticed and cause problems later in the program.
+• Jumping out of an unfinished FOR-NEXT loop can create
+problems that may not be immediately detected. Always
+allow FOR-NEXT loops to go to completion. If it is necessary
+to jump out of a loop, do not use FOR and NEXT. Instead,
+use assignment statements and conditional logic.
+• The counting variable retains its value after a FOR-NEXT
+loop has ended.

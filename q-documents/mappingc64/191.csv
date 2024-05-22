@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $320-$321?","address       $320-$321      ICKOUT
+Vector to Kernal CKOUT Routine (Currently at 62032 ($F250))"

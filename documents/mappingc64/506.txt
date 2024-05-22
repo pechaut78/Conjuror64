@@ -1,0 +1,8 @@
+
+
+
+address              $E20E
+Check for Comma
+
+This subroutine checks for a comma, moves the text pointer past it if
+found, and returns an error if it is not found.

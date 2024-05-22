@@ -1,0 +1,10 @@
+question,answer
+"what is the total number of memory locations on the Commodore 64?","There are 65536 memory locations on the Commodore 64, and you can PEEK values from and POKE values to most of them, except for Read Only Memory areas like the BASIC interpreter at address 40960 to 49151."
+"what happens when you POKE values into most addresses?","POKEing values into most addresses is usually not particularly rewarding, as the machine just 'hangs'."
+"what is the effect of POKE 53272, 23?","POKE 53272, 23 switches to lower case, which can be very useful for making text-based programs look much neater."
+"what is the effect of POKE 53272, 21?","POKE 53272, 21 switches back to upper case, which can be very useful for making text-based programs look much neater."
+"what is the significance of the address 1024 in Commodore 64?","1024 decimal is the top left corner of the screen, and it's used as a reference point for calculating screen locations."
+"how do you use variables X and Y to point to screen locations?","You can use two variables X and Y to point to the screen locations for you, where X must remain in the range to 39 and Y must remain in the range to 24."
+"how do you calculate any location on the screen using X and Y?","Any location on screen can then be calculated from LOCATION=Y*40+X+1024."
+"what is the range for the variable X when pointing to screen locations?","X must remain in the range to 39 when using variables X and Y to point to screen locations."
+"what is the range for the variable Y when pointing to screen locations?","Y must remain in the range to 24 when using variables X and Y to point to screen locations."

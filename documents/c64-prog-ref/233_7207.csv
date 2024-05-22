@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the light pen input","The light pen input latches the current screen position into a pair of registers (LPX, LPY) on a low-going edge, allowing the X and Y positions to be captured and stored for further processing."
+"what is stored in register 19 ($13)","The X position register 19 ($13) will contain the 8 most significant bits (MSB) of the X position at the time of transition, providing a resolution of 2 horizontal dots."
+"what is the resolution of the X position","The X position is defined by a 512-state counter (9 bits), providing a resolution of 2 horizontal dots."
+"what is stored in register 20 ($14)","The Y position is latched in its register 20 ($14), providing single raster resolution within the visible display."
+"why must you take several samples before turning the pen to the screen","The light pen latch may be triggered only once per frame, and subsequent triggers within the same frame will have no effect, therefore you must take several samples (3 or more) before turning the pen to the screen, depending upon the characteristics of your light pen."
+"what happens if the light pen is triggered multiple times within the same frame","Subsequent triggers within the same frame will have no effect, the light pen latch may be triggered only once per frame."
+"what is the significance of the low-going edge in the light pen input","The light pen input latches the current screen position into a pair of registers (LPX, LPY) on a low-going edge, allowing the X and Y positions to be captured and stored for further processing."
+"how many bits are used to store the Y position","8 bits are used to store the Y position in register 20 ($14), providing single raster resolution within the visible display."
+"what is the purpose of the LPX and LPY registers","The LPX and LPY registers are used to store the current screen position, allowing the X and Y positions to be captured and stored for further processing."
+"what is the maximum number of times the light pen can be triggered per frame","The light pen latch may be triggered only once per frame, and subsequent triggers within the same frame will have no effect."

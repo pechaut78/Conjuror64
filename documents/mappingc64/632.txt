@@ -1,0 +1,6 @@
+
+
+
+address              $F7D7
+Set I/O Area Start and End Pointers to Tape Buffer Start and End
+Address

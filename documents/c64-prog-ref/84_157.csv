@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of registers 27 and 28 in the SID chip?","Registers 27 and 28 provide digitized outputs from oscillator three and envelope generator three, allowing for dynamic changes to the SID chip's parameters during a note or sound, enabling the creation of interesting and fun effects."
+"how does the sawtooth waveform of oscillator 3 affect register 27?","When the sawtooth waveform of oscillator 3 is chosen, register 27 presents a series of numbers incremented from 0 to 255 at a rate determined by the frequency of oscillator 3."
+"what happens when the triangle waveform is selected for oscillator 3?","When the triangle waveform is selected, the output of register 27 increments from 0 up to 255, then decrements back down to 0."
+"how does the pulse waveform of oscillator 3 affect register 27?","When the pulse waveform is chosen, the output of register 27 jumps back-and-forth between 0 and 255."
+"what is the effect of choosing the noise waveform for oscillator 3 on register 27?","When the noise waveform is chosen, register 27 produces a series of random numbers."
+"how can you turn off the audio output of voice 3?","Setting bit 7 of register 24 turns the audio output of voice 3 off."
+"what is the relationship between register 27 and the envelope generator?","Register 27 always reflects the changing output of the oscillator and is not affected in any way by the envelope (ADSR) generator."
+"what is the purpose of register 25?","Register 25 gives you access to the output of the envelope generator of oscillator 3, functioning similarly to the output of oscillator 3."
+"how can you achieve vibrato using oscillator 3?","Vibrato can be achieved by adding the output of oscillator 3 to the frequency of another oscillator, as illustrated in Example Program 6."
+"what is the requirement for producing output from register 25?","The oscillator must be turned on to produce any output from register 25."

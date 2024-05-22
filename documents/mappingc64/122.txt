@@ -1,0 +1,10 @@
+
+
+
+address       $F3-$F4        USER
+Pointer to the Address of the Current Screen Color RAM Location
+
+This poitner is synchronized with the pointer to the address of the
+first byte of screen RAM for the current line kept in location 209
+($D1).  It holds the address of the first byte of color RAM for the
+corresponding screen line.

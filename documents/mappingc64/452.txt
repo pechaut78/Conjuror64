@@ -1,0 +1,12 @@
+
+
+
+address     $D420-$D7FF
+SID Register Images
+
+Since the SID chip requires enough addressing lines for only 32
+locations (the minimum possible for its 29 registers), none of the
+higher bits are decoded when addressing the 1K area that has been
+assigned to it.  The result is that every 32-byte area in this 1K
+block is a mirror of every other.  For the sake of clarity in your
+programs, it is advisable not to use these addresses at all.

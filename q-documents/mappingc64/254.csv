@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $AA80?","address         $AA80          PRINTN
+Perform PRINT#
+
+The PRINT# statement calls CMD and then closes the output channel with
+the Kernal CLRCHN routine (62259, $F333)."

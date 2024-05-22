@@ -1,0 +1,10 @@
+
+
+
+address           $CF            BLNON
+Flag: Was Last Curson Blink on or off?
+
+This location keeps track of whether, during the current cursor blink,
+the character under the cursor was reversed, or was restored to
+normal.  This location will contain a 0 if the character is reversed,
+and a 1 if the character is restored to its nonreversed status.

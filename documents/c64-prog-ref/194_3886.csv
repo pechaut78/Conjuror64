@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the OPEN function in C64?","The purpose of the OPEN function is to open a logical file, which can then be used for input/output operations. This routine is used by most I/O KERNAL routines to create the logical files they operate on."
+"what is the call address of the OPEN function in C64?","The call address of the OPEN function is $FFC0 (hex) or 65472 (decimal)."
+"what preparatory routines need to be called before using the OPEN function?","Before using the OPEN function, both the SETLFS and SETNAM KERNAL routines must be called."
+"what error returns can be expected from the OPEN function?","The OPEN function can return error codes 1, 2, 4, 5, 6, 240, or READST."
+"what registers are affected by the OPEN function?","The OPEN function affects registers A, X, and Y."
+"what is the stack requirement for the OPEN function?","The OPEN function has no stack requirements."
+"can arguments be set up before using the OPEN function?","No arguments need to be set up to use the OPEN function, but the SETLFS and SETNAM routines must be called beforehand."
+"what is the role of the OPEN function in I/O operations?","The OPEN function is used to create logical files, which are then used by most I/O KERNAL routines for input/output operations."
+"in what order should the preparatory routines be called before using the OPEN function?","The correct order is to call the SETLFS routine first, followed by the SETNAM routine, and then the OPEN function."
+"why is the OPEN function important in the C64 KERNAL?","The OPEN function is important because it is used by most I/O KERNAL routines to create the logical files they operate on, and is a crucial step in setting up input/output operations."

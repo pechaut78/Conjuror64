@@ -1,0 +1,7 @@
+The Y-register is an index register like the X-register and
+serves similar purposes.
+The program counter is a 16-bit register. Its contents
+indicate the memory location from which the next instruction
+is to be executed. This register is managed by the
+microprocessor itself. Normally, you do not have direct
+control over the contents of this register.

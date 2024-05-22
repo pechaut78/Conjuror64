@@ -1,0 +1,11 @@
+question,answer
+"what is the first option to correct a mistake on a line?","You can retype a line anytime, and the computer will automatically substitute the new line for the old one."
+"How do you erase an unwanted line?","An unwanted line can be erased by simply typing the line number and <RETURN>."
+"What is the third option to edit an existing line?","You can also easily edit an existing line, using the cursor keys and editing keys."
+"What is the first step to correct a typing mistake in a line of the example?","Type LIST, then using the <SHIFT> and <CRSR UP/DOWN> keys together move the cursor up until it is positioned on the line that needs to be changed."
+"How do you move the cursor to the character you want to change?","Use the cursor-right key to move the cursor to the character you want to change, typing the change over the old character."
+"What do you do after making the change to the character?","Hit <RETURN> and the corrected line will replace the old one."
+"How do you create space on the line if needed?","Position the cursor where the space is needed and hit <SHIFT> and <INST/DEL> at the same time and a space will open up."
+"What do you do after creating space on the line?","Now just type in the additional information and hit <RETURN>."
+"How do you delete unwanted characters?","Place the cursor to the right of the unwanted character and hit the <INST/DEL> key."
+"What is the result of hitting <INST/DEL> to delete unwanted characters?","The unwanted character will be deleted."

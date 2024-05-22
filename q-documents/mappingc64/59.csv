@@ -1,0 +1,13 @@
+question,answer
+"What is the purpose of the memory location at address $71-$72?","address       $71-$72        FBUFPT
+Series Evaluation Pointer
+
+This location points to the address of a temporary table of values
+built in the free RAM area for the evaluation of formulas.  It is also
+used for such various purposes as a TI$ work area, string setup
+pointer, and work space for the evaluation of the size of an array.
+
+Although this is labeled a pointer to the tape buffer in the
+Programmer's Reference Guide, disassembly of the BASIC ROM reveals no
+reference to this location for that purpose (see 178 ($B2) for pointer
+to tape buffer)."

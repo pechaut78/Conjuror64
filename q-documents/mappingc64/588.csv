@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $EE13?","address              $EE13          ACPTR
+Receive a Byte of Data from a Device on the Serial Bus
+
+This is a documented Kernal routine whose entry point in the jump
+table is 65445 ($FFA5).  When called, it will get a byte of data from
+the current TALKer on the serial bus and store it in the Accumulator.
+In order to receive the data, the device must have previously been
+sent a command to TALK and a secondary address if it needs one."

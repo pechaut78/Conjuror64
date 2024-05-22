@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the INPUT statement in a C64 program?","The INPUT statement allows the program to get data from the user, assigning that data to a variable, and the program will stop, print a question mark (?) on the screen, and wait for the user to type in the answer and hit RETURN."
+"how do you specify multiple variables in an INPUT statement?","Multiple variables are specified in an INPUT statement by separating them with commas, and when typed, they must also be separated by commas."
+"can you include a message in an INPUT statement?","Yes, a message can be placed within quote marks before the list of variable names to be INPUT, for example, '10 INPUT "PLEASE ENTER YOUR FIRST NAME";A$'."
+"what happens when an INPUT statement is executed?","When an INPUT statement is executed, the program will stop, print a question mark (?) on the screen, and wait for the user to type in the answer and hit RETURN."
+"how do you separate multiple variables in an INPUT statement?","Multiple variables in an INPUT statement are separated by commas, both in the statement itself and when typed by the user."
+"can you use a message with multiple variables in an INPUT statement?","Yes, a message can be used with multiple variables in an INPUT statement, for example, '10 INPUT "PLEASE ENTER YOUR FIRST AND LAST NAMES";A$,B$'."
+"what is the purpose of the question mark (?) in an INPUT statement?","The question mark (?) is printed on the screen when an INPUT statement is executed, indicating that the program is waiting for the user to type in the answer and hit RETURN."
+"how do you assign user input to a variable?","User input is assigned to a variable by using the INPUT statement followed by the variable name, for example, '10 INPUT A$'."
+"can you use an INPUT statement with a single variable?","Yes, an INPUT statement can be used with a single variable, for example, '10 INPUT A$'."
+"what happens when the user hits RETURN after typing in an answer?","When the user hits RETURN after typing in an answer, the program will continue executing from the next line, with the input value assigned to the specified variable."

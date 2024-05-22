@@ -1,0 +1,11 @@
+
+
+
+address         $AB7B          GET
+Perform GET and GET#
+
+The GET routine first makes sure that the program is not in direct
+mode.  It opens an input channel using the Kernal CHKIN routine
+(61966, $F20E) if a number sign was added to make GET#.  Then it calls
+the common I/O routines in READ to get a single character, and causes
+the input channel to be closed if one was opened.

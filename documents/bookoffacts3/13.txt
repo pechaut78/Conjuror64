@@ -1,0 +1,19 @@
+
+C64 Basic:
+DEF FN D(SHIFTED E) A statement that is a used defined substitute.
+DIM D(SHIFTED I) A statement that defines the maximum range
+of an array or group of variables.
+
+END E(SHIFTED N)
+A statement that stops a program from
+executing.
+
+EXP E(SHIFTED X)
+A mathematical function
+
+FOR F(SHIFTED O)
+A statement that sets up a variable as a
+counter, that is used in a for next loop.
+
+FRE F(SHIFTED R)
+A statement that gives the amoun to memory that is free.

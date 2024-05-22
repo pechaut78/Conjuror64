@@ -1,0 +1,9 @@
+
+
+
+address              $E3BF          INIT
+Initialize BASIC
+
+This routine is called by the cold start routine to initialize all of
+the BASIC zero-page locations which have a fixed value.  This includes
+copying the CHRGET routine from the ROM location above, to 115 ($73).

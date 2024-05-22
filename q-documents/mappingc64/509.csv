@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $E268?","address              $E268          SIN
+Perform SIN
+
+This routine evaluates the SIN of the number in FAC1 (which represents
+the angle in radians), and leaves the result there."

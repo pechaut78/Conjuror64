@@ -1,0 +1,11 @@
+question,answer
+"What is the clock speed of the MOS 6510 CPU in a Commodore 64?","0.985 MHz"
+"What company formed in 1975 introduced the 6502 CPU?","MOS Technology"
+"What is the philosophy behind the design of the 6502 CPU?","To have a reduced instruction set and a small register file, making it simpler and faster than CPUs like the Z80 at the same clock speed, as well as cheaper to manufacture."
+"What type of registers does the 6502 CPU have instead of general purpose registers?","A single accumulator A, two index registers X and Y, and a stack pointer."
+"What is the width of the program counter (PC) in the 6502 CPU?","16 bits"
+"What is the range of the stack in the 6502 CPU's address space?","Between $0100 and $01FF"
+"What is the special area in the address space referred to as?","The zero page (ZP)"
+"What is the advantage of using zero page addresses in the 6502 CPU?","It saves one byte in the instruction encoding as well as at least one cycle of execution time."
+"How many bytes are the opcodes in the 6502 CPU?","One byte"
+"What is the characteristic of the opcode table in the 6502 CPU?","A minimal encoding for optimal decoding in the 6502's internal PLA ROM."

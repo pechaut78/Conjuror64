@@ -1,0 +1,24 @@
+question,answer
+"What is the purpose of the memory location at address $C000-$CFFF?","address   $C000-$CFFF
+4K Free RAM
+
+Locations 49152 to 53247 ($C000 to $CFFF) are free RAM.  Since this
+area is not contiguous with the BASIC program text RAM area, it is not
+available for BASIC program or variable storage (it is not counted in
+the FRE(0) total).
+
+This area is fully available for any other use, however, sudh as
+storing machine language subroutines for use with BASIC, alternate I/O
+drivers for parallel or IEEE devices, character graphics or sprite
+data, etc.
+
+This large free area is such a tempting spot for system additions that
+many such applications may be competing for the same RAM space.  For
+example, the Universal Wedge DOS Support program that adds easy access
+to the disk communications channel is usually loaded at 52224 ($CC00).
+Programs that use that part of RAM will therefore overwrite the DOS
+support program, with the result that they may not run correctly, or
+even at all.  Likewise, Simon's BASIC, the extended language which
+Commodore has released on cartridge, uses several locations in this
+range.  Be aware of this potential problem when you buy hardware
+additions that use this spot to hook into the system."

@@ -1,0 +1,9 @@
+
+
+
+address              $D014          LPENY
+Light Pen Vertical Position
+
+This location holds the vertical position of the light pen.  Since
+there are only 200 visible scan lines on the screen, the value in this
+register corresponds exactly to the current raster scan line.

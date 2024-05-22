@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the RENAME command in C64?","The RENAME command allows you to alter the name of a program or other file in the diskette directory, and it works very quickly because only the directory is affected."
+"what is the format for the RENAME command?","The format for the RENAME command is PRINT#15,\"RENAME0:new name=old name\" or it can be abbreviated as PRINT#15,\"R0:new name=old name\" where \"new name\" is the desired new name of the file and \"old name\" is the current name of the file."
+"what is the maximum length of the new file name in the RENAME command?","The new file name in the RENAME command can be any valid file name up to 16 characters in length."
+"what is the importance of closing the file before renaming it?","It is crucial to ensure that the file you are renaming has been properly closed before you rename it, otherwise, the renaming process may not work correctly."
+"how can you rename a file called \"calendar\" to \"calendar/backup\" using the RENAME command?","You can rename a file called \"calendar\" to \"calendar/backup\" by typing PRINT#15,\"R0:CALENDAR/BACKUP=CALENDAR\"."
+"what is the purpose of the COPY command in relation to the RENAME command?","The COPY command is used in conjunction with the RENAME command to create a new copy of a file, for example, renaming a file called \"BOOT\" to \"TEMP\" and then using the COPY command to create a new copy of the file."
+"what is the purpose of the SCRATCH command in relation to the RENAME command?","The SCRATCH command is used in conjunction with the RENAME command to delete the original copy of a file after it has been renamed and copied, for example, deleting the original copy of a file called \"BOOT\" after it has been renamed to \"TEMP\"."
+"can you rename a file that is currently open?","No, you should ensure that the file you are renaming has been properly closed before you rename it, otherwise, the renaming process may not work correctly."
+"what is the channel number used to open the command channel for the RENAME command?","The command channel for the RENAME command is opened on file 15."
+"what is the assumption made about the file 15 before using the RENAME command?","It is assumed that you have already opened file 15 to the command channel before using the RENAME command."

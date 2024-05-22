@@ -1,0 +1,5 @@
+
+
+
+address              $D408          FREHI2
+Voice 2 Frequency Control (high byte)

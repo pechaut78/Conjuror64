@@ -1,0 +1,14 @@
+
+C64 Basic:
+• FOR-NEXT loops can be nested, provided that the NEXT
+statements occur in exactly the opposite order of the
+corresponding FOR statements.
+• An easy way to tell if loops are nested correctly is to draw
+lines connecting the FOR and NEXT statements. If the lines
+cross, the nesting is wrong, and a NEXT WITHOUT FOR
+error message is to be expected.
+• The maximum number of FOR-NEXT loops which can be
+nested fluctuates, but the absolute maximum is nine levels. A
+program won't usually have to nest deeper than that.
+• A FOR statement cannot use a counting variable that is cur
+rently being used by another FOR-NEXT loop.

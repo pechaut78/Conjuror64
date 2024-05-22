@@ -1,0 +1,11 @@
+question,answer
+"Where does the color memory map begin on the Commodore 64?","The color memory map begins at location 55296, which corresponds to the top left-hand corner of the screen."
+"What is the total number of memory locations in the color memory map?","The color memory map continues on for 1000 locations."
+"How many color codes are available to change character colors?","There are 16 color codes available, ranging from 0 to 15, which can be used to directly change character colors."
+"What is the purpose of the two memory locations for every spot on the Commodore 64's screen?","One memory location is for the character code, and the other is for the color code, allowing for separate control over the character and color displayed on the screen."
+"Can the same color codes used for border and background colors be used for character colors?","Yes, the same color codes, from 0-15, that are used to change border and background colors can also be used to directly change character colors."
+"How are character colors changed on the Commodore 64?","Character colors can be changed by using the same color codes, from 0-15, that are used to change border and background colors, which allows for direct control over character colors."
+"What is the significance of location 55296 on the Commodore 64?","Location 55296 is the starting point of the color memory map, which corresponds to the top left-hand corner of the screen."
+"Can the color memory map be used to change background colors?","No, the color memory map is used to change character colors, not background colors."
+"How many memory locations are used to store color information for each character on the screen?","Two memory locations are used to store color information for each character on the screen, one for the character code and one for the color code."
+"What is the relationship between the color memory map and the screen layout on the Commodore 64?","The color memory map is mapped to the screen layout, with location 55296 corresponding to the top left-hand corner of the screen, and continuing on for 1000 locations."

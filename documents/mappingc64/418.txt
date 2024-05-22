@@ -1,0 +1,5 @@
+
+
+
+address              $D01B          SP4COL
+Sprite 4 Color Register (the default color value is 5, green)

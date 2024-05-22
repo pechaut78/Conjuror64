@@ -1,0 +1,15 @@
+
+
+
+address              $DD07          TI2BHI
+Timer B (high byte)
+
+Location Range: 56584-56587 ($DD08-$DD0B)
+Time of Day Clock
+
+In addition to the two general purpose timers, the 6526 CIA chip has a
+special purpose Time of Day Clock, which keeps time in a format that
+humans can understand a little more easily than microseconds.  For
+more information about this clock, see the entry for Location Range
+56328-56331 ($DC08-$DC0B).  The 64's Operating system does not make
+use of these registers.

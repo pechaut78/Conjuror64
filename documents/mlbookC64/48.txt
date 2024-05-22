@@ -1,0 +1,13 @@
+The Shift Instructions
+The 6510 microprocessor has some instructions for which
+there are no equivalents in BASIC: the shift
+instructions. These instructions shift the bits in the
+accumulator or addressed memory location one position to
+the right or left. If these instructions are used in
+reference to the accumulator, one speaks of accumulator
+addressing. Depending on the addressing mode, these
+commands can consist of one, two, or three bytes. If a
+memory location is addressed, they behave as an INC or
+DEC instruction by following a read with a write. The
+contents of the accumulator remain unchanged by this
+addressing mode.

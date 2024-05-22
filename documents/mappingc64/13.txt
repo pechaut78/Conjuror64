@@ -1,0 +1,9 @@
+
+
+address            $E             INTFLG
+Flat: Type of Numeric Data (Integer or Floating Point)
+
+If data which BASIC is using is determined to be numeric, it is
+further classified here as either a floating point number or as an
+integer.  A 128 ($80) in this location identifies the number as an
+integer, and a 0 indicates a floating point number.

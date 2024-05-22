@@ -1,0 +1,25 @@
+
+
+
+address              $D01E          SP7COL
+Sprite 7 Color Register (the default color value is 12, medium gray)
+
+Location Range: 53295-53311 ($D02F-$D03F)
+Not Connected
+
+The VIC-II chip has only 47 registers for 64 bytes of possible address
+space.  Therefore, the remaining 17 addresses do not access any
+memory.  When read, they will always give a value of 255 ($FF).  This
+value will not change after writing to them.
+
+Location Range: 53312-54271 ($D040-$D3FF)
+VIC-II Register Images
+
+Since the VIC-II requires only enough addressing lines to handle 64
+locations (the minimum possible for its 47 registers), none of the
+higher bits are decoded when addressing this 1K area.  The result is
+that every 64 byte area in this 1K block is a mirror of every other.
+POKE53281+64,1 has the same effect as POKE53281,1 or
+POKE53281+10*64,1; they all turn the screen background to white.  For
+the sake of clarity in your programs it is advisable to use the base
+address of the chip.

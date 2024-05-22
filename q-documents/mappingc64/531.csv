@@ -1,0 +1,13 @@
+question,answer
+"What is the purpose of the memory location at address $E4EC?","address              $E4EC
+Baud Rate Table for European (PAL) Standard Monitors
+
+This table of prescaler values was added to later Kernal versions to
+allow the same Kernal software to be used with either U.S. or European
+64s.  It contains the values which are required to obtain interrupts
+at the proper frequency for the standard RS-232 baud rates, and
+corresponds exactly in format to the table of values for the U.S.
+(NTSC) monitor format at 65218 ($FEC2).  Separate tables are required
+because the prescaler values are derived from dividing the system
+clock rate by the baud rate, and PAL machines operate with a slightly
+slower clock frequency."

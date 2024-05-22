@@ -1,0 +1,43 @@
+question,answer
+"What is the purpose of the memory location at address $800-$9FFF?","address    $800-$9FFF
+BASIC Program Text
+
+This is the area where the actual BASIC program text is stored.  The
+text of a BASIC program consists of linked lines of program tokens.
+Each line contains the following:
+
+1.  A two-byte pointer to the address of the next program line (in
+standard low-byte, high-byte order).  After the last program line, a
+link pointer consisting of two zeros marks the end of the program.
+
+2.  A two-byte line number (also in low-byte, high-byte order).
+
+3.  The program commands.  Each keyword is stored as a one-byte
+character whose value is equal to or greater than 128.  Print, for
+example, is stored as the number 151.  Other elements of the BASIC
+command, such as the variable names, string literals ('HELLO'), and
+numbers, are stored using their ASCII equivalents.
+
+4.  A 0 character, which acts as a line terminator.  In order for
+BASIC to work correctly, the first character of the BASIC text area
+must be 0.
+
+A quick review of the BASIC pointers starting at 43 ($2B) reveals that
+the layout of the BASIC program area (going from lower memory
+addresses to higher) is as follows:
+
+BASIC Program Text
+Non-Array Variables and String Descriptors
+Array Variables
+Free Area (Reported by FRE(0))
+String Text Area (Strings build from top of memory down into free area)
+BASIC ROM
+
+It is interesting to note that the NEW command does not zero out the
+text area but rather replaces the first link address in the BASIC
+program with two zeros, indicating the end of the program.  Therefore,
+you can recover a program from a NEW by replacing the first link
+adress, finding the address of the two zeros that actually mark the
+end of the program, and setting the pointers at 45, 47, and 49 (which
+all point to the end of a BASIC program before the program is RUN) to
+the byte following these zeros."

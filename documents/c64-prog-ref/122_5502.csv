@@ -1,0 +1,11 @@
+question,answer
+"what is the addressing mode of the BPL instruction?","The addressing mode of the BPL instruction is Relative, which means the branch target is specified by a signed 8-bit offset from the current program counter."
+"what is the assembly language form of the BPL instruction?","The assembly language form of the BPL instruction is simply 'BPL' followed by the branch target, for example 'BPL label'."
+"what is the opcode of the BPL instruction?","The opcode of the BPL instruction is 10 in hexadecimal notation."
+"how many bytes does the BPL instruction occupy in memory?","The BPL instruction occupies 2 bytes in memory, one for the opcode and one for the branch target offset."
+"how many cycles does the BPL instruction take to execute?","The BPL instruction takes 2 cycles to execute, but this can increase to 3 or 4 cycles if the branch occurs to the same or different page, respectively."
+"what happens if the branch target is on the same page as the current instruction?","If the branch target is on the same page as the current instruction, the BPL instruction takes 3 cycles to execute, one more cycle than the minimum."
+"what happens if the branch target is on a different page as the current instruction?","If the branch target is on a different page as the current instruction, the BPL instruction takes 4 cycles to execute, two more cycles than the minimum."
+"in what situations does the BPL instruction take the minimum 2 cycles to execute?","The BPL instruction takes the minimum 2 cycles to execute when the branch target is on the same page as the current instruction and the branch does not occur."
+"can you give an example of a BPL instruction in assembly language?","Here is an example of a BPL instruction in assembly language: 'BPL loop' which branches to the label 'loop' if the result of the previous instruction was plus."
+"what is the purpose of the BPL instruction?","The purpose of the BPL instruction is to branch to a target location if the result of the previous instruction was plus, allowing the programmer to implement conditional logic in their code."

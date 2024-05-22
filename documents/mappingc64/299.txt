@@ -1,0 +1,12 @@
+
+
+
+address         $B3F4          FNDOER
+Perform FN
+
+The FN evaluation is done by evaluating the FN argument (for example,
+FN(A+B*C/D)) and then getting the rest of the expression from the text
+of the function definition statement.  The function variable
+descriptor area is used as a work area, and the dependent variable is
+not disturbed (so that if the definition used FN(X), the value of X
+will not be changed by the function call).

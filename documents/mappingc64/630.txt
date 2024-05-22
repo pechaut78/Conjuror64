@@ -1,0 +1,5 @@
+
+
+
+address              $F76A
+Write Tape File Header Block

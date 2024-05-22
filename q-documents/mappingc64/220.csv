@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $A3FB-$A407?","address   $A3FB-$A407    GETSTK
+Check for Space on Stack
+
+Before undertaking an operation that requires stack space, this
+routine is used to check if there is enough room on the stack.  If
+there is not, an OUT OF MEMORY error is issued.
+
+4"

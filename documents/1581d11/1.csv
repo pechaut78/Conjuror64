@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of formatting a diskette?","Formatting a diskette adds a pattern of circular magnetic tracks that allows the drive's read/write head to find things on it."
+"what is the command to format a diskette on a C128 in C128 mode or Plus/4?","The command to format a diskette on a C128 in C128 mode or Plus/4 is HEADER \"diskette name\",Iid,Ddrive#[,Udevice#]."
+"what are the restrictions on the 'id' parameter in the HEADER command?","The 'id' parameter can be any two characters as long as they don't form a BASIC keyword (such as IF or ON) either on their own or with the capital I before them."
+"what is the default value of 'device#' in the HEADER command?","The default value of 'device#' is 8, unless it has been changed as per instructions in Appendix A (the 1581 assumes 8 even if it's not typed in)."
+"what is the command to format a diskette on a C64, VIC 20, or C128 in C64 mode?","The command to format a diskette on a C64, VIC 20, or C128 in C64 mode is OPEN 15,device#,15,\"NEWdrive#:diskette name,id\" followed by CLOSE 15."
+"what is the purpose of the 'diskette name' parameter in the HEADER command?","The 'diskette name' parameter allows you to give a name to the diskette, up to 16 characters long (including spaces)."
+"what is the significance of the 'drive#' parameter in the HEADER command?","The 'drive#' parameter is 0 in the HEADER command."
+"can the 'id' parameter in the HEADER command be a BASIC keyword?","No, the 'id' parameter cannot be a BASIC keyword (such as IF or ON) either on their own or with the capital I before them."
+"what happens if you don't format a new diskette?","If you don't format a new diskette, the drive's read/write head will not be able to find anything on it because it lacks the necessary pattern of circular magnetic tracks."
+"why is formatting a new diskette necessary?","Formatting a new diskette is necessary to add a pattern of circular magnetic tracks that allows the drive's read/write head to find things on it, making it usable for storing and retrieving data."

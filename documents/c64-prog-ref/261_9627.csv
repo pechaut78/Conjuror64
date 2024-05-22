@@ -1,0 +1,11 @@
+question,answer
+"what is the primary function of the 6510 microprocessor chip?","The 6510 is a low-cost microcomputer system capable of solving a broad range of small-systems and peripheral-control problems at minimum cost to the user."
+"what is the location of the Output Register on the 6510 chip?","The Output Register is located at Address 0000."
+"what is the purpose of the Three-State sixteen-bit Address Bus on the 6510 chip?","The Three-State sixteen-bit Address Bus allows Direct Memory Accessing (DMA) and multiprocessor systems sharing a common memory."
+"what is the significance of the internal processor architecture of the 6510 chip?","The internal processor architecture is identical to the MOS Technology 6502 to provide software compatibility."
+"what is the benefit of the 6510 chip's Eight-Bit Bi-Directional I/O Port?","The Eight-Bit Bi-Directional I/O Port is bit-by-bit programmable."
+"what is the maximum addressable memory range of the 6510 chip?","The 6510 chip has an addressable memory range of up to 64K bytes."
+"what is the advantage of the 6510 chip's pipeline architecture?","The pipeline architecture allows for efficient processing and improved performance."
+"what is the significance of the 6510 chip's single +5-volt supply?","The single +5-volt supply makes the chip more power-efficient and easier to use."
+"what is the benefit of the 6510 chip's interrupt capability?","The interrupt capability allows the chip to handle multiple tasks and prioritize interrupts efficiently."
+"what is the significance of the 6510 chip's compatibility with the M6800 bus?","The compatibility with the M6800 bus allows the 6510 chip to be used with a wide range of systems and peripherals."

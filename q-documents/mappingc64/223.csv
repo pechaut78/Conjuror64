@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $A437-$A468?","address   $A437-$A468    ERROR
+General Error Handler
+
+The error number is passed to this routine in the .X register, and it
+displays the appropriate error message.  Since this routine is
+vectored through RAM at 768 ($300), you can divert this vector to the
+address of your own routine, which would allow error trapping, or the
+addition of new commands."

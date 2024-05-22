@@ -1,0 +1,17 @@
+
+
+address            $F             GARBFL
+Flag for LIST, Garbage Collection, and Program Tokenization
+
+The LIST routine uses this byte as a flag to let it know when it has
+come to a character string in quotes.  It will then print the string,
+rather than search it for BASIC keyword tokens.
+
+The garbage collection routine uses this location as a flag to
+indicate that garbage collection has already been tried before adding
+a new string.  If there is still not enough memory, an OUT OF MEMORY
+message will result.
+
+This location is also used as a work byte for the process of
+converting a line of text in the BASIC input buffer (512, $200) into a
+linked program line of BASIC keyword tokens.

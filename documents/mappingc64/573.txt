@@ -1,0 +1,11 @@
+
+
+
+address              $EC5E
+Set Flag to Enable or Disable Switching Character Sets
+
+This subroutine is also used to check for special characters to print.
+In this case, it checks for the characters that enable or disable the
+SHIFT/logo combination from toggling the character set currently in
+use (CHR$(8) and CHR$(9)).  If one of these is to be printed, the flag
+at 657 ($291) is changed.

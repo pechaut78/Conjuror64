@@ -1,0 +1,11 @@
+question,answer
+"What is the default value for all string variables in C64 Basic?","The default value for all string variables in C64 Basic is the null string."
+"What does the CLR statement do in C64 Basic?","The CLR statement in C64 Basic sets all string variables to the null string."
+"Can both types of variables be used in the same variable list for PRINT, GET, INPUT, and READ in C64 Basic?","Yes, both types of variables can be used in the same variable list for PRINT, GET, INPUT, and READ in C64 Basic. However, an error will be printed if an attempt is made to incorrectly mix the two types."
+"What is the condition for variable assignment in C64 Basic?","In variable assignment in C64 Basic, the value being assigned must be of the same type as the variable name to which it is assigned."
+"What is the result of attempting to incorrectly mix variable types in the same variable list for PRINT, GET, INPUT, and READ in C64 Basic?","An error will be printed if an attempt is made to incorrectly mix the two types in the same variable list for PRINT, GET, INPUT, and READ in C64 Basic."
+"What is the null string in C64 Basic?","The null string in C64 Basic is the default value for all string variables."
+"What statement in C64 Basic sets all string variables to the null string?","The CLR statement in C64 Basic sets all string variables to the null string."
+"What is the impact of variable type mismatch in C64 Basic?","An error will be printed if an attempt is made to incorrectly mix the two types in C64 Basic."
+"What is the requirement for variable assignment in C64 Basic?","In variable assignment in C64 Basic, the value being assigned must be of the same type as the variable name to which it is assigned."
+"What happens if an attempt is made to incorrectly mix variable types in C64 Basic?","An error will be printed if an attempt is made to incorrectly mix the two types in C64 Basic."

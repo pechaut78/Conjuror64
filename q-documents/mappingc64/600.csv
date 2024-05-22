@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the memory location at address $EF97?","address              $EF97
+Put a Byte of Received Data into RS-232 Receive Buffer
+
+This routine checks for a Receive Buffer Overrun, stores the byte just
+received in the RS-232 receive buffer, and checks for Parity Error,
+Framing Error, or Break Detected Error.  It then sets up to receive
+the next byte.
+
+614"

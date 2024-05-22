@@ -1,0 +1,11 @@
+question,answer
+"What is the opcode for ASL instruction when using the accumulator as the addressing mode?","The opcode for ASL instruction when using the accumulator as the addressing mode is 0A."
+"What is the number of bytes required for the ASL instruction when using the zero page addressing mode?","The number of bytes required for the ASL instruction when using the zero page addressing mode is 2."
+"What is the number of cycles required for the ASL instruction when using the accumulator as the addressing mode?","The number of cycles required for the ASL instruction when using the accumulator as the addressing mode is 2."
+"What is the assembly language form for the ASL instruction when using the zero page addressing mode?","The assembly language form for the ASL instruction when using the zero page addressing mode is ASL Oper."
+"How many bytes are required for the ASL instruction when using the absolute addressing mode?","The number of bytes required for the ASL instruction when using the absolute addressing mode is 3."
+"What is the opcode for the ASL instruction when using the zero page addressing mode?","The opcode for the ASL instruction when using the zero page addressing mode is 06."
+"What is the number of cycles required for the ASL instruction when using the zero page, X addressing mode?","The number of cycles required for the ASL instruction when using the zero page, X addressing mode is 6."
+"What is the assembly language form for the ASL instruction when using the absolute, X addressing mode?","The assembly language form for the ASL instruction when using the absolute, X addressing mode is ASL Oper,X."
+"What is the opcode for the ASL instruction when using the absolute addressing mode?","The opcode for the ASL instruction when using the absolute addressing mode is 0E."
+"What is the number of bytes required for the ASL instruction when using the zero page, X addressing mode?","The number of bytes required for the ASL instruction when using the zero page, X addressing mode is 2."

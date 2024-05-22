@@ -1,0 +1,5 @@
+
+
+
+address         $AF2B          ISVAR
+Get the Value of a Variable

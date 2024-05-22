@@ -1,0 +1,102 @@
+
+
+
+address         $2D-$2E        VARTAB
+Pointer to the Start of the BASIC Variable Storage Area
+
+This location points to the address which marks the end of the BASIC
+program text area, and the beginning of the variable storage area.
+All nonarray variables are stored here, as are string descriptors (for
+the address of the area where the actual text of strings is stored,
+see location 51 ($33)).
+
+Seven bytes of memory are allocated for each variable.  The first two
+bytes are used for the variable name, which consists of the ASCII
+value of the first two letters of the variable name.  If the variable
+name is a single letter, the second byte will contain a zero.
+
+The seventh bit of one or both of these bytes can be set (which would
+add 128 to the ASCII value of the letter).  This indicates the
+variable type.  If neither byte has the seventh bit set, the variable
+is the regular floating point type.  If only the first byte has its
+seventh bit set, the variable is a string.  If only the second byte
+has its seventh bit set, the variable is a defined function (FN).  If
+both bytes have the seventh bit set, the variable is an integer.
+
+The use of the other five bytes depends on the type of variable.  A
+floating point variable will use the five bytes to store the value of
+the variable in floating point format.  An integer will have its value
+stored in the third and fourth bytes, high byte first, and the other
+three will be unused.
+
+A string variable will use the third byte for its length, and the
+fourth and fifth bytes for a pointer to the address of the string
+text, leaving the last two bytes unused.  Note that the acrual string
+text that is pointed to is located either in the part of the BASIC
+program where the string is first assigned a value, or in the string
+text storage area pointed to by location 51 ($33).
+
+A function definition will use the third and fourth bytes for a
+pointer to the address in the BASIC program text where the function
+definition starts.  It uses the fifth and sixth bytes for a pointer to
+the dependent variable (the X of FN A(X)).  The final byte is not
+used.
+
+Knowing something about how variables are created can help your BASIC
+programming.  For example, you can see that nonarray integer variables
+take up no less space than floating point variables, and since most
+BASIC commands convert the integers to floating point, they do not
+offer a speed advantage either, and in many cases will actually slow
+the program down.  As will be seen below, however, integer arrays can
+save a considerable amount of space.
+
+Variables are stored in the order in which they are created.
+Likewise, when BASIC goes looking for a variable, it starts its search
+at the beginning of this area.  If commonly used variables are defined
+at the end of the program, and are thus at the back of this area, it
+will take longer to find them.  It may help program execution speed to
+define the variables that will be used most frequently right at the
+beginning of the program.
+
+Also, remember that once created, variables do not go away during
+program execution.  Even if they are never used again, they still take
+up space in the variable storage area, and they slow down the routine
+that is used to search for variables that are referenced.
+
+Another point to consider about the order in which to define variables
+is that arrays are created in a separate area of memory which starts
+at the end of the nonarray variable area.  Therefore, every time a
+nonarray variable is created, all of the arrays must be moved seven
+bytes higher in memory in order to make room for the new variable.
+Therefore, it may help performance to avoid defining nonarray
+variables after defining arrays.
+
+This pointer will be reset to one byte past the end of the BASIC
+program text whenever you execute the statements CLR, NEW, RUN, or
+LOAD.  Adding or modifying a BASIC statement will have the same
+effect, because the higher numbered BASIC statements have to be moved
+up into memory to make room for the new statements, and can therefore
+overwrite the variable storage area.  This means that if you wish to
+check the value of a variable after stopping a program, you can only
+do so before modifying the program.
+
+The exception to the above is when the LOAD command is issued from a
+program.  The purpose of not resetting this pointer in such a case is
+to allow the chaining of programs by having one program load and then
+run the next (that is also why a LOAD issued from a program causes a
+RUN from the beginning of the program).  This allows the second
+program to share variables with the first.  There are problems with
+this, however.  Some string variable descriptors and function
+definitions have their pointers set to areas within the program text.
+When this text is replaced by a load, these pointers are no longer
+valid, which will lead to errors if the FN or string value is
+referenced.  And if the second program text area is larger than that
+of the first, the second program will overwrite some of the first
+program's variables, and their values will be lost.
+
+The ability to chain short programs is a holdover from the days of the
+8K PET, for which this BASIC was written, but with the vastly
+increased memory of the 64, program chaining should not be necessary.
+
+You should also note that SAVE uses this pointer as the address of the
+byte after the last byte to SAVE.

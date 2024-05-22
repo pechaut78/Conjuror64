@@ -1,0 +1,11 @@
+question,answer
+"What is the definition of high resolution in the computer world?","In the computer world, the term resolution refers to the number of points on the screen which can be individually addressed."
+"What is the characteristic of a low resolution screen?","A low resolution screen is a screen which has a small number of individually addressable points, such as the normal text screen which has 1000 individual points (40 columns by 25 rows)."
+"What is the characteristic of a high resolution screen?","A high resolution screen is a screen which has a large number of individually addressable points, typically more than 40000 individual points."
+"What is the resolution of the Commodore 64's screen?","The Commodore 64's screen is 320 dots wide by 200 dots high, giving 64000 individual points."
+"How are the dots on the screen controlled in a high resolution screen?","Each of the dots on the screen is controlled by a bit in memory, if the bit is a 1 then that dot will be lit, if the bit is a 0 then the dot will not be lit."
+"How much memory is needed to store a high resolution screen?","As there are 64000 dots on the screen and each byte in RAM can control 8 dots (8 bits in a byte), we will need 8000 bytes to completely store the screen."
+"What is bit mapping in the context of high resolution screens?","Bit mapping is a technique where each of the dots on the screen is controlled by a bit in memory, allowing for individual addressing of each dot."
+"What is the advantage of having a high resolution screen?","A high resolution screen allows for more detailed and precise graphics, making it ideal for applications that require high-quality visuals."
+"How does the Commodore 64's screen resolution compare to a normal text screen?","The Commodore 64's screen has a much higher resolution than a normal text screen, with 64000 individual points compared to 1000 individual points on a normal text screen."
+"What is the significance of the 64000 individual points on the Commodore 64's screen?","The 64000 individual points on the Commodore 64's screen allow for a much higher level of detail and precision in graphics and visuals, making it a powerful tool for graphics and game development."

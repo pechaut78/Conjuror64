@@ -1,0 +1,23 @@
+
+
+
+address              $FD1A          VECTOR
+Set the RAM Vector Table from the Table Pointed to by .X and .Y
+
+This documented Kernal routine can be entered through the jump table
+at 65421 ($FF8D).
+
+It is used to read or change the values for the 16 RAM vectors to the
+interrupt and important Kernal I/O routines in the table that starts
+at 788 ($314).  If the Carry flag is set when the routine is called,
+the current value of the 16 vectors will be stored at a table whose
+address is pointed to by the values in the .X and .Y registers.  If
+the Carry flag is cleared, the RAM vectors will be loaded from the
+table whose address is pointed to by the .X and .Y registers.  Since
+this routine can change the vectors for the IRQ and NMI interrupts,
+you might expect that the Interrupt disable flag would be set at its
+beginning.  Such is not the case, however, and therefore it would be
+wise to execute an SEI before calling it and a CLI afterwards (as the
+power-on RESET routine does) just to be safe.
+
+64

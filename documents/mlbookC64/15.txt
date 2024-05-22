@@ -1,0 +1,11 @@
+
+Indirect Indexed Addressing
+This addressing mode is not as easy to understand,
+but permits very flexible programming -the indirect
+indexed addressing mode. Using this addressing
+mode, zero page plays an important role. With
+indirect indexed addressing, two consecutive memory
+locations in zero-page form a pointer to the actual
+address. The first memory cell contains the low-
+byte and the next contains the high-byte of theT
+actual address.

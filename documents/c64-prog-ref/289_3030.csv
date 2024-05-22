@@ -1,0 +1,11 @@
+question,answer
+"what is a movable object block in the context of Commodore 64 graphics?","A movable object block, also referred to as a sprite, is a special type of character that can be displayed at any one position on the screen without the block constraints inherent in character and bit map mode."
+"what is the maximum number of unique sprites that can be displayed simultaneously on a Commodore 64?","Up to 8 unique sprites can be displayed simultaneously, each defined by 63 bytes in memory which are displayed as a 24*21 dot array."
+"what is the memory requirement for defining a sprite on a Commodore 64?","Each sprite is defined by 63 bytes in memory which are displayed as a 24*21 dot array."
+"what is the dot array size of a sprite on a Commodore 64?","A sprite is displayed as a 24*21 dot array."
+"what are some of the special features that make sprites suitable for video graphics and game applications on a Commodore 64?","Sprites have a number of special features that make them especially suited for video graphics and game applications."
+"how are sprites stored in memory on a Commodore 64?","Sprites are stored in memory as a sequence of 63 bytes, with each byte representing a row of the sprite's 24*21 dot array."
+"what is the layout of a sprite's memory block on a Commodore 64?","The memory block of a sprite is laid out as a sequence of 63 bytes, with each byte representing a row of the sprite's 24*21 dot array, as shown in the diagram: BYTE 00, BYTE 01, BYTE 02, ..., BYTE 62."
+"can sprites be used in character and bit map modes on a Commodore 64?","No, sprites are not subject to the block constraints inherent in character and bit map modes, making them more flexible and powerful for graphics and game applications."
+"what is the significance of the 63 bytes that define a sprite on a Commodore 64?","The 63 bytes that define a sprite are used to store the graphical data that makes up the sprite's 24*21 dot array, allowing for detailed and complex graphics to be displayed on the screen."
+"in what ways are sprites more flexible than characters and bit maps on a Commodore 64?","Sprites are more flexible than characters and bit maps because they can be displayed at any one position on the screen without the block constraints inherent in character and bit map modes."

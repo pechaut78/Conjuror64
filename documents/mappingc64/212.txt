@@ -1,0 +1,12 @@
+
+
+
+address  $A002-$A003
+Warm Start Vector
+
+The warm start vector points to the address of the routines used to
+reset BASIC after the STOP/RESTORE key combination is pressed.  This
+is the same address to which the BRK instruction is vectored.  When
+BASIC is entered through this vector, the program in memory is not
+disturbed.  For more information, see the entry for 58235 ($E37B), the
+current warm start entry point.

@@ -1,0 +1,20 @@
+
+
+
+address         $AE83          EVAL
+Convert a Single Numeric Term from ASCII Text to a Floating Point
+Number
+
+This routine reduces a single arithmetic term which is part of an
+expression from ASCII text to its floating point equivalent.
+
+If the term is a constant, the routine sets the data type flag to
+number, sets the text pointer to the first ASCII numeric character,
+and jumps to the routine which converts the ASCII string to a floating
+point number.
+
+If the term is a variable, the variable value is retrieved.  If it is
+the PI character, the value of PI is moved into the Floating Point
+Accumulator.
+
+This routine is vectored through RAM at 778 ($30A).

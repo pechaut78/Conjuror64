@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $EF59?","address              $EF59
+Receive Next RS-232 Bit (NMI)
+
+This routine is called by the NMI interrupt handler routine to receive
+the next bit of data from the RS-232 device."

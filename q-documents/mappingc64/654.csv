@@ -1,0 +1,16 @@
+question,answer
+"What is the purpose of the memory location at address $FCE2?","address              $FCE2
+Power-On Reset Routine
+
+This is the RESET routine which is pointed to by the 6510 hardware
+RESET vector at 65532 ($FFFC).
+
+This routine is automatically executed when the computer is first
+turned on.  First, it sets the Interrupt disable flag, sets the stack
+pointer, and clears the Decimal mode flag.  Next, it tests for an
+autostart cartridge.  If one is found, the routine immediately jumps
+through the cartridge cold start vector at 32768 ($8000).  If no
+cartridge is found, the Kernal initialization routines IOINIT, RAMTAS,
+RESTOR, and CINT are called, the Interrupt disable flag is cleared,
+and the BASIC program is entered through the cold start vector at
+40960 ($A000)."

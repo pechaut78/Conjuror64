@@ -1,0 +1,5 @@
+
+
+
+address              $F8E2
+Adjust CIA #1 Timer A for Tape Bit Timing

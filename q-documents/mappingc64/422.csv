@@ -1,0 +1,69 @@
+question,answer
+"What is the purpose of the memory location at address $D400-$D41C?","address        $D400-$D41C
+Sound Interface Device (SID) Registers
+
+Mmeory locations 54272-54300 ($D400-$D41C) are used to address the
+6581 Sound Interface Device (SID).
+
+SID is a custom music synthesizer and sound effects generator chip
+that gives the 64 its impressive musical capabilities.  It provides
+three separate music channels, or voices, as they are called.  Each
+voice has 16-bit frequency resolution, waveform control, envelope
+shaping, oscillator synchronization, and ring modulation.  In
+addition, programmable high-pass, low-pass, and band-pass filters can
+be set and enabled or disabled for each sound channel.
+
+Since quite a few of these locations must be used in concert to
+produce sound, a brief summary of the interplay between some of these
+registers may be helpful.
+
+Often the first step is to select an overall volume level using the
+Volume Register.  Then, the desired frequency or pitch of the note is
+chosen by writing to each of the two bytes which make up the 16-bit
+Frequency Register.
+
+An ADSR envelope setting must be chosen by writing values to the
+Attack/ Decay and Sustain/Release Register.  These determine the rate
+of the rise and fall of the volume of the note from zero volume to
+peak volume and back again.  These rates have a great influence on the
+character of the sound.
+
+Finally, the waveform must be selected, and the note started (or the
+oscillator gated, as we say).  This is done by writing certain bits to
+the Control Register.  The waveform control lets you select one of
+four different waveforms, each of which has varying harmonic content
+that affects the tone quality of the sound.  By writing a 1 to the
+gate bit, you start the Attack/ Delay/Sustain cycle.  Afer rising to a
+peak and declining to the Sustain volume, the volume will continue at
+the same level until you write a 0 to the gate bit.  Then, the Release
+cycle will start.  Make sure that you keep the same waveform bit set
+to 1 while you write the 0 to the gate bit, so that the Release cycle
+starts.  Otherwise, the sound will stop entirely, as it also will if
+the Volume Register or the Frequency Register is set to 0.
+
+It should be noted that except for the last four SID chip registers,
+these addresses are write-only.  That means that their values cannot
+be determined by PEEKing these locations.
+
+Location Range: 54272-54273 ($D400-$D401)
+Voice 1 Frequency Control
+
+Together, these two locations control the frequency or pitch of the
+musical output of voice 1.  Some frequency must be selected in order
+for voice 1 to be heard.  This frequency may be changed in the middle
+of a note to achieve special effects.  The 16-bit range of the
+Frequency Control Register covers over eight full octaves, and allows
+you to vary the pitch from 0 (very low) to about 4000 Hz (very high),
+in 65536 steps.  The exact frequency of the output can be determined
+by the equation
+
+FREQUENCY=(REGISTER VALUE*CLOCK/16777216)Hz
+
+where CLOCK equals the system clock frequency, 1022730 for American
+(NTSC) systems, 985250 for European (PAL), and REGISTER VALUE is the
+combined value of these frequency registers.  That combined value
+equals the value of the low byte plus 256 times the value of the high
+byte.  Using the American (NTSC) clock value, the equation works out
+to
+
+FREQUENCY=REGISTER VALUE*.060959458 Hz"

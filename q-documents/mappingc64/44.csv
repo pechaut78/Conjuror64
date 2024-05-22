@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $53?","address           $53            FOUR6
+Constant for Garbage Collection
+
+The constant contained here lets the garbage collection routines know
+whether a three- or seven-byte string descriptor is being collected."

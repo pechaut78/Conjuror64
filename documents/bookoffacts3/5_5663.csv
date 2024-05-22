@@ -1,0 +1,11 @@
+question,answer
+"What happens when a file is scratched from the disk?","Scratching a file from the disk erases it. This process is similar to formatting, but instead of using an 'N' for new, an 'S' is used to scratch. The ID is not used in this process."
+"How can you scratch more than one file at a time on a Commodore 64?","You can scratch multiple files at once by using pattern matching with the OPEN command. For example, to scratch all files with names starting with 'T', you would type OPEN 15,8,15,"S:T*". This would erase all files that match the pattern."
+"What does the 'R' stand for in the OPEN 15,8,15 'R:NEW NAME = OLD NAME' command?","The 'R' in the OPEN 15,8,15 'R:NEW NAME = OLD NAME' command stands for rename. This command can be used to rename files that are already open."
+"How can you rename a file with the name 'planes' to 'airplanes' on a Commodore 64?","To rename a file with the name 'planes' to 'airplanes' on a Commodore 64, you would type OPEN 15,8,15,"R:AIRPLANES = PLANES"."
+"What is the purpose of the ID in the formatting process on a Commodore 64?","The ID is not used in the scratching process, it is only used in the formatting process on a Commodore 64."
+"What is the difference between formatting and scratching a file on a Commodore 64?","Formatting a file initializes the disk, while scratching a file erases it. The process for scratching a file is similar to formatting, but instead of using an 'N' for new, an 'S' is used, and the ID is not used."
+"How can you rename a file that is already open on a Commodore 64?","You can rename a file that is already open on a Commodore 64 by using the OPEN 15,8,15 'R:NEW NAME = OLD NAME' command."
+"What is the purpose of the 'S' in the OPEN 15,8,15 'S:T*' command?","The 'S' in the OPEN 15,8,15 'S:T*' command stands for scratch. This command is used to scratch, or erase, all files that match the pattern 'T*'."
+"What is the purpose of the 'N' in the formatting process on a Commodore 64?","The 'N' in the formatting process on a Commodore 64 stands for new. It is used to initialize the disk."
+"What is the purpose of the '*' in the OPEN 15,8,15 'S:T*' command?","The '*' in the OPEN 15,8,15 'S:T*' command is a wildcard character that matches any string of characters. This command is used to scratch, or erase, all files that have names starting with 'T'."

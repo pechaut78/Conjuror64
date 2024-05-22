@@ -1,0 +1,43 @@
+
+The Transfer Instructions
+The 6510 microprocessor has instructions to copy the
+contents of one register to another. You can, for
+example, transfer the contents of the X-register into the
+accumulator or vice versa. This is quite important
+because many instructions only work with the accumulator.
+After executing these instructions, the contents of the
+source register are unchanged; the value is merely copied
+into the destination register. The transfer instructions
+within the processor require the participation of the
+accumulator; a direct transfer from the X to Y register
+or vice versa is not possible.
+All transfer instructions are one-byte instructions; they
+need no operand.
+Below are the individual transfer instructions and the
+pseudo-BASIC commands.
+TAX
+The contents of the accumulator is copied into the X
+register. The Z and N flags are affected, but the
+original contents of the accumulator remain unchanged.
+TXA A=X
+The contents of the X-register is copied into the
+accumulator. The N and Z flags are affected. The contents
+of the X-register are unchanged.
+TAY Y=A
+TYA A=Y
+These are the corresponding instructions for the Y-
+register. They work exactly like the above instructions,
+but substituting the Y-register for the X register.
+The next two transfer instructions affect the stack
+pointer. They are seldom used, although the stack pointer
+is discussed later. The stack pointer can be exchanged
+only with the X-register.
+TSX X = SP
+The contents of the stack pointer is placed into the X-
+register. The Z and N flags are set according to the
+value. The contents of the stack pointer remain unaltered
+by this operation.
+TXS SP = X
+The contents of the X-register are placed into the stack
+pointer. No flags are affected by this instruction. The
+contents of the X-register are unaltered.

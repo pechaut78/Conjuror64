@@ -1,0 +1,11 @@
+question,answer
+"what happens when the error channel is checked after using the SCRATCH command?","This is the message that appears when the error channel is checked after using the SCRATCH command, which is '1581 disk: Controller commands error code FILES SCRATCHED'."
+"what does the track number indicate in the error message?","The track number tells how many files were erased."
+"what is the purpose of the SCRATCH command?","The purpose of the SCRATCH command is to erase files, and when the error channel is checked after using this command, it displays the error message '1581 disk: Controller commands error code FILES SCRATCHED'."
+"what is the error code displayed when the error channel is checked after using the SCRATCH command?","The error code displayed is 'FILES SCRATCHED'."
+"what type of disk is referred to in the error message?","The type of disk referred to in the error message is a 1581 disk."
+"what is the significance of the track number in the error message?","The track number in the error message indicates how many files were erased."
+"in what scenario does the error message '1581 disk: Controller commands error code FILES SCRATCHED' appear?","This error message appears when the error channel is checked after using the SCRATCH command."
+"what is the relationship between the SCRATCH command and the error message?","The SCRATCH command triggers the error message '1581 disk: Controller commands error code FILES SCRATCHED' when the error channel is checked after using the command."
+"what information does the error message provide about the files?","The error message provides information about the number of files erased, which is indicated by the track number."
+"what is the context in which the error message '1581 disk: Controller commands error code FILES SCRATCHED' appears?","The error message appears in the context of using the SCRATCH command and checking the error channel afterwards."

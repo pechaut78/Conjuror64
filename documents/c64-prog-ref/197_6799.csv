@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the RDTIM function?","The purpose of the RDTIM function is to read the system clock, which has a resolution of a 60th of a second, and returns three bytes of data, with the most significant byte in the accumulator, the next most significant byte in the X index register, and the least significant byte in the Y index register."
+"what is the call address of the RDTIM function?","The call address of the RDTIM function is $FFDE in hexadecimal, which is equivalent to 65502 in decimal."
+"what registers are affected by the RDTIM function?","The RDTIM function affects the A, X, and Y registers, as it returns the system clock data in these registers."
+"what is the stack requirement for the RDTIM function?","The stack requirement for the RDTIM function is 2, which means that the function requires 2 bytes of stack space to operate."
+"what is the significance of the three bytes returned by the RDTIM function?","The three bytes returned by the RDTIM function represent the system clock data, with the most significant byte in the accumulator, the next most significant byte in the X index register, and the least significant byte in the Y index register, providing a resolution of a 60th of a second."
+"how do you store the system clock data returned by the RDTIM function?","To store the system clock data returned by the RDTIM function, you can use the following code: JSR RDTIM, STY TIME, STX TIME+1, STA TIME+2, where TIME is a 3-byte memory location."
+"what is the resolution of the system clock read by the RDTIM function?","The resolution of the system clock read by the RDTIM function is a 60th of a second."
+"what are the communication registers used by the RDTIM function?","The communication registers used by the RDTIM function are A, X, and Y, which are used to return the system clock data."
+"are there any preparatory routines required for the RDTIM function?","No, there are no preparatory routines required for the RDTIM function, as it can be called directly."
+"what is the error return behavior of the RDTIM function?","The RDTIM function does not return any error codes, as it does not have any error returns."

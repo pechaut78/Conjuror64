@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the SED instruction?","The opcode for the SED instruction is F8, which sets the decimal mode in the Commodore 64."
+"what is the addressing mode for the SED instruction?","The addressing mode for the SED instruction is implied, meaning that it does not require any additional memory address or operand."
+"how many bytes does the SED instruction occupy in memory?","The SED instruction occupies only 1 byte in memory, making it a very compact instruction."
+"how many cycles does the SED instruction take to execute?","The SED instruction takes 2 cycles to execute, making it a relatively fast instruction."
+"what is the purpose of the SED instruction?","The purpose of the SED instruction is to set the decimal mode, which affects the way arithmetic operations are performed by the processor."
+"can you provide an example of how to use the SED instruction in assembly language?","Here is an example of how to use the SED instruction in assembly language: `SED`"
+"what is the assembly language form of the SED instruction?","The assembly language form of the SED instruction is simply `SED`, with no operands or additional information required."
+"in what situations would you use the SED instruction?","You would use the SED instruction when you need to perform decimal arithmetic operations, such as when working with binary coded decimal (BCD) numbers."
+"how does the SED instruction affect the processor's behavior?","The SED instruction affects the processor's behavior by setting the decimal mode, which changes the way the processor performs arithmetic operations, such as addition and subtraction."
+"can you explain the difference between the SED instruction and the CLD instruction?","The SED instruction sets the decimal mode, while the CLD instruction clears the decimal mode, resulting in different arithmetic behavior."

@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $B867?","address         $B867          FADD
+Add FAC1 to a Number in Memory
+
+This routine is used to add the contents of the Floating Point
+Accumulator (FAC1) to a number in memory, by moving that number into
+FAC2, and falling through to the next routine."

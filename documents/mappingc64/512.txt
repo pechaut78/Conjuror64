@@ -1,0 +1,5 @@
+
+
+
+address              $E2E5          TWOPI
+The Five-Byte Floating Point Representation of the Constant 2*PI

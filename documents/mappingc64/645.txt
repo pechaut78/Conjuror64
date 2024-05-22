@@ -1,0 +1,5 @@
+
+
+
+address              $FB97
+Reset Counters for Reading or Writing a New Byte of Cassette Data

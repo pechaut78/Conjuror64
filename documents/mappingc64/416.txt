@@ -1,0 +1,5 @@
+
+
+
+address              $D029          SP2COL
+Sprite 2 Color Register (the default color value is 3, cyan)

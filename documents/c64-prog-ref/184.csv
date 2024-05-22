@@ -1,9 +1,6 @@
 question,answer
 "What is the purpose of the CLALL function?","Close all files"
 "What is the call address of the CLALL function?","$FFE7 (hex) 65511 (decimal)"
-"What communication registers are used by the CLALL function?","None"
-"What preparatory routines are used by the CLALL function?","None"
-"What is the error return value of the CLALL function?","None"
 "What is the stack requirement of the CLALL function?","11"
 "What registers are affected by the CLALL function?","A, X"
 "What is the description of the CLALL function?","This routine closes all open files."

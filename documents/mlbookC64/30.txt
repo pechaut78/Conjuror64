@@ -1,0 +1,8 @@
+
+The CPY instruction
+These instructions are the same as the CPX instructions
+except that the Y-register is used in place of the X-
+register. There are only three addressing modes.
+immediate
+absolute
+zero page

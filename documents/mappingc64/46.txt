@@ -1,0 +1,7 @@
+
+
+
+address         $57-$60
+BASIC Numeric Work Area
+
+This is a very busy work area, used by many routines.

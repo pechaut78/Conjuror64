@@ -1,0 +1,10 @@
+
+
+
+address         $4B-$4C        OPPTR
+Math Operator Table Displacement
+
+This location is used during the evaluation of mathematical
+expressions to hold the displacement of the current math operator in
+an operator table.  It is also used as a save area for the pointer to
+the address of program text which is currently being read.

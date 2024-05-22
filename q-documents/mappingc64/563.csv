@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $EA24?","address              $EA24
+Synchronize Color RAM Pointer to Screen Line Pointer
+
+This subroutine sets the pointer at 243 ($F3) to the address of the
+beginning of the line of Color RAM which corresponds to the current
+line of screen RAM (whose pointer is at 209 ($D1))."

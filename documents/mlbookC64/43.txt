@@ -1,0 +1,6 @@
+
+DEX
+With this instruction the contents of a memory cell can
+be decremented without losing the contents of the
+accumulator. Its operation is equivalent to that of the
+INC instruction.

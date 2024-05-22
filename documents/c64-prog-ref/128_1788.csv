@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the cli instruction in 6502 assembly language?","The opcode for the CLI instruction in 6502 assembly language is 58."
+"what is the addressing mode for the cli instruction?","The addressing mode for the CLI instruction is implied."
+"what is the number of bytes required to store the cli instruction?","The number of bytes required to store the CLI instruction is 1."
+"what is the number of cycles required to execute the cli instruction?","The number of cycles required to execute the CLI instruction is 2."
+"what is the purpose of the cli instruction?","The purpose of the CLI instruction is to clear the interrupt disable bit."
+"how does the cli instruction affect the interrupt disable flag?","The CLI instruction clears the interrupt disable flag, enabling interrupts."
+"in what situations would you use the cli instruction?","The CLI instruction would be used in situations where interrupts need to be enabled, such as when an interrupt-driven I/O operation is required."
+"what is the difference between the cli and sei instructions?","The CLI instruction clears the interrupt disable flag, while the SEI instruction sets the interrupt disable flag."
+"can the cli instruction be used to disable interrupts?","No, the CLI instruction is used to enable interrupts, not disable them."
+"in what type of programming scenarios would the cli instruction be used?","The CLI instruction would be used in scenarios that require interrupt-driven I/O operations, such as in device drivers or interrupt handlers."

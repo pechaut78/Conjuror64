@@ -1,0 +1,193 @@
+question,answer
+"What is the purpose of the memory location at address $D000-$D02E?","address   $D000-$D02E
+VIC-II Chip Registers
+
+The Video Interface Controller (VIC-II chip) is a specially designed
+processor that is in charge of the 64's video display.  It is this
+chip which makes possible the 64's wide range of graphics
+capabilities.
+
+The VIC-II chip's ability to address memory is independent of the 6510
+microprocessor.  It can address only 16K at a time, and any of the
+four blocks of 16K can be chosen for video memory.  The system default
+is for it to use the first 16K.
+
+All of the video display memory, character dot data, and sprite shapes
+must be stored within the chosen 16K block.  Locations 53248-53294
+($D000-$D02E) are registers which allow the user to communicate with
+the VIC-II chip.  Although for the most part they can be written to
+and read like ordinary memory locations, their contents directly
+control the video display.  Since many of these locations work in
+close conjunction with others, a general overview of some of the
+different graphics systems on the 64 is in order.
+
+The most familiar type of graphics display is the ordinary text that
+appears when you turn the machine on.  The area of RAM which is
+displayed on the screen is determined by the Video Matrix Base Address
+Nybble of the VIC-II Memory Control Register (53272, $D018).  The
+address of the dot-data which is used to assign a shape to each text
+character based on an 8 by 8 matrix of lit or unlit dots is determined
+by the other half of the Memory Control Register at 53272 ($D018).
+More information on how the data is used to represent the character
+shapes may be found at the alternate entry for 49152 ($C000), the
+Character Generator ROM.
+
+Text character graphics may employ one of the two sets of text and
+graphics characters in the Character Generator ROM, or the user may
+substitute a completely different set of graphics or text characters
+in RAM.
+
+Normally, the text graphics screen uses a background color which is
+common to all text characters, and that value is stored in Background
+Color Register 0 (53281, $D021).  The color of the frame around the
+screen is determined by the Border Color Register at 53280 ($D020).
+
+The color of each character is determined by one nybble of the Color
+RAM which starts at 55296 ($D800).  There are, however, two variations
+which alter this scheme somewhat.
+
+The first is called multicolor text mode, and is set by Bit 4 of 53270
+($D016).  Instead of each bit selecting either the foreground or the
+background color for each dot in the character, bit-pairs are used to
+select one of four colors for each double-width dot.  This results in
+the horizontal resolution being cut to four dots across per character,
+but allows two extra colors to be introduced from Background Color
+Registers 1 and 2 (53282-53283, $D022-$D023).
+
+The other text mode is called Extended Background Color Mode.  In this
+mode, the foreground color is always selected by the Color RAM.  The
+background color depends on the actual screen code of the character.
+In this mode, only the first 64 character shapes are available, but
+each can have one of four different background colors.
+
+The background color for each character is determined by its screen
+code as follows:
+
+1.  If the screen code is from 0-63 (this includes the normal
+alphanumerics), the value in Background Color Register 0 (53281,
+$D021) will determine the background color, as is usual.
+
+2.  Characters with codes 64-255 will have the same shape as the
+corresponding character in the group with codes 0-63.
+
+3.  For characters with codes 64-127 (SHIFTed characters), the
+background colors are deterined by the value in Background Color
+Register 1 (53282, $D022).
+
+4.  The value in Background Color Register 2 (53283, $D023) is used
+for characters with codes 128-191 (reversed alphanumerics).
+
+5.  For characters with codes 192-255, the value in Background Color
+Register 3 (53284, $D024) is used to determine the background color.
+
+
+In place of the normal text mode, a bitmap graphics mode is also
+abailable by setting Bit 5 of location 53265 ($D011).  In this mode,
+each bit of data determines whether one dot on the screen will be set
+to either the background color or foreground color.  Within an 8 by 8
+dot area, the foreground and background colors may be individually
+selected.
+
+The bitmap area is 320 dots wide and 200 dots high.  The area which
+contains the graphics data, the bitmap, is determined by the Character
+Dot Data Base Address in the lower nybble of the VIC-II Memory Control
+Register (53272, $D018).  The Video Matrix Base Address in the upper
+nybble, which normally determines which area of memory will be
+displayed, instead determines where the color memory for each 8 by 8
+ground of dots will be located.
+
+The Color RAM is not used for high-resolution bitmap graphics.  But
+multicolor mode is also available for bitmap graphics, and it uses the
+Color RAM to determine the foreground color of each dot.
+
+As with multicolor text mode, the horizontal resolution is but in half
+(to 160 dots across), so that in addition to the foreground and
+background colors, each dot can be one of two other colors as well.
+This mode gets the value for the two extra colors from the two nybbles
+of each byte of bitmap color memory, the location of which is
+determined by the Video Matrix Base Address.
+
+Multicolor text mode offers four colors, three of which will be common
+to all characters, and one of which can be selected individually.
+Multicolor bitmap mode offers a choice of four colors, three of which
+can be individually selected within an 8 by 8 dot area.
+
+The 64 also contains an entirely separate graphics system, whose
+character shapes, colors, and positions are derived and displayed
+without any reference to the Video Matrix and Character Dot-Data
+addresses.  Best of all, these characters may be moved quickly and
+easily to any position on the screen, greatly facilitating games and
+animated graphics of all types.  This system is known as sprite
+graphics.
+
+Sprite graphics takes its name from the graphics characters it
+displays, each of which is called a sprite.  There are eight sprites,
+known as Sprites 0-7.  Each sprite character is 24 dots wide by 21
+dots high.  This is about eight times as large as a regular text
+character, which is only 8 dots wide by 8 dots high.
+
+A sprite takes its shape from 63 bytes of data in one of the 256 data
+blocks, each 64 bytes long, that can fit into the 16K space which the
+VIC-II chip can address.  The block currently assigned to any given
+sprite is determined by the Sprite Data Pointers, which are located at
+the last eight bytes of the screen memory area (the default locations
+are 2040-2047, $7F8-$7FF).
+
+The first Sprite Data Pointer determines the data block used for the
+shape of Sprite 0, the second for the shape of Sprite 1, etc.  The
+number in the pointer times 64 equals the address of the first byte of
+the data block within the VIC-II addressing range.
+
+For example, using the default values for VIC-II addressing area and
+screen memory, a value of 11 in location 2040 ($7F8) would mean that
+the shape of Sprite0 is determined by the data in the 63-byte block
+starting at location 704 (11*64).  It should be noted that it is
+possible for more than one sprite to take its shape data from the same
+block, so that only 64 bytes of data are required to create eight
+sprites, each having the same shape.
+
+The dot patterns of each sprite correspond to the bit patterns of the
+sprite shape data.  Each byte of shape data in memory consists of a
+number from 0 to 255.  This number can be represented by eight binary
+digits of 0 or 1.
+
+Each binary digit has a bit value that is two times greater than the
+last.  If the digit in the zero bit place is a 1, it has a value of 1
+(we count bit places from 0 to 7).  A 1 in the first bit place has a
+value of 2, the second bit has a value of 4, the third has a value of
+8, the fourth has a vlue of 16, the fifth a value of 32, the sixth a
+value of 64, and the seventh a value of 128.
+
+By making all of the possible combinations of 0's and 1's in all eight
+bit places, and adding the bit values of every bit place that contains
+a 1, we can represent every number from 0 to 255 as a series of 1's
+and 0's.
+
+If you think of every 0 as a dot having the same color as the
+background, and every 1 as a dot which is the color of the sprite, you
+can see how a series of bytes could be used to represent the sprite
+shape.
+
+Since each line of the sprite is 24 dots wide, it takes 3 bytes of
+memory (24 bits) per line to portray its shape.  Let's take a look at
+a couple of sample sprite lines.
+
+00000000 01111110 00000000 = 0, 126, 0
+
+As you can see, the first and last bytes are all 0's, so nothing will
+be displayed there.  The middle byte has six 1's, so it will be
+displayed as a line six dots long.  By adding the values of these dix
+bits (64+32+16+8+4+2), we get a byte value of 126.  Let's try another
+line.
+
+00011111 11111111 11111000 = 21, 255, 248
+
+The first byte has five bits set to 1, having values of 16, 8, 4, 2,
+and 1, for a total of 31.  The second byte has all bits set to 1, so
+it has the maximum value of 255.  The third byte also has five bits
+set to 1, having values of 128, 64, 32, 16, and 8, for a total of 248.
+The result is that this line of sprite data will display a line that
+is 18 dots long.
+
+We can put these two kinds of lines together to show how a large cross
+might be drawn using bytes of sprite data."

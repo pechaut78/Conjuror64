@@ -1,0 +1,11 @@
+question,answer
+"what happens when you press SHIFT and CLR/HOME keys simultaneously?","The screen clears and the cursor is positioned in the upper left-hand corner of the screen, which is also referred to as the 'home' spot."
+"what is the purpose of holding C= and the 7 key simultaneously?","This sets the text color back to light blue, which is the default or normal text color, after the color test was performed."
+"what is the function of pressing CTRL and 0 (zero) keys simultaneously?","This sets the display mode back to normal, which is necessary after the color test, as the display mode was changed to REVERSE type during the test."
+"what was the purpose of pressing CTRL and 9 keys simultaneously during the color test?","This turned REVERSE type on, which created the color bars, which were actually reversed spaces."
+"what would have happened if the color test was performed in normal text mode?","The cursor would have moved, but it would have left blank spaces, instead of creating the color bars."
+"what is the significance of the 'home' spot on the C64 screen?","The 'home' spot is the upper left-hand corner of the screen, where the cursor is positioned after pressing SHIFT and CLR/HOME keys simultaneously."
+"what is the normal text color on the C64?","The normal text color on the C64 is light blue, which can be restored by pressing C= and the 7 key simultaneously."
+"what is the purpose of the color test on the C64?","The color test is used to test the display capabilities of the C64, and it involves creating color bars on the screen."
+"what is the function of the REVERSE type on the C64?","The REVERSE type is a display mode on the C64 that reverses the text and background colors, which was used to create the color bars during the color test."
+"what is the significance of the CTRL key on the C64?","The CTRL key is used in combination with other keys to perform specific functions, such as setting the display mode back to normal, or turning REVERSE type on or off."

@@ -1,0 +1,6 @@
+
+The Stack Instructions
+The 6510 has the ability to save the contents of the
+accumulator and the status register on the stack and to
+get them back again. The stack pointer is automatically
+decremented after writing and incremented before reading.

@@ -1,0 +1,11 @@
+question,answer
+"Where are the 6510 Registers located in the Commodore 64 memory map?","The 6510 Registers are located at addresses 0 and 1 in the Commodore 64 memory map."
+"What is the purpose of the memory block from address 2 to 1023 in the Commodore 64?","The memory block from address 2 to 1023 is used by the operating system."
+"What is stored in the memory block from address 1024 to 2039 in the Commodore 64?","The memory block from address 1024 to 2039 is used for screen memory."
+"What is the purpose of the memory block from address 2040 to 2047 in the Commodore 64?","The memory block from address 2040 to 2047 is used for sprite pointers."
+"Where is the user's program stored in the Commodore 64 memory map?","The user's program, whether it's a BASIC or machine language program, is stored in the memory block from address 2048 to 40959."
+"What is the purpose of the memory block from address 40960 to 49151 in the Commodore 64?","The memory block from address 40960 to 49151 is used for the 8K CBM BASIC Interpreter."
+"What is the purpose of the memory block from address 49152 to 53247 in the Commodore 64?","The memory block from address 49152 to 53247 is used for special programs RAM area."
+"What is the purpose of the memory block from address 53248 to 53294 in the Commodore 64?","The memory block from address 53248 to 53294 is used for the VIC-II chip."
+"What is the purpose of the memory block from address 55296 to 56296 in the Commodore 64?","The memory block from address 55296 to 56296 is used for Color RAM."
+"What is the purpose of the memory block from address 56320 to 57343 in the Commodore 64?","The memory block from address 56320 to 57343 is used for I/O Registers, specifically the 6526 chip."

@@ -1,0 +1,9 @@
+
+
+
+address         $A871          RUN
+Perform RUN
+
+RUN is executed by calling the Kernal SETMSG (65048, $FE18) routine to
+set the message flag for RUN mode and performing a CLR to start the
+program.  If a line followed RUN, a GOTO is executed after the CLR.

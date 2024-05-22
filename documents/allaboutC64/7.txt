@@ -1,0 +1,14 @@
+
+
+C64 Basic:
+s a shortcut, the keyword LET of the variable assignment
+statement does not have to be typed, it is optional.
+• LET is the only optional keyword. All other statements
+require a keyword. If no keyword is provided, the computer
+assumes that the statement is a LET statement.
+• A LET statement which does not include the keyword LET is
+called an implied LET statement.
+- The rest of the syntax of the LET statement after the
+keyword is still required.
+• The remaining examples in this book will not use the
+keyword LET.

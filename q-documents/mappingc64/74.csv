@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $9C?","address           $9C            DPSW
+Flag: Tape Byte Received
+
+This location is used as a flag to indicate whether a complete byte of
+tape data has been received, or whether it has only been partially
+received."

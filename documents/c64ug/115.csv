@@ -1,0 +1,11 @@
+question,answer
+"What is the shortcut for the ABS function?","The shortcut for the ABS function is A <SHIFT+B>."
+"What is the syntax for the NOT function?","The syntax for the NOT function is N <SHIFT+O>."
+"How do you use the AND function in Commodore 64 BASIC?","To use the AND function in Commodore 64 BASIC, you would type A <SHIFT+N>."
+"What is the shortcut for the ASC function?","The shortcut for the ASC function is A <SHIFT+S>."
+"How do you open a file in Commodore 64 BASIC?","To open a file in Commodore 64 BASIC, you would type OPEN, which is accessed by typing O <SHIFT+P>."
+"What is the shortcut for the ATN function?","The shortcut for the ATN function is A <SHIFT+T>."
+"How do you use the CHR$ function in Commodore 64 BASIC?","To use the CHR$ function in Commodore 64 BASIC, you would type C <SHIFT+H>, which returns a string character based on the ASCII code."
+"What is the shortcut for the PEEK function?","The shortcut for the PEEK function is P <SHIFT+E>, which is used to read a byte from a memory location."
+"How do you close a file in Commodore 64 BASIC?","To close a file in Commodore 64 BASIC, you would type CLOSE, which is accessed by typing CL <SHIFT+O>."
+"What is the shortcut for the POKE function?","The shortcut for the POKE function is P <SHIFT+O>, which is used to write a byte to a memory location."

@@ -1,0 +1,10 @@
+
+
+
+address              $E206
+Fetch Current Character and Check for End of Line
+
+This subroutine gets the current character, and if it is 0 (end of
+line), it pulls its own return address off the stack and returns.
+This terminates both its own execution and that of the subroutine
+which called it.

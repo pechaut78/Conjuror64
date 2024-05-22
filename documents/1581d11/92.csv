@@ -1,0 +1,11 @@
+question,answer
+"what is the MEMORY-EXECUTE command equivalent to in BASIC?","The MEMORY-EXECUTE command is equivalent to the BASIC SYS call to a machine language program or subroutine, but it works in disk memory instead of within the computer."
+"what is the format for the MEMORY-EXECUTE command?","The format for the MEMORY-EXECUTE command is PRINT#15,\"M-E\"CHR$(<address)CHR$(>address), where <address is the low order part, and >address is the high order part of the address in disk memory at which execution is to begin."
+"what is required to use the MEMORY-EXECUTE command effectively?","Intimate knowledge of the inner workings of the DOS and preliminary setup with other commands, such as MEMORY-WRITE, are required to use the MEMORY-EXECUTE command effectively."
+"what should the routine end with to return control to the 1581?","The routine should end with an RTS to return control to the 1581."
+"what is the purpose of the MEMORY-EXECUTE command?","The purpose of the MEMORY-EXECUTE command is to execute a routine in disk memory, either in RAM or ROM."
+"in what type of memory can the MEMORY-EXECUTE command execute a routine?","The MEMORY-EXECUTE command can execute a routine in either RAM or ROM disk memory."
+"what is the significance of the <address and >address in the MEMORY-EXECUTE command?","The <address is the low order part, and >address is the high order part of the address in disk memory at which execution is to begin."
+"can the MEMORY-EXECUTE command be used without prior setup?","No, the MEMORY-EXECUTE command requires preliminary setup with other commands, such as MEMORY-WRITE, before it can be used."
+"in what type of environment does the MEMORY-EXECUTE command operate?","The MEMORY-EXECUTE command operates in a disk memory environment, rather than within the computer."
+"what is the role of the PRINT#15 statement in the MEMORY-EXECUTE command?","The PRINT#15 statement is used to send the MEMORY-EXECUTE command to the 1581, along with the address of the routine to be executed."

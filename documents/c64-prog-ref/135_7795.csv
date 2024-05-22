@@ -1,0 +1,11 @@
+question,answer
+"what is the function of the DEY instruction in 6502 assembly language?","The DEY instruction in 6502 assembly language is used to decrement the value of the Y register by one. It is an implied addressing mode instruction, which means it operates on the Y register directly without requiring a memory address. The opcode for DEY is 88, and it takes 1 byte of memory and 2 clock cycles to execute."
+"what is the addressing mode of the DEY instruction?","The addressing mode of the DEY instruction is implied, which means it operates on the Y register directly without requiring a memory address."
+"what is the opcode for the DEY instruction?","The opcode for the DEY instruction is 88."
+"how many bytes of memory does the DEY instruction require?","The DEY instruction requires 1 byte of memory."
+"how many clock cycles does the DEY instruction take to execute?","The DEY instruction takes 2 clock cycles to execute."
+"what is the purpose of the DEY instruction in a program?","The purpose of the DEY instruction in a program is to decrement the value of the Y register by one, which can be used to implement loops, counters, and other control structures."
+"can the DEY instruction be used with an index register other than Y?","No, the DEY instruction can only be used with the Y register, it is not possible to use it with the X register or any other index register."
+"what happens to the flags when the DEY instruction is executed?","The DEY instruction affects the N and Z flags, setting them according to the result of the decrement operation."
+"in what situation would you use the DEY instruction in a program?","You would use the DEY instruction in a program when you need to decrement a counter or index variable, such as in a loop that iterates a certain number of times."
+"how does the DEY instruction differ from the INY instruction?","The DEY instruction decrements the Y register, while the INY instruction increments the Y register, the two instructions are complementary and can be used together to implement loops and counters."

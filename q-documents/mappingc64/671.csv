@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $FE66?","address              $FE66
+BRK, Warm Start Routine
+
+This routine is executed when the STOP/RESTORE combination of
+keypresses occurs.  In addition, it is the default target address of
+the BRK instruction vector.  This routine calls the Kernal
+intialization routines RESTOR, IOINIT, and part of CINT.  It then
+exits through the BASIC warm start vector at 40962 ($A002)."

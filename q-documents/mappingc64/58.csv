@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $70?","address           $70            FACOV
+Low Order Mantissa Byte of Floating Point Accumulator #1 (For
+Rounding)
+
+If the mantissa of the floating point number has more significant
+figures than can be held in four bytes, the least significant figures
+are placed here.  They are used to extend the accuracy of intermediate
+mathematical operations and to round to the final figure."

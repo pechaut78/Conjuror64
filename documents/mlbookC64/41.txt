@@ -1,0 +1,7 @@
+
+DEX
+This instruction decrements the contents of the X
+register. When decrement from $00 to $FF, the carry flag
+is not set. The N and Z flags are set depending on the
+result. In psdueo-BASIC this can be written as
+X=X-1

@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the RTI instruction in 6502 assembly language?","The opcode for the RTI instruction in 6502 assembly language is 4D."
+"what is the addressing mode for the RTI instruction?","The addressing mode for the RTI instruction is implied."
+"what is the number of bytes used by the RTI instruction?","The number of bytes used by the RTI instruction is 1."
+"what is the number of cycles required by the RTI instruction?","The number of cycles required by the RTI instruction is 6."
+"what is the purpose of the RTI instruction in 6502 assembly language?","The RTI instruction is used to return from an interrupt in 6502 assembly language."
+"what is the assembly language form of the RTI instruction?","The assembly language form of the RTI instruction is simply 'RTI'."
+"in what situations would you use the RTI instruction?","The RTI instruction would be used in situations where an interrupt has occurred and the program needs to return to its normal execution."
+"what is the difference between the RTI instruction and the RTS instruction?","The RTI instruction is used to return from an interrupt, whereas the RTS instruction is used to return from a subroutine."
+"can the RTI instruction be used to return from a subroutine?","No, the RTI instruction should not be used to return from a subroutine, instead the RTS instruction should be used."
+"what happens if the RTI instruction is used incorrectly?","If the RTI instruction is used incorrectly, it can cause the program to malfunction or crash."

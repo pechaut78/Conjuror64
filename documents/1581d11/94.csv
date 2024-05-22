@@ -1,0 +1,11 @@
+question,answer
+"What is the primary purpose of most USER commands?","Most USER commands are intended to be used as machine language JMP or BASIC SYS commands to machine language programs that reside inside the disk memory."
+"What is the function of the USER1 and USER2 commands?","The USER1 and USER2 commands are used to replace the BLOCK-READ and BLOCK-WRITE commands."
+"What does the U0 command do?","The U0 command restores the default user jump table."
+"What is the purpose of the U: or UJ command?","The U: or UJ command is used to power up the vector."
+"How can you create longer routines that operate in the disk's memory?","By loading memory locations with another machine language JMP command, such as JMP $0520, you can create longer routines that operate in the disk's memory along with an easy-to-use jump table."
+"What is the format for USER commands?","The format for USER commands is PRINT#15,\"Ucharacter\"; where \"character\" defines one of the preset user commands listed above."
+"What is the function of the U9 or UI command?","The U9 or UI command jumps to ($FFFA) reset tables."
+"How do you execute a program at the start of buffer 2?","You can execute a program at the start of buffer 2 by using the command PRINT#15,\"U3\";"
+"What is the purpose of the UI command?","The UI command re-starts the 1581 without changing many variables."
+"What is the function of the UJ command?","The UJ command cold-starts the 1581 almost as if it had been turned off and on again."

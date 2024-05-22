@@ -1,0 +1,18 @@
+
+
+
+address              $E21           SETTMO
+Set Time-Out Flag for IEEE Bus
+
+This documented Kernal routine can be entered fromthe jump table at
+65442 ($FFA2).
+
+The routine sets the time-out flag for the IEEE bus.  When timeouts
+are enabled, the Commodore will wait for a device for 64 milliseconds,
+and if it does not receive a response to its signal it will issue a
+time-out error.  Loading the Accumulator with a value less than 128
+and calling this routine will enable time-outs, while using a value
+over 128 will disable time-outs.
+
+This routine is for use only with the Commodore IEEE add-on card,
+which at the time of this writing was not yet available.

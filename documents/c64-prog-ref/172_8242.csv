@@ -1,0 +1,11 @@
+question,answer
+"what is the memory range for the VIC (Video Controller)?","The memory range for the VIC (Video Controller) is D000-D3FF, which is 1 K Bytes."
+"What is the memory range for the SID (Sound Synthesizer)?","The memory range for the SID (Sound Synthesizer) is D400-D7FF, which is 1 K Bytes."
+"What is the memory range for the Color RAM?","The memory range for the Color RAM is D800-DBFF, which is 1 K Nybbles."
+"What is the memory range for the CIA1 (Keyboard)?","The memory range for the CIA1 (Keyboard) is DC00-DCFF, which is 256 Bytes."
+"What is the memory range for the CIA2 (Serial Bus, User Port/RS-232)?","The memory range for the CIA2 (Serial Bus, User Port/RS-232) is DD00-DDFF, which is 256 Bytes."
+"What is the memory range for the Open I/O slot #1 (CP/M Enable)?","The memory range for the Open I/O slot #1 (CP/M Enable) is DE00-DEFF, which is 256 Bytes."
+"What is the memory range for the Open I/O slot #2 (Disk)?","The memory range for the Open I/O slot #2 (Disk) is DF00-DFFF, which is 256 Bytes."
+"What is the purpose of the two open I/O slots?","The two open I/O slots are for general purpose user I/O, special purpose I/O cartridges (such as IEEE), and have been tentatively designated for enabling the Z-80 cartridge (CP/M option) and for interfacing to a low-cost high-speed disk system."
+"What is the condition for the auto-start of a program in a Commodore 64 Expansion Cartridge?","The program in a Commodore 64 Expansion Cartridge will auto-start if the first nine bytes of the cartridge ROM starting at location 32768 ($8000) contain specific data, including the Cold Start vector, Warm Start vector, the letters 'CBM' with bit 7 set in each letter, and the digits '80' in PET ASCII."
+"What is the significance of the first two bytes at location 32768 ($8000) in a Commodore 64 Expansion Cartridge?","The first two bytes at location 32768 ($8000) in a Commodore 64 Expansion Cartridge must hold the Cold Start vector to be used by the cartridge program."

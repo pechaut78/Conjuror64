@@ -1,0 +1,8 @@
+
+
+
+address         $BC2B          SIGN
+Put the Sign of Accumulator #1 into .A Register
+
+On exit from this routine the Accumulator will hold a 0 if FAC1 is 0,
+a 1 if it is positive, and a value of 255 ($FF) if it is negative.

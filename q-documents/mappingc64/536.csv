@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $E544?","address              $E544
+Initialize the Screen Line Link Table and Clear the Screen
+
+This routine initializes the screen line link table at 217 ($D9),
+clears the screen, and clears the Color RAM to the background color.
+It falls through to the next routine."

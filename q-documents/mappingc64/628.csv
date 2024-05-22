@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $F6FB?","address              $F6FB
+Set Kernal I/O Error Messages
+
+This subroutine is used to handle I/O errors from Kernal I?O routines.
+It calls CLRCHN to restore default I/O devices.  If Bit 6 of the flag
+at 157 ($9D) is set, it prints I/O ERROR followed by the error number,
+and then sets the Carry flag to indicate an error, with the error
+number in the Accumulator.  The Kernal error messages are not used by
+BASIC, but may be used by machine language monitors and other
+applications."

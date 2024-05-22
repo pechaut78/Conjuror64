@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the RES pin on the SID chip?","The RES pin on the SID chip is a TTL-level input that serves as the reset control for the SID. When this pin is brought low for at least ten 02 cycles, it resets all internal registers to zero and silences the audio output, effectively restarting the SID chip."
+"what happens when the RES pin is brought low for at least ten 02 cycles?","When the RES pin is brought low for at least ten 02 cycles, all internal registers of the SID chip are reset to zero and the audio output is silenced, effectively resetting the SID chip to its initial state."
+"how is the RES pin typically connected?","The RES pin is normally connected to the reset line of the microprocessor or a power-on-clear circuit, ensuring that the SID chip is properly reset during power-on or when the microprocessor is reset."
+"what is the effect of resetting the SID chip?","Resetting the SID chip silences the audio output and resets all internal registers to zero, effectively restarting the SID chip and preparing it for new audio operations."
+"what type of signal is required on the RES pin?","The RES pin requires a TTL-level input signal to function properly, which is a specific type of digital signal that is commonly used in electronic circuits."
+"what is the purpose of resetting the SID chip?","Resetting the SID chip is necessary to ensure that it is properly initialized and ready to produce audio output, and to prevent any unwanted or residual audio signals from being produced."
+"in what situations would the RES pin be used?","The RES pin would be used during power-on or when the microprocessor is reset, to ensure that the SID chip is properly reset and initialized."
+"what is the duration of the low signal required on the RES pin?","The RES pin requires a low signal for at least ten 02 cycles to properly reset the SID chip."
+"what is the effect of not resetting the SID chip?","If the SID chip is not properly reset, it may produce unwanted or residual audio signals, or may not function properly, leading to unpredictable behavior."
+"why is the RES pin important for the SID chip?","The RES pin is important for the SID chip because it provides a way to properly reset and initialize the chip, ensuring that it functions correctly and produces the desired audio output."

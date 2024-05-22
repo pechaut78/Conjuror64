@@ -1,0 +1,19 @@
+
+
+Subtraction is
+performed
+in much
+the same
+way as
+addition. The contents of the addressed memory location
+is subtracted from the accumulator and the result is left
+in the accumulator. It is possible that the result cannot
+be represented in 8-bits. With subtraction, an overflow
+cannot occur, only an underflow. In this case, the result
+is less than zero. The carry flag indicates this too.
+Since overflow and underflow have opposite meanings,
+underflow is indicated by carry flag being cleared. A
+carry flag being set means that no underflow has
+occurred. Correspondingly, the carry flag must be set
+prior to subtraction (or the first byte of multi-
+precision subtraction).

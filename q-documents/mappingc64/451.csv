@@ -1,0 +1,21 @@
+question,answer
+"What is the purpose of the memory location at address $D41C?","address              $D41C          ENV3
+Envelope Generator 3 Output
+
+This register allows you to read the output of the voice 3 Envelope
+generator, in much the same way that the preceding register lets you
+read the output of Oscillator 3.  This output can also be added to
+another oscillator's Frequency Control Registers, Pulse Width
+Registers, or the Filter Frequency Control Register.  In order to
+produce any output from this register, however, the gate bit in
+Control Register 3 must be set to 1.  Just as in the production of
+sound, setting the gate bit to 1 starts the attack/decay/sustain
+cycle, and setting it back to 0 starts the release cycle.
+
+Location Range: 54301-54303 ($D41D-$D41F)
+Not Connected
+
+The SID chip has been provided with enough addresses for 32 different
+registers, but as it has only 29, the remaining three addresses are
+not used.  Reading them will always return a value of 255 ($FF), and
+writing to them will have no effect."

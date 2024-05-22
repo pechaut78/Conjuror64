@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the basic routine that opens the error channel in this text?","The purpose of the basic routine is to find out what type of error condition exists when the red light on the drive starts to blink and the drive motor stops. It reads the error channel and assigns values to four variables that describe the error condition."
+"What is read from the error channel in this text?","The error channel is read to get four variables that describe the error condition. These variables are the error number, the error description, the track number on which the error occurred, and the block number of the track."
+"What are the four variables that are read from the error channel in this text?","The four variables that are read from the error channel are the error number, the error description, the track number on which the error occurred, and the block number of the track."
+"What is displayed on the screen after reading the error channel in this text?","After reading the error channel, the four variables that describe the error condition are displayed on the screen. These variables are the error number, the error description, the track number on which the error occurred, and the block number of the track."
+"What is the command used to open the error channel in this text?","The command used to open the error channel in this text is OPEN 15,8,15."
+"What is the command used to read the error channel in this text?","The command used to read the error channel in this text is INPUT #15,A$,B$,C$,D$."
+"What is the command used to display the error information on the screen in this text?","The command used to display the error information on the screen in this text is PRINT A$,B$,C$,D$."
+"What is the error number in this text?","The error number is one of the four variables that are read from the error channel. It is used to identify the type of error that occurred."
+"What is the error description in this text?","The error description is one of the four variables that are read from the error channel. It is used to provide a textual description of the error that occurred."
+"What are the track number and block number in this text?","The track number and block number are two of the four variables that are read from the error channel. They are used to identify the location on the disk where the error occurred."

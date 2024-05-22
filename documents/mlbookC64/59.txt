@@ -1,0 +1,5 @@
+
+PLA
+The PLA instruction (pull accumulator) is the opposite of
+PHA. The stack pointer is incremented and a byte readfrom the stack into the accumulator. The N and Z flags
+are set according to the value.

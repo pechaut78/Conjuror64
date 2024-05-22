@@ -1,0 +1,19 @@
+
+C64 Basic:
+RUN R(SHIFTED U)
+A command that will execute a program that
+is in memory.
+
+SAVE S(SHIFTED A)
+A command that will store a program to tape
+or disk.
+
+SGN S(SHIFTED G)
+A INTERIOR FUNCTION
+SIN S(SHIFTED I)
+
+A FLOATING POINT FUNCTION.
+SPC( S(SHIFTED P)
+A function that will print a specified number
+of spaces across the screen. (EXAMPLE: PRINT SPC910)-will print 10
+spaces.

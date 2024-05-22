@@ -1,0 +1,15 @@
+
+
+
+address              $F13E          GETIN
+Get One Byte from the Input Device
+
+This is a documented Kernal routine whose jump table entry point is at
+65508 ($FFE4).  The routine jumps through a RAM vector at 810 ($32A).
+Its function is to get a character from the current input device
+(whose device number is stored at 153 ($99)).  In practive, it
+operates identically to the CHRIN routine below for all devices except
+for the keyboard.  If the keyboard is the current input device, this
+routine gets one character from the keyboard buffer at 631 ($277).  It
+depends on the IRQ interrupt routine to rad the keyboard and put
+characters into the buffer.

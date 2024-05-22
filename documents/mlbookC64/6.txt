@@ -1,0 +1,16 @@
+
+3. Instructions and Addressing Modes of the 6510
+Of the 256 possible 8-bit codes, 151 are legal instructions
+for the 6510, These include several similar instructions,
+that are different only by addressing mode. There are only
+56 entirely different instructions on the 6510. These
+instructions are easy to learn. They are introduced to you
+in groups.
+An instruction is represented in the computer as an 8-bit
+binary number. Each particular machine language instruction
+has a specific binary value. The microprocessor knows what
+actions to take based on this binary value.
+Machine language instructions are given mnemonic-names. A
+mnemonic is a three character abbreviation for a machine
+language operation. For example, the mnemonic LDA stands for
+loaD Accumulator.

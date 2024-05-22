@@ -1,0 +1,21 @@
+
+
+GEOS
+While KERNAL is a minimal character-based operating system in ROM, there is also a disk-based operating system with a graphical user interface for the C64.
+GEOS was released by Berkeley Softworks in 1986
+and Commodore bundled it with the C64 for some
+time. The GUI, which can be controlled by a joystick
+or a mouse, runs in 320x200 graphics mode and resembles early versions of MacOS. GEOS is a 16 KB
+library that includes an optimized disk interface
+(faster, support for timstamps, icons and multi-fork
+”VLIR” files), library code for drawing to the screen,
+high level UI primitives for menus, buttons and dialog boxes (with callbacks) and a simple memory
+swapping facility. Furthermore GEOS allows input
+and printer driver plugins, as well as proportional
+fonts in different sizes. Internally, GEOS has a jump
+table to its library routines that consists of about 150
+entries.
+GEOS came with applications like GeoPaint and GeoWrite; Berkeley Softworks themselves offered solutions like GeoPublish and GeoCalc, and more software was available from third parties.
+GEOS' only requirement is a 1541 disk drive, but a
+3.5" 1581 drive, a RAM extension or one of the later
+hard drives helped speed it up a lot.

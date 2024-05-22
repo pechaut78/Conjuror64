@@ -1,0 +1,9 @@
+
+
+
+address         $50-$52        DSCPNT
+Temporary Pointer to the Current String Descriptor
+
+The string assignment and handling routines use the first two bytes as
+a temporary pointer to the current string descriptor, and the third to
+hold the value of the string length.

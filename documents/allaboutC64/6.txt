@@ -1,0 +1,9 @@
+
+
+C64 Basic:
+A variable is cleared when it is reset to its initial value of 0.
+• The statement CLR is used to clear all variables. Every vari- *—'
+able is set to 0 by the CLR statement.
+• The syntax for CLR consists only of the keyword CLR. Un
+like PRINT, POKE, or LET, no numbers are needed in the
+statement.

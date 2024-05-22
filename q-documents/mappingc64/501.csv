@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the memory location at address $E1BE?","address              $E1BE          OPEN
+Perform OPEN
+
+The BASIC OPEN statement calls the Kernal OPEN routine."

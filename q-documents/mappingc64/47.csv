@@ -1,0 +1,24 @@
+question,answer
+"What is the purpose of the memory location at address $61-$66?","address        $61-$66        FAC1
+Floating Point Accumulator #1
+
+The Floating Point Accumulator is central to the execution of any
+BASIC mathematical operation.  It is used in the conversion of
+integers to floating point numbers, strings to floating point numbers,
+and vice versa.  The results of most evaluations are stored in this
+location.
+
+The internal format of floating point numbers is not particularly easy
+to understand (or explain).  Generally speaking, the number is broken
+into the normalized mantissa, which represents a number between 1 and
+1.99999..., and an exponent value, which represents a power of 2.
+Multiplying the mantissa by 2 raised to the value of the exponent
+gives you the value of the floating point number.
+
+Fortunately, the BASIC interpreter contains many routines for the
+manipulation and conversion of floating point number, and these
+routines can be called by the user.  See the entries for locations 3
+and 5
+
+Floating Point Accumulator #1 can be further divided into the
+following locations:"

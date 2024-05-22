@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of pin 6 on the SID chip?","This TTL-Level input serves as the master clock for SID, controlling oscillator frequencies and envelope rates, as well as data transfers between SID and the microprocessor, only allowing data transfer when the pin is high."
+"what is the typical operating frequency of pin 6?","The nominal operating frequency of pin 6 is 1.0 MHz, which is typically connected to the system clock."
+"what is the effect of pin 6 on data transfers?","Pin 6 acts as a high-active chip select, allowing data transfers between SID and the microprocessor only when the pin is high."
+"what is the relationship between pin 6 and the system clock?","Pin 6 is typically connected to the system clock, which provides the master clock signal for SID."
+"what is the significance of pin 6 being high?","When pin 6 is high, it enables data transfers between SID and the microprocessor, allowing them to communicate and exchange data."
+"what is the role of pin 6 in controlling oscillator frequencies?","Pin 6 serves as the master clock, controlling oscillator frequencies and envelope rates, which are referenced to this clock signal."
+"what is the effect of pin 6 on the SID chip?","Pin 6 has a profound impact on the SID chip, controlling its internal clock, data transfers, and overall operation."
+"how does pin 6 control data transfers?","Pin 6 acts as a high-active chip select, allowing data transfers to occur only when the pin is high, effectively controlling when data can be transferred between SID and the microprocessor."
+"what is the relationship between pin 6 and the microprocessor?","Pin 6 controls data transfers between SID and the microprocessor, allowing them to communicate and exchange data when the pin is high."
+"what is the significance of the 1.0 MHz frequency on pin 6?","The 1.0 MHz frequency on pin 6 is the nominal operating frequency, which provides the master clock signal for SID, controlling its internal operation and data transfers."

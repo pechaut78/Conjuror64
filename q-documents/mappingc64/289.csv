@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $B1D1?","address         $B1D1          ISARY
+Find Array Element or Create New Array in RAM
+
+This routine searches for an array.  If it is found, the subscript
+value is checked to see if it is valid, and pointers to the array and
+element of the array are set.  If it is not found, the array is
+created, and the pointers set."

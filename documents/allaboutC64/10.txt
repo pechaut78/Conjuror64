@@ -1,0 +1,13 @@
+
+C64 Basic:
+One PRINT statement can print both numbers and character
+strings.
+• Commas and semicolons can be used regardless of whether
+numbers are mixed with character strings.
+• The word type refers to the quality of a value that deter
+mines what sort of information is being represented. The two
+types that have been introduced thus far are numbers and
+character strings.
+• Attempts to use the arithmetic operators with character
+strings cause the computer to generate a TYPE MISMATCH
+error.

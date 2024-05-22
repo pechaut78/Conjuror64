@@ -1,0 +1,48 @@
+
+The Subroutine Instructions
+A very important programming technique, which you already
+know from BASIC, is the use of subroutines. In BASIC, the
+instruction GOSUB is used to call a subroutine, and the
+instruction RETURN is used to return from the subroutine.
+How is a subroutine call distinguished from a normal jump
+instruction such as GOTO or JMP? When we call a
+subroutine, the processor or BASIC interpreter must make
+note of the location from which the subroutine was called
+so that the RETURN instruction can branch back to the
+location following the call. The BASIC interpreter does
+this for us; the 6510 also handles this task for us in
+machine language. In spite of this, however, we should
+know how it works.
+So that the processor knows which instruction to branch
+back to on a RETURN instruction, the current address of
+the program counter is saved when the call is made. A
+special storage area is reserved for this, called the
+stack. This stack lies from address $0100 to $01FF (256
+to 511). There is something called a stack pointer so
+that the microprocessor knows at which address of the
+stack it can save a return address. We have already been
+introduced to the stack register. Let's take a look at
+what happens when a subroutine is called.
+
+The processor takes the current contents of the program
+counter ( + 2) and divides it into high and low bytes. The
+high byte is stored at address $100 plus SP. Then the
+contents of the stack pointer are decremented by one and
+the low byte is stored on the stack (address 100 + SP),
+Finally the stack pointer is decremented by one again.
+Now a branch is made to the subroutine.
+When the processor encounters an RTS instruction, the
+opposite process takes place. The stack pointer is
+incremented by one and one byte is taken from the stack
+(address $100 + SP). This byte is used as the low-byte of
+the program counter. Then
+the stack pointer is
+incremented again and the high-byte of the program
+counter is fetched from the stack. Now the program
+counter points to the next instruction after the
+subroutine call and the program is continued there.
+When values are placed on the stack, the value is first
+saved on the stack and then the stack pointer is
+decremented by one. When getting a byte back from the
+stack, the stack pointer is first incremented by one. The
+stack grows from top to bottom (from $1FF to $100).

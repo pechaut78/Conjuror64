@@ -1,0 +1,11 @@
+question,answer
+"What statement resets the data pointer to the beginning of the first DATA statement in a program?","The RESTORE statement resets the data pointer so that reading will start from the first value in the first DATA statement of the program. This makes it possible to use READ in an infinite loop without getting an OUT OF DATA error."
+"What is the effect of using the RESTORE statement on the data pointer?","The data pointer will always be restored to the initial state when the program started running, regardless of how much data has already been read."
+"What statement automatically performs a RESTORE?","The CLR statement automatically performs a RESTORE."
+"When is a RESTORE performed automatically during program execution?","The RUN command does a CLR before starting program execution, so RUN also performs a RESTORE."
+"What statements is the RESTORE statement used with?","The RESTORE statement is used only with READ and DATA."
+"How often is the RESTORE statement typically used in a program?","The RESTORE statement is not used very often."
+"What error can be avoided by using the RESTORE statement with the READ statement?","The RESTORE statement can be used with the READ statement to avoid getting an OUT OF DATA error in an infinite loop."
+"What is the effect of the RESTORE statement on the data pointer during program execution?","The RESTORE statement restores the data pointer to the initial state when the program started running."
+"What is one way to perform a RESTORE during program execution?","One way to perform a RESTORE during program execution is by using the CLR statement."
+"What is the result of using the RUN command in terms of the data pointer?","The RUN command performs a CLR before starting program execution, which in turn performs a RESTORE, restoring the data pointer to its initial state."

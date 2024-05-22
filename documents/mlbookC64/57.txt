@@ -1,0 +1,6 @@
+
+PHA
+The instruction PHA (push accumulator) saves the contents
+of the accumulator on the stack and decrements the stack
+pointer by one. The contents of the accumulator are
+unchanged.

@@ -1,0 +1,17 @@
+
+
+C64 Basic:
+The ON statement is used to get around the problem that
+line numbers after GOTO or GOSUB cannot be expressions
+or variables.
+• The syntax for the ON statement consists of the keyword
+ON, a numeric value, the keyword GOTO or the keyword
+GOSUB, and a list of line numbers.
+When executed, the ON statement takes the integer portion
+of the numeric value, counts that far into the line number
+list, and then performs a GOTO or GOSUB to that line.
+• If the value exceeds the number of line numbers in the list,
+or if the value is 0, the statement will be ignored. Execution
+will continue with the next statement, which may be on the
+same line.
+• A negative value produces the ILLEGAL QUANTITY error.

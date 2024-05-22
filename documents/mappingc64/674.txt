@@ -1,0 +1,9 @@
+
+
+
+address              $FED6
+RS-232 Receive the Next Bit (NMI)
+
+The NMI handler calls this subroutine to input the next bit on the
+RS-232 bus.  It then calls the next subroutine to reload the timer
+that causes the interrupts.

@@ -1,0 +1,19 @@
+
+
+
+address         $31-$32        STREND
+Pointer to End of the BASIC Array Storage Area (+1), and the Start of
+Free RAM
+
+This location points to the address of the end of BASIC array storage
+space and the start of free RAM.  Since string text starts at the top
+of memory and builds downwards, this location can also be thought of
+as the last possible address of the string storage area.  Defining new
+variables pushes this pointer upward, toward the last string text.
+
+If a string for which space is being allocated would cross over this
+boundary into the array storage area, garbage collection is performed,
+and if there still is not enough room, an OUT OF MEMORY error occurs.
+FRE performs garbage collection, and returns the difference between
+the addresses pointed to here and the address of the end of string
+text storage pointed to by location 51 ($33).

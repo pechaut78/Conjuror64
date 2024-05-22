@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the IOBASE function in Commodore 64?","The purpose of the IOBASE function is to define the I/O memory page, which sets the X and Y registers to the address of the memory section where the memory-mapped I/O devices are located, providing compatibility between the Commodore 64, VIC-20, and future models of the Commodore 64."
+"what is the call address of the IOBASE function in hexadecimal?","The call address of the IOBASE function in hexadecimal is $FFF3."
+"what are the communication registers used by the IOBASE function?","The communication registers used by the IOBASE function are X and Y."
+"what is the stack requirement for the IOBASE function?","The stack requirement for the IOBASE function is 2."
+"what registers are affected by the IOBASE function?","The registers affected by the IOBASE function are X and Y."
+"how do you use the IOBASE function to set the data direction register of the user port to 0?","You use the IOBASE function to set the data direction register of the user port to 0 by calling the function with JSR IOBASE, storing the X and Y registers in consecutive locations, loading the Y register with the offset, and accessing the I/O location, as shown in the example: JSR IOBASE, STX POINT, STY POINT+1, LDY #2, LDA #0, STA (POINT),Y."
+"what is the significance of the X register in the IOBASE function?","The X register contains the low-order address byte, which is used to access the memory-mapped I/O devices in the Commodore 64."
+"what is the significance of the Y register in the IOBASE function?","The Y register contains the high-order address byte, which is used to access the memory-mapped I/O devices in the Commodore 64."
+"what is the purpose of the offset in the IOBASE function?","The offset is the number of locations from the beginning of the page on which the I/O register you want is located, and it is used to access the desired I/O location."
+"what is the benefit of using the IOBASE function in machine language programs?","The benefit of using the IOBASE function in machine language programs is that it provides compatibility between the Commodore 64, VIC-20, and future models of the Commodore 64, ensuring that the programs remain compatible with future versions of the Commodore 64, the KERNAL, and BASIC."

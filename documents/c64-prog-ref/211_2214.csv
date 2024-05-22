@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the TKSA function?","The purpose of the TKSA function is to send a secondary address to a device commanded to TALK."
+"What is the call address of the TKSA function in hexadecimal?","The call address of the TKSA function in hexadecimal is $FF96."
+"What is the communication register used by the TKSA function?","The communication register used by the TKSA function is A."
+"What is the preparatory routine required to be called before calling the TKSA function?","The preparatory routine required to be called before calling the TKSA function is TALK."
+"What is the error return mechanism used by the TKSA function?","The error return mechanism used by the TKSA function is the same as the READST function."
+"How many bytes of stack are required by the TKSA function?","The TKSA function requires 8 bytes of stack."
+"What register is affected by the TKSA function?","The TKSA function affects the A register."
+"What is the range of values that can be loaded into the accumulator before calling the TKSA function?","The range of values that can be loaded into the accumulator before calling the TKSA function is between 0 and 31."
+"What is the sequence of steps to use the TKSA function?","The sequence of steps to use the TKSA function is to first call the TALK routine, then load the accumulator with the secondary address, and finally call the TKSA function."
+"How can you tell a device with ID #4 to talk with command #7 using the TKSA function?","You can tell a device with ID #4 to talk with command #7 using the TKSA function by loading the accumulator with #4, calling the TALK routine, loading the accumulator with #7, and then calling the TKSA function, as shown in the example: LDA #4; JSR TALK; LDA #7; JSR TKSA."

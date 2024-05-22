@@ -1,0 +1,5 @@
+
+
+
+address         $BAF9          TENC
+The Constant 10 in Five-Byte Floating Format

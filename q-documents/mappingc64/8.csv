@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the memory location at address $9?","address             $9             TRMPOS
+Column position of the Cursor before the Last TAB or SPC
+
+TRMPOS is used by TAB and SPC.  The cursor column position prior to
+the TAB or SPC is moved here from 211 ($D3), and is used to calculate
+where the cursor ends up after one of these functions is invoked.
+Note that the value contained here shows the position of the cursor on
+a logical line.  Since one logical line can be up to two physical
+lines long, the value stored here can range from 0 to 79."

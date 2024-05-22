@@ -1,0 +1,21 @@
+question,answer
+"What is the purpose of the memory location at address $BB-$BC?","address       $BB-$BC        FNADR
+Pointer: Current Filename
+
+This location holds a pointer to the address of the current filename.
+If an operation which OPENs a tape file does not specify a filename,
+this pointer is not used.
+
+When a disk filename contains a shifted space character, the remainder
+of the name will appear outside the quotes in the directory, and may
+be used for comments.  For example, if you SAVE 'ML[shifted
+space]SYS828', the directory entry will read 'ML'SYS 828.  You may
+reference the program either by the portion of the name that appears
+within quotes, or by the full name, including the shifted space.  A
+program appearing later in the directory as 'ML'SYS 900 would not be
+found just by reference to 'ML', however.
+
+A filename of up to four characters may be used when opening the
+RS-232 device.  These four characters will be copied to 659-662
+($293-$296), where they are used to control such parameters as baud
+rate, parity, and word length."

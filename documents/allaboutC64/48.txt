@@ -1,0 +1,26 @@
+
+C64 Basic
+• There are two kinds of loops. One kind repeats indefinitely,
+waiting for a condition to be met. The computer does not
+know, when it first enters the loop, how many times the
+loop will be executed. The other type of loop repeats a set
+number of times. In this case, the computer does know
+when it enters the loop how many times the loop will be
+executed.
+• The kind of loop which repeats a set number of times is very
+simple, but to implement it in a program requires assignment
+statements, conditional logic, and a way to make execution
+jump to the top of a loop.
+• The FOR and NEXT statements are used to simplify the han
+dling of loops which repeat a specified number of times.
+These two statements do all the work normally done by two
+LET statements and an IF-GOTO statement.
+• The syntax of the FOR statement starts with the keyword
+FOR. Then comes the name of the counting variable. This
+must be a numeric variable. String variables cannot be used.
+After the variable name comes an equal sign, just as in the
+LET statement, followed by a value which is the starting 
+value for the loop. Next comes the keyword TO and another
+value, this time the ending value for the loop. All of this
+may optionally be followed by the keyword STEP and one 
+more value.

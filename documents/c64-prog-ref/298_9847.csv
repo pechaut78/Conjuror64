@@ -1,0 +1,11 @@
+question,answer
+"How many rows of characters are displayed in the standard display mode?","In the standard display mode, there are 25 rows of 40 characters (or character regions) per row."
+"What is the purpose of the RSEL bit in register 17 ($11)?","The RSEL bit in register 17 ($11) is used to select the number of rows in the display window, with 0 selecting 24 rows and 1 selecting 25 rows."
+"What is the difference in the number of columns between the larger and smaller display windows?","The larger display window has 40 columns, while the smaller display window has 38 columns."
+"How do the select bits operate in the display window?","The select bits, RSEL and CSEL, operate by selecting the number of rows and columns in the display window, with RSEL selecting 24 or 25 rows and CSEL selecting 38 or 40 columns."
+"What is the significance of the CSEL bit in register 22 ($16)?","The CSEL bit in register 22 ($16) is used to select the number of columns in the display window, with 0 selecting 38 columns and 1 selecting 40 columns."
+"What is the normal display mode of the Commodore 64?","The normal display mode of the Commodore 64 consists of 25 rows of 40 characters (or character regions) per row."
+"In what situations is the smaller display window typically used?","The smaller display window is typically used in conjunction with scrolling."
+"How do the border and exterior border area interact in the display window?","Characters (bits) adjacent to the exterior border area will be covered by the border when the display window is reduced to 24 rows and 38 characters."
+"What is the format of the displayed information in the reduced display window?","The format of the displayed information remains the same in the reduced display window, with the only change being the reduction in the number of rows and columns."
+"What are the values of RSEL and CSEL for the standard display mode?","In the standard display mode, RSEL is 1 and CSEL is 1, selecting 25 rows and 40 columns respectively."

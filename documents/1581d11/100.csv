@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the L flag in the WRITE command?","The L flag is a logical flag that determines whether to perform logical to physical translation, with a value of 1 indicating that the translation should be performed."
+"What is the format of the destination track in the WRITE command?","The destination track is stored in byte 03 of the WRITE command, with the exact format determined by the particular disk format and translation table."
+"What is the purpose of the E flag in the WRITE command?","The E flag determines whether to ignore errors, with a value of 1 indicating that errors should be ignored."
+"How does the host communicate with the drive during a WRITE operation?","The host communicates with the drive by bursting data to the drive, then performing fast serial input, pulling the clock low and waiting for the burst status byte, pulling the clock high, and going output for multi-sector transfers and continuing."
+"What is the purpose of the S flag in the WRITE command?","The S flag is a side select flag that determines which side of the diskette to access."
+"What is stored in byte 04 of the WRITE command?","Byte 04 of the WRITE command stores the destination sector."
+"How does the host know when a WRITE operation is complete?","The host knows when a WRITE operation is complete when it receives a burst status byte following the WRITE operation."
+"What is the purpose of the N flag in the WRITE command?","The N flag determines the drive number to access."
+"What must be done before reading or writing to a diskette?","Before reading or writing to a diskette, it must be logged-in using either the INQUIRE DISK or QUERY DISK FORMAT command."
+"What is stored in byte 05 of the WRITE command?","Byte 05 of the WRITE command stores the number of sectors to write."

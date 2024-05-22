@@ -1,0 +1,10 @@
+
+
+
+address         $A857          CONT
+Perform CONT
+
+The CONT statement is performed by moving the saved pointers back to
+the current statement and current text character pointers.  If the
+saved pointers cannot be retrieved, the CAN'T CONTINUE error statement
+is printed.

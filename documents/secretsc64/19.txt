@@ -1,0 +1,8 @@
+
+xtended colour mode on C64
+
+In this mode you sacrifice horizontal resolution for an 
+Increased number of colours. Instead of every dot being in 
+one of two colours, the horizontal dots are now read in pairs 
+so that each pair of dots can be in one of four colours. Figure 
+7.3 shows how the dot pairs are code into colours. 

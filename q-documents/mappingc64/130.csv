@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $100-$13E?","address       $100-$13E      BAD
+Tape Input Error Log
+
+Each tape block is saved twice consecutively, in order to minimize
+loss of data from transmission errors.  These 62 bytes serve as
+indices of which bytes in the tape block were not received corectly
+during the first transmission, so that corrections might be made on
+the second pass."

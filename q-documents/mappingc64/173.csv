@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $304-$305?","address      $304-$305      ICRNCH
+Vector to the Routine That Crunches the ASCII Text of Keywords into
+Tokens
+
+This vector points to the address of the CRUNCH routine at 42364
+($A57C)."

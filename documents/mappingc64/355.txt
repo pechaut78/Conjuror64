@@ -1,0 +1,8 @@
+
+
+
+address         $BC58          ABS
+Perform ABS
+
+The FAC1 sign byte at 102 ($66) is shifted right by this command, so
+that the top bit is a 0 (positive).

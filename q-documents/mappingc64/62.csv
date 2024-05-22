@@ -1,0 +1,31 @@
+question,answer
+"What is the purpose of the memory location at address $90?","address           $90            STATUS
+Kernal I/O Status Word (ST)
+
+The Kernal routines which open I/O channels or perform input/output
+functions check and update this location.  The value here is almost
+always the same as that returned to BASIC by use of the reserved
+variable ST.  Note that BASIC syntax will not allow an assignment such
+as ST=4.  A table of status codes for cassette and serial devices
+follows below:
+
+Cassette:
+Bit 2 (Bit Value of 4) = Short Block
+Bit 3 (Bit Value of 8) = Long Block
+Bit 4 (Bit Value of 16) = Unrecoverable error (Read), mismatch
+Bit 5 (Bit Value of 32) = Checksum error
+Bit 6 (Bit Value of 64) = End of file
+
+Serial Devices:
+Bit 0 (Bit Value of 1) = Time out (Write)
+Bit 1 (Bit Value of 2) = Time out (Read)
+Bit 6 (Bit Value of 64) = EOI (End or Identify)
+Bit 7 (Bit Value of 128) = Device not present
+
+Probably the most useful bit to test is Bit 6 (end of file).  When
+using the GET statement to read in individual bytes from a file, the
+statement IF ST AND 64 will be true if you have got to the end of the
+file.
+
+For status codes for the RS-232 device, see the entry for location 663
+($297)."

@@ -1,0 +1,15 @@
+question,answer
+"What is the purpose of the memory location at address $FE00?","address              $FE00          SETLFS
+Set Logical File Number, Device Number, and Secondary Address
+
+This is a documented Kernal routine, which can be entered through the
+jump table at location 65466 ($FFBA).
+
+It stores the value in the Accumulator in the location which holds the
+current logical file number, the value in the .X register is put in
+the location that holds the current device number, and the value in
+the .Y register is stored in the location that holds the current
+secondary address.  If no secondary address is used, the .Y register
+should be set to 255 ($FF).  It is necessary to set the values of the
+current file number, device number, and secondary address before you
+OPEN a file, or LOAD or SAVE."

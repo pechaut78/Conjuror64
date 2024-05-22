@@ -1,0 +1,17 @@
+question,answer
+"What is the purpose of the memory location at address $F20E?","address              $F20E          CHKIN
+Designate a Logical File As the Current Input Channel
+
+This is a documented Kernal routine which can be entered from the jump
+table at 65478 ($FFC6).
+
+The routine jumps through a RAM vector at 798 ($31E).  If you wish to
+get data from any device other than the keyboard, this routine must be
+called after OPENing the device, before you can get a data byte with
+the CHRIN or GETIN routine.  When called, the routine will designate
+the logical file whose file number is in the .X register as the
+current file, its device as the current device, and its secondary
+address as the current secondary address.  If the device on the
+channel is a serial device, which requires a TALK command and
+sometimes a secondary address, this routine will send them over the
+serial bus."

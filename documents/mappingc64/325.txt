@@ -1,0 +1,9 @@
+
+
+
+address         $B850          FSUB
+Subtract FAC1 from a Number in Memory
+
+This routine is used to subtract the Floating Point Accumulator from a
+number in memory.  It moves the number in memory into FAC2, and falls
+through to the next routine.

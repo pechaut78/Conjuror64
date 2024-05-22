@@ -1,0 +1,10 @@
+
+
+
+address         $B79B          GETBYTC
+Input a Parameter Whose Value Is Between 0 and 255
+
+This routine reads numeric ASCII program text, converts it to an
+integer, checks that it is in the range 0-255, and stores it in the .X
+register.  This routine can be useful for reading parameters from a
+USR statement or new commands.

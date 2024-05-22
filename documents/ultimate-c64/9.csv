@@ -1,0 +1,11 @@
+question,answer
+"Which flags are set and cleared programmatically?","The D (decimal), I (interrupt disable) and C flags can be set and cleared programmatically (CLD/SED, CLI/SEI, CLC/SEC)"
+"What is the purpose of the BCD correction circuit?","The BCD correction circuit adjusts ADC and SBC operations to produce correct BCD results, for example $09+$02 won't be $0B, but $11, since 9+2=11"
+"What is the encoding of the NOP instruction?","The encoding of the NOP instruction is $EA"
+"What is the effect of setting the D flag?","If the D flag is set, all ADC and SBC operations will be BCD-adjusted afterwards"
+"What is the range of relative offsets that can be reached by branches?","Branches can reach code in the area of +127 and -128"
+"What is the difference between BCC and BCS branches?","BCC is a branch on (unsigned) below, and BCS is a branch on above-or-equal"
+"Which flags are modified by arithmetic instructions?","Arithmetic instructions touch N V, Z and C flags"
+"Which flags are modified by shift instructions?","Shift instructions also modify C flag"
+"What is the purpose of the CLV instruction?","The CLV instruction clears the V flag"
+"What is the purpose of the NOP instruction?","The NOP instruction does nothing"

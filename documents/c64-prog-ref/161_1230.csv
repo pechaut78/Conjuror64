@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for STX in zero page addressing mode?","The opcode for STX in zero page addressing mode is 86, which requires 2 bytes and 3 cycles to execute."
+"what is the difference in cycles between STX in zero page and absolute addressing modes?","The difference in cycles between STX in zero page and absolute addressing modes is 0, as both modes require 4 cycles to execute."
+"what is the assembly language form for STX in zero page,Y addressing mode?","The assembly language form for STX in zero page,Y addressing mode is STX Oper,Y, where Oper is the zero page address and Y is the index register."
+"what is the number of bytes required for STX in absolute addressing mode?","The number of bytes required for STX in absolute addressing mode is 3, which includes the opcode and the 2-byte absolute address."
+"how does the number of cycles change when using STX in zero page,Y addressing mode compared to zero page mode?","When using STX in zero page,Y addressing mode, the number of cycles increases by 1, from 3 cycles in zero page mode to 4 cycles in zero page,Y mode."
+"what is the purpose of the STX instruction?","The purpose of the STX instruction is to store the value of index register X in memory at the specified address."
+"in which addressing modes can the STX instruction be used?","The STX instruction can be used in zero page, zero page,Y, and absolute addressing modes."
+"what is the opcode for STX in absolute addressing mode?","The opcode for STX in absolute addressing mode is 8E, which requires 3 bytes and 4 cycles to execute."
+"how does the number of bytes change when using STX in absolute addressing mode compared to zero page mode?","When using STX in absolute addressing mode, the number of bytes increases by 1, from 2 bytes in zero page mode to 3 bytes in absolute mode."
+"what is the difference in bytes between STX in zero page and zero page,Y addressing modes?","The difference in bytes between STX in zero page and zero page,Y addressing modes is 0, as both modes require 2 bytes to execute."

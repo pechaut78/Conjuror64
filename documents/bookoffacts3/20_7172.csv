@@ -1,0 +1,11 @@
+question,answer
+"What is the function of the SQR command in C64 Basic?","The SQR command in C64 Basic is a floating point function that returns the square root of a specified value."
+"What does the STATUS function do in C64 Basic?","The STATUS function in C64 Basic gives the condition of any input or output operation."
+"How does the STEP statement work with the IF THEN statement in C64 Basic?","The STEP statement in C64 Basic works with the IF THEN statement by incrementing the IF THEN function with a specified value. For example, FOR A = 1 TO 10 STEP 5 will loop twice."
+"What happens when the STOP statement is executed in a C64 Basic program?","The STOP statement in C64 Basic stops the execution of a program and prints the line number from which the STOP statement was executed."
+"What is the purpose of the STR$ function in C64 Basic?","The STR$ function in C64 Basic is a string function that returns a string variable from a numeric variable. For example, T=4:T$=STR$(T):A$="THE TIME IS "+T$+":00M:PRINT A$ will print (THE TIME IS 4:00)"
+"What does the SYS statement do in C64 Basic?","The SYS statement in C64 Basic is a statement that will execute a memory location containing a machine language program or a kernal routine. For example, SYS 64738 will give a system cold start."
+"What is an example of using the SQR command in C64 Basic?","An example of using the SQR command in C64 Basic is: A=16:B=SQR(A):PRINT B, which will return 4 as the square root of 16."
+"What is the syntax for using the STATUS function in C64 Basic?","The syntax for using the STATUS function in C64 Basic is: STATUS ST, where ST is the input or output operation to check the condition of."
+"What is the syntax for using the STEP statement with the IF THEN statement in C64 Basic?","The syntax for using the STEP statement with the IF THEN statement in C64 Basic is: IF <condition> THEN <statement> STEP <value>, where <condition> is the condition to be met, <statement> is the statement to be executed, and <value> is the value to increment the IF THEN function by."
+"What is the syntax for using the STR$ function in C64 Basic?","The syntax for using the STR$ function in C64 Basic is: STR$(<numeric variable>), where <numeric variable> is the numeric variable to be converted to a string."

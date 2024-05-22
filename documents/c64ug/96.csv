@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the INT function in BASIC on a Commodore 64","The INT function in BASIC on a Commodore 64 is used to truncate a number, removing all decimal places to the right of the decimal point, resulting in an integer value that is always less than or equal to the original number."
+"What happens to negative numbers with decimal places when using the INT function","When using the INT function on negative numbers with decimal places, the result will be the integer less than the current value, effectively rounding down to the nearest integer."
+"How does the INT function handle decimal places in a number","The INT function removes all decimal places to the right of the decimal point, effectively truncating the number to an integer value."
+"What is the result of using the INT function on a number with decimal places","The result of using the INT function on a number with decimal places is an integer value that is always less than or equal to the original number."
+"Can the INT function be used to round a number to the nearest integer","No, the INT function does not round a number to the nearest integer, it truncates the decimal places, effectively rounding down to the nearest integer."
+"How does the INT function differ from a rounding function","The INT function differs from a rounding function in that it truncates the decimal places, rather than rounding to the nearest integer, which can result in a different outcome."
+"What is the effect of using the INT function on a positive number with decimal places","The effect of using the INT function on a positive number with decimal places is to truncate the decimal places, resulting in an integer value that is less than or equal to the original number."
+"Can the INT function be used to convert a real number to an integer","Yes, the INT function can be used to convert a real number to an integer by truncating the decimal places, resulting in an integer value."
+"What happens to the decimal places when using the INT function","The decimal places are removed, or truncated, when using the INT function, resulting in an integer value."
+"How does the INT function handle very large numbers with decimal places","The INT function will truncate the decimal places of very large numbers, resulting in an integer value that is less than or equal to the original number."

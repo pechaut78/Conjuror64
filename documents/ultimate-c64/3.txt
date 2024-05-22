@@ -1,0 +1,25 @@
+
+Address Space
+The 8 bit C64 design has a 16 bit address bus, allowing the CPU to address 64 KB of memory. Since the
+C64 has 64 KB of RAM, filling the complete address
+space, ROM and I/O chips are mapped into regions of
+the address space that are shared with RAM: The
+CPU can switch these regions between RAM and a
+second or third mapping. These regions are as follows:
+• $0000-$9FFF: RAM
+• $A000-$BFFF: RAM or BASIC ROM
+• $C000-$CFFF: RAM
+• $D000-$DFFF: RAM or memory mapped I/O
+chips or character ROM
+• $E000-$FFFF: RAM or KERNAL ROM
+In contrast to CPUs like the Z80 and the 8086, and
+like most modern CPUs, I/O devices are memory
+mapped on the C64's 6510 CPU. The mapping is as
+follows:
+• $D000-$D3FF: VIC video controller
+• $D400-$D7FF: SID sound controller
+• $D800-$DBFF: Color RAM
+• $DC00-$DCFF: CIA 1 I/O controller
+• $DD00-$DDFF: CIA 2 I/O controller
+• $DE00-$DFFF: for extensions on the expansion
+port

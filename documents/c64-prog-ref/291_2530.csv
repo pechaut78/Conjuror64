@@ -1,0 +1,11 @@
+question,answer
+"what is the resolution of the horizontal sprite position register?","The resolution of the horizontal sprite position register is 512 positions, which allows for precise control over the sprite's horizontal placement on the screen."
+"what is the range of visible x locations for sprites?","The range of visible X locations for sprites is 23 to 347, which corresponds to the hexadecimal values $17 to $157."
+"how are sprite positions determined?","Sprite positions are determined by the upper-left corner of the sprite array, which provides a reference point for the sprite's location on the screen."
+"what is the range of visible y locations for sprites?","The range of visible Y locations for sprites is 50 to 249, which corresponds to the hexadecimal values $32 to $F9."
+"what is the purpose of having a larger range of sprite positions than the visible screen area?","Having a larger range of sprite positions than the visible screen area allows sprites to be moved smoothly on and off the display screen, creating a more seamless and engaging visual experience."
+"what registers are used to position sprites?","Sprites are positioned via their X and Y position registers, as shown in the register map."
+"in what way can sprites be moved on the screen?","Sprites can be moved smoothly on and off the display screen, allowing for dynamic and interactive visual effects."
+"what is the significance of the upper-left corner of the sprite array?","The upper-left corner of the sprite array serves as a reference point for determining the sprite's position on the screen."
+"what is the benefit of having a high resolution for sprite positioning?","Having a high resolution for sprite positioning allows for precise control over the sprite's placement on the screen, enabling more detailed and nuanced visual effects."
+"how do the visible X and Y locations for sprites relate to the overall screen area?","The visible X and Y locations for sprites are a subset of the overall screen area, allowing sprites to be positioned and moved within a specific region of the screen."

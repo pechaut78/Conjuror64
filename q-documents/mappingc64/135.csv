@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $263-$26C?","address       $263-$26C      FAT
+Kernal Table of Device Numbers for Each Logical File"

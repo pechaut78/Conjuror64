@@ -1,0 +1,6 @@
+
+LINE NUMBERS - The computer has to read a sequential list of
+numbers that precede each program line. Without line numbers it
+would be impossible for the computer to follow the program. Line
+numbers are not required if you wish to enter commands that are to be
+executed immediately. NO line number can be higher than 63999.

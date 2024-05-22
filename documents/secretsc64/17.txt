@@ -1,0 +1,25 @@
+
+Using Colour on C64
+
+As we mentioned earlier, the colour information for the high 
+resolution screen comes from the normal text screen area, 
+which is located at address 1024 decimal to 2023 decimal. 
+Each text screen location holds the colour information for an 
+8 by 8 dots square on the high resolution screen. The byte 
+at address 1024 decimal holds the colour information for 
+bytes to 7 of the high resolution screen, the byte at address 
+1025 decimal holds the colour information for bytes 8 to 15 
+of the high resolution screen, and so on. (See Figure 7.2.) 
+
+Within each colour byte the four higli order bits (bits 4 to 
+7) contain the colour for any bit on the high resolution 
+screen which is set to a 1 and the four low order bits (bits 
+to 3) contain the colour for any bit on the h^h resolution 
+screen which is reset to 0. 
+
+This means of course, that the colour memory has a much 
+lower resolution than the screen memory, so you can only 
+colour the screen in blocks of 64 bits. 
+
+Just as with Sprite colours, the high resolution screen can 
+operate in two colour modes.

@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $E684?","address              $E684
+Test for Quote Marks
+
+This subroutine checks if the current character is a quotation mark,
+and if it is, toggles the quote switch at 212 ($D4)."

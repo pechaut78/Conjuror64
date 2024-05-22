@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $B6DB?","address         $B6DB          FRETMS
+Remove an Entry from the String Descriptor Stack
+
+If the descriptor of a currently valid string is the same as one of
+the entries on the temporary string descriptor stack, the stack entry
+is removed."

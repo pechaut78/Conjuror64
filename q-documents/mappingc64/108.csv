@@ -1,0 +1,52 @@
+question,answer
+"What is the purpose of the memory location at address $CB?","address           $CB            SFDX
+Matrix Coordinate of Current Key Pressed
+
+The keyscan interrupt routine uses this location to indicate which key
+is currently being pressed.  The value here is then used as an index
+into the appropriate keyboard table to determine which character to
+print when a key is struck.
+
+The correspondence between the key pressed and the number stored here
+is as follows:
+
+0  = INST/DEL                34 = J
+1  = RETURN                  35 = 0
+2  = CRSR RIGHT              36 = M
+3  = F7                      37 = K
+4  = F1                      38 = O
+5  = F3                      39 = N
+6  = F5                      40 = +
+7  = CRSR DOWN               41 = P
+8  = 3                       42 = L
+9  = W                       43 = -
+10 = A                       44 = .
+11 = 4                       45 = :
+12 = Z                       46 = @
+13 = S                       47 = ,
+14 = E                       48 = LIRA (BRITISH POUND SIGN)
+15 = NOT USED                49 = *
+  (WOULD BE LEFT SHIFT)      50 = ;
+16 = 5                       51 = CLR/HOME
+17 = R                       52 = NOT USED
+18 = D                         (WOULD BE RIGHT SHIFT)
+19 = 6                       53 = =
+20 = C                       54 = UP ARROW
+21 = F                         (EXPONENTATION SIGN)
+22 = T                       55 = /
+23 = X                       56 = 1
+24 = 7                       57 = LEFT ARROW
+25 = Y                       58 = NOT USED
+26 = G                         (WOULD BE CTRL)
+27 = 8                       59 = 2
+28 = B                       60 = SPACE BAR
+29 = H                       61 = NOT USED
+30 = U                         (WOULD BE COMMODORE LOGO)
+31 = V                       62 = Q
+32 = 9                       63 = RUN/STOP
+33 = I                       64 = NO KEY PRESSED
+
+The RESTORE key is not accounted for, because it is not part of the
+normal keyboard matrix.  Instead, it is connected directly to the
+microprocessor NMI line, and causes an NMI interrupt whenever it is
+pressed."

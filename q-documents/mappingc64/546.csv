@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $E6B6?","address              $E6B6
+Advance the Cursor
+
+This routine advances the cursor, and provides for such things as
+scrolling at the end of the screen, and inserting a blank line in
+order to add another physical line to the current logical line."

@@ -1,0 +1,30 @@
+
+
+
+address              $D401          FREHI1
+Voice 1 Frequency Control (high byte)
+
+Location Range: 54274-54275 ($D402-$D403)
+Voice 1 Pulse Waveform Width Control
+
+As you will see below under the description of the Control Register at
+54276 ($D404), you can select one of four different waveforms for the
+output of each voice.  If the pulse waveform is selected, these
+registers must be set to establish the pulse width.
+
+The pulse width has a 12-bit resolution, being made up of the value in
+the first register and the value in the lower nybble of the second
+register.  The pulse width determines the duty cycle, or proportion of
+the time that the rectangular wave will stay at the high part of the
+cycle.
+
+The following formula shows the relationship between the value in the
+Pulse Width Register and the proportion of time that the wave stays at
+the high part of the cycle:
+
+PULSE WIDTH=(REGISTER VALUE/40.95)%
+
+The possible range of the register values (0-4095) covers the range of
+the duty cycles from 0 to 100 percent in 4096 steps.  Changing the
+pulse width will vastly change the sound created with the pulse
+waveform.

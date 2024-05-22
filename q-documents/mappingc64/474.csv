@@ -1,0 +1,27 @@
+question,answer
+"What is the purpose of the memory location at address $DD01?","address              $DD01          CI2PRB
+Data Port B
+
+Bit 0:  RS-232 data input (SIN)/ Pin C of User Port
+Bit 1:  RS-232 request to send (RTS)/ Pin D of User Port
+Bit 2:  RS-232 data terminal ready (DTR)/ Pin E of User Port
+Bit 3:  RS-232 ring indicator (RI)/ Pin F of User Port
+Bit 4:  RS-232 carrier detect (DCD)/ Pin H of User Port
+Bit 5:  Pin J of User Port
+Bit 6:  RS-232 clear to send (CTS)/ Pin K of User Port
+        Toggle or pulse data output for Timer A
+Bit 7:  RS-232 data set ready (DSR)/ Pin L of User Port
+        Toggle or pulse data output for Timer B
+
+Location Range: 56578-56579 ($DD02-$DD03)
+CIA #2 Data Direction Registers A and B
+
+These Data Direction registers control the direction of data flow over
+Data Ports A and B.  For more details on the operation of these
+registers, see the entry for the CIA #1 Data Direction Registers at
+56322 ($DC02).
+
+The default setting for Data Direction Register A is 63 (all bits
+except 6 and 7 are outputs), and for Data Direction Register B the
+default setting is 0 (all inputs).  Bits 1 and 2 of Port B are changed
+to output when the RS-232 device is opened."

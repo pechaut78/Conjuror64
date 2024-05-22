@@ -1,0 +1,11 @@
+question,answer
+"What is the resolution of the VIC's screen area?","The resolution of the VIC's screen area is 320 by 200 pixels."
+"What is the absolute resolution of the VIC including the border area?","The absolute resolution of the VIC including the border area is 504x312 pixels."
+"What is the purpose of understanding the VIC's timing?","The purpose of understanding the VIC's timing is to reprogram the VIC while it is drawing the picture."
+"How often is an 8 pixel character drawn on the VIC?","An 8 pixel character is drawn every system clock cycle, which is about 1 million times a second."
+"How many cycles does it take to draw a line on the VIC?","It takes 63 cycles to draw a line on the VIC."
+"What is the significance of the pixel clock and system clocks?","The significance of the pixel clock and system clocks is that an 8 pixel character is drawn every system clock cycle."
+"What is the purpose of cycle-exact timing of assembly code?","The purpose of cycle-exact timing of assembly code is to switch a VIC register at an 8 pixel granularity."
+"What is the horizontal resolution of the VIC including the border area?","The horizontal resolution of the VIC including the border area is 504 pixels."
+"What is the vertical resolution of the VIC including the border area?","The vertical resolution of the VIC including the border area is 312 pixels."
+"What is the significance of the H blank area and V blank area?","The significance of the H blank area and V blank area is that they are specified by analog TV standards."

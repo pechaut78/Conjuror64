@@ -1,0 +1,21 @@
+
+
+C64 Basic:
+• Programs can be stored on cassette tape or floppy disks with
+the SAVE command, and retrieved later by using the LOAD
+command.
+• The SAVE command stores a copy of the program in mem
+ory onto tape or disk. The program is still in memory after
+a SAVE command is used.
+• The syntax for SAVE is the keyword SAVE followed by a
+character string which is called a filename. When saving to
+the disk drive, a comma and device number of 8 (a second
+drive would be device number 9) must be put after the
+character string.
+• The LOAD command copies a program from tape or disk
+back into the computer's memory. Any program that was
+already in memory is erased when the new program is
+loaded.
+• The syntax for LOAD is the keyword LOAD, the filename, 
+and a comma and device number of 8 if the disk drive is 
+being used.

@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of memory in a microprocessor?","Memory in a microprocessor is used to store and retrieve data. It is divided into individual cells, each containing 8 bits, the same size as the accumulator and X and Y registers. Memory locations can be selected through a process called addressing memory."
+"What is addressing memory?","Addressing memory is the process of selecting a specific memory location by assigning a number or address to each location."
+"How many memory cells can be addressed with 8 bits in a microprocessor?","With 8 bits, a microprocessor can address 256 memory cells, from 0 to 255."
+"Why is 16 bits used for addressing memory in a microprocessor?","16 bits are used for addressing memory in a microprocessor in order to access a larger number of memory locations, specifically 65536."
+"What is a 16-bit address bus?","A 16-bit address bus refers to the microprocessor's ability to address 65536 memory locations using 16 bits."
+"How many memory locations can the 6510 microprocessor address?","The 6510 microprocessor can address 65536 memory locations."
+"What is the significance of the program counter in a microprocessor?","The program counter contains a 16-bit value that is the address of the next instruction that the microprocessor is to fetch from memory and execute."
+"How many different instructions can a microprocessor have?","A microprocessor can have a maximum of 256 different instructions, although not all codes have a meaning on the 6510 and fewer than 256 instructions exist."
+"Are BASIC commands included as instructions in a microprocessor?","No, BASIC commands are not included as instructions in a microprocessor."
+"What is a kilobyte or IK in a microprocessor?","210 = 1024 bytes is called a kilobyte or IK in a microprocessor, and it is used for ease of handling."

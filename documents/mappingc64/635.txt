@@ -1,0 +1,8 @@
+
+
+
+address              $F82E
+Check Cassette Switch
+
+This subroutine is used to check if a button on the recorder has been
+pressed.

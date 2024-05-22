@@ -1,0 +1,25 @@
+C64 Basic:
+• A program line is placed in memory exactly as it was typed,
+except when abbreviations or leading spaces are used. The
+question mark is converted to the keyword PRINT before the
+line is stored in memory. Only one leading space is put after
+the line number, no matter how many were typed when the
+line was entered.
+• A program line can be changed by typing the same line
+number and new statements. The RETURN key must be
+pressed to enter the line.
+• A program line also can be changed by using the editing
+keys to move the cursor to a listing of the line to be
+changed so that the INSerT and DELete keys may be used to
+modify the line. After the changes have been made, the
+RETURN key must be pressed while the cursor is still on
+the line.
+• A line is deleted by typing only the line number and press
+ing RETURN.
+• To retrieve a line that has been deleted, the line must be re-
+typed unless a listing of the line is still on the screen. In that
+case, the cursor can be moved on top of the line, and the
+RETURN key pressed. The line will again be part of the
+program.
+• Even though a line may appear on the screen, it is not nec
+essarily a part of the program.

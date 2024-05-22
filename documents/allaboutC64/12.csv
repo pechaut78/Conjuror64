@@ -1,0 +1,11 @@
+question,answer
+"What is the keyword used to begin a conditional statement in C64 Basic?","The keyword used to begin a conditional statement in C64 Basic is 'IF'."
+"What is the keyword used to end a conditional statement in C64 Basic?","The keyword used to end a conditional statement in C64 Basic is 'THEN'."
+"What is the syntax for the IF-THEN statement in C64 Basic?","The syntax for the IF-THEN statement in C64 Basic is: 'IF' followed by a conditional expression, 'THEN' and a statement."
+"What can the conditional expression in an IF-THEN statement consist of in C64 Basic?","The conditional expression in an IF-THEN statement can consist of any mathematical phrase in C64 Basic."
+"What happens if the statement after the THEN in an IF-THEN statement is executed in C64 Basic?","If the conditional expression in an IF-THEN statement is true, the statement after the THEN is executed in C64 Basic."
+"What happens if the conditional expression in an IF-THEN statement is false in C64 Basic?","If the conditional expression in an IF-THEN statement is false, nothing happens in C64 Basic and all of the statements on the rest of the line are ignored."
+"What error message is displayed if a THEN keyword is missing in an IF-THEN statement in C64 Basic?","If a THEN keyword is missing in an IF-THEN statement in C64 Basic, a SYNTAX ERROR is displayed."
+"What is the role of the IF-THEN statement in C64 Basic?","The IF-THEN statement in C64 Basic controls the execution of statements within a line."
+"Is it possible to include another IF-THEN statement as a statement after the THEN in C64 Basic?","Yes, it is possible to include another IF-THEN statement as a statement after the THEN in C64 Basic."
+"What is the effect of including a statement after the THEN in an IF-THEN statement in C64 Basic?","The statement after the THEN in an IF-THEN statement in C64 Basic is executed if the conditional expression is true."

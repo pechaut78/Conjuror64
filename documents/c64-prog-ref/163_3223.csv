@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the TAX instruction?","The opcode for the TAX instruction is AA, which is used to transfer the contents of the accumulator to index X."
+"what is the addressing mode for the TAX instruction?","The addressing mode for the TAX instruction is implied, which means that the instruction does not require any additional memory locations or registers to be specified."
+"how many bytes does the TAX instruction occupy in memory?","The TAX instruction occupies only 1 byte in memory, making it a very compact and efficient instruction."
+"how many cycles does the TAX instruction take to execute?","The TAX instruction takes 2 cycles to execute, which is relatively fast compared to other instructions that may take more cycles to complete."
+"what is the purpose of the TAX instruction?","The purpose of the TAX instruction is to transfer the contents of the accumulator to index X, which allows the programmer to use the value in the accumulator as an index for accessing memory locations."
+"can the TAX instruction be used with other addressing modes?","No, the TAX instruction can only be used with the implied addressing mode, which means that it does not require any additional memory locations or registers to be specified."
+"in what situation would you use the TAX instruction?","You would use the TAX instruction when you need to use the value in the accumulator as an index to access a memory location, such as when implementing a loop or accessing an array."
+"how does the TAX instruction affect the flags?","The TAX instruction does not affect the flags in any way, it simply transfers the contents of the accumulator to index X."
+"is the TAX instruction a load instruction or a store instruction?","The TAX instruction is a load instruction, as it loads the value from the accumulator into index X."
+"can the TAX instruction be used to transfer data between two registers?","No, the TAX instruction can only be used to transfer the contents of the accumulator to index X, it cannot be used to transfer data between two registers."

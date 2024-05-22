@@ -1,0 +1,5 @@
+
+
+
+address           $96            SYNO
+Cassette Block Synchronization Number

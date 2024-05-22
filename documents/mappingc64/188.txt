@@ -1,0 +1,5 @@
+
+
+
+address      $31A-$31B      IOPEN
+Vector to Kernal OPEN Routine (Currently at 62282 ($F34A))

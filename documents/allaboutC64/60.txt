@@ -1,0 +1,10 @@
+
+
+C64 Basic:
+• The only restrictions in dimensioning an array are that the
+computer must have enough unused memory to hold the
+array, and the array must not be dimensioned already.
+• Trying to DIM an array when there is insufficient memory
+causes the OUT OF MEMORY error.
+• Attempting to DIM an array that is already dimensioned
+causes the REDIM'D ARRAY error.

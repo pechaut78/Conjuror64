@@ -1,0 +1,13 @@
+question,answer
+"What is the purpose of the memory location at address $62-$65?","address        $62-$65        FACHO
+Floating Point Accumulator #1: Mantissa
+
+The most significant digit can be assumed to be a 1 (remember that the
+range of the mantissa is from 1 to 1.99999...) when a floating point
+number is stored to a variable.  The first bit is used for the sign of
+the number, and the other 31 bits of the four-byte mantissa hold the
+other significant digits.
+
+The first two bytes (98-99, $62-$63) of this location will hold the
+signed integer result of a floating point to integer conversion, in
+high-byte, low- byte order."

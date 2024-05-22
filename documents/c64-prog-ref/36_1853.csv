@@ -1,0 +1,11 @@
+question,answer
+"what is the capability of the VIC-II chip in regards to sprites?","The VIC-II chip has the ability to expand a sprite in the vertical direction, the horizontal direction, or both at once, making each dot in the sprite twice as wide or twice as tall, effectively making the sprite bigger."
+"how does expanding a sprite affect its resolution?","Expanding a sprite does not actually increase its resolution, it just makes the sprite appear larger, with each dot being twice as wide or twice as tall."
+"what happens to each dot in a sprite when it is expanded?","When a sprite is expanded, each dot in the sprite becomes twice as wide or twice as tall, making the sprite appear larger."
+"in what ways can a sprite be expanded using the VIC-II chip?","A sprite can be expanded in the vertical direction, the horizontal direction, or both at once using the VIC-II chip."
+"what is the effect of expanding a sprite on its size?","Expanding a sprite makes it appear larger, with each dot being twice as wide or twice as tall, but the resolution remains the same."
+"can a sprite be expanded in multiple directions at once?","Yes, a sprite can be expanded in both the vertical and horizontal directions at the same time using the VIC-II chip."
+"how does the VIC-II chip handle sprite expansion?","The VIC-II chip can expand a sprite in the vertical direction, the horizontal direction, or both at once, making each dot in the sprite twice as wide or twice as tall."
+"is the resolution of a sprite affected when it is expanded?","No, the resolution of a sprite remains the same when it is expanded, it just appears larger."
+"what is the result of expanding a sprite in the vertical direction?","Expanding a sprite in the vertical direction makes each dot in the sprite twice as tall, making the sprite appear larger."
+"in what way does expanding a sprite affect its appearance?","Expanding a sprite makes it appear larger, with each dot being twice as wide or twice as tall, giving it a bigger appearance."

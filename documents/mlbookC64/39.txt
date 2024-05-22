@@ -1,0 +1,11 @@
+
+INX
+The contents of the X register are incremented by one.
+The N and Z flags are set according to the result. InINY
+This is the corresponding instruction to increment the Y
+register. It affects the flags in the same way.
+BASIC, this instruction can be formulated:
+X=X+1
+If a value of $FF is incremented, the overflow is not
+taken into account (the carry flag is not set). The
+contents are set to zero, and the Z flag is set.

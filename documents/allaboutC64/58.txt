@@ -1,0 +1,17 @@
+
+C64 Basic:
+
+• The dimension of an array is the maximum subscript number
+that can be used for the array.
+• When a program first starts running, or the CLR statement is
+executed, all arrays are undimensioned. When an
+undimensioned array is accessed for the first time, the array
+is dimensioned to a default of 10.
+• For those occasions when an array needs to be dimensioned
+larger than 10, the DIM statement must be used.
+• To save memory, an array can also be DIMensioned smaller
+than 11.
+• The syntax for the DIM statement is the keyword DIM fol
+lowed by an array name list. Each array name in the list
+must be followed by parentheses containing the dimension
+numbers.

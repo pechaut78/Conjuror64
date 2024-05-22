@@ -1,0 +1,12 @@
+
+
+
+page 2 and 3
+
+This area is used to store important information for the Operating
+System and BASIC.  It contains vectors to certain BASIC routines as
+well as Operating System Kernal routines.  Registers for RS-232 serial
+I/O are located here.  Buffer space is allocated in this area for tape
+I/O, BASIC text input, and the keyboard queue.  In addition, there are
+a number of Operating System variables and pointers here which the
+programmer can utilize.

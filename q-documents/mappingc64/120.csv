@@ -1,0 +1,19 @@
+question,answer
+"What is the purpose of the memory location at address $D8?","address          $D8            INSRT
+Flag: Insert Mode (Any Number Greater Than 0 Is the Number of Inserts)
+
+When the INST key is pressed, the screen editor shifts the line to the
+right, allocates another physical line to the logical line if
+necessary (and possible), updates the screen line length in 213 ($D5),
+and adjusts the screen line link table at 217 ($D9).  This location is
+used to keep track of the number of spaces that has been opened up in
+this way.
+
+Until the spaces that have been opened up are filled, the editor acts
+as if in quote mode (see location 212 ($D4), the quote mode flag).
+This means that cursor control characters that are normally
+nonprinting will leave a printed equivalent on the screen when
+entered, instead of having their normal effect on cursor movement,
+etc.  The only difference between insert and quote mode is that the
+DELETE key will leave a printed equivalent in insert mode, while the
+INST key will insert spaces as normal."

@@ -1,0 +1,11 @@
+question,answer
+"What happens when you try to DIM an array when there is not enough unused memory in C64 Basic?","Trying to DIM an array when there is insufficient memory in C64 Basic will cause the OUT OF MEMORY error."
+"What is the REDIM'D ARRAY error in C64 Basic?","The REDIM'D ARRAY error in C64 Basic is caused by attempting to DIM an array that is already dimensioned."
+"What are the restrictions for dimensioning an array in C64 Basic?","The only restrictions for dimensioning an array in C64 Basic are that the computer must have enough unused memory to hold the array, and the array must not be dimensioned already."
+"What is the effect of attempting to DIM an array that is already dimensioned in C64 Basic?","Attempting to DIM an array that is already dimensioned in C64 Basic will cause the REDIM'D ARRAY error."
+"What error is caused by trying to DIM an array when there is insufficient memory in C64 Basic?","The OUT OF MEMORY error is caused by trying to DIM an array when there is insufficient memory in C64 Basic."
+"What is the result of trying to DIM an array when there is not enough unused memory in C64 Basic?","Trying to DIM an array when there is not enough unused memory in C64 Basic will result in the OUT OF MEMORY error."
+"What happens when you attempt to DIM an array that is already dimensioned in C64 Basic?","Attempting to DIM an array that is already dimensioned in C64 Basic will result in the REDIM'D ARRAY error."
+"What is the error message displayed when trying to DIM an array when there is insufficient memory in C64 Basic?","The OUT OF MEMORY error message is displayed when trying to DIM an array when there is insufficient memory in C64 Basic."
+"What is the impact of attempting to DIM an array that is already dimensioned in C64 Basic?","Attempting to DIM an array that is already dimensioned in C64 Basic will result in the REDIM'D ARRAY error, which indicates that the array is already dimensioned."
+"What are the two conditions that must be met for dimensioning an array in C64 Basic?","The two conditions that must be met for dimensioning an array in C64 Basic are that the computer must have enough unused memory to hold the array, and the array must not be dimensioned already."

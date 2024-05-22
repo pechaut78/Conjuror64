@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $A69C?","address         $A69C          LIST
+Perform LIST
+
+This routine saves the range of lines to be printed in pointers at
+95-96 ($5F- $60) and 20-21 ($14-$15), and then prints them out,
+translating any tokens back to their ASCII equivalent."

@@ -1,0 +1,15 @@
+
+C64 Basic:
+The first character in a variable name must be alphabetic.
+• If a variable name contains more than one character, the
+others must be alphanumeric (a letter of the alphabet or a
+digit). Spaces are also allowed, but do not count as charac
+ters, so it is suggested that they not be used.
+• A variable name can be any length, but only the first two
+characters are significant.
+• It is best to choose a variable name which reflects the pur
+pose and use of the variable.
+• The computer will generate a SYNTAX ERROR if a variable
+name contains a reserved word.
+• There are two reserved variables: ST and TI. They cannot be
+assigned.

@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the raster register?","The raster register is a dual-function register that returns the lower 8 bits of the current raster position when read, and can be written to latch a value for an internal raster compare, triggering a raster interrupt when the current raster matches the written value."
+"what is the location of the MSB-RC8 bit in the raster register?","The MSB-RC8 bit is located in register 17 ($11), which is separate from the lower 8 bits of the raster position in register 18 ($12)."
+"what is the purpose of interrogating the raster register?","Interrogating the raster register allows for implementing display changes outside the visible area, thereby preventing display flicker."
+"what is the visible display window in terms of raster lines?","The visible display window is from raster 51 through raster 251 ($033-$0FB)."
+"what happens when the current raster matches the written value in the raster register?","When the current raster matches the written value, the raster interrupt latch is set."
+"what is the effect of writing to the raster bits in the raster register?","Writing to the raster bits, including RC8, latches the value for an internal raster compare, which triggers a raster interrupt when the current raster matches the written value."
+"what is the address of the raster register?","The address of the raster register is $12 (18 decimal)."
+"what is the significance of register 17 ($11) in relation to the raster register?","Register 17 ($11) contains the MSB-RC8 bit, which is part of the raster position and is separate from the lower 8 bits in the raster register."
+"how can display flicker be prevented when making display changes?","Display flicker can be prevented by interrogating the raster register to implement display changes outside the visible area."
+"what is the purpose of the internal raster compare in the raster register?","The internal raster compare in the raster register is used to trigger a raster interrupt when the current raster matches the written value, allowing for precise timing of display changes."

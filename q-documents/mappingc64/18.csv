@@ -1,0 +1,49 @@
+question,answer
+"What is the purpose of the memory location at address $13?","address            $13            CHANNL
+Current I/O Channel (CMD Logical File) Number
+
+Whenever BASIC inputs or outputs data, it looks here to determine
+which I/O device is currently active for the purpose of prompting or
+output control.  It uses location 184 ($B8) for purposes of deciding
+what device actually to put input from or output to.
+
+When the default input device (number 0, the keyboard) or output
+device (number 3, the display screen) is used, the value here will be
+a zero, and the format of prompting and output will be the standard
+screen output format.
+
+When another device is used, the logical file number (CMD channel
+number) will be placed here.  This lets the system now that it may
+have to make some subtle changes in the way it performs the I/O
+operation.  For example, if TAB is used with the PRINT command, cursor
+right characters are used if the device PRINTed to is the screen.
+Otherwise, spaces are output when the number here is other than zero
+(the assumption being that you can't tab a printer like you can the
+screen).
+
+Likewise, the ? prompt for INPUT is suppressed if the file number here
+is nonzero, as is the EXTRA IGNORED message, and input of a carriage
+return by itself is ignored, rather than being treated as a null
+string ('').  Therefore, by OPENing the screen as a device, and
+issuing the CMD statement, you can force the suppression of the ?
+prompt, and the other effects above.
+
+CMD places the new output file number here, and calls the Kernal to
+open the device for output, leaving it LISTENing for output (such as
+the READY prompt, which is diverted to the new device).
+
+Many routines reset this location and UNLISTEN the device, defeating
+the CMD and once again sending the output to the screen.  If an error
+message has to be displayed, for example, this location will be reset
+and the message will be displayed on the screen.  GET, GET#, INPUT,
+INPUT#, and PRINT# all will reset this location after the I/O is
+completed, effectively redirecting output back to the screen.  PRINT
+and LIST are the only I/O operations that will not undo the CMD.
+
+This location can also be used to fool BASIC into thinking that data
+it is reading from the tape is actually being entered into the
+keyboard in immediate mode.
+
+For a look at a technique that uses a different approach to accomplish
+the same thing for disk or tape users, see location 512 ($200), the
+keyboard buffer."

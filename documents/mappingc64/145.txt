@@ -1,0 +1,14 @@
+
+
+
+address          $28A           RPTFLAG
+Flag: Which Keys Will Repeat?
+
+The flag at this location is used to determine whether to continue
+printing a character as long as its key is held down, or whether to
+wait until the key is let up before allowing it to be printed again.
+The default value here is 0, which allows only the cursor movement
+keys, insert/delete key, and the space bar to repeat.
+
+POKEing this location with 128 ($80) will make all keys repeating,
+while a value of 64 ($40) will disable all keys from repeating.

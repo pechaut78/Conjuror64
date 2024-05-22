@@ -1,0 +1,11 @@
+question,answer
+"what is the device number for the cassette device in the open statement?","The device number for the cassette device in the open statement is 1."
+"what are the possible values for the number parameter when using the screen device in the open statement?","The possible values for the number parameter when using the screen device in the open statement are 0 and 1."
+"what is the purpose of the string parameter when using the cassette device in the open statement?","The purpose of the string parameter when using the cassette device in the open statement is to specify the file name."
+"what is the difference between using number 0 and number 1 when using the printer device in the open statement?","The difference between using number 0 and number 1 when using the printer device in the open statement is that 0 is used for upper case and graphics, while 1 is used for upper and lower case."
+"what is the purpose of the number 15 when using the disk device in the open statement?","The purpose of the number 15 when using the disk device in the open statement is to specify a command channel."
+"what are the possible device numbers for the disk device in the open statement?","The possible device numbers for the disk device in the open statement are 8 to 11."
+"what is the purpose of the number 2 when using the modem device in the open statement?","The purpose of the number 2 when using the modem device in the open statement is not specified, as the number parameter is not used with the modem device."
+"what is the purpose of the string parameter when using the disk device in the open statement?","The purpose of the string parameter when using the disk device in the open statement is to specify the drive number, file name, file type, and read/write status."
+"what is the difference between using number 0 and number 1 when using the cassette device in the open statement?","The difference between using number 0 and number 1 when using the cassette device in the open statement is that 0 is used for input, while 1 is used for output."
+"what is the purpose of the number 2 when using the cassette device in the open statement?","The purpose of the number 2 when using the cassette device in the open statement is to specify output with EOT (end of tape)."

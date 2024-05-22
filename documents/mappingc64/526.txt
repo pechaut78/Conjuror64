@@ -1,0 +1,15 @@
+
+
+
+address              $E460          WORDS
+Power-Up Messages
+
+The ASCII text of the start-up messages "**** COMMODORE 64 BASIC V2
+****" and "BYTES FREE" is stored here.
+
+Location Range: 58551-58623 ($E4B7-E4FF)
+Patches Added to Later Kernal Versions
+
+This area contains code that was not found in the original version of
+the Kernal.  These additions were made to fix some bugs and to
+increase Kernal compatibility between U.S. and European 64s.

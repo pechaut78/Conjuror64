@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $DD09?","address              $DD09          TO2SEC
+Time of Day Clock Seconds
+
+Bits 0-3:  Second digit of Time of Day seconds (BCD)
+Bits 4-6:  First digit of Time of Day seconds (BCD)
+Bit 7:  Unused"

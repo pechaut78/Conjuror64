@@ -1,0 +1,9 @@
+
+To change border and background color on C64:
+Two useful screen colour locations are 53280, which 
+controls the border colour, and 53281 which controls the 
+screen background colour. 
+
+For example, POKE 53280,0 : POKE 53281,0 sets the 
+whole screen background to black (which we find much 
+more restful!). 

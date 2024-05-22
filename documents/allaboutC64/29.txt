@@ -1,0 +1,19 @@
+
+C64 Basic:
+• The READ statement is the one that does all the action. The
+variables are assigned when the READ is executed. The
+DATA statement just supplies values for READ. The computer ignores the DATA statement unless a READ statement
+is being executed. For that reason, DATA statements are
+often placed at the end of a program, out of the way of
+other statements.
+• The first value in a DATA statement is the first one that is
+assigned to a variable. The computer remembers which
+values in a DATA statement have already been read. If more
+than one READ statement is executed, the second READ will
+start with the next value not yet read.
+• If there is more than one DATA statement, reading will start
+with the one which has the lowest line number. Once all of
+the values in that statement have been read, future values
+will be read from the next DATA statement.
+• An attempt to assign more values than are available in
+DATA statements will result in the OUT OF DATA error.

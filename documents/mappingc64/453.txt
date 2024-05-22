@@ -1,0 +1,87 @@
+
+
+
+address        $D800-$DBFF
+Color RAM
+
+The normal Commodore 64 text graphics system uses a screen RAM area to
+keep track of the character shapes that are to be displayed.  But
+since each character can be displayed in any of 16 foreground colors,
+there must also be a parallel area which keeps track of the foreground
+color.  This 1024-byte area is used for that purpose (actually, since
+there are only 1000 screen positions, only 1000 byte actually affect
+screen color).
+
+These 1000 bytes each control the foreground color of one character,
+with the first byte controlling the foreground color of the character
+in the upper- left corner, and subsequent bytes controlling the
+characters to the right and below that character.
+
+Because only four bits are needed to represent the 16 colors
+available, only the low four bits of each Color RAM location are
+connected (this is why they are sometimes referred to as Color RAM
+Nybbles).  Writing to the high bits will not affect them, and these
+four bits will usually return a random value when read (a small number
+of 64s return a constant value).
+
+Therefore, in order to read Color RAM correctly, you must mask out the
+top bits by using the logical AND function.  In BASIC, you can read
+the first byte of Color RAM with the statement CR=PEEK(55296)AND15.
+This will always return a color value between 0 and 15.  These color
+values correspond to the following colors:
+
+ 0 = BLACK
+ 1 = WHITE
+ 2 = RED
+ 3 = CYAN (LIGHT BLUE-GREEN)
+ 4 = PURPLE
+ 5 = GREEN
+ 6 = BLUE
+ 7 = YELLOW
+ 8 = ORANGE
+ 9 = BROWN
+10 = LIGHT RED
+11 = DARK GRAY
+12 = MEDIUM GRAY
+13 = LIGHT GREEN
+14 = LIGHT BLUE
+15 = LIGHT GRAY
+
+Color mapping affords a convenient method of changing the color of the
+text display without changing the letters.  By POKEing the appropriate
+section of Color RAM, you can change the color of a whole section of
+text on the screen without affecting the content of the text.  You can
+even use this method to make letters disappear by changing their
+foreground colors to match the background (or by changing the
+background to match the foreground), and later make them reappear by
+changing them back, or by changing the background to a contrasting
+color.  An interesting example program which changes Color RAM quickly
+in BASIC can be found under the entry for 648 ($288).
+
+A change in the Operating System causes newer 64s to set all of the
+Color RAM locations to the same value as the current background color
+whenever the screen is cleared.  Therefore, POKEing character codes to
+the Screen RAM area will not appear to have any effect, because the
+letters will be the same color as the background.  This can easily be
+turned to your advantage, however, because it means that all you have
+to do to set all of Color RAM to a particular value is to set the
+background color to that value (using the register at 53281 ($D021)),
+clear the screen, and return the background color in the desired
+value.
+
+The various garphics modes use this area differently than does the
+regular text mode.  In high-resolution bitmap mode, this area is not
+used at all, but in multicolor bitmap mode it is used to determine the
+color of the 11 bit-pair for a given 8 by 8 dot area.
+
+In multicolor text mode, only the lowest three bits are used, so only
+colors 0-7 may be selected.  The fourth bit is used to determine
+whether a character will be displayed in regular text or multicolor
+text.  Characters with a color value over 7 are displayed as
+multicolor characters, with the color of the 11 bit-pair determined by
+the color value minus 8.  Characters with a color value under 8 are
+displayed normally.
+
+It should be noted that unlike the Screen RAM area, which can be moved
+to any RAM location, the Color RAM area is fixed, and will function
+normally regardless of where screen memory is located.

@@ -1,0 +1,11 @@
+
+
+
+address         $B1BF          AYINT
+Convert a Floating Point Number to a Signed Integer
+
+This subroutine first checks to make sure that the number in the
+Floating Point Accumulator is between 32767 and -32768.  If it is not,
+an ILLEGAL QUANTITY error results.  If it is, the routine converts it
+to a 16-bit signed integer with the high byte in location 100 ($64),
+and the low byte in location 101 ($65).

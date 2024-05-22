@@ -1,0 +1,18 @@
+
+
+
+address       $316-$317      CBINV
+Vector: BRK Instruction Interrupt
+
+This vector points to the address of the routine which will be
+executed anytime that a 6510 BRK instruction (00) is encountered.
+
+The default value points to a routine that calls several of the Kernal
+initialization routines such as RESTOR, IOINIT and part of CINT, and
+then jumps through the BASIC warm start vector at 40962.  This is the
+same routine that is used when the STOP and RESTORE keys are pressed
+simultaneously, and is currently located at 65126 ($Fe66).
+
+A machine language monitor program will usually change this vector to
+point to the monitor warm start address, so that break points may be
+set that will return control to the monitor for debugging purposes.

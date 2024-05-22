@@ -1,0 +1,40 @@
+
+
+Other Peripherals
+The 1541 is the necessary companion to a C64. It can
+be replaced by a 1570 (1541 with fast bus routines for
+the C128) or a 1571 (double-sided 1570), since they
+include a 1541 compatibility mode. The 3.5" Commodore 1581, which supports 880 KB per disk, can
+hardly be a replacement for a 1541, because most applications contain their own floppy speeders that
+make lots of assumptions on the exact on-disk format. For GEOS, it can be very useful though.
+Creative Micro Devices sold and continues to sell a
+line of hard drives that have an IEC connection but
+contain a 3.5" SCSI drive inside. Although they have a
+6502 CPU built in and allow code execution on their
+CPU, they are not compatible enough to replace a
+1541 either.
+Several memory extension cartridges exist for the
+expansion port of the C64: The Commodore REU
+(contains a DMA chip that transfers data between
+itself and main RAM), as well as the third party
+GeoRAM (maps a block to the $DE00-$DFFF area)
+and RAMLink (battery backed, designed as RAM
+disk).
+Freezer cartridges like the Action Replay and the Final Cartridge were not only popular because they
+could dump all of memory to disk and thus copy certain copy-protected games, but also because they featured floppy speeders that disabled the original routines directly at startup time, without any effort from
+the user.
+In the mid 90s, CPU speeders for the expansion port
+became popular. The 8 MHz Flash 8 is rare today, but
+many enthusiasts have a SuperCPU, which replaces
+the onboard CPU with a 20 MHz 65C816, which has a
+native 16 bit mode that can address up to 16 MB or
+RAM. There are a few applications and games that
+require a SuperCPU. The speedup of GEOS with a
+SuperCPU is significant.
+In the 2000s, the enthusiast scene created all kinds of
+peripherals, like ethernet interfaces, IDE interfaces
+and SD card readers.
+And there are not only peripherals: In 2004, the
+Commodore 64 DTV, a reimplemented C64 appeared
+in the form of a Joystick. The device is fairly compatible and can be extended to connect to a keyboard and
+a 1541.

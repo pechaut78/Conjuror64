@@ -1,0 +1,11 @@
+
+
+
+address              $E2B4          TAN
+Perform TAN
+
+This routine evaluates the tangent of the number in FAC1 (which
+represents the angle in radians) by dividing its sine by its cosine.
+
+Location Range: 58080-58125 ($E2E0-$E30D)
+Table of Constants for Evaluation of SIN, COS, and TAN

@@ -1,0 +1,12 @@
+
+
+
+address              $E4B7
+35 Unused Bytes (all have the value of 170 ($AA)
+
+Locaiton Range: 58586-65535 ($E4DA-$FFFF)
+Kernal I/O Routines
+
+After the conclusion of BASIC comes the part of this ROM which can be
+considered the Kernal proper.  This part contains all of the vectored
+routines found in the jump table starting at 65409 ($FF81).

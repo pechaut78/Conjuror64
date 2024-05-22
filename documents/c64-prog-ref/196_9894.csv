@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the RAMTAS function in a Commodore 64 program","The purpose of the RAMTAS function is to perform a RAM test and set the top and bottom of memory pointers accordingly, it also clears specific memory locations, allocates the cassette buffer, and sets the screen base to $0400."
+"What is the call address of the RAMTAS function in hexadecimal","The call address of the RAMTAS function is $FF87."
+"What is the decimal equivalent of the call address of the RAMTAS function","The decimal equivalent of the call address of the RAMTAS function is 65415."
+"What are the communication registers used by the RAMTAS function","The communication registers used by the RAMTAS function are A, X, and Y."
+"What is the stack requirement for the RAMTAS function","The stack requirement for the RAMTAS function is 2."
+"What registers are affected by the RAMTAS function","The registers affected by the RAMTAS function are A, X, and Y."
+"In what context is the RAMTAS function normally called","The RAMTAS function is normally called as part of the initialization process of a Commodore 64 program cartridge."
+"What memory locations are cleared by the RAMTAS function","The RAMTAS function clears memory locations $0000 to $0101 and $0200 to $03FF."
+"What is the screen base set to by the RAMTAS function","The screen base is set to $0400 by the RAMTAS function."
+"How do you call the RAMTAS function in assembly code","You call the RAMTAS function in assembly code using the instruction JSR RAMTAS."

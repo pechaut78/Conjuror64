@@ -1,0 +1,10 @@
+
+
+
+address         $BFB4          NEGOP
+Perform NOT and >
+
+This negates the Floating Point Accumulator by exclusive ORing the
+sign byte with a constant of 255 ($FF).  Zero is left unchanged.  The
+results of this command follow rom the formula NOT X=-(X+1).
+Therefore, if you NOT a tatement that is true (-1), you get 0 (false).

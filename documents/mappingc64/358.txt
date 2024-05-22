@@ -1,0 +1,9 @@
+
+
+
+address         $BCCC          INT
+Perform INT
+
+This routine removes the fractional part of a floating point number by
+calling the routine above to change it to an integer, and then
+changing the integer back to floating point format.

@@ -1,0 +1,13 @@
+
+C64 Basic:
+• Subscripts must be positive integer numbers. Subscript
+numbering starts with 0. A negative subscript produces
+an ILLEGAL QUANTITY error. A subscript that is too large
+produces the BAD SUBSCRIPT error. The default maximum
+subscript is 10.
+• The values in an array are usually related to each other in
+some way, and are ordered according to the subscripts.
+The default values are the number 0 and the null string.
+• The advantage of using an array is that it makes it easier to
+manage a lot of values. Because subscripts can be variables,
+arrays are ideal for use in loops.

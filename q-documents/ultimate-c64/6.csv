@@ -1,0 +1,39 @@
+question,answer
+"What are the different addressing modes supported by instructions in a 6510 processor?","Addressing Modes
+Each instruction supports one or more addressing
+modes. Common instructions like LDA (load accumulator) support more addressing modes than less
+common ones (BIT).
+• The immediate addressing mode is indicated with
+a # sign: LDA #$17 loads the immediate value of
+$17 into the accumulator.
+• Absolute addressing specifies a 16 bit address as an
+operand: LDA $0314 loads from the memory address $0314.
+• Zero page addressing is an optimized version of
+absolute addressing: LDA $02 will read from address $0002 in memory, but the instruction can be
+encoded more tightly, and execution is faster.
+• Absolute-X-indexed addressing reads from a specified address, to which the contents of the X register
+is added. LDA $0200,X reads from the address
+$020A, in case X is $0A. This allows reading from
+tables.
+• Absolute-Y-indexed is the same thing, but with the
+Y register.
+• Zero-Page-X-indexed is an optimized version of
+Absolute-X-indexed. LDA $F0,X reads from the
+Xth location in a table stored starting at $00F0 in
+memory. Note that zero page addresses will wrap
+around, so $F0 + $10 = $00.
+• Zero-Page-Y-indexed is the same thing, but with
+the Y register.
+• Zero-Page-X-indexed-indirect adds X to a specified
+zero page address, reads a 16 bit pointer from the
+resulting address and finally accesses memory at
+that address. So LDA ($80,X) will read from an
+address specified by the array of pointers at $0080
+and the index X into the array. This addressing
+mode is rarely used.
+• Zero-Page-indirect-Y-indexed treats two consecutive bytes in zero page as an address and adds Y to
+the address. LDA ($14),Y will read from $E020, if
+the address stored at $14/$15 is $E000 and Y is
+$20. This addressing mode is the most convenient
+way to work with pointers, as no register can hold
+16 bits."

@@ -1,0 +1,10 @@
+
+
+
+address              $D023          BGCOL2
+Background Color 2
+
+This register sets the color for the 10 bit-pair of multicolor
+character graphics, and the background color for characters habing
+screen codes 128-191 in extended background color text mode.  The
+default color value is 2 (red).

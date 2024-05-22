@@ -1,0 +1,11 @@
+question,answer
+"What is the command to use when the drive light flashes?","When the drive light flashes, you must use the command PRINT DS$ to find out what the error is. This command displays a message whether there is an error or not, and if there was an error, it clears it from disk memory and turns off the error light on the disk drive."
+"What does the PRINT DS$ command do?","The PRINT DS$ command displays a message whether there is an error or not, and if there was an error, it clears it from disk memory and turns off the error light on the disk drive."
+"What is the purpose of the error-checking subroutine?","The error-checking subroutine reads the error channel and puts the results into the reserved variables DS and DS$. They are updated automatically by BASIC. The subroutine prints the error message and halts the program if the error status is anything else except 0 or 1."
+"What do error numbers 0 and 1 indicate?","Error number 0 means everything is OK, and error number 1 tells how many files were erased by a SCRATCH command."
+"How do you access the error-checking subroutine?","You access the error-checking subroutine with the BASIC GOSUB command, either in immediate mode or from a program."
+"What happens when the error status is anything else except 0 or 1?","If the error status is anything else except 0 or 1, line 60000 prints the error message and halts the program."
+"What is the purpose of the RETURN statement in line 60010?","The RETURN statement in line 60010 will jump back to immediate mode or the next statement in your program, whichever is appropriate."
+"What are the reserved variables updated by the error-checking subroutine?","The reserved variables updated by the error-checking subroutine are DS and DS$."
+"How do you include error checking in your programs?","You can include error checking in your programs by adding the error-checking subroutine to your code, which reads the error channel and puts the results into the reserved variables DS and DS$."
+"What is the source code for the error-checking subroutine?","The source code for the error-checking subroutine is: 59990 REM READ ERROR CHANNEL, 60000 IF DS>1 THEN PRINT DS$: STOP, 60010 RETURN."

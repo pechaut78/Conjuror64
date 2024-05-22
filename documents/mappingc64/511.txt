@@ -1,0 +1,5 @@
+
+
+
+address              $E2E0          PI2
+The Five-Byte Floating Point Representation of the Constant PI/2

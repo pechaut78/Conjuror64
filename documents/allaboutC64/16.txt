@@ -1,0 +1,14 @@
+
+C64 Basic:
+• When a program line is placed in memory for deferred exe
+cution, the cursor moves to the next line, but no READY
+prompt is printed.
+• The LIST command is used to print every line currently in
+the program.
+• Line numbers must be integers in the range from 0 to 63999.
+Any other numbers cause the SYNTAX ERROR to be
+printed.
+• The line number is used only to indicate the position in the
+program in which a line is to be placed. A line numbered 10
+is not necessarily the tenth line in a program.
+• The computer ignores unused line numbers.

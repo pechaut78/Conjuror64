@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $AF2B?","address         $AF2B          ISVAR
+Get the Value of a Variable"

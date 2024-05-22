@@ -1,0 +1,9 @@
+question,answer
+"What is one way to avoid the problem of GOTO forming an infinite loop in C64 Basic?","The combination of IF-THEN with GOTO is one way to achieve this."
+"What is a variable used in a LET statement called when it is used to count how many times a loop is executed?","A variable used in this manner is called a counting variable."
+"How can a program control exactly how many times the loop is executed in C64 Basic?","By basing conditional logic on a counting variable, you can have a program control exactly how many times the loop is executed."
+"What is one use of the value of a counting variable within a loop in C64 Basic?","Sometimes the value of a counting variable is used within a loop, so that something is done differently every time a loop is executed."
+"What are the two short forms to the IF-THEN and GOTO combination in C64 Basic?","The two short forms to the IF-THEN and GOTO combination in C64 Basic are making the GOTO optional, and making the THEN optional."
+"What is the problem that can occur if GOTO is used without conditional logic in C64 Basic?","The problem that can occur if GOTO is used without conditional logic in C64 Basic is that it can form an infinite loop."
+"What is one advantage of using a counting variable in C64 Basic?","One advantage of using a counting variable in C64 Basic is that it allows for conditional logic to be used, which can prevent the formation of infinite loops."
+"What is the purpose of the LET statement in C64 Basic?","The purpose of the LET statement in C64 Basic is to assign a value to a variable, such as a counting variable used in a loop."

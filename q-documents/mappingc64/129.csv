@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $100-$10A?","address       $100-$10A
+Work Area for Floating Point to String Conversions
+
+Used in the conversion of numbers to the equivalent ASCII digits, and
+in scanning strings."

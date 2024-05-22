@@ -1,0 +1,11 @@
+question,answer
+"What is the limitation of horizontal resolution in sprite multi-color mode?","In sprite multi-color mode, the horizontal resolution is cut in half, resulting in 12 pairs of dots instead of 24 dots across the sprite."
+"How many different colors can be used in each sprite in multi-color mode?","Up to 4 different colors can be used in each sprite in multi-color mode."
+"What is a BIT PAIR in sprite multi-color mode?","A BIT PAIR is a pair of dots in a sprite, which is treated as a single dot when choosing colors for the dots in the sprite."
+"What is the bit pair value to turn ON the transparent color in a sprite?","The bit pair value to turn ON the transparent color in a sprite is 00."
+"What is the bit pair value to turn ON the SPRITE MULTI-COLOR REGISTER #0 in a sprite?","The bit pair value to turn ON the SPRITE MULTI-COLOR REGISTER #0 in a sprite is 01."
+"What is the bit pair value to turn ON the SPRITE COLOR REGISTER in a sprite?","The bit pair value to turn ON the SPRITE COLOR REGISTER in a sprite is 10."
+"What is the bit pair value to turn ON the SPRITE MULTI-COLOR REGISTER #1 in a sprite?","The bit pair value to turn ON the SPRITE MULTI-COLOR REGISTER #1 in a sprite is 11."
+"What is the significance of the value 10 in sprite multi-color mode?","The value 10 represents the sprite foreground color in sprite multi-color mode."
+"What is the significance of the value 11 in sprite multi-color mode?","The value 11 represents the character foreground color in sprite multi-color mode."
+"How do you think the sprite multi-color mode affects the overall graphics quality of a C64 game?","The sprite multi-color mode allows for more colorful and detailed sprites, but at the cost of reduced horizontal resolution, which may affect the overall graphics quality of a C64 game."

@@ -1,0 +1,9 @@
+
+
+
+address              $E30E          ATN
+Perform ATN
+
+The arc tangent of the number in FAC1 (which represents the angle in
+radians) is evaluated using the 12-term series of operations from the
+constant table which follows.  The answer is left in FAC1.

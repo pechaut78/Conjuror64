@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $4E-$4F?","address         $4E-$4F        DEFPNT
+Pointer to the Current FN Descriptor
+
+During function definition (DEF FN) this location is used as a pointer
+to the descriptor that is created.  During function execution (FN) it
+points to the FN descriptor in which the evaluation results should be
+saved."

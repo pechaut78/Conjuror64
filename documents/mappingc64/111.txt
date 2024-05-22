@@ -1,0 +1,12 @@
+
+
+
+address           $CE            GDBLN
+Character Under Cursor
+
+The cursor is formed by printing the inverse of the character that
+occupies the cursor position.  If that characters is the letter A, for
+example, the flashing cursor merely alternates between printing an A
+and a reverse-A.  This location keeps track of the normal screen code
+of the character that is located at the cursor position, so that it
+may be restored when the cursor moves on.

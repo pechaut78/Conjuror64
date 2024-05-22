@@ -1,0 +1,8 @@
+
+
+
+address              $E6A8
+Return from Outputting a Character to the Screen
+
+This is the common exit point for the screen portion of the CHROUT
+routine.

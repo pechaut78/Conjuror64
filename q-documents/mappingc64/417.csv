@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $D01A?","address              $D01A          SP3COL
+Sprite 3 Color Register (the default color value is 4, purple)"

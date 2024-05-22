@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $D7?","address           $D7
+Temporary Storage Area for ASCII Value of Last Character Printed
+
+The ASCII value of the last character printed to the screen is held
+here temporarily."

@@ -1,0 +1,5 @@
+
+
+
+address         $BC0F          MOVEF
+Copy FAC1 to FAC2 Without Rounding

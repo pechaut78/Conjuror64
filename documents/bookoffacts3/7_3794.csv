@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of initializing the drive in C64 Basic?","Initializing the drive in C64 Basic returns the drive to the same state as when it was first turned on, which can help resolve error conditions and unresponsiveness."
+"What command is used to initialize the drive in C64 Basic?","The command to initialize the drive in C64 Basic is OPENISAIS,"!"
+"What is the expected outcome of initializing the drive in C64 Basic?","After initializing the drive in C64 Basic, it should be returned to its default state, which can help resolve any error conditions and unresponsiveness."
+"What is the cause of unresponsiveness in the disk drive that can be resolved by initializing it in C64 Basic?","The unresponsiveness in the disk drive can be caused by an error condition, which can be resolved by initializing the drive in C64 Basic."
+"What is the syntax for initializing the drive in C64 Basic?","The syntax for initializing the drive in C64 Basic is OPENISAIS,"!"
+"What is the effect of pressing the return key after entering the OPENISAIS command in C64 Basic?","Pressing the return key after entering the OPENISAIS command in C64 Basic executes the command and initializes the drive."
+"What is the state of the drive after it has been initialized in C64 Basic?","After the drive has been initialized in C64 Basic, it is returned to the same state as when it was first turned on."
+"What is the role of the exclamation mark in the OPENISAIS command in C64 Basic?","The exclamation mark in the OPENISAIS command in C64 Basic is used to indicate that the command should be executed immediately."
+"What is the significance of the ISA in the OPENISAIS command in C64 Basic?","The ISA in the OPENISAIS command in C64 Basic stands for Input/Output User Port, which is the device number for the disk drive."
+"What is the difference between turning on the drive and initializing it in C64 Basic?","Turning on the drive sets it to its default state, while initializing it in C64 Basic returns it to the same state as when it was first turned on, which can help resolve error conditions and unresponsiveness."

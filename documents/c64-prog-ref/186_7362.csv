@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the CLRCHN function?","The purpose of the CLRCHN function is to clear all open channels and restore the I/O channels to their original default values, usually called after opening other I/O channels and using them for input/output operations."
+"what is the call address of the CLRCHN function?","The call address of the CLRCHN function is $FFCC (hex) or 65484 (decimal)."
+"what registers are affected by the CLRCHN function?","The CLRCHN function affects the A and X registers."
+"what is the default input device after calling the CLRCHN function?","The default input device after calling the CLRCHN function is 0, which is the keyboard."
+"what is the default output device after calling the CLRCHN function?","The default output device after calling the CLRCHN function is 3, which is the Commodore 64 screen."
+"what signal is sent to clear the input channel if one of the channels to be closed is to the serial port?","An UNTALK signal is sent to clear the input channel if one of the channels to be closed is to the serial port."
+"what is sent to clear the output channel if one of the channels to be closed is to the serial port?","An UNLISTEN is sent to clear the output channel if one of the channels to be closed is to the serial port."
+"how can multiple devices receive the same data from the Commodore 64 at the same time?","By not calling the CLRCHN routine and leaving listener(s) active on the serial bus, multiple devices can receive the same data from the Commodore 64 at the same time."
+"what is an example of taking advantage of not calling the CLRCHN routine?","One way to take advantage of not calling the CLRCHN routine is to command the printer to TALK and the disk to LISTEN, allowing direct printing of a disk file."
+"how is the CLRCHN routine typically called?","The CLRCHN routine is typically called using the JSR instruction, for example: JSR CLRCHN>"

@@ -1,0 +1,13 @@
+
+
+
+address        $AD1E          NEXT
+Perform NEXT
+
+NEXT is executed by finding the appropriate FOR data on the stack,
+adding the STEP value to the FOR variable, and comparing the result to
+the TO value.  If the loop is done, the stack entries for that FOR
+command are removed from the stack.  If the loop hasn't reached its
+limit, the pointers to the current statement and text character are
+updated from the FOR stack entry, which causes execution to continue
+with the statement after the FOR statement.

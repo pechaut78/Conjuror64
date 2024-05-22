@@ -1,0 +1,9 @@
+
+
+
+address         $B9BC          FONE
+Floating Point Constant with a Value of 1
+
+This five-byte floating point representation of the number 1 is stored
+here for use by the floating point routines.  It is also used as the
+default STEP value for the FOR statement.

@@ -1,0 +1,13 @@
+
+
+address        $19-$21        TEMPST
+Descriptor Stack for Temporary Strings
+
+The temporary string descriptor stack contains information about
+temporary strings which hve not yet been assigned to a string
+variable.  An examples of such a temporary string is the literal
+string "HELLO" in the statement PRINT "HELLO".
+
+Each three-byte descriptor in this stack contains the length of the
+string, and its starting and ending locations, expresses as
+displacements within the BASIC storage area.

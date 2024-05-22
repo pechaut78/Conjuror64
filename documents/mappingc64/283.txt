@@ -1,0 +1,8 @@
+
+
+
+address         $B185          FINPTR
+Return the Address of the Variable That Was Found or Created
+
+This routine stores the address of the variable that was found or
+created by the preceding routines in a pointer at 71-72 ($47-$48).

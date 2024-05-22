@@ -1,0 +1,11 @@
+question,answer
+"How does the VIC support scrolling?","The VIC supports hardware X and Y scrolling by 0 to 7 pixels."
+"What happens when the horizontal shift register is set to 4?","The 40th column is half visible and another column left of the first column is half-visible."
+"What is the purpose of switching the screen to 38 column mode?","It is possible to switch the screen to 38 column mode, i.e. the whole screen is a little narrower, and more border is shown on the left and on the right."
+"How can the screen be switched vertically?","The screen can also be switched from 25 to 24 lines the same way."
+"What is the advantage of switching to 38 column mode?","More border is shown on the left and on the right."
+"What is the maximum amount of pixels the VIC can scroll horizontally?","The VIC supports hardware X and Y scrolling by 0 to 7 pixels."
+"What happens to the screen when it is switched to 38 column mode?","The whole screen is a little narrower, and more border is shown on the left and on the right."
+"How does the VIC handle vertical scrolling?","The screen can also be switched from 25 to 24 lines the same way."
+"What is the purpose of the horizontal shift register?","It is used to set the horizontal scrolling, e.g. to 4."
+"What is the result of setting the horizontal shift register to 4?","The 40th column is half visible and another column left of the first column is half-visible."

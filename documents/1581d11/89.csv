@@ -1,0 +1,11 @@
+question,answer
+"What is the address space of the 6502 processor?","The 6502 processor has an address space from $0000-$FFFF, allowing direct access to any location within this range using memory commands."
+"What is the function of the MEMORY-READ command?","The MEMORY-READ command allows you to select which byte or bytes to read from disk memory into the computer, equivalent to the BASIC PEEK() function but reading from the disk's memory instead of the computer's memory."
+"What is the equivalent BASIC function of the MEMORY-READ command?","The MEMORY-READ command is equivalent to the BASIC PEEK() function, but reads from the disk's memory instead of the computer's memory."
+"Can you spell out the MEMORY-READ command in full?","No, unlike other disk commands, the MEMORY-READ command cannot be spelled out in full, and the correct abbreviation is M-R."
+"What is the purpose of memory commands?","Memory commands, such as MEMORY-READ, allow you to access and manipulate memory locations within the 6502's address space."
+"How does the MEMORY-READ command interact with the computer's memory?","The MEMORY-READ command reads from the disk's memory instead of the computer's memory, allowing you to access and retrieve data from the disk."
+"What is the significance of the $0000-$FFFF address range?","The $0000-$FFFF address range is the address space of the 6502 processor, allowing direct access to any location within this range using memory commands."
+"Can you use the MEMORY-READ command to read from the computer's memory?","No, the MEMORY-READ command reads from the disk's memory, not the computer's memory."
+"What is the benefit of using the MEMORY-READ command?","The MEMORY-READ command allows you to selectively read specific bytes or bytes from the disk's memory, providing precise control over data retrieval."
+"What is the relationship between the MEMORY-READ command and disk memory?","The MEMORY-READ command allows you to read from the disk's memory, providing access to data stored on the disk."

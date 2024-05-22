@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the CHRIN function?","The purpose of the CHRIN function is to get a character from the input channel, which can be the keyboard or another device set up as the input channel by the KERNAL routine CHKIN."
+"What is the call address of the CHRIN function?","The call address of the CHRIN function is $FFCF (hex) or 65487 (decimal)."
+"What is the role of the CHKIN routine in relation to CHRIN?","The CHKIN routine is used to define another input channel, and if it has not been used, then all data is expected from the keyboard."
+"How does the CHRIN function handle input from the keyboard?","The CHRIN function handles input from the keyboard by turning on the cursor, which blinks until a carriage return is typed, and storing all characters on the line (up to 88 characters) in the BASIC input buffer."
+"What is returned in the accumulator after calling the CHRIN function?","The data byte is returned in the accumulator after calling the CHRIN function."
+"What is the purpose of the preparatory routines OPEN and CHKIN?","The preparatory routines OPEN and CHKIN are used to set up a channel as the input channel before calling the CHRIN function."
+"How can you retrieve multiple characters from the keyboard using the CHRIN function?","You can retrieve multiple characters from the keyboard by calling the CHRIN function once for each character, and storing each character in a buffer."
+"What is the significance of the carriage return character in relation to the CHRIN function?","The carriage return character marks the end of a line of input, and when it is retrieved, the entire line has been processed, and the next call to CHRIN will start a new line of input."
+"How can you use the CHRIN function to read data from a device other than the keyboard?","You can use the CHRIN function to read data from a device other than the keyboard by using the KERNAL OPEN and CHKIN routines to set up the device as the input channel."
+"What is the stack requirement for the CHRIN function?","The stack requirement for the CHRIN function is 7+."

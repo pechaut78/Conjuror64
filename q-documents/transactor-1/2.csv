@@ -1,0 +1,22 @@
+question,answer
+"How does the processor handle interrupts, including break or software interrupts, and what are the implications for user-modified code and I/O chip setup?","INTERRUPT STRUCTURE
+Interrupts (including Break or Software Interrupts) are handled
+by software polling.
+When the processor recognizes an interrupt it vectors through
+FFFE, FFFF in ROM to a routine that first inspects the processor
+hardware (IRQ line low).
+If it was caused by a Break instruction, a Jump Indirect is
+executed through locations 02IB, C. If by a hardware interrupt then
+a Jump Indirect is taken through locations 0219, A.
+These locations being in RAM may be user-modified to point to
+extra user code ahead of normal interrupt processing.
+Note, however that the IRQ pointer is used by the cassette
+routines and should be restored to standard values before the cassette
+Save or Load functions are called.
+Various sections of the I/O chips can be set up to cause inter
+rupts through the IRQ line.
+Example: POKE 59470,2 enables a negative edge on the
+user port CAL line to cause an interrupt.
+However, have your code set up to handle it when it happens!
+Also note that each pass through the regular interrupt code
+increments the time register."

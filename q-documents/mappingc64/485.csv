@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $DD0C?","address              $DD0C          CI2SDR
+Serial Data Port
+
+The CIA chip has an on-chip serial port, which allows you to send or
+receive a byte of data one bit at a time, with the most significant
+bit (Bit 7) being transferred first.  For more information about its
+use, see the entry for location 56332 ($DC0C).  The 64's Operating
+System does not use this facility."

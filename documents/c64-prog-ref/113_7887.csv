@@ -1,0 +1,11 @@
+question,answer
+"What is the opcode for the ADC instruction in immediate addressing mode?","The opcode for the ADC instruction in immediate addressing mode is 69."
+"What is the number of bytes required for the ADC instruction in zero page addressing mode?","The number of bytes required for the ADC instruction in zero page addressing mode is 2."
+"How many cycles does the ADC instruction take in absolute addressing mode?","The ADC instruction takes 4 cycles in absolute addressing mode."
+"What is the opcode for the ADC instruction in zero page addressing mode?","The opcode for the ADC instruction in zero page addressing mode is 65."
+"How does the ADC instruction behave when the page boundary is crossed in absolute,X addressing mode?","When the page boundary is crossed in absolute,X addressing mode, the ADC instruction takes an additional cycle, making it a total of 5 cycles."
+"What is the difference in the number of bytes required for the ADC instruction in immediate and zero page addressing modes?","The ADC instruction requires 2 bytes in both immediate and zero page addressing modes, so there is no difference."
+"In which addressing modes does the ADC instruction require 3 bytes?","The ADC instruction requires 3 bytes in absolute and absolute,X addressing modes."
+"What is the opcode for the ADC instruction in (indirect,X) addressing mode?","The opcode for the ADC instruction in (indirect,X) addressing mode is 61."
+"How many cycles does the ADC instruction take in (indirect),Y addressing mode?","The ADC instruction takes 5 cycles in (indirect),Y addressing mode, but an additional cycle is added if the page boundary is crossed."
+"What is the opcode for the ADC instruction in absolute,Y addressing mode?","The opcode for the ADC instruction in absolute,Y addressing mode is 79."

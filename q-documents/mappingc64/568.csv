@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $EB79?","address              $EB79
+Keyboard Decode Table Vectors
+
+This table contains the two-byte addresses of the four keyboard decode
+tables in low-byte, high-byte format."

@@ -1,0 +1,20 @@
+
+
+
+C64 Basic
+• If your program enters an infinite loop, execution can be
+aborted at any time by pressing the RUN/STOP key.
+• The GOTO statement makes the computer jump to the
+beginning of the new line. Execution starts with the first
+statement on the line.
+• You should not put statements after a GOTO on the same
+line, because they will never be executed.
+The syntax for this statement is the keyword GOTO and a
+line number. A number must be used; variables and
+expressions are not valid.
+• An alternate spelling for the name of the GOTO statement is
+GO TO.
+• If an attempt is made to GOTO a line which is not in the j_J
+program, or if a variable is used instead of a line number,
+the UNDEFD STATEMENT error will occur, which means
+that the referenced line is undefined.

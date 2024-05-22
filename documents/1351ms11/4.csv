@@ -1,0 +1,11 @@
+question,answer
+"How does the mouse operate in joystick mode when it is moved?","When the mouse is moved in joystick mode, the appropriate joystick lines are activated for a period of 20 ms, similar to pushing the joystick in the appropriate direction."
+"What is the function of the left mouse button in joystick mode?","The left mouse button is mapped to what would be the fire button on a joystick, allowing the user to simulate a joystick input."
+"How does the right mouse button interact with the SID POTX register in joystick mode?","The right mouse button is mapped into the SID POTX register, such that when the button is depressed, the SID POTX register will contain a number less than $80, and when the button is not depressed, the SID POTX register will contain a number greater than or equal to $80."
+"What precautions should be taken when working with the SID registers in joystick mode?","See the section on SID Register Cautions for important information on how to safely interact with the SID registers in joystick mode."
+"How should most applications interface with the joystick mode?","For most applications, the interface for joystick mode should be similar to any joystick driver, with the right button being ignored."
+"What is the duration of the joystick line activation when the mouse is moved in joystick mode?","The joystick lines are activated for a period of 20 ms when the mouse is moved in joystick mode."
+"How does the mouse movement in joystick mode relate to joystick input?","Moving the mouse in joystick mode is like pushing the joystick in the appropriate direction."
+"What is the purpose of the right mouse button in joystick mode?","The right mouse button is used to interact with the SID POTX register in joystick mode."
+"In what way is the left mouse button similar to a joystick input in joystick mode?","The left mouse button is mapped to what would be the fire button on a joystick, allowing the user to simulate a joystick input."
+"How does the state of the right mouse button affect the SID POTX register in joystick mode?","The state of the right mouse button determines the value in the SID POTX register, with a value less than $80 indicating the button is depressed and a value greater than or equal to $80 indicating the button is not depressed."

@@ -1,0 +1,49 @@
+
+
+
+address      $200-$258      BUF
+BASIC Line Editor Input Buffer
+
+When you are in the BASIC immediate mode, and type in a line of
+characters, those characters are stored here.  BASIC then scans the
+string of characters, converts the text to tokenized BASIC program
+format, and either stores it or executes the line, depending on
+whether or not it started with a line number.
+
+This same area is also used to store data which is received via the
+INPUT and GET commands.  This explains why these commands are illegal
+in immediate mode--they must use the same buffer space that is
+required by the immediate mode statement itself.
+
+It is interesting to note that this buffer is 89 bytes long.  The
+screen editor will allow a maximum of only 80 characters in a program
+line, with one extra byte required for a 0 character, marking the end
+of the line.  This presumable is a carry over from the VIC, which
+allows a line length of up to 88 characters.  The last eight bytes of
+this buffer are therefore normally not used, and can be considered
+free space for the programmer to use as he or she sees fit.
+
+Location Range: 601-630 ($259-$276)
+Tables for File Numbers, Device Numbers, and Secondary Addresses
+
+All three of the tables here have room for ten one-byte entries, each
+of which represents an active Input/Output file.  When an I/O file is
+opened, its logical file number is put into the table at 601 ($259),
+the device number of the I/O device is put into the table at 611
+($263), and its secondary address is put into the table at 621 ($26D).
+
+The entry for any particular I/O file will occupy the same position in
+each of the three tables.  That is, if logical file number 2 is the
+third entry in the file number table, its secondary address will be
+the third entry in the secondary address table, and its corresponding
+device number will occupy the third spot in the device number table.
+
+Every time a device is OPENed, its information is added as the last
+entry in each table, and the value at location 152 ($98) is increased
+by one, indicating that there is one more active I/O file.  When a
+device is CLOSEd, the value at location 152 is decreased by one, and
+all entries that occupy a position in the tables that is higher than
+that of the closed device are moved down one position, thus
+eliminating the entry for that device.  The Kernal CLALL routine
+(62255, $F32F) simply zeros location 152, which has the effect of
+emptying these tables.

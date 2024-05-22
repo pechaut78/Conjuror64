@@ -1,0 +1,19 @@
+question,answer
+"What is the purpose of the memory location at address $A742?","address         $A742          FOR
+Perform FOR
+
+FOR is performed mostly by saving the needed information for the NEXT
+part of the command on the stack (see the entry for 256 ($100) for
+details).  This includes the TO termination value, so if the upper
+limit is a variable, the current value of the variable will be stored,
+and you cannot end the loop early by decreasing the value of the TO
+variable within the loop (although you can end it early by increasing
+the value of the FOR variable within the loop).
+
+Also, since the TO expression is evaluated only once, at the time FOR
+is performed, a statement such as FOR I=1 TO I+100 is valid.  The
+terminating value is not checked until NEXT is executed, so the loop
+statements always execute at least once.  The variable used by FOR
+must be a nonarray floating point variable.  Reusing the same FOR
+variable in a loop that is still active will cause the previous FOR
+loop and all intervening loops to be cancelled."

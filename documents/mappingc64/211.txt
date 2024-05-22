@@ -1,0 +1,17 @@
+
+
+
+address  $A000-$A001
+Cold Start Vector
+
+This vector points to the address of the routine used to initialize
+BASIC.  After the Operating System finishes its power-on activities,
+it enters the BASIC program through this vector.  The most visible
+effect of the BASIC initialization routine is that the screen is
+cleared, and the words:
+
+     **** COMMODORE 64 BASIC V2 ****
+
+are printed along with the BYTES FREE message.  For details of the
+steps taken during the initialization of BASIC, see the entry for
+58260 ($E394), the current cold start entry point.

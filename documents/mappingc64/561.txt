@@ -1,0 +1,8 @@
+
+
+
+address              $EA13
+Set Cursor Blink Timing and Color Memory Address for Print to Screen
+
+This subroutine sets the cursor blink countdown and sets the pointer
+to Color RAM.  It then falls through to the next routine.

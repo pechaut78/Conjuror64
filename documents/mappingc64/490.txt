@@ -1,0 +1,12 @@
+
+
+
+address              $E000
+Continuation of EXP Routine
+
+This routine is split, with part on the BASIC ROM and the other part
+here.  Since the two ROMs do not occupy contiguous memory as on most
+Commodore machines, the BASIC ROM ends with a JMP $E000 instruction.
+Thus, while the BASIC interpreter on the 64 is for the most part the
+same as on the VIC, the addresses for routines in this ROM are
+displaced by three bytes from their location on the VIC.

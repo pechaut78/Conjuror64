@@ -1,0 +1,16 @@
+There is no instruction on the 6510 to increment or
+decrement the accumulator contents.
+
+INC
+This instruction increments the contents of a memory
+location by one. The Z and N flags are again set
+depending on the result. This instruction is different
+from the previous ones in that here the contents of a
+memory location is first read, then incremented by one,
+and then saved again (read - modify - write). The
+commands which you are acquainted with so far either read
+or wrote a memory location, but never both.
+instruction does not alter the contents
+accumulator.
+In pseudo-BASIC, we can formulate this like so:
+POKE M, PEEK(M) + 1

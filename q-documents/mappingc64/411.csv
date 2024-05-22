@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $D024?","address              $D024          BGCOL3
+Background Color 3
+
+This register sets the background color for characters having screen
+codes between 192 and 255 in extended background color text mode.  The
+default color value is 3 (cyan)."

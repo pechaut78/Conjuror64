@@ -1,0 +1,9 @@
+
+
+
+address         $54-$56        JMPER
+Jump to Function Instruction
+
+The first byte is the 6502 JMP instruction ($4C), followed by the
+address of the required function taken from the table at 41042
+($A052).

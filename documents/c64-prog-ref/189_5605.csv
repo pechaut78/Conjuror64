@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the IOINIT function?","The purpose of the IOINIT function is to initialize all input/output devices and routines, typically called as part of the initialization procedure of a Commodore 64 program cartridge."
+"what is the call address of the IOINIT function in hexadecimal?","The call address of the IOINIT function in hexadecimal is $FF84."
+"what is the decimal equivalent of the IOINIT function call address?","The decimal equivalent of the IOINIT function call address is 65412."
+"what preparatory routines are required to be executed before calling the IOINIT function?","There are no preparatory routines required to be executed before calling the IOINIT function."
+"which registers are affected by the IOINIT function?","The IOINIT function affects the A, X, and Y registers."
+"what is the stack requirement for the IOINIT function?","The IOINIT function does not have any stack requirements."
+"what is the purpose of calling the IOINIT function in a Commodore 64 program cartridge?","The purpose of calling the IOINIT function in a Commodore 64 program cartridge is to initialize all input/output devices and routines as part of the initialization procedure."
+"how do you call the IOINIT function in assembly language?","You can call the IOINIT function in assembly language using the JSR instruction, for example: JSR IOINIT>."
+"what type of return values can the IOINIT function return in case of an error?","The IOINIT function can return error values, but the specific type of return values is not specified."
+"why is it important to call the IOINIT function in a Commodore 64 program?","It is important to call the IOINIT function in a Commodore 64 program to ensure that all input/output devices and routines are properly initialized, which is essential for the program to function correctly."

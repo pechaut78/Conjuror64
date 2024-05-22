@@ -1,0 +1,10 @@
+
+
+C64 basic:
+• Variables are independent, so assigning a value to one vari
+able does not affect the values of other variables.
+• There is no reason why two variables can't have the same
+value, even though the variables are independent.
+• A variable keeps its value until it is assigned a new one.
+• A variable can have only one value at a time.
+• Numbers cannot be assigned new values.

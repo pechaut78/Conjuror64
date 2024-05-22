@@ -1,0 +1,11 @@
+question,answer
+"What is the basic process of subtraction in C64 assembly language?","Subtraction in C64 assembly language is performed by subtracting the contents of the addressed memory location from the accumulator, with the result being left in the accumulator."
+"What is the result of an underflow in C64 assembly language subtraction?","An underflow in C64 assembly language subtraction results in the result being less than zero, which is indicated by the carry flag being cleared."
+"What is the role of the carry flag in C64 assembly language subtraction?","The carry flag in C64 assembly language subtraction indicates an underflow by being cleared, and no underflow by being set."
+"How is the carry flag used prior to subtraction in C64 assembly language?","The carry flag must be set prior to subtraction (or the first byte of multi-precision subtraction) in C64 assembly language."
+"Can an overflow occur in C64 assembly language subtraction?","No, an overflow cannot occur in C64 assembly language subtraction, only an underflow."
+"What is the difference between overflow and underflow in C64 assembly language subtraction?","In C64 assembly language subtraction, overflow and underflow have opposite meanings. An overflow cannot occur, only an underflow, which is indicated by the carry flag being cleared."
+"What is the result of a C64 assembly language subtraction if the carry flag is set?","If the carry flag is set in C64 assembly language subtraction, it means that no underflow has occurred."
+"What is the maximum result that can be represented in 8-bits in C64 assembly language subtraction?","The maximum result that can be represented in 8-bits in C64 assembly language subtraction is determined by the architecture of the accumulator."
+"What is the impact of the addressed memory location's contents on the result of C64 assembly language subtraction?","The contents of the addressed memory location in C64 assembly language subtraction is subtracted from the accumulator, and thus directly impacts the result of the subtraction."
+"What is the data type of the result of C64 assembly language subtraction?","The result of C64 assembly language subtraction is left in the accumulator, which is a data type determined by the architecture of the accumulator."

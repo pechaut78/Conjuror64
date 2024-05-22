@@ -1,0 +1,11 @@
+question,answer
+"what is the total number of memory locations on the Commodore 64?","There are 65536 memory locations on the Commodore 64, and you can PEEK values from and POKE values to most of them, with the exception of Read Only Memory areas like the BASIC interpreter at address 40960 to 49151."
+"how do you switch to lower case using POKE?","You can switch to lower case by using the command POKE 53272, 23, which is a very useful feature for making text-based programs look neater."
+"what is the address of the top left corner of the screen?","The top left corner of the screen is located at address 1024 decimal."
+"how do you print on the second space of the next line down from the top left corner?","You can print on the second space of the next line down from the top left corner by using the command POKE 1065, value, where value is the desired character to be printed."
+"what is the formula to calculate a screen location using X and Y coordinates?","The formula to calculate a screen location using X and Y coordinates is LOCATION=Y*40+X+1024, where X must remain in the range to 39 and Y must remain in the range to 24."
+"what is the range of values for the X coordinate in the screen location formula?","The X coordinate in the screen location formula must remain in the range to 39."
+"what is the range of values for the Y coordinate in the screen location formula?","The Y coordinate in the screen location formula must remain in the range to 24."
+"what is the purpose of using POKE 53272, 21?","The purpose of using POKE 53272, 21 is to switch back to upper case, which is a useful feature for making text-based programs look neater."
+"can you POKE new values into Read Only Memory areas?","No, it is not possible to POKE new values into Read Only Memory areas like the BASIC interpreter at address 40960 to 49151."
+"what happens when you POKE values into most addresses?","POKEing values into most addresses is usually not particularly rewarding, as the machine just hangs."

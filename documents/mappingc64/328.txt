@@ -1,0 +1,8 @@
+
+
+
+address         $B86A          FADDT
+Perform BASIC's Addition Operation
+
+This routine adds the contents of FAC1 and FAC2 and stores the results
+in FAC1.

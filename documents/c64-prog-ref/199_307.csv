@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the RESTOR function in the Commodore 64 KERNAL?","The purpose of the RESTOR function is to restore the default values of all system vectors used in KERNAL and BASIC routines and interrupts, which can be found in the Memory Map."
+"What is the call address of the RESTOR function?","The call address of the RESTOR function is $FF8A (hex) or 65418 (decimal)."
+"What is the effect of calling the RESTOR function on the system vectors?","Calling the RESTOR function restores the default values of all system vectors used in KERNAL and BASIC routines and interrupts, as specified in the Memory Map."
+"How many bytes are required on the stack when calling the RESTOR function?","The RESTOR function requires 2 bytes on the stack."
+"Which registers are affected when calling the RESTOR function?","The RESTOR function affects the A, X, and Y registers."
+"What is the relationship between the RESTOR function and the KERNAL VECTOR routine?","The KERNAL VECTOR routine is used to read and alter individual system vectors, whereas the RESTOR function restores the default values of all system vectors."
+"How do you use the RESTOR function?","To use the RESTOR function, simply call it using the JSR instruction, as shown in the example: JSR RESTOR."
+"What is the significance of the Memory Map in relation to the RESTOR function?","The Memory Map provides the default vector contents that are restored by the RESTOR function."
+"Can the RESTOR function return an error?","No, the RESTOR function does not return an error."
+"What is the preparatory routine required to call the RESTOR function?","There are no preparatory routines required to call the RESTOR function."

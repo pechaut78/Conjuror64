@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the JSR instruction?","The opcode for the JSR instruction is 20, which is used to jump to a new location while saving the return address."
+"what is the addressing mode for the JSR instruction?","The addressing mode for the JSR instruction is Absolute, which means the instruction uses a 16-bit address to specify the target location."
+"how many bytes does the JSR instruction occupy in memory?","The JSR instruction occupies 3 bytes in memory, which includes the opcode and the 16-bit address of the target location."
+"how many cycles does the JSR instruction take to execute?","The JSR instruction takes 6 cycles to execute, which includes the time it takes to fetch the instruction, decode it, and execute the jump."
+"what is the purpose of the JSR instruction?","The purpose of the JSR instruction is to jump to a new location in the program while saving the return address on the stack, allowing the program to return to the original location after executing the subroutine."
+"what is the assembly language form of the JSR instruction?","The assembly language form of the JSR instruction is 'JSR Oper', where 'Oper' is the 16-bit address of the target location."
+"what happens to the return address when the JSR instruction is executed?","When the JSR instruction is executed, the return address is saved on the stack, allowing the program to return to the original location after executing the subroutine."
+"can the JSR instruction be used to call a subroutine?","Yes, the JSR instruction can be used to call a subroutine by jumping to the starting address of the subroutine and saving the return address on the stack."
+"what is the difference between the JSR instruction and the JMP instruction?","The main difference between the JSR instruction and the JMP instruction is that the JSR instruction saves the return address on the stack, while the JMP instruction does not, allowing the program to return to the original location after executing the subroutine."
+"how does the JSR instruction affect the program counter?","The JSR instruction changes the program counter to point to the new location specified in the instruction, allowing the program to execute the code at that location."

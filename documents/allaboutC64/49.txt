@@ -1,0 +1,19 @@
+
+C64 Basic:
+• The syntax for the NEXT statement is the keyword NEXT
+and an optional variable list.
+• The FOR statement assigns the counting variable its initial
+value, and makes the computer remember the end and step
+values for the loop.
+• The NEXT statement makes sure that if it includes a variable
+name, the name matches the variable in the most recent FOR
+statement. If there is a mismatch, the NEXT WITHOUT FOR
+error message is printed. Otherwise, it adds the step value to
+the counting variable, checks if the counting variable is still
+in the range specified in the FOR statement, and if so, causes
+execution to jump to the first statement after the correspond
+ing FOR statement. When that loop is finished, the NEXT
+statement checks for more variables in its variable list. If
+there is another one, the whole procedure is repeated for
+that loop. When there are no more variables, execution
+proceeds to the statement after NEXT.

@@ -1,0 +1,6 @@
+CLEARING THE SCREEN - Holding the RUN/STOP key down and
+then pressing the RESTORE key will clear the screen. This will not
+destroy the program currently in memory, by typing the word LIST
+your program will be displayed again. You will find that this technique
+is useful when editing your programs. This procedure can be used to
+clear the display before using the command NEW.

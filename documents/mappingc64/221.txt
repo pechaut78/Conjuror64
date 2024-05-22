@@ -1,0 +1,8 @@
+
+address   $A408-$A434    REASON
+Check for Space in Memory
+
+This is the subroutine that checks to see if there is enough space in
+free memory for proposed additions such as new lines of program text.
+If not, it calls for garbage collection, and if this still does not
+produce enough space, an OUT OF MEMORY error is issued.

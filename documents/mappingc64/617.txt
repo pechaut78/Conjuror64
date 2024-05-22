@@ -1,0 +1,15 @@
+
+
+
+address              $F333          CLRCHN
+Restore Current Input and Output Devices to the Default Devices
+
+This is a documented Kernal Routine which can be entered at location
+65484 ($FFCC) in the jump table.
+
+The routine jumps through a RAM vector at 802 ($322).  It sets the
+current input device to the keyboard, and the current output device to
+the screen.  Also, if the current input device was formerly a serial
+device, the routine sends it an UNTALK command on the serial bus, and
+if a serial device was formerly the current output device, the routine
+sends it an UNLISTEN command.

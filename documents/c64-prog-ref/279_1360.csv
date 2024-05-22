@@ -1,0 +1,13 @@
+question,answer
+"what is the function of bit 0 in CRA?","1=START TIMER A, 0=STOP TIMER A. This bit is automatically reset when underflow occurs during one-shot mode."
+"what is the function of bit 1 in CRA?","1=TIMER A output appears on PB6, 0=PB6 normal operation."
+"what is the function of bit 2 in CRA?","1=TOGGLE, 0=PULSE"
+"what is the function of bit 3 in CRA?","1=ONE-SHOT, 0=CONTINUOUS"
+"what is the function of bit 4 in CRA?","1=FORCE LOAD (this is a STROBE input, there is no data storage, bit 4 will always read back a zero and writing a zero has no effect)."
+"what is the function of bit 5 in CRA?","1=TIMER A counts positive CNT transitions, 0=TIMER A counts 02 pulses."
+"what is the function of bit 6 in CRA?","1=SERIAL PORT output (CNT sources shift clock), 0=SERIAL PORT input (external shift clock required)."
+"what is the function of bit 7 in CRA?","1=50 Hz clock required on TOD pin for accurate time, 0=60 Hz clock required on TOD pin for accurate time."
+"what is the function of bits 0-4 in CRB?","(Bits CRB0-CRB4 are identical to CRA0-CRA4 for TIMER B with the exception that bit 1 controls the output of TIMER B on PB7)."
+"what is the function of bits 5-6 in CRB?","Bits CRB5 and CRB6 select one of four input modes for TIMER B as: CRB6   CRB5 0      0       TIMER B counts 02 pulses. 0      1       TIMER B counts positive CNT transistions. 1      0       TIMER B counts TIMER A underflow pulses. 1      1       TIMER B counts TIMER A underflow pulses while CNT is high."
+"what is the function of bit 7 in CRB?","1=writing to TOD registers sets ALARM, 0=writing to TOD registers sets TOD clock."
+"what happens to unused register bits?","All unused register bits are unaffected by a write and are forced to zero on a read."

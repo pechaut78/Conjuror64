@@ -1,0 +1,9 @@
+
+
+
+address              $E1D4
+Set Parameters for LOAD, VERIFY, and SAVE
+
+This routine is used in common by LOAD, SAVE, and VERIFY for setting
+the filename, the logical file, device number, and secondary address,
+all of which must be done prior to these operations.

@@ -1,0 +1,32 @@
+question,answer
+"What are the characteristics and capabilities of the VIC's hardware sprites (MOBs) on the Commodore 64?","Sprites
+The VIC has eight hardware sprites (also called
+MOBs, movable objects). Each sprite is 24x21 pixels,
+which is encoded in 63 bytes. Set bits will be drawn in
+the sprite's individual foreground color, and cleared
+bits will be transparent. The index to the sprite's bitmap data in memory is an 8 bit value that is read
+from the last 8 bytes of screen RAM - since the screen
+is only 1000 characters, the last 24 characters of the
+$0400=1024 bytes area would otherwise be unused.
+There is also a multicolor mode for sprites, which
+makes pixels twice as wide and decreases the horizontal resolution to 12 pixels. In this mode, 00 is still
+transparent, and 10 encodes the sprite's individual
+color. The codes 01 and 11 take the color out of the
+sprite multicolor registers ($D025 and $D026),
+which are shared among all sprites.
+Sprites can be positioned at arbitrary pixel positions
+on the screen, and overlap. In this case, sprites with
+lower numbers have priority over sprites with higher
+numbers. Each sprite can either be shown in front or
+behind background pixels. Sprites can be X- and Yexpanded by a factor of two, and collision of two
+sprites or of a sprite and background pixels is detected by hardware: Whenever two non-transparent
+sprite pixels are drawn at the same position on the
+screen, they have collided. Whenever a nonbackground pixel is drawn by the character generator
+at the same position where a non-background pixel of
+a sprite is draw, the sprite has collided with the background. An exception from this rule is the 01 code in
+the character data, which also counts as background.
+This way, a background picture can be constructed
+that does not cause collisions in certain areas. In
+practice, most newer games do not use the hardware
+functionality, but instead test for overlapping sprite
+bounding boxes in software."

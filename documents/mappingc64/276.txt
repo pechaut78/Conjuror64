@@ -1,0 +1,8 @@
+
+
+
+address         $AFE6          OROP
+Perform OR
+
+The OR routine sets the .Y register as a flag, and falls through to
+the AND routine, which also performs OR.

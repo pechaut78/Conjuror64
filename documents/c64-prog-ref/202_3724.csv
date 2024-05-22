@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the SCREEN function?","The purpose of the SCREEN function is to return the format of the screen, providing information such as the number of columns and lines, which can be used to determine the type of machine a program is running on, ensuring upward compatibility of programs."
+"What is the call address of the SCREEN function?","The call address of the SCREEN function is $FFED (hex) or 65517 (decimal)."
+"What communication registers are used by the SCREEN function?","The SCREEN function uses the X and Y registers for communication."
+"What is the stack requirement for the SCREEN function?","The SCREEN function requires a stack of 2 bytes."
+"What registers are affected by the SCREEN function?","The SCREEN function affects the X and Y registers."
+"How can the SCREEN function be used to determine the type of machine a program is running on?","The SCREEN function can be used to determine the type of machine a program is running on by returning the screen format, which varies between machines, allowing the program to adapt accordingly."
+"What is an example of how to use the SCREEN function?","An example of how to use the SCREEN function is to call the routine using JSR SCREEN, and then store the returned values in MAXCOL and MAXROW using STX MAXCOL and STY MAXROW."
+"What is the significance of the SCREEN function in ensuring upward compatibility of programs?","The SCREEN function is significant in ensuring upward compatibility of programs as it allows programs to adapt to different machines and screen formats, ensuring that they can run on various Commodore machines."
+"How does the SCREEN function return the screen format?","The SCREEN function returns the screen format by storing the number of columns in the X register and the number of lines in the Y register."
+"What is the benefit of using the SCREEN function in a program?","The benefit of using the SCREEN function in a program is that it allows the program to dynamically adjust to different screen formats, ensuring that it can run on various machines without modification."

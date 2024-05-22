@@ -1,0 +1,18 @@
+
+
+C64 Basic:
+INPUT NONE A statement that halts program execution,
+waiting for user input. (EXAMPLE: INPUT "WHAT IS YOUR NAME"; A$)
+
+INPUT# I(SHIFTED N)
+from a devivice or file.
+A input/output statement that inputs data
+
+INT NONE
+Returns the interger value of a number.
+
+LEFT$ LE(SHIFTED F)
+A string function that returns a set number of
+characters from the left most end of a string, depending on the value given.
+(EXAM_PLE:A$ = "UPDOWNM:PRINT LEFTS (A$,2) display the
+word UP on the screen)

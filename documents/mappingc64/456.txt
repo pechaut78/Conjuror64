@@ -1,0 +1,23 @@
+
+
+
+address              $DC00          CIAPRA
+Data Port Register A
+
+Bit 0:  Select to read keyboard column 0
+        Read joystick 2 up direction
+Bit 1:  Select to read keyboard column 1
+        Read joystick 2 down direction
+Bit 2:  Select to read keyboard column 2
+        Read joystick 2 left direction
+        Read paddle 1 fire button
+Bit 3:  Select to read keyboard column 3
+        Read joystick 2 right direction
+        Read paddle 2 fire button
+Bit 4:  Select to read keyboard column 4
+        Read joystick 2 fire button
+Bit 5:  Select to read keyboard column 5
+Bit 6:  Select to read keyboard column 6
+        Select to read paddles on Port A or B
+Bit 7:  Select to read keyboard column 7
+        Select to read paddles on Port A or B

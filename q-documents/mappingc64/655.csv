@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $FD02?","address              $FD02
+Check for an Autostart Cartridge
+
+This routine tests for an autostart cartridge by comparing the
+characters at location 32772-6 ($8004-8) to the text below.  The Zero
+flag will be set if they match, and cleared if they don't."

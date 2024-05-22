@@ -1,0 +1,34 @@
+question,answer
+"What is the purpose of the memory location at address $0?","Location Range: 0-143 ($0-$8F)
+BASIC Working Storage
+
+This portion of zero page is used by BASIC only.  Therefore, a program
+written entirely in machine language that does not interact with BASIC
+can freely use this area.
+
+address            $0             D6510
+6510 On-Chip I/O DATA Direction Register
+
+Bit 0: Direction of Bit 0 I/O on port at next address.  Default = 1 (output)
+Bit 1: Direction of Bit 1 I/O on port at next address.  Default = 1 (output)
+Bit 2: Direction of Bit 2 I/O on port at next address.  Default = 1 (output)
+Bit 3: Direction of Bit 3 I/O on port at next address.  Default = 1 (output)
+Bit 4: Direction of Bit 4 I/O on port at next address.  Default = 0 (input)
+Bit 5: Direction of Bit 5 I/O on port at next address.  Default = 1 (output)
+Bit 6: Direction of Bit 6 I/O on port at next address.  Not used.
+Bit 7: Direction of Bit 7 I/O on port at next address.  Not used.
+
+This location is the first of a number of hardware registers that we
+will discuss.  Although they can be written to and/or read like RAM,
+they are connected to hardware devices, and their contents affect the
+operation of the devices.
+
+Each bit of this Data Direction Register determines whether the
+contents of the corresponding bit on the Internal I/O Port (see
+location 1) can be written to by peripheral devices.  If the bit is
+set to 0, it indicates the direction of data flow as Input, which
+means that the corresponding bit of the I/O port will be affected by
+peripheral defices.  If the bit is set to 1, it indicates Output.  On
+the 64, only Bits 0-5 are significant.  On power-up, this register is
+set to 239 ($EF), which indicates that all bits, except for Bit 4
+(which senses the cassette switch), are set up for Output."

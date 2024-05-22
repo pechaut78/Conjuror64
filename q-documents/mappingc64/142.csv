@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the memory location at address $287?","address           $287           GDCOL
+Color of Character under Cursor
+
+This location is used to keep track of the original color code of the
+character stored at the present cursor location.  Since the blinking
+cursor uses the current foreground color at 646 ($286), the original
+value must be stored here so that if the cursor moves on without
+changing that character, its color code can be restored to its
+original value."

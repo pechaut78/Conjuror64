@@ -1,0 +1,11 @@
+
+
+
+address              $E394
+Cold Start BASIC
+
+This initialization routine is executed at the time of power-up.  The
+RAM vectors to important BASIC routines are set up starting at 768
+($300), the interpreter is initialized, the start-up messages are
+printed, and the main loop entered through the end of the warm start
+routine.

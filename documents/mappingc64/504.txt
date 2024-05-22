@@ -1,0 +1,8 @@
+
+
+
+address              $E200
+Skip Comma and Get Integer in .X
+
+This subroutine is used to skip the comma between parameters and get
+the following integer value in the .X register.

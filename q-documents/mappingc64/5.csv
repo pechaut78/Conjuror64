@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $5-$6?","address          $5-$6          ADRAY2
+Vector: Routine to Convert a Number from Integer to Floating Point
+
+This vector points to the address of the BASIC routine which converts
+an integer to a floating point number.  This routine is currently
+located at 45969 ($B391).  BASIC does not appear to reference this
+location.  It is available for use by the programmer who needs to make
+such a conversion for a machine language program that interacts with
+BASIC.  For an explanation of how to use this routine in connection
+with the USR command, see the entry for the USR vector at 785 ($311)."

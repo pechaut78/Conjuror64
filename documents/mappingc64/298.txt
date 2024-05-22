@@ -1,0 +1,10 @@
+
+
+
+address         $B3E1          GETFNM
+Check DEF and FN Syntax
+
+This routine checks to make sure that FN follow SEG, and that the
+dependent variable has a valid floating point variable name.  It calls
+the routine to find or create a variable to get the pointer to its
+address.

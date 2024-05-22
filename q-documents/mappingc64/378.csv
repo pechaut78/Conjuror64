@@ -1,0 +1,55 @@
+question,answer
+"What is the purpose of the memory location at address 53248-53264 ($D000-$D010)?","address 53248-53264 ($D000-$D010)
+Sprite Horizontal and Vertical Position Registers
+
+These locations determine the horizontal and vertical position at
+which each sprite will be displayed on the screen.  Each sprite has
+its own horizontal and vertical position register.  In addition, all
+of the sprites share a common register which is used to extend the
+range of horizontal positions.
+
+Vertical positions for each sprite range from 0 to 255, and these
+indicate the vertical position of the top line of the sprite's 21-line
+length.  Since there are only 200 visible scan lines in the screen
+display, some of these vertical positions will result in the sprite
+being partially or wholly offscreen.
+
+The visible viewing area starts at line 50 and extends to line 249.
+Therefore, any sprite whose vertical psition is 29 ($1D) or less will
+be completely above the visible picture.  At vertical position 30
+($1E), the bottom line of the sprite display becomes visible at the
+top of the screen.  At position 230 ($E6), the bottom line of the
+sprite is lost from view off the bottom of the screen, and at vertical
+position 250 ($FA), the entire sprite disappears from view off the
+bottom edge of the screen.
+
+Horizontal positioning is somewhat trickier, because the visible
+display area is 320 dots wide, and one eight-bit register can hold
+only 256 position values.  Therefore, an additional register is needed
+to hold the ninth bit of each sprite's horizontal position.
+
+Each sprite is assigned a single bit in the Most Significant Bit of
+Horizontal Position register (MSB register) at 53264 ($D010).  If that
+bit is set to 1, the value 256 is added to the horizontal position.
+This extends the range of possible horizontal positions to 511.
+
+In order to set a sprite's horizontal position, you must make sure
+that both the values in the horizontal position register and the MSB
+Register are correct.  For example, if you wish to set the horizontal
+position of Sprite 5 to a value of 30, you must place a value of 30 in
+the Sprite 5 Horizontal Position Register (POKE 53258,30 will do it
+from BASIC), and you must also clear Bit 5 of the MSB Register (POKE
+53264,PEEK(53264)AND(255-16)).  If you forget the MSB register, and
+Bit 5 is set to 1, you will end up with position 286 instead of 30.
+
+The horizontal position value indicates the position of the leftmost
+dot of the sprite's 24-dot width.  The visible display is restricted
+to the 320 dot positions between positions 24 and 344.  At position 0
+the whole sprite is past the left edge of the visible screen.  At
+position 1 the righmost dot enters the display area, and at position
+24 ($18) the entire sprite is displayed on screen.  At position 321
+($141) the rightmost dot goes past the right edge of the visible
+display area, and a position 355 ($158) the whole sprite has moved out
+of sight, off the right edge of the screen.
+
+These registers are all intialized to 0 at power-up."

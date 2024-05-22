@@ -1,0 +1,78 @@
+question,answer
+"What is the purpose of the memory location at address $DC03?","address              $DC03          CIDDRB
+Data Direction Register B
+
+Bit 0:  Select Bit 0 of Data Port B for input or output (0=input, 1=output)
+Bit 1:  Select Bit 1 of Data Port B for input or output (0=input, 1=output)
+Bit 2:  Select Bit 2 of Data Port B for input or output (0=input, 1=output)
+Bit 3:  Select Bit 3 of Data Port B for input or output (0=input, 1=output)
+Bit 4:  Select Bit 4 of Data Port B for input or output (0=input, 1=output)
+Bit 5:  Select Bit 5 of Data Port B for input or output (0=input, 1=output)
+Bit 6:  Select Bit 6 of Data Port B for input or output (0=input, 1=output)
+Bit 7:  Select Bit 7 of Data Port B for input or output (0=input, 1=output)
+
+Location Range: 56324-56327 ($DC04-$DC07)
+Timers A and B Low and High Bytes
+
+These four timer registers (two for each timer) have different
+functions depending on whether you are reading from them or writing to
+them.  When you read from these registers, you get the present value
+of the Timer Counter (which counts down from its initial value to 0).
+When you write data to these registers, it is stored in the Timer
+Latch, and from there it can be used to load the Timer Counter using
+the Force Load bit of Control Register A or B (see 56334-5 ($DC0E-F)
+below).
+
+These interval timers can hold a 16-bit number from 0 to 65535, in
+normal 6510 low-byte, high-byte format (VALUE=LOW BYTE+256*HIGH BYTE).
+Once the Timer Counter is set to an initial value, and the timer is
+started, the timer will count down one number every microprocessor
+clock cycle.  Since the clock speed of the 64 (using the American NTSC
+television standard) is 1,022,730 cycles per second, every count takes
+approximately a millionth of a second.  The formula for calculating
+the amount of time it will take for the timer to count down from its
+latch value to 0 is:
+
+TIME=LATCH VALUE/CLOCK SPEED
+
+where LATCH VALUE is the value written to the low and high timer
+registers (LATCH VALUE=TIMER LOW+256*TIMER HIGH), and CLOCK SPEED is
+1,022,370 cycles per second for American (NTSC) standard television
+monitors, or 985,250 for European (PAL) monitors.
+
+When Timer Counter A or B gets to 0, it will set Bit 0 or 1 in the
+Interrupt Control Register at 56333 ($DC0D).  If the timer interrupt
+has been enabled (see 56333 ($DC0D)), an IRQ will take place, and the
+high bit of the Interrupt Control Register will be set to 1.
+Alternately, if the Port B output bit is set, the timer will write
+data to Bit 6 or 7 of Port B.  After the timer gets to 0, it will
+reload the Timer Latch Value, and either stop or count down again,
+depending on whether it is in one-shot or continuous mode (determined
+by Bit 3 of the Control Register).
+
+Although usually a timer will be used to count the microprocessor
+cycles, Timer A can count either the microprocessor clock cycles or
+external pulses on the CTN line, which is connected to pin 4 of the
+User Port.
+
+Timer B is even more versatile.  In addition to these two sources,
+Timer B can count the number of times that Timer A goes to 0.  By
+setting Timer A to count the microprocessor clock, and setting Timer B
+to count the number of times that Timer A zeros, you effectively link
+the two timers into one 32-bit timer that can count up to 70 minutes
+with accuracy within 1/15 second.
+
+In the 64, CIA #1 Timer A is used to generate the interrupt which
+drives the routine for reading the keyboard and updating the software
+clock.  Both Timers A and B are also used for the timing of the
+routines that read and write tape data.  Normally, Timer A is set for
+continuous operation, and latched with a value of 149 in the low byte
+and 66 in the high byte, for a total Latch Value of 17045.  This means
+that it is set to count to 0 every 17045/1022730 seconds, or
+approximately 1/60 second.
+
+For tape reads and writes, the tape routines take over the IRQ
+vectors.  Even though the tape write routines use the on-chip I/O port
+at location 1 for the actual data output to the cassette, reading and
+writing to the cassette uses both CIA #1 Timer A and Timer B for
+timing the I/O routines."

@@ -1,0 +1,24 @@
+
+C64 Basic:
+Several functions are available for use with character strings.
+The three functions introduced in this section are LEN, ASC,
+and CHR$.
+• The LEN and ASC functions require a string for an argu
+ment and return a number. This is reversed for CHR$, which
+needs a number for an argument and returns a string. The
+presence of the $ at the end of the function name indicates
+that the function returns a character string.
+• The LEN function is used to count the number of characters
+in a string. The range of this function is 0 to 255, with 0
+being the length of the null string.
+• The ASC function returns the ASCII code for the first
+character in a string. The string must not be the null string,
+or the ILLEGAL QUANTITY error will be printed. ASC is
+often used to check input characters. The special function
+keys have ASCII codes which can be detected by this
+function.
+• The CHR$ function takes an ASCII code and returns a string
+one character long, the character of the given ASCII code. A
+common use for this function is to print the double quote
+character. It also simplifies the printing of special control
+codes, such as those for screen clearing and color changing.

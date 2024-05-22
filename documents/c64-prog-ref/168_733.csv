@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the TYA instruction?","The opcode for the TYA instruction is 98, which is used to transfer the index Y to the accumulator."
+"what is the addressing mode for the TYA instruction?","The addressing mode for the TYA instruction is implied, which means the instruction operates on the accumulator and index registers without requiring a memory address."
+"how many bytes does the TYA instruction occupy in memory?","The TYA instruction occupies 1 byte in memory, which is the opcode 98."
+"how many cycles does the TYA instruction take to execute?","The TYA instruction takes 2 cycles to execute, which is the time it takes for the CPU to complete the operation."
+"what is the purpose of the TYA instruction?","The purpose of the TYA instruction is to transfer the index Y to the accumulator, which allows the programmer to manipulate the value of Y and use it in further calculations."
+"what is the assembly language form of the TYA instruction?","The assembly language form of the TYA instruction is simply 'TYA', which is used to represent the instruction in assembly language programming."
+"in what situation would you use the TYA instruction?","You would use the TYA instruction when you need to transfer the value of the index Y to the accumulator, such as when you need to perform calculations or comparisons involving the value of Y."
+"what is the difference between the TYA instruction and the TAY instruction?","The TYA instruction transfers the value of Y to the accumulator, whereas the TAY instruction transfers the value of the accumulator to Y, making them complementary instructions."
+"can you give an example of a situation where the TYA instruction is necessary?","For example, if you need to compare the value of Y with a constant, you would use the TYA instruction to transfer the value of Y to the accumulator, and then use a comparison instruction to compare the value with the constant."
+"what is the relationship between the TYA instruction and the Y register?","The TYA instruction is used to transfer the value of the Y register to the accumulator, which allows the programmer to manipulate and use the value of Y in further calculations and operations."

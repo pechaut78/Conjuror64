@@ -1,0 +1,48 @@
+
+
+Sprite collisions on the C64
+collision detection using standard graphics can be a lengthy 
+and difficult process. By using Sprites however, any number 
+of collisions can be detected simply by PEEKing a pair of 
+registers. 
+
+Not surprisingly, it is the VIC chip which actually detects 
+that a collision has occurred, and it reports the fact to us via 
+two collision registers. One of these registers is used for 
+Sprite to Sprite collisions and the other is used for Sprite to 
+background collisions. Figure 6.7 shows the locations of 
+
+Just before we look at the way in which these registers 
+are used, we need to define exactly what we mean by a 
+collision. 
+
+A Sprite to Sprite collision has occurred when a non- 
+transparent area of one Sprite overlays a non-transparent 
+area of another Sprite. 
+
+A Sprite to background coUision has occurred when a 
+non-transparent area of a Sprite overlays any background 
+graphics. 
+
+This means that for missile/target type applications, the 
+collision will not occur until the missile actually hits the 
+target, regardless of the way the missOe has been drawn on 
+the Sprite screen. 
+
+Now back to the collision registers ... In each register 
+bit refers to Sprite 0, bit 1 refers to Spiite 1, and so on. 
+Both registers are normally set to 0, and the VIC chip sets the 
+appropriate bits to 1 for those Sprites which have collided. 
+
+For example, if Sprite has collided with Sprite 4, then 
+the Sprite to Sprite Collision register will contain 17 decimal 
+(bits and 4 set). 
+
+Or, if Sprite 5 has collided with the background, then the 
+Sprite to Background Collision register will contain 32 decimal 
+(bit 5 set). 
+
+At first sight the collision registers seem quite difficult 
+to use, because the numbers which they return don't immedi- 
+ately relate to individual Sprites. The problem can be easily 
+resolved by PEEKing the registers in the right way.

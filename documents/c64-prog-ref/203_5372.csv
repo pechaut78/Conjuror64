@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the SECOND function?","The purpose of the SECOND function is to send a secondary address for LISTEN, which is used to give setup information to a device before I/O operations begin."
+"What is the call address of the SECOND function in hexadecimal?","The call address of the SECOND function is $FF93."
+"What is the decimal equivalent of the call address of the SECOND function?","The decimal equivalent of the call address of the SECOND function is 65427."
+"What communication register is used by the SECOND function?","The SECOND function uses the accumulator (A) as the communication register."
+"What is the preparatory routine required for the SECOND function?","The preparatory routine required for the SECOND function is LISTEN."
+"What is the error return behavior of the SECOND function?","The error return behavior of the SECOND function is the same as the READST function."
+"How much stack is required by the SECOND function?","The SECOND function requires 8 bytes of stack space."
+"What register is affected by the SECOND function?","The accumulator (A) is the register affected by the SECOND function."
+"How do you use the SECOND function to send a secondary address to a device?","To use the SECOND function, load the accumulator with the secondary address to be sent, and then call the SECOND function."
+"What is the importance of ORing the secondary address with $60 when sending it to a device on the serial bus?","When sending a secondary address to a device on the serial bus, it must be ORed with $60, which is a required step to ensure proper communication with the device."

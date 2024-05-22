@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the memory location at address $F838?","address              $F838
+Test Cassette Buttons and Handle Messages for Tape Write
+
+This routine tests the sense switch, and if no buttons are depressed
+it prints the PRESS PLAY & RECORD message, and loops until a cassette
+button is pressed, or until the STOP key is pressed.  If a button is
+pressed, it prints the message OK.  These messages cannot be supressed
+by changing the flag at 157 ($9D).  See the entry for 63511 ($F817)
+for more information."

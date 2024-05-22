@@ -1,0 +1,23 @@
+
+
+
+address              $FE18          SETMSG
+Set the Message Control Flag
+
+This documented Kernal routine can be entered through its jump table
+vector at 65424 ($FF90).
+
+The routine controls the printing of error messages and control
+messages by the Kernal.  It Bit 6 is seto to 1 (bit value of 64),
+Kernal control messages can be printed.  These messages include
+SEARCHING FOR, LOADING, and the like.  If Bit 6 is cleared to 0, these
+messages will not be printed (BASIC will clear this bit when a program
+is running so that the messages do not appear when I/O is performed
+from a program).  Setting Bit 6 will not suppress the PRESS PLAY ON
+TAPE or PRESS PLAY & RECORD messages, however.
+
+If Bit 7 is set to 1 (bit value of 128), Kernal error messages can be
+printed.  If Bit 7 is set to 0, those error messages (for example, I/O
+ERROR #nn) will be suppressed.  Note that BASIC has its own set of
+error messages (such as FILE NOT FOUND ERROR) which it uses in
+preference to the Kernal's message.

@@ -1,0 +1,42 @@
+
+
+SYS and USR on C64
+
+There are several ways to use machine code routines from 
+BASIC on tile Commodore 64, the two most useful of these 
+being to use the keywords SYS or USR. 
+
+The BASIC statement SYS xxxxx causes the BASIC inter- 
+preter to execute a call to a machine code subroutine at 
+address xxxxx where xxxxx is a decimal number in the range 
+- 65535. To return to BASIC, the machine code sub- 
+routine must end with a return from subroutine instruction 
+(RTS). If the SYS statement is encountered in a BASIC 
+program then control will be passed back to the next state- 
+ment in the program after the SYS statement. If the SYS 
+statement is encountered in direct mode then control will be 
+passed to direct mode. 
+
+If machine code subroutines need to have parameters 
+passed to them and returned by them then this can be 
+achieved using the BASIC PEEK and POKE facEities to place 
+data in known locations in memory that the machine code 
+can access using the machine code equivalents to PEEK and 
+POKE. 
+
+The SYS statement is the easiest way of accessing machine 
+code routines from BASIC as there can be any number of SYS 
+statements in a program each of which contains the address ' 
+of the routine it is to call. This means that many separate 
+routines can be accessed from within a single program with 
+ease. 
+
+The other common way to access machine code routines 
+from BASIC is to use the BASIC function USR{X). The USR 
+function is more difficult to use than the SYS system but it 
+does have advantages under certain circumstances. The main 
+advantage of USR over SYS is that USR allows a single para- 
+meter to be passed to the machine code subroutine and it 
+allows the routine to pass a single parameter back as an 
+answer. It is the fact that USR returns a value that maices it 
+a function.

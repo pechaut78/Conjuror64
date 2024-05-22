@@ -1,0 +1,10 @@
+
+
+
+address         $B80D          PEEK
+Perform PEEK
+
+PEEK reads the address parameter and converts it to a pointer.  Then
+it gets the byte pointed to into the .Y register, and calls the part
+of POS that converts a single integer in .Y to a floating point
+number.

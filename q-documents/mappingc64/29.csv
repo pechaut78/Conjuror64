@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $35-$36?","address         $35-$36        FRESPC
+Temporary Pointer for Strings
+
+This is used as a temporary pointer to the most current string added
+by the routines which build strings or move them in memory."

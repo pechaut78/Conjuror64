@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $FA60?","address              $FA60
+Receive and Store the Next Character from Cassette
+
+This is the part of the cassette read IRQ routine that actually gets
+the next byte of data from the cassette."

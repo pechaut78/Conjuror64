@@ -1,0 +1,13 @@
+question,answer
+"What is the purpose of the memory location at address $BA?","address           $BA            FA
+Current Device Number
+
+This location holds the number of the device that is currently being
+used.  Device number assignments are as follows:
+
+0    = Keyboard
+1    = Datasette Recorder
+2    = RS-232/User Port
+3    = Screen
+4-5  = Printer
+8-11 = Disk"

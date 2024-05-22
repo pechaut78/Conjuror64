@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $A613?","address        $A613          FINDLN
+Search for Line Number
+
+This routine searches through the program text, trying to match the
+two-byte integer line number that is stored in 20-21 ($14-$15).  If it
+is found, 95-96 ($5F-$60) will be set as a pointer to the address of
+the link field for that line, and the Carry flag will be set.  If it
+is not found, the Carry flag will be cleared."

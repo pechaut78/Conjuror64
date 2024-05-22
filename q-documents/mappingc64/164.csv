@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $2A1?","address          $2A1           ENABL
+RS-232 Interrupts Enabled
+
+This location holds the active NMI interrupt flag byte from CIA #2
+Interrupt Control Register (56589, $DD0D).  The bit values for this
+flag are as follows:
+
+Bit 4: 1 (bit value of 16) = System is Waiting for Receiver Edge
+Bit 1: 1 (bit value of 2)  = System is Receiving Data
+Bit 0: 1 (bit value of 1)  = System is Transmitting Data"

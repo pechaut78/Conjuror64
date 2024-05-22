@@ -1,0 +1,11 @@
+question,answer
+"What can a single PRINT statement print in C64 Basic?","A PRINT statement in C64 Basic can print both numbers and character strings, regardless of whether they are mixed together. Commas and semicolons can also be used in PRINT statements."
+"What is the meaning of 'type' in C64 Basic?","In C64 Basic, 'type' refers to the quality of a value that determines what sort of information is being represented. There are two types of values that have been introduced: numbers and character strings."
+"What happens when arithmetic operators are used with character strings in C64 Basic?","Attempting to use arithmetic operators with character strings in C64 Basic will cause the computer to generate a TYPE MISMATCH error."
+"What are the two types of values in C64 Basic?","The two types of values in C64 Basic are numbers and character strings."
+"Can a PRINT statement in C64 Basic print only numbers?","Yes, a PRINT statement in C64 Basic can print only numbers. Commas and semicolons can also be used in PRINT statements."
+"Can a PRINT statement in C64 Basic print only character strings?","Yes, a PRINT statement in C64 Basic can print only character strings. Commas and semicolons can also be used in PRINT statements."
+"What is the effect of using commas and semicolons in a PRINT statement in C64 Basic?","Commas and semicolons can be used in PRINT statements in C64 Basic, regardless of whether numbers are mixed with character strings."
+"What is the error generated when using arithmetic operators with character strings in C64 Basic?","When arithmetic operators are used with character strings in C64 Basic, the computer generates a TYPE MISMATCH error."
+"What determines the type of information being represented in C64 Basic?","In C64 Basic, the type of information being represented is determined by the quality of a value, which is referred to as 'type'."
+"What are the two 'types' of values that have been introduced in C64 Basic?","The two 'types' of values that have been introduced in C64 Basic are numbers and character strings."

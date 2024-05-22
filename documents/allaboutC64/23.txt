@@ -1,0 +1,15 @@
+
+C64 Basic:
+ A disk directory is a list of filenames. To get a directory, use
+the LOAD command with the filename "$", then use LIST.
+This works only for disk files.
+• The ten-second delay between the searching and loading of
+a tape file can be shortened by pressing the SPACE bar, left
+arrow, CTRL, or Commodore key.
+• Filenames are optional for tape files. Using LOAD with no
+filename will make the computer load the next program
+found on the tape. Files saved without a filename can be
+retrieved only by using LOAD without a filename.
+• To have the computer automatically load and run the next
+program found on a tape, press the RUN/STOP key with
+either the Commodore or SHIFT key.

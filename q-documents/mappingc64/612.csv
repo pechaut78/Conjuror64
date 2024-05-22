@@ -1,0 +1,16 @@
+question,answer
+"What is the purpose of the memory location at address $F250?","address              $F250          CHKOUT
+Designate a Logical File As the Current Output Channel
+
+This is a documented Kernal routine which can be entered from the jump
+table at 65481 ($FFC9).
+
+The routine jumps through a RAM vector at 800 ($320).  If you wish to
+output data to any device other than the screen, this routine must be
+called after OPENing the device, and before you output a data byte
+with the CHROUT routine.  When called, the routine will designate the
+logical file whose file number is in the .X register as the current
+file, its device as the current device, and its secondary address as
+the current secondary address.  If the device on the channel uses the
+serial bus, and therefore requires a LISTEN command and possibly a
+secondary address, this information will be sent on the bus."

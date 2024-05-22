@@ -1,0 +1,30 @@
+
+
+The standard memory map of the C64
+the memory map for the standard BASIC configuration 
+contains 16K ROM, 6K of system RAM, 38K of BASIC user 
+RAM and 4K of other user RAM. Figure l.J shows how all 
+this fits into the 64K memory space available.
+
+One of the main advantages to having a 64K RAM machine 
+is that you will never have to buy add-on RAM packs just so 
+you can play the latest version of Space Zappers or whatever. 
+Any software produced for a Commodore 64 will run on 
+your machine — satisfying, isn't it! 
+
+It is possible however, to get add-on ROM packs, or cart- 
+ridges, which contain specialised programs such as games, 
+word processors, machine code assemblers etc. The ROM 
+cartridges usually contain 8K of ROM which of course, over- 
+lays 8K of user RAM. This is usually the 8K from address 
+32768 decimal to 40959 decimal, i.e. the top 8K of the 
+BASIC program area. 
+
+Even with an 8K ROM cartridge fitted the standard Com- 
+modore 64 has a total of 30K of RAM available for BASIC 
+programs with a further 4K available for machine code work. 
+Compared to many other home computers which only have 
+48K or even 32K of RAM fitted as standard (some of which 
+will be used by their operating systems and BASIC) the Com- 
+modore 64 really does give you more memory for your 
+money. 

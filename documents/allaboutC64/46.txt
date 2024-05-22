@@ -1,0 +1,14 @@
+
+C64 Basic:
+• Subroutines are usually put after the main program. An
+END statement is needed to separate the main program from
+the subroutine. Having a main program accidentally fall into
+a subroutine is a sure way of getting the RETURN
+WITHOUT GOSUB error.
+• When execution is transferred to a subroutine, it is said that
+the subroutine has been called.
+• To make a subroutine more flexible, it can use a variable
+that is assigned just before the subroutine is called.
+• The entry point of a subroutine is the line to which execution
+jumps when the subroutine is called. Subroutines can have
+more than one entry point.

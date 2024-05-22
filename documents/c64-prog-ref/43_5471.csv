@@ -1,0 +1,11 @@
+question,answer
+"How many different dot positions can be individually programmed onto a TV screen in the Y direction?","There are 200 different dot positions that can be individually programmed onto a TV screen in the Y direction."
+"What is the range of numbers that the sprite Y position registers can handle?","The sprite Y position registers can handle numbers up to 255."
+"What is the first on-screen value from the top of the screen for an unexpanded sprite in the Y direction?","The first on-screen value from the top of the screen for an unexpanded sprite in the Y direction is 30."
+"What is the first on-screen value from the top of the screen for a sprite expanded in the Y direction?","The first on-screen value from the top of the screen for a sprite expanded in the Y direction is 9."
+"What is the first Y value in which a sprite (expanded or not) is fully on the screen?","The first Y value in which a sprite (expanded or not) is fully on the screen is 50."
+"What is the last Y value in which an unexpanded sprite is fully on the screen?","The last Y value in which an unexpanded sprite is fully on the screen is 229."
+"What is the last Y value in which an expanded sprite is fully on the screen?","The last Y value in which an expanded sprite is fully on the screen is 208."
+"What is the first Y value in which a sprite is fully off the screen?","The first Y value in which a sprite is fully off the screen is 250."
+"Why do expanded sprites have a different first on-screen value than unexpanded sprites?","Expanded sprites have a different first on-screen value than unexpanded sprites because each dot is twice as tall, so the initial position is still calculated from the top left corner of the sprite."
+"How do the sprite Y position registers handle moving a sprite up and down?","The sprite Y position registers can handle moving a sprite up and down because they can handle numbers up to 255, which is more than enough to handle moving a sprite on and off the screen smoothly."

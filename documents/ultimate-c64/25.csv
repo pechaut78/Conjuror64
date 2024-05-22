@@ -1,0 +1,11 @@
+question,answer
+"Where are the BASIC and KERNAL ROMs visible in a running system?","At $A000-$BFFF and $E000-$FFFF respectively"
+"What is the purpose of the 3 lowest bits in the processor port at address 1?","To alter the memory configuration, turning ROMs on or off and configuring the I/O area"
+"What happens when writing to ROM?","The data is directed to the underlying RAM"
+"Why do many programs run in the default configuration?","To use both KERNAL library routines and functions in BASIC, keeping their code as small as possible"
+"What do more recent programs and games do to get direct control of the interrupt vector?","Turn off all of ROM"
+"How is the I/O area typically configured?","To show the I/O registers and Color RAM"
+"What is the purpose of the ROM bank at $8000-$9FFF?","To be serviced by an external cartridge connected to the expansion port"
+"What does KERNAL do if it detects the magic string ”CBM80” at $8004 on startup?","It jumps to the code of the cartridge right away"
+"What is the I/O area sometimes temporarily switched to?","A different configuration to access the RAM underneath"
+"What do a few applications do with the character ROM at program start?","Read it and modify the copy"

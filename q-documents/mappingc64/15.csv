@@ -1,0 +1,14 @@
+question,answer
+"What is the purpose of the memory location at address $10?","address            $10            SUBFLG
+Flag: Subscript Reference to an Array or User-Defined Function Call (FN)
+
+This flag is used by the PTRGET routine which finds or creates a
+variable, at the time it checks whether the name of a variable is
+valid.  If an opening parenthesis is found, this flag is set to
+indicate that the variable in question is either an array variable or
+a user-defined function.
+
+You should note that it is perfectly legal for a user-defined function
+(FN) to have the same name as a floating point variable.  Moreover, it
+is also legal to redefine a function.  Using a FN name in an already
+defined function results in the new definition of the function."

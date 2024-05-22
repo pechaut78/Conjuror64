@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the /IRQ output in a device?","The /IRQ output is brought low when an enabled source of interrupt occurs within the device, indicating that an interrupt has been triggered and needs to be handled."
+"What is the characteristic of the /IRQ output?","The /IRQ output is open drain, which means it requires an external pull-up resistor to function properly."
+"What happens when an enabled source of interrupt occurs within the device?","When an enabled source of interrupt occurs within the device, the /IRQ output is brought low, signaling that an interrupt has been triggered and needs to be handled."
+"What type of resistor is required for the /IRQ output to function?","An external pull-up resistor is required for the /IRQ output to function properly, as it is an open drain output."
+"What is the effect of an enabled source of interrupt on the /IRQ output?","When an enabled source of interrupt occurs, the /IRQ output is brought low, indicating that an interrupt has been triggered and needs to be handled."
+"In what situation is the /IRQ output brought low?","The /IRQ output is brought low when an enabled source of interrupt occurs within the device."
+"What is the significance of the /IRQ output being open drain?","The /IRQ output being open drain means that it requires an external pull-up resistor to function properly, which is an important consideration in circuit design."
+"How does the /IRQ output respond to an enabled source of interrupt?","The /IRQ output responds to an enabled source of interrupt by being brought low, signaling that an interrupt has been triggered and needs to be handled."
+"What is the role of the external pull-up resistor in the /IRQ output circuit?","The external pull-up resistor is required to enable the /IRQ output to function properly, as it is an open drain output."
+"What is the relationship between the /IRQ output and enabled sources of interrupt?","The /IRQ output is brought low when an enabled source of interrupt occurs within the device, indicating that an interrupt has been triggered and needs to be handled."

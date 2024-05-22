@@ -1,0 +1,8 @@
+
+
+
+address              $EEBB
+Send Next RS-232 Bit (NMI)
+
+This subroutine is called by the NMI interrupt handler routine to send
+the next bit of data to the RS-232 device.

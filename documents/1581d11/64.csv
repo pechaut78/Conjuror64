@@ -1,0 +1,11 @@
+question,answer
+"what is the main advantage of using relative files in Commodore 64 DOS","With relative files, you don't have to worry about the physical location of a record on the diskette, such as which sector it will be stored in or whether it will fit within the current sector, as DOS takes care of all that for you, allowing you to focus on specifying the record length and number of records needed."
+"what are the requirements for record length in a relative file","The record length must be between 2 and 254 characters, and all records in the file must be the same size."
+"what is the purpose of specifying the record length and number of records in a relative file","By specifying the record length and number of records, you enable DOS to organize the file in a way that allows it to quickly find any record in the file, given its record number (ordinal position within the file)."
+"what is the limitation of using relative files in terms of disk space","The entire file, along with any other existing files, must fit on your diskette."
+"how does DOS organize relative files","DOS organizes relative files in a way that allows it to quickly find any record in the file, as soon as it is given the record number (ordinal position within the file)."
+"what is the benefit of using relative files in terms of record retrieval","With relative files, DOS can quickly find any record in the file, as soon as it is given the record number (ordinal position within the file)."
+"what is the restriction on record size in a relative file","Each record must be the same size, and the record length must be between 2 and 254 characters."
+"how does DOS handle record storage in relative files","DOS takes care of storing records in a way that allows it to quickly find any record in the file, given its record number (ordinal position within the file)."
+"what is the advantage of using relative files in terms of file organization","Relative files allow DOS to organize the file in a way that allows it to quickly find any record in the file, as soon as it is given the record number (ordinal position within the file)."
+"what is the limitation of using relative files in terms of file size","The entire file, along with any other existing files, must fit on your diskette."

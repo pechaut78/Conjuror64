@@ -1,0 +1,37 @@
+question,answer
+"What is the purpose of the memory location at address $8B-$8F?","address       $8B-$8F        RNDX
+RND Function Seed Value
+
+This location holds the five-byte floating point value returned by the
+RND function.  It is initially set to a seed value copied from ROM
+(the five bytes are 128, 79, 199, 82, 88--$80, $4F, $C7, $52, $58).
+
+When the function RND(X) is called, the numeric value of X does not
+affect the number returned, but its sign does.  If X is equal to 0,
+RND generates a seed value from chip-level hardware timers.  If X is a
+positive number, RND(X) will return the next number in an arithmetic
+sequence.  This sequence continues for such a long time without
+repeating itself, and gives such an even distribution of numbers, that
+it can be considered random.  If X is negative, the seed value is
+changed to a number that corresponds to a scrambled floating point
+representation of the number X itself.
+
+Given a particular seed value, the same pseudorandom series of numbers
+will always be returned.  This can be handy for debugging purposes,
+but not where you wish to have truly random numbers.
+
+The traditional Commodore method of selecting a random seed is by
+using the expression RND(-TI), mostly because RND(0) didn't function
+correctly on early PETs.  While the RND(0) form doesn't really work
+right on the 64 either (see location 57495 ($E097)), the expression
+RND(-RND(0)) may produce a more random seed value.
+
+Location Range: 144-255 ($90-$FF)
+Kernal Work Storage Area
+
+This is the zero-page storage area for the Kernal.  The user should
+take into account what effect changing a location here will have on
+the operation of the Kernal functions before making any such changes.
+
+At power-on, this range of locations is first filled with zeros, and
+then initialized from values stored in ROM as needed."

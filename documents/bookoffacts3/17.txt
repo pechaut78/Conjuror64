@@ -1,0 +1,32 @@
+
+
+C64 Basic:
+NEW NONE a command that when used will erase a
+program currently in memory.
+
+NEXT N(SHIFTED E) A statement that is used in conjunction with
+the FOR statement, and serves as a counter that is incremented by 1, and
+tested for the end-value, to check to see if its time to stop the loop.
+(EXAMPLE: 10 FOR A = 1 T01000: NEXT A-this will count 1000 times before
+ending)
+
+NOT N(SHIFTED O) A logical operator that can be used to
+compare a set of values or variables, fora negative result. (EXAMPLE: IF NOT
+X = Y THEN END- the program will end if the value of x does not equall the
+value of y.)
+
+ON NONE A statement that is used with the goto and
+gosub statements. Depending on the value of a set of variables in a program,
+the ON statement will jump to any one of several predefined line numbers
+within the program. The ON statement can also be used inplace of the IF
+
+THEN statement. (EXAMPLE: ON A GOTO 10,20,30)
+OPEN O(SHIFTED P) A command that will open a channel to a
+device or file.
+
+OR NONE A logical operator that can compare a set of
+values for a true of false result. (EXAMPLE: IF A =50 OR B = 100 THEN END-
+this means if A and B are true then end the program)
+
+PEEK P(SHIFTED E) Readsandreturnsthecontentsofaspecified
+memory location. (EXAMPLE: POKE 53280,1-put in location 53280thevalue

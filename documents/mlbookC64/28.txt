@@ -1,0 +1,19 @@
+
+The CMP instruction
+This instruction compares the contents of the accumulator
+with the contents of the addressed memory location, by
+logically subtracting the contents of the operand from
+the accumulator. If an underflow occurs, the carry flag
+is cleared; otherwise it is set. If the result is zero,
+the Z flag is set; otherwise it is cleared. If the result
+is greater than $7F (127), the N flag is set, otherwise
+it is cleared. Let us take a look at an example:
+LDA #$50
+CMP #$30
+The accumulator contains $50. The calculation $50 - $30
+is then carried out, with a result of $20. Because no
+underflow occurred, the carry flag is set. The zero flag
+is cleared because the result is not equal to zero. The N
+flag is cleared because the number is not greater than
+$7F. We get the following result:
+C=l; Z=0; N=0

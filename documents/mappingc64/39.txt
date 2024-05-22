@@ -1,0 +1,13 @@
+
+
+
+address         $49-$4A        FORPNT
+Temporary Pointer to the Index Variable Used by FOR
+
+The address of the BASIC variable which is the subject of a FOR/NEXT
+loop is first stored here, but is then pushed onto the stack.  That
+leaves this location free to be used as a work area by such statements
+as INPUT, GET, READ, LIST, WAIT, CLOSE, LOAD, SAVE, RETURN, and GOSUB.
+
+For a description of the stack entries made by FOR, see location 256
+($100).

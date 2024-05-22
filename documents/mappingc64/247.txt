@@ -1,0 +1,9 @@
+
+
+address         $A8F8          DATA
+Perform DATA
+
+DATA uses the next subroutine to find the offset to the next
+statement, and adds the offset to the current pointers so that the
+next statement will be executed.  If effect, it skips the statement,
+much like REM.

@@ -6,5 +6,4 @@ question,answer
 "What is the priority of sprite 0?","Sprite 0 always supersedes all the other sprites because it's the lowest numbered sprite."
 "What is the priority of sprite 7?","Sprite 7 has less priority than any of the other sprites, and will always appear to be displayed behind any other sprites which overlap its position."
 "How do sprite priorities work?","The priority of a sprite is determined by its number, with lower-numbered sprites having priority over higher-numbered sprites."
-"What is the effect of changing the sprite priorities in the program?","You should see a white sprite on top of a yellow sprite on top of an orange sprite."
 "Can you move sprites and take advantage of their priorities in your animation?","Of course, now that you see how priorities work, you can also move sprites and take advantage of these priorities in your animation."

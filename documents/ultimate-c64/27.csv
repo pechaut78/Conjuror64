@@ -1,0 +1,11 @@
+question,answer
+"What is the IEC bus a serial version of?","The IEC bus is a serial version of the IEEE-488 bus"
+"What are devices on the IEC bus connected to?","Devices on the IEC bus are connected to the same three lines: ATN (attention), clock and data"
+"What is the single bus master on the IEC bus?","The single bus master on the IEC bus is the computer"
+"What happens when the computer raises ATN?","When the computer raises ATN, every device on the bus listens for the 4 bit device number and compares it with its own"
+"What determines the protocol on who sends and who receives on the IEC bus?","The protocol on who sends and who receives is determined by the computer sending TALK/UNTALK and LISTEN/UNLISTEN requests"
+"What is the IEC bus designed for?","The IEC bus was designed for the serial shift register in the VIA (Versatile Interface Adapter) of the VIC-20 and its disk drive"
+"What was the problem with the VIA that affected the IEC protocol?","The VIA had a bug that made the shift register unusable, so the IEC protocol had to be implemented in software"
+"On which computer model was the IEC protocol implemented in its intended speed?","The IEC protocol was implemented in its intended speed on the C128 (in its native mode only)"
+"What are the high-level operations that KERNAL exports on the IEC bus?","The high-level operations that KERNAL exports on the IEC bus are open, close, read, write, load, and save operations"
+"What are the BASIC commands directly hooked up to the IEC bus interface?","The BASIC commands directly hooked up to the IEC bus interface are LOAD and SAVE"

@@ -1,0 +1,9 @@
+
+
+
+address              $F04D
+CHKIN for the RS-232 Device
+
+The Kernal CHKIN routine calls this subroutine to define the RS-232
+device's logical file as an input channel.  A prerequisite for this is
+that the logical file first be OPENed.

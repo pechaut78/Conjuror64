@@ -1,0 +1,8 @@
+
+
+
+address              $D025          SPMC0
+Sprite Multicolor Register 0
+
+This register sets the color that is displayed by the 01 bit-pair in
+multicolor sprite graphics.  The default color value is 4 (purple).

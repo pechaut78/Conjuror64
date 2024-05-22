@@ -1,0 +1,15 @@
+question,answer
+"What is the purpose of the memory location at address $EA87?","address              $EA87          SCNKEY
+Read the Keyboard
+
+This subroutine is called by the IRQ interrupt handler above to read
+the keyboard device which is connected to CIA #1 (see entry for 56320
+($DC00) for details on how to read the keyboard).
+
+It is the Kernal routine SCNKEY which can be entered from the jump
+table at 65439 ($FF9F).  This routine returns the keycode of the key
+currently being pressed in 203 ($CB), sets the shift/control flag if
+appropriate, and jumps through the vector at 655 ($28F) to the routine
+that sets up the proper table to translate the keycode to PETASCII.
+It concludes with the next routine, which places the PETASCII value of
+the character in the keyboard buffer."

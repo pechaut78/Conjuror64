@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $A579?","address         $A579          CRUNCH
+Tokenize Line in Input Buffer
+
+When a line of program text has been input into the BASIC text buffer
+at 512 ($200), this routine goes through the line and changes any
+keywords or their abbreviations, which do not appear in quotes, into
+their corresponding token.  This command is vectored through RAM at
+772 ($304), so it can be diverted in order to add new commands."

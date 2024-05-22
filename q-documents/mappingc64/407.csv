@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $D020?","address              $D020          EXTCOL
+Border Color Register
+
+The color value here determines the color of the border or frame
+around the central display area.  The entire screen is set to this
+color when the blanking feature of Bit 4 of 53265 ($D011) is enabled.
+The default color value is 14 (light blue)."

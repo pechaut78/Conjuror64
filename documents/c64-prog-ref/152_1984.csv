@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for ROL in accumulator mode","The opcode for ROL in accumulator mode is 2A, which is used to rotate the accumulator one bit to the left."
+"what is the addressing mode for ROL Oper,X","The addressing mode for ROL Oper,X is Zero Page,X, which means the operand is located in zero page and indexed by the X register."
+"what is the number of bytes for ROL Oper in zero page mode","The number of bytes for ROL Oper in zero page mode is 2 bytes, which includes the opcode and the operand."
+"what is the number of cycles for ROL A","The number of cycles for ROL A is 2 cycles, which is the time it takes to execute the instruction."
+"what is the difference between ROL Oper and ROL Oper,X","The difference between ROL Oper and ROL Oper,X is that ROL Oper,X uses the X register as an index to access the operand, whereas ROL Oper does not."
+"what is the opcode for ROL in absolute mode","The opcode for ROL in absolute mode is 2E, which is used to rotate the operand one bit to the left."
+"what is the addressing mode for ROL A","The addressing mode for ROL A is accumulator, which means the operand is the accumulator itself."
+"what is the number of bytes for ROL Oper in absolute mode","The number of bytes for ROL Oper in absolute mode is 3 bytes, which includes the opcode and the 2-byte operand."
+"what is the number of cycles for ROL Oper,X","The number of cycles for ROL Oper,X is 6 cycles, which is the time it takes to execute the instruction."
+"what is the purpose of the ROL instruction","The purpose of the ROL instruction is to rotate the bits of the operand one position to the left, which can be used for various purposes such as shifting and rotating data."

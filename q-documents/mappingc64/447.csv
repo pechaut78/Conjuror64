@@ -1,0 +1,79 @@
+question,answer
+"What is the purpose of the memory location at address $D418?","address              $D418          SIGVOL
+Volume and Filter Select Register
+
+Bits 0-3:  Select output volume (0-15)
+Bit 4:  Select low-pass filter, 1=low-pass on
+Bit 5:  Select band-pass filter, 1=band-pass on
+Bit 6:  Select high-pass filter, 1=high-pass on
+Bit 7:  Disconnect output of voice 4, 1=voice 3 off
+
+Bits 0-3 control the volume of all outputs.  The possible volume
+levels range from 0 (no volume) to 15 (maximum volume).  Some level of
+volume must be set here before any sound can be heard.
+
+Bits 4-6 control the selection of the low-pass, band-pass, or
+high-pass filter.  A 1 in any of these bits turns the corresponding
+filter on.  These filters can be combined, although only one cutoff
+frequency can be chosen.  In order for the filter to have any effect,
+at least one of the voices must be routed through it using the Filter
+Resonance Control Register at 54295 ($D417).
+
+When Bit 7 is set to 1,  it disconnects the output of voice 3.  This
+allows you to use the output of the oscillator for modulating the
+frequency of the other voices, or for generating random number,
+without any undesired audio output.
+
+Location Range: 54297-54298 ($D419-$D41A)
+Game Paddle Inputs
+
+These registers allow you to read the game paddles that plug into
+joystick Controller Ports 1 and 2.  Each paddle uses a variable
+resistor (also known as a potentiometer or pot), whose resistance is
+controlled by turning a knob.  The varying resistance is used to vary
+the voltage to two pins of the SID chip between 0 and +5 volts.
+Analog-to-digital (A/D) converters in the chip interpret these voltage
+levels as binary values and store the values in these registers.
+These registers return a number from 0 (minumum resistance) to 255
+(maximum resistance) for each paddle in either of the ports, depending
+on the position of the paddle knob.
+
+Since these registers will read the paddle values for only one
+controller port, there is a switching mechanism which allows you to
+select which of the two ports to read.  By writing a bit-pair of 01
+(bit value of 64) to the last two bits of CIA #1 Data Port A (56320,
+$DC00), you select the paddles on joystick Controller Port 1.  By
+writing a bit-pair of 10 (bit value of 128), you select the paddles on
+Controller Port 2.
+
+If you look at the description of Data Port A (56320, $DC00), however,
+you will notice that it is also used in the keyboard scanning process.
+By writing to this port, you determine which keyboard column will be
+read.
+
+Since the IRQ interrupt keyboard scan routine and the routine that
+checks for the STOP key are putting values into this location 60 times
+per second, you cannot reliable select the pair of paddles you wish to
+read from BASIC without first turning off the keyboard IRQ.  This can
+be done with a POKE 56333,127.  You can then read the paddles with the
+statements A=PEEK(54297) and B=PEEK(54298).  The IRQ can be restored
+after a paddle read with a POKE 56333,129.  It may, however, be easier
+and more accurate in the long run to use a machine language paddle
+read subroutine such as that presented on page 347 of the Commodore 64
+Programmer's Reference Guide.
+
+The paddle fire buttons are read as Bits 2 and 3 of the Data Ports A
+(56320, $DC00) and B (56321, $DC01).  On Port A, if Bit 2 is set to 0,
+button 1 is pushed, and if Bit 3 is set to 0, button 2 is pushed.  On
+Port B, if Bit 2 is set to 0, button 3 is pushed, and if Bit 3 is set
+to 0, button 4 is pushed.
+
+The BASIC statements to test these buttons, thereore, are:
+
+PB(1)=(PEEK(56321)AND4)/4
+PB(2)=(PEEK(56321)AND8)/8
+PB(3)=(PEEK(56320)AND4)/4
+PB(4)=(PEEK(56320)AND8)/8
+
+If a 0 is returned by the PEEK statement, the button is pushed, and if
+a 1 is returned, it is not."

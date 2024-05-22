@@ -1,0 +1,5 @@
+
+
+
+address              $D403          PWHI1
+Voice 1 Pulse Waveform Width (high nybble)

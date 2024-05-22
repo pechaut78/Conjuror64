@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $B245?","address         $B245          BSERR
+Print BAD SUBSCRIPT Error Message"

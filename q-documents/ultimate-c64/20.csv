@@ -1,0 +1,21 @@
+question,answer
+"How does the VIC chip handle graphics modes, including hi-res and multi-color bitmap modes, in terms of resolution, pixel encoding, and color management?","Bitmap Mode
+In hi-res graphics mode, the VIC supports a resolution of 320x200, which uses the same pixel frequency
+as 40x25 character mode (40*8=320, 25*8=200).
+The bitmap can reside at $0000 or $2000, and the
+VIC reads one byte for 8 pixels. But hi-res mode does
+not only support monochrome graphics: The foreground and background colors of each 8x8 tile are
+taken from the high and low nibble of screen RAM,
+which would otherwise be unused. Color RAM is not
+used in this mode.
+The encoding of the bitmap is identical to the encoding of a character set, making it a non-linear framebuffer: The first eight bytes of the bitmap represent
+the pixels in the tile at character position (0,0), the
+second eight bytes represent the tile at character position (1,0), which is pixel position (8,0), and so on.
+This layout makes pixel addressing in software
+slower.
+In Multi-Color Bitmap Mode, the horizontal resolution is halved to 160x200, and pixels are twice the
+width. Every set of two bits in the encodes one of four
+colors per tile: 00 takes it from the global background
+register ($D021), 01 and 10 take it from the upper
+and lower nibble of screen RAM, respectively, and 11
+takes it from Color RAM."

@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $E518?","address              $E518
+Initialize Screen and Keyboard
+
+This is the original CINT Kernal routine, to which additions were made
+in later versions of the Kernal.
+
+After calling the routine at 58784 ($E5A0) to set up default I/O
+values, this routine initializes the cursor blink flags, the keyboard
+decode vector, the key repeat delay and frequency counters, the
+current color code, and maximum keyboard buffer size.  It then falls
+through to the next routine."

@@ -1,0 +1,11 @@
+question,answer
+"how many bytes does each sprite take to define","each sprite takes 63 bytes to define, but an extra byte is needed as a placeholder at the end of each sprite, so each sprite takes up 64 bytes in total"
+"what is the purpose of the sprite pointer","the sprite pointer controls where each sprite definition is located in memory, and each of the 8 sprites has a byte associated with it, located as the last 8 bytes of the 1K chunk of screen memory, normally starting at location 2040 ($07F8 in HEX)"
+"where are the sprite pointers located in memory","the sprite pointers are located as the last 8 bytes of the 1K chunk of screen memory, normally starting at location 2040 ($07F8 in HEX), but if you move the screen, the location of your sprite pointers will also move"
+"what is the range of values that a sprite pointer can hold","a sprite pointer can hold a number from 0 to 255, which points to the definition for that sprite"
+"how much memory can a sprite pointer access","a sprite pointer can access anywhere in the 16K block of memory that the VIC-II chip can access, since 256*64=16K"
+"why is it easy to calculate where in memory a sprite definition is","it's easy to calculate where in memory a sprite definition is because each sprite takes up 64 bytes, which is an even number and an even power in binary"
+"what happens if you move the screen","if you move the screen, the location of your sprite pointers will also move"
+"how many sprite pointers are there","there are 8 sprite pointers, one for each of the 8 sprites"
+"what is the purpose of the extra byte at the end of each sprite","the extra byte at the end of each sprite is a placeholder"
+"what is the significance of the 64 bytes per sprite","the 64 bytes per sprite makes it easy to calculate where in memory a sprite definition is, since 64 is an even number and an even power in binary"

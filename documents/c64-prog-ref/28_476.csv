@@ -1,0 +1,11 @@
+question,answer
+"how many bytes are needed to define a sprite?","A sprite is 24 by 21 dots, or 504 dots, which works out to 63 bytes (504/8 bits)"
+"what is the resolution of a multi-color sprite?","The resolution of the sprite becomes 12 horizontal dots by 21 vertical dots, with each dot in the sprite becoming twice as wide, allowing for 4 colors to be displayed"
+"what happens when a bit is set to 0 in a sprite definition?","Each bit set to 0 is transparent and will display whatever data is behind it"
+"how do multi-color sprites trade off resolution for color?","Horizontal resolution is traded for extra color resolution, allowing for 4 colors to be displayed in the sprite"
+"what is the difference between a standard sprite and a multi-color sprite?","A standard sprite has a higher horizontal resolution, while a multi-color sprite has a lower horizontal resolution but can display more colors"
+"what is the size of a sprite in dots?","A sprite is 24 by 21 dots, or 504 dots"
+"how are sprites defined?","Sprites are defined like programmable characters, but require more bytes due to their larger size"
+"what happens when a bit is set to 1 in a sprite definition?","Each bit set to 1 is displayed in that sprite's foreground color"
+"can you explain how a sprite definition block works?","A sprite definition block works by setting each bit to 0 for transparency or 1 for the foreground color, allowing for the creation of a sprite"
+"what is the advantage of using multi-color sprites?","The advantage of using multi-color sprites is that they can display more colors, making them useful for creating detailed and colorful graphics"

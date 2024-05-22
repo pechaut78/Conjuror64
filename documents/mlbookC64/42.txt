@@ -1,0 +1,5 @@
+
+DEY
+This instruction is the analog of the previous
+instruction, decrementing the contents of Y instead of X.
+The flags are affected in the same manner

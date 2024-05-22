@@ -1,0 +1,14 @@
+
+
+C64 Basic:
+To print more than one value on a line, separate the items to
+be printed with a comma or semicolon.
+• A semicolon is used for close spacing, and a comma is used
+for far spacing.
+• The far spacing of the comma can be used to print numbers
+in columns.
+• If output exceeds the length of one line, printing will wrap
+around to the next line.
+• If a PRINT statement ends with a comma or semicolon, the
+computer will not print the RETURN, and the cursor will not
+move.

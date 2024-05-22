@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $D40B?","address              $D40B          VCREG2
+Voice 2 Control Register
+
+Bit 0:  Gate Bit:  1=Start attack/decay/sustain, 0=Start release
+Bit 1:  Sync Bit:  1=Synchronize oscillator with Oscillator 1 frequency
+Bit 2:  Ring Modulation:  1=Ring modulate Oscillators 2 and 1
+Bit 3:  Test Bit:  1=Disable Oscillator 2
+Bit 4:  Select triangle waveform
+Bit 5:  Select sawtooth waveform
+Bit 6:  Select pulse waveform
+Bit 7:  Select noise waveform"

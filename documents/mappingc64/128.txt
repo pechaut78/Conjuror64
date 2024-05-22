@@ -1,0 +1,30 @@
+address       $100-$1FF
+Microprocessor Stack Area
+
+Locations 256-511 are reserved for the 6510 microprocessor hardware
+stack.  The organization of this temporary storage area has often been
+compared to that of a push-down stack of trays at a cafeteria.  The
+first number placed on the stack goes to the bottom, and subsequent
+entries are placed on top of it.  Then you pull a number off the
+stack, you come up with the last number that was pushed on (such a
+stack is called a Last In, First Out, or LIFO stack).
+
+The stack is controlled by one of the microprocessor registers called
+the Stack Pointer, which keeps track of the last stack location used.
+The first number placed on the stack goes to location 511 ($1FF), and
+subsequent entries are built downward toward 256 ($100).  If more than
+256 numbers are pushed onto the stack, the Stack Pointer will start
+counting from 0 again, and an overflow error will result.  Likewise,
+if you try to pull more items off the stack than have been pushed on,
+an underflow error will result.  Most often, such errors will cause
+the system to go haywire, and nothing will operate until you turn the
+power off and on again.
+
+The stack is used by the system to keep track of the return addresses
+of machine language subroutines and interrupt calls and to save the
+contents of internal registers.  The stack can also be used by the
+programmer for temporary storage.  BASIC and the Kernal make heavy use
+of the stack.
+
+Microsoft BASIC uses part of the stack for a temporary work area.
+Therefore, the stack may be broken down into the following subregions:

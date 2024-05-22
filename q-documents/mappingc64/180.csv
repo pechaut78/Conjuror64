@@ -1,0 +1,25 @@
+question,answer
+"What is the purpose of the memory location at address $30F?","address           $30F           SPREG
+Storage Area for .P (Status) Register
+
+The Status (.P) register has seven different flags.  Their bit
+assignments are as follows:
+
+Bit 7 (bit value of 128) = Negative
+Bit 6 (bit value of 64)  = Overflow
+Bit 5 (bit value of 32)  = Not Used
+Bit 4 (bit value of 16)  = BREAK
+Bit 3 (bit value of 8)   = Decimal
+Bit 2 (bit value of 4)   = Interrupt Disable
+Bit 1 (bit value of 2)   = Zero
+Bit 0 (bit value of 1)   = Carry
+
+If you wish to clear any flag before a SYS, it is safe to clear them
+all with a POKE 783,0.  The reverse is not true, however, as you must
+watch out for the Interrupt disable flag.
+
+A 1 in this flag bit is equal to an SEI instruction, which turns off
+all IRQ interrupts (like the one that reads the keyboard, for
+example).  Turning off the keyboard could make the computer very
+difficult to operate!  To set all flags except for Interrupt disable
+to 1, POKE 783,247."

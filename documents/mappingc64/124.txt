@@ -1,0 +1,13 @@
+
+
+
+address       $F7-$F8        RIBUF
+Pointer: RS-232 Input Buffer
+
+When device number 2 (the RS-232 channel) is opened, two buffers of
+256 bytes each are created at the top of memory.  This location points
+to the address of the one which is used to store characters as they
+are received.  A BASIC program should always OPEN device 2 before
+assigning any variables to avoid the consequences of overwriting
+variables which were previously located at the top of memory, as BASIC
+executes a CLR after opening this device.

@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the BCS instruction?","The opcode for the BCS instruction is B0, which stands for Branch on Carry Set, and it is used to branch to a target location if the carry flag is set."
+"What is the addressing mode used by the BCS instruction?","The addressing mode used by the BCS instruction is the Relative addressing mode, which means that the target address is specified relative to the current program counter."
+"How many bytes does the BCS instruction occupy in memory?","The BCS instruction occupies 2 bytes in memory, which includes the opcode and the relative offset to the target location."
+"How many cycles does the BCS instruction take to execute?","The BCS instruction takes 2 cycles to execute, but this can increase to 3 or 4 cycles if the branch occurs to the same page or the next page, respectively."
+"What is the purpose of the BCS instruction?","The purpose of the BCS instruction is to branch to a target location if the carry flag is set, which is useful in conditional branching and loop control structures."
+"What happens if the branch occurs to the same page?","If the branch occurs to the same page, an additional cycle is added to the execution time, making it 3 cycles in total."
+"What happens if the branch occurs to the next page?","If the branch occurs to the next page, two additional cycles are added to the execution time, making it 4 cycles in total."
+"Can you give an example of a situation where the BCS instruction would be used?","A common situation where the BCS instruction would be used is in a loop that continues until a certain condition is met, such as a counter reaching zero, and the carry flag is set to indicate the condition has been met."
+"How does the BCS instruction interact with the carry flag?","The BCS instruction branches to the target location if the carry flag is set, which means that the instruction is dependent on the state of the carry flag to determine the flow of the program."
+"What is the significance of the relative offset in the BCS instruction?","The relative offset in the BCS instruction specifies the target location to branch to, and it is calculated relative to the current program counter, allowing for efficient and flexible branching."

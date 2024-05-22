@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $A?","address            $A             VERCK
+Flag: LOAD or VERIFY
+
+BASIC uses one Kernal routine to perform either the LOAD or VERIFY
+function, depending on whether the Accumulator (.A) is set to 0 or 1
+upon entry to the routine.  BASIC sets the value of VERCK to 0 for a
+LOAD, or 1 for a VERIFY.  Its contents are passed to the Kernal LOAD
+routine, which in turn stores it in location 147 ($93)."

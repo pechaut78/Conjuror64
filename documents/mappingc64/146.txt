@@ -1,0 +1,17 @@
+
+
+
+address          $28B           KOUNT
+Counter for Timing the Delay Between Key Repeats
+
+This location is used as a delay counter to determine how long to wait
+while a key is being held down until the next repeat printing of that
+key.
+
+The value here starts at 6.  If location 652 ($28C) contains a 0, the
+value in this location is counted down once every 1/60 second, so long
+as the same key is held down.  When this counter gets to 0, and if the
+repeat flag at 650 ($28A) allows that key to repeat, its ASCII
+equivalent will once again be placed in the keyboard buffer.  A value
+of 4 is then placed in location 651, allowing subsequent repeats to
+occur at a rate of 15 per second.

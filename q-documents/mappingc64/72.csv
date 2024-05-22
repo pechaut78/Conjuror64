@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $9A?","address           $9A            DFLTO
+Default Output (CMD) Device (Set to 3 for the Screen)
+
+The default value of this location is 3, which designates the screen
+as the current output device.  That value can be changed by the Kernal
+routine CHKOUT (62032, $F250), which uses this location to store the
+device number of the device whose file it defines as an output
+channel.
+
+BASIC calls CHKOUT whenever the command PRINT# or CMD is executed, but
+clears the channel after the PRINT# operation has been completed."

@@ -1,0 +1,23 @@
+
+
+
+address ($293-$297)
+RS-232 Pseudo 6551 Registers
+
+For serial Input/Output via the RS-232 port, the internal software of
+the Commodore 64 emulates the operation of a 6551 UART chip (that's
+Universal Asynchronous Receiver/Transmitter, for you acronym buffs),
+also known as an ACIA (Asynchronous Communications Interface Adapter).
+
+These RAM locations are used to mimic the functions of that chip's
+hardware command, control, and status registers.  Although RAM
+locations are allocated for mimicking the 6551's ability to use either
+an on-board baud rate generator or an external clock crystal, this
+function is not implemented by the internal software.
+
+Provisions have been made for the user to communicate with these
+registers through the RS-232 OPEN command.  When device 2 is opened, a
+filename of up to four characters may be appended.  These four
+characters are copied to locations 659-662 ($293-$296), although the
+last two, which specify a nonstandard baud rate, are not used because
+that feature is not implemented.

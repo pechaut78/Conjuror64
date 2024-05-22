@@ -1,0 +1,33 @@
+question,answer
+"What are the features and uses of the 6526 CIA (Complex Interface Adapter) in the Commodore 64 computer?","6526 CIA
+The C64 has two identical 6526 CIAs (Complex Interface Adapter) that are mostly used for I/O. One CIA
+features 16 general purpose I/O pins (8 bit port A and
+8 bit port B) that can be used either as an input or an
+output, two programmable timers and a real-timeclock.
+The timers have 16 bit counters and count down by
+one either on each clock cycle, or on an external
+event, or on a timer A underflow (in the case of timer
+B). This allows concatenating the timers to one 32 bit
+timer. On an underflow, the CIA can be programmed
+to cause an IRQ or to send data through a serial shift
+register. The CIA also supports receiving data
+through a shift register.
+The real-time-clock has a resolution of 1/10 of seconds and supports generating interrupts at a certain
+time.
+CIA 1 is hooked up to the keyboard and the joystick
+ports. Since the keyboard consists of 64 keys (plus
+SHIFT LOCK, which is parallel to the left SHIFT key,
+and RESTORE, which is directly connected to the
+CPU's NMI line), these can be laid out in a 8x8 matrix
+of lines, key presses connecting the intersections. One
+side of the matrix is connected to port A (output), and
+the perpendicular side is connected to port B (input).
+The keyboard driver can now write the values of $01,
+$02, $04 etc. in port A and test the input of port B to
+see which keys are pressed. The two joysticks are
+connected in parallel to port A and port B, so they can
+cause spurious keyboard events.
+CIA 2 is hooked up to the IEC bus, and I/O lines control the VIC bank. The rest is exposed on the user
+port, and can be used for RS-232.
+KERNAL uses CIA 1 for the 50 Hz system timer, but,
+apart from the ports, doesn't use any of the extra features of either CIA."

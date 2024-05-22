@@ -1,0 +1,11 @@
+question,answer
+"what is required to draw complex shapes on the C64?","All that is required is a coordinate file which holds all the necessary drawing coordinates and status information such as skip to the next point and end of file."
+"how can the coordinate data be stored?","The easiest way to store this sort of data is in BASIC DATA statements."
+"what is the range of the X coordinate?","The X coordinate is in the range 0—319."
+"what is the range of the Y coordinate?","The Y coordinate is in the range 0—199."
+"what does the status information —1 indicate?","The status information —1 indicates skip to the next point."
+"what does the status information —2 indicate?","The status information —2 indicates the end of the file."
+"what are the two ways to draw complex shapes on the C64?","The two ways to draw complex shapes on the C64 are by using the BASIC PLOT and LINEDRAW routines or the much faster machine code routines described in Chapter 10."
+"what type of data is stored in the coordinate file?","The coordinate file holds all the necessary drawing coordinates and status information."
+"how can complex shapes be drawn on the C64?","Complex shapes can be drawn on the C64 by using the BASIC PLOT and LINEDRAW routines or the much faster machine code routines described in Chapter 10, and a coordinate file which holds all the necessary drawing coordinates and status information."
+"what is the purpose of the coordinate file?","The purpose of the coordinate file is to hold all the necessary drawing coordinates and status information such as skip to the next point and end of file."

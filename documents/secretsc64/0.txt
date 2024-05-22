@@ -1,0 +1,31 @@
+Is the C64 64k ? Can I use all the 64k of ram?
+
+What actually happens is that 16K of the ROM overlays 16K 
+of RAM. The system is arranged such that you always read 
+the information from the ROM and not the RAM underneath 
+it. The other 4K of ROM also overlays RAM but this ROM is 
+invisible to the user and the 4K of RAM is available for 
+programs. 
+
+(It is possible to switch the ROMs in and out of the me- 
+mory map to gain extra RAM space. However this is not 
+easy, or advisable, from BASIC and so we have not included 
+this facility in this book.) 
+
+And Smaller and Smaller and Smaller ... 
+
+What we really have then, is a computer with 48K of RAM 
+and 16K of ROM. Unfortunately, not all of this RAM is 
+available to us for writing programs. This is because a further 
+6K of RAM is required by BASIC and the operating system 
+for storing important system information. (Pointers, tables 
+etc.) 
+
+We are now down to 42K of RAM which is available to us 
+for programs, this is called the user RAM, However, there is 
+more to come (or rather, go) because only 38K of the user 
+RAM is available for writing BASIC programs. The other 4K 
+is available to us, but it cannot be used for storing BASIC 
+programs. Us main use is to store machine code routines 
+(this is where the BASIC extension program in Chapter 10 
+is located). 

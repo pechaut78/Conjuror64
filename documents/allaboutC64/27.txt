@@ -1,0 +1,19 @@
+
+
+C64 Basic:
+To avoid the problem of GOTO forming an infinite loop,
+conditional logic must be used. The combination of IF-THEN
+with GOTO is one way to achieve this.
+• A variable can be used in a LET statement such as A=A+1
+to count how many times a loop is executed. A variable used
+in this manner is called a counting variable.
+• By basing conditional logic on a counting variable, you can
+have a program control exactly how many times the loop is
+executed.
+• Sometimes the value of a counting variable is used within a
+loop, so that something is done differently every time a loop
+is executed.
+• Because it is used so often, there are two short forms to the
+IF-THEN and GOTO combination. The first is to make the
+GOTO optional, and the second is to make the THEN
+optional.

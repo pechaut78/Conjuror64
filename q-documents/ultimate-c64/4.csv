@@ -1,0 +1,29 @@
+question,answer
+"What are the key features and characteristics of the 6502 CPU, including its architecture, registers, and instruction set?","6502 CPU
+The CPU inside the C64 is a 0.985 MHz (on PAL)
+MOS 6510, which is a close derivative of the wellknown 8 bit little-endian MOS 6502. The 6502 was
+introduced in 1975 by MOS Technology, a company
+formed earlier the same year by former Motorola engineers, headed by Chuck Peddle. The philosophy of
+the 6502 was to have a reduced instruction set and a
+small register file, making it simpler and faster than
+CPUs like the Z80 at the same clock speed, as well as
+cheaper to manufacture.
+Unlike other CPUs, the 6502 does not have a set of
+general purpose registers. Instead, it has a single accumulator A (for arithmetic and logic), two index registers X and Y (for incrementing, decrementing and
+indexing memory) and a stack pointer. All these registers are 8 bits. The processor status, consisting of
+the negative (N), overflow (V), break (B), decimal (D),
+interrupt (I), zero (Z) and carry (C) flags is exposed as
+register P. The program counter (PC) is 16 bits wide.
+The fact that the stack pointer is 8 bit means that the
+stack is confined to the area between $0100 and
+$01FF in the address space, i.e. the upper half of the
+effective stack pointer is hard-coded to $01. There is
+another special area in the address space: The first
+256 bytes, at $0000 to $00FF are referred to as the
+zero page (ZP). Many instructions support special
+encodings for zero page addresses, which saves one
+byte in the instruction encoding as well as at least one
+cycle of execution time. This can be seen as an extension of the register file to another 256 (though external) registers.
+All opcodes are one byte, and have 0, 1 or 2 byte operands. The 8x8 opcode matrix is somewhat logical
+(e.g. branch instructions are encoded as $10, $30,
+$50, ...), but there is no easy rule to construct the opcode table. Nevertheless, the opcode table is a minimal encoding for optimal decoding in the 6502's internal PLA ROM."

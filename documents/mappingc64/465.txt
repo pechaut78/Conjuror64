@@ -1,0 +1,9 @@
+
+
+
+address              $DC09          TODSEC
+Time of Day Clock Seconds
+
+Bits 0-3:  Second digit of Time of Day seconds (BCD)
+Bits 4-6:  First digit of Time of Day seconds (BCD)
+Bit 7:  Unused

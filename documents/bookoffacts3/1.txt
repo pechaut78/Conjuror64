@@ -1,0 +1,8 @@
+
+CURSOR KEYS - The cursor keys are two keys on the lower right hand
+side of the keyboard. These keys are marked with the letters CRSR,
+and arrows pointing up/down on one and left/right on the other. The
+key on the left will move the cursor down when pressed, and up when
+used with the SHIFT key. The cursor key on the right will move the
+cursor right when pressed, and left when used with the SHIFT key. It is
+possible to move the cursor anywhere on the screen using these keys.

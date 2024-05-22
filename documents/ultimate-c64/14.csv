@@ -1,0 +1,11 @@
+question,answer
+"Who developed the BASIC interpreter for 8080-based home computers?","Microsoft"
+"What was the character I/O interface of Microsoft BASIC?","a minimal character I/O interface to the machine's monitor"
+"What was the year when MOS 6502 was released?","1975"
+"Who licensed the BASIC interpreter for the 1977 PET?","Commodore"
+"What was the version of BASIC that Commodore added several extensions to?","version 4"
+"What was the version of BASIC that Commodore shipped on the VIC-20?","BASIC V2"
+"What is the memory address range where the Commodore 64 version of BASIC runs?","$A000-$BFFF"
+"What is the command to show lines in Microsoft BASIC?","LIST"
+"How can lines be modified in Microsoft BASIC?","by re-typing them"
+"What is the feature of Commodore BASIC that allows users to extend it arbitrarily?","jumping over a jump table in RAM"

@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $E716?","address              $E716
+Output to the Screen
+
+This is the main entry point for the part of CHROUT that handles
+output to the screen device.  It takes an ASCII character number, and
+tests if the character is printable.  If it is, it prints it (taking
+into consideration the reverse flag, if any inserts are left, etc.).
+If it is a nonprinting character, the routine performs the appropriate
+cursor movement, color change, screen clearing, or whatever else might
+be indicated."

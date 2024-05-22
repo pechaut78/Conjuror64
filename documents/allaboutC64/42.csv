@@ -1,0 +1,11 @@
+question,answer
+"What is a substring in C64 Basic?","A substring in C64 Basic is a part of a string that consists of contiguous characters. It is different from other functions in that its names are not always three characters long, and it takes multiple arguments of different types."
+"How do the LEFTS and RIGHTS functions work in C64 Basic?","The LEFTS and RIGHTS functions in C64 Basic need a string for the first argument and a number for the second argument. The substring returned is the leftmost or rightmost characters in the string, and the length of the substring is determined by the second argument."
+"How can LEFT$ and RIGHTS be used in C64 Basic?","LEFT$ and RIGHTS can be used in C64 Basic to split a character string into two parts, thereby reversing the process of concatenation."
+"What is the first argument of the LEFTS and RIGHTS functions in C64 Basic?","The first argument of the LEFTS and RIGHTS functions in C64 Basic is a string."
+"What is the second argument of the LEFTS and RIGHTS functions in C64 Basic?","The second argument of the LEFTS and RIGHTS functions in C64 Basic is a number that determines the length of the substring returned."
+"What is the difference between LEFTS and LEFT$ in C64 Basic?","LEFTS and LEFT$ are similar in C64 Basic, but LEFT$ is the standard function and LEFTS is an extended function."
+"What is the difference between RIGHTS and RIGHT$ in C64 Basic?","RIGHTS and RIGHT$ are similar in C64 Basic, but RIGHT$ is the standard function and RIGHTS is an extended function."
+"What is the purpose of the substring functions in C64 Basic?","The purpose of the substring functions in C64 Basic is to extract a part of a string based on a given position and length."
+"What is the syntax of the LEFTS function in C64 Basic?","The syntax of the LEFTS function in C64 Basic is: LEFTS(string, length)"
+"What is the syntax of the RIGHTS function in C64 Basic?","The syntax of the RIGHTS function in C64 Basic is: RIGHTS(string, length)"

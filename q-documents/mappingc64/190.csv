@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $31E-$31F?","address      $31E-$31F      ICHKIN
+Vector to Kernal CHKIN Routine (Currently at 61966 ($F20E))"

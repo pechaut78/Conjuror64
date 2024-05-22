@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $B78B?","address         $B78B          ASC
+Perform ASC
+
+This routine gets the first character of the string in the .Y register
+(if it's not a null string).  Then it calls the part of POS that
+converts a one- byte integer in .Y to a floating point number."

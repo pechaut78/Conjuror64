@@ -1,0 +1,5 @@
+
+
+
+address              $E8B3
+If at the End of a Screen Line, Move Cursor to the Next Line

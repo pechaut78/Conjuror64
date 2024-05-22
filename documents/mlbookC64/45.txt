@@ -1,0 +1,10 @@
+
+The decimal flag
+This flag determines whether
+the processor performs
+addition and subtraction in binary (indicated by a
+cleared flag, as we have already learned) or in binary-
+coded decimal (BCD). This is the case if the flag is set.
+The microprocessor then works with BCD numbers. The
+instruction SED (set decimal) sets the flag, CLD (clear
+decimal) clears the flag.

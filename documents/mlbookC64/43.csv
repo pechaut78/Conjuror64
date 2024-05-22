@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the DEX instruction in C64 assembly language?","The DEX instruction in C64 assembly language is used to decrement the contents of a memory cell without affecting the value of the accumulator. It functions similarly to the INC instruction, but instead of incrementing, it decrements the value of the memory cell."
+"How does the DEX instruction affect the accumulator in C64 assembly language?","The DEX instruction does not affect the accumulator in C64 assembly language. It is used solely to decrement the contents of a memory cell."
+"What is the equivalent instruction to DEX in terms of its effect on memory cells in C64 assembly language?","The INC instruction is equivalent to the DEX instruction in terms of its effect on memory cells in C64 assembly language, as both instructions modify the value of a memory cell without affecting the accumulator."
+"What is the operation of the DEX instruction in C64 assembly language?","The operation of the DEX instruction in C64 assembly language involves decrementing the contents of a memory cell by 1."
+"What is the impact of the DEX instruction on the memory cell in C64 assembly language?","The DEX instruction decreases the value of the memory cell by 1 in C64 assembly language."
+"What is the primary use of the DEX instruction in C64 assembly language?","The primary use of the DEX instruction in C64 assembly language is to decrement the contents of a memory cell without affecting the value of the accumulator."
+"How does the DEX instruction modify the memory cell in C64 assembly language?","The DEX instruction modifies the memory cell by decreasing its value by 1 in C64 assembly language."
+"What is the effect of the DEX instruction on the memory cell in C64 assembly language in comparison to the accumulator?","The DEX instruction affects only the memory cell and not the accumulator in C64 assembly language."
+"What is the impact of the DEX instruction on the memory cell value in C64 assembly language?","The DEX instruction decreases the value of the memory cell by 1 in C64 assembly language."
+"What is the operation of the DEX instruction on a memory cell in C64 assembly language?","The DEX instruction operates by decrementing the value of a memory cell by 1 in C64 assembly language."

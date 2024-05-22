@@ -1,0 +1,13 @@
+
+READING THE ERROR CHANNEL:
+10 OPEN15,8,15
+10 INPUT"15,A$,B$,C$,D$
+30 PRINT A$,B$,C$,D$
+EXPLANATION - The basic routine above will read the error channel.
+The purpose of reading the error channel, is to find out what type of
+error condition exists, if the red light on the drivestarts to blink and the
+drive motor stops. Load and run the program above. The following ian explanation of the program above: After opening a channel, 4
+variables are read and describes the error condition. The first variable
+is the error number, the second is the error description, the third is the
+track number on which the error occurred, and the fourth Is the block
+number of the track. Lastly the 4 variables are displayed on the screen.

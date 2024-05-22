@@ -1,0 +1,8 @@
+
+
+
+address              $DC08          TODTEN
+Time of Day Clock Tenths of Seconds
+
+Bits 0-3:  Time of Day tenths of second digit (BCD)
+Bits 4-7:  Unused

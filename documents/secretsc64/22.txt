@@ -1,0 +1,15 @@
+
+
+SOUND on C64
+
+Computer generated sound and music is nothing new. every 
+time you turn on a radio you can hear some excellent 
+examples of it. Not until fairly recently however, have home 
+computers been able to generate high quality sound with any 
+degree of control. The sound generator chip fitted to the 
+Commodore 64 is one of the most flexible devices currently 
+available, and it can be used to produce a wide variety of 
+sounds. From a programmers point of view however, this 
+extra flexibility can mean extra complexity, because there 
+are a large number of parameters which must be specified to 
+produce even the simplest of sounds. 

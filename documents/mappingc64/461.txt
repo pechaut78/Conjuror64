@@ -1,0 +1,5 @@
+
+
+
+address              $DC05          TIMAHI
+Timer A (high byte)

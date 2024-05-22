@@ -1,0 +1,13 @@
+
+C64 Basic:
+-Several subroutines can be used in one program.
+• When one subroutine calls another subroutine, the sub-
+routines are nested,
+• In order for nested subroutines to work without creating a
+RETURN WITHOUT GOSUB error, exactly one RETURN
+must be executed for every GOSUB executed.
+• The Commodore 64 cannot nest deeper than 23 levels. Nest-
+ing beyond this limit causes the OUT OF MEMORY error.
+• The third form of repetition, recursion, happens when a sub
+routine calls itself. For our purposes, recursion is best
+avoided.

@@ -1,0 +1,103 @@
+
+
+
+address              $D404          VCREG1
+Voice 1 Control Register
+
+Bit 0:  Gate Bit:  1=Start attack/decay/sustain, 0=Start release
+Bit 1:  Sync Bit:  1=Synchronize Oscillator with Oscillator 3 frequency
+Bit 2:  Ring Modulation:  1=Ring modulate Oscillators 1 and 3
+Bit 3:  Test Bit:  1=Disable Oscillator 1
+Bit 4:  Select triangle waveform
+Bit 5:  Select sawtooth waveform
+Bit 6:  Select pulse waveform
+Bit 7:  Select random noise waveform
+
+
+Bit 0.  Bit 0 is used to gate the sound.  Setting this bit to a 1
+while selecting one of the four waveforms will start the
+attack/decay/sustain part of the cycle.  Setting this bit back to 0
+(while keeping the same waveform setting) anytime after a note has
+started playing will begin the release cycle of the note.  Of course,
+in order for the gate bit to have an effect, the frequency and
+attack/decay/sustain/release (ADSR) registers must be set, as well as
+the pulse width, if necessary, and the volume control set to a nonzero
+value.
+
+Bit 1.  This bit is used to synchronize the fundamental frequency of
+Oscillator 1 with the fundamental frequency of Oscillator 3, allowing
+you to create a wide range of complex harmonic structures from voice
+1.  Synchronization occurs when this bit is set to 1.  Oscillator 3
+must be set to some frequency other than zero, but no other voice 3
+parameters will affect the output from voice 1.
+
+Bit 2.  When Bit 2 is set to 1, the triangle waveform output of voice
+1 is replaced with a ring modulated combination of Oscillators 1 and
+3.  This ring modulation produces nonharmonic overtone structures that
+are useful for creating bell or gong effects.
+
+Bit 3.  Bit 3 is the test bit.  When set to 1, it disables the output
+of the oscillator.  This can be useful in generating very complex
+waveforms (even speech synthesis) under software control.
+
+Bit 4.  When set to 1, Bit 4 selects the triangle waveform output of
+Oscillator 1.  Bit 0 must also be set for the note to be sounded.
+
+Bit 5.  This bit selects the sawtooth waveform when set to 1.  Bit 0
+must also be set for the sound to begin.
+
+Bit 6.  Bit 6 chooses the pulse waveform when set to 1.  The harmonic
+content of sound produced using this waveform may be varied using the
+Pulse Width Registers.  Bit 0 must be set to begin the sound.
+
+Bit 7.  When Bit 7 is set to 1, the noise output waveform for
+Oscillator 1 is set.  This creates a random sound output whose
+waveform varies with a frequency proportionate to that of Oscillator
+1.  It can be used to imitate the sound of explosions, drums, and
+other unpitched noises.
+
+One of the four waveforms must be chosed in order to create a sound.
+Setting more than one of these bits will result in a logical ANDing of
+the waveforms.  Particularly, the combination of the noise waveform
+and another is not recommended.
+
+Location Range: 54277-54278 ($D405-$D406)
+Voice 1 Envelop (ADSR) Control
+
+When a note is played on a musical instrument, the volume does not
+suddenly rise to a peak and then cut off to zero.  Rather, the volume
+builds to a peak, levels off to an intermediate value, and then fades
+away.  This creates what is known as a volume envelope.
+
+The first phase of the envelope, in which the volume builds to a peak,
+is known as the attack phase.  The second, in which it declines to an
+intermediate level, is called the decay phase.  The third, in which
+the intermediate leve of volume is held, is known as the sustain
+period.  The final interval, in which the sound fades away, is called
+the release part of the cycle.
+
+The SID chip allows the volume envelope of each voice to be
+controlled, so that specific instruments may be imitated, or new
+sounds created.  This is done via the attack/decay and sustain/release
+registers.  Each register devotes four bits (which can store a number
+from 0 to 15) to each phase of the cycle.  When a note is gated by
+writing a 1 to a waveform bit and to Bit 0 of the Control Register,
+the attack cycle begins.
+
+The volume of the sound builds to a peak over the period of time
+specified by the high nybble of the attack/decay register.  Once it
+has reached the peak volume, it falls to the intermediate level during
+the period indicated by the low nybble of the attack/decay register
+(this is the decay phase).  The volume of this intermediate or sustain
+level is selected by placing a value in the high nybble of the
+sustain/release register.  This volume level is held until a 0 is
+written to the gate bit of the control register (while leaving the
+waveform bit set).  When that happens, the release phase begins, and
+the volume of the sound begins to taper off during the period
+indicated by the low nybble of the sustain/release register.
+
+You may notice the volume of the sound does not quite get to 0 at the
+end of the release cycle, and you may need to turn off the sound to
+get rid of the residual noise.  You can do this either by setting the
+waveform bit back to 0, changing the frequency to 0, or setting the
+volume to 0.

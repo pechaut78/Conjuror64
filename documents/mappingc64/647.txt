@@ -1,0 +1,8 @@
+
+
+
+address              $FBC8
+Write Data to Cassette--Part 2 (IRQ)
+
+This IRQ handler routine is one part of the write data to cassette
+routine

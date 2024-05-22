@@ -1,0 +1,11 @@
+question,answer
+"What is the total memory space available on a Commodore 64?","The total memory space available on a Commodore 64 is 64K, which is divided into 16K ROM, 6K of system RAM, 38K of BASIC user RAM, and 4K of other user RAM."
+"How does the memory map of the standard BASIC configuration look like?","The memory map of the standard BASIC configuration contains 16K ROM, 6K of system RAM, 38K of BASIC user RAM, and 4K of other user RAM, which fits into the 64K memory space available."
+"What is the advantage of having a 64K RAM machine?","One of the main advantages of having a 64K RAM machine is that you will never have to buy add-on RAM packs just to play the latest version of a game or use a specific software, as any software produced for a Commodore 64 will run on your machine."
+"What are ROM cartridges, and what do they contain?","ROM cartridges, or add-on ROM packs, contain specialized programs such as games, word processors, machine code assemblers, etc., and they usually contain 8K of ROM which overlays 8K of user RAM."
+"How much user RAM is overlaid by a ROM cartridge?","A ROM cartridge overlays 8K of user RAM, specifically the top 8K of the BASIC program area, from address 32768 decimal to 40959 decimal."
+"How much RAM is available for BASIC programs with an 8K ROM cartridge fitted?","Even with an 8K ROM cartridge fitted, the standard Commodore 64 has a total of 30K of RAM available for BASIC programs."
+"How much RAM is available for machine code work with an 8K ROM cartridge fitted?","With an 8K ROM cartridge fitted, the standard Commodore 64 has a further 4K available for machine code work."
+"How does the Commodore 64 compare to other home computers in terms of RAM?","Compared to many other home computers which only have 48K or even 32K of RAM fitted as standard, the Commodore 64 really does give you more memory for your money."
+"What is the significance of the top 8K of the BASIC program area?","The top 8K of the BASIC program area, from address 32768 decimal to 40959 decimal, is overlaid by a ROM cartridge, which contains 8K of ROM."
+"What is the total amount of RAM available on a Commodore 64 with an 8K ROM cartridge fitted?","The total amount of RAM available on a Commodore 64 with an 8K ROM cartridge fitted is 34K, comprising 30K for BASIC programs and 4K for machine code work."

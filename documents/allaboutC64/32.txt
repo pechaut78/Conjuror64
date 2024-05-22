@@ -1,0 +1,24 @@
+
+
+C64 Basic:
+The syntax of the INPUT statement is the keyword INPUT,
+an optional character string terminated with a semicolon,
+and a variable list.
+• If the character string is used, it must be in quotes, and it
+must be followed by a semicolon, or a SYNTAX ERROR will
+occur.
+• When INPUT is executed, the character string is printed first,
+if one was provided.
+• The INPUT statement then prints a question mark, and
+waits for the user to type one or more numbers and press
+RETURN. During this time the program is executing just
+the INPUT statement.
+• The numbers entered are assigned to the variables in the
+variable list.
+• If not enough numbers are entered, a second prompt,
+consisting of two question marks, is printed, and the com-
+puter waits for more numbers to be entered.
+• If too many numbers are entered, a warning message that
+says EXTRA IGNORED is printed, and only the first few
+values are assigned to variables. The extra numbers are not
+used.

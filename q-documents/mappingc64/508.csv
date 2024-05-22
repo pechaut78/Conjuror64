@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $E264?","address              $E264          COS
+Perform COS
+
+COS is executed by adding PI/2 to the contents of FAC1 and dropping
+through to SIN."

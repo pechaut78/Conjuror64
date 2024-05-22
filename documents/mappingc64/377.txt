@@ -1,0 +1,42 @@
+The 63 numbers, displayed three per line opposite the bit patters they
+represent, are the values that would have to be put in the sprite
+shape data area in order to display this cross using sprite graphics.
+
+Even after the sprite shape data has been placed in memory, and the
+Sprite Data Pointer has been set to display that block of data bytes
+as the sprite shape, there are still several steps that must be taken
+in order to display the sprite on the screen.
+
+The proper bit of the Sprite Display Enable Register at 53269 ($D015)
+must be set to 1 in order to turn on the sprite display.  A horizontal
+and vertical screen position must be selected for the sprite by means
+of the horizontal and vertical position registers (53248-53264,
+$D000-$D010).  Finally, the color value of the sprite should be placed
+in the appropriate Sprite Color Register (53287-53294, $D027-$D02E).
+
+Once you have the sprite on the screen, animation is fairly simple to
+achieve.  Moving the sprite is as easy as changing the values in the
+sprite position registers.  Changing the sprite shape can be
+accomplished by merely changing the Sprite Data Pointer to point to
+another block of shape data in memory.
+
+There are also some optional sprite graphics features available which
+enhance its flexibility.  Sprite expand registers allow you to make
+each sprite twice as wide as normal, twice as tall, or both.
+Collision detection registers let you know when a sprite shape
+overlaps a regular text character or bitmap dot, or if two sprites are
+touching.
+
+If a sprite is positioned in the same place on the screen as a text
+character or bitmap dot, a Priority Register allows you to choose
+whether the sprite or the normal graphics will by displayed.  This
+enables three- dimensional effects by letting you choose whether the
+sprite goes in front of or behind other objects on the screen.
+
+Finally, any sprite may be selected for multicolor display, using the
+register at location 53276 ($D01C).  In this mode, as in multicolor
+text and bitmap modes, pairs of bits are used to determine the color
+of each double- width dot.  The possible color values which may be
+selected are those of Background Color Register 0, the Sprite Color
+Register, or the two color values in the Sprite Multicolor Registers
+at 53285-53286 ($D025-$D026).

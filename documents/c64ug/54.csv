@@ -1,0 +1,11 @@
+question,answer
+"what is the function of register 21 in sprite management?","Register 21 is used to control the appearance of a sprite, with a value of 1 making the sprite appear and a value of 0 making it disappear."
+"what is the purpose of locations 2040-2047 in sprite management?","Locations 2040-2047 are used to store the sprite data, with each location corresponding to a specific sprite, and the data is read from these locations to display the sprite on the screen."
+"what is the procedure to make a sprite appear on the screen?","To make a sprite appear on the screen, you need to POKE a 1 into location 21, which turns on the sprite, and then set the sprite pointer to the location where the sprite data is stored, and finally POKE the actual data into memory."
+"what is the function of registers 2-15 in sprite management?","Registers 2-15 are paired like registers 0 and 1, which control the X and Y coordinates of sprite 0, and are used to control the X and Y coordinates of sprites 1-7."
+"what is the purpose of register 0 in sprite management?","Register 0 is used to control the X coordinate of sprite 0."
+"how do you expand a sprite in the 'X' direction?","To expand a sprite in the 'X' direction, you need to use location 29, which is used to expand the sprite in the 'X' direction."
+"what is the purpose of registers 39-46 in sprite management?","Registers 39-46 are used to control the color of sprites 0-7."
+"what is the purpose of register 16 in sprite management?","Register 16 is used to control the Most Significant Bit of the X coordinate of a sprite."
+"how do you move a sprite around the screen?","To move a sprite around the screen, you need to update the X and Y coordinates of the sprite through a loop, by POKEing new values into the corresponding registers."
+"what is the purpose of register 23 in sprite management?","Register 23 is used to expand a sprite in the 'Y' direction."

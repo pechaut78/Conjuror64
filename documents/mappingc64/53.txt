@@ -1,0 +1,10 @@
+
+
+
+address       $69-$6E        FAC2
+Floating Point Accumulator #2
+
+A second Floating Point Accumulator, used in conjunction with Floating
+Point Accumulator #1 in the evaluation of products, sums,
+differences--in short, any operation requiring more than one value.
+The format of this accumulator is the same as FAC1.

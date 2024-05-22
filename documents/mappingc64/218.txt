@@ -1,0 +1,9 @@
+
+
+
+address   $A38A-$A3B7    FNDFOR
+Find FOR on Stack
+
+This routine searches the stack for the blocks of data entries which
+are stored by each FOR command.  For more information on the data that
+FOR places on the stack, see location 256 ($100).

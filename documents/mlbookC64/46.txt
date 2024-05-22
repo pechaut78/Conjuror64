@@ -1,0 +1,7 @@
+
+The interrupt flag
+The I flag determines whether the processor is ready to
+accept an interrupt or not. If the I flag is set with SEI
+(set interrupt disable), no interrupts will be accepted,
+while if it is cleared with CLI (clear interrupt
+disable), the processor can accept interrupts.

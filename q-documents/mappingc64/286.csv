@@ -1,0 +1,14 @@
+question,answer
+"What is the purpose of the memory location at address $B1AA?","address         $B1AA
+Convert a Floating Point Number to a Signed Integer in .A and .Y Registers
+
+This subroutine calls AYINT, below, which checks to make sure that the
+number in the Floating Point Accumulator is between 32767 and -32768,
+and converts it to a 16-bit signed integer in 100-101 ($64-$65), high
+byte first.  It leaves the high byte of the integer in the
+Accumulator, and the low byte in the .Y register.
+
+Although this routine does not appear to be referenced anywhere in
+BASIC, the vector at locations 3-4 points to its address.  Presumably,
+it is provided for the benefit of the user who wishes to pass
+parameters in a USR call, or the like."

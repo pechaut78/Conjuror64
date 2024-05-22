@@ -1,0 +1,15 @@
+
+
+
+address           $C5            LSTX
+Matrix Coordinate of Last Key Pressed, 64=None Pressed
+
+During every normal IRQ interrput this location is set with the value
+of the last keypress, to be used in keyboard debouncing.  The
+Operating System can check if the current keypress is the same as the
+last one, and will not repeat the character if it is.
+
+The value returned here is based on the keyboard matrix values as set
+forth in the explanation of location 56320 ($DC00).  The values
+returned for each key pressed are shown at the entry for location 203
+($CB).

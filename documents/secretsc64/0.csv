@@ -1,0 +1,11 @@
+question,answer
+"Can I use all 64k of RAM on the C64?","No, 16K of ROM overlays 16K of RAM, and another 4K of ROM overlays RAM, but this ROM is invisible to the user and the 4K of RAM is available for programs, leaving 48K of RAM, but only 42K is available for user programs after accounting for system information, and only 38K of that is available for writing BASIC programs."
+"What happens when you try to access the overlaid RAM?","The system is arranged such that you always read the information from the ROM and not the RAM underneath it."
+"What is the purpose of the 4K of ROM that overlays RAM?","This ROM is invisible to the user and the 4K of RAM is available for programs."
+"Can I switch the ROMs in and out of the memory map?","Yes, it is possible to switch the ROMs in and out of the memory map to gain extra RAM space, but this is not easy, or advisable, from BASIC."
+"How much RAM is required by BASIC and the operating system?","6K of RAM is required by BASIC and the operating system for storing important system information, such as pointers and tables."
+"What is the user RAM on the C64?","The user RAM is the 42K of RAM that is available to us for programs, after accounting for system information."
+"What is the main use of the remaining 4K of user RAM?","The main use of the remaining 4K of user RAM is to store machine code routines, such as the BASIC extension program in Chapter 10."
+"Can I use the entire 64k of RAM for writing BASIC programs?","No, only 38K of the user RAM is available for writing BASIC programs."
+"What is the total amount of RAM available on the C64?","The total amount of RAM available on the C64 is 48K, but not all of it is available for writing programs."
+"Is it possible to use all of the C64's RAM for programming?","No, due to the overlaying of ROM and the system's use of RAM for storing important information, not all of the C64's RAM is available for programming."

@@ -1,0 +1,11 @@
+question,answer
+"What is the primary function of the SCRATCH command in Commodore 64 Basic 7.0?","The primary function of the SCRATCH command is to erase unwanted programs and files from diskettes, freeing up the occupied space for use by other files and programs."
+"What type of files can be erased using the SCRATCH command?","The SCRATCH command can be used to erase either a single file or several files at once, allowing for flexibility in managing disk space."
+"What is the benefit of using the SCRATCH command?","The benefit of using the SCRATCH command is that it allows you to free up space on your diskettes, making room for new files and programs, and keeping your disk organized."
+"Can the SCRATCH command be used to erase multiple files at once?","Yes, the SCRATCH command can be used to erase multiple files at once via pattern-matching, making it a convenient tool for managing disk space."
+"What is the purpose of pattern-matching in the SCRATCH command?","The purpose of pattern-matching in the SCRATCH command is to allow users to erase multiple files at once, based on a specific pattern or criteria, making it easier to manage disk space."
+"In what version of Basic is the SCRATCH command available?","The SCRATCH command is available in Commodore 64 Basic 7.0."
+"What happens to the space occupied by erased files?","The space occupied by erased files is freed up for use by other files and programs, allowing for more efficient use of disk space."
+"Can the SCRATCH command be used to erase programs as well as files?","Yes, the SCRATCH command can be used to erase unwanted programs as well as files, making it a useful tool for managing disk space."
+"What is the advantage of using the SCRATCH command to erase files?","The advantage of using the SCRATCH command to erase files is that it allows for efficient management of disk space, keeping your disk organized and free of clutter."
+"How does the SCRATCH command help with disk management?","The SCRATCH command helps with disk management by allowing users to erase unwanted files and programs, freeing up space and keeping the disk organized."

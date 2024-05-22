@@ -1,0 +1,11 @@
+question,answer
+"What are the three distinguishing characteristics of a variable in C64 Basic?","The three distinguishing characteristics of a variable in C64 Basic are its name, value, and type."
+"What does the GET statement do in C64 Basic?","The GET statement in C64 Basic assigns the indicated string variable the null value if no key is pressed. Otherwise, a single character will be assigned, according to the key pressed."
+"What is the use of the INPUT statement in C64 Basic?","The INPUT statement in C64 Basic is used to input strings longer than one character."
+"What is the effect of pressing RETURN only in response to an input prompt of ? in C64 Basic?","Pressing RETURN only in response to an input prompt of ? in C64 Basic does not change the value of the variable being assigned."
+"What happens when entering nothing for ?? in C64 Basic?","Entering nothing for ?? in C64 Basic causes all unassigned string variables in the variable list to be assigned the null string."
+"Can string variables be included in the variable list for READ in C64 Basic?","Yes, string variables can be included in the variable list for READ in C64 Basic."
+"Are quote marks required when using a character string in DATA statements in C64 Basic?","The quote marks that delimit a character string are optional when used in DATA statements in C64 Basic. They only have to be used when the string includes a comma or colon as one of its characters."
+"What is the effect of the null string in C64 Basic?","The null string in C64 Basic is an empty string, which can be assigned to a string variable using the GET or INPUT statements or by entering nothing for ??."
+"What is the purpose of the INPUT statement in C64 Basic compared to the GET statement?","The INPUT statement in C64 Basic is used to input strings longer than one character, while the GET statement is used to assign a single character or the null value to a string variable."
+"What is the difference between using quote marks and not using them when using a character string in DATA statements in C64 Basic?","When using a character string in DATA statements in C64 Basic, quote marks are optional unless the string includes a comma or colon as one of its characters. In this case, using quote marks ensures that the string is interpreted correctly."

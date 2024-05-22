@@ -1,0 +1,3 @@
+In addition to these we will also use CHRS(1 13) which will 
+print a small ball character from the graphics part of the 
+character set. 

@@ -1,0 +1,9 @@
+
+
+
+address              $ECE7
+Text for Keyboard Buffer When SHIFT/RUN is Pressed
+
+When the SHIFT and RUN keys are pressed, the ASCII text stored here is
+forced into the keyboard buffer.  That text is LOAD, carriage return,
+RUN, carriage return.

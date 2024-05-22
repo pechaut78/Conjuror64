@@ -1,0 +1,9 @@
+
+
+
+address              $#F4A
+Set the Word Length For the Current RS-232 Character
+
+This routine takes the number of data bits to send per RS-232
+character from the control register and puts it into the .X register
+for use by the RS-232 routines.

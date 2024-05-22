@@ -1,0 +1,22 @@
+
+
+C64 Basic:
+• There are many advantages to using FOR and NEXT to
+create loops:
+1. Only two statements are needed.
+2. The FOR statement indicates right away how many times
+the loop will repeat.
+3. The boundaries of a loop defined using FOR and NEXT
+are easy to spot, especially if the variable name is put
+after NEXT.
+4. Because the NEXT statement can jump into the middle of
+a line, an entire loop can be written on just one line.
+5. It is possible to perform a FOR-NEXT loop in the immedi
+ate mode.
+• Although the value of the counting variable should never be
+changed while it is in the middle of a loop, the value can be
+used by other statements in the loop.
+• If the STEP keyword is omitted in the FOR statement, a
+stepping value of 1 is assumed.
+• To make the counting variable count backward, a negative
+step value has to be used.

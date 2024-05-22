@@ -1,0 +1,5 @@
+
+
+
+address         $AEFA          CHKOPN
+Check for and Skip Opening Parentheses

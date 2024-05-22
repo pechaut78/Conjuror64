@@ -1,0 +1,30 @@
+question,answer
+"What is the purpose of the memory location at address $F5-$F6?","address      $F5-$F6        KEYTAB
+Vector: Keyboard Decode Table
+
+KEYTAB points to the address of the keyboard matrix lookup table
+currently being used.  Although there are only 64 keys on the keyboard
+matrix, each key can be used to print up to four different characters,
+depending on whether it is struck by itself or in combination with the
+SHIFT, CTRL, or Commodore logo keys.
+
+The tables pointed to y this address hold the ASCII value of each of
+the 64 keys for one of these possible combinations of keypresses.
+When it comes time to print the character, the table that is used
+determines which character is printed.
+
+The addresses of the four tables are:
+
+60289 ($EB81) = default uppercase/graphics characters (unshifted)
+60354 ($EBC2) = shifted characters
+60419 ($EC03) = Commodore logo key characters
+60536 ($EC78) = CTRL characters
+
+The concept of the keyboard matrix tables should not be confused with
+changing the character sets from uppercase/graphics to
+upper/lowercase.  The former involves determining what character is to
+be placed into screen memory, while the latter involves determining
+which character data table is to be used to decode the screen memory
+into individual dots for the display of characters on the screen.
+That character base is determined by location 53272 ($D018) of the
+VIC-II chip."

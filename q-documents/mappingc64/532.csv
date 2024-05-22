@@ -1,0 +1,22 @@
+question,answer
+"What is the purpose of the memory location at address $E500?","address              $E500          IOBASE
+Store Base Address of Memory-Mapped I/O Devices in .X and .Y Registers
+
+This is one of the documented Kernal routines for which there is a
+vector in the jump table at 65523 ($FFF3).
+
+When called, this routine sets the .X register to the low byte of the
+base address of the memory-mapped I/O devices, and puts the high byte
+in the .Y register.  This allows a user to set up a zero-page pointer
+to the device, and to load and store indirectly through that pointer.
+A program which uses this method, rather than directly accessing such
+devices could be made to function without change on future Commodore
+models, even though the I/O chips may be addressed at different
+locations.  This of course assumes that the CIA or a similar chip will
+be used.  This routine is of limited value for creating software that
+is compatible with both the VIC-20 and the 64 because of the
+differences in the VIA I/O chip that the VIC uses.
+
+The current version of this routine loads the .X register with a 0,
+and the .Y register with 220 ($DC), thus pointing to CIA #1, which is
+at 56320 ($DC00)."

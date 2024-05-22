@@ -1,0 +1,29 @@
+
+
+C64 High Resolutions? 
+
+The first thing we should take a look at is a definition for 
+the term high resolution. Well, in the computer world the 
+term resolution refers to the number of points on the screen 
+which can be individually addressed, 
+
+A low resolution screen is a screen which has a small 
+number of individually addressable points. The normai text 
+screen is a low resolution screen because it only has 1000 
+individual points (40 columns by 25 rows). 
+
+Conversely, a high resolution screen is a screen which has 
+a large number of individually addressable points. A screen 
+is usually termed high resolution if it has more than 40000 
+individual points. The Commodore 64s' screen is 320 dots 
+wide by 200 dots high giving 64000 individual points. 
+
+So that we can individually address each of these 64000 
+dots they are bit mapped into RAM. This means that each 
+of the dots on the screen is controlled by a bit in memory, 
+if the bit is a 1 then that dot will be lit, if the bit is a then 
+the dot will not be lit. From this we can work out how much memory will be 
+needed to store the high resolution screen. As we have seen 
+there are 64000 dots on the screen and each byte in RAM 
+can control 8 dots (8 bits in a byte), so we will need 8000 
+bytes to completely store the screen,

@@ -1,0 +1,8 @@
+
+
+
+address         $ACFC          EXIGNT
+ASCII Text for Input Error Messages
+
+The text stored here is ?EXTRA IGNORED and ?REDO FROM START, each
+followed by a carriage return and a zero byte.

@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $BF71?","address         $BF71          SQR
+Perform SQR
+
+This routine moves the contents of FAC1 to FAC2, moves the constant
+0.5 to FAC1, and falls through to the exponentation routine."

@@ -1,0 +1,10 @@
+
+
+
+address              $FD10
+Text for Autostart Cartridge Check
+
+The characters stored here must be the fifth through the ninth
+characters in the cartridge in order for it to be started on power-up.
+These characters are the PETASCII values for CBM, each with the high
+bit set (+128), and the characters "80".

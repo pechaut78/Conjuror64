@@ -1,0 +1,22 @@
+question,answer
+"What are some handy methods and user-defined functions for working with inverse trigonometric functions and trigonometric functions in degrees?","INVERSE TRIGNOMETRIC FUNCTIONS
+Here are a couple of handy methods of obtaining are sine and arc
+cosine (remember, the result will be in radians).
+ASNX = ATN (X/SQR(1-Xf2)
+ACSX = ATN (SQR(1-Xf2)/X)
+For those of you who are used to working in degrees, here are some
+handy user defined functions:
+DEFFNS(V) = SIN(V/(18O/tf))
+DEFFNC(V) = COS(V/(180/rf))
+DEFFNT(V) = TAN(V/(18O/rf))
+These are three user defined functions which when called with
+arguments and degrees will give the appropriate results. In these
+examples V can be any variable but if all three are defined in
+the same programme, you must use three different dummy variables.
+EXAMPLE: PRINT FNS(3O)
+Result of this will be .5. Notice that the argument for FNS, or
+FN anything for that matter, can be either a variable or numeric
+constant. Also, after a programme containing these definitions
+has been run, these functions may be called using FN in the direct
+mode, that is, from the keyboard directly without being in a
+programme."

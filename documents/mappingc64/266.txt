@@ -1,0 +1,23 @@
+
+
+
+address         $AD9E          FRMEVAL
+Evaluate Expression
+
+This is the beginning point of a very powerful group of subroutines
+which are used extensively by BASIC.
+
+The main purpose of these routines is to read in the ASCII text of
+BASIC expressions, separate the operators and terms of the expression,
+check them for errors, combine the individual terms by performing the
+indicated operations, and obtain a single value which the BASIC
+program can use.
+
+This can be a very complex task, and expressions an be of the string
+or numeric type, and can contain any type of variable, as well as
+constants.
+
+At the end, the flag which shows whether the resulting value is string
+or numeric at 13 ($D) is set, and if the value is numeric, the flag at
+14 ($E) is set as well, to show if it is an integer or floating point
+numer.

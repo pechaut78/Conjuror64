@@ -1,0 +1,5 @@
+
+
+
+address              $D028          SP1COL
+Sprite 1 Color Register (the default color value is 2, red)

@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the carry bit in the accumulator when a KERNAL routine encounters an error?","The carry bit in the accumulator is set when a KERNAL routine encounters an error, and the error code is returned in the accumulator, allowing the program to identify and handle the error accordingly."
+"what is the purpose of the KERNAL READST routine?","The KERNAL READST routine is used to identify errors in some KERNAL I/O routines, instead of using the standard error codes, providing an alternative method for error handling."
+"what does error code 0 indicate?","Error code 0 indicates that the routine was terminated by the <STOP> key, allowing the program to respond to user intervention."
+"what is the meaning of error code 1?","Error code 1 indicates that there are too many open files, implying that the program has exceeded the maximum number of allowed open files."
+"what does error code 4 indicate?","Error code 4 indicates that the file was not found, implying that the file specified in the operation does not exist or cannot be accessed."
+"what is the purpose of error codes in KERNAL routines?","Error codes in KERNAL routines provide a way to identify and handle errors that occur during the execution of KERNAL routines, allowing programs to respond to errors in a controlled manner."
+"what is the significance of error code 240?","Error code 240 indicates a top-of-memory change in RS-232 buffer allocation/deallocation, implying a change in the memory allocation for RS-232 operations."
+"how do KERNAL routines indicate an error?","KERNAL routines indicate an error by setting the carry bit in the accumulator and returning the error code in the accumulator, allowing the program to identify and respond to the error."
+"what is the meaning of error code 9?","Error code 9 indicates an illegal device number, implying that the device number specified in the operation is invalid or not recognized."
+"what is the purpose of the error code list in KERNAL routines?","The error code list in KERNAL routines provides a standardized way to identify and handle errors, allowing programs to respond to errors in a consistent and controlled manner."

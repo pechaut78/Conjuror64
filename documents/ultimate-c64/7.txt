@@ -1,0 +1,12 @@
+
+Register Transfer and Stack
+There are several 1 byte instructions without operands that move data between registers. TAX, TXA,
+TAY and TYA move between A, X and Y. TSX and
+TXS copies between X and the stack pointer.
+The stack pointer always points to the next address
+that is written to. This means that an empty stack has
+a stack pointer of $FF, and pushing a value first
+writes the value and then decrements the stack
+pointer. The 6502 can move the accumulator from
+and to the stack (PHA/PLA), as well as the processor
+status P (PHP/PLP).

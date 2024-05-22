@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of calling RND(-TI) at the start of a program?","The purpose of calling RND(-TI) at the start of a program is to generate a random number that will be different every time the program is run, effectively seeding the random number generator with a unique value."
+"what happens when X is zero in the RND(X) function?","When X is zero in the RND(X) function, the result will be the same random number as the last one generated, effectively repeating the previous random number."
+"how do you generate a random number between X and Y using the RND function?","To generate a random number between X and Y using the RND function, you can use the formula N = RND(1) * (Y-X) + X, where Y is the upper limit and X is the lower range of numbers desired."
+"what is the effect of using a negative value for X in the RND(X) function?","Using a negative value for X in the RND(X) function will reseed the random number generator, and using the same negative number for X will result in the same sequence of 'random' numbers."
+"what is the range of random numbers returned by the RND(X) function?","The RND(X) function returns a random number in the range 0-1."
+"how do you get a different sequence of random numbers each time a program is run?","To get a different sequence of random numbers each time a program is run, you can call RND(-TI) at the start of the program to seed the random number generator with a unique value."
+"what is the purpose of the RND(X) function?","The purpose of the RND(X) function is to generate a random number, which can be used in a program to introduce an element of unpredictability or randomness."
+"can you use the RND(X) function to generate a random number within a specific range?","Yes, you can use the RND(X) function to generate a random number within a specific range by using the formula N = RND(1) * (Y-X) + X, where Y is the upper limit and X is the lower range of numbers desired."
+"what happens when you use the same negative value for X in the RND(X) function?","When you use the same negative value for X in the RND(X) function, it will result in the same sequence of 'random' numbers."
+"can you use the RND(X) function to generate the same sequence of random numbers?","Yes, you can use the RND(X) function to generate the same sequence of random numbers by using the same negative value for X."

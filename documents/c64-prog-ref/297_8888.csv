@@ -1,0 +1,11 @@
+question,answer
+"how do you blank the display screen on a commodore 64","By setting the DEN bit in register 17 ($11) to a '0', the entire screen will be filled with the exterior color as set in register 32 ($20), allowing for full processor utilization of the system bus, but note that sprite data will still be accessed if the sprites are not also disabled."
+"what happens when the DEN bit is set to '0' in register 17","The display screen is blanked, and the entire screen will be filled with the exterior color as set in register 32 ($20), allowing for full processor utilization of the system bus, but note that sprite data will still be accessed if the sprites are not also disabled."
+"what is the purpose of the DEN bit in register 17","The DEN bit in register 17 is used to blank the display screen, when set to '0', and to enable normal video display when set to '1'."
+"what is the effect of blanking the screen on system bus utilization","When the screen is blanked, only transparent (Phase 1) memory accesses are required, permitting full processor utilization of the system bus."
+"what happens to sprite data when the screen is blanked","Sprite data will still be accessed if the sprites are not also disabled, even when the screen is blanked."
+"what is the register that controls the exterior color when the screen is blanked","Register 32 ($20) controls the exterior color that fills the screen when it is blanked."
+"what is the normal state of the DEN bit in register 17","The DEN bit in register 17 is normally set to '1' to enable normal video display."
+"what is the effect of setting the DEN bit to '1' in register 17","Setting the DEN bit to '1' in register 17 enables normal video display."
+"what is the purpose of register 32 ($20)","Register 32 ($20) sets the exterior color that fills the screen when it is blanked."
+"how do you enable normal video display on a commodore 64","By setting the DEN bit in register 17 ($11) to a '1', normal video display is enabled."

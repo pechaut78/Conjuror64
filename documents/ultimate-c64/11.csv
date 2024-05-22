@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the BIT instruction in 6502 assembly language?","The BIT instruction exists in a two-byte and three-byte variant, and since it only changes the flags, it effectively skips one or two bytes in the instruction stream, which can be used to replace a two-byte branch or a three-byte JMP with a one-byte BIT if only one or two bytes have to be skipped."
+"How can self-modifying code be optimized in 6502 assembly language?","The architecture allows safe self-modifying code, so a common optimization for copy loops is to use LDA $nn00,X and STA $mm00,X, looping X from $00 to $FF and then incrementing the bytes that encode nn and mm for the next page."
+"What is the advantage of using LDA $nn00,X and STA $mm00,X in copy loops?","Compared to a LDA (zp1),Y: STA (zp2),Y sequence, this gets the inner loop down from 16 cycles to 14 cycles."
+"Why should PHA/PLA combinations be avoided in 6502 assembly language?","A PHA/PLA combination is 7 cycles, while an STA/LDA combination in the zero page is 6 cycles, so unless there is no free zero page space, PHA/PLA should be avoided to quickly store a value."
+"How can a flag be elegantly stored in 6502 assembly language?","An elegant way to store a flag is to have it in bit #7 of a zero page address, while a load/store combination has to be used to set the flag, it can be cleared with a simple LSR and tested with BIT, without affecting register contents."
+"What is a limitation of the 6502 processor?","The 6502 is so register starved, only 3 bytes can be passed to a subroutine in registers."
+"Why are stack frames uncommon in 6502 assembly language?","The stack is small, and accessing it is slow, so stack frames as seen on modern architectures are very uncommon."
+"How do some applications and libraries handle the limitation of registers in 6502 assembly language?","Many applications and libraries use a dedicated area in the zero page as virtual registers."
+"What mathematical operations are not supported by the 6502 processor?","The 6502 has no instructions for multiplication, division or floating point arithmetic."
+"How do 6502-based computers typically provide mathematical operations?","Most 6502-based computers have a BASIC interpreter in ROM though, and they typically include a math and floating point library."

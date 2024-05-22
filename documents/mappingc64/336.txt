@@ -1,0 +1,8 @@
+
+
+
+address         $B9EA          LOG
+Perform LOG to Base E
+
+The LOG to the base e of the number in FAC1 is performed here, and the
+result left in FAC1.

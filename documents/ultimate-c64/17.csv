@@ -1,0 +1,11 @@
+question,answer
+"How many CIAs does the C64 have?","The C64 has two identical 6526 CIAs (Complex Interface Adapter) that are mostly used for I/O."
+"What are the features of a CIA?","One CIA features 16 general purpose I/O pins (8 bit port A and 8 bit port B) that can be used either as an input or an output, two programmable timers and a real-time clock."
+"What is the function of the timers in a CIA?","The timers have 16 bit counters and count down by one either on each clock cycle, or on an external event, or on a timer A underflow (in the case of timer B)."
+"What is the resolution of the real-time-clock in a CIA?","The real-time-clock has a resolution of 1/10 of seconds and supports generating interrupts at a certain time."
+"How is the keyboard connected to the CIA?","The keyboard consists of 64 keys (plus SHIFT LOCK, which is parallel to the left SHIFT key, and RESTORE, which is directly connected to the CPU's NMI line), these can be laid out in a 8x8 matrix of lines, key presses connecting the intersections."
+"What is the function of port A and port B in the CIA?","One side of the matrix is connected to port A (output), and the perpendicular side is connected to port B (input)."
+"What is connected to CIA 1?","CIA 1 is hooked up to the keyboard and the joystick ports."
+"What is connected to CIA 2?","CIA 2 is hooked up to the IEC bus, and I/O lines control the VIC bank."
+"How does KERNAL use CIA 1?","KERNAL uses CIA 1 for the 50 Hz system timer, but, apart from the ports, doesn't use any of the extra features of either CIA."
+"What is exposed on the user port?","The rest is exposed on the user port, and can be used for RS-232."

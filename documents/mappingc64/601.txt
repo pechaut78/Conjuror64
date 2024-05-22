@@ -1,0 +1,7 @@
+
+address     09         $EFE1
+CHKOUT for the RS-232 device
+
+The Kernal CHKOUT routine calls this subroutine to define the RS-232
+device's logical file as an output channel.  Before this can be done,
+the logical file must first be OPENed.

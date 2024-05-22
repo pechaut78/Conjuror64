@@ -1,0 +1,36 @@
+
+
+Common Tricks
+• The BIT instruction exists in a two-byte (immediate operand) and three-byte (absolute operand)
+variant. Since BIT only changes the flags, it effectively skips one or two bytes in the instruction
+stream. This can be used to replace a two-byte
+branch or a three-byte JMP with a one-byte BIT if
+only one or two bytes have to be skipped.
+• The architecture allows safe self-modifying code,
+so a common optimization for copy loops is to use
+LDA $nn00,X and STA $mm00,X, looping X from
+$00 to $FF and then incrementing the bytes that
+encode nn and mm for the next page. Compared toa LDA (zp1),Y: STA (zp2),Y sequence, this gets the
+inner loop down from 16 cycles (5 LDA, 6 STA, 2
+INY, 3 BNE) to 14 (4 LDA, 5 STA, 2 INY, 3 BNE).
+• A PHA/PLA combination is 7 cycles, while an STA/
+LDA combination in the zero page is 6 cycles, so
+unless there is no free zero page space, PHA/PLA
+should be avoided to quickly store a value. Using
+an absolute store to write the value into the operand of a future immediate load (i.e. self modification) is the same speed at the zero page solution,
+but does not waste zero page space.
+• An elegant way to store a flag is to have it in bit #7
+of a zero page address. While a load/store combination has to be used to set the flag, it can be
+cleared with a simple LSR (5 cycles) and tested
+with BIT (3 cycles), without affecting register contents.
+• Since the 6502 is so register starved, only 3 bytes
+can be passed to a subroutine in registers. Also, the
+stack is small, and accessing it is slow, so stack
+frames as seen on modern architectures are very
+uncommon. Many applications and libraries (e.g.
+GEOS) use a dedicated area in the zero page as virtual registers.
+• The 6502 has no instructions for multiplication,
+division or floating point arithmetic. Most 6502-
+based computers have a BASIC interpreter in ROM
+though, and they typically include a math and
+floating point library.

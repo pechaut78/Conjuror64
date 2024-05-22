@@ -1,0 +1,11 @@
+question,answer
+"how do sprites interact with each other on the screen","Sprites have the ability to cross each other's paths, as well as cross in front of, or behind other objects on the screen, giving a truly three-dimensional effect for games."
+"what determines the priority of sprites on the screen","Sprite to sprite priority is fixed, meaning that sprite 0 has the highest priority, sprite 1 has the next priority, and so on, until we get to sprite 7, which has the lowest priority."
+"how do you control the order of sprites in a scene","When planning which sprites will appear to be in the foreground of the picture, they must be assigned lower sprite numbers than those sprites you want to put towards the back of the scene, and those sprites will be given higher sprite numbers."
+"what happens when a sprite with higher priority has holes in it","If a sprite with higher priority has 'holes' in it (areas where the dots are not set to 1 and thus turned ON), the sprite with the lower priority will show through, creating a 'window' effect."
+"how does the 'window' effect work with sprite and background data","The 'window' effect also happens with sprite and background data, where the background data will show through the 'holes' in the sprite."
+"what is the significance of sprite 0 in terms of priority","Sprite 0 has the highest priority, meaning it will always be in front of other sprites."
+"can sprites be made to appear behind other objects on the screen","Yes, by assigning a higher sprite number to the sprite, it will appear behind other objects on the screen."
+"how do you create a layered effect with sprites","By assigning lower sprite numbers to sprites you want to appear in the foreground, and higher sprite numbers to sprites you want to appear in the background, you can create a layered effect."
+"what happens when two sprites with different priorities overlap","When two sprites with different priorities overlap, the sprite with the higher priority will be in front of the sprite with the lower priority."
+"can you use the 'window' effect to create complex scenes","Yes, by using the 'window' effect, you can create complex scenes with multiple layers and depth, giving a more realistic and engaging visual experience."

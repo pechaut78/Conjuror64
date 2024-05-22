@@ -1,0 +1,14 @@
+question,answer
+"What is the purpose of the memory location at address $F817?","address              $F817
+Test Cassette Buttons and Handle Messages for Tape Read
+
+This routine tests the sense switch, and if no buttons are depressed
+it prints the PRESS PLAY ON TAPE message, and loops until a cassette
+button is pressed, or until the STOP key is pressed.  If a button is
+pressed, it prints the message OK.
+
+Since the message printing routine is entered after the test for
+direct mode, these messages cannot be superseded by changing the flag
+at 157 ($9D).  You could have them harmlessly printed to ROM, however,
+by changing the value of HIBASE at 648 ($288) temporarily to 160, and
+then back to 4."

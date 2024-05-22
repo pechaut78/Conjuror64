@@ -1,0 +1,10 @@
+
+
+
+address              $E0F9
+Call Kernal I/O Routines
+
+This section is used when BASIC wants to call the Kernal I/O routines
+CHROUT, CHRIN, CHKOUT, CHKIN, and GETIN.  It handles any errors that
+result from the call, and creates a 512-byte buffer space at the top
+of BASIC and executes a CLR if the RS-232 device is opened.

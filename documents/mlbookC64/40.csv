@@ -1,0 +1,11 @@
+question,answer
+"What operation does the INC instruction perform on a memory location's contents in 6510 assembly language?","The INC instruction increments the contents of a memory location by one in 6510 assembly language. The Z and N flags are set depending on the result."
+"How does the INC instruction differ from previous commands in 6510 assembly language?","The INC instruction differs from previous commands in 6510 assembly language in that it reads the contents of a memory location, increments it by one, and then saves it again. Previous commands either read or wrote a memory location, but never both."
+"What is the effect of the INC instruction on the accumulator in 6510 assembly language?","The INC instruction does not alter the contents of the accumulator in 6510 assembly language."
+"What is the equivalent pseudo-BASIC code for the INC instruction in 6510 assembly language?","The equivalent pseudo-BASIC code for the INC instruction in 6510 assembly language is 'POKE M, PEEK(M) + 1>'."
+"What two flags are set by the INC instruction in 6510 assembly language?","The Z and N flags are set by the INC instruction in 6510 assembly language depending on the result of the increment operation."
+"What is the operation performed by the INC instruction in 6510 assembly language in three steps?","The INC instruction in 6510 assembly language reads the contents of a memory location, increments it by one, and then saves it again."
+"What is the impact of the INC instruction on the accumulator in 6510 assembly language?","The INC instruction has no impact on the accumulator in 6510 assembly language."
+"What is the effect of the INC instruction on a memory location's contents in 6510 assembly language?","The INC instruction increases the value of a memory location by one in 6510 assembly language."
+"What is the result of the INC instruction on the Z and N flags in 6510 assembly language?","The Z and N flags are set depending on the result of the increment operation in 6510 assembly language."
+"What is the operation of the INC instruction on a memory location's contents in 6510 assembly language?","The INC instruction reads the contents of a memory location, increments it by one, and then saves it again in 6510 assembly language."

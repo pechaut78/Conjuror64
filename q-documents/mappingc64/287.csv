@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $B1B2?","address        $B1B2          INTIDX
+Input and Convert a Floating Point Subscript to a Positive Integer
+
+This routine converts a floating point subscript value to an integer,
+making sure first that it is positive."

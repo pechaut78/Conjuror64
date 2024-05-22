@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $4D?","address           $4D            OPMASK
+Mask for Comparison Operation
+
+The expression evaluation routine creates a mask here which lets it
+know whether the current comparieson operation is a less-than (1),
+equals (2), or greater-than (4) comparison."

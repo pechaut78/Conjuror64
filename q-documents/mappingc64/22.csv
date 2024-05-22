@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $22-$25?","address        $22-$25        INDEX
+Miscellaneous Temporary Pointers and Save Area
+
+This area is used by many BASIC routines to hold temporary pointers
+and calculation results."

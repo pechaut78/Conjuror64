@@ -1,0 +1,11 @@
+question,answer
+"what is a troublesome file name","a file with a crazy filename, such as a comma by itself or one that includes a Shifted Space or non-printing characters"
+"what is an exception to the rule that no two files can have the same name","a comma file, which is an exception to the rule that no two files can have the same name"
+"what happens when a file has a Shifted Space in its name","the disk interprets the Shifted Space as signaling the end of the file name, and prints whatever follows after the quotation mark that marks the end of a name in the directory"
+"how can you specify troublesome characters in a RENAME command","by using the CHR$() function to specify troublesome characters without typing them directly"
+"what is the CHR$(34) equivalent of a quotation mark in a RENAME command","a quotation mark that forces a quotation mark into the command string without upsetting BASIC"
+"how can you rename a file with an extra quotation mark at the front of the file name","by using the CHR$(34) equivalent of a quotation mark in the RENAME command, for example RENAME (CHR$(34)+\"MOVIES\") TO \"MOVIES\""
+"what is the CHR$(160) equivalent of a Shifted Space in a RENAME command","a Shifted Space that forces a Shifted Space into the command string without upsetting BASIC"
+"how can you delete a file with a one-character name, such as a comma file","by using the SCRATCH \"?\" command, which deletes all files with one-character names"
+"what may be necessary to do in cases where even the CHR$() function doesn't work","to be very creative in choosing pattern-matching characters that will affect only the desired file, and may have to rename other files first to keep them from being scratched"
+"what is an alternative solution to dealing with troublesome files","to copy desired files to a different diskette and leave the troublesome files behind"

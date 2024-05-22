@@ -1,0 +1,11 @@
+question,answer
+"What register does the CPX instruction compare the addressed memory location's contents with?","The CPX instruction compares the contents of the addressed memory location with the contents of the X-register. It does not alter the contents of the registers."
+"How does the CPX instruction work in comparison to the CMP instruction?","The CPX instruction works the same way as the CMP instruction, but instead of comparing the memory location's contents with the accumulator's, it compares it with the X-register's contents. The contents of the registers are not altered in either instruction."
+"What is not altered by the CPX instruction?","The CPX instruction does not alter the contents of the registers."
+"What is compared by the CPX instruction?","The CPX instruction compares the contents of the addressed memory location with the contents of the X-register."
+"What are the addressing modes available for the CPX instruction?","There are not as many addressing modes available for the CPX instruction as there are for the CMP instruction."
+"What is the effect of the CPX instruction on the memory location's contents?","The CPX instruction does not alter the contents of the memory location."
+"What is the purpose of the CPX instruction in 6502 assembly language?","The CPX instruction is used in 6502 assembly language to compare the contents of the addressed memory location with the contents of the X-register."
+"What is the difference between the CPX and CMP instructions in 6502 assembly language?","The CPX instruction compares the contents of the addressed memory location with the contents of the X-register, while the CMP instruction compares it with the contents of the accumulator. The contents of the registers are not altered in either instruction."
+"What is an example of the CPX instruction in 6502 assembly language?","An example of the CPX instruction in 6502 assembly language is: `CPX $FF00` which compares the contents of the X-register with the contents of the memory location $FF00."
+"What is the behavior of the CPX instruction when the zero flag is set?","If the contents of the addressed memory location and the X-register are equal, the zero flag is set. If they are not equal, the zero flag is cleared."

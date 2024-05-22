@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $E447?","address              $E447
+Table of Vectors to Important BASIC Routines
+
+This table contains the vectors which point to the addresses of some
+important BASIC routines.  The contents of this table are moved to the
+RAM table at 768 ($300)."

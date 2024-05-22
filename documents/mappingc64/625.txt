@@ -1,0 +1,15 @@
+
+
+
+address              $F6DD          RDTIM
+Read the Time From the Software Clock into the .A, .X, and .Y
+Registers
+
+This is a documented Kernal routine whose entry point in the jump
+table is 65502 ($FFDE).
+
+It reads the software clock (which counts sixtieths of a second) into
+the internal registers.  The .Y register contains the most significant
+byte (from location 160 ($A0)), the .X register contains the middle
+byte (from location 161 ($A1)), and the Accumulator contains the least
+significant byte (from location 162 ($A2)).

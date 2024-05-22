@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $AC06?","address         $AC06          READ
+Perform READ
+
+This routine includes the READ command and common code for GET and
+INPUT.  The READ command locates the next piece of DATA, reads the
+text, and converts it to the appropriate type of data to be assigned
+to a numeric or string variable."

@@ -1,0 +1,31 @@
+
+
+
+address       $D9-$F2        LDTB1
+Screen Line Link Table/Editor Temporary Storage
+
+This table contains 25 entries, one for each row of the screen
+display.  Each entry has two functions.  Bits 0-3 indicate on which of
+the four pages of screen memory  the first byte of memory for that row
+is located.  This is used in calculating the pointer to the starting
+address of a screen line at 209 ($D1).
+
+While earlier PETs used one table for the low bytes of screen rows and
+another for the high bytes, this is not possible on the 64, where
+screen memory is not fixed in any one spot.  Therefore, the Operating
+System uses a table of low bytes at 60656 ($ECF0), but calculates the
+high byte by adding the value of the starting page of screen memory
+held in 648 ($288) to the displacement page held here.
+
+The other function of this table is to establish the makeup of logical
+lines on the screen.  While each screen line is only 40 characters
+long, BASIC allows the entry of program lines that contain up to 80
+characters.  Therefore, some method must be used to determine which
+pairs of physical lines are linked into a longer logical line, so that
+this longer logical line may be edited as a unit.
+
+The high bit of each byte here is used as a flag by the screen editor.
+That bit is set (leaving the value of the byte over 128 ($80)) when a
+line is the first or only physical line in a logical line.  The high
+bit is reset to 0 only when a line is the second half of a logical
+line.

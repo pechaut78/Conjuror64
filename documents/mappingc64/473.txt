@@ -1,0 +1,13 @@
+
+
+
+address              $DD00          CI2PRA
+Data Port Register A
+
+Bits 0-1:  Select the 16K VIC-II chip memory bank (11=bank 0, 00=bank 3)
+Bit 2:  RS-232 data output (Sout)/Pin M of User Port
+Bit 3:  Serial bus ATN signal output
+Bit 4:  Serial bus clock pulse output
+Bit 5:  Serial bus data output
+Bit 6:  Serial bus clock pulse input
+Bit 7:  Serial bus data input

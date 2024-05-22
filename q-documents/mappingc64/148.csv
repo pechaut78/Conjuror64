@@ -1,0 +1,32 @@
+question,answer
+"What is the purpose of the memory location at address $28D?","address           $28D           SHFLAG
+Flag: SHIFT/CTRL/Logo Keypress
+
+This flag signals which of the SHIFT, CTRL, or Commodore logo keys are
+currently being pressed, if any.
+
+A value of 1 signifies that one of the SHIFT keys is being pressed, a
+2 shows that the Commodore logo key is down, and 4 means that the CTRL
+key is being pressed.  If more than one key is held down, these values
+will be added; for example, a 3 indicates that SHIFT and logo are both
+held down.
+
+The value here is used by the Operating System when determining how to
+convert a keypress into a PETASCII character.  There are four
+different tables used to translate one of the 64 keys on the keyboard
+matrix into a PETASCII character, and the combination of special SHIFT
+keys determines which of these tables will be used (see the entry for
+location 245 ($F5) for more details on the keyboard tables).
+
+Pressing the SHIFT and Commodore logo keys at the same time will
+toggle the character set that is presently being used between the
+uppercase/graphics set, and the lowercase/uppercase set (provided that
+the flag at 657 ($291) has not been set to disable this switch).
+
+This changes the appearance of all of the characters on the screen at
+once.  It has nothing whatever to do with the keyboard shift tables,
+however, and should not be confused with the printing of SHIFTed
+characters, which affects only one character at a time.  Rather, it is
+the result of the value of the character dot data table base address
+in 53272 ($D018) being changed.  The came result may be obtained by
+POKEing that address directly."

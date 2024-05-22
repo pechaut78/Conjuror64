@@ -1,0 +1,10 @@
+
+
+
+address        $45-$46        VARNAM
+Current BASIC Variable Name
+
+The current variable name being searched for is stored here, in the
+same two- byte format as in the variable value storage area located at
+the address pointed to by 45 ($2D).  See that location for an
+explanation of the format.

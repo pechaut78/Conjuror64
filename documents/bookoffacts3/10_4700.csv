@@ -1,0 +1,11 @@
+question,answer
+"What command is used to load a directory on a Commodore 64?","LOAD "$",8 is the command used to load a directory on a Commodore 64. This command displays a list of all files on the disk, along with their disk name and blocks free."
+"How do you load only the directory, but only list the disk name and blocks free?","LOAD "$",8 can be used to load the directory and only list the disk name and blocks free. This is done by executing the command a second time."
+"What command is used to load a directory and list only program files?","LOAD "$* = P",8 is the command used to load a directory and list only program files. The 'P' in the command specifies that only program files should be displayed."
+"What other file types can be specified instead of 'P' in the LOAD command?","Instead of 'P', 'S' can be used to list sequential files, and 'R' can be used to list relative files."
+"How do you save a program file on a Commodore 64?","SAVE "PROGRAM NAME'\8 is the command used to save a program file on a Commodore 64. This command saves only Basic programs."
+"How do you save a program and replace an existing file with the same name?","OPEN15,8,15:"@0:PROGRAM NAME" is the command used to save a program and replace an existing file with the same name. This command replaces the file in memory with the one being saved."
+"What type of files can be loaded using the LOAD command in the manner described?","Only Basic programs can be loaded using the LOAD command in the manner described. Other types of files, such as sequential or relative files, cannot be loaded in this manner."
+"What is the purpose of the '$' in the LOAD and SAVE commands?","The '$' in the LOAD and SAVE commands specifies that the directory should be loaded or saved. Without it, the command would operate on a program file."
+"What is the purpose of the '8' in the LOAD and SAVE commands?","The '8' in the LOAD and SAVE commands specifies the device number. In this case, it specifies that the floppy disk drive should be used."
+"What is the purpose of the '*' in the LOAD command?","The '*' in the LOAD command specifies that all files of the specified type should be loaded. Without it, only the first file of the specified type would be loaded."

@@ -1,0 +1,20 @@
+
+The Arithmetic Instructions
+As with most 8-bit microprocessors, the 6510 can perform
+only two arithmetic operations - addition and
+subtraction. Multiplication and division must be
+implemented by the user. Each calculation requires two
+operands which are combined to produce a result. For the
+6510, the first operand is contained in the accumulator
+and the second operand is obtained from memory. The
+various addressing modes are used for this. The result of
+the arithmetic operation is always left in the
+accumulator. The comparisons with the corresponding
+pseudo-BASIC commands makes this clearer.
+First consider addition. The contents of the addressed
+memory location are added to the accumulator and the
+result is again placed back in the accumulator.
+ADC #$3A A = A + $3A
+If you add two 8-bit values (0 to 255), the result may
+not be able to be represented by an 8-bit number. An
+overflow may occur.

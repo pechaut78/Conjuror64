@@ -1,0 +1,20 @@
+question,answer
+"What is the instruction for branching on a set carry flag in C64 assembly language?","In C64 assembly language, the instruction for branching on a set carry flag is called 'branch on carry set' or BCS. This instruction branches to a new address if the carry flag is set (has a value of 1)."
+"What is the instruction for branching on a clear carry flag in C64 assembly language?","In C64 assembly language, the instruction for branching on a clear carry flag is called 'branch on carry clear' or BCC. This instruction branches to a new address if the carry flag is clear (has a value of 0)."
+"What is the purpose of the 'branch on carry set' instruction in C64 assembly language?","The 'branch on carry set' or BCS instruction in C64 assembly language is used to alter the flow of a program based on the state of the carry flag. If the carry flag is set (has a value of 1), the program will branch to a new address. This can be useful for performing arithmetic operations and checking if there was a carry out or borrow in."
+"What is the purpose of the 'branch on carry clear' instruction in C64 assembly language?","The 'branch on carry clear' or BCC instruction in C64 assembly language is used to alter the flow of a program based on the state of the carry flag. If the carry flag is clear (has a value of 0), the program will branch to a new address. This can be useful for performing arithmetic operations and checking if there was no carry out or borrow in."
+"What is the syntax for the 'branch on carry set' instruction in C64 assembly language?","The syntax for the 'branch on carry set' or BCS instruction in C64 assembly language is: BCS label. Where 'label' is the address that the program will branch to if the carry flag is set."
+"What is the syntax for the 'branch on carry clear' instruction in C64 assembly language?","The syntax for the 'branch on carry clear' or BCC instruction in C64 assembly language is: BCC label. Where 'label' is the address that the program will branch to if the carry flag is clear."
+"What is the difference between the 'branch on carry set' and 'branch on carry clear' instructions in C64 assembly language?","The 'branch on carry set' or BCS instruction in C64 assembly language branches to a new address if the carry flag is set, while the 'branch on carry clear' or BCC instruction branches to a new address if the carry flag is clear. These instructions are used to alter the flow of a program based on the state of the carry flag."
+"Can you provide an example of how to use the 'branch on carry set' instruction in C64 assembly language?","Here is an example of how to use the 'branch on carry set' or BCS instruction in C64 assembly language:
+
+ADD #100
+BCS label
+
+In this example, the program is adding the value of 100 to a register. If there is a carry out from this operation, the program will branch to the address labeled 'label'."
+"Can you provide an example of how to use the 'branch on carry clear' instruction in C64 assembly language?","Here is an example of how to use the 'branch on carry clear' or BCC instruction in C64 assembly language:
+
+ADD #100
+BCC label
+
+In this example, the program is adding the value of 100 to a register. If there is no carry out from this operation, the program will branch to the address labeled 'label'."

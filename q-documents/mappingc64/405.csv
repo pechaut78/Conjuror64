@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $D01E?","address              $D01E          SPSPCL
+Sprite to Sprite Collision Register
+
+Bit 0:  Did Sprite 0 collide with another sprite?  (1=yes)
+Bit 1:  Did Sprite 1 collide with another sprite?  (1=yes)
+Bit 2:  Did Sprite 2 collide with another sprite?  (1=yes)
+Bit 3:  Did Sprite 3 collide with another sprite?  (1=yes)
+Bit 4:  Did Sprite 4 collide with another sprite?  (1=yes)
+Bit 5:  Did Sprite 5 collide with another sprite?  (1=yes)
+Bit 6:  Did Sprite 6 collide with another sprite?  (1=yes)
+Bit 7:  Did Sprite 7 collide with another sprite?  (1=yes)"

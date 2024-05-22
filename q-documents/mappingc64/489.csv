@@ -1,0 +1,32 @@
+question,answer
+"Give explanations about the kernal","As with the section on the BASIC ROM, this section is not meant to be
+a complete explanation of the Kernal ROM, but rather a guidepost for
+further exploration.  Where the exact instructions the Kernal ROM
+routines use are important to your programming, it will be necessary
+for you to obtain a disassembly listing of those routines and look at
+the code itself.
+
+Keep in mind that there is 8K of RAM underlying the Kernal ROM that
+can be used by turning off interrupts and switching out the Kernal ROM
+temporarily.  Even without switching out the Kernal ROM, this RAM may
+be read by the VIC-II chip if it is banked to use the top 16K of
+memory, and may be used for graphics data.  The Kernal and BASIC ROMs
+may be copied to RAM, and the RAM versions modified to change existing
+features or add new ones.
+
+There are some differences between the version of the Kernal found on
+the first few Commodore 64s and those found on the majority of newer
+models.  Those differences are discussed in the entries for the
+sections on later Kernal additions (patches) at 58541-58623
+($E4AD-$E4FF) an 65371-67407 ($FF5B-$FF7F).
+
+The most obvious change causes the Color RAM at 55296 ($D800) to be
+initialized to the background color when the screen is cleared on
+newer models, instead of white as on the original models.  Other
+changes allow the new Kernal software to be used by either U.S. or
+European 64s.  Keep in mind that the Kernal is always subject to
+change, and that the following discussion, while accurate at the time
+written (mid-1983), may not pertain to later models.  If future
+changes are like past ones, however, they are likely to be minor ones.
+The first place to look for these changes would be in the patch
+sections identified above."

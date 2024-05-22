@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose and usage of the SYS command in Commodore BASIC, and how can it be used to report the current line number or convert hexadecimal to decimal?","Instant BASIC Monitor
+You can execute this SYS directly, but it won't mean much. However, put on the end of some line in your program and itwill report what line that is. It's part of the error message routine - the part that reports the line number after a run is interrupted. For example: ?syntax error in 6010.
+Immediately upon entering direct mode, the operating sys tem deposits an FF into the high order byte of the Current Line Number word, thus rendering that information mean ingless. During program execution, the current line being executed is copied here. Try this:
+100 print 'line 100' 110 print 'some line ' : sys 53112:?
+120sys53112
+130 goto 100
+
+For C64 it's SYS 48585 and the VIC 20 is 56777. As you can see, if the program is renumbered, the message in line 100 will need updating. The ROM call, however, is universal. You can skip the 'in' display by adding 7 to the address.
+Taking this one baby step further, this routine could be used as a primitive hex to decimal converter. For example:
+poke 55, 10: poke 54, 7: sys 53119
+. . .would print the decimal equivalent of $0A07. (C64/ VIC20: use 58 and 57 for the POKE addresses, with the above SYS address + 7) This is ok when you can convert the low order and high order to decimal in your head. When numbers get like CF7D it's a little tougher. Perhaps some one with BASIC 4.0 (built-in MLM) will investigate a more sophisticated approach to the same end. (Dave Hook, you there? You did that once long ago, did you not?)"

@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $B3A6?","address         $B3A6          ERRDIR
+Check If the Program is Running in Direct Mode, and If So Issue an Error
+
+This routine is called by statements that prohibit execution in direct
+mode.  It checks a flag that is set when a line without a linenumber
+is entered, and causes an ILLEGAL DIRECT error if the flag is set."

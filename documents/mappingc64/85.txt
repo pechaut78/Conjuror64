@@ -1,0 +1,11 @@
+
+
+
+address           $AA            RIDATA
+RS-232 Input Byte Buffer/Cassette Temporary Storage
+
+Serial routines use this area to reassemble the bits received into a
+byte that will be stored in the receiving buffer pointer to by 247
+($F7).  Tape routines use this as a flag to help determine whether a
+received character should be treated as data or as a synchronization
+character.

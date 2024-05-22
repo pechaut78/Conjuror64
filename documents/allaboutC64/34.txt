@@ -1,0 +1,10 @@
+
+
+C64 Basic:
+• Using two commas together can make the computer assume
+a default value of 0 for one of the variables, so caution is
+advised.
+• The only way to abort a program while an INPUT statement
+is being executed is to press RUN/STOP and RESTORE.
+• The INPUT statement can be used only in the program
+mode, not in the immediate mode.

@@ -1,0 +1,11 @@
+question,answer
+"what is GEOS?","GEOS is a disk-based operating system with a graphical user interface for the C64, released by Berkeley Softworks in 1986"
+"what is the graphical resolution of GEOS?","The GUI of GEOS runs in 320x200 graphics mode"
+"what is the size of the GEOS library?","The GEOS library is 16 KB in size"
+"what is the purpose of the jump table in GEOS?","The jump table in GEOS consists of about 150 entries, providing access to its library routines"
+"what are some of the features of the GEOS library?","The GEOS library includes an optimized disk interface, library code for drawing to the screen, high level UI primitives for menus, buttons and dialog boxes, and a simple memory swapping facility"
+"what kind of input and output devices are supported by GEOS?","GEOS allows input and printer driver plugins"
+"what kind of fonts are supported by GEOS?","GEOS supports proportional fonts in different sizes"
+"what are some of the applications that came with GEOS?","GEOS came with applications like GeoPaint and GeoWrite"
+"what are some of the third-party solutions available for GEOS?","Berkeley Softworks themselves offered solutions like GeoPublish and GeoCalc, and more software was available from third parties"
+"what is the minimum hardware requirement for running GEOS?","The only requirement for running GEOS is a 1541 disk drive"

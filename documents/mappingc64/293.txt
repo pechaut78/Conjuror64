@@ -1,0 +1,22 @@
+
+
+
+address         $B37D          FRE
+Perform FRE
+
+The FRE function calls the garbage collection routine at 46374 ($B526)
+to get rid of unused string text, and calculates the difference
+between the bottom of string text and the top of array storage.  It
+then drops through to the follow routine, which assumes that the free
+memory value is a 16-bit signed integer, and converts it to floating
+point accordingly.
+
+Of course, while the free memory space on the PET might have always
+been 32767 or less (the maximum value of a signed integer), sich is
+definitely not the case on the 64.  Because conversion is from a
+signed integer, any memory value over 32767 will be regarded as
+negative (the high bit is treated as a sign bit).  Therefore, for
+these higher values you must add twice the bit value of the high bit
+(65536) in order to come up with the correct value.  The expression
+FRE(0)-6556*(FRE(0)<0) will always return the correct amount of free
+memory.

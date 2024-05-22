@@ -1,0 +1,5 @@
+
+
+
+address              $D01C          SP5COL
+Sprite 5 Color Register (the default color value is 6, blue)

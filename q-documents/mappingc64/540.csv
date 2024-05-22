@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $E5B4?","address              $E5B4          LP2
+Get a Character from the Keyboard Buffer
+
+This routine transfers the first character from the keybard buffer to
+the .A register, bumps the rest of the characters one place up in
+line, and decrements the pointer, showing how many characters are
+waiting in the buffer."

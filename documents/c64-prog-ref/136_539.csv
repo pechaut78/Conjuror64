@@ -1,0 +1,11 @@
+question,answer
+"What is the opcode for the EOR instruction with immediate addressing mode?","The opcode for the EOR instruction with immediate addressing mode is 49."
+"What is the number of bytes required for the EOR instruction with zero page addressing mode?","The number of bytes required for the EOR instruction with zero page addressing mode is 2."
+"How many cycles does the EOR instruction with absolute addressing mode take?","The EOR instruction with absolute addressing mode takes 4 cycles."
+"What is the assembly language form for the EOR instruction with zero page,X addressing mode?","The assembly language form for the EOR instruction with zero page,X addressing mode is EOR Oper,X."
+"What is the opcode for the EOR instruction with absolute,Y addressing mode?","The opcode for the EOR instruction with absolute,Y addressing mode is 59."
+"How many cycles does the EOR instruction with (indirect,X) addressing mode take?","The EOR instruction with (indirect,X) addressing mode takes 6 cycles."
+"What is the number of bytes required for the EOR instruction with absolute addressing mode?","The number of bytes required for the EOR instruction with absolute addressing mode is 3."
+"What is the assembly language form for the EOR instruction with immediate addressing mode?","The assembly language form for the EOR instruction with immediate addressing mode is EOR #Oper."
+"How many cycles does the EOR instruction with absolute,X addressing mode take if a page boundary is crossed?","The EOR instruction with absolute,X addressing mode takes 5 cycles if a page boundary is crossed."
+"What is the opcode for the EOR instruction with (indirect),Y addressing mode?","The opcode for the EOR instruction with (indirect),Y addressing mode is 51."

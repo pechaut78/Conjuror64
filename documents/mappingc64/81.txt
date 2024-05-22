@@ -1,0 +1,10 @@
+
+
+
+address           $A6            BUFPNT
+Count of Characters in Tape I/O Buffer
+
+This location is used to count the number of bytes that have been read
+in or written to the tape buffer.  Since on a tape write, no data is
+sent until the 192 byte buffer is full, you can force output of the
+buffer with the statement POKE 166,191.

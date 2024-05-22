@@ -7,5 +7,3 @@ question,answer
 "What happens when MEMTOP is called with the accumulator carry bit clear?","the contents of the X and Y registers are loaded in the top of memory pointer, changing the top of memory"
 "What is the stack requirement for MEMTOP?","2"
 "What are the communication registers for MEMTOP?","X, Y"
-"What is the preparatory routine for MEMTOP?","None"
-"What are the error returns for MEMTOP?","None"

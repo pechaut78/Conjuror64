@@ -1,0 +1,16 @@
+
+
+
+address       $29F-$2A0      IRQTMP
+SAve Area for IRQ Vector During Cassette I/O
+
+The routines that read and write tape data are driven by an IRQ
+interrupt.  In order to hook one of these routines into the interrupt,
+the RAM IRQ vector at 788-789 ($314-$315) must be changed to point to
+the address at which it starts.  Before that change is made, the old
+IRQ vector address is saved at these locations, so that after the tape
+I/O is finished, the interrupt that is used for scanning the keyboard,
+checking the stop key, and updating the clock can be restored.
+
+You will note that all of the above functions will be suspended during
+tape I/O.

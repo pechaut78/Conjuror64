@@ -1,0 +1,11 @@
+question,answer
+"Where is the position of a sprite calculated from?","The position of a sprite is calculated from the top left corner of the 24 dot by 21 dot area that your sprite can be designed in."
+"What is the reference point for calculating the position of a sprite?","The reference point for calculating the position of a sprite is the top left corner of the sprite's 24x21 dot area, regardless of the number of dots used to make up the sprite."
+"How does the number of dots used in a sprite affect its positioning?","The number of dots used in a sprite does not affect its positioning, as the position is always calculated from the top left corner of the 24x21 dot area."
+"What happens if I only use one dot to make up a sprite?","Even if only one dot is used to make up a sprite, the position is still calculated from the top left corner of the 24x21 dot area."
+"How do I position a sprite in the middle of the screen?","To position a sprite in the middle of the screen, you must calculate the exact positioning by starting at the top left corner location of the sprite's 24x21 dot area."
+"What is the significance of the top left corner in sprite positioning?","The top left corner is the reference point for calculating the position of a sprite, and it is used regardless of the size or complexity of the sprite."
+"Can I use a different reference point for calculating sprite position?","No, the top left corner is the fixed reference point for calculating the position of a sprite, and it cannot be changed."
+"How does the size of the sprite affect its positioning?","The size of the sprite does not affect its positioning, as the position is always calculated from the top left corner of the 24x21 dot area."
+"What is the importance of considering the top left corner in sprite design?","Considering the top left corner is crucial in sprite design, as it is the reference point for calculating the position of the sprite, and ignoring it can lead to incorrect positioning."
+"Can I ignore the top left corner when designing a sprite?","No, ignoring the top left corner can lead to incorrect positioning of the sprite, so it is essential to consider it when designing a sprite."

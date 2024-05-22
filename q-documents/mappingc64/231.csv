@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $A642?","address        $A642          SCRTCH
+Perform NEW
+
+The NEW command stores two zeros in the link address of the first
+program line to indicate the end of program, and sets the end of
+program pointer at 45-46 ($2D-$2E) to point to the byte past those
+zeros.  It continues through to the CLR command code."

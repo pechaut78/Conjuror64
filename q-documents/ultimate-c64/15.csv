@@ -1,0 +1,36 @@
+question,answer
+"What is the role and functionality of the KERNAL I/O library in Commodore 8-bit systems, particularly in the Commodore 64?","KERNAL
+The C64 has an 8 KB I/O library at $E000-$FFFF
+which is utilized by BASIC, but is intended to be used
+by other applications as well. All Commodore 8 bit
+systems have a standardized library call interface in
+the form of jump tables at the very top of memory
+that call into machine-specific functions for I/O.
+KERNAL is started form the RESET vector, initializes
+the machine, sets up an interrupt service routine that
+handles the keyboard, animates the cursor and does
+the real time clock. The C64 has a hardware clock in
+each of the CIA chips, but KERNAL has not been updated to use this feature since the VIC-20.
+KERNAL provides an abstract character I/O interface
+to a number of devices. All devices support open,
+read, write and close. The open call takes three parameters: The logical file number (there is a maximum of 16 channels), the device number and the secondary address. There are 16 device numbers statically assigned to the devices. The 8 bit secondary address can signal something to the device, like speed or
+an operation mode. Some devices (tape and IEC)
+support an optional filename.
+Device 0 is the keyboard. While KERNAL exports raw
+key presses, the keyboard can also be accessed
+through character I/O, which will go through the
+screen editor and replay all characters on the screen
+that are in the line of the cursor, regardless of
+whether the user typed them or they had been there
+before.
+Device 1 is the tape drive. KERNAL reads and writes
+blocks of data at a time and buffers them for character I/O.
+Device 2 is RS-232. KERNAL contains a very sophisticated (but rarely used) software RS-232 implementation that supports up to 2400 baud.
+Device 3 is the screen. KERNAL interprets special
+codes, manages the cursor position and handles
+scrolling.
+Devices 4 to 15 will be directed to the IEC bus. By
+convention, devices 4 to 7 are printers and plotters,
+and devices 8 to 15 are floppy or hard disks.
+KERNAL allows interacting with the IEC bus manually by sending TALK and LISTEN requests to the
+bus."

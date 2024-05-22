@@ -1,0 +1,11 @@
+question,answer
+"what is the syntax to save a file on a 1581 disk?","The syntax to save a file on a 1581 disk is S \"drive#:file name\",device#,starting address,ending address+1, where \"drive#:\" is the drive number, \"file name\" is any valid file name up to 14 characters long, \"device#\" is a two digit device number, normally 08, and the addresses are given in hexadecimal without a leading dollar sign."
+"What is the purpose of the device number in the save syntax?","The device number is a two digit number, normally 08, that specifies the device to save the file to, in this case the 1581 disk drive."
+"What is the significance of the ending address in the save syntax?","The ending address must be one location beyond the last location to be saved, it specifies the end of the block of memory to be saved."
+"What is the maximum length of a file name in the save syntax?","The maximum length of a file name in the save syntax is 14 characters, leaving two characters for the drive number and colon."
+"How do you specify the starting and ending addresses in the save syntax?","The starting and ending addresses are specified in hexadecimal notation, without a leading dollar sign, and the ending address must be one location beyond the last location to be saved."
+"What is the purpose of the drive number in the save syntax?","The drive number specifies the drive to save the file to, in this case the 1581 disk drive, it is specified as \"drive#:\"."
+"What is the format of the device number in the save syntax?","The device number is a two digit number, normally 08, with a leading zero, it specifies the device to save the file to."
+"Can you give an example of the save syntax?","Yes, the syntax to SAVE a copy of \"DOS 5.1\" is S \"0:DOS 5.1\",08,CC00,D000>."
+"What is the significance of the leading zero in the device number?","The leading zero in the device number is required, it is part of the two digit device number, normally 08."
+"How do you specify the file name in the save syntax?","The file name is specified as any valid file name up to 14 characters long, leaving two characters for the drive number and colon."

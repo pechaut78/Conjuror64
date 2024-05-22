@@ -1,0 +1,11 @@
+question,answer
+"what is a sprite in the context of the C64?","A sprite is a special type of user definable character which can be displayed anywhere on the screen, maintained directly by the VIC-II chip, and can be customized to have a specific appearance, color, and position."
+"how many colors can a sprite be?","A sprite can be any of the 16 colors available."
+"can sprites be used with other graphics modes?","Yes, sprites can be used with any of the other graphics modes, including bit mapped, character, multi-color, etc., and they'll keep their shape in all of them."
+"how many sprites can be maintained by the VIC-II chip at a time?","Up to 8 sprites at a time can be maintained by the VIC-II chip automatically."
+"what is the size of a sprite?","A sprite is 24 horizontal dots by 21 vertical dots in size."
+"can sprites have individual colors?","Yes, each sprite has individual color control."
+"what is sprite multi-color mode?","Sprite multi-color mode is one of the features of sprites, allowing them to have multiple colors."
+"can sprites be magnified?","Yes, sprites can be magnified (2x) in horizontal, vertical, or both directions."
+"how do sprites interact with the background?","Sprites have selectable sprite to background priority, and can also detect collisions with the background."
+"can sprites detect collisions with each other?","Yes, sprites can detect collisions with each other, allowing for more complex interactions."

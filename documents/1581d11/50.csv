@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the file number in the PRINT# command","the file number serves as a shorthand way of relating all other file-handling commands back to the correct OPEN statement"
+"what is the purpose of the data list in the PRINT# command","the data list is a list of constants, variables and/or expressions, including numbers, strings or both"
+"why is it better to include only one data item in each PRINT# statement","it is better to include only one data item in each PRINT# statement to disk, if you wish to include more items, they should be separated by a carriage return character"
+"what is the purpose of semicolons in the PRINT# command","semicolons are permitted, but not recorded in the file, and do not result in any added spaces in the file, they can be used to separate items in the list that might otherwise be confused"
+"what is the correct abbreviation for the PRINT# command","the correct abbreviation for the PRINT# command is pR"
+"how do you record a few grades for John Paul Jones using a sequential disk file","you can use a FOR loop to record a few grades for John Paul Jones, using a sequential disk file #1 previously opened for writing"
+"why is it not necessary to check for disk errors after every file-handling statement when using PRINT#","a single check after an entire set of data has been written will still detect the error, so long as the check is made before any other file-handling statement or disk command is used"
+"how do you get variables onto a sequential disk file instead of the screen","you can use separate PRINT# statements for each variable, or combine them using a carriage return character"
+"what is the effect of using CHR$(13) in a PRINT# statement","CHR$(13) is the carriage return character, and has the same effect as putting the print items in separate lines"
+"how can you save space and time when combining variables in a PRINT# statement","you can define a variable as equal to CHR$(13) and use it in the PRINT# statement"

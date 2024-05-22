@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $C?","address            $C             DIMFLG
+Flags for the Routines That Locate or Build an Array
+
+This location is used as a flag by the routines that build an array or
+reference an existing array.  It is used to determine whether a
+variable is in an array, whether the array has already been
+DIMensioned, and whether a new array should assume the default
+dimensions."

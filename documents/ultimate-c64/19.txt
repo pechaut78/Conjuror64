@@ -1,0 +1,41 @@
+
+Character Mode
+The C64 has two built-in character sets that the VIC
+can access. They can be shown on the screen by writing the numbers 0 to 255 into screen RAM (at $0400
+by default). The default font has uppercase characters
+and lots of line-drawing symbols in the lower 128
+characters, and the second half consists of the same
+characters, but inverse. The alternative font has upper- and lowercase characters and omits some of the
+symbols.
+The foreground color of the characters can be
+changed by writing the color numbers into the Color
+RAM, which is located at $D800-$DBFF. There is
+one byte per character, but only the lower 4 bits are
+actually preserved by Color RAM.
+Each character is 8x8 pixels, and stored as eight bytes
+in the character ROM, one line being one byte. A 1-bit
+will take the color from the Color RAM ($D800-
+$DBFF), and a 0 bit will take it from the global background color register ($D021). The pixel matrix is
+determined by looking up the character index in the
+screen RAM (at $0400-$07FF by default) and consequently looking up the pattern the current character
+set (the VIC sees the default font at $1000, although
+for the 6502 it is invisible there).
+In Extended Color Mode (ECM), it is possible to
+chose between one of four background colors (registers $D021 to $D024) with the upper two bits of the
+character index, but then only 6 bits will be used to
+look up the character pattern, decreasing the number
+of possible characters to 64. The built-in (uppercase)
+character set is well-suited for this: While it is similar
+to the ASCII encoding, it has the uppercase characters
+mapped to codes $01 to $1A, so the most important
+characters are within the first $40.
+Multi-Color Character Mode allows up to four colors
+per character and is intended for tile-based games,
+like platformers. If bit 3 of the value in Color RAM is
+0, then the character gets displayed just like in nonmulticolor mode, but colors are restricted to the first
+eight. If bit 3 is 1, then pairs of horizontally adjacent
+bits are combined in their meaning: 00 represents the
+screen background ($D021), 01 is the second background register ($D022), 10 is the third background
+register ($D023), and 11 is the color specified in bits
+0-2 of the Color RAM. Pixels in these characters are
+twice as wide, so the resolution of a character is 4x8.

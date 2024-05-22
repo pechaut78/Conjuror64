@@ -1,0 +1,11 @@
+question,answer
+"What are the two arithmetic operations the 6510 can perform?","The 6510 can perform addition and subtraction."
+"Where is the first operand of a calculation obtained from in the 6510?","The first operand of a calculation is obtained from the accumulator in the 6510."
+"What is the source of the second operand in a 6510 calculation?","The second operand in a 6510 calculation is obtained from memory."
+"Where is the result of an arithmetic operation left in the 6510?","The result of an arithmetic operation is always left in the accumulator in the 6510."
+"What is an example of an addition instruction in 6510 assembly language?","An example of an addition instruction in 6510 assembly language is ADC #$3A, which adds the contents of the addressed memory location to the accumulator and places the result back in the accumulator."
+"What is an overflow in the context of adding two 8-bit values in the 6510?","An overflow occurs in the 6510 when the result of adding two 8-bit values cannot be represented by an 8-bit number."
+"What addressing modes are used to obtain the second operand in a 6510 calculation?","The various addressing modes are used for obtaining the second operand in a 6510 calculation."
+"What is the effect of the addition instruction ADC #$3A in 6510 assembly language?","The addition instruction ADC #$3A in 6510 assembly language adds the contents of the addressed memory location ($3A) to the accumulator and places the result back in the accumulator."
+"What must be implemented by the user in the 6510 for multiplication and division operations?","Multiplication and division operations must be implemented by the user in the 6510."
+"What is the maximum value that can be represented by an 8-bit number in the 6510?","The maximum value that can be represented by an 8-bit number in the 6510 is 255."

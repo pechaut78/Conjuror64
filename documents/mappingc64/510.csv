@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the routine located at address $E2B4?","This routine, located at address $E2B4, evaluates the tangent of the number in FAC1, which represents the angle in radians, by dividing its sine by its cosine."
+"what is the range of locations for the table of constants for evaluating SIN, COS, and TAN?","The table of constants for evaluating SIN, COS, and TAN is located in the range of addresses 58080-58125 ($E2E0-$E30D)."
+"how is the tangent of the number in FAC1 evaluated?","The tangent of the number in FAC1, which represents the angle in radians, is evaluated by dividing its sine by its cosine."
+"in which format does FAC1 represent the angle?","FAC1 represents the angle in radians."
+"what is the name of the routine located at address $E2B4?","The routine located at address $E2B4 is called TAN."
+"what is the mathematical operation used to evaluate the tangent?","The mathematical operation used to evaluate the tangent is division, specifically dividing the sine by the cosine."
+"in which address range is the routine located?","The routine is located in the address range $E2B4-$E2E0."
+"what is the purpose of the table of constants for evaluating SIN, COS, and TAN?","The table of constants is used for evaluating SIN, COS, and TAN."
+"what is the format of the address range $E2E0-$E30D?","The address range $E2E0-$E30D is in hexadecimal format."
+"what is the relationship between the sine and cosine in the evaluation of the tangent?","The sine and cosine are used in the evaluation of the tangent, where the tangent is calculated by dividing the sine by the cosine."

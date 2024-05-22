@@ -1,0 +1,6 @@
+
+PHP
+With the PHP instruction (push processor status), the
+entire status register (contents of the flags) is placed
+on the stack and the stack pointer is decremented by one.
+The contents of the status register are retained.

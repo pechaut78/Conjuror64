@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the BCC instruction?","The opcode for the BCC instruction is 90."
+"what is the addressing mode for the BCC instruction?","The addressing mode for the BCC instruction is Relative."
+"what is the number of bytes for the BCC instruction?","The number of bytes for the BCC instruction is 2."
+"what is the number of cycles for the BCC instruction when the branch occurs to the same page?","The number of cycles for the BCC instruction when the branch occurs to the same page is 2."
+"what is the number of cycles for the BCC instruction when the branch occurs to a different page?","The number of cycles for the BCC instruction when the branch occurs to a different page is 4."
+"what is the purpose of the BCC instruction?","The purpose of the BCC instruction is to branch on carry clear, which means the program will jump to a new location if the carry flag is clear."
+"what is the syntax for the BCC instruction in assembly language?","The syntax for the BCC instruction in assembly language is BCC Oper, where Oper is the target address of the branch."
+"how does the BCC instruction affect the program counter?","The BCC instruction affects the program counter by loading the target address into it, causing the program to jump to a new location."
+"what is the relationship between the BCC instruction and the carry flag?","The BCC instruction is dependent on the carry flag, and only branches if the carry flag is clear."
+"what are the implications of the BCC instruction on program flow?","The BCC instruction can significantly affect program flow, as it can cause the program to jump to a new location, potentially changing the course of execution."

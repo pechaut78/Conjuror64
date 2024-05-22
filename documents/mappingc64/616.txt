@@ -1,0 +1,13 @@
+
+
+
+address              $F32F          CLALL
+Close All Logical I/O Files
+
+CLALL is a documented Kernal routine whose entry point in the jump
+table is 65511 ($FFE7).
+
+The routine jumps through a RAM vector at 812 ($32C).  It closes all
+open files, by resetting the index into open files at 152 ($98) to
+zero.  It then falls through to the next routine, which restores the
+default I/O devices.

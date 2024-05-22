@@ -1,0 +1,46 @@
+
+
+
+address     $400-$7E7
+Video Matrix: 25 Lines by 40 Columns
+
+The video matrix is where thext screen characters are stored in RAM.
+Normally, the VIC-II chip will treat each byte of memory here as a
+screen display code and will display the text character that
+corresponds to that byte of code.  The first byte of memory here will
+be displayed in the top-left corner of the screen, and subsequent
+bytes will be displayed in the columns to the right and the rows below
+that character.
+
+It is possible to make text or graphics characters appear on the
+screen by POKEing their screen codes directly into this area of RAM.
+For example, the letter A has a screen code value of 1.  Therefore,
+POKE 1024,1 should make the letter A appear in the top-left corner of
+the screen.
+
+However, you should be aware that the most current version of the
+Operating System initializes the color RAM which is used for the
+foreground color of text characters to the same value as the
+background color every time that the screen is cleared.  The result is
+that although the POKE will put a blue A on the screen, you won't be
+able to see it because it is the same color blue as the background.
+This can be remedied by POKEing a different value into color RAM
+(which starts at 55296 ($D800)).
+
+A POKE 1024,1:POKE 1024+54272,1 will put a white A in the upper-left
+corner of the screen.  The loop
+
+FOR I=0 TO 255:POKE 1024+I,I:POKE 1024+54272+I,1:NEXT
+
+will display all of the characters in white at the top of the screen.
+Another solution to the color RAM problem is to fool the Operating
+System into initializing the color RAM for you.  If you change the
+background color to the desired foreground color before you clear the
+screen, color RAM will be set to that color.  Then, all you have to do
+is change the background color back to what it was.  This example will
+show how it's done:
+
+10 POKE 53281,2:REM BACKGROUND IS RED
+20 PRINT CHR$(147):REM CLEAR SCREEN
+30 POKE 53281,1:REM BACKGROUND IS WHITE
+40 POKE 1024,1:REM RED "A" APPEARS IN TOP LEFT CORNER

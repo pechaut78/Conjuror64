@@ -1,0 +1,15 @@
+question,answer
+"What is the purpose of the memory location at address $B?","address           $B             COUNT
+Index into the Text Input Buffer/Number of Array Subscripts
+
+The routines that convert the text in the input buffer at 512 ($200)
+into lines of executable program tokes, and the routines that link
+these program lines together, use this location as an index into the
+input buffer area.  When the job of converting text to tokens is
+finished, the value in this location is equal to the length of the
+tokenized line.
+
+The routines which build an array or locate an element in an array use
+this location to calculate the number of DIMensions called for and the
+amount of storage required for a newly created array, or the number of
+subscripts specified when referencing an array element."

@@ -1,0 +1,24 @@
+question,answer
+"What is the purpose of the memory location at address $Eb48?","address              $Eb48
+Set Up the Proper Keyboard Decode Table
+
+This routine is pointed to by the vector at 655 ($28F).  Its function
+is to read the shift/control flag at 653 ($28D), and set the value of
+the decode table pointer at 245 ($F5) accordingly.
+
+First it checks if the SHIFT/Commodore logo combination was pressed,
+and if the toggle enable at 657 (291) will allow a change, the
+character set will be changed to lowercase/uppercase or
+uppercase/graphics by changing the VIC Memory Control Register at
+53272 ($D018), and no character will be printed.
+
+Next it sets the decode table pointer.  There are 64 keys, and each
+can have four different PETASCII values, depending on whether the key
+is pressed by itself, or in combination with the SHIFT, CTRL, or
+Commodore logo keys.  Therefore, there are four tables of 64 entries
+each to translate the keycode to PETASCII:  the standard table, the
+SHIFT table, the Commodore logo table, and the CONTROL table.  The
+routine will set up the pointer for the appropriate table, depending
+on whether the SHIFT, CTRL, or logo key was pressed.  The CTRL key
+takes precedence, so that if another of these keys is pressed along
+with the CTRL key, the CONTROL table is used."

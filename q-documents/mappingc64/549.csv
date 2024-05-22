@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $E87C?","address              $E87C
+Move Cursor to Next Line
+
+This subroutine moves the cursor down to the next line if possible, or
+scrolls the screen if the cursor is on the last line."

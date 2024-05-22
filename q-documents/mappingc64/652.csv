@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $FCD1?","address              $FCD1
+Check the Tape Read/Write Pointer
+
+This routine compares the current tape read/write address with the
+ending read/write address."

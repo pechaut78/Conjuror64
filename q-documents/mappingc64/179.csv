@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $30E?","address           $30E           SYREG
+Storage Area for .Y Index Register"

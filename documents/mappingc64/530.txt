@@ -1,0 +1,14 @@
+
+
+
+address              $E4E0
+Pause after Finding a File on Cassette
+
+This routine is a patch to the routine which finds a file on cassette.
+After the file is found, the message FILETITLE FOUND appears on the
+screen.  On the original versions of the Kernal, the user would then
+have to hit the Commodore key to continue the load.  On the newer
+versions, this patch causes a slight pause after the tape file is
+round, during which time a keypress is looked for.  If a key is
+pressed, the loading process continues immediately.  If it is not, the
+load continues by itself after the end of the pause.

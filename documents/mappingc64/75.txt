@@ -1,0 +1,24 @@
+
+
+
+address           $9D            MSGFLG
+Flag: Kernal Message Control
+
+This flag is set by the Kernal routine SETMSG (65048, $FE18), and it
+controls whether or not Kernal error messages or control messages will
+be displayed.
+
+A value of 192 ($C0) here means that both Kernal error and control
+messages will be displayed.  This will never normally occur when using
+BASIC, which prefers its own plain text error messages over the
+Kernal's perfunctory I/O ERROR (number).  The Kernal error messages
+might be used, however, when you are SAVEing or LOADing with a machine
+language monitor.
+
+A 128 ($80) means that control messages only will be displayed.  Such
+will be the case when you are in the BASIC direct or immediate mode.
+These messages include SEARCHING, SAVING, FOUND, etc.
+
+A value of 64 means that Kernal error messages only are on.  A 0 here
+suppresses the display of all Kernal messages.  This is the value
+placed here when BASIC enters the program or RUN mode.

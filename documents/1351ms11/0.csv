@@ -1,0 +1,11 @@
+question,answer
+"what is the commodore 1351 mouse designed for?","The Commodore 1351 Mouse is designed for use with the Commodore 64 or Commodore 128 computers, featuring two buttons on the top and a ball on the underside that is rolled upon a flat surface to manipulate onscreen activity."
+"what are the two modes of operation of the commodore 1351 mouse?","The Commodore 1351 Mouse has two modes of operation: joystick mode, where it emulates a joystick and can be used with all joystick-compatible software, and proportional mode, where it uses a new technique to communicate mouse movement to the controlling application software."
+"what is the function of the left button in joystick mode?","In joystick mode, the left button is the fire button, and the right button is usually ignored."
+"what is required for the mouse to work in proportional mode?","For the mouse to work in proportional mode, the software needs to know the mouse is there and how to read it, such as with the GEOS operating system that can use many different input drivers, including the Commodore Mouse driver."
+"what is the benefit of proportional mode?","Proportional mode provides a fast, responsive pointer that moves easily on the screen, allowing applications to take advantage of the benefits provided by this mode."
+"how do you switch to joystick mode?","To switch to joystick mode, plug the mouse into either joystick port on the side of the computer and hold down the right button as the computer is powered up."
+"what is the default mode of the mouse when powered up?","The mouse automatically powers up in proportional mode."
+"can older software use the mouse?","Yes, joystick mode acts as a fallback for those applications that don't have installable device drivers, allowing older software to use the mouse as a joystick."
+"what is the purpose of the ball on the underside of the mouse?","The ball on the underside of the mouse is rolled upon a flat surface to manipulate onscreen activity."
+"can the mouse be used with all joystick-compatible software?","Yes, in joystick mode, the mouse can be used with all joystick-compatible software."

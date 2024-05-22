@@ -1,0 +1,11 @@
+question,answer
+"what is the function of the eight data bus pins on the C64","The eight data bus pins (DB7-DB0) serve as a bidirectional data port, controlled by the /CS, RW, and Phase 0 signals, allowing data to be transferred in and out of the device registers."
+"what are the conditions required to access the data bus","The data bus can only be accessed when AEC and Phase 0 are high and /CS is low, ensuring that the device registers are properly selected and ready for data transfer."
+"what is the purpose of the /CS pin","The chip select pin (/CS) is used to enable access to the device registers, and must be brought low in conjunction with the address and RW pins to select the desired register for data transfer."
+"what is the relationship between /CS and AEC","The /CS pin is only recognized as low when AEC and Phase 0 are high, ensuring that the device registers are properly selected and ready for data transfer."
+"what is the significance of Phase 0 in accessing the data bus","Phase 0 must be high to access the data bus, along with AEC and /CS, to ensure that the device registers are properly selected and ready for data transfer."
+"what is the direction of data transfer on the data bus","The data bus is bidirectional, allowing data to be transferred in and out of the device registers, depending on the direction of data transfer required by the system."
+"what is the role of RW in accessing the device registers","The RW pin, in conjunction with the address and /CS pins, controls the direction of data transfer on the data bus, allowing data to be written to or read from the device registers."
+"what is the condition for /CS to be recognized as low","/CS is only recognized as low when AEC and Phase 0 are high, ensuring that the device registers are properly selected and ready for data transfer."
+"what is the function of AEC in accessing the data bus","AEC must be high to access the data bus, along with Phase 0 and /CS, to ensure that the device registers are properly selected and ready for data transfer."
+"what is the significance of the address pins in accessing the device registers","The address pins, in conjunction with the /CS and RW pins, select the desired device register for data transfer, ensuring that data is transferred to or from the correct register."

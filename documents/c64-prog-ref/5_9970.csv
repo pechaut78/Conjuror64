@@ -1,0 +1,12 @@
+question,answer
+"Where does the Commodore 64 screen start and end?","The Commodore 64 screen starts at location 1024 ($0400 in HEXadecimal notation) and goes to location 2023, with each location being 8 bits wide, capable of holding any integer number from 0 to 255."
+"How many possible colors can the Commodore 64 use?","The Commodore 64 can use 16 possible colors, which is well-suited to the 4-bit wide color RAM locations that can hold any integer number from 0 to 15."
+"What is the purpose of the 1000 locations in screen memory?","Each of the 1000 locations in screen memory contains a code number that tells the VIC-II chip which character to display at that screen location, allowing for 256 different characters to be displayed at any time."
+"What is the function of the 47 CONTROL registers in the VIC-II chip?","The 47 CONTROL registers in the VIC-II chip are used to select various graphics modes, with many graphics functions able to be controlled by POKEing the correct value into one of the registers."
+"What is the address range of the VIC-II chip?","The VIC-II chip is located starting at 53248 ($D000 in HEX) through 53294 ($D02E in HEX)."
+"How many bits wide are the color RAM locations?","The color RAM locations are 4 bits wide, which means they can hold any integer number from 0 to 15."
+"How many locations are in the COLOR MEMORY or COLOR RAM?","There are 1000 locations in the COLOR MEMORY or COLOR RAM, starting at location 55296 ($D800 in HEX) and going up to 56295."
+"What is the purpose of the screen memory?","The screen memory is used to store the code numbers that tell the VIC-II chip which character to display at each screen location."
+"How many characters can be displayed at any time?","Up to 256 different characters can be displayed at any time, with each of the 1000 locations in screen memory containing a code number that specifies which character to display."
+"What is the relationship between the screen memory and the COLOR MEMORY or COLOR RAM?","The screen memory and the COLOR MEMORY or COLOR RAM are connected, with the screen memory storing the code numbers for the characters and the COLOR MEMORY or COLOR RAM storing the color information for each character."
+"What is the significance of the 8-bit width of the screen memory locations?","The 8-bit width of the screen memory locations means that each location can hold any integer number from 0 to 255, allowing for a wide range of character codes to be stored."

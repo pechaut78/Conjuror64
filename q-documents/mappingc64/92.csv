@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $B6?","address           $B6            RODATA
+RS-232 Output Byte Buffer
+
+RS-232 routines use this area to disassemble each byte to be sent from
+the transmission buffer pointed to by 249 ($F9)."

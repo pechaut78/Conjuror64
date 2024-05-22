@@ -1,0 +1,11 @@
+question,answer
+"What happens to the status register when the PHP instruction is executed in PHP?","The PHP instruction (push processor status) places the entire status register, including the contents of the flags, on the stack in PHP. The stack pointer is decremented by one, and the contents of the status register are retained."
+"How does the PHP instruction affect the stack pointer?","When the PHP instruction (push processor status) is executed in PHP, the stack pointer is decremented by one."
+"What is stored on the stack when the PHP instruction is executed?","When the PHP instruction (push processor status) is executed in PHP, the entire status register, including the contents of the flags, is placed on the stack."
+"Does the PHP instruction alter the contents of the status register?","No, the PHP instruction (push processor status) in PHP retains the contents of the status register and places it on the stack."
+"What is the function of the PHP instruction in PHP?","The PHP instruction (push processor status) in PHP places the entire status register, including the contents of the flags, on the stack and decrements the stack pointer by one."
+"What is pushed onto the stack when the PHP instruction is executed in PHP?","The PHP instruction (push processor status) pushes the entire status register, including the contents of the flags, onto the stack in PHP."
+"What happens to the stack pointer when the PHP instruction is executed in PHP?","The stack pointer is decremented by one when the PHP instruction (push processor status) is executed in PHP."
+"What is the effect of the PHP instruction on the status register in PHP?","The PHP instruction (push processor status) in PHP retains the contents of the status register and places it on the stack."
+"What is the result of executing the PHP instruction in PHP?","The result of executing the PHP instruction (push processor status) in PHP is the placement of the entire status register, including the contents of the flags, on the stack and the decrementing of the stack pointer by one."
+"What is stored on the stack after the PHP instruction is executed in PHP?","After the PHP instruction (push processor status) is executed in PHP, the entire status register, including the contents of the flags, is stored on the stack."

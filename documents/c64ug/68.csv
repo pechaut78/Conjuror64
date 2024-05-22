@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the DATA statement in C64?","The DATA statement is used to define a list of items that can be read by READ statements, allowing for the storage and retrieval of numeric values or text strings, which can be separated by commas and may require quote marks if they contain special characters."
+"What happens when two commas appear consecutively in a DATA statement?","When two commas appear consecutively in a DATA statement, the value will be READ as a zero for a number, or an empty string, indicating the absence of a value."
+"How are string items separated in a DATA statement?","String items in a DATA statement are separated by commas, and do not require quote marks unless they contain special characters such as spaces, colons, or commas."
+"What types of items can be included in a DATA statement?","A DATA statement can include numeric values or text strings, which can be used by READ statements to retrieve and process the data."
+"Can a DATA statement contain multiple items?","Yes, a DATA statement can contain multiple items, which are separated by commas, allowing for the storage and retrieval of multiple values or strings."
+"What happens if a string item contains a comma in a DATA statement?","If a string item contains a comma, it must be enclosed in quote marks to distinguish it from the comma separators used to separate items in the DATA statement."
+"How are numeric values represented in a DATA statement?","Numeric values in a DATA statement can be represented as integers or decimal numbers, such as 12 or 14.5, and are separated by commas."
+"Can a DATA statement contain a mix of numeric and string items?","Yes, a DATA statement can contain a mix of numeric and string items, which can be separated by commas and used by READ statements to retrieve and process the data."
+"What is the purpose of quote marks in a DATA statement?","Quote marks are used in a DATA statement to enclose string items that contain special characters such as spaces, colons, or commas, to distinguish them from the comma separators used to separate items."
+"How are items in a DATA statement used by READ statements?","Items in a DATA statement are used by READ statements to retrieve and process the data, allowing for the storage and retrieval of numeric values or text strings."

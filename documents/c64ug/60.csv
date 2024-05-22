@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the LOAD command?","The LOAD command is used to transfer a program from tape or disk into memory so the program can be used."
+"What happens when you type LOAD and hit RETURN?","The first program found on the cassette unit will be placed in memory."
+"How can you specify a program name when using the LOAD command?","The program name can be enclosed within quotes, and may be followed by a comma and a number or numeric variable, which acts as a device number to indicate where the program is coming from."
+"What is the default device number assumed by the Commodore 64 if no device number is given?","The default device number assumed is #1, which is the cassette unit."
+"What is the device number for the disk device?","The device number for the disk device is #8."
+"What does the command LOAD do?","The command LOAD reads in the next program on tape."
+"How can you load a program with a specific name using the LOAD command?","You can load a program with a specific name by typing LOAD followed by the program name enclosed in quotes, for example LOAD \"HELLO\"."
+"How can you load a program from a variable using the LOAD command?","You can load a program from a variable by typing LOAD followed by the variable name, for example LOAD A$."
+"How can you load a program from the disk drive using the LOAD command?","You can load a program from the disk drive by typing LOAD followed by the program name enclosed in quotes, a comma, and the device number #8, for example LOAD \"HELLO\",8."
+"What does the command LOAD \"*\",8 do?","The command LOAD \"*\",8 looks for the first program on the disk drive."

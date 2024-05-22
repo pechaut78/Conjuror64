@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $A8?","address           $A8            BITCI
+RS-232 Input Bit Count/Cassete Temporary Storage
+
+This location is used to count the number of bits of serial data that
+has been received.  This is necessary so that the serial routines will
+know when a full word has been received.  It is also used as an error
+flag during tape loads."

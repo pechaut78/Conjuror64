@@ -1,0 +1,25 @@
+question,answer
+"What is the memory configuration of a Commodore 64 system, including how the ROMs and I/O area can be altered, and how programs typically utilize the available memory?","Memory Configuration
+In a running system with BASIC and KERNAL, the
+BASIC and KERNAL ROMs are turned on and visible
+at $A000-$BFFF and $E000-$FFFF respectively,
+and at $D000-$DFFF, the I/O area is visible. Using
+the 3 lowest bits in the processor port at address 1,
+this configuration can be altered. The ROMs can be
+turned off, revealing RAM instead, and the I/O area
+can be configured to show either RAM or the character set ROM. Note that writing to ROM will always
+direct the data to the underlying RAM.
+In practice, many programs run in the default configuration and use both KERNAL library routines, as
+well as functions in BASIC, to keep their own code as
+small as possible. More recent programs and almost
+all games turn off all of ROM, to get direct control of
+the interrupt vector without having to go though the
+KERNAL handler first. The I/O area is typically configured to show the I/O registers and Color RAM, and
+only rarely switched to a different configuration to
+temporarily access the RAM underneath. A few applications read the character ROM at program start and
+modify the copy.
+The C64 supports another ROM bank at $8000-
+$9FFF, which can only be serviced by an external cartridge connected to the expansion port. If KERNAL
+detects the magic string ”CBM80” at $8004 on
+startup, it will jump to the code of the cartridge right
+away."

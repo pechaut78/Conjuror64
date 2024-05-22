@@ -1,0 +1,33 @@
+
+
+
+address         $B526          GARBAG
+String Garbage Collection
+
+Whenever a string is changed in any way, the revised version of the
+text is added to the bottom of the string text area, leaving the old
+version higher up in memory, wasting space.
+
+In order to reclaim that space, the descriptor for every string whose
+text is in the string text area (rather than in the program text area)
+must be searched to find the valid text that is highest in memory.  If
+that string is not as high as it could be, it is moved up to replace
+any string that is no longer valid.  Then all of the string
+descriptors must be searched again to find the next highest string and
+move it up.  This continues until every string that is un use has been
+covered.  After all have been moved up, the pointer to the bottom of
+string text at 51-52 ($33-$34) is changed to show the new bottom
+location.
+
+If there are more than a few strings whose text is in the string text
+storage area, rather than in the body of the program, scanning every
+string as many times as there are strings can take an awful lot of
+time.  The computer may seem as if it had died (the STOP key is not
+even checked during the procedure).
+
+The collection will take about as long whether there is any spare
+space or not; the full collection will be done even if it is done
+immediately after the last collection.  Although the increased memory
+capacity of the 64 helps to forestall the need for garbage collection,
+a large program with many string arrays may still experience lengthy
+collection delays.

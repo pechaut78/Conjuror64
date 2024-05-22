@@ -1,0 +1,14 @@
+
+
+C64 Basic
+ The GOTO statement changes the order in which program
+lines are executed.
+• Normally, after the computer executes one line, it will exe
+cute the next one in the sequence. The GOTO statement
+causes execution to jump to a different line.
+• GOTO can move execution forward or backward in the
+program.
+• When GOTO is used to skip backward so that lines can be
+executed again, the lines that are repeated form a loop.
+If these lines are executed continuously, without ever
+stopping, the loop is called an infinite loop.

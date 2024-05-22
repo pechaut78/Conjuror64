@@ -1,0 +1,9 @@
+
+
+
+address          $A9            RINONE
+RS-232 Flag: Check for Start Bit
+
+This flag is used when checking for a start bit.  A 144 ($90) here
+indicates that no start bit was received, while a 0 means that a start
+bit was received.

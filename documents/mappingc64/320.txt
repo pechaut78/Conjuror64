@@ -1,0 +1,10 @@
+
+
+
+address         $B7F7          GETADR
+Convert a Floating Point Number to an Unsigned Two-Byte Integer
+
+This routine checks the number in the Floating Point Accumulator to
+make sure that it is a positive number less than 65536, and then calls
+the subroutine which conerts floatin point to integer.  It is used to
+get address parameters, for commands such as PEEK.

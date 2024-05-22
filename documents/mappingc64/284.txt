@@ -1,0 +1,8 @@
+
+
+
+address         $B194          ARYGET
+Allocate Space for Array Descriptors
+
+This routine allocates five bytes plus two bytes for every dimension
+specified for the array descriptor.

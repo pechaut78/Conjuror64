@@ -1,0 +1,182 @@
+question,answer
+"What is the purpose of the memory location at address $DD0F?","address              $DD0F          CI2CRB
+Control Register B
+
+Bit 0:  Start Timer B (1=start, 0=stop)
+Bit 1:  Select Timer B output on Port B (1=Timer B output appears on
+        Bit 7 of Port B)
+Bit 2:  Port B output mode (1=toggle Bit 7, 0=pulse Bit 7 for one
+        cycle)
+Bit 3:  Timer B run mode (1=one shot, 0=continuous)
+Bit 4:  Force latched value to be loaded to Timer B counter (1=force
+        load strobe)
+Bits 5-6:  Timer B input mode
+           00 = Timer B counts microprocessor cycles
+           01 = Count signals on CNT line at pin 4 of User Port
+           10 = Count each time that Timer A counts down to 0
+           11 = Count Timer A 0's when CNT pulses are also present
+Bit 7:  Select Time of Day write (0=writing to TOD registers sets
+           alarm, 1=writing to ROD registers sets clock)
+
+Location Range: 56592-56831 ($DD10-$DDFF)
+CIA #2 Register Images
+
+Since the CIA chip requires only enough addressing lines to handle 16
+registers, none of the higher bits are decoded when addressing the
+256-byte area that has been assigned to it.  The result is that every
+16-byte area in this 256-byte block is a mirror of every other.  For
+the sake of clarity in your programs, it is advisable not to use these
+addresses.
+
+Location Range: 56832-57087 ($DE00-$DEFF)
+Reserved for I/O Expansion
+
+This range of locations is not used directly by the 64's internal
+hardware.  It is, however, accessible via pin 7 of the Expansion Port.
+It can be used to control cartridges which are connected to this port.
+For example, the CP/M module uses this space to control which
+microprocessor is in control of the system.  The Z-80 microprocessor
+is turned on and off by writing to 56832 ($DE00).
+
+Another cartridge which uses this space is Simon's BASIC.  This 16K
+cartridge is addressed at memory locations 32768-49151 ($8000-$BFFF),
+which means that it overlaps the regular BASIC ROM at 40960-49151
+($A000-$BFFF).  But since it contains additions to BASIC, it must use
+the BASIC ROM as well.  This problem is solved by copying the
+cartridge at 32768-40959 ($8000-$9FFF) to RAM, and turning the
+cartridge on and off by writing to or reading from location 56832
+($DE00).
+
+Location Range: 57088-57343 ($DF00-$DFFF)
+CIA #2 Register Images
+
+This range of locations is not used directly by the 64's internal
+hardward, but is accessible via pin 10 of the Expansion Port.  One
+possible use for this I/O memory that Commodore has mentioned is an
+inexpensive parallel disk drive (which presumable would be much faster
+than the current serial model).
+
+Alternate 53248-57343 ($D000-$DFFF)
+Character Generator ROM
+
+The character generator ROM supplies the data which is to form the
+shapes of the text and graphics characters that are displayed on the
+screen.  Each character requires eight bytes of shape data, and these
+eight-byte sequences are arranged in order in which the characters
+appear in the screen code chart (see Appendix G).  For example, the
+first eight bytes of data in the ROM hold the shape information for
+the commercial at sign (@), the next eight hold the shape of the
+letter A, etc.  In all, there are 4096 bytes, representing shape data
+for two complete character sets of 256 characters each--1K each for
+uppercase/graphics, reverse uppercase/reverse graphics, lowercase/
+uppercase, and reverse lowercase/reverse uppercase.
+
+The shape of each character is formed by an 8 by 8 matrix of screen
+dots.  Whether any of the 64 dots is lit up or not is determined by
+the bit patterns of the character data.  Each byte of the Character
+ROM holds a number from 0 to 255.  This number can be represented by
+eight binary digits of 0 or 1.  The leftmost bit of these eight is
+known as Bit 7, while the rightmost bit is called Bit 0.  Each of
+these binary digits has a bit value that is two times greater than the
+last.  The values of a bit set to 1 in each of the bit places are:
+
+Bit    0    1     2    3    4    5    6    7
+Value  1    2     4    8   16   32   64  128
+
+A byte whose value is 255 has every bit set to 1
+(128+64+32+16+8+4+2+1=255), while a byte whose value is 0 is made up
+of all zero bits.  Numbers in between are made up of combinations of
+bits set to 1 and bits set to 0.  If you think of every bit that holds
+0 as a dot on the screen which is the color of the screen background,
+and every bit that holds a 1 as a dot whose color is that of the
+appropriate nybble in Color RAM, you can begin to get an idea of how
+the byte values relate to the shape of the character.  For example, if
+you PEEK at the first eight bytes of the character ROM (the technique
+is explained in the entry for location 1), you will see the numbers
+60, 102, 110, 110, 96, 98, 60, 0.  Breaking these data bytes down into
+their bit values gives us a picture that looks like the following:
+
+00111100   0 +   0 +  32 +  16 +   8 +   4 +   0 +   0 =  60
+01100110   0 +  64 +  32 +   0 +   0 +   4 +   2 +   0 = 101
+01101110   0 +  64 +  32 +   0 +   8 +   4 +   2 +   0 = 110
+01101110   0 +  64 +  32 +   0 +   8 +   4 +   2 +   0 = 110
+01100000   0 +  64 +  32 +   0 +   0 +   0 +   0 +   0 =  96
+01100010   0 +  64 +  32 +   0 +   0 +   0 +   2 +   0 =  98
+00111100   0 +   0 +  32 +  16 +   8 +   4 +   0 +   0 =  60
+00000000   0 +   0 +   0 +   0 +   0 +   0 +   0 +   0 =   0
+
+If you look closely, you will recognize the shape of the commercial at
+sign (@) as it's displayed on your screen.  The first byte of data is
+60, and you can see that Bits 5, 4, 3, and 2 are set to 1.  The chart
+above shows that the bit values for these bits are 32, 16, 8, and 4.
+Adding these together, you get 32+16+8+4=60.  This should give you an
+idea of how the byte value corresponds to the patterns of lit dots.
+For an even more graphic display, type in the following program, which
+shows the shape of any of the 512 characters in the ROM, along with
+the number value of each byte of the shape.
+
+10 DIM B%(7),T%(7):FOR I=0 TO 7:T%(I)=2^I:NEXT
+20 POKE 53281,2:PRINT CHR$(147):POKE 53281,1:POKE 53280,0:POKE 646,11
+30 POKE 214,20:PRINT:INPUT' CHARACTER NUMBER (0-511)';C$
+40 C=VAL(C$):GOSUB 80:FOR I=0 TO 7
+50 POKE 214,6+I:PRINT:PRINT TAB(23);B%(I);CHR$(20);'   '
+60 FOR J=7 TO 0 STEP-1:POKE 1319+(7-J)+I*40,32-128*((B%(I)ANDT%(J))=T%(J))
+70 NEXT J,I:POKE 214,20:PRINT:PRINT TAB(27)'    ':GOTO 30
+80 POKE 56333,127:POKE 1,51:FOR I=0 TO 7
+90 B%(I)=PEEK(53248+C*8+I):NEXT:POKE 1,55:POKE 56333,129:RETURN
+
+If you have read about the VIC-II video chip, you know that it can
+address only 16K of memory at a time, and that all display data such
+as screen memory, character shape data, and sprite shape data must be
+stored within that 16K block.
+
+Since it would be very inconvenient for the VIC-II chip to be able to
+access the character data only at the 16K block which includes
+adresses 53248-57343 ($D000-$DFFF), the 64 uses an addressing trick
+that makes the VIC-II chip see an image of the Character ROM at
+4096-8191 ($1000-$1FFF) and at 36864-40959 ($9000-$9FFF).  It is not
+available in the other two blocks.  To generate characters in these
+blocks, you must supply your own user-defined character set, or copy
+the ROM data to RAM.  A machine language routine for doing this is
+included in a sample program at the entry for 56576 ($DD00).
+
+As indicated above, you are by no means limited to useing the
+character data furnished by the ROM.  The availability of user-defined
+characters greatly extends the graphics power of the 64.  It allows
+you to create special text characters, like math or chemistry symbols
+and foreign language alphabets.  You can also develop special graphics
+characters as a substitute for plotting points in bitmap graphics.
+You can achieve the same resolution using a custom character as in
+high-resolution bitmap mode, but with less memory. Once you have
+defined the character, it is much faster to print it to the screen
+than in would be to plot out all of the individual points.
+
+To employ user-defined characters, you must first pick a spot to put
+the shape data.  This requires choosing a bank of 16K for video chip
+memory (see the entry under Bits 0-1 of 56576 ($DD00) for the
+considerations involved), and setting the pointer to the 2K area of
+character memory in 53272 ($D018).  It is then up to you to supply the
+shape data for the characters.  You can use part of the ROM character
+set by reading the ROM and transferring the data to your character
+shape area (see the entry for location 1 for a method of reading the
+ROM).
+
+Your original characters may be created by darkening squares on an 8
+by 8 grid, converting all darkened squares to their bit values, and
+then adding the bit values for each of the eight bytes.  Or, you may
+use one of the many character graphics editor programs that are
+available commercially to generate the data interactively by drawing
+on the screen.
+
+One graphics mode, multicolor text mode, almost requires that you
+define your own character set in order to use it effectively.
+Multicolor mode is enabled by Bit 4 of location 53270 ($D016).
+Instead of using each bit to control whether an individual dot will be
+foreground color (1) or background color (0), that mode breaks down
+each byte of shape data in four bit-pairs.  These bit pairs control
+whether a dot will be the color in Background Color Register #0 (00),
+the color in Background Color Register #1 (01), the color in
+Background Color Register #2 (10), or the color in the appropriate
+nybble of Color RAM (11).  Since each pair of bits controls one dot,
+each character is only four dots across.  To make up for this, each
+dot is twice as wide as a normal high-resolution dot."

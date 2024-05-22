@@ -1,0 +1,8 @@
+
+
+
+address              $FCDB
+Advance the Tape Read/Write Pointer
+
+This routine is used to move the pointer to the current read/write
+address up a byte.

@@ -1,0 +1,12 @@
+
+
+
+address       $328-$329      ISTOP
+Vector to Kernal STOP Routine (Currently at 63213 ($F6ED))
+
+This vector points to the address of the routine that tests the STOP
+key.  The STOP key can be disabled by changing this with a POKE
+808,239.  This will not disable the STOP/RESTORE combination, however.
+To disable both STOP and STOP/ RESTORE, POKE 808,234 (POKEing 234 here
+will cause the LIST command not to function properly).  To bring
+things back to normal in either case, POKE 808, 237.

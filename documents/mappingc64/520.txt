@@ -1,0 +1,10 @@
+
+
+
+address              $E3A2          INITAT
+Text of the CHRGET Routine Which Runs at 115 ($73)
+
+The text of the CHRGET routine is stored here, and moved to Page 0 by
+the BASIC initialization routine.  When creating a wedge in CHRGET, it
+is possible to execute all or part of this code in place of the RAM
+version.

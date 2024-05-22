@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $A5?","address           $A5            CNTDN
+Cassette Synchronization Character Countdown
+
+Used to count down the number of synchronization characters that are
+sent before the actual data in a tape block."

@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for CPY immediate addressing mode?","The opcode for CPY immediate addressing mode is C0, which requires 2 bytes and takes 2 cycles to execute."
+"what is the assembly language form for CPY zero page addressing mode?","The assembly language form for CPY zero page addressing mode is CPY Oper, where Oper is the zero page address, and the opcode is C4, requiring 2 bytes and taking 3 cycles to execute."
+"what is the difference in the number of bytes required for CPY immediate and CPY zero page addressing modes?","The CPY immediate addressing mode requires 2 bytes, while the CPY zero page addressing mode also requires 2 bytes, so there is no difference in the number of bytes required for these two addressing modes."
+"how many cycles does CPY absolute addressing mode take to execute?","CPY absolute addressing mode takes 4 cycles to execute, and it requires 3 bytes, with the opcode being CC."
+"in what way does the addressing mode affect the number of cycles required for CPY instruction?","The addressing mode affects the number of cycles required for the CPY instruction, with immediate and zero page addressing modes taking 2 and 3 cycles respectively, while the absolute addressing mode takes 4 cycles."
+"what is the opcode for CPY zero page addressing mode?","The opcode for CPY zero page addressing mode is C4, which requires 2 bytes and takes 3 cycles to execute."
+"what is the assembly language form for CPY absolute addressing mode?","The assembly language form for CPY absolute addressing mode is CPY Oper, where Oper is the absolute address, and the opcode is CC, requiring 3 bytes and taking 4 cycles to execute."
+"how many bytes are required for CPY absolute addressing mode?","CPY absolute addressing mode requires 3 bytes, with the opcode being CC and taking 4 cycles to execute."
+"in what way does the addressing mode affect the number of bytes required for CPY instruction?","The addressing mode affects the number of bytes required for the CPY instruction, with immediate and zero page addressing modes requiring 2 bytes, while the absolute addressing mode requires 3 bytes."
+"what is the opcode for CPY absolute addressing mode?","The opcode for CPY absolute addressing mode is CC, which requires 3 bytes and takes 4 cycles to execute."

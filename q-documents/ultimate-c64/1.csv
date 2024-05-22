@@ -1,0 +1,18 @@
+question,answer
+"What are the key features, capabilities, and technical specifications of the Commodore 64 (C64) computer?","Look and Feel
+A C64 only needs to be connected to power and a TV set (or monitor) to be fully functional. When turned on, it shows a blue-on-blue theme with a startup message and drops into a BASIC interpreter derived from
+Microsoft BASIC. In order to load and save BASIC programs or use third party software, the C64 requires mass storage - either a “datasette” cassette tape drive or a disk drive like the 5.25' Commodore 1541.
+Unless the user really wanted to interact with the BASIC interpreter, he would typically only use the BASIC instructions LOAD, LIST and RUN in order to access mass storage. LOAD'$',8 followed by LIST shows the directory of the disk in the drive, and
+LOAD'filename',8 followed by RUN would load and start a program. If a tape drive is connected, LOAD and RUN will launch the first program on tape - pressing SHIFT and the RUN/STOP key has the same effect.
+
+By default, typing characters without SHIFT will result in upper case characters being shown on the screen. This can be changed by pressing the Commodore key and SHIFT at the same time, which switches to the upper/lower character set. This behavior is due to the fact that the first PET only had uppercase characters, and that BASIC required keywords unshifted - but all tutorials taught them as uppercase. This is also the reason why in Commodore's version of ASCII, called PETSCII, the codes for uppercase and lowercase characters are reversed.
+The text based user interface is not a line editor, but a screen editor, i.e. the cursor can be moved freely on the screen, and pressing RETURN on a line with existing text will present the text to the application as if it were just typed in.
+While a physical screen line is only 40 characters, the screen editor logic can extend it to a logical 80 characters - whenever a character is entered on the 40th column, the rest of the screen is moved down by one line, ”opening” a line that extends the previous line to 80 characters.
+The C64 screen editor supports selecting one out of 16 color for the foreground text by pressing the key combinations Ctrl+1 to Ctrl+8 and Commodore+1 to Commodore+8. Reverse text mode can be turned on and off with Ctrl+9 and Ctrl+0.
+
+
+Ports and Connections
+The C64 has a whole range of connection possibilities.
+On the side, it has two 9 pin Atari-style joystick connectors that can also be used for a mouse, light pens or paddles. On the back, there is the expansion port, which exports the complete processor bus, allowing not only game cartridges but also cartridges with I/O chips that map themselves into the CPU's address space - or even cartridges that completely replace the CPU. For a conventional TV connection, there is an RCA connector that outputs an RF signal. For monitors, there is an extra DIN connector that carries separate chroma, luma and audio signals (S-Video).
+For connecting Commodore compatible printers and disk drives, there is a DIN connector for the IEC bus.
+There is also a dedicated connector for datasette drives. The ”User Port” consists of several GPIO pins that can be used for custom hardware projects, or as a RS-232 port (with TTL levels), for which support exists in the ROM."

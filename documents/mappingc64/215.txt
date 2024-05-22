@@ -1,0 +1,17 @@
+address   $A052-$A07F    FUNDSP
+                             TABLE
+Function Dispatch Vector Table
+
+This table contains two-byte vectors, each of which points to the
+address of one of the routines that performs a BASIC function.
+
+A function is distinguished by a following argument, in parentheses.
+The expression in the parentheses is first evaluated by the routines
+which begin at 44446 ($AD9E).  Then this table is used to find the
+address of the function that corresponds to the token number of the
+function to be executed.
+
+The substance of this table, which can be used for locating the
+addresses of these routines, is reproduced below.  Note that the
+address for the USR function is 784 ($310), which is the address of
+the JMP instruction which precedes the user-supplied vector.

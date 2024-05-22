@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $FBC8?","address              $FBC8
+Write Data to Cassette--Part 2 (IRQ)
+
+This IRQ handler routine is one part of the write data to cassette
+routine"

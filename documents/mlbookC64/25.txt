@@ -1,0 +1,9 @@
+
+The Exclusive OR instruction
+The operand and the accumulator are compared bit by bit.
+The result is set to one if either one or the other bit
+is onef but not both. The truth table looks like this:
+0 EOR 0=0
+0 EOR 1=1
+1 EOR 0=1
+1 EOR 1=0

@@ -1,0 +1,61 @@
+
+
+ Bigger Sprites on the C64
+
+Having all the Sprite screens the same size can be a bit re- 
+stricting. Sometimes you may want a Sprite to be a bit higher 
+or wider than normal to fit in with the scale of the background, 
+This can be accomplished, to a degree, by using the Sprite 
+Expansion facility. 
+
+Sprites can be doubled in size, in both the X and the Y 
+directions, by setting the appropriate bits in the X and/or 
+Y Sprite Expansion registers. These registers are located 
+at addresses 53277 decimal for the X Expansion register 
+and 53271 decimal for the Y Expansion register. Within 
+each register, bit controls Sprite 0, bit 1 controls Sprite 1, 
+and so on. If the expansion bit is a I then that Sprite is 
+doubled in size in the appropriate direction. 
+
+For example, to display Sprite 3 expanded in the X direc- 
+tion, we must use the following POKE:- 
+
+POKE 53277, PEEK (53277) OR 8 
+
+What actually happens is that with expand on, every dot 
+on the Sprite screen is expanded to overlay two dots on the 
+high resolution screen. The resolution of the Sprite does 
+not change, it is still 24 x 21 dots, but it now overlays a 
+48 X 42 dots area of the high resolution screen. 
+
+Getting Your Priorities Right 
+
+As we said at the beginning of this chapter, one of the most 
+powerful facilities of Sprites is their ability to be assigned 
+priorities. Sprite priority determines which Sprite will appear 
+in front when two Sprites overlay each other, and whether a 
+Sprite will appear to be in front of or behind the background. 
+
+The Sprite to Sprite priorities are built in to the system 
+and cannot be changed. Sprite has the highest priority, 
+i.e. no other Sprite can appear to be in front of it. Sprite 1 
+has the next highest priority, i.e. it will pass behind Sprite 
+but in front of all the others. The other Sprite priorities 
+follow the same pattern. This means that you need to bear 
+the Sprite priorities in mind when deciding which Sprite to 
+use for each character. 
+
+The Sprite to background priorities can be individually 
+selected for each Sprite. This can be done by setting the 
+appropriate bit in the Sprite Background Priority register 
+whicli is located at address 53275 decimal. Each bit con- 
+trols one Sprite, bit controls Sprite 0, bit 1 controls Sprite 
+1, and so on. If the appropriate bit is a then that Sprite 
+will appear to pass in front of all background graphics. If it 
+is a 1 then that Sprite will appear to pass behind all back- 
+ground graphics. 
+
+For example, to make Sprite 4 pass behind the back- 
+ground graphics, we must use the following POKE:- 
+
+POKE 53275, PEEK (53275) OR 16 

@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $B63D?","address         $B63D          CAT
+Concatenate Two Strings
+
+This routine is used to add the text of one string onto the end of
+another (A$+B$).  Error checking is done to see if the length of the
+combined string is within range, the allocation routine is called to
+allocate space, and the new string is built at the bottom of the
+string text area."

@@ -1,0 +1,8 @@
+
+
+
+address       $D1-$D2        PNT
+Pointer to the Address of the Current Screen Line
+
+This location points to the address in screen RAM of the first column
+of the logical line upon which the cursor is currently positioned.

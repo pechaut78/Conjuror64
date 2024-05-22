@@ -1,0 +1,9 @@
+
+
+
+address         $BB12          FDIVT
+Divide FAC2 by FAC1
+
+This routine is used to divide the contents of FAC2 by the contents of
+FAC1, with the result being stored in FAC1.  A check for division by 0
+is made before dividing.

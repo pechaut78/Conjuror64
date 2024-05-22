@@ -1,0 +1,17 @@
+
+
+
+address           $98            LDTND
+Number of Open I/O Files/Index to the End of File Tables
+
+The number of currently open I/O files is stored here.  The maximum
+number that can be open at one time is ten.  The number stored here is
+used as the index to the end of the tables that hold the file numbers,
+device numbers, and secondary address numbers (see locations 601-631
+($259-$277) for more information about these tables).
+
+CLOSE decreases this number and removes entries from the tables
+referred to above, while OPEN increases it and adds the appropriate
+information to the end of the tables.  The Kernal routine CLALL closes
+all files by setting this number to 0, which effectively empties the
+table.

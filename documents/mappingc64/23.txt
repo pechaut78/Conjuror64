@@ -1,0 +1,9 @@
+
+
+
+address        $26-$2A        RESHO
+Floating Point Multiplication Work Area
+
+This location is used by BASIC multiplication and division routines.
+It is also used by the routines which compute the size of the area
+required to store an array which is being created.

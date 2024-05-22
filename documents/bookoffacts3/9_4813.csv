@@ -1,0 +1,11 @@
+question,answer
+"What is the command to load a Basic program file in Commodore 64?","The command to load a Basic program file in Commodore 64 is LOAD "PROGRAM" NAME, 8"
+"How do you load a machine language program in Commodore 64?","To load a machine language program in Commodore 64, use the command LOAD "PROGRAM NAME",8,1"
+"What is the difference between loading a Basic and a machine language program in Commodore 64?","In Commodore 64, the difference between loading a Basic and a machine language program is that for Basic programs, you use the command LOAD "PROGRAM" NAME, 8, while for machine language programs, you use the command LOAD "PROGRAM NAME",8,1"
+"What is the purpose of the number 8 in the load command for Commodore 64?","In Commodore 64, the number 8 in the load command specifies the device number for the tape drive, which is the default device for loading programs"
+"What is the syntax for loading a program in Commodore 64?","The syntax for loading a program in Commodore 64 is LOAD "PROGRAM NAME", device number, track number. For example, LOAD "PROGRAM" NAME, 8"
+"What is the device number for loading programs from tape drive in Commodore 64?","The default device number for loading programs from tape drive in Commodore 64 is 8"
+"What is the purpose of the comma in the load command for Commodore 64?","In Commodore 64, the comma in the load command separates the program name from the device number and track number"
+"What is the track number for loading programs in Commodore 64?","The track number for loading programs in Commodore 64 is the second argument in the load command, after the device number"
+"Can you load a machine language program using the Basic load command in Commodore 64?","No, you cannot load a machine language program using the Basic load command in Commodore 64. You need to use the machine language load command LOAD "PROGRAM NAME",8,1"
+"What is the command for loading a machine language program in Commodore 64 using Basic?","There is no Basic command for loading a machine language program in Commodore 64. You need to use the machine language load command LOAD "PROGRAM NAME",8,1"

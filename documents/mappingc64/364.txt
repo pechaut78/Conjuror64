@@ -1,0 +1,8 @@
+
+
+
+address         $BDDD          FOUT
+Convert Contents of FAC1 to ASCII String
+
+This routine converts a floating point number to a string of ASCII
+digits, and sets a pointer to the string in .A and .Y.

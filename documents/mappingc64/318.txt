@@ -1,0 +1,11 @@
+
+
+
+address         $B7AD          VAL
+Perform VAL
+
+The VAL routine obtains the string pointer, and reads the string one
+character at a time until an invalid character is found (ASCII
+numbers, sign character, a single decimal point, exponent, and spaces
+are all valid).  Then the string is changed to floating point.  If no
+valid characters are found, a 0 is returned.

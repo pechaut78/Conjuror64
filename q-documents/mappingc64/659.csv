@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $FD30?","address     816         $FD30
+Table of RAM Vectors to the Default I/O Routines
+
+This table contains the 16 RAM I/O vectors that are moved to 788-819
+($314-$333)."

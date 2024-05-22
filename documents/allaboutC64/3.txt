@@ -1,0 +1,6 @@
+
+C64 basic:
+A variable can be assigned the value of long numbers. Typing becomes faster and less prone to error.
+• The real power of variables lies in the fact that their values
+can be changed. Reassigning one variable can save the work
+of retyping several lines.

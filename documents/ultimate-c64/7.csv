@@ -1,0 +1,11 @@
+question,answer
+"what is the function of TAX, TXA, TAY and TYA instructions?","These instructions move data between registers A, X and Y."
+"what is the purpose of TSX and TXS instructions?","These instructions copy data between X and the stack pointer."
+"what is the initial value of the stack pointer when the stack is empty?","The stack pointer has a value of $FF when the stack is empty."
+"what happens when a value is pushed onto the stack?","The value is written and then the stack pointer is decremented."
+"in which direction does the stack pointer move when a value is pushed?","The stack pointer decrements when a value is pushed."
+"what is the function of PHA and PLA instructions?","PHA and PLA instructions move the accumulator from and to the stack."
+"what is the function of PHP and PLP instructions?","PHP and PLP instructions move the processor status P from and to the stack."
+"what is the relationship between the stack pointer and the next address to be written?","The stack pointer always points to the next address that is written to."
+"how do the 6502 processor move data to and from the stack?","The 6502 processor can move the accumulator and processor status P to and from the stack."
+"what is the significance of the stack pointer in the 6502 processor?","The stack pointer always points to the next address that is written to, and it decrements when a value is pushed."

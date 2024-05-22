@@ -1,0 +1,11 @@
+question,answer
+"What is a Splat file on a C64 disk?","A Splat file is a file that shows up in a directory listing with an asterisk (*) just before the file type for an entry, indicating that it was never properly closed, and thus there is no valid chain of sector links for the SCRATCH command to follow in erasing the file."
+"What happens if you SCRATCH a Splat file?","If you SCRATCH a Splat file, odds are you will improperly free up sectors that are still needed by other programs or files and cause permanent damage to those later when you add more files to the diskette."
+"How do you recover from scratching a Splat file?","If you find a Splat file, or if you discover too late that you have scratched such a file, immediately validate the diskette using the COLLECT command described later in this chapter."
+"What should you do if you added files to the diskette since scratching the Splat file?","If you have added any files to the diskette since scratching the Splat file, it is best to immediately copy the entire diskette onto another fresh diskette, but do this with a copy program rather than with a backup program."
+"Why can't you use a backup program to copy the diskette?","Using a backup program will recreate the same problem on the new diskette, so it's recommended to use a copy program instead."
+"How do you verify that no damage has been done to the diskette?","Compare the number of blocks free in the directory of the new copy to the number free on the original diskette. If the numbers match, no damage has been done."
+"What if the number of blocks free doesn't match?","If the numbers don't match, very likely at least one file on the diskette has been corrupted, and all should be checked immediately."
+"Why is it important to handle Splat files with care?","Improperly handling Splat files can cause permanent damage to the diskette and its contents, leading to data loss and corruption."
+"What is the purpose of the COLLECT command?","The COLLECT command is used to validate the diskette and fix any issues caused by scratching a Splat file."
+"How can you identify a Splat file in a directory listing?","A Splat file can be identified by the asterisk (*) that appears just before the file type for an entry in the directory listing."

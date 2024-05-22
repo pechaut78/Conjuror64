@@ -1,0 +1,22 @@
+question,answer
+"What is the purpose of the memory location at address $FEC2?","address              $FEC2
+RS-232 Baud Rate Tables for U.S. Television Standard (NTSC)
+
+This table contains the ten prescaler values for the ten standard baud
+rates implemented by the RS-232 Control Register at 659 ($293).  The
+table starts with the two values needed for the lowest baud rate (50
+baud) and finishes with the entries for the highest baud rate, 2400
+baud.  The RS-232 routines are handled by NMI interrupts which are
+caused by the timers on CIA #2.  Since the RS-232 device could both
+receive and send a bit in a single cycle, the time between interrupts
+should be a little less than half of the clock frequency divided by
+the baud rate.  The exact formula used is:
+
+((CLOCK/BAUD)/2)-100
+
+where CLOCK is the processor clock speed and BAUD is the baud rate.
+The clock frequency for machines using the U.S. television standard
+(NTSC) is 1,022,730 cycles per second, while the frequency for the
+European (PAL) standard is 985,250 cycles per second.  For this
+reason, separate baud rate tables were added for European machines at
+58604 ($E4EC)."

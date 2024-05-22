@@ -1,0 +1,5 @@
+The accumulator is the most important register in the
+microprocessor. It is the universal working register, used
+for almost all operations. All arithmetic and logical
+operations, and almost all of the comparison instructions
+use the accumulator.

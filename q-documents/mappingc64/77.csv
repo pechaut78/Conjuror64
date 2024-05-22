@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $9F?","address           $9F            PTR2
+Tape Pass 2 Error Log Correction Index
+
+This location is used in correcting bytes of tape data which were
+transmitted incorrectly on the first pass."

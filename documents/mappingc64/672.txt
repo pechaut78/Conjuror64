@@ -1,0 +1,9 @@
+
+
+
+address              $FE72
+NMI RS-232 Handler
+
+This is the part of the NMI handler that checks if it is time to
+receive or send a bit on the RS-232 channel, and takes the appropriate
+action if it is indeed the time.

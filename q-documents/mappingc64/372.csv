@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the memory location at address $BFBF?","address         $BFBF          EXPCON
+Table of Constants for EXP and LOG in Five-Byte Floating Point Format
+
+These tables are used to calculate 2 to the N power."

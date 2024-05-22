@@ -1,0 +1,100 @@
+question,answer
+"What is the purpose of the memory location at address $277-$280?","address       $277-$280      KEYD
+Keyboard Buffer (Queue)
+
+This buffer, sometimes also referred to as the keyboard queue, holds
+the ASCII values of the characters entered from the keyboard.  The
+interrupt routine which scans the keyboard deposits a character here
+each time a key is pressed.  When BASIC sees that there are characters
+waiting, it removes and prints them, one by one, in the order in which
+they were entered.
+
+This kind of a buffer is known as FIFO, for First In, First Out.  The
+buffer will hold up to ten characters, allowing you to type faster
+than the computer prints characters, without losing characters.  The
+maximum number of characters this buffer can hold at one time is ten
+(as determined by the value at 649 ($289)).  Characters entered after
+the buffer is full will be ignored.
+
+The commands GET and INPUT retrieve characters from this buffer.  If
+one of these is executed while there are already characters waiting in
+the buffer, those characters will be fetched as if they were part of
+the data being input.  To prevent this from happening, you can clear
+the buffer by POKEing a 0 into location 198 ($C6), which holds the
+number of characters that are waiting in the buffer.
+
+One of the most interesting and useful techniques for programming
+Commodore computers is to have a program simulate direct entry of
+commands from the keyboard.  This dynamic keyboard trick is achieved
+by first POKEing PETASCII characters, usually cursor movement
+characters and carriage returns, into the buffer, and setting location
+198 ($C6) to show how many characters are waiting in the buffer.
+
+Next, you clear the screen, and PRINT the statements that you wish to
+have executed on the screen, carefully positioning them so that the
+first statement to be entered is on the fourth line of the screen.
+
+You then home the cursor and execute an END statement.  This causes
+the keyboard buffer to be read, and the carriage returns to be
+executed, thus entering the printed lines as if they had been typed in
+immediate or direct mode.  The program can be continued by including a
+GOTO statement in the last line entered.
+
+Many interesting effects can be achieved using this method.  Examples
+of a few of these are included below.  For example, program lines can
+be added, modified, or deleted, while the program is running.  The
+following example shows how this is done:
+
+10 REM THIS LINE WILL BE DELETED
+20 REM A NEW LINE 30 WILL BE CREATED
+40 PRINT CHR$(147):PRINT:PRINT
+50 PRINT '80 LIST':PRINT'30 REM THIS LINE WASN'T HERE BEFORE'
+60 PRINT '10':PRINT 'GOTO 80'CHR$(19)
+70 FOR I=631 TO 634:POKE I,13:NEXT:POKE 198,4:END
+80 REM THIS LINE WILL BE REPLACED
+
+You can use this technique to enter numbered DATA statements
+automatically, using values in memory.  These statements become a
+permanent part of the program.
+
+Another interesting application is taking ASCII program lines from a
+tape data file, or sequential disk file, and having them entered
+automatically.  This can be used for merging programs, or for
+transferring programs between computers with a modem and a terminal
+program.  To create the ASCII program file, you use CMD to direct a
+LISTing to the desired device as follows:
+
+For tape: OPEN 1,1,1,'ASCII':CMD 1:LIST
+After the listing has ended: PRINT #1:CLOSE 1
+
+For disk: OPEN 8,8,8,'ASCII,S,W':CMD 8:LIST
+After the listing has ended: PRINT #8:CLOSE 8
+
+This file can then be uploaded using a modem and appropriate terminal
+software, entered by itself or merged with another program by using
+the following program.  Be sure to save this program before you run
+it, because it will erase itself when it is done.
+
+60000 OPEN 1,8,8,'ASCII'
+60010 POKE 152,1:B=0:GOSUB 60170
+60020 GET #1,A$:IF A$=''THEN60020
+60030 IF ST AND 64 THEN 60120
+60040 IF A$=CHR$(13)AND B=0THEN60020
+60050 PRINT A$;:B=1:IF A$=CHR$(34)THEN POKE 212,0
+60060 IF A$<>CHR$(13) THEN 60020
+60070 PRINT CHR$(5);'GOTO 60010';CHR$(5):PRINT:PRINT:POKE 198,0
+60080 PRINT 'RETURN=KEEP LINE    S=SKIP LINE':B=0
+60090 GET A$:IF A$=''THEN 60090
+60100 IF A$='S' THEN 60010
+60110 GOTO 60180
+60120 PRINT 'END OF FILE--HIT RETURN TO FINISH MERGE'
+60130 IF PEEK(197)<>1THEN60130
+60140 A=60000
+60150 GOSUB 60170:FOR I=A TO A+60 STEP10:PRINTI:NEXT
+60160 PRINT 'A='I':GOTO 60150':GOTO 60180
+60170 PRINT CHR$(147):PRINT:PRINT:RETURN
+60180 FOR I=631TO640:POKEI,13:NEXT:POKE198,10:PRINTCHR$(19);:END
+
+If you wish to merge additional programs at the same time, when it
+indicates that the file has ended, press the STOP key rather than
+RETURN, enter the name of the new file in line 60000, and RUN 60000"

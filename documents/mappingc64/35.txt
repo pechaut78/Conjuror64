@@ -1,0 +1,25 @@
+
+
+
+address         $41-$42        DATPTR
+Pointer to the Address of the Current DATA Item
+
+This location points to the address (not the line number) within the
+BASIC program text area where DATA is currently being READ.  RESTORE
+sets this pointer back to the address indicated by the start of BASIC
+pointer at location 43 ($2B).
+
+The sample program below shows how the order in which DATA statements
+are READ can be changed using this pointer.  The current address of
+the statement before the DATA statement is stored in a variable, and
+then used to change this pointer.
+
+10 A1=PEEK(61):A2=PEEK(62)
+20 DATA THIS DATA WILL BE USED SECOND
+30 B1=PEEK(61):B2=PEEK(62)
+40 DATA THIS DATA WILL BE USED FIRST
+50 C1=PEEK(61):C2=PEEK(62)
+60 DATA THIS DATA WILL BE USED THIRD
+70 POKE 65,B1:POKE 66,B2:READ A$:PRINT A$
+80 POKE 65,A1:POKE 66,A2:READ A$:PRINT A$
+90 POKE 65,C1:POKE 66,C2:READ A$:PRINT A$

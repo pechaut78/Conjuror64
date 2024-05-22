@@ -1,0 +1,17 @@
+
+
+
+THE HIGH RESOLUTION SCREEN of the C64
+
+The Commodore 64's higii resolution screen is something of 
+an enigma, because the User Manual tells you absolutely 
+nothing about it! In fairness to Commodore however, this 
+may be because the high resolution screen is not an easy 
+facility to learn to use, the User Manual is aimed at a very 
+basic level. 
+
+So, in this chapter we will remedy these omissions by 
+explaining what the high resolution screen is, where it can be 
+located and how you can use it. We have also included many 
+short subroutines that will help you to drive the high resolu- 
+tion facilities. 

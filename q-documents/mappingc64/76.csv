@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $9E?","address           $9E            PTR1
+Tape Pass 1 Error Log Index
+
+This location is used in setting up an error log of bytes in which
+transmission parity errors occur the first time that the block is
+received (each tape block is sent twice to minimize data loss from
+transmission error)."

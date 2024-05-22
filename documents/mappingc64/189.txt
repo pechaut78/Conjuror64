@@ -1,0 +1,5 @@
+
+
+
+address       $31C-$31D      ICLOSE
+Vector to Kernal CLOSE Routine (Currently at 62097 ($F291))

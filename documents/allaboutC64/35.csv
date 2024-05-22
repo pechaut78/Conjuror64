@@ -1,0 +1,11 @@
+question,answer
+"What is the name of the second kind of variable supported by Commodore 64 BASIC?","The second kind of variable supported by Commodore 64 BASIC is called a string variable."
+"What is the difference between the two kinds of variables in Commodore 64 BASIC?","The two kinds of variables in Commodore 64 BASIC are used to contain different types of values. A numeric variable has a value of the type number, while a string variable has a value of the type character string."
+"How are string variable names distinguished from numeric variable names in Commodore 64 BASIC?","String variable names in Commodore 64 BASIC end with a $ symbol, while numeric variable names do not."
+"What is the rule about the number of significant characters for string variable names in Commodore 64 BASIC?","The rule about the number of significant characters for string variable names in Commodore 64 BASIC is the same as the rule for numeric variable names, which is that they must have at least two significant characters."
+"What is a null string in Commodore 64 BASIC?","A null string in Commodore 64 BASIC is a string which consists of no characters."
+"What is the effect of using the same variable name for a numeric variable and a string variable in Commodore 64 BASIC?","The names used for numeric variables have no effect on names used for string variables in Commodore 64 BASIC. The numeric variable C and the string variable C$ are entirely different things."
+"What is an example of a valid string variable name in Commodore 64 BASIC?","An example of a valid string variable name in Commodore 64 BASIC is MYVAR$."
+"What is the maximum length of a string variable in Commodore 64 BASIC?","The maximum length of a string variable in Commodore 64 BASIC is 255 characters."
+"What is the syntax for declaring a string variable in Commodore 64 BASIC?","The syntax for declaring a string variable in Commodore 64 BASIC is DIM variableName$ [arraySize]"
+"What is the syntax for assigning a value to a string variable in Commodore 64 BASIC?","The syntax for assigning a value to a string variable in Commodore 64 BASIC is variableName$ = 'string' or variableName$ = stringVariable"

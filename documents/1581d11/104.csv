@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the C bit in the status byte?","The C bit is used to indicate a change in the status. When C=1 and W=0, it means log in disk, and when C=1 and W=1, it returns whether the disk was logged, i.e. $B error or old status."
+"what is the function of the W bit in the status byte?","The W bit is the write switch, where 0 indicates write is allowed and 1 indicates write is not allowed. It is also used in the protocol, where W=1 indicates a burst handshake and W=0 indicates a conventional protocol."
+"what is the difference between the status bytes 04 and 05?","Status byte 04 is used for a new OR mask with the M-bit set, while status byte 05 is used for a new AND mask with the M-bit set."
+"how is the drive number represented in the status byte?","The drive number is represented by the N bit in the status byte."
+"what is the purpose of the M bit in the status byte?","The M bit is used to indicate whether a write AND/OR mask is set. When M=1, it indicates a new mask value."
+"what is the output of the status byte when W=0?","When W=0, there is no output, as it is a conventional protocol."
+"what is the output of the status byte when W=1?","When W=1, the output is a burst status byte."
+"what is the purpose of the burst handshake protocol?","The burst handshake protocol is used to read or write the current status, and to change the status mask value."
+"how is the log in disk operation performed?","The log in disk operation is performed by setting C=1 and W=0 in the status byte."
+"what is the error code returned when the disk was not logged?","The error code returned when the disk was not logged is $B."

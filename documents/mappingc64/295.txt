@@ -1,0 +1,12 @@
+
+
+
+address         $B39E          POS
+Perform POS
+
+The POS command calls the Kernal PLOT routine (58634, $E50A) to get
+the position of the cursor on the logical line.  What it really does
+is an equivalent of PEEK(211).  Remember, since we are dealing with a
+logical line, this number can be over 39.  The statement "THIS
+SENTENCE IS LONGER THAN ONE PHYSICAL LINE";POS(X) will return a value
+of 48 for the POS(X).

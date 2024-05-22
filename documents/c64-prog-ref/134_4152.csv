@@ -1,0 +1,11 @@
+question,answer
+"what is the function of the DEX instruction in 6502 assembly language?","The DEX instruction decrements the value of the X register by one. This instruction is useful for looping and counting applications where the X register is used as a counter. It is an implied mode instruction, meaning it does not require any operands and affects only the X register. The opcode for DEX is CA and it takes 1 byte of memory and 2 clock cycles to execute."
+"what is the addressing mode of the DEX instruction?","The addressing mode of the DEX instruction is implied, which means it does not require any operands and affects only the X register."
+"what is the opcode for the DEX instruction?","The opcode for the DEX instruction is CA, which is a single byte that represents the decrement X instruction."
+"how many bytes does the DEX instruction occupy in memory?","The DEX instruction occupies 1 byte of memory, making it a very compact and efficient instruction."
+"how many clock cycles does the DEX instruction take to execute?","The DEX instruction takes 2 clock cycles to execute, making it a relatively fast instruction."
+"what is the purpose of the X register in the context of the DEX instruction?","The X register is used as a counter in the context of the DEX instruction, and decrementing it allows for looping and counting applications."
+"can the DEX instruction be used with other addressing modes?","No, the DEX instruction can only be used with the implied addressing mode, which means it does not require any operands and affects only the X register."
+"what happens to the X register when the DEX instruction is executed?","When the DEX instruction is executed, the value of the X register is decremented by one, which allows for looping and counting applications."
+"is the DEX instruction a load or store instruction?","The DEX instruction is neither a load nor a store instruction, but rather a register modification instruction that affects the X register."
+"can the DEX instruction be used to increment the X register?","No, the DEX instruction can only be used to decrement the X register, not increment it."

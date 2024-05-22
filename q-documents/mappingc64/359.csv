@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $BCF3?","address         $BCF3          FIN
+Convert an ASCII String to a Floating Point Number FAC1
+
+This routine is called by VAL to evaluate and convert an ASCII string
+to a floating point number."

@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $B3B3?","address         $B3B3          DEF
+Perform DEF
+
+DEF performs some syntax checking, and pushes five bytes onto the
+stack:  the first byte of the function statement, a two-byte pointer
+to the dependent variable (the X in FN(X)), and the address of the
+first character of the definition itself, where it resides in the
+program text.
+
+The DEF statement must fit on one line, but functions can be extended
+by nesting them (having one function call another)."

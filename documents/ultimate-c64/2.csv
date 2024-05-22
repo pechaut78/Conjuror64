@@ -1,0 +1,11 @@
+question,answer
+"What is the main CPU on the C64 motherboard?","The MOS 6510 CPU is the main CPU on the C64 motherboard."
+"What is the purpose of the 6526 CIA I/O controllers?","The 6526 CIA I/O controllers are used for handling keyboard and joystick input, as well as IEC bus and user port operations."
+"How much RAM is on the C64 motherboard?","There are eight 64 KBit RAM chips on the C64 motherboard, which were later consolidated into 2 chips."
+"What is the purpose of the 6581 SID sound chip?","The 6581 SID sound chip is responsible for generating sound on the C64."
+"What is the purpose of the 6567/6569 VIC video chip?","The 6567/6569 VIC video chip is responsible for handling video output on the C64."
+"What is stored in the Color RAM chip?","The Color RAM chip holds 512 bytes of color data."
+"What is KERNAL?","KERNAL is an I/O library stored in one of the ROM chips on the C64 motherboard."
+"What is the purpose of the BASIC ROM chip?","The BASIC ROM chip contains the BASIC programming language interpreter."
+"Who designed and manufactured the custom chips on the C64 motherboard?","The custom chips on the C64 motherboard were designed and manufactured by MOS, Commodore's in-house chip company."
+"What is the purpose of the ROM chips on the C64 motherboard?","The ROM chips on the C64 motherboard contain the KERNAL I/O library, BASIC programming language interpreter, and character set."

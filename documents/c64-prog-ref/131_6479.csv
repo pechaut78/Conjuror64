@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for CPX in immediate addressing mode?","The opcode for CPX in immediate addressing mode is E0, which requires 2 bytes and takes 2 cycles to execute."
+"what is the difference in cycle count between CPX in zero page and absolute addressing modes?","The cycle count for CPX in zero page addressing mode is 3, whereas in absolute addressing mode it is 4, resulting in a difference of 1 cycle."
+"what is the assembly language form for CPX in immediate addressing mode?","The assembly language form for CPX in immediate addressing mode is CPX *Oper, where *Oper is the immediate operand."
+"what is the number of bytes required for CPX in absolute addressing mode?","CPX in absolute addressing mode requires 3 bytes."
+"in which addressing modes can CPX be used?","CPX can be used in three addressing modes: Immediate, Zero Page, and Absolute."
+"what is the opcode for CPX in zero page addressing mode?","The opcode for CPX in zero page addressing mode is E4, which requires 2 bytes and takes 3 cycles to execute."
+"what is the purpose of the CPX instruction?","The purpose of the CPX instruction is to compare the value of the X register with the value of the operand, setting the flags accordingly."
+"what is the assembly language form for CPX in zero page addressing mode?","The assembly language form for CPX in zero page addressing mode is CPX Oper, where Oper is the zero page address."
+"how many cycles does CPX take in immediate addressing mode?","CPX takes 2 cycles to execute in immediate addressing mode."
+"what is the opcode for CPX in absolute addressing mode?","The opcode for CPX in absolute addressing mode is EC, which requires 3 bytes and takes 4 cycles to execute."

@@ -1,0 +1,8 @@
+
+
+
+address              $EE8E
+Set the Serial Clock Line High (Inactive)
+
+This subroutine sets the serial bus clock pulse output bit to 1 (Bit 4
+of CIA #2 Data Port A at 56576 ($DD00)).

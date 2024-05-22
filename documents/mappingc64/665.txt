@@ -1,0 +1,15 @@
+
+
+
+address              $FE07          READST
+Read the I/O Status Word
+
+This is a documented Kernal routine, which can be entered through the
+jump table at location 65463 ($FFB7).
+
+Whenever an I/O error occurs, a bit of the Status Word is set to
+indicate what the problem was.  The routine allows you to read the
+status word (it is returned in the Accumulator).  If the device was
+the RS-232, its status register is read and cleared to zero.  For the
+meanings of the various status codes, see the entry for location 144
+($90) or 663 ($297) for the RS-232 device.

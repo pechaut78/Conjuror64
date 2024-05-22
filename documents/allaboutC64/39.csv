@@ -1,0 +1,11 @@
+question,answer
+"What operation do the plus sign perform on strings in C64 Basic?","The plus sign performs concatenation operation on strings in C64 Basic, which means appending the second string to the end of the first one, in left-to-right order, forming a longer string."
+"What is the maximum length for a string in C64 Basic?","The maximum length for a string in C64 Basic is 255 characters. Attempting to make a character string longer than this limit causes the STRING TOO LONG error to be printed."
+"Can the arithmetic operators be used with character strings in C64 Basic?","No, the arithmetic operators cannot be used with character strings in C64 Basic."
+"What happens if the first characters of two strings being compared are equal in C64 Basic?","If the first characters of two strings being compared are equal in C64 Basic, checking will continue to subsequent characters until two are found which are not equal."
+"What is the null string in C64 Basic?","The null string is a special string in C64 Basic that is always less than any other string."
+"Can the logical operators be used directly with character strings in C64 Basic?","No, none of the logical operators can be used directly with character strings in C64 Basic."
+"What is the effect of using the relational operators with strings in C64 Basic?","All of the relational operators can be used with strings in C64 Basic, including combinations such as < = . The conditions less than and greater than depend on the alphabetical ordering of the characters in the strings."
+"What is the result of comparing a longer string with a shorter one in C64 Basic?","If one string runs out of characters before unequal characters are found, the longer string is greater in C64 Basic."
+"What error occurs if the two operands are not of the same type in C64 Basic?","The TYPE MISMATCH error occurs if the two operands are not of the same type in C64 Basic."
+"What is the effect of concatenating two strings in C64 Basic?","Concatenating two strings in C64 Basic means appending the second string to the end of the first one, in left-to-right order, forming a longer string."

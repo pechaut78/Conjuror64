@@ -1,0 +1,50 @@
+
+
+
+address           $C6            NDX
+Number of Characters in Keyboard Buffer (Queue)
+
+The value here indicates the number of charracters waiting in the
+keyboard buffer at 631 ($277).  The maximum number of characters in
+the keyboard buffer at any one time is determined by the value in
+location 649 ($289), which defaults to 10.
+
+If INPUT or GET is executed while there are already characters in the
+buffer, those characters will be read as part of the data stream.  You
+can prevent this by POKEing a 0 to this location before those
+operations, which will always cause any character in the buffer to be
+ignored.  This technique can be handy when using the joystick in
+Controller Port #1, which sometimes causes fake keypresses to be
+registered, placing unwanted characters in the keyboard buffer.
+
+Not only is this location handy for taking unwanted characters out of
+the keyboard buffer, but it can also be used to put desired characters
+into the buffer, and thus to program the keyboard buffer.  This
+technique (dynamic keyboard) allows you to simulate keyboard input in
+direct mode from a program.
+
+The dynamic keyboard technique is an extremely useful one, as it
+enables you to add, delete, or modify program lines while the program
+is running.  The basic scheme is to POKE the PETASCII character values
+that you wish to be printed (including cursor control characters and
+carriage returns) into the buffer.  Then, when an END statement is
+executed, the characters in the buffer will be printed, and entered by
+the carriage return.
+
+This technique can help with the problem of trying to use data
+separation and terminator characters with INPUT statements.  If you
+try to INPUT a string that has a comma or colon, the INPUT will read
+only up to that character and issue an EXTRA IGNORED error message.
+You can avoid this by entering the input string in quotes, but this
+places on the user the burder of remembering the quote marks.  One
+solution is to use the statements:
+
+POKE 198,3:POKE 631,34: POKE 632,34: POKE 633,20
+
+before the input.  This will force two quote marks and a delete into
+the buffer.  The first quote mark allows the comma or colon to be
+INPUT, the second is used to get the editor out of quote mode, and the
+delete removes that second quote.
+
+For more specific information and programming examples, see the
+description of location 631 ($277), the keyboard buffer.

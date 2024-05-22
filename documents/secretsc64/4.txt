@@ -1,0 +1,9 @@
+
+
+on a C64,to put say, the A character at some X,Y location in, 
+say, red:- 
+
+P0KEY*4CH-X+1 024,1 ; POKE Y*40fX+5 5296,2 
+
+Note, the character code for A is 1 and the colour code 
+for red is 2. 

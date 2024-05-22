@@ -1,0 +1,9 @@
+
+
+
+address             $F92C
+Read Tape Data (IRQ)
+
+This is the IRQ handler routine that is used for reading data from the
+cassette.  At the end of the read, the IRQ vector is restored to the
+normal IRQ routine.

@@ -1,0 +1,11 @@
+question,answer
+"what is the CIA chip's bus compatibility?","The 6526 Complex Interface Adapter (CIA) is a 65XX bus compatible peripheral interface device with extremely flexible timing and I/O capabilities."
+"what are the key features of the CIA chip?","The CIA chip features 16 individually programmable I/O lines, 8 or 16-Bit handshaking on read or write, 2 independent linkable 16-Bit interval timers, a 24-hour time of day clock with programmable alarm, an 8-Bit shift register for serial I/O, 2 TTL load capability, CMOS compatible I/O lines, and 1 or 2 MHz operation availability."
+"what is the CIA chip's timer capability?","The CIA chip has 2 independent, linkable 16-Bit interval timers, allowing for flexible timing and I/O capabilities."
+"what is the CIA chip's clock feature?","The CIA chip has a 24-hour (AM/PM) time of day clock with programmable alarm, allowing for precise time-keeping and alarm functionality."
+"what is the CIA chip's serial I/O capability?","The CIA chip has an 8-Bit shift register for serial I/O, enabling efficient serial data transfer."
+"what is the CIA chip's I/O line compatibility?","The CIA chip has CMOS compatible I/O lines, ensuring compatibility with CMOS devices."
+"what are the CIA chip's operating frequencies?","The CIA chip can operate at 1 or 2 MHz, providing flexibility in system design."
+"what is the CIA chip's handshaking capability?","The CIA chip supports 8 or 16-Bit handshaking on read or write, enabling efficient data transfer."
+"what is the CIA chip's I/O line programmability?","The CIA chip has 16 individually programmable I/O lines, allowing for customized I/O configurations."
+"what is the CIA chip's load capability?","The CIA chip has 2 TTL load capability, enabling it to drive multiple loads."

@@ -1,0 +1,8 @@
+
+
+
+address              $EDB0
+Time-Out Error on Serial Bus
+
+This subroutine handles the case when the device does not respond by
+setting the DEVICE NOT PRESENT error code and exiting.

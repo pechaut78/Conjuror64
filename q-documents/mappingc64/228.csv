@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $A560?","address         $A560          INLIN
+Input a Line to Buffer from Keyboard
+
+This subroutine calls the Kernal CHRIN routine (61783, $F157) to
+obtain a line of input from the current input device (usually the
+keyboard).  It stores the characters in the BASIC text input buffer at
+512 ($200) until a carriage return or 89 characters have been
+received.  The keyboard device will never return more than 80
+characters before a carriage return, but other devices can output a
+longer line.  An error will occur if the line goes over 80 characters."

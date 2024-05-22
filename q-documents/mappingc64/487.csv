@@ -1,0 +1,17 @@
+question,answer
+"What is the purpose of the memory location at address $DD0E?","address              $DD0E          CI2CRA
+Control Register A
+
+Bit 0:  Start Timer A (1=start, 0=stop)
+Bit 1:  Select Timer A output on Port B (1=Timer A output appears on
+        Bit 6 of Port B)
+Bit 2:  Port B output mode (1=toggle Bit 6, 0=pulse Bit 6 for one
+        cycle)
+Bit 3:  Timer A run mode (1=one-shot, 0=continuous)
+Bit 4:  Force latched value to be loaded to Timer A counter (1=force
+        load strobe)
+Bit 5:  Timer A input mode (1=count microprocessor cycles, 0=count
+        signals on CNT line at pin 4 of User Port)
+Bit 6:  Serial Port (56588, $DD0C) mode (1=output, 0=input)
+Bit 7:  Time of Day Clock frequency (1=50 Hz required on TOD pin,
+        0=60 Hz)"

@@ -1,0 +1,9 @@
+
+
+
+address         $B4F4          GETSPA
+Allocate Space in Memory for String
+
+The amount of space needed for a string is passed to this routine, and
+the routine checks if there is that amount of space available in free
+memory.  If not, it does a garbage collection and tries again.

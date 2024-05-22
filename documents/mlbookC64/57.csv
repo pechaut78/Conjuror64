@@ -1,0 +1,11 @@
+question,answer
+"What does the PHA instruction do to the accumulator's contents?","The PHA instruction saves the contents of the accumulator on the stack without changing the accumulator's value."
+"How does PHA affect the stack pointer?","PHA decrements the stack pointer by one after pushing the accumulator's contents onto the stack."
+"Does PHA modify the accumulator's value?","No, PHA does not modify the accumulator's value; it only saves a copy of the value on the stack."
+"What is the purpose of the PHA instruction in C64 assembly language?","PHA is used to save the accumulator's value temporarily on the stack, so it can be restored later."
+"What happens to the stack after executing the PHA instruction?","The stack now contains the accumulator's value, and the stack pointer has been decremented by one."
+"How can you restore the accumulator's value after using PHA?","You can use the instruction PLA (pull accumulator) to restore the accumulator's value from the stack."
+"What is an example of using PHA and PLA in C64 assembly?","Here's an example: PHA; LDA #$01; STA $D020; PLA;","In this example, PHA saves the accumulator's value before changing it with LDA #$01. After storing the new value in $D020, PLA restores the original accumulator's value."
+"What are the opcode and cycle count of the PHA instruction?","The opcode for PHA is $48, and it takes 3 cycles to execute."
+"Can you use PHA with other registers in C64 assembly?","No, PHA only works with the accumulator register."
+"What are some common use cases for the PHA instruction in C64 assembly?","PHA is commonly used before function calls to save the accumulator's value, and in interrupt handlers to save the current context before executing the interrupt routine."

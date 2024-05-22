@@ -1,0 +1,10 @@
+
+
+
+address         $A883          GOSUB
+Perform GOSUB
+
+This statement pushes the pointers to the current text character and
+current line onto the stack, along with a constant 141 ($8D) which
+identifies the block as saved GOSUB information to be used by RETURN.
+The GOTO is called.

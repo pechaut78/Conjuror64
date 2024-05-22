@@ -1,0 +1,8 @@
+
+ROR
+The ROR instruction (rotate right) is the opposite of the
+ROL instruction and rotates the contents of a register
+cyclically one position to the right. In so doing, the
+contents of the carry flag are placed into the now-free
+position 7 while the pushed-out contents of bit 0 are
+placed into the carry flag.

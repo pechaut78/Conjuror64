@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of this routine in the context of serial bus communication?","This routine is used to get information from a device on the serial bus, like a disk, by retrieving a byte of data using full handshaking, and returning it in the accumulator."
+"what is the prerequisite to calling this routine?","The TALK routine must be called first to command the device on the serial bus to send data through the bus, and if necessary, the TKSA KERNAL routine must be used to send a secondary command to the input device."
+"how do you use this routine?","To use this routine, first command a device on the serial bus to prepare to send data to the Commodore 64 using the TALK and TKSA KERNAL routines, then call this routine using JSR, and finally store or use the retrieved data."
+"what happens to the retrieved data?","The retrieved data is returned in the accumulator, and can be stored or used as needed, for example by storing it in a memory location, such as 'DATA>'."
+"what if the input device needs a secondary command?","If the input device needs a secondary command, it must be sent using the TKSA KERNAL routine before calling this routine."
+"how are errors handled in this routine?","Errors are returned in the status word, which can be read using the READST routine."
+"in what context is this routine used?","This routine is used in the context of serial bus communication, specifically to retrieve data from a device on the serial bus, such as a disk."
+"what is the role of the TALK routine in this process?","The TALK routine is used to command a device on the serial bus to prepare to send data to the Commodore 64, which is a prerequisite to calling this routine."
+"can you provide an example of how to use this routine?","Yes, here is an example: JSR ACPTR, STA DATA>, which gets a byte from the bus and stores it in the 'DATA>' memory location."
+"what is the significance of full handshaking in this routine?","Full handshaking is used to ensure reliable data transfer between the Commodore 64 and the device on the serial bus, by providing a mechanism for the device to signal when it is ready to send data."

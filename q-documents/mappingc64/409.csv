@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $D022?","address              $D022          BGCOL1
+Background Color 1
+
+This register sets the color for the 01 bit-pair of multicolor
+character graphics, and the background color for characters having
+screen codes 64-127 in extended background color text mode.  The
+default color value is 1 (white)."

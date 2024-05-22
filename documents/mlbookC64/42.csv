@@ -1,0 +1,20 @@
+question,answer
+"What does the DEY instruction do in C64 assembly language?","The DEY instruction in C64 assembly language decrements the contents of the Y register. It is similar to the DEY instruction, but instead of affecting the X register, it affects the Y register. The flags are affected in the same manner as with the DEY instruction."
+"How does the DEY instruction affect the Y register in C64 assembly language?","The DEY instruction in C64 assembly language decrements the value of the Y register by 1. For example, if the Y register contains the value 5, executing the DEY instruction will change the value of the Y register to 4."
+"What is the purpose of the DEY instruction in C64 assembly language?","The DEY instruction in C64 assembly language is used to decrement the value of the Y register. It is often used in loops or other situations where it is necessary to count down from a certain value."
+"How do the flags in C64 assembly language behave when the DEY instruction is executed?","When the DEY instruction is executed in C64 assembly language, the flags are affected in the same manner as with the DEY instruction. Specifically, the negative flag (N) is set if the result of the decrement is negative, and the zero flag (Z) is set if the result of the decrement is zero."
+"What is the difference between the DEY and DEY instructions in C64 assembly language?","The DEY and DEY instructions in C64 assembly language are similar, but they affect different registers. The DEY instruction decrements the value of the X register, while the DEY instruction decrements the value of the Y register. The flags are affected in the same manner for both instructions."
+"Can the DEY instruction be used to increment the value of the Y register in C64 assembly language?","No, the DEY instruction in C64 assembly language can only be used to decrement the value of the Y register. It cannot be used to increment the value of the Y register."
+"What is an example of how the DEY instruction can be used in a loop in C64 assembly language?","Here is an example of how the DEY instruction can be used in a loop in C64 assembly language:
+
+loop:
+  DEY
+  BNE loop
+
+In this example, the DEY instruction is used to decrement the value of the Y register in each iteration of the loop. The loop continues as long as the value of the Y register is not zero, at which point the BNE (branch if not equal) instruction jumps back to the beginning of the loop."
+"How does the DEY instruction affect the carry flag in C64 assembly language?","The DEY instruction in C64 assembly language does not directly affect the carry flag. The carry flag is only affected by arithmetic operations that involve the carry flag, such as addition and subtraction. The DEY instruction is a decrement operation, so it does not involve the carry flag."
+"What is the syntax of the DEY instruction in C64 assembly language?","The syntax of the DEY instruction in C64 assembly language is as follows:
+
+DEY
+
+The DEY instruction has no operands. It simply decrements the value of the Y register by 1."

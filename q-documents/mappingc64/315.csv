@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $B77C?","address         $B77C          LEN
+Perform LEN
+
+The LEN function is performed by obtaining the string length from the
+descriptor and converting it to a floating point number."

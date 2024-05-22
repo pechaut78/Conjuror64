@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $E08D?","address              $E08D          RMULC
+Multiplicative Constant for RND
+
+A five-byte floating point number which is multiplied by the seed
+value as part of the process of obtaining the next value for RND>"

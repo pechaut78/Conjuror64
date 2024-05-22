@@ -1,0 +1,20 @@
+
+Flags and Branches
+All load and logic instructions set N and Z accordingly, shift instructions also modify C, and arithmetic
+instructions touch N V, Z and C. The D (decimal), I
+(interrupt disable) and C flags can be set and cleared
+programmatically (CLD/SED, CLI/SEI, CLC/SEC),
+while the V flag can only be cleared (CLV). Conditional branches are possible based on the value of the
+negative (BPL/BMI), overflow (BVC/BVS), zero
+(BNE/BEQ) and carry (BCC/BCS) flags. Branches
+encode an 8 bit relative offset and can therefore reach
+code in the area of +127 and -128. Since a compare is
+the same as a subtraction, BCC is a branch on (unsigned) below, and BCS is a branch on above-orequal.
+NOP
+NOP (no operation) does nothing. Its encoding is
+$EA.
+Decimal Mode
+If the D flag is set, all ADC and SBC operations will be
+BCD-adjusted afterwards, i.e. $09+$02 won't be $0B,
+but $11, since 9+2=11. The BCD correction circuit has
+been patented in US patent 3,991,307.

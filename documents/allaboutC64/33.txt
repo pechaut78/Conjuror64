@@ -1,0 +1,13 @@
+
+
+C64 Basic:
+Input
+• Including illegal characters in a line causes the error message
+REDO FROM START to be printed. All of the numbers have
+to be typed again, no matter how many variables had
+already been assigned.
+• Merely pressing RETURN in response to the ? prompt can
+cels the assignment of any variables. All variables retain
+their value.
+• Pressing RETURN after a ?? prompt causes the current vari
+able to be assigned the value 0.

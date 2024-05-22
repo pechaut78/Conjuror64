@@ -1,0 +1,9 @@
+
+
+
+address         $BBC7          MOV2F
+Move a Floating Point Number from FAC1 to Memory
+
+This routine is used to move a number from the Floating Point
+Accumulator (FAC1) to memory at either 92-96 ($5C-$60) or 87-91
+($57-$5B), depending on the entry point to the routine.

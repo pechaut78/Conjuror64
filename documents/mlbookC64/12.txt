@@ -1,0 +1,11 @@
+
+
+
+When executing absolute addressing mode instruc
+tions, the processor gets the low-byte and then the
+high-byte of the address. The data found at that
+address is placed into the accumulator, the program
+counter is incremented by three and the next
+instruction is fetched. These instructions require
+three bytes, in contrast to the immediate
+addressing mode which requires only two.

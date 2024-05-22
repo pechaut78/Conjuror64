@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the STY instruction in zero page addressing mode?","The opcode for the STY instruction in zero page addressing mode is 84, which requires 2 bytes and 3 cycles to execute."
+"what is the assembly language form for the STY instruction in zero page,X addressing mode?","The assembly language form for the STY instruction in zero page,X addressing mode is STY Oper,X, which has an opcode of 94, requires 2 bytes, and takes 4 cycles to execute."
+"what is the difference in cycles between the STY instruction in zero page and absolute addressing modes?","The STY instruction in zero page addressing mode takes 3 cycles to execute, whereas in absolute addressing mode it takes 4 cycles, resulting in a difference of 1 cycle."
+"what is the opcode for the STY instruction in absolute addressing mode?","The opcode for the STY instruction in absolute addressing mode is 8C, which requires 3 bytes and 4 cycles to execute."
+"how many bytes are required to execute the STY instruction in zero page addressing mode?","The STY instruction in zero page addressing mode requires 2 bytes to execute."
+"what is the purpose of the STY instruction?","The STY instruction is used to store the index Y in memory, which is an essential operation in many programming scenarios."
+"in which addressing modes can the STY instruction be used?","The STY instruction can be used in zero page, zero page,X, and absolute addressing modes, each with its own opcode and execution characteristics."
+"what is the assembly language form for the STY instruction in absolute addressing mode?","The assembly language form for the STY instruction in absolute addressing mode is STY Oper, which has an opcode of 8C, requires 3 bytes, and takes 4 cycles to execute."
+"how many cycles does the STY instruction take to execute in zero page,X addressing mode?","The STY instruction in zero page,X addressing mode takes 4 cycles to execute."
+"what is the opcode for the STY instruction in zero page,X addressing mode?","The opcode for the STY instruction in zero page,X addressing mode is 94, which requires 2 bytes and 4 cycles to execute."

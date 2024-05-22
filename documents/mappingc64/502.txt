@@ -1,0 +1,7 @@
+
+
+
+address              $E1C7          CLOSE
+Perform CLOSE
+
+The BASIC CLOSE statement calls the Kernal CLOSE routine.

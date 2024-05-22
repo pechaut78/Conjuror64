@@ -1,0 +1,11 @@
+question,answer
+"Where is the Background colour register located in the C64?","The Background colour register is located at address 53281 decimal and it normally holds the text screen background colour."
+"What is the purpose of the colour memory located at address 55296 decimal to 56295 decimal?","The normal colour memory, which is located at address 55296 decimal to 56295 decimal, is where the colour for the characters on the text screen is normally held."
+"How does the colour memory work in extended colour mode?","In extended colour mode each location can be used to hold the colour for an 8 by 8 dots square on the high resolution screen."
+"What is the purpose of location 55296 in the colour memory?","Location 55296 holds the colour for any dot pairs set to 1 1 in bytes to 7 of the high resolution screen."
+"How do you select extended colour mode for the high resolution screen?","To select extended colour mode for the high resolution screen you must set bit 4 of the second VIC control register which is located at address 53270 decimal."
+"What is the POKE command to select extended colour mode for the high resolution screen?","To select extended colour mode for the high resoiution screen you must use the following POKE: POKE 53270, PEEK (53270) OR 16."
+"What is the significance of bit 4 of the second VIC control register?","Bit 4 of the second VIC control register is used to select extended colour mode for the high resolution screen."
+"How does the background colour register affect the high resolution screen?","The colour in the background colour register is the same for the whole of the high resolution screen, i.e. the high resolution screen background must all be the same colour."
+"What is the address range of the colour memory?","The colour memory is located at address 55296 decimal to 56295 decimal."
+"What is the relationship between the colour memory and the high resolution screen?","The colour memory holds the colour for the characters on the text screen and in extended colour mode, each location can be used to hold the colour for an 8 by 8 dots square on the high resolution screen."

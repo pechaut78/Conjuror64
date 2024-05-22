@@ -1,0 +1,20 @@
+SID Perfect Pitch? 
+on C64:
+Selecting the correct frequency for a sound is obviously much 
+more important for music than is for sound effects. For- 
+tunately, the system allows very precise control over the 
+frequency so that musical notes can be accurately pitched. 
+This fine control is achieved by using a 16 bit value to specify 
+the frequency value. Naturally, two registers are needed to 
+hold this 16 bit value, these are the High Frequency Control 
+register and the Low Frequency Control register. Figure 8.9 
+shows where these registers are located for each of the three 
+voices. 
+
+Each of the waveform generators can output frequencies 
+in the range to 4000 Hz. Within this range of frequencies 
+lies a fuU 8 octaves of the musical scale. (About the same 
+as a piano, which has a range of 7.5 octaves.) Appendix M 
+in the User Manual gives a complete list of the high and low 
+frequency values which must be POKE'd into the Frequency 
+Control registers to produce the standard musical scale. 

@@ -1,0 +1,9 @@
+
+
+
+address          $67            SGNFLG
+Number of Terms in a Series Evaluation
+
+This location is used by mathematical formula evaluation routines.  It
+indicates the number of separate evaluations that must be done to
+resolve a complex expression down to a single term.

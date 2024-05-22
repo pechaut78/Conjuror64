@@ -1,0 +1,36 @@
+
+
+
+address       $299-$29A      BAUDOF
+Time Required to Send a Bit
+
+This location holds the prescaler value used by CIA #2 timers A and B.
+
+These timers cause an NMI interrupt to drive the RS-232 receive and
+transmit routines CLOCK/PRESCALER times per second each, where CLOCK
+is the system 02 frequency of 1,022,730 Hz (985,250 if you are using
+the European PAL television standard rather than the American NTSC
+standard), and PRESCALER is the value stored at 56580-1 ($DD04-5) and
+56582-3 ($DD06-7), in low-byte, high-byte order.  You can use the
+following formula to figure the correct prescaler value for a
+particular RS-232 baud rate:
+
+PRESCALER=((CLOCK/BAUDRATE)/2)-100
+
+The American (NTSC standard) prescaler values for the standard RS-232
+baud rates which the control register at 659 ($293) makes available
+are stored in a table at 65218 ($FEC2), starting with the two-byte
+value used for 50 baud.  The European (PAL standard) version of that
+table is located at 58604 ($E4EC).
+
+Location Range: 667-670 ($29B-$29E)
+Byte Indices to the Beginning and End of Receive and Transmit Buffers
+
+The two 256-byte First In, First Out (FIFO) buffers for RS-232 data
+reception and transmission are dynamic wraparound buffers.  This means
+that the starting point and the ending point of the buffer can change
+over time, and either point can be anywhere withing the buffer.  If,
+for example, the starting point is at byte 100, the buffer will fill
+towards byte 255, at which point it will wrap around to byte 0 again.
+To maintain this system, the following four locations are used as
+indices to the starting and the ending point of each buffer.

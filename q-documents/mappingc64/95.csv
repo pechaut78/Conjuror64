@@ -1,0 +1,49 @@
+question,answer
+"What is the purpose of the memory location at address $B9?","address           $B9            SA
+Current Secondary Address
+
+This location holds the secondary address of the device currently
+being used.  The range of valid secondary address numbers is 0 through
+31 for serial devices, and 0 through 127 for other devices.
+
+Secondary device numbers mean something different to each device that
+they are used with.  The keyboard and screen devices ignore the
+secondary address completely.  But any device which can have more than
+one file open at the same time, such as the disk drive, distinguishes
+between these files by using the secondary address when opening a disk
+file.  Secondary address numbers 0, 1, and 15-31 have a special
+significance to the disk drive, and therefore device numbers 2-14 only
+should be used as secondary addresses when opening a disk file.
+
+OPENing a disk file with a secondary address of 15 enables the user to
+communicate with the Disk Operating System through that channel.  A
+LOAD command which specifies a secondary address of 0 (for example,
+LOAD 'AT BASIC',8,0) results in the program being loaded not to the
+address specified on the file as the starting address, but rather to
+the address pointed to by the start of BASIC pointer (43, $2B).
+
+A LOAD with a secondary address of 1 (for example, LOAD 'HERE',8,1)
+results in the contents of the file being loaded to the address
+specified in the file.  A disk file that has been LOADed using a
+secondary address of 1 can be successfully SAVEd in the same manner
+(SAVE 'DOS 5.1',8,1).
+
+LOADs and SAVEs that do not specify a secondary address will default
+to a secondary address of 0.
+
+When OPENing a Datasette recorder file, a secondary address of 0
+signifies that the file will be read, while a secondary address of 1
+signifies that the file will be written to.  A value of 2 can be added
+to indicate that an End of Tape marker should be written as well.
+This marker tells the Datasette not to search past it for any more
+files on the tape, though more files can be written to the tape if
+desired.
+
+As with the disk drive, the LOAD and SAVE commands use secondary
+addresses of 0 and 1 respectively to indicate whether the operation
+should be relocating or nonrelocating.
+
+When the 1515 or 1525 Printer is opened with a secondary address of 7,
+the uppercase/lowercase character set is used.  If it is openend with
+a secondary address of 0, or without a secondary address, the
+uppercase/graphics character set will be used."

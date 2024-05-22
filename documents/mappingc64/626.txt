@@ -1,0 +1,13 @@
+
+
+
+address              $F6E4          SETTIM
+Set the Software Clock from the .A, .X, and .Y Registers
+
+This documented Kernal routine can be entered from location 65499
+($FFDB).
+
+It performs the reverse operation from RDTIM, storing the value in the
+.Y register into location 160 ($A0), the .X register into 161 ($A1),
+and the Accumulator into 162 ($A2).  Interrupts are first disabled, to
+make sure that the clock will not be updated while being set.

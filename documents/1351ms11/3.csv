@@ -1,0 +1,11 @@
+question,answer
+"Where is the Commodore 1351 mouse connected to on the C64/C128?","The Commodore 1351 mouse is connected to either of the joystick ports on the C64/C128."
+"How many operating modes does the Commodore 1351 mouse support?","The Commodore 1351 mouse supports two distinct operating modes: Joystick mode and Proportional mode."
+"What is required to achieve optimum performance in Proportional mode on the C64/C128?","A special machine language driver is required to achieve optimum performance in Proportional mode on the C64/C128."
+"How is the mode selection determined on the Commodore 1351 mouse?","The mode selection is determined when the mouse is powered up, depending on whether the right mouse button is depressed or not."
+"What happens if the right mouse button is depressed when the Commodore 1351 mouse is powered up?","If the right mouse button is depressed when the mouse is powered up, then the mouse will be in joystick mode."
+"What is the default mode of the Commodore 1351 mouse if the right mouse button is not depressed when powered up?","If the right mouse button is not depressed when the mouse is powered up, then the mouse will default to proportional mode."
+"What is the purpose of Joystick mode on the Commodore 1351 mouse?","Joystick mode allows you to utilize the mouse as a joystick when using software which does not support proportional mode."
+"In what type of software can the Commodore 1351 mouse be used as a joystick?","The Commodore 1351 mouse can be used as a joystick in software which does not support proportional mode."
+"What are the two buttons available on the Commodore 1351 mouse?","The Commodore 1351 mouse has two buttons: a left button and a right button."
+"Can the Commodore 1351 mouse be used with both C64 and C128 product lines?","Yes, the Commodore 1351 mouse can be used with both C64 and C128 product lines."

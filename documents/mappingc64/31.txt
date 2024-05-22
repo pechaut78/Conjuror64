@@ -1,0 +1,25 @@
+
+address         $39-$3A        CURLIN
+Current BASIC Line Number
+
+This location contains the line number of the BASIC statement which is
+currently being executed, in LSB/MSB format.  A value of 255 ($FF) in
+location 58 ($3A), which translates to a line number of 65280 or above
+(well over the 63999 limit for a program line), means that BASIC is
+currently in immediate mode, rather than RUN mode.
+
+BASIC keywords that are illegal in direct mode check 58 ($3A) to
+determine whether or not this is the current mode.
+
+When in RUN mode, this location is updated as each new BASIC line is
+fetched for execution.  Therefore, a TRACE function could be added by
+diverting the vector at 776 ($308), which points to the routine that
+executes the next token, to a user-written routine which prints the
+line number indicated by this location before jumping to the token
+execution routine.  (LISTing the line itself would be somewhat harder,
+because LIST uses many Page 0 locations that would have to be
+preserved and restored afterwards.)
+
+This line number is used by BREAK and error messages to show where
+program execution stopped.  The value here is copied to 59 ($3B) by
+STOP, END, and the stop-key BREAK, and copied back by CONT.

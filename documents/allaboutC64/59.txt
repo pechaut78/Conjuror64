@@ -1,0 +1,13 @@
+
+C64 Basic:
+• If an array is one-dimensional, only one number will be
+inside the DIM statement parentheses, and only one number
+will be needed to form a subscript.
+• A two-dimensional array requires two numbers in the DIM
+statement and subscript. These arrays are often thought of
+in terms of rows and columns.
+• Arrays of more than two dimensions are possible.
+-  If a subscript contains too few or too many numbers for the
+dimension of an array, or if a subscript number exceeds the
+maximum number specified in the DIM statement, the BAD
+SUBSCRIPT error will occur.

@@ -1,7 +1,6 @@
 question,answer
 "Call address of SCREEN function","$FFED (hex) 65517 (decimal)"
 "Registers affected by SCREEN function","X, Y"
-"Preparatory routines for SCREEN function","None"
 "Stack requirements for SCREEN function","2"
 "Registers used for communication in SCREEN function","X, Y"
 "Description of SCREEN function","This routine returns the format of the screen, e.g., 40 columns in X and 25 lines in Y."

@@ -1,0 +1,11 @@
+question,answer
+"What is the first action taken by the KERNAL on power-up?","The KERNAL resets the stack pointer and clears decimal mode on power-up."
+"What happens if an autostart ROM cartridge is present at location $8000 HEX?","If an autostart ROM cartridge is present, normal initialization is suspended, and control is transferred to the cartridge code."
+"What devices are initialized by the KERNAL during power-up?","The KERNAL initializes all INPUT/OUTPUT devices, including the serial bus, 6526 CIA chips, 60-Hz timer, SID chip, and cassette motor."
+"What is the purpose of the RAM test performed by the KERNAL?","The RAM test is a nondestructive test that sets the top and bottom of memory pointers, initializes page zero, and sets up the tape buffer."
+"What is the starting location of the RAM test performed by the KERNAL?","The RAM test starts at location $0300 and works upward to find the first non-RAM location."
+"What is the default value of the bottom of memory set by the KERNAL?","The bottom of memory is always set to $0800."
+"What is the purpose of the indirect jump table established by the KERNAL?","The indirect jump table in low memory is established to facilitate indirect jumps to routines in the KERNAL."
+"What is the final action taken by the KERNAL during power-up?","The final action taken by the KERNAL is to use the indirect at $A000 to start BASIC."
+"How does the KERNAL handle the screen during power-up?","The KERNAL clears the screen and resets all screen editor variables during power-up."
+"What is the purpose of initializing the BASIC memory map during power-up?","Initializing the BASIC memory map during power-up prepares the system for running BASIC programs."

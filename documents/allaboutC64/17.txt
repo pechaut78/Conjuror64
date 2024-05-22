@@ -1,0 +1,13 @@
+
+C64 Basic:
+• Using a large line number increment makes it easier to insert
+lines between the existing ones in a program. It is a good
+practice to increment by at least 10.
+• The RUN command is used to execute a program. Execution
+starts at the first line and ends when there are no more lines.
+• While a program is being executed, it is said to be running.
+• One of the advantages of a program is that lines typed once
+can be executed several times.
+• Commands are used to help manage a program. They are
+used in the immediate mode, but are not usually included
+in a program.

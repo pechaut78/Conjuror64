@@ -1,0 +1,27 @@
+question,answer
+"What is the purpose of the memory location at address $EC78?","address              $EC78
+Control Keyboard Matrix Decode Table
+
+This table contains the 64 PETASCII values for the Control keyboard,
+one for each key which is struck while the CTRL key is pressed.  The
+table is in keycode order (see the keycode table in Appendix H for the
+correspondence of keycode to key).  A 65th byte with the value of 255
+($FF) marks the end of the table (this corresponds to a keypress value
+of 64, no key pressed).
+
+The only keys generally struck in combination with the CTRL key are
+the ones that change the colors on the top row of the keyboard, but
+this doesn't necessarily mean that the other CTRL key combinations
+don't do anything.  On the contrary, looking at the values in this
+table, you can see that any of the first 32 values in the PETASCII
+table can be produced by some combination of the CTRL key and another
+key.  CTRL-@ produces a CHR$(0).  CTRL-A through CTRL-Z produce
+CHR$(1) through CHR$(26).  Ctrl-: is the same as CHR$(27), CTRL-Lira
+(that's the slashed-L British pound sign) produces CHR$(28), CTRL-;
+equals CHR$(29), CTRL-up arrow produces CHR$(30), and CTRL-= produces
+CHR$(31).
+
+Any of these combinations produce the same effect as the CHR$(X)
+statement.  For examble, CTRL-; moves the cursor over to the right,
+CTRL-N switches to lowercase, CTRL-R turns on reverse video, and
+CTRL-E changes the printing to white."

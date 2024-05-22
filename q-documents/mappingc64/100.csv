@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $BF?","address           $BF            MYCH
+Tape Input Byte Buffer
+
+This is used by the tape routines as a work area in which incoming
+characters area assembled."

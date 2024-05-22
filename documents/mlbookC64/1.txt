@@ -1,0 +1,6 @@
+
+The X-register is the second register in the processor. This
+register is used together with the accumulator when working
+with tables. It functions as the counter or pointer to the
+individual table elements. For this reason this register is
+also called an index register.

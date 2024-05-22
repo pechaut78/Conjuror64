@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $B853?","address         $B853          FSUBT
+BASIC's Subtraction Operation
+
+This routine subtracts the contents of FAC2 from FAC1 by complementing
+its sign and adding."

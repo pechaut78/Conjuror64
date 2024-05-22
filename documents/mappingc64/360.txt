@@ -1,0 +1,8 @@
+
+
+
+address         $BD7E          FINLOG
+Add Signed Integer to FAC1
+
+This routine is used to add an ASCII digit that has been converted to
+a signed integer to FAC1.

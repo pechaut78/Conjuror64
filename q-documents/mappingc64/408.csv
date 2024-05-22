@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $D021?","address              $D021          BGCOL0
+Background Color 0
+
+This register sets the background color for all text modes, sprite
+graphics, and multicolor bitmap graphics.  The default color value is
+6 (blue)."

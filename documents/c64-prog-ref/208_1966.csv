@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the SETTMO function?","The purpose of the SETTMO function is to set the IEEE bus card timeout flag, which allows the Commodore 64 to wait for a device on the IEEE port for 64 milliseconds before recognizing an error condition and leaving the handshake sequence."
+"what is the call address of the SETTMO function?","The call address of the SETTMO function is $FFA2 (hex) or 65442 (decimal)."
+"what is the communication register used by the SETTMO function?","The communication register used by the SETTMO function is register A."
+"are there any preparatory routines required before calling the SETTMO function?","No, there are no preparatory routines required before calling the SETTMO function."
+"what is the stack requirement for the SETTMO function?","The stack requirement for the SETTMO function is 2."
+"which registers are affected by the SETTMO function?","None of the registers are affected by the SETTMO function."
+"what is the significance of bit 7 in the accumulator when calling the SETTMO function?","When calling the SETTMO function, a 0 in bit 7 of the accumulator enables timeouts, while a 1 in bit 7 disables timeouts."
+"how do you disable the timeout flag using the SETTMO function?","To disable the timeout flag, set bit 7 of the accumulator to 1 and then call the SETTMO function."
+"what is an example of how to use the SETTMO function to disable timeouts?","An example of how to use the SETTMO function to disable timeouts is: LDA #0, JSR SETTMO."
+"what is a common use case for the SETTMO function?","A common use case for the SETTMO function is to communicate that a disk file is not found on an attempt to OPEN a file only with an IEEE card."

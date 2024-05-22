@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the memory location at address $FFFE?","address              $FFFE
+Maskable Interrupt Request and Break Hardware Vectors
+
+This vector points to the main IRQ handler routine at 65352 ($FF48)."

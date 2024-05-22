@@ -1,0 +1,39 @@
+
+
+
+address           $286           COLOR
+Current Foreground Color for Text
+
+The process of PRINTing a character to the screen consists of both
+placing the screen code value for the character in screen memory and
+placing a foreground color value in the corresponding location in
+color RAM.  Whenever a character is PRINTed, the Operating System
+fetches the value to be put in color RAM from this location.
+
+The foreground color may be changed in a number of ways.  Pressing the
+CTRL or Commodore logo key and numbers 1-8 at the same time will
+change the value stored here, and thus the color being printed.
+PRINTing the PETASCII equivalent character with the CHR$ command will
+have the same effect.  But probably the easiest method is to POKE the
+color value directly to this location.  The table below lists the
+possible colors that may be produced, and shows how to produce them
+using all three methods.
+
+POKE
+COLOR #   COLOR     CHR$   KEYS TO PRESS
+ 0        Black     144    CTRL-1
+ 1        White       5    CTRL-2
+ 2        Red        28    CTRL-3
+ 3        Cyan      159    CTRL-4
+ 4        Purple    156    CTRL-5
+ 5        Green      30    CTRL-6
+ 6        Blue       31    CTRL-7
+ 7        Yellow    158    CTRL-8
+ 8        Orange    129    Logo-1
+ 9        Brown     149    Logo-2
+10        Lt Red    150    Logo-3
+11        Dark Gray 151    Logo-4
+12        Med Gray  152    Logo-5
+13        Lt Green  153    Logo-6
+14        Lt Blue   154    Logo-7
+15        Lt Gray   155    Logo-8

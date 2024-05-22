@@ -7,4 +7,3 @@ question,answer
 "What happens if a key is down when the SCNKEY function is called?","If a key is down, its ASCII value is placed in the keyboard queue"
 "What is the purpose of the interrupt handler in the SCNKEY function?","This routine is called only if the normal IRQ interrupt is bypassed"
 "What is the purpose of the GETIN and CHROUT routines in the SCNKEY function?","GETIN: GET CHARACTER, CHROUT: PRINT IT"
-"What is the return value of the SCNKEY function?","None"

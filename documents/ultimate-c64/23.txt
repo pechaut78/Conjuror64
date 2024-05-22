@@ -1,0 +1,30 @@
+
+Memory Layout
+The VIC can address 16 KB at a time. All VIC data
+structures can be stored anywhere in these 16 KB, but
+they have to be aligned to their size.
+• The screen RAM is $0400 bytes in size and can be
+at $0000, $0400, ...
+• The character set is $0800 bytes, and can be at
+$0000, $0800, ...
+• The bitmap is $2000 bytes and can be at $0000 or
+$2000.
+• Sprites are $40 bytes, and can be at $0000,
+$0040, ...
+Two GPIO pins of the second 6526 CIA are connected
+to bits 6 and 7 of RAM when the VIC accesses it. By
+changing the lower 2 bits of $DD02, the VIC can be
+switched between banks $0000-$3FFF (11), $4000-
+$7FFF (10), $8000-$BFFF (01) and $C000-$FFFF
+(00).
+If the VIC is set to banks $0000 or $8000, then the
+two built-in character sets shadow RAM in the area of
+$1000-$1FFF. This means that the built-in character
+set can be used on those banks without occupying
+RAM, but it also means that the area from $1000-
+$1FFF cannot be used for bitmap, screen RAM or
+sprite data either.
+For timing reasons, color information is not taken
+from main RAM, but from a dedicated Color RAM.
+These $0400 half-bytes are accessible to the C64 at
+$D800-$DBFF and can not be bank switched.

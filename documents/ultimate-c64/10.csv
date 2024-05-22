@@ -1,0 +1,11 @@
+question,answer
+"How many cycles does an instruction with an immediate operand take?","Two cycles, as it has one byte fetch and takes at least two cycles."
+"How many memory accesses does a zero page instruction take?","Three memory accesses: opcode, address, and data."
+"How many cycles does a branch take if it is taken?","Three cycles."
+"How many cycles does a branch take if it is not taken?","Two cycles."
+"How many memory accesses does an absolute instruction take?","Four memory accesses: opcode, address low, address high, and data."
+"How many cycles does a read-modify-write instruction take in the zero page case?","Five cycles."
+"How many cycles does a read-modify-write instruction take in the absolute case?","Six cycles."
+"How many cycles does a JMP instruction take?","Three cycles."
+"How many cycles does a push instruction take?","Three cycles."
+"How many cycles does a JSR instruction take?","Six cycles."

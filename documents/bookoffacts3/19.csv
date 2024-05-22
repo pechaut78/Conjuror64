@@ -1,0 +1,11 @@
+question,answer
+"What command executes a program in memory in C64 Basic?","The command to execute a program in memory in C64 Basic is RUN SHIFTED U."
+"What command stores a program to tape or disk in C64 Basic?","The command to store a program to tape or disk in C64 Basic is SAVE SHIFTED A."
+"What is the name and function of the interior function in C64 Basic?","The name of the interior function in C64 Basic is SGN SHIFTED G, and it returns the sign of a number."
+"What is the name and function of the floating point function in C64 Basic?","The name of the floating point function in C64 Basic is SIN SHIFTED I, and it returns the sine of a number."
+"What is the name and function of the function that prints a specified number of spaces in C64 Basic?","The name of the function that prints a specified number of spaces in C64 Basic is SPC SHIFTED P, and it prints the specified number of spaces across the screen."
+"How can you print 10 spaces using a function in C64 Basic?","You can print 10 spaces in C64 Basic by using the SPC SHIFTED P function with the argument 910: PRINT SPC 910."
+"What is the purpose of the RUN command in C64 Basic?","The purpose of the RUN command in C64 Basic is to execute a program that is in memory."
+"What is the purpose of the SAVE command in C64 Basic?","The purpose of the SAVE command in C64 Basic is to store a program to tape or disk."
+"What does the SGN function do in C64 Basic?","The SGN function in C64 Basic returns the sign of a number."
+"What does the SIN function do in C64 Basic?","The SIN function in C64 Basic returns the sine of a number."

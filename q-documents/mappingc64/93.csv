@@ -1,0 +1,24 @@
+question,answer
+"What is the purpose of the memory location at address $B7?","address          $B7            FNLEN
+Length of Current Filename
+
+This location holds the number of characters in the current filename.
+Disk filenames may have from 1 to 16 characters, while tape filenames
+range from 0 to 187 characters in length.
+
+If the tape name is longer than 16 characters, the excess will be
+truncated by the SEARCHING and FOUND messages, but will still be
+present on the tape.  This means that machine language programs meant
+to run in the cassette buffer may be saved as tape filenames.
+
+A disk file is always referred to be a name, whether full or generic
+(containing the wildcard characters * or ?).  This location will
+always be greater than 0 if the current file is a disk file.  Tape
+LOAD, SAVE, and VERIFY operations do not require that a name be
+specified, and this location can therefore contain a 0.  If this is
+the case, the contents of the pointer to the filename at 187 will be
+irrelevant.
+
+An RS-232 OPEN command may specify a filename of up to four
+characters.  These characters are copied to locations 659-662
+($293-$296), and determine baud rate, word length, and parity."

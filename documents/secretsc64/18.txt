@@ -1,0 +1,11 @@
+
+
+Standard colour mode of the C64
+
+In this mode any dot on the high resolution screen can 
+only be in one of two colours. These colours are simply 
+taken from the high and low bits of the text screen memory 
+as described above. Usually the whole high resolution screen 
+will be in the same two colours, which means that the com- 
+posite value of the colour can be written all through the text 
+screen memory. 

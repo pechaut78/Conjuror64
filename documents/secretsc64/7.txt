@@ -1,0 +1,61 @@
+
+
+
+C64 CHARACTER GRAPHICS 
+The Commodore 64 has 2 completely different display modes: 
+High resolution and Low resolution. This chapter will deal 
+with the second of these in more detail, the other being dealt 
+with in Chapter 7. 
+
+In Low resolution, the screen is composed of 1000 charac- 
+ter locations laid out as 25 lines of 40 characters. AU the 
+characters that can be displayed normally on the Low resolu- 
+tion screen are contained in ROM in two separate character 
+sets. These two character sets are only available one at a time 
+and they can be switched between in direct mode by simul- 
+taneously pressing shift and the Commodore key. Character 
+set 1 contains the upper case characters, the numbers, some 
+special characters used within BASIC and a set of useful 
+grapliics characters. This is the character set that is in use 
+when the machine is first switched on. The second character 
+set contains just a lower case character set and an upper case 
+character set. There are two common ways to put characters 
+onto the low resolution screen from within BASIC and we will 
+examine them both in this chapter. 
+
+The first of the two is the PRINT statement. Using a 
+function that we shall examine in a moment, the PRINT 
+statement is capable of producing some fairly impressive 
+graphics and simple animation. In order to produce anima- 
+tion, some facihty is needed to enable the program to control 
+where on the screen the next character is to be printed. On 
+the Commodore 64 this is achieved by inserting cursor move- 
+ment control characters into the string that is being printed. 
+The function used for this purpose is a string function called 
+CHRS. 
+
+CHRS(X) is a string function whose purpose is to return a 
+single character string which is the character whose ASCII 
+code (American Standard Code for Information Interchange) 
+is tlie value of the expression contained in the brackets. 
+In this case, the value of X. The contents of the brackets 
+must be in the range to 255 or an illegal quantity error 
+message will result. The standard ASCII code only contains 
+128 characters numbered to 127. The first 32 are special 
+control characters, most of which control printers and ter- 
+minals with functions like line feed, form feed and carriage 
+return. The second 32 characters contain special characters 
+used in BASIC like S,( ),+,* etc. and the digits to 9, The 
+third set of 32 characters contains the upper case letters and 
+the fourth set contains lower case letters. On the Commodore 
+64 this is slightly different. The second and third sets of 32 
+characters still contain the special characters, the digits and the 
+upper case letters, but there the similarity ends. The fourth 
+set of 32 now contains a set of graphics characters instead of 
+lower case letters and the first set of 32 characters now con- 
+tains some special control codes that we are particularly 
+interested in. In addition to this character codes 128 to 255 
+are also available on the Commodore 64 of which the first 
+32 are also of special interest. We will now take a look at a 
+simple bouncing ball program and for this we will need the 
+following special control codes to use in the CHRS function. 

@@ -1,0 +1,27 @@
+
+
+
+address              $F49E          LOAD
+Load RAM from a Device
+
+This is a documented Kernal routine, whose entry in the jump table
+appears at 65493 ($FFD5).
+
+The routine jumps through a RAM vector at 816 ($330).  LOAD is used to
+transfer data froma device directly to RAM.  It can also be used to
+verify RAM, comparing its contents to those of a disk or tape file.
+To choose between these operations you must set the Accumulator with a
+0 for LOAD, or a 1 for VERIFY.
+
+Since the LOAD routine performs an OPEN, it must be preceded by a call
+to the SETLFS routine to specify the logical file number, device
+number, and secondary address, and a call to the SETNAM routine to
+specify the filename (a LOAD from tape can be performed without a
+filename being specified).  Then the .X and .Y registers should be set
+with the starting address for the load, and the LOAD routine called.
+If the secondary address specified was a 1, this starting address will
+be ignored, and the header information will be used to supply the load
+address.  If the secondary address was a 0, the address supplied by
+the call will be used.  In either case, upon return from the
+subroutine, the .X and .Y registers will contain the address of the
+highest RAM location that was loaded.

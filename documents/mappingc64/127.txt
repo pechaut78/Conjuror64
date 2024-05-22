@@ -1,0 +1,8 @@
+
+
+
+address          $FF            BASZPT
+BASIC Temporary Data for Floating Point to ASCII Conversion
+
+This location is used for temporary storage in the process of
+converting floating point numbers to ASCII characters..

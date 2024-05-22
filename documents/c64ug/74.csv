@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the GET# statement in Commodore 64 BASIC?","The GET# statement is used to input one character at a time from a previously OPENed device or file, allowing the programmer to read data from a file or device one character at a time."
+"how do you input one character from a data file using GET#?","You can input one character from a data file using the GET# statement, for example, 'GET #1,A$' would input one character from a data file and store it in the variable A$."
+"what is the syntax for reading a character from a file using GET#?","The syntax for reading a character from a file using GET# is 'GET #file_number,variable$', where file_number is the number of the file to read from and variable$ is the string variable to store the character in."
+"what is the difference between GET and GET#?","GET is used to input a string from the keyboard, while GET# is used to input a character from a file or device, allowing for more control over input operations."
+"can you use GET# with a device other than a file?","Yes, GET# can be used with devices other than files, such as the keyboard, printer, or screen, as long as it has been previously OPENed."
+"what happens if you try to use GET# with a file that is not OPEN?","If you try to use GET# with a file that is not OPEN, a 'FILE NOT OPEN' error will occur, so it's essential to OPEN the file before attempting to read from it with GET#."
+"how do you store the character read from a file using GET#?","The character read from a file using GET# is stored in a string variable, for example, 'A$' in the statement 'GET #1,A$'."
+"can you use GET# to read multiple characters from a file?","No, GET# is used to read one character at a time from a file, if you need to read multiple characters, you would need to use a loop and repeat the GET# statement."
+"is GET# a blocking statement?","Yes, GET# is a blocking statement, meaning that the program will wait for input from the file or device before continuing execution."
+"what is the advantage of using GET# over INPUT?","GET# provides more control over input operations, allowing you to read from specific devices or files, whereas INPUT is limited to reading from the keyboard."

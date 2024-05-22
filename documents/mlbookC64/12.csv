@@ -1,0 +1,11 @@
+question,answer
+"What is the process the processor follows when executing absolute addressing mode instructions?","The processor first gets the low-byte and then the high-byte of the address. The data found at that address is placed into the accumulator, the program counter is incremented by three and the next instruction is fetched. These instructions require three bytes."
+"How many bytes do absolute addressing mode instructions typically require?","Absolute addressing mode instructions require three bytes."
+"What is the difference in the number of bytes required for absolute addressing mode and immediate addressing mode instructions?","Absolute addressing mode instructions require three bytes, while immediate addressing mode instructions require only two."
+"What happens to the program counter when executing absolute addressing mode instructions?","The program counter is incremented by three."
+"What is placed into the accumulator when executing absolute addressing mode instructions?","The data found at the specified address is placed into the accumulator."
+"What is the first step the processor takes when executing absolute addressing mode instructions?","The processor first gets the low-byte of the address."
+"What is the second step the processor takes when executing absolute addressing mode instructions?","The processor then gets the high-byte of the address."
+"What is the third step the processor takes when executing absolute addressing mode instructions?","The data found at the specified address is placed into the accumulator."
+"What is the fourth step the processor takes when executing absolute addressing mode instructions?","The program counter is incremented by three."
+"What is the fifth step the processor takes when executing absolute addressing mode instructions?","The next instruction is fetched."

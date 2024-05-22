@@ -1,0 +1,8 @@
+
+
+
+address         $B761          PREAM
+Pull String Function Parameters from Stack for LEFT$, RIGHT$, and MID$
+
+This routine is used to obtain the first two parameters for all three
+of these commands.

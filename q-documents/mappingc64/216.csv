@@ -1,0 +1,30 @@
+question,answer
+"What is the purpose of the memory location at address $A080-$A09D?","address  $A080-$A09D    OPTAB
+Operator Dispatch Vector Table
+
+This table contains two-byte vectors, each of which points to an
+address which is one byte before the address of one of the routines
+that perform a BASIC math operation.
+
+For the reasoning behind the one-byte offset to the true address, see
+the entry for location 40972 ($A00C).  In addition, each entry has a
+one-byte number which indicates the degree of precedence that
+operation takes.  Operations with a higher degree of precedence are
+performed before operations of a lower degree (for example, in the
+expression A=3+4*6, the 4*6 operation is performed first, and 3 is
+added to the total).  The order in which they are performed is:
+
+1.  Expressions in parentheses
+2.  Exponentation (raising to a power, using the up-arrow symbol)
+3.  Negation of an expression (-5, -A)
+4.  Multiplication and division
+5.  Addition and subtraction
+6.  Relation tests (=, <>, <, >, <=, >= all have the same precedence)
+7.  NOT (logical operation)
+8.  AND (logical operation)
+9.  OR (logical operation)
+
+The substance of this table, which can be used to locate the addresses
+of the math routines, is given below.  Note that less that, equal, and
+greater than operators all use the same routines, though they have
+different token numbers."

@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $BC39?","address         $BC39          SGN
+Perform SGN
+
+The SGN routine calls the above routine to put the sign of FAC1 into
+.A, and then converts that value into a floating point number in FAC1."

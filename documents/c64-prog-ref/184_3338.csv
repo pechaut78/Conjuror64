@@ -1,0 +1,12 @@
+question,answer
+"what is the purpose of the CLALL function?","The purpose of the CLALL function is to close all open files, reset the pointers into the open file table, and automatically call the CLRCHN routine to reset the I/O channels."
+"What is the call address of the CLALL function?","The call address of the CLALL function is $FFE7 in hexadecimal, which is equivalent to 65511 in decimal."
+"What are the preparatory routines required for the CLALL function?","There are no preparatory routines required for the CLALL function."
+"What are the error returns of the CLALL function?","There are no error returns for the CLALL function."
+"What are the stack requirements for the CLALL function?","The stack requirements for the CLALL function are 11."
+"What registers are affected by the CLALL function?","The registers affected by the CLALL function are A and X."
+"How do you use the CLALL function?","To use the CLALL function, simply call the routine with a JSR instruction, for example: JSR CLALL."
+"What is the effect of calling the CLALL function on open files?","Calling the CLALL function closes all open files and resets the pointers into the open file table."
+"What happens to the I/O channels when the CLALL function is called?","When the CLALL function is called, the CLRCHN routine is automatically called to reset the I/O channels."
+"Can you provide an example of how to use the CLALL function?","Here is an example of how to use the CLALL function: JSR CLALL ;CLOSE ALL FILES AND SELECT DEFAULT I/O CHANNELS JMP RUN ;BEGIN EXECUTION"
+"What is the relationship between the CLALL function and the CLRCHN routine?","The CLALL function automatically calls the CLRCHN routine to reset the I/O channels when it is called."

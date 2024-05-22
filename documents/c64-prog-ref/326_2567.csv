@@ -1,0 +1,11 @@
+question,answer
+"Where are the integrating capacitors C1 and C2 connected on the SID chip?","C1 connects between pins 1 and 2, and C2 connects between pins 3 and 4, both capacitors should be of the same value."
+"What is the recommended value for C1 and C2 for normal operation of the Filter over the audio range?","A value of 2200 pF for C1 and C2 is recommended for normal operation of the Filter over the audio range, which is approximately 30 Hz-12 kHz."
+"Why are polystyrene capacitors preferred for the SID chip?","Polystyrene capacitors are preferred because they provide a more stable and accurate filtering operation, especially in complex polyphonic systems where many SID chips must track each other."
+"What is the formula to calculate the maximum Cutoff Frequency of the Filter?","The formula to calculate the maximum Cutoff Frequency of the Filter is FCmax = 2.6E-5/C, where C is the capacitor value."
+"How many octaves does the range of the Filter extend below the maximum Cutoff Frequency?","The range of the Filter extends 9 octaves below the maximum Cutoff Frequency."
+"What is the purpose of the capacitors C1 and C2 in the SID chip?","The capacitors C1 and C2 are used to connect the two integrating capacitors required by the programmable Filter."
+"Why are matched capacitors recommended in complex polyphonic systems?","Matched capacitors are recommended in complex polyphonic systems because they ensure that many SID chips track each other accurately and consistently."
+"How can the frequency range of the Filter be tailored to specific applications?","The frequency range of the Filter can be tailored to specific applications by the choice of capacitor values, for example, larger values for C1 and C2 can be chosen to provide more control over the bass frequencies of the Filter."
+"What type of capacitors are recommended for use in the SID chip?","Polystyrene capacitors are recommended for use in the SID chip because of their stability and accuracy."
+"What is the effect of using larger values for C1 and C2 on the Filter's frequency range?","Using larger values for C1 and C2 can provide more control over the bass frequencies of the Filter, making it suitable for applications that do not require full high-frequency response."

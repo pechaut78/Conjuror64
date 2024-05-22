@@ -1,0 +1,9 @@
+question,answer
+"What is the first character requirement for a variable name in C64 Basic?","The first character in a variable name must be alphabetic in C64 Basic."
+"What are the valid characters for the other characters in a variable name in C64 Basic?","In C64 Basic, the other characters in a variable name must be alphanumeric (a letter of the alphabet or a digit) or a space."
+"How long can a variable name be in C64 Basic?","A variable name can be any length in C64 Basic, but only the first two characters are significant."
+"What is the recommendation for choosing a variable name in C64 Basic?","It is best to choose a variable name in C64 Basic which reflects the purpose and use of the variable."
+"What is the consequence of using a reserved word in a variable name in C64 Basic?","The computer will generate a SYNTAX ERROR if a variable name contains a reserved word in C64 Basic."
+"What are the two reserved variables in C64 Basic?","The two reserved variables in C64 Basic are ST and TI, and they cannot be assigned."
+"Can spaces be used in a variable name in C64 Basic?","Spaces are allowed in a variable name in C64 Basic, but it is not recommended as they do not count as characters."
+"What is the impact of the first two characters in a variable name in C64 Basic?","In C64 Basic, only the first two characters of a variable name are significant."

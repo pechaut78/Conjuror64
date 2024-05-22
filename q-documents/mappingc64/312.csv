@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $B72C?","address         $B72C          RIGHTD
+Perform RIGHT$
+
+RIGHT$ manipulates its parameters so that the tail end of LEFT$ can be
+used to create a temporary string descriptor for a new string.  This
+new string contains the number of characters from the right side of
+the string that is specified in the command."

@@ -1,0 +1,11 @@
+question,answer
+"How many bits does the C64 design have in its address bus?","The 8 bit C64 design has a 16 bit address bus"
+"What is the maximum amount of memory the CPU can address?","The CPU can address 64 KB of memory"
+"What is the purpose of the regions in the address space?","The regions in the address space are shared with RAM and can be switched between RAM and a second or third mapping"
+"What is the address range for RAM or BASIC ROM?","$A000-$BFFF: RAM or BASIC ROM"
+"What is the address range for RAM or memory mapped I/O chips or character ROM?","$D000-$DFFF: RAM or memory mapped I/O chips or character ROM"
+"What is the address range for RAM or KERNAL ROM?","$E000-$FFFF: RAM or KERNAL ROM"
+"How do I/O devices work on the C64's 6510 CPU?","I/O devices are memory mapped on the C64's 6510 CPU"
+"What is the address range for the VIC video controller?","$D000-$D3FF: VIC video controller"
+"What is the address range for the SID sound controller?","$D400-$D7FF: SID sound controller"
+"What is the address range for Color RAM?","$D800-$DBFF: Color RAM"

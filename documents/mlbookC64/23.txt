@@ -1,0 +1,10 @@
+
+
+The logical instructions
+The logical instructions combine two value with each
+other. As with the arithmetic instructions, one operand
+must be in the accumulator while the second is retrieved
+from memory according to the addressing mode. After the
+operation, the result is left in the accumulator. The
+6510 can perform three different types of logical
+operations.

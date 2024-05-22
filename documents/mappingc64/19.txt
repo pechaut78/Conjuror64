@@ -1,0 +1,38 @@
+
+
+address         $14-$15        LINNUM
+Integer Line Number Value
+
+The target line number for GOTO, LIST, ON, and GOSUB is stored here in
+low- byte, high-byte integer format, as is the number of a BASIC line
+that is to be added or replaced.
+
+LIST saves the highest line number to list (or 65535 ($FFFF) if
+program is to be listed to the end) at this location.
+
+GOTO tests the target line number to see if it is greater than the
+line number currently being executed.  If it is greater, GOTO starts
+its search for the target line at the current line number.  If it is
+not greater, GOTO must search for the target line from the first line
+of the program.  It is interesting to note that the test is of the
+most significant byte only.  Therefore, INT(TARGETLINE/256) must be
+greater than INT(CURRENTLINE/256) in order for the search to start
+with the current line, instead of at the beginning of the program.
+
+PEEK, POKE, WAIT, and SYS use this location as a pointer to the
+address which is the subject of the command.
+
+22            $16            TEMPPT
+Pointer to the Next Available Space in the Temporary String Stack
+
+This location points to the next available slot in the temporary
+string descriptor stack located at 25-33 ($19-$21).  Since that stack
+has room for three descriptors of three bytes each, this location will
+point to 25 ($19) if the stack is empty, to 28 ($1C) if there is one
+entry, to 31 ($1F) if there are two entries, and to 34 ($22) if the
+stack is full.
+
+If BASIC needs to add an entry to the temporary string descriptor
+stack, and this location holds a 34, indicating that the stack is
+full, the FORMULA TOO COMPLEX error message is issued.  Otherwise, the
+entry is added, and three is added to this pointer.

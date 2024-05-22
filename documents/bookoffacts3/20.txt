@@ -1,0 +1,26 @@
+
+
+C64 Basic:
+
+SQR S(SHIFTED Q) A flosting point function that will return the
+square root of a specified value.
+
+STATUS ST A function that gives the condition of any
+input or output operation.
+
+STEP ST(SHIFTED E) A statement that works with the IF THEN
+statement. The STEP statement will increment the IF THEN function with a
+specified value.
+(EXAMPLE: FOR A = 1 TO 10 STEP 5-will loop twice)
+
+STOP S(SHIFTED T) A statement that will stop the execution of a
+program and print the line number from which STOP statement was
+executed.
+
+STR$ ST(SHIFTEDR) A string function that returns a string
+variable from a numeric variable. (EXAMPLE: T=4:T$=STR$(T)A$="THE
+
+TIME IS "+T$+":00M:PRINT A$-will print (THE TIME IS 4:00)
+SYS S(SHIFTED Y) A statement that will execute a memory
+location containing a machine language program or a kernal routine.
+(EXAMPLE: SYS 64738- will give a system cold start)

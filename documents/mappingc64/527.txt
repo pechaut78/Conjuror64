@@ -1,0 +1,10 @@
+
+
+
+address              $E4AD
+Patch for BASIC Call of CHKOUT
+
+This patch was made to preserve the .A register if there was no error
+returned from BASIC's call of the Kernal CHKOUT routine.  Apparently,
+the first version could cause a malfunction of the CMD and PRINT#
+commands.

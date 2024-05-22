@@ -1,0 +1,46 @@
+question,answer
+"What is the purpose of the memory location at address $314-$315?","address       $314-$315      CINV
+Vector to IRQ Interrupt Routine
+
+This vector points to the address of the routine that is executed when
+an IRQ interrupt occurs (normally 59953 ($FA31)).
+
+At power on, the CIA #1 Timer B is set to cause an IRQ interrupt to
+occur every 1/60 second.  This vector is set to point to the routine
+which updates the software clock and STOP key check, blinks the
+cursor, maintains the tape interlock, and reads the keyboard.  By
+changing this vector, the user can add or substitute a machine
+language routine that will likewise execute every 1/60 second.  The
+user who is writing IRQ interrupt routines should consider the
+following:
+
+1.  It is possible for an IRQ interrupt to occur while you are
+changing this vector, which would cause an error from which no
+recovery could be made.  Therefore, you must disable all IRQ
+interrupts before changing the contents of this location, and reenable
+them afterwards, by using the 6510 SEI and CLI instructions, or by
+using the Kernal VECTOR routine (64794, $FD1A) to set this vector.
+
+2.  There is some code in ROM that is executed before the interrupt
+routine is directed through this vector.  This code checks whether the
+source of the interrupt was an IRQ or BRK instruction.  If first
+preserves the contents of all the registers by pushing them onto the
+stack in the following sequence:  PHA, TXA, PHA, TYA, PHA.  It is up
+to the user to restore the stack at the end of his routine, either by
+exiting through the normal IRQ, or with the sequence:  PLA, TAY, PLA,
+TAX, PLA, RTI.
+
+3.  There is only one IRQ vector, but there are many sources for IRQ
+interrupts (two CIA chips, and several VIC chip IRQs).  If you plan to
+enable IRQs from more than one source, the IRQ routine here must
+determine the source, and continue the routine in the appropriate
+place for an IRQ from that source.
+
+In the same vein, if you replace the normal IRQ routine with your own,
+you should be aware that the keyboard's scanning and clock update will
+not occur unless you call the old interrupt routine once every 1/60
+second.  It is suggested that if you plan to use that routine, you
+save the old vector address in some other location.  In that way, you
+can JuMP to the keyboard interrupt routine through this alternate
+vector, rather than assuming that the ROM address will never change
+and that it is safe to jump into the ROM directly."

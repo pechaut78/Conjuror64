@@ -1,0 +1,7 @@
+
+
+
+address              $FFFC
+System Reset (RES) Hardware Vector
+
+This vector points to the power-on routine at 64738 ($FCE2).

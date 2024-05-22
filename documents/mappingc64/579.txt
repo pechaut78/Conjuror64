@@ -1,0 +1,9 @@
+
+
+
+address              $ED0C          LISTEN
+
+This is a documented Kernal routine whose entry in the jump table is
+65457 ($FFB1).  When called, it ORs the device number in the
+Accumulator with the LISTEN code (32, $20) and sends it on the serial
+bus.  This commands the device to LISTEN.

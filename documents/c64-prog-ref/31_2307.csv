@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the VIC-II control register at location 53269?","The VIC-II control register at location 53269 is known as the SPRITE ENABLE register, which controls whether each of the sprites is ON or OFF, with each sprite having a bit in this register that determines its state."
+"what does the bit in the SPRITE ENABLE register control?","The bit in the SPRITE ENABLE register controls whether a sprite is ON or OFF, with a 1 turning the sprite on and a 0 turning it off."
+"how do you turn on sprite 1 using a POKE command?","To turn on sprite 1, you can use the following POKE command: POKE 53269,PEEK(53269)OR 2, which sets the bit for sprite 1 to 1, turning it on."
+"what is the general statement to turn on a sprite using a POKE command?","The general statement to turn on a sprite using a POKE command is: POKE 53269,PEEK(53269)OR (2^SN), where SN is the sprite number, from 0 to 7."
+"what is the significance of the SPRITE ENABLE register?","The SPRITE ENABLE register is significant because a sprite must be turned ON before it can be seen, and this register controls whether each sprite is ON or OFF."
+"what is the format of the SPRITE ENABLE register?","The SPRITE ENABLE register is formatted as a byte, with each bit representing a sprite, from 7 to 0, with a 1 indicating the sprite is ON and a 0 indicating it is OFF."
+"what is the hexadecimal representation of the SPRITE ENABLE register location?","The hexadecimal representation of the SPRITE ENABLE register location is $D015."
+"what is the decimal representation of the SPRITE ENABLE register location?","The decimal representation of the SPRITE ENABLE register location is 53269."
+"why is it important to turn on a sprite before using it?","It is important to turn on a sprite before using it because a sprite must be turned ON before it can be seen, and if it is not turned on, it will not be visible."
+"what is the purpose of the OR operator in the POKE command?","The purpose of the OR operator in the POKE command is to set the bit for the desired sprite to 1, turning it on, while leaving the other bits unchanged."

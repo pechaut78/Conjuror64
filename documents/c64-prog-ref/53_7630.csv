@@ -1,0 +1,11 @@
+question,answer
+"Where is the raster register located in the VIC-II chip?","The raster register is located at address 53266 ($D012) in the VIC-II chip."
+"What is the purpose of the raster register?","The raster register is a dual-purpose register that returns the lower 8 bits of the current raster position when read, and allows setting up timing changes in the display to eliminate screen flicker when written to."
+"How do you determine the most significant bit of the raster position?","The most significant bit of the raster position is found in register location 53265 ($D011)."
+"When should changes be made to the display to avoid screen flicker?","Changes to the display should be made when the raster is not in the visible display area, which is when the dot positions fall between 51 and 251."
+"What happens when a value is written to the raster register?","When a value is written to the raster register, it is saved for use with the raster compare function, and when the actual raster value becomes the same as the written value, a bit in the VIC-II chip interrupt register 53273 ($D019) is turned ON by setting it to 1."
+"What is the purpose of the raster compare function?","The raster compare function compares the actual raster value with the value written to the raster register, and triggers an interrupt when they match."
+"How do you enable an interrupt (IRQ) to occur when the raster value matches the written value?","To enable an interrupt, the proper interrupt bit must be enabled (turned on) in the VIC-II chip interrupt register 53273 ($D019)."
+"What is the significance of the value 51-251 in relation to the raster register?","The values 51-251 represent the dot positions when the raster is not in the visible display area, making it a safe time to make changes to the display without causing screen flicker."
+"What is the address of the VIC-II chip interrupt register?","The address of the VIC-II chip interrupt register is 53273 ($D019)."
+"How does the raster register help in eliminating screen flicker?","The raster register helps in eliminating screen flicker by allowing timing changes to be made to the display when the raster is not in the visible display area, thereby reducing screen flicker."

@@ -1,0 +1,8 @@
+
+
+
+address              $FBA6
+Toggle the Tape Data Output Line
+
+This routine sets the CIA #1 Timer B, and toggles the Tape Data Output
+line on the 6510 on-chip I/O port (Bit 3 of location 1).

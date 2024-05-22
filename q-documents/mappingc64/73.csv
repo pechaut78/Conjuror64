@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $9B?","address           $9B            PRTY
+Tape Character Parity
+
+This location is used to help detect when bits of information have
+been lost during transmission of tape data."

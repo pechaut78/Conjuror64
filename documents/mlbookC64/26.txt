@@ -1,0 +1,16 @@
+
+The BIT instruction
+A special feature of the 65XX microprocessors is the BIT
+instruction. This instruction does not change the
+contents of any registers. It affects only the flags. The
+contents of the accumulator are ANDed with the contents
+of the addressed memory location. If the final result is
+zero, the Z flag is set, otherwise it is cleared.
+Additionally, the value of the sixth bit of the addressed
+location is placed into the V flag and the seventh bit is
+put in the N flag. With this one can check these two bits
+of a memory location without disturbing the contents of
+any of the registers. Let us look at an example:
+LDA #$10
+BIT $1234
+The accumulator contains $10; address $1234 contains $43.

@@ -1,0 +1,29 @@
+question,answer
+"What is the opposite of the PHA instruction in C64 assembly language?","The opposite of the PHA (push accumulator) instruction in C64 assembly language is the PLA (pull accumulator) instruction. The PLA instruction increments the stack pointer and reads a byte from the stack into the accumulator, setting the N and Z flags according to the value."
+"What does the PLA instruction do to the stack pointer in C64 assembly language?","The PLA instruction in C64 assembly language increments the stack pointer. This is because it is reading a byte from the stack, so it needs to move the stack pointer to the next memory location to keep track of the stack."
+"What is stored in the accumulator after the PLA instruction is executed in C64 assembly language?","After the PLA instruction is executed in C64 assembly language, a byte from the stack is stored in the accumulator. This byte is read from the memory location pointed to by the stack pointer, which is then incremented."
+"What is the effect of the PLA instruction on the N and Z flags in C64 assembly language?","The PLA instruction in C64 assembly language sets the N and Z flags according to the value read from the stack and stored in the accumulator. The N flag is set if the value is negative, and the Z flag is set if the value is zero. Otherwise, the N and Z flags are cleared."
+"What is the purpose of the PLA instruction in C64 assembly language?","The PLA instruction in C64 assembly language is used to retrieve a byte from the stack and store it in the accumulator. This can be useful for returning a value from a subroutine or restoring the value of a register that was saved on the stack."
+"What is the syntax of the PLA instruction in C64 assembly language?","The syntax of the PLA instruction in C64 assembly language is simply 'PLA'. It does not take any arguments or operands, as it always operates on the accumulator and the stack."
+"What is the difference between the PLA and PHA instructions in C64 assembly language?","The main difference between the PLA and PHA instructions in C64 assembly language is that PHA pushes the accumulator onto the stack, while PLA pulls a byte from the stack into the accumulator. PHA increments the stack pointer before pushing the accumulator, while PLA increments the stack pointer after pulling the byte. The N and Z flags are set according to the value in the accumulator in both cases."
+"Can the PLA instruction be used to modify the contents of the stack in C64 assembly language?","No, the PLA instruction cannot be used to modify the contents of the stack in C64 assembly language. It can only be used to retrieve a byte from the stack and store it in the accumulator. If you want to modify the stack, you can use other instructions like PHA, PHP, PLP, or PHX."
+"What is an example of the PLA instruction in a C64 assembly language program?","Here is an example of the PLA instruction in a C64 assembly language program:
+
+ LDA #$01
+ PHA ; push the accumulator onto the stack
+ LDA #$02
+ PHA ; push the accumulator onto the stack again
+ LDA #$00
+ PLA ; pull a byte from the stack into the accumulator
+ STA $0400 ; store the byte in memory
+ LDA #$00
+ PLA ; pull another byte from the stack into the accumulator
+ STA $0401 ; store the byte in memory
+
+This program pushes two bytes onto the stack, then pulls them off one at a time and stores them in memory at addresses $0400 and $0401. The final value of the accumulator is undefined after the second PLA instruction."
+"What are some common use cases for the PLA instruction in C64 assembly language?","Some common use cases for the PLA instruction in C64 assembly language include:
+
+* Returning from a subroutine that saves the return address on the stack
+* Restoring the value of a register that was saved on the stack before a subroutine call
+* Reading a byte from the stack as part of a data structure or message passing mechanism
+* Implementing a stack-based data structure or algorithm that requires popping values from the stack"

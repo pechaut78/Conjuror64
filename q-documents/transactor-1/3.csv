@@ -1,0 +1,5 @@
+question,answer
+"How can you use a bell built into your computer to alert you when a long disk operation is finished?","Disk De-Activity Indicator
+If you're disk unit gets into some long operation, like the one mentioned above, you might not notice that it's finished until the next time you browse by. If you have a bell built into your computer, here is one way to make it useful:
+print ds$ : poke 231, 100 : print '|
+The POKE increases the chime time of the bell, and the 3 reverse G's invoke it 3 times. If you're within ear-shot, this should be enough to get your attention. Or you can put the bell in an endless loop that stops when you hit a key. Only one problem with this though - if you happen to step out or something, that insidious chiming is enough to drive some one bonkers if left exposed to it for too long. You might come home to find your new hard disk is now a chopping block in the kitchen!"

@@ -1,0 +1,37 @@
+C64 Basic Free Memory
+This function is used to determine how much memory is avail-
+able for use by BASIC. Your Commodore 64 gets its name
+from the fact that it has 64K of memory. K, a computer term
+for measuring groups of memory units, is similar in use to the
+word dozen, which stands for 12 units. One K is used to indi
+cate 1024 units. The computer has 64*1024, or 65536, units of
+memory. This is why the POKE locations are limited to the
+range 0 to 65535. (Remember that we count memory units be
+ginning with zero.)
+Some of these locations are reserved for the special com
+puter chips that handle graphics, sound, and other operations.
+More locations are reserved for the system software, including
+the BASIC language which accounts for 8K of the locations.
+After all of these reserved areas are provided for, there are
+about 38K memory locations remaining. This memory is called
+free memory, which means it can be used to hold program
+information.
+As a program gets longer and longer, more of this free
+memory is used up. The free memory function, FRE, is used to
+determine just how much memory remains. Type the follow
+ing line to see how the function works.
+PRINT FRE(O)
+If the number printed is negative, a small adjustment
+must be made to get the correct value.
+PRINT FRE(0)+65536
+When you turn on your Commodore 64, a message is dis
+played which reads something like 38911 BASIC BYTES
+FREE. A byte is another name for one memory unit, so you
+could say that the computer has 64K bytes of memory, and
+about 38K bytes which can be used for a BASIC program.
+These bytes are used for things like program lines and vari
+ables. A variable takes up seven bytes of free memory. To ver-
+ify this, choose a new variable name, one that you haven't yet
+given a value. Print the amount of free memory, assign a value
+to the variable for the first time, and print the free memory
+byte count again.

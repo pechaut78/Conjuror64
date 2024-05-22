@@ -1,0 +1,35 @@
+Sound Effects 
+
+There are a couple of additional facilities in the SID chip 
+which are very useful when generating sound effects. 
+(Although they can also be used in music.) 
+
+The first of these is Dynamic Frequency Variation. This 
+is achieved by making the output of one of the waveform 
+generators dependant upon the output of one of the others.
+To make this as simple as possible, waveform generator 3 
+has a special digital output which produces a digitised version 
+of the wave being generated. 
+
+For example, if a sawtooth wave is being generated then 
+the digital output varies from to 255 decimal in sympathy 
+with the sawtooth wave. This value can then be used to 
+influence the frequency value for one of the other generators. 
+
+This digital output is only available from waveform genera- 
+tor 3 and it is located at address 54299 decimal. In addition, 
+should you not want the output of generator 3 to be audible 
+whilst you are using its digital output, bit 7 of the Filter 
+Mode Control register will cut off generator 3's output when it 
+is set to 1 . (See Figure 8.1 5.) 
+
+The next special facility' is called Synchronisation and it 
+involves the combination of the outputs of two waveform 
+generators using the logical AND function. This can be used 
+to provide a whole range of very interesting sounds, parti- 
+cularly if one of the voices is generating vi'hite noise. 
+
+The synchronisation facility is available on alt the voices 
+and it is controlled by bit 1 of the Voice Control register. 
+Figure 8.17 shows which waveform generators are syn- 
+chronised by each Voice Control register. 

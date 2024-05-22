@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $E2EF?","address              $E2EF          SINCON
+Table of Constants for Evaluation of SIN, COS, and TAN
+
+This table starts with a counter byte of 5, indicating that there are
+six entries in the table.  This is followed by the six floating point
+constants of five bytes each."

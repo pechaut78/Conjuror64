@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $ED40?","address              $ED40
+Send a Byte on the Serial Bus
+
+This subroutine is used in common by several Kernal routines to send
+the byte in the serial bus character buffer at 149 ($95) on the serial
+bus."

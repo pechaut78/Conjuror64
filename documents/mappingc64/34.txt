@@ -1,0 +1,14 @@
+
+
+
+address         $3F-$40        DATLIN
+Current DATA Line Number
+
+This location holds the line number of the current DATA statement
+being READ.  It should be noted that this information is not used to
+determine where the next DATA item is read from (that is the job of
+the pointer at 65-66 ($41-$42) below).  But if an error concerning the
+DATA occurs, this number will be moved to 57 ($39), so that the error
+message will show that the error occurred in the line that contains
+the DATA statement, rather than in the line that contains the READ
+statement.

@@ -1,0 +1,1371 @@
+
+The PRINT Statement
+
+So far you have typed several lines that started with a ques
+tion mark and contained numbers and operators. Every time
+you pressed the RETURN key, the computer responded by
+displaying a number on the screen.
+Whenever the computer displays something on the screen,
+it is said to be printing to the screen. You use the question
+mark to tell the computer to print to the screen.
+Now we let you in on the question mark's secret identity.
+Try doing some of the earlier examples again, this time using
+the word PRINT in place of the question mark.
+PRINT64
+PRINT2+3*4
+PRINT is the BASIC statement understood by the com
+puter. The question mark is just a short form of that state
+ment. For our purposes right now, PRINT and the question
+mark mean the same thing.
+Why does the PRINT statement have a shorter form?
+Well, typing in a long program can be boring and time-
+consuming. Also, the more you type, the more likely you are
+to make errors. So, anything you can do to reduce the amount
+of typing you have to do is a real plus.
+PRINT requires that you press five keys, and the PRINT
+statement is used often. The question mark requires only one
+keystroke, and that's about as short as you can get! So feel
+free to substitute the question mark for the longer form,
+PRINT, as you type in the examples in this book.
+Incidentally, the term print is left over from the days
+before video terminals, when the computer's display device
+was a printer. Nowadays we can use our television set or
+monitor to see the information, and PRINT has come to mean
+"displaying information on the screen."
+
+Summary
+• The PRINT statement instructs the computer to display in
+formation on the screen. It is a frequently used statement in
+BASIC programming.
+• The question mark is interpreted by the computer to mean
+the same thing as the PRINT statement.
+
+
+The POKE Statement
+POKE is used often be cause it lets your programs make changes in special locations
+inside the 64. POKE can be used to do a wide variety of
+things, so it is very powerful. For instance, you use POKE to
+create color graphics and sound on your Commodore 64.
+The format, or syntax, of the POKE statement is the
+keyword, POKE, followed by a number (or expression), then a
+comma, and finally a second number (or expression). The first
+number designates a memory or hardware location in the
+computer. Memory locations are used to store information
+such as a program, the screen display, and system software.
+Hardware locations control things like the color of the screen,
+or the pitch of a music note. Each location contains a number
+that ranges in value from 0 to 255. The location is said to be
+changed when the value which it contains is changed to a
+new value.
+Your Commodore 64 has a total of 65536 of these loca
+tions. Each location has a distinct number, from 0 to 65535.
+This means that location 0 is the first location. This idea may
+take a little getting used to, because when you count things,
+you usually start with 1. Just remember, zero is a number, too.
+And when you're counting memory locations or the values in
+those locations, you begin with zero.
+Each location serves a different purpose. For example, lo
+cation 53281 is a hardware location that controls the color of
+the screen background. There are 16 colors, represented by
+numbers in the range 0-15. (Remember, the first color is rep
+resented by 0.) If location 53281 contains a value of 6, the
+screen background is blue. That's the screen background color LJ
+you see when you turn the computer on.
+The color of the screen can be changed to red by putting
+a value of 2 into location 53281. The POKE statement is used |_!
+to do this. First you may want to change the character color to
+white by holding down the CTRL key and pressing the 2 key.
+This will enable you to see the characters better. Then enter: [_j
+POKE 53281,2
+The first number in the statement indicates the location to
+be changed, and the second number tells what new value the
+location should contain.
+To change the screen color back to the original blue, enter
+this statement:
+POKE 53281,6
+Notice that when the screen background changed to red,
+the screen border remained light blue (represented by the value
+14). The color of the screen border is controlled by locajtion
+53280. Change the screen border to red with this statement:
+POKE 53280,2
+While we have been using only numbers in our POKE
+statements, expressions can be used in place of the numbers,
+so the statement shown below is an alternate way of setting
+the background color to red.
+POKE 53280+1, 6/3
+You may want to experiment further and see what other
+colors can be put on the screen. Keep in mind, though, that
+your characters are white. So if you want to change the screen
+background to white, first change your character color by
+holding down CTRL and pressing the 1 key (for black). Other
+wise, your characters will be the same color as the back
+ground, and the screen will appear to be blank.
+Also remember that the 64 can display only 16 different
+colors, using the numbers 0-15. If you POKE locations 53280
+and 53281 with a value larger than 15, you will not get any
+new colors. Instead, numbers beyond 15 simply repeat the
+colors obtained with values from 0 to 15. POKE 53280,2 and
+POKE 53280,18 both set the border color to red.
+If you try to POKE a location with a value outside the
+range from 0 to 255, you will get an ILLEGAL QUANTITY
+error.
+I }
+\ i
+; j
+""■J
+. Ij
+18
+ r
+= *
+|—I
+1'
+r8^
+]
+Statements
+When you are through experimenting, set these locations
+back to their initial values by holding down the RUN/STOP
+key and pressing the RESTORE key.
+Here is a very important word of caution. The POKE
+statement is very powerful, but with added power comes
+added responsibility. You should not carelessly change
+unknown locations. It is not possible to physically damage
+your Commodore 64 by randomly POKEing locations, but you
+can accidentally force the computer to ignore your keyboard
+entries, so that it appears to stop functioning completely. This
+is called a system crash.
+To set everything back to normal, you must turn the com
+puter off and then back on. Pressing RUN/STOP and RE
+STORE will reset some things, but it will not always get the
+computer back on track after a stray POKE. To be safe, you
+should POKE only those locations described in this book and
+in other Commodore 64 literature. Crashing the computer is
+really no big deal; just be thankful the damage is not
+permanent.
+Summary
+• The Commodore 64 has 65536 memory locations. They are
+numbered from 0 to 65535.
+• Some locations are used to hold information for your use.
+Other locations are related to the hardware. The examples
+use hardware locations that control the screen border and
+background colors.
+Each location contains a value from 0 to 255.
+The POKE statement is used to replace the contents of a
+location with a new value.
+• The syntax for the POKE statement is the keyword POKE, a
+number or expression indicating which location is to be
+changed, a comma, and a second number or expression
+which is the new value to be placed into the location.
+• The wise programmer will avoid carelessly POKEing
+unknown locations. Although RUN/STOP and RESTORE
+will reset some things like screen color, they may not undo
+the results of stray POKE statements. The only sure way to
+restore the system in such a situation is to turn it off and
+then on again. Fortunately, crashing the computer does not
+cause permanent damage.
+
+C64 basic: A variable consists of a name and a value.
+• Letters of the alphabet may be used as names for variables.
+• The value of a variable can be changed. This is what
+distinguishes a variable from a number.
+• A numeric variable can have any value that is valid for a
+number.
+
+
+
+
+
+C64 basic variables
+All variables have an initial, or default, value of 0.
+• Variables are assigned new values with a LET statement.
+• The syntax for the LET statement is the keyword LET, a
+variable name, an equal sign, and a number or expression.
+• During execution of a LET statement, the value to the right
+of the equal sign is determined first, and then it is assigned
+to the variable specified to the left of the equal sign.
+• Variables can be used just like numbers.
+• The LET statement does not cause anything to be printed on
+the screen.
+
+
+
+
+
+C64 basic:
+• Variables are independent, so assigning a value to one vari
+able does not affect the values of other variables.
+• There is no reason why two variables can't have the same
+value, even though the variables are independent.
+• A variable keeps its value until it is assigned a new one.
+• A variable can have only one value at a time.
+• Numbers cannot be assigned new values.
+
+
+
+
+C64 basic:
+A variable can be assigned the value of long numbers. Typing becomes faster and less prone to error.
+• The real power of variables lies in the fact that their values
+can be changed. Reassigning one variable can save the work
+of retyping several lines.
+
+
+
+
+C64 Basic:
+The first character in a variable name must be alphabetic.
+• If a variable name contains more than one character, the
+others must be alphanumeric (a letter of the alphabet or a
+digit). Spaces are also allowed, but do not count as charac
+ters, so it is suggested that they not be used.
+• A variable name can be any length, but only the first two
+characters are significant.
+• It is best to choose a variable name which reflects the pur
+pose and use of the variable.
+• The computer will generate a SYNTAX ERROR if a variable
+name contains a reserved word.
+• There are two reserved variables: ST and TI. They cannot be
+assigned.
+
+
+
+
+
+C64 BAsic:
+When the computer executes a LET statement, it follows a
+two-step process. First the computer determines a value by
+examining the portion of the statement to the right of the
+equal sign. Then it assigns that value to the variable sped-
+fied to the left of the equal sign.
+• The portion to the right of the equal sign can be an expres-
+sion containing one or more variables. The variables will be
+treated just like numbers. This means that the value of one
+variable can be assigned to another variable.
+• Statements like LET A=A+1 are legal and in fact are very
+useful
+
+
+
+
+
+C64 Basic:
+A variable is cleared when it is reset to its initial value of 0.
+• The statement CLR is used to clear all variables. Every vari- *—'
+able is set to 0 by the CLR statement.
+• The syntax for CLR consists only of the keyword CLR. Un
+like PRINT, POKE, or LET, no numbers are needed in the
+statement.
+
+
+
+
+
+C64 Basic:
+s a shortcut, the keyword LET of the variable assignment
+statement does not have to be typed, it is optional.
+• LET is the only optional keyword. All other statements
+require a keyword. If no keyword is provided, the computer
+assumes that the statement is a LET statement.
+• A LET statement which does not include the keyword LET is
+called an implied LET statement.
+- The rest of the syntax of the LET statement after the
+keyword is still required.
+• The remaining examples in this book will not use the
+keyword LET.
+
+
+
+
+C64 basic:
+PRINT is a versatile statement used to output information to
+the screen.
+• If a value is placed after the keyword, it will be printed be-
+ginning at the place on the screen currently pointed to by
+the cursor.
+• After a PRINT statement is executed, the computer prints a
+RETURN, which moves the cursor back to the left edge and
+down one row.
+• If no value is specified after the PRINT keyword, the auto-
+matic RETURN leaves a blank line on the screen.
+
+
+
+
+
+C64 Basic:
+To print more than one value on a line, separate the items to
+be printed with a comma or semicolon.
+• A semicolon is used for close spacing, and a comma is used
+for far spacing.
+• The far spacing of the comma can be used to print numbers
+in columns.
+• If output exceeds the length of one line, printing will wrap
+around to the next line.
+• If a PRINT statement ends with a comma or semicolon, the
+computer will not print the RETURN, and the cursor will not
+move.
+
+
+
+
+C64 Basic:
+One PRINT statement can print both numbers and character
+strings.
+• Commas and semicolons can be used regardless of whether
+numbers are mixed with character strings.
+• The word type refers to the quality of a value that deter
+mines what sort of information is being represented. The two
+types that have been introduced thus far are numbers and
+character strings.
+• Attempts to use the arithmetic operators with character
+strings cause the computer to generate a TYPE MISMATCH
+error.
+
+
+
+C64 Basic Free Memory
+This function is used to determine how much memory is avail-
+able for use by BASIC. Your Commodore 64 gets its name
+from the fact that it has 64K of memory. K, a computer term
+for measuring groups of memory units, is similar in use to the
+word dozen, which stands for 12 units. One K is used to indi
+cate 1024 units. The computer has 64*1024, or 65536, units of
+memory. This is why the POKE locations are limited to the
+range 0 to 65535. (Remember that we count memory units be
+ginning with zero.)
+Some of these locations are reserved for the special com
+puter chips that handle graphics, sound, and other operations.
+More locations are reserved for the system software, including
+the BASIC language which accounts for 8K of the locations.
+After all of these reserved areas are provided for, there are
+about 38K memory locations remaining. This memory is called
+free memory, which means it can be used to hold program
+information.
+As a program gets longer and longer, more of this free
+memory is used up. The free memory function, FRE, is used to
+determine just how much memory remains. Type the follow
+ing line to see how the function works.
+PRINT FRE(O)
+If the number printed is negative, a small adjustment
+must be made to get the correct value.
+PRINT FRE(0)+65536
+When you turn on your Commodore 64, a message is dis
+played which reads something like 38911 BASIC BYTES
+FREE. A byte is another name for one memory unit, so you
+could say that the computer has 64K bytes of memory, and
+about 38K bytes which can be used for a BASIC program.
+These bytes are used for things like program lines and vari
+ables. A variable takes up seven bytes of free memory. To ver-
+ify this, choose a new variable name, one that you haven't yet
+given a value. Print the amount of free memory, assign a value
+to the variable for the first time, and print the free memory
+byte count again.
+
+
+
+
+C64 Basic:
+Conditional logic is implemented  by means
+of the IF-THEN statement.
+• The syntax for the IF-THEN statement is the keyword IF, a
+conditional expression, a second keyword THEN, and a
+statement.
+• The conditional expression can be any mathematical phrase.
+• Any statement may be placed after the THEN, even another
+IF-THEN statement.
+The statement after the THEN is executed if the conditional
+expression is true. If it is false, nothing happens. All of the
+statements on the rest of the line are ignored. No error mes-
+sage is printed.
+• A missing THEN keyword causes a SYNTAX ERROR (see
+GOTO exception above)
+• The IF-THEN statement controls the execution of statements
+within a line.
+
+
+
+
+C64 Basic:
+The relational operators < (less than) and > (greater than)
+
+work just like the equal sign, except that they are used U
+in cases of inequality.
+• Relational operators can be combined, as in <= and > = .
+The combination <> means not equal <—>
+• The advantage of these new operators is that they can check
+for conditions which cannot be expressed using only the
+equal sign. They increase the flexibility of conditional logic.
+
+
+
+
+C64 Basic
+ Unlike arithmetic and relational operators, which operate on
+numbers, the logical operators AND, OR, and NOT operate
+on the values true and false.
+• The operators AND or OR are called binary operators be
+cause they operate on two values. When you place AND or
+OR between two conditional expressions, the operator and
+expressions form one big expression.
+• When using AND, the value of this big expression is true
+only when both of the smaller expressions are true. All it
+takes is one false value to make the whole expression false.
+• When using OR, the value of the big expression is false only
+when both of the smaller expressions are false. All it takes is
+one true value to make the whole expression true.
+• The NOT operator is called a unary operator because it op
+erates on only one value. This operator takes a true/false
+value and changes it to the opposite value.
+• Logical operators have the lowest precedence of all the
+operators.
+
+
+
+
+
+C64 BASIC:
+When a line is executed as soon as it is typed, the computer
+is operating in the immediate or direct mode.
+• When the computer executes a program, it is said to be
+operating in the deferred or program mode.
+• If a number is placed at the beginning of a line, the com
+puter will not execute it immediately, but instead will place
+it in computer memory as a program line. A program is a se
+quence of numbered lines.
+• The position of a line in a program is determined by the
+value of the number at the beginning of the line.
+
+
+
+
+C64 Basic:
+• When a program line is placed in memory for deferred exe
+cution, the cursor moves to the next line, but no READY
+prompt is printed.
+• The LIST command is used to print every line currently in
+the program.
+• Line numbers must be integers in the range from 0 to 63999.
+Any other numbers cause the SYNTAX ERROR to be
+printed.
+• The line number is used only to indicate the position in the
+program in which a line is to be placed. A line numbered 10
+is not necessarily the tenth line in a program.
+• The computer ignores unused line numbers.
+
+
+
+
+C64 Basic:
+• Using a large line number increment makes it easier to insert
+lines between the existing ones in a program. It is a good
+practice to increment by at least 10.
+• The RUN command is used to execute a program. Execution
+starts at the first line and ends when there are no more lines.
+• While a program is being executed, it is said to be running.
+• One of the advantages of a program is that lines typed once
+can be executed several times.
+• Commands are used to help manage a program. They are
+used in the immediate mode, but are not usually included
+in a program.
+
+
+
+C64 Basic:
+• A program line is placed in memory exactly as it was typed,
+except when abbreviations or leading spaces are used. The
+question mark is converted to the keyword PRINT before the
+line is stored in memory. Only one leading space is put after
+the line number, no matter how many were typed when the
+line was entered.
+• A program line can be changed by typing the same line
+number and new statements. The RETURN key must be
+pressed to enter the line.
+• A program line also can be changed by using the editing
+keys to move the cursor to a listing of the line to be
+changed so that the INSerT and DELete keys may be used to
+modify the line. After the changes have been made, the
+RETURN key must be pressed while the cursor is still on
+the line.
+• A line is deleted by typing only the line number and press
+ing RETURN.
+• To retrieve a line that has been deleted, the line must be re-
+typed unless a listing of the line is still on the screen. In that
+case, the cursor can be moved on top of the line, and the
+RETURN key pressed. The line will again be part of the
+program.
+• Even though a line may appear on the screen, it is not nec
+essarily a part of the program.
+
+
+
+
+C64 Basic:
+• To move a line from one place in the program to another,
+type the line using the new line number, and delete the old
+line.
+• A line can also be moved by using the editing keys, list the
+line, position the cursor on top of the line number, type the
+new line number, and press RETURN. You must still delete
+the old line, though.
+• A fast way to erase a program is to use the NEW command,
+which deletes every line in the program, and clears all vari
+ables at the same time.
+• Variables retain their values after a program has stopped
+executing.
+• Variables are cleared as soon as the program is modified in
+any way.
+• The RUN command also automatically clears all variables
+before program execution starts.
+• Errors in a program line are detected only when the line is
+executed, not when the line is entered and placed in
+memory.
+
+
+
+
+C64 Basic:
+• If an error occurs while a program is running, execution
+stops immediately. The error message is printed, along with
+an indication of which line contains the error.
+• Holding down the CTRL key while a program is listing will
+cause the lines to scroll more slowly.
+• The LIST command can be used to list a specific line, by
+typing the line number after the keyword.
+• A line number range can be specified after LIST. A dash
+must be placed between the starting and ending line
+numbers.
+• Using LIST with a line number followed by a dash causes
+the listing to start at the line number and continue to the
+end of the program. Using LIST with a dash followed by a
+line number causes the listing to start at the first line in the
+program and continue to the specified line number.
+• The RUN command usually starts executing a program at
+the first line. To start execution at a line other than the first,
+that line number must be specified after the keyword RUN.
+A line number range may not be used with this command.
+
+
+
+
+
+C64 Basic:
+• Programs can be stored on cassette tape or floppy disks with
+the SAVE command, and retrieved later by using the LOAD
+command.
+• The SAVE command stores a copy of the program in mem
+ory onto tape or disk. The program is still in memory after
+a SAVE command is used.
+• The syntax for SAVE is the keyword SAVE followed by a
+character string which is called a filename. When saving to
+the disk drive, a comma and device number of 8 (a second
+drive would be device number 9) must be put after the
+character string.
+• The LOAD command copies a program from tape or disk
+back into the computer's memory. Any program that was
+already in memory is erased when the new program is
+loaded.
+• The syntax for LOAD is the keyword LOAD, the filename, 
+and a comma and device number of 8 if the disk drive is 
+being used.
+
+
+
+
+C64 Basic:
+A filename can be up to 16 characters, all of which are
+significant.
+• Multiple programs can be stored on tape or disk by using
+different filenames. When saving a program to tape, position
+the tape right at the end of the last program on the tape. The
+disk drive automatically determines where on the disk the
+program will be stored.
+• It is a dangerous practice to save a revised program to tape
+on top of an earlier version, because the next program on
+the tape may be overwritten.
+• The disk drive will not normally let you save a program
+with a filename that is already in use.
+• The ILLEGAL DEVICE NUMBER error means that an
+attempt was made to use a device which does not support
+loading or saving. The only device numbers normally used
+are 1 (cassette) and 8 (disk). If a device number is not speci
+fied after a filename, the computer assumes that the cassette
+is to be used.
+• The DEVICE NOT PRESENT error occurs when a referenced
+device does not respond to the computer, because it is either
+not hooked up or not turned on.
+• If you try to load a disk file using a filename that does not
+exist, you will get the FILE NOT FOUND error.
+• When errors occur on the disk drive, the red light flashes.
+• Storage and retrieval commands can be aborted by pressing
+the RUN/STOP key.
+• LOADing is an input operation, and SAVEing is an output
+operation.
+• The terms read and write are often used to mean input and
+output.
+• Care should be exercised in handling cassette tapes and floppy disks. They should not be exposed to radiation, magnets,
+temperature changes, or fingers.
+• The VERIFY command is used to read a program on tape or
+disk and check if it matches the program in memory. If
+it doesn't, the VERIFY ERROR message is printed.
+• The main difference between the LOAD and VERIFY com
+mands is that with VERIFY, the program in memory is not
+touched. It is only compared against the program on the tape
+or disk.
+
+
+
+
+C64 Basic:
+ A disk directory is a list of filenames. To get a directory, use
+the LOAD command with the filename "$", then use LIST.
+This works only for disk files.
+• The ten-second delay between the searching and loading of
+a tape file can be shortened by pressing the SPACE bar, left
+arrow, CTRL, or Commodore key.
+• Filenames are optional for tape files. Using LOAD with no
+filename will make the computer load the next program
+found on the tape. Files saved without a filename can be
+retrieved only by using LOAD without a filename.
+• To have the computer automatically load and run the next
+program found on a tape, press the RUN/STOP key with
+either the Commodore or SHIFT key.
+
+
+
+
+
+C64 Basic
+The END statement causes the computer to stop executing a
+program, and return to the immediate mode.
+• The syntax for the END statement consists only of the
+keyword END.
+• A program automatically ends after the last line has been
+executed, so there is no real need to put an END as the last
+line. Using END in this way is a formality, not a necessity.
+• END can be placed on a line by itself, or after other state
+ments on a line. This is often done in conjunction with the
+IF-THEN statement. It is sometimes desirable for a program
+to end early, such as when a potential error has been detected.
+• Statements placed after an END statement on the same line
+will never be executed.
+
+
+
+
+
+C64 Basic
+ The GOTO statement changes the order in which program
+lines are executed.
+• Normally, after the computer executes one line, it will exe
+cute the next one in the sequence. The GOTO statement
+causes execution to jump to a different line.
+• GOTO can move execution forward or backward in the
+program.
+• When GOTO is used to skip backward so that lines can be
+executed again, the lines that are repeated form a loop.
+If these lines are executed continuously, without ever
+stopping, the loop is called an infinite loop.
+
+
+
+
+
+
+C64 Basic
+• If your program enters an infinite loop, execution can be
+aborted at any time by pressing the RUN/STOP key.
+• The GOTO statement makes the computer jump to the
+beginning of the new line. Execution starts with the first
+statement on the line.
+• You should not put statements after a GOTO on the same
+line, because they will never be executed.
+The syntax for this statement is the keyword GOTO and a
+line number. A number must be used; variables and
+expressions are not valid.
+• An alternate spelling for the name of the GOTO statement is
+GO TO.
+• If an attempt is made to GOTO a line which is not in the j_J
+program, or if a variable is used instead of a line number,
+the UNDEFD STATEMENT error will occur, which means
+that the referenced line is undefined.
+
+
+
+
+
+C64 Basic:
+To avoid the problem of GOTO forming an infinite loop,
+conditional logic must be used. The combination of IF-THEN
+with GOTO is one way to achieve this.
+• A variable can be used in a LET statement such as A=A+1
+to count how many times a loop is executed. A variable used
+in this manner is called a counting variable.
+• By basing conditional logic on a counting variable, you can
+have a program control exactly how many times the loop is
+executed.
+• Sometimes the value of a counting variable is used within a
+loop, so that something is done differently every time a loop
+is executed.
+• Because it is used so often, there are two short forms to the
+IF-THEN and GOTO combination. The first is to make the
+GOTO optional, and the second is to make the THEN
+optional.
+
+
+
+
+
+C64 Basic:
+The READ and DATA statements offer an alternative
+method for assigning values to variables.
+• The syntax for the READ statement is the keyword READ
+followed by a list of variable names, called a variable list.
+Each variable name would be to the left of the equal sign if
+a LET statement were used. When more than one variable
+name is used in a READ statement, the variable names are
+separated by commas.
+• The syntax for the DATA statement is the keyword DATA
+followed by one or more numbers. If several numbers are
+used, they are separated by commas. Two consecutive com
+mas are read as the number 0. Only constant values can
+be used; variables or expressions cannot be placed in DATA
+statements.
+
+
+
+
+C64 Basic:
+• The READ statement is the one that does all the action. The
+variables are assigned when the READ is executed. The
+DATA statement just supplies values for READ. The computer ignores the DATA statement unless a READ statement
+is being executed. For that reason, DATA statements are
+often placed at the end of a program, out of the way of
+other statements.
+• The first value in a DATA statement is the first one that is
+assigned to a variable. The computer remembers which
+values in a DATA statement have already been read. If more
+than one READ statement is executed, the second READ will
+start with the next value not yet read.
+• If there is more than one DATA statement, reading will start
+with the one which has the lowest line number. Once all of
+the values in that statement have been read, future values
+will be read from the next DATA statement.
+• An attempt to assign more values than are available in
+DATA statements will result in the OUT OF DATA error.
+
+
+
+
+C64 Basic:
+
+• The RESTORE statement resets the data pointer so that
+reading will start from the first value in the first DATA
+statement of the program. This makes it possible to use
+READ in an infinite loop without getting an OUT OF DATA
+error.
+• It does not matter how much data has already been read
+when RESTORE is used. The data pointer will always be
+restored to the initial state when the program started running.
+• The CLR statement automatically performs a RESTORE.
+Because the RUN command does a CLR before starting program execution, RUN also performs a RESTORE.
+• The RESTORE statement is used only with READ and
+DATA, and even then it's not used very often.
+
+
+
+
+
+C64 Basic:
+ The syntax for the GET statement is the keyword GET and a
+variable list.
+• When GET is executed, the computer checks whether a key
+has been pressed. If so, the value of that key is assigned to
+the indicated variable. This is repeated for each variable in
+the list.
+• If no key has been pressed, the variable is assigned the
+value 0.
+The keyboard has a buffer which can store up to ten key
+strokes in the order they were entered. Keys are ignored if
+pressed after the buffer is full.
+• It is good practice to have a program print a prompting mes
+sage when keyboard input is needed.
+• The GET statement can only be used in the program mode;
+an ILLEGAL DIRECT error will be generated if it is used in
+the immediate mode.
+
+
+
+
+
+C64 Basic:
+The syntax of the INPUT statement is the keyword INPUT,
+an optional character string terminated with a semicolon,
+and a variable list.
+• If the character string is used, it must be in quotes, and it
+must be followed by a semicolon, or a SYNTAX ERROR will
+occur.
+• When INPUT is executed, the character string is printed first,
+if one was provided.
+• The INPUT statement then prints a question mark, and
+waits for the user to type one or more numbers and press
+RETURN. During this time the program is executing just
+the INPUT statement.
+• The numbers entered are assigned to the variables in the
+variable list.
+• If not enough numbers are entered, a second prompt,
+consisting of two question marks, is printed, and the com-
+puter waits for more numbers to be entered.
+• If too many numbers are entered, a warning message that
+says EXTRA IGNORED is printed, and only the first few
+values are assigned to variables. The extra numbers are not
+used.
+
+
+
+
+
+C64 Basic:
+Input
+• Including illegal characters in a line causes the error message
+REDO FROM START to be printed. All of the numbers have
+to be typed again, no matter how many variables had
+already been assigned.
+• Merely pressing RETURN in response to the ? prompt can
+cels the assignment of any variables. All variables retain
+their value.
+• Pressing RETURN after a ?? prompt causes the current vari
+able to be assigned the value 0.
+
+
+
+
+
+C64 Basic:
+• Using two commas together can make the computer assume
+a default value of 0 for one of the variables, so caution is
+advised.
+• The only way to abort a program while an INPUT statement
+is being executed is to press RUN/STOP and RESTORE.
+• The INPUT statement can be used only in the program
+mode, not in the immediate mode.
+
+
+
+
+
+
+C64 Basic:
+• Commodore 64 BASIC supports a second kind of variable
+besides the numeric variable used exclusively in previous
+chapters. The new kind of variable is called a string variable.
+• The two kinds of variables are used to contain different
+types of values. A numeric variable has a value of the type
+number. A string variable has a value of the type character
+string.
+• To distinguish between the two types of variables, string
+variable names end with a $ symbol. Otherwise, all the other
+rules about variable names apply, including the rule about
+two significant characters.
+• Variable names used for numeric variables have no effect on
+names used for string variables. The numeric variable C and
+the string variable C$ are entirely different things.
+• A null string is a string which consists of no characters.
+
+
+
+
+
+
+C64 Basic:
+• The default value for all string variables is the null string.
+• The CLR statement sets all string variables to the null string.
+• Both types of variables can be used in the same variable list
+for PRINT, GET, INPUT, and READ. However, the TYPE
+MISMATCH error will be printed if an attempt is made to
+incorrectly mix the two types. In any variable assignment,
+the value being assigned must be of the same type as the
+variable name to which it is assigned.
+
+
+
+
+C64 Basic:
+In general, the three distinguishing characteristics of a vari
+able are its name, value, and type.
+• The availability of string variables makes the GET statement
+much more useful. GET will assign the indicated string vari
+able the null value if no key is pressed. Otherwise, a single
+character will be assigned, according to the key pressed.
+The INPUT statement is used to input strings longer than
+one character.
+• Pressing RETURN only in response to an input prompt of ?
+does not change the value of the variable being assigned. But
+entering nothing for ?? causes all unassigned string variables
+in the variable list to be assigned the null string.
+• String variables can also be included in the variable list for
+READ.
+• The quote marks that delimit a character string are optional
+when used in DATA statements. The only time that they
+have to be used is when the string includes a comma or
+colon as one of its characters.
+
+
+
+
+
+C64 Basic
+• The occurrence of two consecutive commas in a DATA state
+ment will be read as a null string.
+• String variables can be used in any place where character
+strings are used, except for the prompt string of an INPUT
+statement.
+• The only reserved string variable is TIME$. The only way to
+change the time is to assign a string of digits to TI$.
+
+
+
+
+C64 Basic:
+Summary
+• The arithmetic operators cannot be used with character
+strings, but the plus sign, which indicates addition when used
+with numbers, means concatenate when used with strings.
+• When two strings are concatenated, the second string is
+appended to the end of the first one, in left-to-right order,
+forming a longer string.
+• The maximum length for a string is 255 characters. Attempt
+ing to make a character string longer than this limit causes
+the STRING TOO LONG error to be printed.
+• All of the relational operators can be used with strings,
+including combinations such as < = .
+• The conditions less than and greater than depend on the
+alphabetical ordering of the characters in the strings. A
+comparison is made on the first character of each string. If
+the first characters are equal, checking will continue to sub
+sequent characters until two are found which are not equal.
+• If one string runs out of characters before unequal characters
+are found, the longer string is greater.
+• The null string is always less than any other string.
+• None of the logical operators can be used directly with
+character strings.
+• With any operator, the two operands must be of the same
+type, or the TYPE MISMATCH error will occur.
+
+
+
+
+C64 Basic:
+Several functions are available for use with character strings.
+The three functions introduced in this section are LEN, ASC,
+and CHR$.
+• The LEN and ASC functions require a string for an argu
+ment and return a number. This is reversed for CHR$, which
+needs a number for an argument and returns a string. The
+presence of the $ at the end of the function name indicates
+that the function returns a character string.
+• The LEN function is used to count the number of characters
+in a string. The range of this function is 0 to 255, with 0
+being the length of the null string.
+• The ASC function returns the ASCII code for the first
+character in a string. The string must not be the null string,
+or the ILLEGAL QUANTITY error will be printed. ASC is
+often used to check input characters. The special function
+keys have ASCII codes which can be detected by this
+function.
+• The CHR$ function takes an ASCII code and returns a string
+one character long, the character of the given ASCII code. A
+common use for this function is to print the double quote
+character. It also simplifies the printing of special control
+codes, such as those for screen clearing and color changing.
+
+
+
+C64 Basic:
+
+• The VAL and STR$ functions are used to convert a value
+from one type to the other, to avoid the TYPE MISMATCH
+error.
+• The VAL function takes a string, interprets the characters
+which are related to numbers, and returns a value.
+• VAL ignores any leading spaces.
+• The interpretation uses all characters in the string, starting at
+the beginning, until the end of the string is reached, or a
+character is found which is not related to numbers.
+• The only characters which are related to numbers are the ten
+digits, the plus and minus signs, and the period.
+• The null string and strings which start with a nonnumeric
+character cause VAL to.return a value of 0.
+• The STR$ function takes a number and produces its charac
+ter representation. This representation includes all the
+characters that would be used if the number were printed.
+If the number is positive, the string will start with a space.
+
+
+
+
+C64 Basic:
+A part of a string, consisting of contiguous characters in the
+string, is called a substring.
+• The substring functions differ from other functions in that
+their names are not always three characters long, and they
+take multiple arguments of different types.
+• The LEFTS and RIGHTS functions need a string for the first
+argument, and a number for the second argument. The
+substring returned is the leftmost or rightmost characters
+in the string. The length of the substring is determined by
+the second argument.
+• LEFT$ and RIGHTS can be used to split a character string
+into two parts, thereby reversing the process of
+concatenation.
+
+
+
+
+
+C64 Basic:
+• Changing a character in a string requires using LEFTS and
+RIGHTS with concatenation.
+• The MID$ function needs at least two arguments. The sec
+ond argument tells how far into the string the substring
+starts. The optional third argument specifies the length of
+the substring. If the third argument is not provided, the
+substring continues to the end of the string.
+• These functions may return the null string as the substring.
+They will not return a string longer than the original string.
+• Nesting of too many string functions results in the FOR
+MULA TOO COMPLEX error.
+
+
+
+
+
+C64 Basic:
+• A subroutine is a sequence of statements that occurs once in
+a program, but is executed from several places in the
+program.
+• The purpose of using a subroutine is to avoid duplicating
+statement sequences in a program.
+• The statements used to implement subroutines are GOSUB
+(go to subroutine) and RETURN (return to main program).
+• The syntax for the GOSUB statement is the keyword
+GOSUB followed by a line number. The RETURN statement
+consists only of the keyword RETURN.
+• The GOSUB statement makes execution jump to the begin
+ning of the specified line. If the specified line does not exist,
+an UNDEFD STATEMENT error will occur.
+• The main difference between GOSUB and GOTO is that
+with GOSUB, the computer remembers where execution
+stopped in the main program.
+
+
+
+
+
+
+C64 Basic:
+- Because execution eventually resumes where it left off in the
+main program, statements can be placed after a GOSUB on
+the same line.
+• The RETURN statement causes execution to jump to the first
+statement after the most recent GOSUB. This may mean
+jumping into the middle of a line. RETURN is comparable
+to the END statement of a main program.
+• RETURN should be used only when a GOSUB has been
+previously executed. If the computer encounters a RETURN
+without having previously executed a matching GOSUB, the
+place to jump back to is undefined, so a RETURN WITH-
+OUT GOSUB error is printed.
+• A subroutine can contain several RETURN statements, pro
+vided that for every GOSUB executed, exactly one RETURN
+is executed.
+
+
+
+
+C64 Basic:
+• Subroutines are usually put after the main program. An
+END statement is needed to separate the main program from
+the subroutine. Having a main program accidentally fall into
+a subroutine is a sure way of getting the RETURN
+WITHOUT GOSUB error.
+• When execution is transferred to a subroutine, it is said that
+the subroutine has been called.
+• To make a subroutine more flexible, it can use a variable
+that is assigned just before the subroutine is called.
+• The entry point of a subroutine is the line to which execution
+jumps when the subroutine is called. Subroutines can have
+more than one entry point.
+
+
+
+
+C64 Basic:
+-Several subroutines can be used in one program.
+• When one subroutine calls another subroutine, the sub-
+routines are nested,
+• In order for nested subroutines to work without creating a
+RETURN WITHOUT GOSUB error, exactly one RETURN
+must be executed for every GOSUB executed.
+• The Commodore 64 cannot nest deeper than 23 levels. Nest-
+ing beyond this limit causes the OUT OF MEMORY error.
+• The third form of repetition, recursion, happens when a sub
+routine calls itself. For our purposes, recursion is best
+avoided.
+
+
+
+
+C64 Basic
+• There are two kinds of loops. One kind repeats indefinitely,
+waiting for a condition to be met. The computer does not
+know, when it first enters the loop, how many times the
+loop will be executed. The other type of loop repeats a set
+number of times. In this case, the computer does know
+when it enters the loop how many times the loop will be
+executed.
+• The kind of loop which repeats a set number of times is very
+simple, but to implement it in a program requires assignment
+statements, conditional logic, and a way to make execution
+jump to the top of a loop.
+• The FOR and NEXT statements are used to simplify the han
+dling of loops which repeat a specified number of times.
+These two statements do all the work normally done by two
+LET statements and an IF-GOTO statement.
+• The syntax of the FOR statement starts with the keyword
+FOR. Then comes the name of the counting variable. This
+must be a numeric variable. String variables cannot be used.
+After the variable name comes an equal sign, just as in the
+LET statement, followed by a value which is the starting 
+value for the loop. Next comes the keyword TO and another
+value, this time the ending value for the loop. All of this
+may optionally be followed by the keyword STEP and one 
+more value.
+
+
+
+
+C64 Basic:
+• The syntax for the NEXT statement is the keyword NEXT
+and an optional variable list.
+• The FOR statement assigns the counting variable its initial
+value, and makes the computer remember the end and step
+values for the loop.
+• The NEXT statement makes sure that if it includes a variable
+name, the name matches the variable in the most recent FOR
+statement. If there is a mismatch, the NEXT WITHOUT FOR
+error message is printed. Otherwise, it adds the step value to
+the counting variable, checks if the counting variable is still
+in the range specified in the FOR statement, and if so, causes
+execution to jump to the first statement after the correspond
+ing FOR statement. When that loop is finished, the NEXT
+statement checks for more variables in its variable list. If
+there is another one, the whole procedure is repeated for
+that loop. When there are no more variables, execution
+proceeds to the statement after NEXT.
+
+
+
+
+
+C64 Basic:
+• There are many advantages to using FOR and NEXT to
+create loops:
+1. Only two statements are needed.
+2. The FOR statement indicates right away how many times
+the loop will repeat.
+3. The boundaries of a loop defined using FOR and NEXT
+are easy to spot, especially if the variable name is put
+after NEXT.
+4. Because the NEXT statement can jump into the middle of
+a line, an entire loop can be written on just one line.
+5. It is possible to perform a FOR-NEXT loop in the immedi
+ate mode.
+• Although the value of the counting variable should never be
+changed while it is in the middle of a loop, the value can be
+used by other statements in the loop.
+• If the STEP keyword is omitted in the FOR statement, a
+stepping value of 1 is assumed.
+• To make the counting variable count backward, a negative
+step value has to be used.
+
+
+
+
+
+C64 Basic:
+• When the NEXT statement checks if the value of the count
+ing variable is still in range, it checks not just for equality,
+but also for less than. This means that the counting variable
+does not have to exactly match the ending value for the loop
+to end.
+• With a positive step value, the NEXT statement will repeat
+the loop if the counting variable is less than or equal to the
+loop's ending value. For a negative step value, a check for
+greater than or equal to is used.
+• All of the statements in a FOR-NEXT loop will be executed
+once before the NEXT statement is ever reached. This means
+that even if the starting and ending values in a FOR state
+ment are wrong, as in FOR K=l TO -1 (no STEP -1), the
+loop will be executed at least once.
+• There is no sense in using a step value of 0, because doing
+so creates an infinite loop.
+• Any number of independent FOR-NEXT loops can be used
+in one program.
+
+
+
+
+C64 Basic:
+• FOR-NEXT loops can be nested, provided that the NEXT
+statements occur in exactly the opposite order of the
+corresponding FOR statements.
+• An easy way to tell if loops are nested correctly is to draw
+lines connecting the FOR and NEXT statements. If the lines
+cross, the nesting is wrong, and a NEXT WITHOUT FOR
+error message is to be expected.
+• The maximum number of FOR-NEXT loops which can be
+nested fluctuates, but the absolute maximum is nine levels. A
+program won't usually have to nest deeper than that.
+• A FOR statement cannot use a counting variable that is cur
+rently being used by another FOR-NEXT loop.
+
+
+
+
+
+C64 Basic:
+• The use of a variable name after NEXT is optional but
+recommended, because it helps catch errors which otherwise
+might go unnoticed and cause problems later in the program.
+• Jumping out of an unfinished FOR-NEXT loop can create
+problems that may not be immediately detected. Always
+allow FOR-NEXT loops to go to completion. If it is necessary
+to jump out of a loop, do not use FOR and NEXT. Instead,
+use assignment statements and conditional logic.
+• The counting variable retains its value after a FOR-NEXT
+loop has ended.
+
+
+
+
+
+C64 Basic:
+The ON statement is used to get around the problem that
+line numbers after GOTO or GOSUB cannot be expressions
+or variables.
+• The syntax for the ON statement consists of the keyword
+ON, a numeric value, the keyword GOTO or the keyword
+GOSUB, and a list of line numbers.
+When executed, the ON statement takes the integer portion
+of the numeric value, counts that far into the line number
+list, and then performs a GOTO or GOSUB to that line.
+• If the value exceeds the number of line numbers in the list,
+or if the value is 0, the statement will be ignored. Execution
+will continue with the next statement, which may be on the
+same line.
+• A negative value produces the ILLEGAL QUANTITY error.
+
+
+
+
+
+C64 Basic:
+• There are no restrictions on the line numbers in the list,
+other than that no variables or expressions are allowed.
+The line numbers do not have to be in increasing order or
+increment by the same number, although programmers have
+a tendency to use the numbers that way.
+• The same line number can be used more than once in the
+same list.
+• Consecutive commas are counted as meaning that a line
+number of 0 is intended. It is not possible to make ON work
+with only selected values in a range.
+• One ON statement can often replace several IF-THEN state
+ments. For this reason the ON statement is considered
+another form of conditional logic.
+• Sometimes it is necessary to use a couple of ON statements
+together, if the line number list is too long. In such a case,
+the number of line numbers in the first line must be sub
+tracted from the value in the second ON statement.
+• Because the ON statement can perform a GOTO or GOSUB,
+it will cause the UNDEFD STATEMENT error to be gen
+erated when a requested line is not found.
+
+
+
+
+C64 Basic:
+• An array is a group of numbers or character strings which
+have a common name but can be individually accessed.
+• The same restrictions that apply to a variable name also
+apply to array names.
+• Array names are separate from variable names.
+• To assign one array to another, each value in the array must
+be copied separately.
+• To specify one particular value in an array, a number in
+parentheses is placed after the array name. This number
+is called a subscript.
+
+
+
+
+C64 Basic:
+• Subscripts must be positive integer numbers. Subscript
+numbering starts with 0. A negative subscript produces
+an ILLEGAL QUANTITY error. A subscript that is too large
+produces the BAD SUBSCRIPT error. The default maximum
+subscript is 10.
+• The values in an array are usually related to each other in
+some way, and are ordered according to the subscripts.
+The default values are the number 0 and the null string.
+• The advantage of using an array is that it makes it easier to
+manage a lot of values. Because subscripts can be variables,
+arrays are ideal for use in loops.
+
+
+
+
+C64 Basic:
+
+• The dimension of an array is the maximum subscript number
+that can be used for the array.
+• When a program first starts running, or the CLR statement is
+executed, all arrays are undimensioned. When an
+undimensioned array is accessed for the first time, the array
+is dimensioned to a default of 10.
+• For those occasions when an array needs to be dimensioned
+larger than 10, the DIM statement must be used.
+• To save memory, an array can also be DIMensioned smaller
+than 11.
+• The syntax for the DIM statement is the keyword DIM fol
+lowed by an array name list. Each array name in the list
+must be followed by parentheses containing the dimension
+numbers.
+
+
+
+
+C64 Basic:
+• If an array is one-dimensional, only one number will be
+inside the DIM statement parentheses, and only one number
+will be needed to form a subscript.
+• A two-dimensional array requires two numbers in the DIM
+statement and subscript. These arrays are often thought of
+in terms of rows and columns.
+• Arrays of more than two dimensions are possible.
+-  If a subscript contains too few or too many numbers for the
+dimension of an array, or if a subscript number exceeds the
+maximum number specified in the DIM statement, the BAD
+SUBSCRIPT error will occur.
+
+
+
+
+
+C64 Basic:
+• The only restrictions in dimensioning an array are that the
+computer must have enough unused memory to hold the
+array, and the array must not be dimensioned already.
+• Trying to DIM an array when there is insufficient memory
+causes the OUT OF MEMORY error.
+• Attempting to DIM an array that is already dimensioned
+causes the REDIM'D ARRAY error.

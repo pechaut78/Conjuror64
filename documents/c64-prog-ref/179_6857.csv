@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the CHKOUT function?","The purpose of the CHKOUT function is to open a channel for output, allowing data to be sent to a device such as a printer or serial device."
+"What is the call address of the CHKOUT function?","The call address of the CHKOUT function is $FFC9 (hex) or 65481 (decimal)."
+"What communication register is used by the CHKOUT function?","The CHKOUT function uses the X register as the communication register."
+"What preparatory routine is required before calling the CHKOUT function?","The preparatory routine required before calling the CHKOUT function is the OPEN routine."
+"What error returns can occur when calling the CHKOUT function?","The error returns that can occur when calling the CHKOUT function are 0, 3, 5, and 7, which correspond to errors such as file not open, device not present, and not an output file."
+"How many stack requirements are needed to call the CHKOUT function?","The CHKOUT function requires 4+ stack requirements."
+"What registers are affected by the CHKOUT function?","The CHKOUT function affects the A and X registers."
+"Can the CHKOUT function be used to send data to the Commodore 64 screen?","No, the CHKOUT function is not needed to send data to the Commodore 64 screen, as the screen is the default output device."
+"How do you specify a logical file number when calling the CHKOUT function?","You specify a logical file number by loading the X register with the logical file number used in the open statement, and then calling the CHKOUT function using the JSR instruction."
+"What happens when the CHKOUT function is used to open a channel to a device on the serial bus?","When the CHKOUT function is used to open a channel to a device on the serial bus, it automatically sends the LISTEN address specified by the OPEN routine, and a secondary address if there was one."
+"What is an example of how to use the CHKOUT function?","An example of how to use the CHKOUT function is to load the X register with the logical file number 3, and then call the CHKOUT function using the JSR instruction, as in the following code: LDX #3; JSR CHKOUT."

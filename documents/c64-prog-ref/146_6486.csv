@@ -1,0 +1,11 @@
+question,answer
+"what is the addressing mode of the NOP instruction?","The addressing mode of the NOP instruction is implied, which means that the instruction does not require any additional memory locations or registers to be specified."
+"what is the assembly language form of the NOP instruction?","The assembly language form of the NOP instruction is simply 'NOP', which is a single keyword that represents the no-operation instruction."
+"what is the OP CODE for the NOP instruction?","The OP CODE for the NOP instruction is EA, which is the hexadecimal code that the CPU recognizes as the NOP instruction."
+"how many bytes does the NOP instruction occupy in memory?","The NOP instruction occupies only 1 byte in memory, making it a very compact instruction."
+"how many cycles does the NOP instruction take to execute?","The NOP instruction takes 2 cycles to execute, which is a relatively short execution time."
+"what is the purpose of the NOP instruction?","The purpose of the NOP instruction is to do nothing, hence the name 'no operation', and is often used as a placeholder or filler in code."
+"can the NOP instruction be used as a delay in a program?","Yes, the NOP instruction can be used as a delay in a program, as it takes 2 cycles to execute, which can be useful in certain timing-critical situations."
+"what is the difference between the NOP instruction and other instructions?","The main difference between the NOP instruction and other instructions is that it does not perform any operation, whereas other instructions perform specific operations such as loading, storing, or arithmetic operations."
+"in what situations would you use the NOP instruction?","You would use the NOP instruction in situations where you need to fill a gap in code, or to create a delay in a program, or to reserve space for future code additions."
+"can the NOP instruction be used to align code in memory?","Yes, the NOP instruction can be used to align code in memory, by filling gaps between code segments, ensuring proper alignment and avoiding misalignment issues."

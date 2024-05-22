@@ -1,0 +1,5 @@
+
+
+
+address         $B248          FCERR
+Print ILLEGAL QUANTITY Error Message

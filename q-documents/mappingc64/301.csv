@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $B487?","address         $B487          STRLIT
+Scan and Set Up Pointers to a String in Memory
+
+This routine calculates the length of the string, and calls the
+routine that allocates space in memory.  It then saves the string, or
+creates a pointer to its location in the BASIC text input buffer at
+512 ($200)."

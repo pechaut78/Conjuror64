@@ -1,0 +1,8 @@
+
+
+
+address              $F8D0
+Test the STOP Key during Cassette I/O Operations
+
+This subroutine is used to test the STOP key during tape I/O
+oeprations, and to stop I/O if it is pressed.

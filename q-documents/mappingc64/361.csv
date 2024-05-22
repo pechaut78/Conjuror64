@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $BDB3?","address         $BDB3          NO999
+
+This table of three floating point constants holds the values
+99,999,999.5, 999,999,999.5 and 1,000,000,000.  These values are used
+in converting strings to floating point numbers."

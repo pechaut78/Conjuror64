@@ -1,0 +1,8 @@
+
+
+
+address         $B9C1          LOGCN2
+Table of Floating Point Constants for the LOG Function
+
+This table of eight numeric constants in five-byte floating point
+representation is used by the LOG function.

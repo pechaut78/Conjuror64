@@ -1,0 +1,10 @@
+
+
+
+address        $AA86          CMD
+Perform CMD
+
+This routine calls the Kernal CHKOUT routine (62032, $F250), and calls
+PRINT to send any included text to the device.  Unlike PRINT# it
+leaves the output channel open, so that output continues to go to that
+device.

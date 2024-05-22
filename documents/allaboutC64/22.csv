@@ -1,0 +1,11 @@
+question,answer
+"What is the maximum length of a filename in C64 Basic?","The maximum length of a filename in C64 Basic is 16 characters, all of which are significant."
+"How can multiple programs be stored on tape or disk in C64 Basic?","Multiple programs can be stored on tape or disk by using different filenames."
+"What should be done when saving a program to tape in C64 Basic?","When saving a program to tape, position the tape right at the end of the last program on the tape."
+"What is the consequence of saving a revised program to tape on top of an earlier version in C64 Basic?","It is a dangerous practice to save a revised program to tape on top of an earlier version, because the next program on the tape may be overwritten."
+"What happens when trying to save a program with a filename that is already in use in C64 Basic?","The disk drive will not normally let you save a program with a filename that is already in use."
+"What does the ILLEGAL DEVICE NUMBER error mean in C64 Basic?","The ILLEGAL DEVICE NUMBER error means that an attempt was made to use a device which does not support loading or saving. The only device numbers normally used are 1 (cassette) and 8 (disk)."
+"What is the cause of the DEVICE NOT PRESENT error in C64 Basic?","The DEVICE NOT PRESENT error occurs when a referenced device does not respond to the computer, because it is either not hooked up or not turned on."
+"What happens when trying to load a disk file using a filename that does not exist in C64 Basic?","If you try to load a disk file using a filename that does not exist, you will get the FILE NOT FOUND error."
+"What is the function of the VERIFY command in C64 Basic?","The VERIFY command is used to read a program on tape or disk and check if it matches the program in memory. If it doesn't, the VERIFY ERROR message is printed."
+"What is the difference between the LOAD and VERIFY commands in C64 Basic?","The main difference between the LOAD and VERIFY commands is that with VERIFY, the program in memory is not touched. It is only compared against the program on the tape or disk."

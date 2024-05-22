@@ -1,0 +1,13 @@
+
+
+
+address         $B018          DIM
+Perform DIM
+
+This command calls the next routine to create an array for every
+variable dimensioned (since a statement can take the form DIM A(12),
+B(13), C(14)...).  If the array element is referenced before a DIM
+statement (for example, A(3)=4), the array will be dimensioned to 10
+(as if DIM A(10) were executed).  Remember, DIMensioning an array to
+10 really creates 11 elements (10).  The 0 element should always be
+considered in calculating the size to DIMension your array.

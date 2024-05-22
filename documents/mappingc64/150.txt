@@ -1,0 +1,16 @@
+address           $291           MODE
+Flag: Enable or Disable Changing Character Sets with SHIFT/Logo
+Keypress
+
+This flag is used to enable or disable the feature which lets you
+switch between the uppercase/graphics and upper/lowercase character
+sets by pressing the SHIFT and Commodore logo keys simultaneously.
+
+This flag affects only this special SHIFT key function, and does not
+affect the printing of SHIFTed characters.  POKEing a value of 128
+($80) here will disable this feature, while POKEing a value of 0 will
+enable it once more.  The same effect can be achieved by PRINTing
+CHR$(8) or CTRL-H to disable the switching of character sets, and
+CHR$(9) or CTRL-I to enable it.  See entries for locations 53272
+($D018) and 49152 ($C000) for more information on switching character
+sets.

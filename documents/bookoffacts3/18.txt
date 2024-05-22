@@ -1,0 +1,51 @@
+
+
+
+C64 Basic:
+POKE P(SHIFTED O) Put a value in a specified memory location.
+(EXAMPLE: POKE 53280,1-put in location 53280 the value for color 1)
+
+POS NONE Returns the current cursor position.
+(EXAMPLE: 10 IF POS(0) = 10THEN END-when thecousor reaches position
+20 the program will end)
+
+PRINT ? A statement that is used to output datatothe
+screen. This data can also be directed to the printer by using the CMD
+statement. (EXAMPLE: PRINT "COMPUTER")
+
+PRINT# P(SHIFTED R) A input/output statement that is used to
+output data to a device of file. (EXAMPLE: OPEN1,4:PRINT#1,
+"COMPUTER":CLOSE1-results in printing the word COMPUTER to the
+printer)
+
+READ R(SHIFTED E) A statement that reads from a data
+statement. 1 READ A$
+EXAMPLE —2 DATA "DISK DRIVE"
+
+
+C64 Basic:
+REM NONE A statement that cannot be executed, but
+serves as vehicle to store remarks in a program. (EXAMPLE: 1 PRINT
+"PRINTER":REM THIS IS LINE 1)
+
+RESTORE RE(SHIFTED S) A statement that resets the pointer to the
+first data statement in the program. This can be used to read the same data as
+manytimes as needed. (EXAMPLE: 1 READ A$ - reads the word TAPE twice)
+2 RESTORE
+3 DATA"TAPE"
+
+RETURN RE(SHIFTED T) A statement that is used to return to the data
+or line number following the gosub statement.
+(EXAMPLE: 1 GOSUB 3 - goes to line 3 then returns
+2 END — end on line 2)
+3 RETURN
+
+RIGHT$ R(SHIFTED I) A string function that returns a set number
+of characters from the right most end of a string, depending on the value
+given.
+(EXAMPLE: A$ = "SCREENCOLOR":PRINT RIGHT#(A$,5)-thiswill printthe
+word COLOR)
+
+RND R(SHIFTED N) A floating point function that creates a
+random number. (EXAMPLE: PRINT IRND(0)*10-this will print a number
+from 0 to 9)

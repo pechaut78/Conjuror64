@@ -1,0 +1,9 @@
+
+The Increment and Decrement instructions
+For effective programming of loops and counters, the 6510
+has commands to increment or decrement the contents of a
+register or memory location by one. These increment
+instructions correspond, together with the conditional
+branching commands, to the NEXT instruction in BASIC. The
+STEP-1 instruction can be simulated with the decrement
+commands.

@@ -1,0 +1,9 @@
+
+
+
+address         $BBA2          MOVFM
+Move a Floating Point Number from Memory to FAC1
+
+This routine loads FAC1 with the five-byte floating point number
+pointed to by the address stored in the Accumulator (low byte) and the
+.Y register (high byte).

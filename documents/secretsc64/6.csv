@@ -1,0 +1,11 @@
+question,answer
+"Where are the registers used as a single 24-bit counter located?","The registers used as a single 24-bit counter are located at addresses 160 to 162."
+"What is the function of the 24-bit counter in the C64?","The 24-bit counter is incremented automatically every 1/60th of a second, serving as a real-time jiffy clock, as mentioned in Chapter 2."
+"How often is the value in the 24-bit counter incremented?","The value in the 24-bit counter is incremented automatically every 1/60th of a second."
+"What is the purpose of resetting the whole register to zero?","Resetting the whole register to zero allows the clock to be used as an event timer, enabling the measurement of time elapsed after an event has occurred."
+"How can the clock be used as an event timer?","The clock can be used as an event timer by resetting the whole register to zero and then PEEKing the value after some event has occurred, allowing the measurement of time elapsed."
+"What is the limitation of using the clock as an event timer?","The limitation of using the clock as an event timer is that the time obtained will only be approximate, due to the time it takes to PEEK the values."
+"What is the real-time jiffy clock mentioned in Chapter 2?","The real-time jiffy clock mentioned in Chapter 2 is the 24-bit counter that increments automatically every 1/60th of a second, located at addresses 160 to 162."
+"How does the clock increment?","The clock increments automatically every 1/60th of a second."
+"What is the significance of the 24-bit counter in the C64?","The 24-bit counter is significant in the C64 as it serves as a real-time jiffy clock, allowing for the measurement of time elapsed and enabling the use of the clock as an event timer."
+"What is the role of PEEKing the value in the clock as an event timer?","PEEKing the value in the clock after an event has occurred allows for the measurement of time elapsed, enabling the use of the clock as an event timer."

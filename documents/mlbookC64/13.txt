@@ -1,0 +1,33 @@
+
+ Indexed Addressing
+Another addressing mode is the indexed addressing
+mode. Here the X and Y registers play important
+roles.
+LDA $25B8,X
+This is called absolute addressing indexed by X.
+How does it work? The processor loads the
+accumulator not with the contents of memory
+location $25B8. Rather it first adds the value of
+the X-register to the absolute address ($25B8). If
+the X-register contains $35, for example, the
+following calculation takes place:
+$25B8 + $35 = $25ED
+The Machine Language Book of the Commodore 64
+The accumulator is loaded with the contents of
+location $25ED. If this instruction is executed
+with varying X-valuesf a different value is loaded
+each time. This addressing mode is very useful for
+programming loops and when working with tables.
+Other examples are described later. In pseudo-
+BASIC, this addressing mode can be formulated as
+follows:
+A = PEEK($25B8 + X)
+You can also use the Y-register in place of the X-
+register for indexed addressing.
+LDA $25B8,Y
+Here the contents of the Y-register is added to the
+absolute address $25B8 to obtain the final address.
+Using both registers, you have two independent
+index variables which can be used for programming
+24
+nested loops.

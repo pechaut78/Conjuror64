@@ -1,0 +1,11 @@
+question,answer
+"what is the bit pattern for the first byte of the INQUIRE DISK command?","The bit pattern for the first byte of the INQUIRE DISK command is 01010101, where bit 7 is 0, bit 6 is 1, bit 5 is 0, bit 4 is 1, bit 3 is 0, bit 2 is 1, bit 1 is 0, and bit 0 is 1."
+"what is the purpose of the N switch in the INQUIRE DISK command?","The N switch in the INQUIRE DISK command represents the drive number, which is used to specify the target disk drive for the operation."
+"what is the protocol used for the INQUIRE DISK command?","The protocol used for the INQUIRE DISK command is the Burst handshake protocol, which is a communication protocol used for data transfer between the computer and the disk drive."
+"what is the output of the INQUIRE DISK command?","The output of the INQUIRE DISK command is a single burst status byte, which is returned following each INQUIRE DISK operation."
+"what is the significance of the X bits in the second byte of the INQUIRE DISK command?","The X bits in the second byte of the INQUIRE DISK command are undefined or reserved bits, which are not used in the command."
+"what is the role of the S bit in the third byte of the INQUIRE DISK command?","The S bit in the third byte of the INQUIRE DISK command is used to specify the side of the disk to be accessed, where 0 indicates side 0 and 1 indicates side 1."
+"what is the format of the INQUIRE DISK command?","The format of the INQUIRE DISK command is a series of three bytes, where the first byte is 01010101, the second byte is 00110000, and the third byte is XXSS0N, where X is undefined, S specifies the side of the disk, and N specifies the drive number."
+"what is the purpose of the INQUIRE DISK command?","The purpose of the INQUIRE DISK command is to inquire about the status of a disk drive, including the drive number and side of the disk."
+"how does the INQUIRE DISK command interact with the disk drive?","The INQUIRE DISK command interacts with the disk drive using the Burst handshake protocol, which is a communication protocol used for data transfer between the computer and the disk drive."
+"what is the significance of the drive number in the INQUIRE DISK command?","The drive number in the INQUIRE DISK command specifies the target disk drive for the operation, allowing the command to inquire about the status of a specific drive."

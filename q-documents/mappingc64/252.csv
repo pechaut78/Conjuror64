@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $A96B?","address         $A96B          LINGET
+Convert an ASCII Decimal Number to a Two-Byte Binary Line Nmumber
+
+This subroutine is used by several statements to read a decimal
+number, convert it to a two-byte integer line number (in low-byte,
+high-byte format), and check that it is in the correct range of
+0-63999."

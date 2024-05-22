@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $DC06?","address              $DC06          TIMBLO
+Timer B (low byte)"

@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $DC02?","address              $DC02          CIDDRA
+Data Direction Register A
+
+Bit 0:  Select Bit 0 of Data Port A for input or output (0=input, 1=output)
+Bit 1:  Select Bit 1 of Data Port A for input or output (0=input, 1=output)
+Bit 2:  Select Bit 2 of Data Port A for input or output (0=input, 1=output)
+Bit 3:  Select Bit 3 of Data Port A for input or output (0=input, 1=output)
+Bit 4:  Select Bit 4 of Data Port A for input or output (0=input, 1=output)
+Bit 5:  Select Bit 5 of Data Port A for input or output (0=input, 1=output)
+Bit 6:  Select Bit 6 of Data Port A for input or output (0=input, 1=output)
+Bit 7:  Select Bit 7 of Data Port A for input or output (0=input, 1=output)"

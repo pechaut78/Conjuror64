@@ -1,0 +1,9 @@
+
+
+
+address          $D5            LNMX
+Maximum Length of Physical Screen Line
+
+The line editor uses this location when the end of a line has been
+reached to determine whether another physical line can be added to the
+current logical line, or if a new logical line must be started.

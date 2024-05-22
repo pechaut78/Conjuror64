@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $BA28?","address         $BA28          FMULT
+Multiply FAC1 with FAC2
+
+This routine multiplies the contents of FAC1 by the contents of FAC2
+and stores the result in FAC1"

@@ -1,0 +1,41 @@
+
+C64 Basic:
+A filename can be up to 16 characters, all of which are
+significant.
+• Multiple programs can be stored on tape or disk by using
+different filenames. When saving a program to tape, position
+the tape right at the end of the last program on the tape. The
+disk drive automatically determines where on the disk the
+program will be stored.
+• It is a dangerous practice to save a revised program to tape
+on top of an earlier version, because the next program on
+the tape may be overwritten.
+• The disk drive will not normally let you save a program
+with a filename that is already in use.
+• The ILLEGAL DEVICE NUMBER error means that an
+attempt was made to use a device which does not support
+loading or saving. The only device numbers normally used
+are 1 (cassette) and 8 (disk). If a device number is not speci
+fied after a filename, the computer assumes that the cassette
+is to be used.
+• The DEVICE NOT PRESENT error occurs when a referenced
+device does not respond to the computer, because it is either
+not hooked up or not turned on.
+• If you try to load a disk file using a filename that does not
+exist, you will get the FILE NOT FOUND error.
+• When errors occur on the disk drive, the red light flashes.
+• Storage and retrieval commands can be aborted by pressing
+the RUN/STOP key.
+• LOADing is an input operation, and SAVEing is an output
+operation.
+• The terms read and write are often used to mean input and
+output.
+• Care should be exercised in handling cassette tapes and floppy disks. They should not be exposed to radiation, magnets,
+temperature changes, or fingers.
+• The VERIFY command is used to read a program on tape or
+disk and check if it matches the program in memory. If
+it doesn't, the VERIFY ERROR message is printed.
+• The main difference between the LOAD and VERIFY com
+mands is that with VERIFY, the program in memory is not
+touched. It is only compared against the program on the tape
+or disk.

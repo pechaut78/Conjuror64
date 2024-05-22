@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the CINT function in Commodore 64?","The purpose of the CINT function is to initialize the screen editor and the 6567 video chip in the Commodore 64 for normal operation."
+"What is the call address of the CINT function?","The call address of the CINT function is $FF81 in hexadecimal, which is equivalent to 65409 in decimal."
+"What are the communication registers used by the CINT function?","The CINT function does not use any communication registers."
+"What preparatory routines are required before calling the CINT function?","No preparatory routines are required before calling the CINT function."
+"What error returns can be expected from the CINT function?","The CINT function does not return any errors."
+"What is the stack requirement for calling the CINT function?","The stack requirement for calling the CINT function is 4 bytes."
+"What registers are affected by the CINT function?","The CINT function affects the A, X, and Y registers."
+"In what context should the CINT function be called?","The CINT function should be called by a Commodore 64 program cartridge."
+"How do you use the CINT function in a program?","To use the CINT function, you simply need to call it using the JSR instruction, for example: JSR CINT, followed by a JMP instruction to begin execution."
+"What is the role of the KERNAL screen editor in the CINT function?","The KERNAL screen editor is initialized by the CINT function, which sets up the screen editor for normal operation."
+"What is the significance of the 6567 video controller chip in the CINT function?","The 6567 video controller chip is set up for normal operation by the CINT function, which is necessary for the Commodore 64 to function properly."

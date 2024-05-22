@@ -1,0 +1,17 @@
+
+Flag manipulation instructions
+In addition to the instructions whose results affect the
+flags, the flags can also be directly set or cleared by
+the programmer. Sometimes this is necessary before
+performing addition and subtraction. These instructions
+do not require any operands. They are all one-byte in
+length.
+
+
+The carry flag
+The carry flag is set by the instruction SEC (set carry)/
+and cleared by CLC (clear carry).
+The SEC instruction must be used before each subtraction
+and the CLC instruction before
+each addition, otherwise
+the answer may be wrong.

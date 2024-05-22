@@ -1,0 +1,16 @@
+
+
+
+address         $3D-$3E        OLDTXT
+Pointer to the Address of the Current BASIC Statement
+
+This location contains the address (not the line number) of the text
+of the BASIC statement that is being executed.  The value of TXTPTR
+(122, $7A), the pointer tot he address of the BASIC text character
+currently being scanned, is stored here each time a new BASIC line
+begins execution.
+
+END, STOP, and the STOP-key BREAK save the value of TXTPTR here, and
+CONT restores this value to TXTPTR.  CONT will not continue if 62
+($3E) has been changed to a zero by a LOAD, a modification to the
+program text, or by error routines.

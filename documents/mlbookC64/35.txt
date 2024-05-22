@@ -1,0 +1,7 @@
+
+Branch on negative flag
+If the negative flag is set, the instruction "branch on
+minus," BMI, will branch; in order to jump on a clear
+negative flag, the instruction "branch on plus," BPL,
+must be used.
+ 

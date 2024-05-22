@@ -1,0 +1,11 @@
+question,answer
+"What is the method to move a line from one place to another in a C64 Basic program?","To move a line in a C64 Basic program from one place to another, you can type the line using the new line number and then delete the old line. Alternatively, you can list the line, position the cursor on top of the line number, type the new line number, and press RETURN. However, you still need to delete the old line in this case."
+"How can a C64 Basic program be erased quickly?","A fast way to erase a program in C64 Basic is to use the NEW command, which deletes every line in the program and clears all variables at the same time."
+"Do variables in C64 Basic retain their values after a program has stopped executing?","Yes, variables in C64 Basic retain their values after a program has stopped executing."
+"When are variables cleared in C64 Basic?","Variables in C64 Basic are cleared as soon as the program is modified in any way. Additionally, the RUN command automatically clears all variables before program execution starts."
+"When are errors in a C64 Basic program line detected?","Errors in a C64 Basic program line are detected only when the line is executed, not when the line is entered and placed in memory."
+"How can a line be moved in a C64 Basic program using editing keys?","To move a line in a C64 Basic program using editing keys, list the line, position the cursor on top of the line number, type the new line number, and press RETURN. However, you still need to delete the old line in this case."
+"What happens to variables in C64 Basic when a program is modified?","Variables in C64 Basic are cleared as soon as the program is modified in any way."
+"What is the effect of the NEW command in C64 Basic on a program?","The NEW command in C64 Basic deletes every line in the program and clears all variables at the same time."
+"What happens to variables in C64 Basic when the RUN command is used?","The RUN command in C64 Basic automatically clears all variables before program execution starts."
+"How are errors in a C64 Basic program line detected?","Errors in a C64 Basic program line are detected only when the line is executed, not when the line is entered and placed in memory."

@@ -1,0 +1,11 @@
+question,answer
+"Can I use all the 64k of ram in the C64?","What actually happens is that 16K of the ROM overlays 16K of RAM, and the system is arranged such that you always read the information from the ROM and not the RAM underneath it, so not all of the 64k is available for use."
+"How does the ROM overlay the RAM in the C64?","The ROM overlays the RAM in the C64 in two sections, 16K of ROM overlays 16K of RAM, and another 4K of ROM also overlays RAM, but this ROM is invisible to the user and the 4K of RAM is available for programs."
+"What is the total amount of RAM available in the C64?","The total amount of RAM available in the C64 is 48K, but not all of it is available for writing programs, 6K of RAM is required by BASIC and the operating system for storing important system information."
+"What is the purpose of the 6K of RAM used by BASIC and the operating system?","The 6K of RAM used by BASIC and the operating system is for storing important system information such as pointers, tables, etc."
+"How much RAM is available for writing BASIC programs?","Only 38K of the user RAM is available for writing BASIC programs, the other 4K is available but it cannot be used for storing BASIC programs, it's mainly used to store machine code routines."
+"What is the user RAM in the C64?","The user RAM in the C64 is the 42K of RAM available to us for programs, but not all of it can be used for writing BASIC programs."
+"Can I use the entire 64k of RAM for machine code routines?","No, only 4K of the user RAM is available for storing machine code routines, the rest is used for other purposes."
+"What is the purpose of the 4K of ROM that is invisible to the user?","The 4K of ROM that is invisible to the user overlays RAM, but the 4K of RAM is available for programs."
+"Is it possible to switch the ROMs in and out of the memory map to gain extra RAM space?","Yes, it is possible to switch the ROMs in and out of the memory map to gain extra RAM space, but it is not easy, or advisable, from BASIC."
+"What is the total amount of ROM in the C64?","The total amount of ROM in the C64 is 20K, 16K of ROM overlays 16K of RAM, and another 4K of ROM also overlays RAM."

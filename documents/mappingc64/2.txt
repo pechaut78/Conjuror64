@@ -1,0 +1,198 @@
+
+
+address             $1             R6510
+
+Bit 0: LORAM signal.  Selects ROM or RAM at 40960 ($A000).  1=BASIC, 0=RAM
+Bit 1: HIRAM signal.  Selects ROM or RAM at 57344 ($E000).  1=Kernal, 0=RAM
+Bit 2: CHAREN signal.  Selects character ROM or I/O devices.  1=I/O, 0=ROM
+Bit 3: Cassette Data Output line.
+Bit 4: Cassette Switch Sense.  Reads 0 if a button is pressed, 1 if not.
+Bit 5: Cassette Motor Switch Control.  A 1 turns the motor on, 0 turns it off.
+Bits 6-7: Not connected--no function presently defined.
+
+The chief function of this register is to determine which blocks of
+RAM and ROM the 6510 microprocessor will address.  The Commodore 64
+comes with 64K RAM, even though it normally does not use all of that
+RAM at once.  In addition, it has an 8K BASIC Interpreter ROM, an 8K
+Operating System Kernal ROM, a 4K Character Generator ROM, a Sound
+Interface Device (SID), a 6566 Video Interface Controller (VIC-II),
+and two 6526 Complex Interface adapter chips.
+
+To address all of these at once would require 88K, 24K past the
+addressing limit of the 6510 microprocessor.  In order to allocate
+address space, the I/O Port is used to affect the addressing lines,
+and thus determine which segments of RAM and ROM will be addressed at
+any one time.
+
+Bit 0.  This bit controls the LORAM signal.  A 0 in this bit position
+switches the BASIC ROM out, and replaces it with RAM at addresses
+40960-49151 ($A000-$BFFF).  The default value of this bit is 1.
+
+Bit 1.  Bit 1 controls the HIRAM signal.  A 0 in this bit position
+switches the Kernal ROM out, and replaces it with RAM at 57344-65535
+($E000-$FFFF).  As the BASIC interpreter uses the Kernal, it is also
+switched out and replaced by RAM.  The default value of this bit is 1.
+
+The system allows a wide range of combinations of RAM and ROM to be
+utilized.  Of course, the BASIC programmer will have little need, in
+the ordinary course of events, to switch out the BASIC ROM and the
+Kernal.  To do so would just hang the system up.  But one way to make
+use of this feature is to move the contents of ROM to the
+corresponding RAM addresses.  That way, you can easily modify and
+customize the BASIC interpreter and OS Kernal routines, which are
+ordinarily fixed in ROM.  For examples, to move BASIC into RAM, just
+type:
+
+FOR I=40960 TO 49151:POKE I,PEEK(I):NEXT
+
+Though it appears that such a program would not do anything, it in
+fact copies bytes from ROM to RAM.  This is because any data which is
+written to a ROM location is stored in the RAM which resides at the
+same address.  So while you are PEEKing ROM, you are POKEing RAM.  To
+switch to your RAM copy of BASIC, type in:
+
+POKE 1,PEEK(1) AND 254.
+
+Now you are ready to make modifications.  Examples of simple
+modifications include changing the text which the interpreter prints,
+such as the READY prompt, the power-up message, or the keyword table.
+
+An example of the latter would be POKE 41122,69.  This changes the FOR
+keyword to FER, so that BASIC would respond normally to a FER-NEXT
+loop, but fail to recognize FOR as syntactically correct.
+
+On the more practical side, you could change the prompt that INPUT
+issues to a colon, rather than a question mark:
+
+POKE 43846,58
+
+You are not limited to just cosmetic changes of text.  Jim Butterfield
+has given an example in COMPUTE! magazine of changing the interpreter
+so that it assigns a null string the ASCII value 0.  In the ROM
+version, the command PRINT ASC("") will return ?ILLEGAL QUANTITY
+ERROR.  This is inconvenient when INPUTting a string, because if the
+user presses RETURN and you try to check the ASCII value of the string
+that has been entered, you will get this error.  By entering POKE
+46991,5, this is changed so that PRINT ASC("") now responds with a
+zero.
+
+For the more serious machine language programmer, it is quite feasible
+to add new commands or modify existing ones by diverting the vectors
+which are discussed in the section covering the BASIC interpreter ROM.
+For a good example of this technique, see the article "Hi-Res Graphics
+Made Simple" by Paul Schatz in COMPUTE!'s First Book of Commodore 64
+Sound and Graphics.  The program example there inserts new graphics
+commands into a RAM version of BASIC.  When you want to switch back to
+the ROM BASIC, enter POKE 1,PEEK(1) OR 1.
+
+For machine language applications, it would be possible to replace the
+ROM programs with an entirely different operating system, or an
+application that has its own screen editing and I/O functions
+included.  Such an application would first have to be loaded from disk
+into RAM.  A language other than BASIC could be loaded, and could then
+just switch out the BASIC ROM, while still using the OS Kernal.
+
+Or a spreadsheet application that contained its own I/O routines could
+switch out all ROMs and have the use of all of RAM that is not
+actually needed for the program itself, for data.  It should be
+remembered, however, that before switching the Kernal out, it is
+necessary to disable interrupts, as the vectors for these interrupts
+are contained in the Kernal.
+
+Bit 2.  This bit controls the CHAREN signal.  A 0 in this position
+switches the character generator ROM in, so that it can be read by the
+6510 at addresses 53248-57343 ($D000-$DFFF).  Normally, this bit is
+set to 1, so that while the VIC-II chip has access to the character
+generator ROM for purposes of creating the screen display, the user
+cannot PEEK into it.  Since this ROM is switched into the system in
+the same location as the I/O devices (SID chip, VIC-II chip, and 6526
+CIA's), o I/O can occur when this ROM is switched in.
+
+The ability to switch in the character generator ROM is very useful to
+the programmer who wishes to expirement with user-defined characters.
+Modified character graphics is one of the  more powerful graphics
+tools available, but often the user will not want to redefine a whole
+character set at one time.  By reading the character ROM and
+duplicating its contents in RAM, the user can replace only a few
+characters in the set.  The method for reading this ROM into RAM from
+BASIC is as follows:
+
+10 POKE 56333,127:POKE1,PEEK(1) AND 251:FOR I=0 TO 2048
+20 POKE BASE+I,PEEK(53248+I):NEXT:POKE 1,PEEK(1) OR 4:POKE 56333,129
+
+The first POKE is necessary to turn off the system timer interrupt.
+Since the I/O devices are addressed in the same space as the character
+ROM, switching that ROM in switches all I/O out, making it necessary
+to turn off any interrupts which use these devices.
+
+The second POKE is the one which switches in the character ROM.  The
+program loop then reads this ROM memory into RAM, starting with the
+address BASE.  Note that this address should start on an even 2K
+boundary (an address evenly divisible by 2048) within the block of
+memory presently being addresses by the VIC-II chip (for more
+information on where to put user-defined character sets, and how to
+use them, see the section on the VIC-II chip, under location 53272
+($D018), the section on the character ROM at 49152 ($C000), and the
+section on banking VIC-II memory at 56576 ($DD00)).  After reading the
+contents of ROM into RAM, the next POKEs switch out the character ROM
+and restore the interrupt.
+
+It should be noted that while Bits 0-2 of this register allow software
+control of some signals that determine the memory configuration that
+is used by the Commodore 64 at any given time, they are not the only
+determining factor.  Signals can also be generated by means of plug-in
+expansion cartridges which are connected to the expansion port, and
+these can change the memory map.
+
+Two lines located on the exapansion port are called GAME and EXROM.
+When used in conjunction with the software-controlled lines noted
+above, these two hardware lines can enable cartridge ROM to replace
+various segments of ROM and/or RAM.
+
+Possible configurations include 8K of cartridge ROM to be switched in
+at $8000-$9FFF, for a BASIC enhancement program; an 8K cartridge ROM
+at $A000-$BFFF, replacing BASIC, or at $E000-$FFFF, replacing the
+Kernal, or a 16k cartridge at $8000-$C000.
+
+When cartridge ROM is selected to replace the Kernal, a Max emulator
+mode is entered, which mimics the specification of the ill-fated Max
+Machine, a game machine which Commodore never produced for sale int he
+U.S.  In this mode, only the first 6K of RAM are used, there is no
+access to the character ROM, and graphics data such as charactger
+dot-data is mapped down from 57344 ($E000) to 8192 ($2000).  Further
+hardware information may be obtained from the Commodore 64
+Programmer's Reference Guide.
+
+Bits 3-5 of this register have functions connected with the Datasette
+recorder.  These are as follows:
+
+Bit 3.  This is the Cassette Data Output line.  This line is connected
+to the Cassette Data Write line on the cassette port, and is used to
+send the data which is written to tape.
+
+Bit 4.  This bit is the Cassette Switch Sense line.  This bit enables
+a program to tell whether or not one of the buttons that moves the
+recorder is pressed down.  If the switch on the recorder is down, this
+bit will have a value of 1.  Remember that Bit 4 of the data direction
+register at location 0 must contain a 0 for this bit to properly
+reflect the status of the switch.
+
+Bit 5.  Bit 5 is the Cassette Motor Control.  Setting this bit to zero
+allows the motor to turn when you press one of the buttons on the
+recorder, while setting it to one disables it from turning.
+
+Most of the time, the setting of this bit will be controlled by the
+interrupt routine that is used to read the keyboard every sixtieth of
+a second.  If none of the buttons on the recorder is pressed, that
+interrupt routine shuts the motor off and sets the interlock at
+location 192 ($C0) to zero.  When a button is pressed, if the
+interlock location is zero, Bit 5 of this register is set to zero to
+turn the motor on.
+
+When the interlock location contains a zero, the keyscan routine will
+not let you control the setting of this bit of the register (and the
+interlock is always set to zero when no buttons are pressed).  In
+order for you to gain control of the motor, you must POKE a nonzero
+value into 192 after a button on the recorder has been pressed.  You
+can then shut off the motor and turn it back on as you please, by
+manipulating this bit, so long as a button stays pressed.

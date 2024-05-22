@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $A3B8?","address         $A3B8          BLTU
+Open a Space in Memory for a New Program Line or Variable
+
+When a new nonarray variable is being created, or when a BASIC program
+line is being added or replaced, this routine is used to make room for
+the addition.  It first checks to see if space is available, and then
+moves the program text and/or variables to make room."

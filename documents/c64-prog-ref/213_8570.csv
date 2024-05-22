@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the UNLSN function?","The purpose of the UNLSN function is to send an UNLISTEN command to all devices on the serial bus, stopping them from receiving data from the Commodore 64, and allowing the bus to be used for other purposes."
+"what is the call address of the UNLSN function?","The call address of the UNLSN function is $FFAE (hex) or 65454 (decimal)."
+"what are the communication registers used by the UNLSN function?","The UNLSN function does not use any communication registers."
+"what preparatory routines are required by the UNLSN function?","No preparatory routines are required by the UNLSN function."
+"what is the error return mechanism of the UNLSN function?","The error return mechanism of the UNLSN function is the same as the READST routine."
+"what is the stack requirement of the UNLSN function?","The stack requirement of the UNLSN function is 8 bytes."
+"which register is affected by the UNLSN function?","The A register is affected by the UNLSN function."
+"what is the effect of calling the UNLSN function on devices that were previously commanded to listen?","Calling the UNLSN function results in an UNLISTEN command being transmitted on the serial bus, which commands devices that were previously commanded to listen to stop receiving data from the Commodore 64."
+"when is the UNLSN function typically used?","The UNLSN function is typically used after the Commodore 64 is finished sending data to external devices, to command listening devices to get off the serial bus so it can be used for other purposes."
+"how do you use the UNLSN function?","To use the UNLSN function, you simply need to call it, for example, by using the instruction JSR UNLSN>."

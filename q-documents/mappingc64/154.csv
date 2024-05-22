@@ -1,0 +1,49 @@
+question,answer
+"What is the purpose of the memory location at address $294?","address           $294           M51CDR
+RS-232: Mock 6551 Command Register
+
+This location performs the same function as the 6551 UART chip's
+command register, which specifies type of parity, duplex mode, and
+handshaking protocol.
+
+The type of parity used determines how the 64 will check that RS-232
+data is received correctly.
+
+The duplex mode can be either full duplex (the 64 will be able to
+transmit at the same time it is receiving) or half duplex (it will
+take turns sending and receiving).
+
+The handshaking protocol has to do with the manner in which the
+sending device lets the receiver know that it is ready to send data,
+and the receiver lets the sender know that it has gotten the data
+correctly.  The meanings of the bit patterns in this register are as
+follows:
+
+Bits 7-5: Parity
+XX0 (bit value of
+     0,64,128, or 192) = No Parity Generated or Received
+001 (bit value of 32)  = Odd Parity Transmitted and Received
+011 (bit value of 96)  = Even Parity Transmitted and Received
+101 (bit value of 160) = Mark Parity Transmitted and Received
+111 (bit value of 224) = Space Parity Transmitted and Received
+
+Bit 4: Duplex
+0 (bit value of 0)  = Full Duplex
+1 (bit value of 16) = Half Duplex
+
+Bits 3-1: Unused
+
+Bit 0: Handshake Protocol
+0 (bit value of 0) = 3 Line
+1 (bit value of 1) = X Line
+
+This register can be set at the user's option when opening RS-232
+device (number 2).  The second character of the filename will be
+stored here.  For example, the statement
+
+OPEN 2,2,0,CHR$(6+32)+CHR$(32+16)
+
+will set the value of this location to 48, which is the value of the
+second character in the filename portion of the statement.  As you can
+see from the above chart, this configures the RS-232 device for half
+duplex data transfer using odd parity and three-line handshaking."

@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $B824?","address         $B824          POKE
+Perform POKE
+
+POKE gets a pointer to the address parameter, and stores the next
+parameter there."

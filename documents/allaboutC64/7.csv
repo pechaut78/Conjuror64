@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the LET keyword in C64 Basic?","The LET keyword in C64 Basic is used for variable assignment statements. However, it is optional and can be omitted. If the keyword is not provided, the computer assumes that the statement is a LET statement."
+"Is LET the only optional keyword in C64 Basic?","Yes, LET is the only optional keyword in C64 Basic. All other statements require a keyword."
+"What happens if no keyword is provided in a statement in C64 Basic?","If no keyword is provided in a statement in C64 Basic, the computer assumes that the statement is a LET statement."
+"What is an implied LET statement in C64 Basic?","An implied LET statement in C64 Basic is a LET statement which does not include the keyword LET."
+"Is the rest of the syntax of the LET statement still required in an implied LET statement?","Yes, the rest of the syntax of the LET statement after the keyword is still required in an implied LET statement."
+"Will the remaining examples in a C64 Basic book use the keyword LET?","No, the remaining examples in a C64 Basic book will not use the keyword LET. Instead, they will use implied LET statements."
+"What is the difference between a LET statement and an implied LET statement in C64 Basic?","The difference between a LET statement and an implied LET statement in C64 Basic is that the former includes the keyword LET, while the latter does not."
+"Do all statements in C64 Basic require a keyword?","No, not all statements in C64 Basic require a keyword. The LET statement is the only one that can be implied."
+"Can the LET keyword be used in other statements besides variable assignment in C64 Basic?","No, the LET keyword can only be used in variable assignment statements in C64 Basic. It is not used in any other statements."
+"Is it necessary to use the LET keyword in C64 Basic?","No, it is not necessary to use the LET keyword in C64 Basic. It can be omitted and implied in variable assignment statements."

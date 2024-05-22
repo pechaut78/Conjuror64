@@ -1,0 +1,12 @@
+
+
+
+address              $EAE0
+Decode the Keystroke and Place its ASCII Value in the Keyboard Buffer
+
+This is the continuation of the IRQ keyscan routine.  It decodes the
+keycode with the proper PETASCII table, and compares it with the last
+keystroke.  If if is the same, it checks to see if it is okay to
+repeat the character without waiting for the key to be let up.  If the
+character should be printed, it is moved to the end of the keyboard
+buffer at 631 ($277).

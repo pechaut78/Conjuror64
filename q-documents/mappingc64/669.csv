@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $FE34?","address              $FE34          MEMBOT
+Read/Set Bottom of RAM Pointer
+
+This is a documented Kernal routine, which can be entered through the
+jump table at location 65436 ($FF9C).
+
+It can be used to either read or set the bottom of RAM pointer.  If
+called with the Carry flag set, the address in the pointer willbe
+loaded into the .X and .Y registers.  If called with the Carry flag
+cleared, the pointer will be changed to the address found in the .X
+and .Y registers."

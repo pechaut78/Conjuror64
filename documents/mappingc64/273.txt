@@ -1,0 +1,5 @@
+
+
+
+address         $AF08          SNERR
+Print Syntax Error Message

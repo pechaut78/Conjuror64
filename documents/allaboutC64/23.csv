@@ -1,0 +1,11 @@
+question,answer
+"What command is used to get a disk directory in C64 Basic?","To get a directory in C64 Basic, use the LOAD command with the filename "$", then use LIST. This works only for disk files."
+"How can the ten-second delay between the searching and loading of a tape file be shortened in C64 Basic?","The ten-second delay between the searching and loading of a tape file can be shortened in C64 Basic by pressing the SPACE bar, left arrow, CTRL, or Commodore key."
+"Are filenames optional for tape files in C64 Basic?","Yes, filenames are optional for tape files in C64 Basic. Using LOAD with no filename will make the computer load the next program found on the tape. Files saved without a filename can be retrieved only by using LOAD without a filename."
+"How can you make the computer automatically load and run the next program found on a tape in C64 Basic?","To have the computer automatically load and run the next program found on a tape in C64 Basic, press the RUN/STOP key with either the Commodore or SHIFT key."
+"What is a disk directory in C64 Basic?","A disk directory in C64 Basic is a list of filenames for disk files."
+"What happens when you use the LOAD command with no filename in C64 Basic?","When you use the LOAD command with no filename in C64 Basic, the computer will load the next program found on the tape."
+"What can you press to shorten the delay between the searching and loading of a tape file in C64 Basic?","In C64 Basic, you can press the SPACE bar, left arrow, CTRL, or Commodore key to shorten the delay between the searching and loading of a tape file."
+"How can you retrieve a file saved without a filename in C64 Basic?","In C64 Basic, files saved without a filename can be retrieved only by using LOAD without a filename."
+"What key combinations can be used to make the computer automatically load and run the next program found on a tape in C64 Basic?","In C64 Basic, you can press the RUN/STOP key with either the Commodore or SHIFT key to make the computer automatically load and run the next program found on a tape."
+"What is the purpose of using the filename "$" with the LOAD command in C64 Basic?","In C64 Basic, using the filename "$" with the LOAD command displays the disk directory."

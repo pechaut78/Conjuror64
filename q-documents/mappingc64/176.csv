@@ -1,0 +1,52 @@
+question,answer
+"What is the purpose of the memory location at address $30A-$30B?","address      $30A-$30B      IEVAL
+Vector to the Routine That Evaluates a Single-Term Arithmetic
+Expression
+
+This vector points to the address of the EVAL routinea t 44678 ($AE86)
+which, among other things, is used to evaluate BASIC functions such as
+INT and ABS.
+
+Location Range: 780-783 ($30C-$30F)
+Register Storage Area
+
+The BASIC SYS command uses this area to store 6510 internal
+registers--the Accumulator (.A), the .X and .Y index registers, and
+the status register, .P.
+
+Before every SYS command, each of the registers is loaded with the
+value found in the corresponding storage address.  After the ML
+program finished executing, and returns to BASIC with an RTS
+instruction, the new value of each register is stored in the
+appropriate storage address.  This is only true of SYS, not of the
+similar USR command.
+
+This feature allows you to place the necessary preentry values into
+the registers from BASIC before you SYS to a Kernal or BASIC ML
+routine.  It also enables you to examine the resulting effect of the
+routine on the registers, and to preserve the condition of the
+registers on exit for subsequent SYS calls.
+
+An extremely practical application comes immediately to mind.
+Although the 64's BASIC 2 has many commands for formatting printed
+characters on the monitor screen (for example, TAB, SPC, PRINT A$,B),
+there is none to adjust the vertical cursor position.
+
+There is a Kernal routine, PLOT (58634, $E50A), which will allow you
+to position the cursor anywhere on the screen.  In order to use it,
+you must first clear the carry flag (set it to 0), and then place the
+desired horizontal column number in the .Y register and the vertical
+row number in the .X register before entering the routine with a SYS
+65520.  Using the register storage area, we can print the work HELLO
+at row 10, column 5 with the following BASIC line:
+
+POKE 781,10:POKE 782,5:POKE 783,0:SYS 65520:PRINT 'HELLO'
+
+You can also use these locations to help you take advantage of Kernal
+routines that return information in the register.  For example, the
+SCREEN routine (58629,$E505) returns the number of screen rows int he
+.Y register, and the number of columns in the .X register.  Using this
+routine, a BASIC program could be written to run on machines with
+different screen formats (for example, the 64 and the VIC-20).  Just
+PEEK(781) after a SYS 65517 to see how many screen columns the
+computer display has."

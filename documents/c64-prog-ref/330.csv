@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the CS pin on the SID chip?","The CS pin is a low-active chip select input that controls data transfers between the SID and the microprocessor, and it must be low for any data transfer to occur."
+"What is the condition for a Read operation to occur on the SID register?","A Read operation can only occur if CS is low, 02 is high, and R/W is high."
+"What is the condition for a Write operation to occur on the SID register?","A Write operation can only occur if CS is low, 02 is high, and R/W is low."
+"How is the CS pin typically connected in a system?","The CS pin is normally connected to address decoding circuitry, allowing the SID to reside in the memory map of a system."
+"What is the logic level of the CS pin?","The CS pin is a TTL-Level input, which means it operates at a transistor-transistor logic level."
+"What is the effect of CS being low on data transfers?","When CS is low, it enables data transfers between the SID and the microprocessor."
+"What is the relationship between CS and the microprocessor?","The CS pin controls data transfers between the SID and the microprocessor, and it must be low for any transfer to occur."
+"How does the CS pin affect the SID register?","The CS pin controls access to the SID register, and it must be low for a Read or Write operation to occur."
+"What is the significance of the CS pin in the SID chip?","The CS pin is a critical input that enables or disables data transfers between the SID and the microprocessor."
+"What is the role of the CS pin in the memory map of a system?","The CS pin allows the SID to reside in the memory map of a system, enabling the microprocessor to access the SID registers."

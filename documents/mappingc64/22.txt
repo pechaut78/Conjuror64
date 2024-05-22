@@ -1,0 +1,7 @@
+
+
+address        $22-$25        INDEX
+Miscellaneous Temporary Pointers and Save Area
+
+This area is used by many BASIC routines to hold temporary pointers
+and calculation results.

@@ -1,0 +1,11 @@
+question,answer
+"what is the command to save a program on tape?","The command to save a program on tape is SAVE \"PROGRAM NAME\", where \"PROGRAM NAME\" can be up to 16 characters long."
+"What happens after you hit <RETURN> after typing the SAVE command?","After you hit <RETURN> after typing the SAVE command, the computer will respond with PRESS PLAY AND RECORD ON TAPE, prompting you to press both the record and play keys on the datassette."
+"What is the purpose of pressing the record and play keys on the datassette?","The purpose of pressing the record and play keys on the datassette is to save the program on tape, which will cause the screen to blank and turn the color of the border."
+"What happens after the program is saved on tape?","After the program is saved on tape, the READY prompt will reappear, indicating that you can start working on another program or just turn off the computer for a while."
+"What is the maximum length of the program name when saving a program on tape?","The maximum length of the program name when saving a program on tape is 16 characters."
+"What is the format of the SAVE command?","The format of the SAVE command is SAVE \"PROGRAM NAME\", where \"PROGRAM NAME\" is the name of the program you want to save."
+"What is the purpose of the SAVE command?","The purpose of the SAVE command is to save a program on tape, allowing you to store and retrieve your programs for later use."
+"What happens to the screen after pressing the record and play keys on the datassette?","After pressing the record and play keys on the datassette, the screen will blank and turn the color of the border."
+"What prompt will reappear after the program is saved on tape?","The READY prompt will reappear after the program is saved on tape, indicating that you can start working on another program or just turn off the computer for a while."
+"What do you need to do after the computer responds with PRESS PLAY AND RECORD ON TAPE?","After the computer responds with PRESS PLAY AND RECORD ON TAPE, you need to press both the record and play keys on the datassette to save the program on tape."

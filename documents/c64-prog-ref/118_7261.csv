@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the BEQ instruction?","The opcode for the BEQ instruction is F0."
+"what is the addressing mode for the BEQ instruction?","The addressing mode for the BEQ instruction is Relative."
+"what is the assembly language form for the BEQ instruction?","The assembly language form for the BEQ instruction is BEQ Oper."
+"how many bytes does the BEQ instruction occupy?","The BEQ instruction occupies 2 bytes."
+"how many cycles does the BEQ instruction take?","The BEQ instruction takes 2 cycles, but it takes 1 more cycle if the branch occurs to the same page and 2 more cycles if the branch occurs to the next page."
+"what is the condition for the BEQ instruction to branch?","The BEQ instruction branches on result zero."
+"what happens when the result of the instruction is zero?","When the result of the instruction is zero, the BEQ instruction branches."
+"can the BEQ instruction branch to the same page?","Yes, the BEQ instruction can branch to the same page, and it takes 1 more cycle to do so."
+"can the BEQ instruction branch to the next page?","Yes, the BEQ instruction can branch to the next page, and it takes 2 more cycles to do so."
+"what is the purpose of the BEQ instruction?","The purpose of the BEQ instruction is to branch to a location if the result of the previous instruction is zero."

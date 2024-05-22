@@ -1,0 +1,11 @@
+question,answer
+"what happens when you run the program with the input statement?","When you run the program, a question mark will appear, indicating that the computer is waiting for you to type something. You can enter any character or group of characters from the keyboard and hit <RETURN>. The computer will then respond with 'YOU TYPED:' followed by the information you entered."
+"how do you exit the program?","To exit the program, you need to hold down the <RUN/STOP> and <RESTORE> keys."
+"what is the purpose of the input statement?","The purpose of the INPUT statement is to allow the user to enter information, which can be either numeric or string variables, and even prompt the user with a message."
+"what is the format of the input statement?","The format of the INPUT statement is either 'INPUT 'PROMPT MESSAGE';VARIABLE' or just 'INPUT VARIABLE'."
+"what happens when you enter a character or group of characters and hit <RETURN>?","When you enter a character or group of characters and hit <RETURN>, the computer will respond with 'YOU TYPED:' followed by the information you entered."
+"what is the purpose of the question mark that appears on the screen?","The question mark that appears on the screen indicates that the computer is waiting for you to type something."
+"can you input numeric variables using the input statement?","Yes, you can input numeric variables using the INPUT statement."
+"how do you prompt the user with a message using the input statement?","You can prompt the user with a message using the INPUT statement by adding a prompt message before the variable, for example 'INPUT 'PROMPT MESSAGE';VARIABLE'."
+"what is the purpose of the 'YOU TYPED:' message?","The purpose of the 'YOU TYPED:' message is to display the information that the user entered."
+"can you input string variables using the input statement?","Yes, you can input string variables using the INPUT statement."

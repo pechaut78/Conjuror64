@@ -1,0 +1,13 @@
+question,answer
+"What are the key differences between the MOS 6510 used in the Commodore 64 and the generic MOS 6502, and how does it interact with other components on the C64?","The MOS 6510
+Except for the pin layout, the MOS 6510 that is used
+in the C64 differs from the generic MOS 6502 in two
+ways: It can make the bus tri-state when not used, so
+the VIC can use it, and it has a 6 bit I/O port built in,
+which can be controlled using zero page locations 0
+and 1. In register 0, each bit from 0-5 set it to output
+if 1, and to input if 0. Bits 0-5 in register 1 are the actual I/O pins. On the C64, bits 0-2 are outputs and
+control bank switching, they turn the ROMs and the
+I/O area on and off. Bits 3-5 go to the tape connector
+and control the motor and the data sent to the head,
+and detect whether a key on the tape deck is pressed."

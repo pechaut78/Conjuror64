@@ -1,0 +1,21 @@
+
+FORMAT NEW DISK:
+OPEN (file#), (divlce#),. (channel#):PRINT*, "N:NAME, ID"
+EXPLANATION - Open channel, file# (can be any number from 1 tp
+255, number greater than 127 should be avoided, because they can
+generate unwanted linefeeds after the return character), the number 8
+is the device number for the disk drive, channel number can be any
+number from 2 to 15, channels 0 to 1 are reserved fpr the operating
+system (used for loading and saving), 2 through 14 are used for data to
+files, the command channel is 15. The prlnt# command directs data to
+the disk drive, n is the abbreviation for new (this command is used
+when formatting a disk fpr the first time), the name can be up to
+sixteen characters, the ID is two characters, In any combination of
+numbers, letters or both.
+ The format can be abbreviated as follows:
+OPEN15,8,15"N:NAME,ID" (press return key)
+After disk is formatted the FILE that was open must be closed, using
+this statement: CLQSE15 (press return key)..
+HINT - If you already have a formatted disk and wish to reformat it.
+There is a faster method than the standard format it is as follows:
+OPEN15,8,15,"S:NAME" (press return key)

@@ -1,0 +1,11 @@
+question,answer
+"what is the total number of characters the Commodore 64 screen can hold?","The Commodore 64 screen is capable of holding 1000 characters, which is arranged in a grid of 40 columns by 25 lines, with each square representing a memory location."
+"How many possible values can each memory location on the Commodore 64 screen hold?","Each memory location on the Commodore 64 screen can hold a number from 0 to 255, which represents the different characters the Commodore 64 can display."
+"What is the purpose of POKEing a value in a screen memory location?","By POKEing the value for a character in the appropriate screen memory location, that character will be displayed in the proper position on the screen."
+"How is the layout of the Commodore 64 screen arranged?","The layout of the Commodore 64 screen is arranged as a grid, with each square representing a memory location."
+"What is the total number of memory locations set aside to handle what is placed on the Commodore 64 screen?","There are 1000 memory locations set aside to handle what is placed on the Commodore 64 screen."
+"What is the range of values that can be stored in each memory location on the Commodore 64 screen?","Each memory location on the Commodore 64 screen can store a value from 0 to 255."
+"What is represented by the values stored in each memory location on the Commodore 64 screen?","The values stored in each memory location on the Commodore 64 screen represent the different characters the Commodore 64 can display."
+"How many columns and lines make up the grid of the Commodore 64 screen?","The Commodore 64 screen is arranged in a grid of 40 columns by 25 lines."
+"What is the significance of the memory locations on the Commodore 64 screen?","The memory locations on the Commodore 64 screen are used to store the characters that are displayed on the screen."
+"What is the relationship between the memory locations and the characters displayed on the Commodore 64 screen?","The memory locations on the Commodore 64 screen store the values that represent the characters displayed on the screen, and by POKEing the correct value in the correct location, the corresponding character will be displayed."

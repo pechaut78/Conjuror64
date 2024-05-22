@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for absolute jmp instruction?","the opcode for absolute jmp instruction is 4C, which is used to jump to a new location in the program, and it takes 3 bytes and 3 cycles to execute"
+"what is the addressing mode for jmp (oper) instruction?","the addressing mode for jmp (oper) instruction is indirect, which is denoted by jmp (oper) in assembly language form, and it has an opcode of 6C, taking 3 bytes and 5 cycles to execute"
+"what is the purpose of jmp instruction?","the purpose of jmp instruction is to jump to a new location in the program, it is an unconditional jump instruction that transfers the program control to a new location specified by the operand"
+"what is the difference between absolute and indirect jmp instructions?","the main difference between absolute and indirect jmp instructions is the way they specify the target address, absolute jmp instruction specifies the target address directly, whereas indirect jmp instruction specifies the address of a memory location that contains the target address"
+"what is the cycle count for indirect jmp instruction?","the cycle count for indirect jmp instruction is 5 cycles, which is higher than the absolute jmp instruction due to the additional memory access required to fetch the target address"
+"what is the opcode for indirect jmp instruction?","the opcode for indirect jmp instruction is 6C, which is used to jump to a new location in the program indirectly, by fetching the target address from a memory location"
+"what is the byte count for absolute jmp instruction?","the byte count for absolute jmp instruction is 3 bytes, which includes the opcode and the target address"
+"can jmp instruction be used to implement loops?","yes, jmp instruction can be used to implement loops, by jumping back to the beginning of the loop body, it can be used to create a loop that repeats a sequence of instructions"
+"what is the assembly language form of absolute jmp instruction?","the assembly language form of absolute jmp instruction is jmp oper, where oper is the target address"
+"what is the role of jmp instruction in program control flow?","the role of jmp instruction in program control flow is to transfer the program control to a new location, it is used to implement conditional and unconditional jumps, loops, and subroutines"

@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $AE-$AF?","address       $AE-$AF        EAL
+Pointer to Ending Address of Load (End of Program)
+
+This location is set by the Kernal routine SAVE to point to the ending
+address for SAVE, LOAD, or VERIFY."

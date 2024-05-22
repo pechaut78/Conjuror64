@@ -1,0 +1,11 @@
+question,answer
+"What happens to the cursor when a program line is placed in memory for deferred execution in C64 Basic?","When a program line is placed in memory for deferred execution in C64 Basic, the cursor moves to the next line, but no READY prompt is printed."
+"What is the purpose of the LIST command in C64 Basic?","The LIST command in C64 Basic is used to print every line currently in the program."
+"What are the valid range of line numbers in C64 Basic?","In C64 Basic, line numbers must be integers in the range from 0 to 63999. Any other numbers will cause the SYNTAX ERROR to be printed."
+"What is the use of line numbers in C64 Basic?","The line number in C64 Basic is used only to indicate the position in the program in which a line is to be placed. A line numbered 10 is not necessarily the tenth line in a program."
+"What happens if the computer encounters an unused line number in C64 Basic?","In C64 Basic, the computer ignores unused line numbers."
+"What message is displayed if an invalid line number is used in C64 Basic?","If an invalid line number is used in C64 Basic, the SYNTAX ERROR message will be printed."
+"What is the maximum value for a line number in C64 Basic?","The maximum value for a line number in C64 Basic is 63999."
+"What is the minimum value for a line number in C64 Basic?","The minimum value for a line number in C64 Basic is 0."
+"What is the effect of using a decimal number as a line number in C64 Basic?","Using a decimal number as a line number in C64 Basic will result in a SYNTAX ERROR."
+"What is the effect of using a negative number as a line number in C64 Basic?","Using a negative number as a line number in C64 Basic will result in a SYNTAX ERROR."

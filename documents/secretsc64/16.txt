@@ -1,0 +1,19 @@
+
+Screen Organisation and Use on the C64
+
+As we have already mentioned, the high resolution screen is 
+320 dots wide by 200 dots high. The obvious way to number 
+the screen would be to have the top left corner as 0,0 and 
+then number the X direction from to 319 and the Y direc- 
+tion from to 199. Figure 7.1 shows this logical screen 
+numbering. 
+
+Unfortunately, the high resolution screen memory isn't 
+organised in this way. Figure 7.2 shows the physical screen 
+numbering. 
+
+Obviously the logical numbering system is the one which 
+we want to be using for drawing on the high resolution screen. 
+This means that we will need a conversion routine to con- 
+vert from the logical numbering system to the physical screen 
+organisation.

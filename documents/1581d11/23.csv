@@ -1,0 +1,11 @@
+question,answer
+"what happens when a diskette is inserted into the drive?","When a diskette is inserted into the drive, its directory is automatically re-read into a disk buffer, and you would use the INITIALIZE command only if that information became unreliable."
+"what is the purpose of the INITIALIZE command?","The purpose of the INITIALIZE command is to re-read the disk directory into the disk buffer when the information becomes unreliable."
+"what is the format for the INITIALIZE command?","The format for the INITIALIZE command is PRINT#15,\"INITIALIZEdrive#\" or it may be abbreviated to PRINT#15,\"Idrive#\"."
+"what is the significance of file 15 in the INITIALIZE command?","The significance of file 15 in the INITIALIZE command is that it is assumed to be the command channel that is opened."
+"what does the drive# represent in the INITIALIZE command?","The drive# in the INITIALIZE command represents the disk drive number, which is 0 in the example given."
+"can you provide an example of the INITIALIZE command?","An example of the INITIALIZE command is PRINT#15,\"I0\" or PRINT#15,\"INITIALIZE0\"."
+"what happens if the disk directory information becomes unreliable?","If the disk directory information becomes unreliable, you would use the INITIALIZE command to re-read the disk directory into the disk buffer."
+"what is the purpose of re-reading the disk directory into the disk buffer?","The purpose of re-reading the disk directory into the disk buffer is to ensure that the information is reliable and up-to-date."
+"can the INITIALIZE command be used at any time?","The INITIALIZE command should only be used when the disk directory information becomes unreliable, otherwise, it is not necessary."
+"what is the relationship between the INITIALIZE command and the disk buffer?","The INITIALIZE command is used to re-read the disk directory into the disk buffer when the information becomes unreliable, ensuring that the disk buffer has the most up-to-date and reliable information."

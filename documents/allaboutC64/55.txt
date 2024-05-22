@@ -1,0 +1,23 @@
+
+
+C64 Basic:
+• There are no restrictions on the line numbers in the list,
+other than that no variables or expressions are allowed.
+The line numbers do not have to be in increasing order or
+increment by the same number, although programmers have
+a tendency to use the numbers that way.
+• The same line number can be used more than once in the
+same list.
+• Consecutive commas are counted as meaning that a line
+number of 0 is intended. It is not possible to make ON work
+with only selected values in a range.
+• One ON statement can often replace several IF-THEN state
+ments. For this reason the ON statement is considered
+another form of conditional logic.
+• Sometimes it is necessary to use a couple of ON statements
+together, if the line number list is too long. In such a case,
+the number of line numbers in the first line must be sub
+tracted from the value in the second ON statement.
+• Because the ON statement can perform a GOTO or GOSUB,
+it will cause the UNDEFD STATEMENT error to be gen
+erated when a requested line is not found.

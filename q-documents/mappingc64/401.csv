@@ -1,0 +1,243 @@
+question,answer
+"What is the purpose of the memory location at address 53274 ($D01A)?","address     3274         $D01A          IRQMASK
+IRQ Mask Register
+
+Bit 0:  Enable Raster Compare IRQ (1=interrupt enabled)
+Bit 1:  Enable IRQ to occure when sprite collides with display of
+  normal
+        graphics data (1=interrupt enabled)
+Bit 2:  Enable IRQ to occur when two sprites collide (1=interrupt
+  enabled)
+Bit 3:  Enable light pen to trigger an IRQ (1=interrupt enabled)
+Bits 4-7:  Not used
+
+This register is used to enable an IRQ request to occur when one of
+the VIC-II chip interrupt conditions is met.  In order to understand
+what that means, and how these interrupts can extend the range of
+options available to a programmer, you must first understand what an
+interrupt is.
+
+An interrupt is a signal given to the microprocessor (the brains of
+the computer) that tells it to stop executing its machine language
+program (for example, BASIC), and to work on another program for a
+short time, perhaps only a fraction of a second.  After finishing the
+interrupt program, the computer goes back to executing the main
+program, just as if there had never been a detour.
+
+Bit 0.  This bit enables the Raster Compare IRQ.  The conditions for
+this IRQ are met when the raster scan reaches the video line indicated
+by the value written to the Raster Register at 53266 ($D012) and Bit 7
+of 53265 ($D011).  Again, an explanation of the terminology is in
+order.
+
+In the normal TV display, a beam of electrons (raster) scans the
+screen, starting in the top-left corner, and moving in a straight line
+to the right, lighting up appropriate parts of the screen line on the
+way.  When it comes to the right edge, the beam moves down a line, and
+starts again from the left.  There are 262 such line that are scanned
+by the 64 display, 200 of which form the visible screen area.  This
+scan updates the complete screen display 60 times every second.
+
+The VIC-II chip keeps track of which line is being scanned, and stores
+the scan number in the Raster Register at 53266 and 53265 ($D012 and
+$D011).  The Raster Register has two functions.  When read, it tells
+what line is presently being scanned.  But when written to, it
+designates a particular scan line as the place where a raster
+interrupt will occur.
+
+At the exact moment that the raster beam line number equals the number
+written to the register, Bit 0 of the status register will be set to
+1, showing that the conditions for a Raster Compare Interrupt have
+been fulfulled.  If the raster interrupt is enabled then,
+simultaneously, the interrupt program will be executed.  This allows
+the user to reset any of the VIC-II registers at any point in the
+display, and thus change character sets, background color, or graphics
+mode for only a part of the screen display.
+
+The interrupt routine will first check if the desired condition is the
+source of the interrupt (see above entry) and then make the changes to
+the screen display.  Once you have written this interrupt routine, you
+must take the following steps to install it.
+
+1.  Set the interrupt disable flag in the status register with an SEI
+instruction.  This will disable all interrupts and prevent th system
+from crashing while you are changing the interrupt vectors.
+
+2.  Enable the raster interrupt.  This is done by setting Bit 0 of the
+VIC- II chip interrupt enable register at location 53274 ($D01A) to 1.
+
+3.  Indicate the scan line on which you want the interrupt to occur by
+writing to the raster registers.  Don't forget that this is a nine-bit
+value, and you must set both the low byte (in location 53266 ($D012))
+and the high bit (in the register at 53265 ($D011)) in order to insure
+that the interrupt will start at the scan line you want it to, and not
+256 lines earlier or later.
+
+4.  Let the computer know where the machine language routine that you
+want the interrupt to execute starts.  This is done by placing the
+address in the interrupt vector at locations 788-789 ($314-$315).
+This address is split into two parts, a low byte and a high byte, with
+the low byte stored at 788.
+
+To calculate the two values for a given address AD, you may use the
+formula HIBYTE=INT(AD/156) and LOWBYTE=AD-(HIBYTE*256).  The value
+LOWBYTE would go into location 788, and the value HIBYTE would go into
+location 789.
+
+5.  Reenable interrupts with a CLI instruction, which clears the
+interrupt disable flag on the status register.
+
+When the computer is first turned on, the interrupt vector is set to
+point to the normal hardware timer interrupt routine, the one that
+advances the jiffy clock and reads the keyboard.  Since this interrupt
+routine uses the same vector as the raster interrupt routine, it is
+best to turn off the hardware timer interrupt by putting a value of
+127 in location 56333 ($DC0D).
+
+If you want the keyboard and jiffy clock to function normally while
+your interrupt is enabled, you must preserve the contents of locations
+788 and 789 before you change them to point to your new routine.  Then
+you must have your interrupt routine jump to the old interrupt routine
+exactly once per screen refresh (every 1/60 second).
+
+Another thing that you should keep in mind is that at least two raster
+interrupts are required if you want to change only a part of the
+screen.  Not only must the interrupt routine change the display, but
+it must also set up another raster interrput that will change it back.
+
+The sample program below uses a raster-scan interrupt to divide the
+display into three sections.  The first 80 scan lines are in
+high-resolution bitmap mode, the next 40 are regular text, and the
+last 80 are in multicolor bitmap mode.  The screen will split this way
+as soon as a SYS to the routine that turns on the interrupt occurs.
+The display will stay split even after the program ends.  Only if you
+hit the STOP and RESTORE keys together will the display return to
+normal.
+
+The interrupt uses a table of values that are POKEd into four key
+locations during each of the three interrupts, as well as values to
+determine at what scan lines the interrupt will occur.  The locations
+affected are Control Register 1 (53265, $D011), Control Register 2
+(53270, $D016), the Memory Control Register (53272, $D018), and
+Background Color 0 (53281, $D021).  The data for the interrupt routine
+is contained in lines 49152-49276.  Each of these line numbers
+corresponds to the locations where the first data byte in the
+statement is POKEd into memory.
+
+If you look at lines 49264-49276 of the BASIC program, you will see
+REMark statements that explain which VIC-II registers are affected by
+the DATA statements in each line.  The number in these DATA
+startements appear in the reverse order in which they are put into the
+VIC register.  For example, line 49273 holds the data that will go
+into Control Register 2.  The last number, 8, is the one that will be
+placed into Control Register 2 while the top part of the screen is
+displayed.  The first number, 24, is placed into Control Register 2
+during the bottom part of the screen display, and changes that portion
+of the display to multicolor mode.
+
+The only tricky part in determining which data byte affects which
+interrupt comes in line 49264, which holds the data that determines
+the scan line at which each interrupt will occur.  Each DATA statement
+entry reflects the scan line at which the next interrupt will occur.
+The first item in line 49264 is 49.  Even though this is the entry for
+the third interrupt, the next to be generates is the first interrupt,
+which occurs at the top of the screen.  Likewise, the last data item
+of 129 is used during the first interrupt to start the next interrupt
+at scan line 129.
+
+Try experimenting with these values to see what results you come up
+with.  For example, if you change the number 170 to 210, you will
+increase the text area by five lines (40 scan lines).
+
+By changing the values in the data tables, you can alter the effect of
+each interrupt.  Change the 20 in line 49276 to 22, and you will get
+lowercase text in the middle of the screen.  Change the first 8 in
+line 49273 to 24, and you'll get multicolor text in the center window.
+Each of these table items may be used exactly like you would use the
+corresponding register, in order to change background color, to obtain
+text or bitmap graphics, regular or multicolor modes, screen blanking
+or extended background color mode.
+
+It is even possible to change the table values during a program, by
+POKEing the new value into the memory location where those table
+values are stored.  In that way, you can, for example, change the
+background color of any of the screen parts while the program is
+running.
+
+5 FOR I=0 TO 7:BI(I)=2^I:NEXT
+10 FOR I=49152 TO 49278:READ A:POKE I,A:NEXT:SYS12*4096
+20 PRINT CHR$(147):FOR I=0 TO 8:PRINT:NEXT
+30 PRINT'THE TOP AREA IS HIGH-RES BIT MAP MODE'
+40 PRINT:PRINT'THE MIDDLE AREA IS ORDINARY TEXT '
+50 PRINT:PRINT'THE BOTTOM AREA IS MULTI-COLOR BIT MAP'
+60 FORG=1384 TO 1423:POKE G,6:NEXT
+70 FORG=1024 TO 1383:POKEG,114:POKE G+640,234:NEXT
+80 A$='':FOR I=1 TO 128:A$=A$+'@':NEXT:FOR I=32 TO 63 STEP 2
+90 POKE 648,I:PRINT CHR$(19)CHR$(153);A$;A$;A$;A$:NEXT:POKE 648,4
+100 BASE=2*4096:BK=49267
+110 H=40:C=0:FORX=0TO319:GOSUB150:NEXT
+120 H=160:C=0:FORX=0TO319STEP2:GOSUB150:NEXT:C=40
+125 FORX=1TO319STEP2:GOSUB150:NEXT
+130 C=80:FOR X=0 TO 319 STEP2:W=0:GOSUB150:W=1:GOSUB150:NEXT
+140 GOTO 140
+150 Y=INT(H+20*SIN(X/10+C)):BY=BASE+40*(Y AND 248)+(Y AND 7)+(X AND 504)
+160 POKE BY,PEEK(BY) OR (BI(ABS(7-(XAND7)-W))):RETURN
+49152 DATA 120, 169, 127, 141, 13, 220
+49158 DATA 169, 1, 141, 26, 208, 169
+49164 DATA 3, 133, 251, 173, 112, 192
+49170 DATA 141, 18, 208, 169, 24, 141
+49176 DATA 17, 208, 173, 20, 3, 141
+49182 DATA 110, 192, 173, 21, 3, 141
+49188 DATA 111, 192, 169, 50, 141, 20
+49194 DATA 3, 169, 192, 141, 21, 3
+49200 DATA 88, 96, 173, 25, 208, 141
+49206 DATA 25, 208, 41, 1, 240, 43
+49212 DATA 190, 251, 16, 4, 169, 2
+49218 DATA 133, 251, 166, 251, 189, 115
+49224 DATA 192, 141, 33, 208, 189, 118
+49230 DATA 192, 141, 17, 208, 189, 121
+49236 DATA 192, 141, 22, 208, 189, 124
+49242 DATA 192, 141, 24, 208, 189, 112
+49248 DATA 192, 141, 18, 208, 138, 240
+49254 DATA 6, 104, 168, 104, 170, 104
+49260 DATA 64, 76, 49, 234
+49264 DATA 49, 170, 129 :REM SCAN LINES
+49267 DATA 0, 6, 0:REM BACKGROUND COLOR
+49270 DATA 59, 27,59:REM CONTROL REG. 1
+49273 DATA 24, 8, 8:REM CONTROL REG. 2
+49276 DATA 24, 20, 24:REM MEMORY CONTROLRUN
+
+Besides enabling the creation of mixed graphics-modes screens, the
+Raster Compare Interrupt is also useful for creating scrolling zones,
+so that some parts of the screen can be fine-scrolled while the rest
+remains stationary.
+
+Bit 1 enables the light pen interrupt.  This interrupt can occur when
+the light of the raster beam strikes the light-sensitive device in the
+pen's tip, causing it to close the fire button switch on joystick
+Controller Port #1.
+
+The light pen interrupt affords a method of signaling to a program
+that the pen is being held to the screen, and that its position can be
+read.  Some light pens provide a push-button switch which grounds one
+of the other lines on the joystick port.  This switch can be pressed
+by the user as an additional signal that the pen is properly
+positioned.  Its location can then be read in the light pen position
+registers (53267-8, $D013-4).
+
+Bit 2 enables the sprite-foreground collision interrupt.  This
+interrupt can occur if one of the srpte character's dots is touching
+one of the dots from the foreground display of either text character
+or bitmap graphics.
+
+Bit 3 enables the sprite-sprite collision interrupt, which can occur
+if one of the sprite character's dots is touching one of the dots of
+another sprite character.
+
+These two interrupts are useful for games, where such collisions often
+require that some action be taken immediately.  Once the interrupt
+signals that a collision has occurred, the interrupt routine can check
+the Sprite- Foreground Collision Register at 53279 ($D01F), or the
+Sprite-Sprite Collision Register at 53278 ($D01E), to see which sprite
+or sprites are involved in the collision.  See the entry for those
+locations for more details on collisions."

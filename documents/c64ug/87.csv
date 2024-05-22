@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the RETURN statement in BASIC?","The RETURN statement is used in conjunction with GOSUB to return control to the statement immediately following the GOSUB command, allowing the program to resume execution from where it left off."
+"in what context is the RETURN statement used?","The RETURN statement is always used in conjunction with GOSUB, and is not a standalone statement, it relies on a previous GOSUB command to function correctly."
+"what happens when a RETURN statement is encountered without a previous GOSUB?","If a RETURN statement is encountered without a previous GOSUB command, a RETURN WITHOUT GOSUB ERROR will occur, indicating that the RETURN statement was used incorrectly."
+"can the RETURN statement be used as a standalone statement?","No, the RETURN statement cannot be used as a standalone statement, it must be used in conjunction with a GOSUB command to function correctly."
+"what is the relationship between RETURN and GOSUB?","The RETURN statement is used to return control to the statement immediately following the GOSUB command, allowing the program to resume execution from where it left off."
+"what error occurs when a RETURN is encountered without a GOSUB?","A RETURN WITHOUT GOSUB ERROR occurs when a RETURN statement is encountered without a previous GOSUB command."
+"in what way does the RETURN statement interact with the GOSUB command?","The RETURN statement interacts with the GOSUB command by returning control to the statement immediately following the GOSUB command, allowing the program to resume execution from where it left off."
+"what is the role of the RETURN statement in a BASIC program?","The RETURN statement plays a crucial role in a BASIC program by allowing the program to return control to a previous point in the program, allowing for more complex program flow control."
+"how does the RETURN statement affect program flow?","The RETURN statement affects program flow by returning control to a previous point in the program, allowing the program to resume execution from where it left off."
+"is the RETURN statement optional when using GOSUB?","No, the RETURN statement is not optional when using GOSUB, it is a required statement to return control to the statement immediately following the GOSUB command."

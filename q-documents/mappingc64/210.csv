@@ -1,0 +1,57 @@
+question,answer
+"What is the purpose of the memory location at address $A000 to $BFFF?","Locations 40960 to 49152 ($A000 to $BFFF) are used by the BASIC ROM
+when it is selected (which is the default condition).  BASIC is the
+64's main program, which is always run if there is no autostart
+cartridge inserted at power-up time.  When the 64 tells you READY,
+that's BASIC talking.
+
+The BASIC interpreter that comes with the 64 is, aside from being
+located in a different memory space, almost identical to the Microsoft
+BASIC interpreter found on the VIC-20.  Both of these interpreters are
+slightly modified versions of PET BASIC 2.0, also known as PET BASIC
+3.0 or Upgrade BASIC, because it was an upgraded version of the BASIC
+found on the original PET.
+
+This is a somewhat mixed blessing, because while PET BASIC was, in its
+day, quote an advanced language for use with an eight-bit
+microprocessor, it lacks several of the features (such as error
+trapping) which are now standard on most home computers.  And, of
+course, it makes no provision whatever for easy use of the many
+graphics and sound capabilities made available by the new dedicated
+video and sound support chips.
+
+On the other hand, its faithfulness to the original Commodore BASIC
+allows a large body of software to be translated for the 64 with
+little change (in most cases, the PET Emulator program from Commodore
+will allow you to run PET programs with no changes).  Programming aids
+and tricks developed for the PET and VIC will, for the most part,
+carry over quite nicely to the 64.  Although there is no official
+source code listing of the ROM available from Commodore, this version
+of BASIC has been around long enough that it has been thoroughly
+disassembled, dissected, and documented by PET users.
+
+The labels used here correspond to those used by Jim Butterfield in
+his PET memory maps, which are well-known among PET BASIC users.  They
+should, therefore, provide some assistance in locating equivalent
+routines on the two machines.  A good description of the workings of
+PET BASIC can be found in Programming the PET/CBM by Raeto West.
+
+It is beyond the scope of this book to detail the inner workings of
+each routine in the BASIC interpreter.  However, the following summary
+of routines and their functions should aid the user who is interested
+in calling BASIC routines from his or her own program, or in modifying
+the BASIC.
+
+Please keep in mind that the entry and exit points listed for routines
+that perform a particular function are to be used as guideposts, and
+not absolutes.  In fact, BASIC enters many of these routines from
+slightly different places to accomplish different tasks.  Some
+subroutines are called by so many commands that it is hard to say
+which they belong to.  You will even find that some whole commands are
+part of other commands.  Where it is important for you to know the
+details of a particular routine, you will need to obtain a disassembly
+of that section and look at the machine language program itself.
+
+It should be noted that when BASIC is not neede,d it can be switched
+out and the RAM underneath can be accessed by the VIC-II chip and used
+for screen graphics.  See location 56576 ($DD00) for more information."

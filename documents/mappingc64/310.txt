@@ -1,0 +1,9 @@
+
+
+
+address         $B6EC          CHRD
+Perform CHR$
+
+The CHR$ routine creates a descriptor on the temporary string stack
+for the one-byte string whose value is specified in the command, and
+sets a pointer to that string.

@@ -1,0 +1,20 @@
+question,answer
+"What is the purpose of the memory location at address $B82D?","address         $B82D          FUWAIT
+Perform WAIT
+
+WAIT gets an address parameter and an integer parameter to use as a
+mask.  WAIT then looks for an optional parameter to use as a pattern
+for the exclusive OR.  Then, the address location is read, its value
+is exclusive ORed with the optional pattern value (or 0 if there is
+none).  This value is ANDed with the mask value.  The command loops
+continuously until the result is not- zero.
+
+The purpose of this command is to allow the program to watch a
+location which can be changed by the system or by outside hardware
+(such as the software clock or keycode value locations).
+
+The AND function lets you check if a bit changes from 0 to 1, while
+the EOR function allows you to check if a bit changes from 1 to 0.
+For more information, see the article 'All About the Wait
+Instruction,' by Louis Sander and Doug Ferguson, in COMPUTE!'s First
+Book of Commodore 64."

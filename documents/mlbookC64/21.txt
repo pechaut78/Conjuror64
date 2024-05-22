@@ -1,0 +1,17 @@
+
+To add two 16-bit numbers, add the low-bytes of each
+operand and then the high-bytes of each operand. If an
+overflow occurs during the addition of the low-bytes,
+the carry flag adjusts for this during the addition of
+the high-bytes. Remember to clear the carry flag before
+adding the low-bytes so that the previous contents of the
+carry flag do not affect the addition. Here is an example
+of adding two numbers NUM1 and NUM2 with the result being
+placed in SUM:
+CLC  ;clear carry flag
+LDA NUM1LOW   ;low half of NUM1
+ADC NUM2LOW   ;low half of NUM2
+STA SUMLOW    ;low half of result
+LDA NUM1HIGH  ;high half of NUMl
+ADC NUM2HIGH  ;high half of NUM2
+STA SUMHIGH   ;high half of result

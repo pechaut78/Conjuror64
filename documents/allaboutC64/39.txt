@@ -1,0 +1,26 @@
+
+C64 Basic:
+Summary
+• The arithmetic operators cannot be used with character
+strings, but the plus sign, which indicates addition when used
+with numbers, means concatenate when used with strings.
+• When two strings are concatenated, the second string is
+appended to the end of the first one, in left-to-right order,
+forming a longer string.
+• The maximum length for a string is 255 characters. Attempt
+ing to make a character string longer than this limit causes
+the STRING TOO LONG error to be printed.
+• All of the relational operators can be used with strings,
+including combinations such as < = .
+• The conditions less than and greater than depend on the
+alphabetical ordering of the characters in the strings. A
+comparison is made on the first character of each string. If
+the first characters are equal, checking will continue to sub
+sequent characters until two are found which are not equal.
+• If one string runs out of characters before unequal characters
+are found, the longer string is greater.
+• The null string is always less than any other string.
+• None of the logical operators can be used directly with
+character strings.
+• With any operator, the two operands must be of the same
+type, or the TYPE MISMATCH error will occur.

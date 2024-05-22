@@ -1,0 +1,19 @@
+C64 Basic:
+
+• The VAL and STR$ functions are used to convert a value
+from one type to the other, to avoid the TYPE MISMATCH
+error.
+• The VAL function takes a string, interprets the characters
+which are related to numbers, and returns a value.
+• VAL ignores any leading spaces.
+• The interpretation uses all characters in the string, starting at
+the beginning, until the end of the string is reached, or a
+character is found which is not related to numbers.
+• The only characters which are related to numbers are the ten
+digits, the plus and minus signs, and the period.
+• The null string and strings which start with a nonnumeric
+character cause VAL to.return a value of 0.
+• The STR$ function takes a number and produces its charac
+ter representation. This representation includes all the
+characters that would be used if the number were printed.
+If the number is positive, the string will start with a space.

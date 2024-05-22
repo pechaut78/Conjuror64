@@ -1,0 +1,11 @@
+question,answer
+"what is a variable in the context of programming?","A variable is a labeled box within the computer that can hold a number or a string of text characters, allowing us to store and manipulate information in the computer. The variable name represents the box, or memory location, where the current value of the variable is stored."
+"what is the purpose of the '%' symbol in a variable name?","The '%' symbol following a variable name indicates that the variable will represent an integer number, allowing us to assign an integer value to the variable."
+"what is an example of a valid integer variable name?","A% is a valid integer variable name, as it follows the format of a variable name with a '%' symbol indicating it will represent an integer number."
+"what is the difference between a string variable and an integer variable?","A string variable is indicated by a '$' symbol following the variable name and represents a text string, whereas an integer variable is indicated by a '%' symbol and represents an integer number."
+"how do you assign a value to a variable?","You can assign a value to a variable by using the assignment operator, for example '10 X% = 15' assigns the value 15 to the integer variable X%."
+"what is the purpose of a variable in a program?","Variables allow us to represent and manipulate information in the computer, making it possible to accomplish feats that would not be possible otherwise."
+"what is an example of a floating point variable?","A1 is a valid floating point variable name, as it follows the format of a variable name without a type indicator."
+"can you assign a text string to a variable?","Yes, you can assign a text string to a variable, for example '30 X$ = "THE SUM OF X% + X ="' assigns the text string "THE SUM OF X% + X =" to the string variable X$."
+"what is the significance of the variable name in a program?","The variable name represents the box, or memory location, where the current value of the variable is stored, allowing us to access and manipulate the value stored in the variable."
+"how do variables make computing easier?","Variables make computing easier by allowing us to represent and manipulate information in the computer, making it possible to accomplish complex tasks and feats that would not be possible otherwise."

@@ -1,0 +1,9 @@
+
+
+
+address        $A906          DATAN
+Search Program Text for the End of the Current BASIC Statement
+
+This routine starts at the current byte of program text and searches
+until it finds a zero character (line delimiter) or a colon character
+that is not in quotes (statement delimiter).

@@ -1,0 +1,5 @@
+
+
+
+address         $B947          NEGFAC
+Replace FAC1 with Its 2's Complement

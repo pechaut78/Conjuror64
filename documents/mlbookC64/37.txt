@@ -1,0 +1,28 @@
+The Jump instructions
+In contrast to the conditional branch commands above, the
+unconditional jump instructions branches to an absolute
+address. These instructions are not dependent on any
+condition and is always executed. The destination address
+is specified in reverse sequence (low-byte followed by
+high-byte) as are the other absolute addresses.
+JMP $C420 direct jump to location $C420
+In addition to the absolute form of the jump instruction,
+there is also an indirect addressing form, a peculiarity
+of the jump instructions. With this instruction, the
+specified address is not jumped to. Instead, this address
+tells where to get the actual destination address. For
+this, two consecutive bytes are again used as a pointer,
+in the format low byte, high byte.
+JMP ($0302) indirect jump to destination pointed
+to by address $0302
+The actual address is now taken from memory locations
+$0302 and $0303. If, for example, $40 and $C8 are in
+these locations, a branch to location $C840 will be made.
+This method of addressing works only with the JMP
+instruction.
+
+The operating system of the Commodore 64 makes use of
+this method of addressing. There are several addresses
+(called vectors) located from $300 to $33C, that contain
+addresses for indirect JMPs. The operating system uses
+these vectors for performing frequently used routines.

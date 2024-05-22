@@ -1,0 +1,18 @@
+
+C64 Basic:
+Conditional logic is implemented  by means
+of the IF-THEN statement.
+• The syntax for the IF-THEN statement is the keyword IF, a
+conditional expression, a second keyword THEN, and a
+statement.
+• The conditional expression can be any mathematical phrase.
+• Any statement may be placed after the THEN, even another
+IF-THEN statement.
+The statement after the THEN is executed if the conditional
+expression is true. If it is false, nothing happens. All of the
+statements on the rest of the line are ignored. No error mes-
+sage is printed.
+• A missing THEN keyword causes a SYNTAX ERROR (see
+GOTO exception above)
+• The IF-THEN statement controls the execution of statements
+within a line.

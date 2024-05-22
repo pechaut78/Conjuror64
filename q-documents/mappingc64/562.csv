@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $EA1C?","address              $EA1C
+Store to Screen
+
+This routine stores the character in the .A register to the screen
+address pointed to by 209 ($D1), and stores the color in the .X
+register to the address pointed to by 243 ($F3)."

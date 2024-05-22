@@ -1,0 +1,9 @@
+ Indexed Indirect Addressing
+Another addressing mode is the indexed indirect
+address mode, in contrast to the above indirect
+indexed addressing mode. It works with the X-
+register instead of the Y-register. Here also the
+address is formed from two consecutive zero-page
+locations. When calculating the address, the index
+is first added to the pointer and then the contents
+are used as a pointer to the actual address.

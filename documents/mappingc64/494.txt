@@ -1,0 +1,8 @@
+
+
+
+address              $E092          RADDC
+Additive Constant for RND
+
+The five-byte floating point number stored here is added to the seed
+as part of the process of obtaining the value for RND.

@@ -1,0 +1,17 @@
+
+
+
+address       $B0-$B1        CMP0
+Tape Timing
+
+Location 176 ($B0) is used to determine the value of the adjustable
+timing constant at 146 ($92).  Location 199 is also used in the timing
+of tape reads.
+
+178-179       $B2-$B3        TAPE1
+Pointer: Start of Tape Buffer
+
+On power-on, this pointer is set to the address of the cassette buffer
+(828, $33C).  This pointer must contain an address greater than or
+equal to 512 ($200), or an ILLEGAL DEVICE NUMBER error will be sent
+when tape I/O is tried.

@@ -1,0 +1,16 @@
+
+C64 Basic:
+GET Q(SHIFTED E) A statement that scans the keyboard for a
+key to be key to be typed.
+
+GET# NONE A input/output statement that will input a
+character from a device or file.
+
+GOSUB GO(SHIFT S) A statement that will jump to a routine within
+a program, used with the RETURN statement.
+
+GOTO G(SHIFTED O) A statement that will jump to a line within a
+program. (EXAMPLE: GOTO 10)
+
+IF THEN NONE A statement that sets up a conditional
+branch. (EXAMPLE: IF A$ = T THEN SYS64738 (warm start)).

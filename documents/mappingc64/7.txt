@@ -1,0 +1,8 @@
+
+
+address            $8             ENDCHR
+Search Character for Statement Termination or Quote
+
+Like location 7, this location is used as a work byte during the
+tokenization of a BASIC statement.  Most of the time, its value is 0
+or 34.

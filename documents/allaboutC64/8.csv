@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the PRINT statement in C64 Basic?","The PRINT statement in C64 Basic is used to output information to the screen. It can be used to print a value at the current cursor position or to leave a blank line on the screen if no value is specified."
+"What happens to the cursor after a PRINT statement is executed in C64 Basic?","After a PRINT statement is executed in C64 Basic, the computer prints a RETURN, which moves the cursor back to the left edge and down one row."
+"Can a value be specified after the PRINT keyword in C64 Basic?","Yes, a value can be specified after the PRINT keyword in C64 Basic. When a value is placed after the keyword, it will be printed beginning at the place on the screen currently pointed to by the cursor."
+"What is the effect of not specifying a value after the PRINT keyword in C64 Basic?","If no value is specified after the PRINT keyword in C64 Basic, the automatic RETURN leaves a blank line on the screen."
+"What is the default behavior of the cursor after a PRINT statement in C64 Basic?","After a PRINT statement is executed in C64 Basic, the cursor moves back to the left edge and down one row by default."
+"How does the PRINT statement output information to the screen in C64 Basic?","The PRINT statement in C64 Basic outputs information to the screen by printing a value at the current cursor position or leaving a blank line on the screen if no value is specified."
+"What is the effect of the RETURN after a PRINT statement in C64 Basic?","The RETURN after a PRINT statement in C64 Basic moves the cursor back to the left edge and down one row."
+"Is it necessary to specify a value after the PRINT keyword in C64 Basic?","No, it is not necessary to specify a value after the PRINT keyword in C64 Basic. If no value is specified, the automatic RETURN leaves a blank line on the screen."
+"What happens to the cursor after a PRINT statement with no value specified in C64 Basic?","After a PRINT statement with no value specified in C64 Basic, the cursor moves back to the left edge and down one row, leaving a blank line on the screen."
+"How does the PRINT statement affect the cursor in C64 Basic?","The PRINT statement in C64 Basic affects the cursor by moving it back to the left edge and down one row after executing a PRINT statement."

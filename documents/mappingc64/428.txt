@@ -1,0 +1,43 @@
+
+
+
+address              $D405          ATDCY1
+Voice 1 Attack/Decay Register
+
+Bits 0-3:  Select decay cycle duration (0-15)
+Bits 4-7:  Select attack cycle duration (0-15)
+
+Bits 4-7 control the duration of the attack cycle.  This is the period
+of time over which the volume will rise from 0 to its peak amplitude.
+There are 16 durations which may be selected.  The way in which the
+number placed here corresponds to the elapsed time of this cycle is as
+follows:
+
+0 = 2 milliseconds           8 = 100 milliseconds
+1 = 8 milliseconds           9 = 250 milliseconds
+2 = 16 milliseconds         10 = 500 milliseconds
+3 = 24 milliseconds         11 = 800 milliseconds
+4 = 38 milliseconds         12 = 1 second
+5 = 56 milliseconds         13 = 3 seconds
+6 = 68 milliseconds         14 = 5 seconds
+7 = 80 milliseconds         15 = 8 seconds
+
+Bits 0-3 control the length of the decay phase, in which the volume of
+the note declines from the peak reached in the attack phase to the
+sustain level.  The number selected corresponds to the length of this
+phase as shown below:
+
+0 = 6 milliseconds           8 = 300 milliseconds
+1 = 24 milliseconds          9 = 750 milliseconds
+2 = 48 milliseconds         10 = 1.5 seconds
+3 = 72 milliseconds         11 = 2.4 seconds
+4 = 114 milliseconds        12 = 3 seconds
+5 = 168 milliseconds        13 = 9 seconds
+6 = 204 milliseconds        14 = 15 seconds
+7 = 240 milliseconds        15 = 24 seconds
+
+Since the two functions share one register, you must multiply the
+attack value by 16 and add it to the decay value in order to come up
+with the number to be placed in the register:
+
+REGISTER VALUE=(ATTACK*16)+DECAY

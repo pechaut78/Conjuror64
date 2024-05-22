@@ -1,0 +1,11 @@
+question,answer
+"what is the screen resolution in bit map mode?","In bit map mode, the screen resolution is 320H * 200V individually controlled display dots, providing a one-to-one correspondence between each displayed dot and a memory bit."
+"how is bit map mode selected?","Bit map mode is selected by setting the BMM bit in register 17 ($11) to a '1'."
+"what is the purpose of the VIDEO MATRIX in bit map mode?","In bit map mode, the VIDEO MATRIX is accessed as in character mode, but the video matrix data is no longer interpreted as character pointers, but rather as color data."
+"what is the role of the VIDEO MATRIX COUNTER in bit map mode?","The VIDEO MATRIX COUNTER is used as an address to fetch the dot data for display from the 8000-byte DISPLAY BASE in bit map mode."
+"how is the display base address formed in bit map mode?","The display base address is formed by combining the following bits: A13, VC9, VC8, VC7, VC6, VC5, VC4, VC3, VC2, VC1, VC0, RC2, RC1, and RC0."
+"what is the size of the DISPLAY BASE in bit map mode?","The DISPLAY BASE is 8000 bytes in size in bit map mode."
+"in bit map mode, what is the relationship between memory bits and displayed dots?","In bit map mode, there is a one-to-one correspondence between each displayed dot and a memory bit."
+"what is the difference in data interpretation between character mode and bit map mode?","In character mode, video matrix data is interpreted as character pointers, whereas in bit map mode, video matrix data is interpreted as color data."
+"what is the register used to select bit map mode?","Register 17 ($11) is used to select bit map mode by setting the BMM bit to a '1'."
+"what is the purpose of the BMM bit in register 17?","The BMM bit in register 17 is used to select bit map mode, allowing for a one-to-one correspondence between each displayed dot and a memory bit."

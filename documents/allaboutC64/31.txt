@@ -1,0 +1,19 @@
+
+
+C64 Basic:
+ The syntax for the GET statement is the keyword GET and a
+variable list.
+• When GET is executed, the computer checks whether a key
+has been pressed. If so, the value of that key is assigned to
+the indicated variable. This is repeated for each variable in
+the list.
+• If no key has been pressed, the variable is assigned the
+value 0.
+The keyboard has a buffer which can store up to ten key
+strokes in the order they were entered. Keys are ignored if
+pressed after the buffer is full.
+• It is good practice to have a program print a prompting mes
+sage when keyboard input is needed.
+• The GET statement can only be used in the program mode;
+an ILLEGAL DIRECT error will be generated if it is used in
+the immediate mode.

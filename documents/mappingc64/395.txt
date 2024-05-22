@@ -1,0 +1,534 @@
+
+
+
+address              $D011          SCROLY
+Vertical Fine Scrolling and Control Register
+
+Bits 0-2:  Fine scroll display vertically by X scan lines (0-7)
+Bit 3:  Select a 24-row or 25-row text display (1=25 rows, 0=24 rows)
+Bit 4:  Blank the entire screen to the same color as the background
+  (0=blank)
+Bit 5:  Enable bitmap graphics mode (1=enable)
+Bit 6:  Enable extended color text mode (1=enable)
+Bit 7:  High bit (Bit 8) of raster compare register at 53266 ($D012)
+
+This is one of the two important multifunction control registers on
+the VIC-II chip.  Its defaule value is 155, which sets the high bit of
+the raster compare to 1, selects a 25-row display, disables the
+blanking feature, and uses a vertical scrolling offset of three scan
+lines.
+
+Bits 0-2.  These bits control vertical fine scrolling of the screen
+display.  This feature allows you to move the entire text display
+smoothly up and down, enabling the display area to act as a window,
+scrolling over a larger text or character graphics display.
+
+Since each row of text is eight scan lines high, if you simply move
+each line of text up one row, the characters travel an appreciable
+distance each time they move, which gives the motion a jerky quality.
+This is called coarse scrolling, and you can see an example of it when
+LISTing a program that is too long to fit on the screen all at one
+time.
+
+By placing a number from 1 to 7 into these three bits, you can move
+the whole screen display down by from 1 to 7 dot spaces.  Stepping
+through the values 1 to 7 allows you to smoothly make the transition
+from having a character appear in one row on the screen to having it
+appear in the next row.  To demonstrate this, type in the following
+sample program, LIST it, and RUN.
+
+10 FOR I= 1 TO 50:FOR J=0 TO 7
+20 POKE 53265, (PEEK(53265)AND248) OR J:NEXTJ,I
+30 FOR I= 1 TO 50:FOR J=7 TO 0 STEP-1
+40 POKE 53265, (PEEK(53265)AND248) OR J:NEXTJ,I
+
+As you can see, after the display has moved seven dot positions up or
+down, it starts over at its original position.  In order to continue
+the scroll, you must do a coarse scroll every time the value of the
+scroll bits goes from 7 to 0, or from 0 to 7.  This is accomplished by
+moving the display data for each line by 40 bytes in either direction,
+overwriting the data for the last line, and introducing a line of data
+at the opposite end of screen memory to replace it.  Obviously, ony a
+machine language program can move all of these lines quickly enough to
+maintain the effect of smooth motion.  The following BASIC program,
+however, will give you an iea of what vertical fine scrolling is like:
+
+10 POKE 53281,0:PRINTCHR$(5);CHR$(147)
+20 FORI=1 TO 27:
+30 PRINTTAB(15)CHR$(145)"            ":POKE 53265,PEEK(53265)AND248
+40 WAIT53265,128:PRINTTAB(15)"I'M FALLING"
+50 FOR J=1 TO 7
+60 POKE53265,(PEEK(53265)AND248)+J
+70 FORK=1TO50
+80 NEXT K,J,I:RUN
+
+Bit 3.  This bit register allows you to select either the normal
+25-line text display (by setting the bit to 1), or a shortened 24-row
+display (by resetting that bit to 0).  This shortened display is
+created by extending the border to overlap the top or bottom row.  The
+characters in these rows are still there; they are just covered up.
+
+The shortened display is designed to aid vertical fine scrolling.  It
+covers up the line into which new screen data is introduced, so that
+the viewer does not see the new data being moved into place.
+
+However, unlink the register at 53270 ($D016) which shortens the
+screen by one character space on either side to aid horizontal
+scrolling in either direction, this register can blank only one
+vertical line at a time.  In order to compensate, it blanks the top
+line when the three scroll bits in this register are set to 0, and
+shifts the blanking one scan line at a time as the value of thee bits
+increases.  Thus the bottom line is totally blanked when these bits
+are set to 7.
+
+Bit 4.  Bit 4 of this register controls the screen blanking feature.
+When this bit is set to 0, no data can be displayed on the screen.
+Instead, the whole screen will be filled with the color of the frame
+(which is controlled by th eBorder Color Register at 53280 ($D020)).
+
+Screen blanking is useful because of the way in which the VIC-II chip
+interacts with the 6510 microprocessor.  Since the VIC-II and the 6510
+both have to address the same memory, they must share the system data
+bus.  Sharing the data bus means that they must take turns whenever
+they want to address memory.
+
+The VIC-II chip was designed so that it fetches most of the data it
+needs during the part of the cycle in which the 6510 is not using the
+data bus.  But certain operations, such as reading the 40 screen codes
+needed for each line of text from video mmeory, or fetching sprite
+data, require that the VIC-II chip get data at a faster rate than is
+possible just by using the off half of the 6510 cycle.
+
+Thus, the VIC-II chip must delay the 6510 for a short amount of time
+while it is using the data bus to gather display information for text
+or bitmap graphics, and must delay it a little more if sprites are
+also enabled.  When you set the screen blanking bit to 0, these delays
+are eliminated, and the 6510 processor is allowed to run at its full
+speed.  This speeds up any processing task a little.
+
+To demonstrate this, run the following short program.  As you will
+see, leaving the screen on makes the processor run about 7 percent
+slower than when you turn it off.  If you perform the same timing test
+on the VIC-20, you will find that it runs at the same speed with its
+screen on as the 64 does with its screen off.  And the same test on a
+PET will run substantially slower.
+
+10 PRINT CHR$(147);TAB(13);"TIMING TEST":PRINT:TI$="000000":GOTO 30
+20 FOR I=1 TO 10000:NEXT I:RETURN
+30 GOSUB 20:DISPLAY=TI
+40 POKE 53265,11:TI$="000000"
+50 GOSUB 20:NOSCREEN=TI:POKE 53265,27
+60 PRINT "THE LOOP TOOK";DISPLAY;" JIFFIES"
+70 PRINT "WITH NO SCREEN BLANKING":PRINT
+80 PRINT "THE LOOP TOOK";NOSCREEN;" JIFFIES"
+90 PRINT "WITH SCREEN BLANKING":PRINT
+100 PRINT "SCREEN BLANKING MAKE THE PROCESSOR"
+110 PRINT "GO";DISPLAY/NOSCREEN*100-100;"PERCENT FASTER"
+
+The above explanation accounts for the screen being turned off during
+tape read and write operations.  The timing of these operations is
+rather critical, and would be affected by even the relatively small
+delay caused by the video chip.  It also explains why the 64 has
+difficulty loading programs from an unmodified 1540 Disk Drive, since
+the 1540 was set up to transfer data from the VIC-20, which does not
+have to contend with these slight delays.
+
+If you turn off the 64 display with a POKE 53265,PEEEK(53265) AND 239,
+you will be able to load programs correctly from an old 1540 drive.
+The new 1541 drive transfers data at a slightly slower rate in the
+default setting, and can be set from software to transfer it at the
+higher rate for the VIC-20.
+
+Bit 5.  Setting Bit 5 of this register to 1 enables the bitmap
+graphics mode.  In this mode, the screen area is broken down into
+64,000 separate dots of light, 320 dots across by 200 dots high.  Each
+dot corresponds to one bit of display memory.  If the bit is set to 1,
+the dot will be displayed in the foreground color.  If the bit is
+reset to 0, it will be displayed in the background color.  This allows
+the display of high-resolution graphics images for games, charts, and
+graphs, etc.
+
+Bitmapping is a common technique for implementing high-resolution
+graphics on a microcomputer.  There are some features of the Commodore
+system which are unusual, however.
+
+Most systems display screen memory sequentially; that is, the first
+byte controls the display of the first eight dots in the upper-left
+corner of the screen, the second byte controls the eight dots to the
+right of that, etc.  In the Commodore system, display memory is laid
+out more along the lines of how character graphics dot-data is
+arranged.
+
+The first byte controls the row of eight dots in the top-left corner
+of the screen, but the next byte controls the eight dots below that,
+and so on until the ninth byte.  The ninth byte controls the eight
+dots directly to the right of those controlled by the first byte of
+display memory.  It is exactly the same as if the screen were filled
+with 1000 programmable characters, with display memory taking the
+place of the character dot-data.
+
+The 64's bitmap graphics mode also resembles character graphics in
+that the foreground color of the dots is set by a color map (although
+it does not use the Color RAM for this purpose).  Four bits of each
+byte of this color memory control the foreground color of one of these
+eight-byte groups of display memory (which form an 8 by 8 grid of 64
+dots).  Unlike character graphics, however, the other four bits
+control the background color that will be seen in the eight-byte
+display group where a bit has a value of 0.
+
+Setting up a bitmap graphics screen is somewhat more complicated than
+just setting this register bit to 1.  You must first choose a location
+for the display memory area, and for the color memory area.  The
+display memory area will be 8192 bytes long (8000 of which are
+actually used for the display) and can occupy only the first or the
+second half of the 16K space which the VIC-II chip can address.
+
+Each byte of bitmap graphics color memory uses four bits for the
+background color as well as four bits for the foreground color.
+Therefore, the Color RAM nybbles at 55296 ($D800), which are wired for
+four bits only, cannot be used.  Another RAM location must therefore
+be found for color memory.
+
+This color memory area will take up 1K (1000 bytes of which are
+actually used to control the foreground and background colors of the
+dots), and must be in the opposite half of VIC-II memory as the
+display data.  Since bitmap graphics require so much memory for the
+display, you may want to select a different 16K bank for VIC-II memory
+(see the discussion of things to consider in selecting a VIC-II memory
+bank at location 56576 ($DD00)).
+
+To keep things simple, however, let's assume that you have selected to
+use the default bank of VIC-II memory, which is the first 16K.  You
+would have to select locations 8192-16383 ($2000-$3FFF) for screen
+memory, because the VIC-II chip sees an image of the character ROM in
+the first half of the 16K block (at locations 4096-8192
+($1000-$1FFF)).  Color memory could be placed at the default location
+of text display memory, at 1024-2047 ($400-$7FF).  Placement of bitmap
+display and color memory is controlled by the VIC Memory Control
+Register at 53272 ($D018).
+
+When in bitmap mode, the lower four bits of this register, which
+normally control the base address of character dot-data, now control
+the location of the 8K bitmap.  Only Bit 3 is significant.  If it is
+set to 1, the graphics display memory will be in the second 8K of
+VIC-II memory (in this case, starting at 8192 ($2000)).  If that bit
+contains a 0, the first 8K will be used for the bitmap.  The upper
+four bits of this register, which normally control the location of the
+Video Display Matrix, are used in bitmap mode to establish the
+location of the color map within the VIC-II address space.  These four
+bits can hold a number from 0 to 15, which indicates on which 1K
+boundary the color map begins.  For example, if color memory began at
+1024 (1K), the value of these four bits would be 0001.
+
+Once the bitmap mode has been selected, and the screen and color
+memory areas set up, you must establish a method for turning each
+individual dot on and off.  The conventional method for identifying
+each dot is to assign it to a horizontal (X) position coordinate and a
+vertical (Y) coordinate.
+
+Horizontal position values will range from 0 to 319, where dot 0 is at
+the extreme left-hand side of the screen, and dot 319 at the extreme
+right.  Vertical positions will range from 0 to 199, where dot 0 is on
+the top line, and dot 199 is on the bottom line.
+
+Because of the unusual layout of bitmap screen data on the 64, it is
+fairly easy to transfer text characters to a bitmap screen, but it is
+somewhat awkward finding the bit which affects the screen dot having a
+given X-Y coordinate.  First, you must find the byte BY in which the
+bit resides, and then you must POKE a vlue into that byte which turns
+the desired bit on or off.  Given that the horizontal position of the
+dot is stored in the variable X, its vertical position is in the
+variable Y, and the base address of the bitmap area is in the variable
+BASE, you can find the desired byte with the formula:
+
+BY=BASE+40*(Y AND 256)+(Y AND 7)+(X AND 504)
+
+To turn on the desired dot,
+
+POKE BY, PEEK(BY) OR (2^(NOTX AND 7)
+
+To turn the dot off,
+
+POKE BY, PEEK(BY) AND (255-2^(NOTX AND 7))
+
+The exponentation function takes a lot of time.  To speed things up,
+an array can be created, each of whose elements corresponds to a power
+of two.
+
+FOR I=0 TO 7:BIT(I)=2^1:NEXT
+
+After this is done, the expression 2^(I) can be replaced by BI(I).
+
+The following sample program illustrates the bit-graphics concepts
+explained above, and serves as a summary of that information.
+
+10 FOR I=0 TO 7:BI(I)=2^I:NEXT: REM SET UP ARRAY OF POWERS OF 2 (BIT VALUE)
+20 BASE=2*4096:POKE53272,PEEK(53272)OR8:REM PUT BIT MAP AT 8192
+30 POKE53265,PEEK(53265)OR32:REM ENTER BIT MAP MODE
+40 A$="":FOR I=1 TO 37:A$=A$+"C":NEXT:PRINT CHR$(19);
+50 FOR I=1 TO 27:PRINTA$;:NEXT:POKE2023,PEEK(2022): REM SET COLOR MAP
+60 A$="":FOR I=1 TO 27:A$=A$+"@":NEXT:FOR I=32 TO 63 STEP 2
+70 POKE648,I:PRINT CHR$(19);A$;A$;A$;A$:NEXT:POKE648,4:REM CLEAR HI-RES SCREEN
+80 FORY=0TO199STEP.5:REM FROM THE TOP OF THE SCREEN TO THE BOTTOM
+90 X=INT(160+40*SIN(Y/10)): REM SINE WAVE SHAPE
+100 BY=BASE+40*(Y AND 248)+(Y AND 7)+(X AND 504): REM FIND HI-RES BYTE
+110 POKEBY,PEEK(BY)OR(BI(NOT X AND 7)):NEXT Y:REM POKE IN BIT VALUE
+120 GOTO 120: REM LET IT STAY ON SCREEN
+
+As you can see, using BASIC to draw in bit-graphics mode is somewhat
+slow and tedious.  Machine language is much more suiable for
+bit-graphics plotting.  For a program that lets you replace some BASIC
+ommands with high-res drawing commands, see the article "Hi-Res
+Graphics Made Simple," by Paul F. Schatz, in COMPUTE!'s First Book of
+Commodore 64 Sound and Graphics.
+
+There is a slightly lower resolution bitmap graphics mode available
+which offers up to four colors per 8 by 8 dot matrix.  To enable this
+mode, you must set the multicolor bit (Bit 4 of 53270 ($D016)) while
+in bitmap graphics mode.  For more information on this mode, see the
+entry for the multicolor enable bit.
+
+Bit 6.  This bit of this register enables extended background color
+mode.  This mode lets you select the background color of each text
+character, as well as its foreground color.  It is able to increase
+the number of background colors displayed, by reducing the number of
+characters that can be shown on the screen.
+
+Normally, 256 character shapes can be displayed on the screen.  You
+can use them either by using the PRINT statement or by POKEing a
+display code from 0 to 255 into screen memory.  If the POKEing method
+is used, you must also POKE a color code from 0 to 15 into color
+memory (for example, if you POKE 1024,1, and POKE 55296,1, a white A
+appears in the top-left corner of the screen).
+
+The background color of the screen is determined by Background Color
+Register 0, and you can change this color by POKEing a new value to
+that register, which is located at 53281 ($D021).  For example, POKE
+53281,0 creates a black background.
+
+When extended background color mode is activated, however, only the
+first 64 shapes found in the table of the screen display codes can be
+displayed on the screen.  This group includes the letters of the
+alphabet, numerals, and punctuation marks.  If you try to print on the
+screen a character having a higher display code, the shape displayed
+will be from the first group of 64, but that character's background
+will no longer be determined by the register at 53281 ($D021).
+Instead, it will be determined by one of the other background color
+registers.
+
+When in extended background color mode, characters having display
+codes 64- 127 will take their background color from register 1, and
+location 53282 ($D022).  These characters include various SHIFTed
+characters.  Those with codes 128-191 will have their background
+colors determined by register 2, at 53283 ($D023).  These include the
+reversed numbers, letters, and punctuation marks.  Finally, characters
+with codes 192-255 will use register 4, at 53284 ($D024).  These are
+the reversed graphics characters.
+
+Let's try an experiment to see just how this works.  First, we will
+put the codes for four different letters in screen memory:
+
+FOR I=0 TO 3:POKE 1230+(I*8),I*64+I:POKE 55502+(I*8),1:NEXT
+
+Four white letters should appear on the screen, an A, a shifted A, a
+reversed A, and a reversed, shifted A, all on a blue background.
+Next, we will put colors in the other background color registers:
+
+POKE 53282,0:POKE53283,2:POKE53284,5
+
+This sets the registers to black, red, and green, respectively.
+Finally, we will activate extended color mode by setting Bit 6 of the
+VIC-II register at location 53265 to a 1.  The BASIC statement that
+turns this mode on is:
+
+POKE 53265,PEEK(53265) OR 64
+
+Notice that two things happened.  First, all of the letters took on
+the same shape, that of the letter A.  Second, each took on the
+background color of a different color register.  To get things back to
+normal, turn off extended color mode with this statement:
+
+POKE 53265,PEEK(53265) AND 191
+
+Extended color mode can be a very useful enhancement for your text
+displays.  It allows the creation of windows.  These windows, because
+of their different background colors, make different bodies of text
+stand out as visually distinct from one another.  For example, a text
+adventure program could have one window to display the player's
+current location, one to show an inventory of possessions, and one to
+accept commands for the next move.
+
+In this mode the background color of these windows can be changed
+instantly, just by POKEing a new value to the color register.  This
+technique lends itself to some dramatic effects.  A window can be
+flashed to draw attention to a particular message at certain times.
+And varying the foreground color can make either the window or the
+message vanish and reappear later.
+
+There are, however, a couple of problems involved in using these
+windows.  The character shape that you want to use might not have a
+screen code of less than 64.  In that case, the only solution is to
+define your own character set, with the shape you want in one of the
+first 64 characters.
+
+Another problem is that characters within a PRINT statement in your
+program listing are not always going to look the same on the screen.
+Having to figure out what letter to print to get the number 4 with a
+certain background color can be very inconvenient.  The easiest
+solution to this problem is to have a subroutine to the translation
+for you.  Since letters will appear normally in window 1, and window 3
+characters are simply window 1 characters reversed, you will only have
+problems with characters in windows 2 and 4.  To conver these
+characters, put your message in A$, and use the following subroutine:
+
+500 B$="":FOR I=1 TO LEN(A$):B=ASC(MID$(A$,I,1))
+510 B=B+32:IF B<96 THEN B=B+96
+520 B$=B$+CHR$(B):NEXT I:RETURN
+
+This subroutine converts each letter to its ASCII equivalent, adds the
+proper offset, and converts it back to part of the new string, B$.
+When the conversion is complete, B$ will hold the characters necessary
+to PRINT that message in window 2.  For window 4, PRINT
+CHR$(18);B$;CHR$(146).  This will turn reverse video on before
+printing the string, and turn it off afterwards.
+
+A practical demonstration of the technique for setting up windows is
+given in the sample program below.  The program sets up three windows,
+and shows them flashing, appearing and disappearing.
+
+5 DIM RO$(25):RO$(0)=CHR$(19):FOR I=1 TO 24:RO$(I)=RO$(I-1)+CHR$(17):NEXT
+10 POKE 53265,PEEK(53265) OR 64
+20 POKE 53280,0:POKE 53281,0:POKE 53282,1:POKE 53283,2:POKE 53284,13
+25 OP$=CHR$(160):FOR I=1 TO 4:OP$=OP$:NEXTI:PRINTCHR$(147);RO$(3);
+30 FOR I=1 TO10:PRINTTAB(1);CHR$(18);"               ";TAB(23);OP$:NEXT
+40 PRINT CHR$(146):PRINT:PRINT:FOR I=1 TO 4:PRINTOP$;OP$;OP$;OP$;OP$;:NEXTI
+50 PRINT RO$(5);CHR$(5);CHR$(18);TAB(2);"A RED WINDOW"
+60 PRINT CHR$(18);TAB(2);"COULD BE USED"
+70 PRINT CHR$(18);TAB(2);"FOR ERROR"
+80 PRINT CHR$(18);TAB(2);"MESSAGES"
+100 A$="A GREEN WINDOW":GOSUB 300:PRINT RO$(5);CHR$(144);CHR$(18);TAB(24);B$
+110 A$="COULD BE USED":GOSUB 300:PRINTTAB(24);CHR$(18);B$
+120 A$="TO GIVE":GOSUB 300:PRINTTAB(24);CHR$(18);B$
+130 A$="INSTRUCTIONS":GOSUB 300:PRINTTAB(24);CHR$(18);B
+140 PRINT CHR$(31);RO$(19);
+150 A$="  WHILE THE MAIN WINDOW COULD BE USED":GOSUB 300:PRINT B$
+160 A$="  FOR ACCEPTING COMMANDS.":GOSUB 300:PRINT B$
+170 FOR I=1 TO 5000:NEXT I:POKE 53284,0
+180 FOR I=1 TO 5:FOR J=1 TO 300:NEXT J:POKE 53282,15
+190 FOR J=1 TO 300:NEXT J:POKE 53282,1
+200 NEXT I:POKE 53283,-2*(PEEK(53283)=240):POKE 53284,-13*(PEEK(53284)=240)
+210 GOTO 180
+300 B$="":FOR I=1TOLEN(A$):B=ASC(MID$(A$,I,1))
+310 B=B+32:IFB<96THENB=B+96
+320 B$=B$+CHR$(B):NEXTI:RETURN
+
+Bit 7.  Bit 7 of this register is the high-order bit (Bit 8) of the
+Raster Compare register at 53266 ($D012).  Even though it is located
+here, it functions as part of that register (see the description below
+for more information on the Raster Compare register).
+
+Machine language programmers should note that its position here at Bit
+7 allows testing this bit with the Negative flag.  Since scan lines
+above number 256 are all off the screen, this provides an easy way to
+delay changing the graphics display until the scan is in the vertical
+blanking interval and the display is no longer being drawn:
+
+LOOP  LDA $D011
+      BPL LOOP
+
+Sprites should always be moved when the raster is scanning off-screen,
+because if they are moved while they are being scanned, their shapes
+will waver slightly.
+
+The BASIC equivalent of the program fragment above is the statement
+WAIT 53265,128, but BASIC is usually not fast enough to execute the
+next statement while still in the blanking interval.
+
+53266          $D012         RASTER
+Read Current Raster Scan Line/Write Line to Compare for Raster IRQ
+
+The Raster Compare register has two different functions, depending on
+whether you are reading from it or writing to it.  When this register
+is read, it tells which screen line the electron beam is currently
+scanning.
+
+There are 262 horizontal lines which make up the American (NTSC)
+standard display screen (312 lines in the European or PAL standard
+screen).  Every one of these lines is scanned and updated 60 times per
+second.  Only 200 of these lines (numbers 50-249) are part of the
+visible display.
+
+It is sometimes helpful to know just what line is being scanned,
+because changing screen graphics on a particular line while that line
+is being scanned may cause a slight disruption on the screen.  By
+reading this register, it is possible for a machine language program
+to wait until the scan is off the bottom of the screen before changing
+the graphics display.
+
+It is even possible for a machine language program to read this
+register, and change the screen display when a certain scan line is
+reached.  The program below uses this technique to change the
+background color in midscreen, in order to show all 256 combinations
+of foreground and background text colors at once.
+
+40 FOR I=49152 TO 49188:READ A:POKE I,A:NEXT:POKE 53280,11
+50 PRINT CHR$(147):FOR I=1024 TO I+1000:POKE I,160:POKE I+54272,11:NEXT I
+60 FOR I=0 TO 15:FOR J=0 TO 15
+70 P=1196+(48*I)+J:POKE P,J+I:POKE P+54272,J:NEXT J,I
+80 PRINT TAB(15)CHR$(5)"COLOR CHART":FOR I=1 TO 19:PRINT:NEXT
+85 PRINT "THIS CHART SHOWS ALL COMBINATIONS OF   "
+86 PRINT "FOREGROUND AND BACKGROUND COLORS.      "
+87 PRINT "FOREGROUND INCREASES FROM LEFT TO RIGHT"
+88 PRINT "BACKGROUND INCREASES FROM TOP TO BOTTOM"
+90 SYS 12*4096
+100 DATA 169,90,133,251,169,0,141,33,208,162,15,120,173,17,208,48
+105 DATA 251,173,18,208
+110 DATA 197,251,208,249,238,33,208,24,105,8,133,251,202,16,233,48,219
+
+Writing to this register designates the comparison value for the
+Raster Compare Interrupt.  When that interrupt is enabled, a maskable
+interrupt request will be issued every time the electron beam scan
+reaches the scan line whose number was written here.  This is a much
+more flexible technique for changing the display in midscreen than
+reading this register as the sample program above does.  That
+technique requires that the program continuously watch the Raster
+Register, while the interrupt method will call the program when the
+time is right to act.  For more information on raster interrupts, see
+the entry for the Interrupt Mask Register (53274, $D01A).
+
+It is very important to remember that this register requires nine
+bits, and that this location only holds eight of those bits (the ninth
+is Bit 7 of 53265 ($D011)).  If you forget to read or write to the
+ninth bit, your results could be in error by a factor of 256.
+
+For example, some early programs written to demonstrate the raster
+interrupt took for granted that the ninth bit of this register would
+be set to 0 on power-up.  When a later version of the Kernal changed
+this initial value to a 1, their interrupt routines, which were
+supposed to set the raster interrupt to occur at scan line number 150,
+ended up setting it for line number 406 instead.  Since the scan line
+numbers do not go up that high, no interrupt request was ever issued
+and the program did not work.
+
+Location Range: 53267-53268 ($D013-$D014)
+Light Pen Registers
+
+A light pen is an input device that can be plugged into joystick
+Control Port #1.  It is shaped like a pen and has a light-sensitive
+device at its tip that causes the trigger switch of the joystick port
+to close at the moment the electron beam that updates the screen
+display strikes it.  The VIC-II chip keeps track of where the beam is
+when that happens, and records the corresponding horizontal and
+vertical screen coordinates in the registers at these locations.
+
+A program can read the position at which the light pen is held up to
+the screen.  The values in these registers are updated once every
+screen frame (60 times per second).  Once the switch is closed and a
+value written to these registers, the registers are latched, and
+subsequent switch closings during the same screen frame will not be
+recorded.
+
+A given light pen may not be entirely accurate (and the operator may
+not have a steady hand).  It is probably wise to average the positions
+returned from a number of samplings, particularly when using a machine
+language driver.

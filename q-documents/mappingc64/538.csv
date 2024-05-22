@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $E56C?","address              $E56C
+Set Pointer to Current Screen Line
+
+This routine sets the pointer PNT (209, $D1) to the address of the
+first byte of the current logical line.  In figuring this address, it
+takes into account the status of the screen line link table, which can
+indicate that two physical lines should be joined as one logical line."

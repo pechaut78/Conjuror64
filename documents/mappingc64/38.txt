@@ -1,0 +1,14 @@
+
+
+
+address         $47-$48        VARPNT
+Pointer to the Current BASIC Variable Value
+
+This location points to the address of the descriptor of the current
+BASIC variable (see location 45 ($2D) for the format of a variable
+descriptor).  Specifically, it points to the byte just after the
+two-character variable name.
+
+During a FN call, this location does not point to the dependent
+variable (the A of FN A), so that a real variable of the same name
+will not have its value changed by the call.

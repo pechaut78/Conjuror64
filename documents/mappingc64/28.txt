@@ -1,0 +1,18 @@
+
+
+
+address        $33-$34        FREETOP
+Pointer to the Bottom of the String Text Storage Area
+
+This pointer marks the current end of the string text area, and the
+top of free RAM (strings are built from the top of memory downward).
+Additional string texts are added, to the area below the address
+pointed to here.  After they are added, this pointer is lowered to
+point below the newly added string text.  The garbage collection
+routine (which is also called by FRE) readjusts this pointer upward.
+
+While the power-on/reset routines set this pointer to the top of RAM,
+the CLR command sets this pointer to the end of BASIC memory, as
+indicated in location 55 ($37).  This allows the user to set aside an
+area of BASIC memory that will not be disturbed by the program, as
+detailed at location 55 ($37).

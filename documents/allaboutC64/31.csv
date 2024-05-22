@@ -1,0 +1,11 @@
+question,answer
+"What is the syntax for the GET statement in C64 Basic?","The syntax for the GET statement is the keyword GET followed by a variable list."
+"What happens when the GET statement is executed in C64 Basic?","When the GET statement is executed in C64 Basic, the computer checks whether a key has been pressed. If so, the value of that key is assigned to the indicated variable. This is repeated for each variable in the list. If no key has been pressed, the variable is assigned the value 0."
+"What is the keyboard buffer in C64 Basic?","The keyboard in C64 Basic has a buffer which can store up to ten key strokes in the order they were entered. Keys are ignored if pressed after the buffer is full."
+"What happens if a key is pressed after the keyboard buffer is full in C64 Basic?","Keys are ignored if pressed after the keyboard buffer is full in C64 Basic."
+"Is it good practice to have a program print a prompting message when keyboard input is needed in C64 Basic?","Yes, it is good practice to have a program print a prompting message when keyboard input is needed in C64 Basic."
+"What happens if the GET statement is used in the immediate mode in C64 Basic?","An ILLEGAL DIRECT error will be generated if the GET statement is used in the immediate mode in C64 Basic."
+"Can the GET statement be used in the program mode in C64 Basic?","Yes, the GET statement can be used in the program mode in C64 Basic."
+"What is assigned to the variable if no key has been pressed when the GET statement is executed in C64 Basic?","If no key has been pressed when the GET statement is executed in C64 Basic, the variable is assigned the value 0."
+"What is the maximum number of key strokes that can be stored in the keyboard buffer in C64 Basic?","The keyboard buffer in C64 Basic can store up to ten key strokes in the order they were entered."
+"What happens to keys pressed after the buffer is full in C64 Basic?","Keys are ignored if pressed after the buffer is full in C64 Basic."

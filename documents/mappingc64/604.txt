@@ -1,0 +1,11 @@
+
+
+
+address              $F086
+GETIN for the RS-232 Device
+
+The Kernal GETIN routine calls this subroutine to remove the next byte
+of data from the RS-232 receive buffer and return it in the
+Accumulator.  The routine checks for the Receive Buffer Empty Error.
+It is also called by the Kernal CHRIN routine, which essentially does
+the same thing as GETIN for the RS-232 device.

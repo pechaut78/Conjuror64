@@ -1,0 +1,7 @@
+
+C64 Basic:
+CONT C(SHIFTED O) Acommandstatementthatwhenusedaftera
+stop or end statement, will restart the flow of the program from that point.
+COS NONE A mathematical function.
+DATA D(SHIFTED A) String or numeric statements that are used
+in conjunction with the read statement.

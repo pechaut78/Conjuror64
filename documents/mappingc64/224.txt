@@ -1,0 +1,9 @@
+
+
+
+address   $A474-$A47F    READY
+Print READY
+
+This routine displays the word READY, sets the Kernal message flag to
+show that direct mode is operative, and falls through to the main
+BASIC loop.

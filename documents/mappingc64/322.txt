@@ -1,0 +1,8 @@
+
+
+
+address         $B824          POKE
+Perform POKE
+
+POKE gets a pointer to the address parameter, and stores the next
+parameter there.

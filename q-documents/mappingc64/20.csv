@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $17-$18?","address         $17-$18        LASTPT
+Pointer to the Address of the Last String in the Temporary String
+Stack
+
+This pointer indicates the last slot used in the temporary string
+descriptor stack.  Therefore, the value stored at 23 ($17) should be 3
+less than that stored at 22 ($16), while 24 ($18) will contain a 0."

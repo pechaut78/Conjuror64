@@ -1,0 +1,27 @@
+
+
+
+address              $F291          CLOSE
+Close a Logical I/O File
+
+CLOSE is a documented Kernal routine which can be entered via the jump
+table at 65475 ($FFC3).
+
+The routine jumps through a RAM vector at 796 ($31C).  It is used to
+close a logical file after all I/O operations involving that file have
+been completed.  This is accomplished by loading the Accumulator with
+the logical file number of the file to be closed, and calling this
+routine.
+
+Closing an RS-232 file will de-allocate space at the top of memory for
+the receiving and trasmit buffers.  Closing a cassette file that was
+opened for writing will force the last block to be written to
+cassette, even if it is not a full 192 bytes.  Closing a serial bus
+device will send an UNLISTEN command on the bus.  Remember, it is
+necessary to properly CLOSE a cassette or disk data file in order to
+retrieve the file later.
+
+For all types of files, CLOSE removes the file's entry from the tables
+of logical files, device, and secondary address at 601, 611, and 621
+($259, $263, $26D), and moves all higher entries in the table down one
+space.

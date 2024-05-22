@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the memory location at address $B7EB?","address         $B7EB          GETNUM
+Get a 16-Bit Address Parameter and an 8-Bit Parameter (for POKE and WAIT)
+
+This routine gets the next numeric parameter from the current place in
+program text.  The routine evaluates it, checks that it is a positive
+integer within the range 0-65535, and changes it from floating point
+to a two-byte integer in 20-21 ($14-$15).  It checks for and skips a
+comma, then gets a one-byte integer parameter in the .X register.  The
+routine is used to get the parameters for POKE an WAIT."

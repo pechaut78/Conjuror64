@@ -1,0 +1,19 @@
+
+
+
+address              $D010          MSIGX
+Most Significant Bits of Sprites 0-7 Horizontal Position
+
+Bit 0:  Most significant bit of Sprite 0 horizontal position
+Bit 1:  Most significant bit of Sprite 1 horizontal position
+Bit 2:  Most significant bit of Sprite 2 horizontal position
+Bit 3:  Most significant bit of Sprite 3 horizontal position
+Bit 4:  Most significant bit of Sprite 4 horizontal position
+Bit 5:  Most significant bit of Sprite 5 horizontal position
+Bit 6:  Most significant bit of Sprite 6 horizontal position
+Bit 7:  Most significant bit of Sprite 7 horizontal position
+
+Setting one of these bites to 1 adds 256 to the horizontal position of
+the corresponding sprite.  Resetting one of these bits to 0 restricts
+the horizontal position of the corresponding sprite to a value of 255
+or less

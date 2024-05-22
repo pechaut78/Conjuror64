@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $E5CA?","address              $E5CA
+Wait for a Carriage Return from the Keyboard
+
+This subroutine is called by the portion of the CHKIN routine that
+handles keyboard input.  It turns the cursor on, gets characters, and
+echoes them to the screen until a carriage return has been entered.
+It also looks for the shifted RUN/STOP key, and forces the output of
+the commands LOAD and RUN if it finds it."

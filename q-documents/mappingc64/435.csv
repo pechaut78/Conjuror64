@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $D40C?","address              $D40C          ATDCY2
+Voice 2 Attack/Decay Register
+
+Bits 0-3:  Select decay cycle duration (0-15)
+Bits 4-7:  Select attack cycle duration (0-15)"

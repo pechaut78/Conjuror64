@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the CHROUT function?","The purpose of the CHROUT function is to output a character to an already opened channel."
+"What is the call address of the CHROUT function?","The call address of the CHROUT function is $FFD2 (hex) or 65490 (decimal)."
+"What communication register is used by the CHROUT function?","The CHROUT function uses the accumulator (A) as the communication register."
+"What preparatory routines are required before calling the CHROUT function?","The preparatory routines required before calling the CHROUT function are CHKOUT and OPEN."
+"What is the error return value of the CHROUT function?","The error return value of the CHROUT function is 0, which is described in the READST routine."
+"How much stack is required by the CHROUT function?","The CHROUT function requires at least 8 bytes of stack space."
+"What registers are affected by the CHROUT function?","The CHROUT function affects the accumulator (A) register."
+"How do you specify the output channel for the CHROUT function?","You specify the output channel for the CHROUT function by using the KERNAL OPEN and CHKOUT routines before calling CHROUT."
+"What happens if you don't call CHKOUT and OPEN before calling CHROUT?","If you don't call CHKOUT and OPEN before calling CHROUT, the data will be sent to the default output device, which is the screen (device number 3)."
+"How can you avoid sending data to all open output channels on the serial bus when using CHROUT?","You can avoid sending data to all open output channels on the serial bus when using CHROUT by closing all open output channels on the bus except for the intended destination channel using the CLRCHN routine."

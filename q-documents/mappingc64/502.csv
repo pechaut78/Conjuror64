@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the memory location at address $E1C7?","address              $E1C7          CLOSE
+Perform CLOSE
+
+The BASIC CLOSE statement calls the Kernal CLOSE routine."

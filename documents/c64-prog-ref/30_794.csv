@@ -1,0 +1,11 @@
+question,answer
+"Where is the sprite definition block located if sprite pointer #0 at location 2040 contains the number 14?","The sprite definition block is located at location 896, which is in the cassette buffer, calculated using the formula LOCATION = (BANK * 16384) + (SPRITE POINTER VALUE * 64), where BANK is the 16K segment of memory that the VIC-II chip is looking at and is from 0 to 3."
+"What is the formula to calculate the start of the 64 bytes of the sprite definition block?","The formula is LOCATION = (BANK * 16384) + (SPRITE POINTER VALUE * 64), where BANK is the 16K segment of memory that the VIC-II chip is looking at and is from 0 to 3, and SPRITE POINTER VALUE is the value stored in the sprite pointer."
+"Why can't sprite definitions be placed in BANK 0 or BANK 2?","Because in BANK 0 or BANK 2, there is a ROM IMAGE of the character set present in certain locations, and sprite definitions cannot be placed there."
+"What should you do if you need more than 128 different sprite definitions?","You should use one of the banks without the ROM IMAGE, which are BANK 1 or BANK 3, to place your sprite definitions."
+"What is the purpose of the sprite pointer value?","The sprite pointer value is used to calculate the location of the sprite definition block, which is a 64-byte block that defines the sprite."
+"What is the significance of the number 14 in the sprite pointer #0 at location 2040?","The number 14 is the sprite pointer value, which is used to calculate the location of the sprite definition block, which is 896 in this case."
+"How many bytes are in a sprite definition block?","A sprite definition block is 64 bytes long."
+"What is the range of values for the BANK in the formula LOCATION = (BANK * 16384) + (SPRITE POINTER VALUE * 64)?","The range of values for the BANK is from 0 to 3."
+"What is the purpose of the formula LOCATION = (BANK * 16384) + (SPRITE POINTER VALUE * 64)?","The formula is used to calculate the start of the 64 bytes of the sprite definition block."
+"In which banks can sprite definitions be placed?","Sprite definitions can be placed in BANK 1 or BANK 3, which do not have a ROM IMAGE of the character set."

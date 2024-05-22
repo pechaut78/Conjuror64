@@ -1,0 +1,440 @@
+CLEARING THE SCREEN - Holding the RUN/STOP key down and
+then pressing the RESTORE key will clear the screen. This will not
+destroy the program currently in memory, by typing the word LIST
+your program will be displayed again. You will find that this technique
+is useful when editing your programs. This procedure can be used to
+clear the display before using the command NEW.
+
+
+
+
+CURSOR KEYS - The cursor keys are two keys on the lower right hand
+side of the keyboard. These keys are marked with the letters CRSR,
+and arrows pointing up/down on one and left/right on the other. The
+key on the left will move the cursor down when pressed, and up when
+used with the SHIFT key. The cursor key on the right will move the
+cursor right when pressed, and left when used with the SHIFT key. It is
+possible to move the cursor anywhere on the screen using these keys.
+
+
+
+
+RETURN KEY - The RETURN key is used to enter data Into memory.
+When you type in a command, such as the NEW command, the
+computer cannot respond until the command is entered by pressing the
+RETURN key. All data is entered in this manner. After typing in a
+program line, pressing the RETURN key will enter it into memory.
+
+
+
+
+LINE NUMBERS - The computer has to read a sequential list of
+numbers that precede each program line. Without line numbers it
+would be impossible for the computer to follow the program. Line
+numbers are not required if you wish to enter commands that are to be
+executed immediately. NO line number can be higher than 63999.
+
+
+
+
+FORMAT NEW DISK:
+OPEN (file#), (divlce#),. (channel#):PRINT*, "N:NAME, ID"
+EXPLANATION - Open channel, file# (can be any number from 1 tp
+255, number greater than 127 should be avoided, because they can
+generate unwanted linefeeds after the return character), the number 8
+is the device number for the disk drive, channel number can be any
+number from 2 to 15, channels 0 to 1 are reserved fpr the operating
+system (used for loading and saving), 2 through 14 are used for data to
+files, the command channel is 15. The prlnt# command directs data to
+the disk drive, n is the abbreviation for new (this command is used
+when formatting a disk fpr the first time), the name can be up to
+sixteen characters, the ID is two characters, In any combination of
+numbers, letters or both.
+ The format can be abbreviated as follows:
+OPEN15,8,15"N:NAME,ID" (press return key)
+After disk is formatted the FILE that was open must be closed, using
+this statement: CLQSE15 (press return key)..
+HINT - If you already have a formatted disk and wish to reformat it.
+There is a faster method than the standard format it is as follows:
+OPEN15,8,15,"S:NAME" (press return key)
+
+
+
+
+SCRATCH A FILE:
+EXPLANATION - When a file is scratched from the disk it is erased.
+The procedure is the same as to format, except that an S (scratch) is
+used instead of the N (new), and the ID is not used. It Is possible to
+scratch more than one file by using pattern matching, for example If
+there are two files and their names are test and track. You would type
+OPEN 15,8,15,"S:T*", both programs would be erased. Another
+example of this technique, used on three files with the names, rats,
+bats, and cats would be as follows:
+OPEN15,8,15,"S:?ATS", this would erase all three files.
+RENAME A FILE:
+OPEN15,8,15 'R:NEW NAME = OLD NAME' (press return key)
+(the rename command will now work with files that are open)
+EXPLANATION - This Is very simple, the R stands for rename. If you
+have a file with the name planes and you want to change the name to
+airplanes, you would type the following, OPEN15,8,15,"R:
+AIRPLANES = PLANES, (press return key).
+
+
+
+
+VALIDATE A DISK:
+OPEN15,8,15,"V" (press return key)
+EXPLANATION - When a disk has been used over a period of time, the
+directory can become disorganized. Usually this is caused by repeated
+saving and scratching of files. This usually results in one or more
+blocks on the disk that cannot be used because they are too small. The
+validate command will reorganize the disk to make the most out of the
+space that is available.
+
+
+
+
+INITIALIZE THE DRIVE:
+OPENISAIS,"!" (press return key)
+EXPLANATION - There will be times when the disk drive will not
+respond to your commands. This is caused by an error condition. When
+the drive is initialized it will be returned to the same state as when first
+turned on.
+
+
+
+
+READING THE ERROR CHANNEL:
+10 OPEN15,8,15
+10 INPUT"15,A$,B$,C$,D$
+30 PRINT A$,B$,C$,D$
+EXPLANATION - The basic routine above will read the error channel.
+The purpose of reading the error channel, is to find out what type of
+error condition exists, if the red light on the drivestarts to blink and the
+drive motor stops. Load and run the program above. The following ian explanation of the program above: After opening a channel, 4
+variables are read and describes the error condition. The first variable
+is the error number, the second is the error description, the third is the
+track number on which the error occurred, and the fourth Is the block
+number of the track. Lastly the 4 variables are displayed on the screen.
+
+
+
+
+
+
+LOAD PROGRAM FILE:
+LOAD "PROGRAM" NAME, 8 (BASIC PROGRAMS)
+LOAD "PROGRAM NAME",8,1 (MACHINE LANGUAGE
+PROGRAMS)
+
+
+
+
+LOAD DIRECTORY:
+LOAD "$",8 (LOADS A DIRECTORY)
+LOAD "$",8 (LOADS THE DIRECTORY BUT ONLY LIST THE DISK
+NAME AND BLOCKS FREE)
+LOAD "$* = P",8 (LOADS DIRECTORY AND LISTS ONLY
+PROGRAM FILES)
+(SUBSTITUTE THE P FOR S (SEQ.) OR R (REL) FILES)
+SAVE PROGRAM FILE:
+SAVE "PROGRAM NAME'\8 (ONLY BASIC PROGRMS CAN BE
+LOADED IN THIS MANNER)
+SAVE AND REPLACE:
+OPEN15,8I15"@0:PROGRAM NAME" (REPLACES A PROGRAM
+WITH THE SAME NAME WITH ONE IN MEMORY)
+
+
+
+C64 Basic:
+BASIC KEY WORDS
+Command Abbreviation
+Definition
+ABS A(SHIFTED B) -
+A numeric function that returns the absolute
+value of a number.
+AND A(SHIFTED N)
+Can be a logical operator that checks the
+truth between two expressions.
+ASC A(SHIFTED S) A numeric function that gives the ASCII
+value of the first character in a string.
+
+
+C64 Basic:
+ATN A(SHIFTED T) A mathematical function.
+CHR$ A(SHIFTED H) A string function that changes ASCII to a
+numeric value.
+CLOSE CL(SHIFTED O) A input/output statement that closes a
+channel to a device.
+CLR C(SHIFTED L) A statement that resets all variables.
+CMD C(SHIFTED M) A input/output statement that outputs data
+to an opened device or file that corresponds to a file number.
+
+
+
+
+C64 Basic:
+CONT C(SHIFTED O) Acommandstatementthatwhenusedaftera
+stop or end statement, will restart the flow of the program from that point.
+COS NONE A mathematical function.
+DATA D(SHIFTED A) String or numeric statements that are used
+in conjunction with the read statement.
+
+
+
+
+C64 Basic:
+DEF FN D(SHIFTED E) A statement that is a used defined substitute.
+DIM D(SHIFTED I) A statement that defines the maximum range
+of an array or group of variables.
+
+END E(SHIFTED N)
+A statement that stops a program from
+executing.
+
+EXP E(SHIFTED X)
+A mathematical function
+
+FOR F(SHIFTED O)
+A statement that sets up a variable as a
+counter, that is used in a for next loop.
+
+FRE F(SHIFTED R)
+A statement that gives the amoun to memory that is free.
+
+
+
+
+C64 Basic:
+GET Q(SHIFTED E) A statement that scans the keyboard for a
+key to be key to be typed.
+
+GET# NONE A input/output statement that will input a
+character from a device or file.
+
+GOSUB GO(SHIFT S) A statement that will jump to a routine within
+a program, used with the RETURN statement.
+
+GOTO G(SHIFTED O) A statement that will jump to a line within a
+program. (EXAMPLE: GOTO 10)
+
+IF THEN NONE A statement that sets up a conditional
+branch. (EXAMPLE: IF A$ = T THEN SYS64738 (warm start)).
+
+
+
+
+
+C64 Basic:
+INPUT NONE A statement that halts program execution,
+waiting for user input. (EXAMPLE: INPUT "WHAT IS YOUR NAME"; A$)
+
+INPUT# I(SHIFTED N)
+from a devivice or file.
+A input/output statement that inputs data
+
+INT NONE
+Returns the interger value of a number.
+
+LEFT$ LE(SHIFTED F)
+A string function that returns a set number of
+characters from the left most end of a string, depending on the value given.
+(EXAM_PLE:A$ = "UPDOWNM:PRINT LEFTS (A$,2) display the
+word UP on the screen)
+
+
+
+
+
+C64 Basic:
+LEN NONE A intergerfunctionthatcountstheamountof
+characters in a specified string. (EXAMPLE: A$ ="COMPUTER":PRINT LEN
+(A$)-the result will be 8)
+
+LIST L(SHIFTED I)
+A command that lists a program in current
+memory.
+
+LOAD L(SHIFTED O)
+A command that loads a program from tape
+or disk.
+
+LOG NONE
+A mathmatical function.
+
+MID$ MSHIFTED I)
+A string function that returns the part of a
+string that is set by the first value, counting from the far left, the length of the
+second value. (EXAMPLE: A$ = "AROUNDTHEWORLD":PRINT
+MID$(A$,10,5)-the result of this would be the word WORLD.)
+
+
+
+
+
+C64 Basic:
+NEW NONE a command that when used will erase a
+program currently in memory.
+
+NEXT N(SHIFTED E) A statement that is used in conjunction with
+the FOR statement, and serves as a counter that is incremented by 1, and
+tested for the end-value, to check to see if its time to stop the loop.
+(EXAMPLE: 10 FOR A = 1 T01000: NEXT A-this will count 1000 times before
+ending)
+
+NOT N(SHIFTED O) A logical operator that can be used to
+compare a set of values or variables, fora negative result. (EXAMPLE: IF NOT
+X = Y THEN END- the program will end if the value of x does not equall the
+value of y.)
+
+ON NONE A statement that is used with the goto and
+gosub statements. Depending on the value of a set of variables in a program,
+the ON statement will jump to any one of several predefined line numbers
+within the program. The ON statement can also be used inplace of the IF
+
+THEN statement. (EXAMPLE: ON A GOTO 10,20,30)
+OPEN O(SHIFTED P) A command that will open a channel to a
+device or file.
+
+OR NONE A logical operator that can compare a set of
+values for a true of false result. (EXAMPLE: IF A =50 OR B = 100 THEN END-
+this means if A and B are true then end the program)
+
+PEEK P(SHIFTED E) Readsandreturnsthecontentsofaspecified
+memory location. (EXAMPLE: POKE 53280,1-put in location 53280thevalue
+
+
+
+
+
+
+C64 Basic:
+POKE P(SHIFTED O) Put a value in a specified memory location.
+(EXAMPLE: POKE 53280,1-put in location 53280 the value for color 1)
+
+POS NONE Returns the current cursor position.
+(EXAMPLE: 10 IF POS(0) = 10THEN END-when thecousor reaches position
+20 the program will end)
+
+PRINT ? A statement that is used to output datatothe
+screen. This data can also be directed to the printer by using the CMD
+statement. (EXAMPLE: PRINT "COMPUTER")
+
+PRINT# P(SHIFTED R) A input/output statement that is used to
+output data to a device of file. (EXAMPLE: OPEN1,4:PRINT#1,
+"COMPUTER":CLOSE1-results in printing the word COMPUTER to the
+printer)
+
+READ R(SHIFTED E) A statement that reads from a data
+statement. 1 READ A$
+EXAMPLE —2 DATA "DISK DRIVE"
+
+
+C64 Basic:
+REM NONE A statement that cannot be executed, but
+serves as vehicle to store remarks in a program. (EXAMPLE: 1 PRINT
+"PRINTER":REM THIS IS LINE 1)
+
+RESTORE RE(SHIFTED S) A statement that resets the pointer to the
+first data statement in the program. This can be used to read the same data as
+manytimes as needed. (EXAMPLE: 1 READ A$ - reads the word TAPE twice)
+2 RESTORE
+3 DATA"TAPE"
+
+RETURN RE(SHIFTED T) A statement that is used to return to the data
+or line number following the gosub statement.
+(EXAMPLE: 1 GOSUB 3 - goes to line 3 then returns
+2 END — end on line 2)
+3 RETURN
+
+RIGHT$ R(SHIFTED I) A string function that returns a set number
+of characters from the right most end of a string, depending on the value
+given.
+(EXAMPLE: A$ = "SCREENCOLOR":PRINT RIGHT#(A$,5)-thiswill printthe
+word COLOR)
+
+RND R(SHIFTED N) A floating point function that creates a
+random number. (EXAMPLE: PRINT IRND(0)*10-this will print a number
+from 0 to 9)
+
+
+
+
+C64 Basic:
+RUN R(SHIFTED U)
+A command that will execute a program that
+is in memory.
+
+SAVE S(SHIFTED A)
+A command that will store a program to tape
+or disk.
+
+SGN S(SHIFTED G)
+A INTERIOR FUNCTION
+SIN S(SHIFTED I)
+
+A FLOATING POINT FUNCTION.
+SPC( S(SHIFTED P)
+A function that will print a specified number
+of spaces across the screen. (EXAMPLE: PRINT SPC910)-will print 10
+spaces.
+
+
+
+
+
+C64 Basic:
+
+SQR S(SHIFTED Q) A flosting point function that will return the
+square root of a specified value.
+
+STATUS ST A function that gives the condition of any
+input or output operation.
+
+STEP ST(SHIFTED E) A statement that works with the IF THEN
+statement. The STEP statement will increment the IF THEN function with a
+specified value.
+(EXAMPLE: FOR A = 1 TO 10 STEP 5-will loop twice)
+
+STOP S(SHIFTED T) A statement that will stop the execution of a
+program and print the line number from which STOP statement was
+executed.
+
+STR$ ST(SHIFTEDR) A string function that returns a string
+variable from a numeric variable. (EXAMPLE: T=4:T$=STR$(T)A$="THE
+
+TIME IS "+T$+":00M:PRINT A$-will print (THE TIME IS 4:00)
+SYS S(SHIFTED Y) A statement that will execute a memory
+location containing a machine language program or a kernal routine.
+(EXAMPLE: SYS 64738- will give a system cold start)
+
+
+
+
+
+C64 Basic:
+
+TIME Tl A function that reads the internal timer of the
+computer also known as the jiffy clock. —(EXAMPLE: PRINT TI/30-this will
+display how many 1/30 second intervals have elapsed since power up)
+
+TIME$ Tl$ A function that will return a six character
+time display. (EXAMPLE: 1 Tl$ =
+"000000":FOR T = 1 TO 10000: NEXT
+T:PRINT Tl$-will display 000010)
+
+USR U(SHIFTED S) A function that accesses a user callable
+machine language routine. Memory locations 785 and 786 must contain the
+pointers for the start of the machine language routine.
+
+VAL V(SHIFTED A) A function that converts a string variable
+to a numberic. (EXAMPLE: A$ = "55": PRINT VAL (A$)-will print a 55)
+
+VERIFY V(SHIFTED E) A command that is used to compare a
+program currently saved to tape of disk with the same program in memory.
+(EXAMPLE: SAVE'TEST'^VERIFY'TEST'^-will save and verify the
+program called test)
+
+WAIT W(SHIFTED A) A statement that stops the execution of a
+program until the specified condition is met. (EXAMPLE: WAIT 198,1-will
+stop until any key is pressed)

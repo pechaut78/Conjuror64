@@ -1,0 +1,18 @@
+
+
+
+address           $D6            TBLX
+Current Cursor Physical Line Number
+
+This location contains the current physical screen line position of
+the cursor (0-24).  It can be used in a fashion to move the cursor
+vertically, by POKEing the target screen line (1-25) minus 1 here,
+followed by a PRINT command.  For example,
+
+POKE 214,9:PRINT:PRINT "WE'RE ON LINE ELEVEN"
+
+prints the message on line 11.  The first PRINT statement allows the
+system to update the other screen editor variables so that they will
+also show the new line.  The cursor can also be set or read using the
+Kernal PLOT routine (58634, $E50A) as explained in the entry from
+locations 780-783 ($30C-$30F).

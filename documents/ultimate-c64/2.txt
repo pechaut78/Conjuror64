@@ -1,0 +1,4 @@
+
+Board
+On the C64 motherboard, there is a dedicated IC each for the main tasks. There is the MOS 6510 CPU, eight 64 KBit RAM chips (later consolidated into 2), three ROM chips with KERNAL (I/O library), BASIC and the character set (KERNAL and BASIC were later consolidated), two 6526 CIA I/O controllers (one for keyboard and joystick, one for the IEC bus and the user port), the 6581 SID sound chip, and the 6567/6569 VIC video chip, as well as the RAM chip that holds the 512 bytes of Color RAM.
+All non-RAM chips are custom chips designed manufactured by MOS, Commodore's inhouse chip company.

@@ -1,0 +1,11 @@
+question,answer
+"What is the number of legal instructions for the 6510 out of the 256 possible 8-bit codes?","There are 151 legal instructions for the 6510 out of the 256 possible 8-bit codes."
+"What is the number of entirely different instructions on the 6510?","There are 56 entirely different instructions on the 6510."
+"What is the representation of an instruction in the computer?","An instruction is represented in the computer as an 8-bit binary number, where each particular machine language instruction has a specific binary value."
+"What is a mnemonic in the context of machine language?","A mnemonic is a three character abbreviation for a machine language operation. For example, the mnemonic LDA stands for loaD Accumulator."
+"What does the mnemonic LDA stand for?","The mnemonic LDA stands for loaD Accumulator."
+"What is the role of the microprocessor in executing machine language instructions?","The microprocessor knows what actions to take based on the binary value of a machine language instruction."
+"What is the total number of possible 8-bit codes?","There are 256 possible 8-bit codes."
+"Are there similar instructions on the 6510 that differ only by addressing mode?","Yes, there are several similar instructions on the 6510 that differ only by addressing mode."
+"What is the purpose of introducing instructions in groups on the 6510?","The purpose of introducing instructions in groups on the 6510 is to make them easy to learn."
+"What is the format of a machine language instruction's representation in the computer?","A machine language instruction is represented in the computer as an 8-bit binary number, where each particular machine language instruction has a specific binary value."

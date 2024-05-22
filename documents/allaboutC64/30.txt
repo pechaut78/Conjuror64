@@ -1,0 +1,15 @@
+
+C64 Basic:
+
+• The RESTORE statement resets the data pointer so that
+reading will start from the first value in the first DATA
+statement of the program. This makes it possible to use
+READ in an infinite loop without getting an OUT OF DATA
+error.
+• It does not matter how much data has already been read
+when RESTORE is used. The data pointer will always be
+restored to the initial state when the program started running.
+• The CLR statement automatically performs a RESTORE.
+Because the RUN command does a CLR before starting program execution, RUN also performs a RESTORE.
+• The RESTORE statement is used only with READ and
+DATA, and even then it's not used very often.

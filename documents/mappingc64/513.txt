@@ -1,0 +1,5 @@
+
+
+
+address              $E2EA          FR4
+The Five-Byte Floating Point Representation of the Constant 1/4

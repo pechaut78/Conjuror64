@@ -1,0 +1,31 @@
+
+
+
+address              $FF48
+Main IRQ/BRK Interrupt Entry Point
+
+The 6510 hardware IRQ/BRK vector at 65534 ($FFFE) points to this
+address.
+
+Anytime the BRK instruction is encountered or an IRQ interrupt occurs,
+this routine will be executed.  The routine first saves the .A, .X,
+and .Y registers on the stack, and then tests the BRK bit of the
+status register (.P) to see if a BRK was executed.  If it was, the
+routine exits through the RAM BRK vector at 790 ($316), where it will
+usually be directed to the BRK routine at 65126 ($FE66).  If not, the
+routine exits through the RAM IRQ vector at 788 ($314), where it will
+usually be directed to the handler that scans the keyboard at 59953
+($EA31).
+
+If you plan to change either of these vectors to your own routine,
+remember to pull the stored register values off the stack before
+finishing.
+
+Location Range: 65371-65407 ($FF5B-$FF7F)
+Patches Added to Later Kernal Versions
+
+This area contains additional code not found in the original version
+of the Kernal.  It is used to test whether a European (PAL) or U.S.
+(NTSC) standard monitor is used, and to compensate so that the
+sixtieth of a second interrupt will be accurately timed on either
+system.

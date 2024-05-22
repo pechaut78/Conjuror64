@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $F30F?","address              $F30F
+Find the File in the Logical File Table
+
+This subroutine is used by many Kernal routines to find the position
+of the logical file in the logical file table at 601 ($259)."

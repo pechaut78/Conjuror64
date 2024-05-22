@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $FDA3?","address              $FDA3          IOINIT
+Initialize CIA I/O Devices
+
+This documented Kernal routine, which can be entered through the jump
+table at 65412 ($FF84), intializes the Complex Interface Adapter (CIA)
+devices, and turns the volume of the SID chip off.  As part of this
+initialization, it sets CIA #1 Timer A to cause an IRQ interrupt every
+sixtieth of a second."

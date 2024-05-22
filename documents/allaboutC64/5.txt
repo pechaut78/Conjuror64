@@ -1,0 +1,14 @@
+
+
+C64 BAsic:
+When the computer executes a LET statement, it follows a
+two-step process. First the computer determines a value by
+examining the portion of the statement to the right of the
+equal sign. Then it assigns that value to the variable sped-
+fied to the left of the equal sign.
+• The portion to the right of the equal sign can be an expres-
+sion containing one or more variables. The variables will be
+treated just like numbers. This means that the value of one
+variable can be assigned to another variable.
+• Statements like LET A=A+1 are legal and in fact are very
+useful

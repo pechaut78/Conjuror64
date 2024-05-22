@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $FF1A?","address              $FF1A
+Load the Timer with Prescaler Values from the Baud Rate Lookup Table"

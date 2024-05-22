@@ -1,0 +1,10 @@
+
+
+Now a quick look at the status register. Load
+instructions affect the zero and negative flags. If
+the value loaded has a value of zero, then the zero
+flag is set; otherwise it is cleared. If the value
+ The Machine Language Book of the Commodore 64
+loaded is negative (greater than $7F or 127
+decimal), then the negative flag is set; otherwise
+it is cleared.

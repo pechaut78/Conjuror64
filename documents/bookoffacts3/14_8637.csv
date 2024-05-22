@@ -1,0 +1,17 @@
+question,answer
+"What is the purpose of the GET Q(SHIFTED E) statement in C64 Basic?","The GET Q(SHIFTED E) statement in C64 Basic is used to scan the keyboard for a key to be typed. It will wait until a key is pressed and then return the ASCII value of the key."
+"What does the GET# NONE statement do in C64 Basic?","The GET# NONE statement in C64 Basic is an input/output statement that will input a character from a device or file. It can be used to read data from a file or input device."
+"What is the function of the GOSUB GO(SHIFT S) statement in C64 Basic?","The GOSUB GO(SHIFT S) statement in C64 Basic is a statement that will jump to a routine within a program, used with the RETURN statement. It allows for the creation of subroutines that can be called from multiple locations in the program."
+"What is the purpose of the GOTO G(SHIFTED O) statement in C64 Basic?","The GOTO G(SHIFTED O) statement in C64 Basic is a statement that will jump to a line within a program. It can be used to create loops or to jump to a specific line of code."
+"Can you explain the usage of the IF THEN NONE statement in C64 Basic with an example?","The IF THEN NONE statement in C64 Basic sets up a conditional branch. For example, the code 'IF A$ = T THEN SYS64738' would check if the value of the string variable A$ is equal to the string T. If it is, then it will perform a warm start by executing the SYS64738 command."
+"What is the difference between the GOTO and GOSUB statements in C64 Basic?","The GOTO statement in C64 Basic is used to jump to a line within a program, while the GOSUB statement is used to jump to a routine within a program. The GOSUB statement is used with the RETURN statement to create subroutines, while the GOTO statement is used to create loops or to jump to a specific line of code."
+"What is the purpose of the RETURN statement in C64 Basic?","The RETURN statement in C64 Basic is used with the GOSUB statement to return control to the line following the GOSUB statement after the subroutine has finished executing."
+"How does the GET# statement in C64 Basic differ from the GET Q statement?","The GET# statement in C64 Basic is used to input a character from a device or file, while the GET Q statement is used to scan the keyboard for a key to be typed. The GET# statement can be used to read data from a file or input device, while the GET Q statement is used to wait for a key press."
+"Can you provide an example of how the GOSUB statement can be used in C64 Basic?","An example of using the GOSUB statement in C64 Basic would be:
+10 PRINT 'HELLO'
+20 GOSUB 100
+30 PRINT 'WORLD'
+100 PRINT 'SUBROUTINE'
+40 RETURN
+This code would print 'HELLO', then jump to the subroutine at line 100, print 'SUBROUTINE', and then return to line 30 to print 'WORLD'."
+"What is the purpose of the ASCII value returned by the GET Q statement in C64 Basic?","The ASCII value returned by the GET Q statement in C64 Basic is used to determine which key was pressed. Each key on the keyboard has a corresponding ASCII value, which can be used to perform different actions based on the key press."

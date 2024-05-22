@@ -1,0 +1,10 @@
+
+
+
+address         $AB1E          STROUT
+Print Message from a String Whose Address Is in the .Y and .A
+Registers
+
+This part of the PRINT routine outputs a string whose address is in
+the Accumulator (low byte) and .Y register (high byte), and which ends
+in a zero byte.

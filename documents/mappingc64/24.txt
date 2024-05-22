@@ -1,0 +1,84 @@
+
+
+
+address         $2B-$2C        TXTTAB
+Pointer to the Start of BASIC Program Text
+
+This two-byte pointer lets BASIC know where program text is stored.
+Ordinarily, such text is located beginning at 2049 ($801).  Using this
+pointer, it is possible to change the program text area.  Typical
+reasons for doing this include:
+
+1.  Conforming the memory configuration to that of other Commodore
+computers.  On 32K PET and CBM computers, for example, screen memory
+starts at 32768 ($8000), and BASIC text begins at 1025 ($401).  You
+can emulate this configuration with the 64 with the following short
+program:
+
+10 POKE 55,0:POKE 56,128: CLR: REM LOWER TOP OF MEMORY TO 32768
+20 POKE 56576,PEEK(56576) AND 253: REM ENABLE BANK 2
+30 POKE 53272,4: REM TEXT DISPLAY MEMORY NOW STARTS AT 32768
+40 POKE 648,128:REM OPERATING SYSTEM PRINTS TO SCREEN AT 32768 (128*256)
+50 POKE 44,4:POKE 1024,0: REM MOVE START OF BASIC TO 1025 (4*256+1)
+60 POKE 792,193: REM DISABLE RESTORE KEY
+70 PRINT CHR$(147);"NOW CONFIGURED LIKE PET":NEW
+80 REM ALSO SEE ENTRIES FOR LOCATION 55, 56576, AND 648
+
+Such reconfiguring can be helpful in transferring programs from the 64
+to the PET, or vice versa.  Since the 64 automatically relocates BASIC
+program text, it can load and list PET programs even though the
+program file indicates a loading addresss that is different from the
+64 start of BASIC.  The PET does not have this automatic relocation
+feature, however, and it loads all BASIC programs at the two-byte
+address indicated at the beginning of the disk or tape file.
+
+So if the PET loads a 64 program at its normal starting address of
+2049 ($801), it will not recognize its presence because it expects a
+BASIC program to start at 1025 ($401).  Therefore, if you want to let
+a PET and 64 share a program, you must either reconfigure the 64 to
+start BASIC where the PET does, or reconfigure the PET to start BASIC
+where the 64 does (with a POKE 41,8:POKE 2048,0).
+
+2.  Raising the lowest location used for BASIC text in order to create
+a safe area in low memory.  For example, if you wish to use the
+high-resolution graphics mode, you may want to put the start of screen
+memory at 8192 ($2000).  The high-resolution moe requires 8K of
+memory, and you cannot use the lowest 8K for this purpose because it
+is already being used for the zero-page assignments.
+
+Since BASIC program text normally starts at 2048 ($801), this means
+that you only have 6k for program text before your program runs over
+into screen memory.  One way around this is by moving the start of
+basic to 16385 ($4001) by typing in direct entry mode:
+
+POKE 44,64: POKE 64*256,0:NEW
+
+Other uses might include setting aside a storage area for sprite shape
+data, or user-defined character sets.
+
+3.  Keeping two or more programs in memory simultaneously.  By
+changing this pointer, you can keep more than one BASIC program in
+memory at one time, and switch back and forth betwenn them.  Examples
+of this application can be found in COMPUTE!'s First Book of PET/CBM,
+pages 66 and 163.
+
+This technique has a number of offshoots that are perhaps of more
+practical use.
+
+a) You can store two programs in memory simultaneously for the purpose
+of appending one to the other.  This technique requires that the line
+numbers of the two programs do not overlap.  (See Programming the
+PET/CBM by Raeto Collin West, pages 41-42, for a discussion of this
+technique).
+
+b) You can have two programs in memory at once and use the concept in
+(2) above to allow an easier way to create a safe area in low memory.
+The first program is just onw line that sets the start of BASIC
+pointer to the address of the second program which is located higher
+in memory, and then runs that second program.
+
+4. Since this address is used as the address of the first byte to
+SAVE, you can save any section of memory by changing this pointer to
+indicate the starting address, and the pointer 45-46 ($2D-$2D) to
+indicate the address of the byte after the last byte that you wish to
+save.

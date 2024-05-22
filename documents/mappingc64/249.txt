@@ -1,0 +1,10 @@
+
+
+
+address         $A928          IF
+Perform IF
+
+IF uses the FRMEVL routine at 44446 ($AD9E) to reduce the expression
+which follows to a single term.  If the expression evaluates to 0
+(false), the routine falls through to REM.  If it is not 0, GOTO or
+the statement following THEN is executed.

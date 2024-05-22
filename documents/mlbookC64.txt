@@ -1,0 +1,1065 @@
+The accumulator is the most important register in the
+microprocessor. It is the universal working register, used
+for almost all operations. All arithmetic and logical
+operations, and almost all of the comparison instructions
+use the accumulator.
+
+
+
+
+The X-register is the second register in the processor. This
+register is used together with the accumulator when working
+with tables. It functions as the counter or pointer to the
+individual table elements. For this reason this register is
+also called an index register.
+
+
+
+The Y-register is an index register like the X-register and
+serves similar purposes.
+The program counter is a 16-bit register. Its contents
+indicate the memory location from which the next instruction
+is to be executed. This register is managed by the
+microprocessor itself. Normally, you do not have direct
+control over the contents of this register.
+
+
+
+
+The stack pointer points to an area of memory called the
+stack which is used for subroutines and for short-term data
+storage. The stack is described in detail later.
+The processor status register gives information about the
+result of the last executed instruction. This register is
+the foundation for the decision making and conditional
+branching instructions. Seven of the eight bits of the
+status register are used as flags. You can examine and
+conditionally branch depending on the setting of a
+particular flag. A flag can be either set (=1) or clear
+(=0). 
+
+
+
+
+C -Carry The carry flag contains the carry generated
+by an addition, and is set if the result is greater
+than 255 and therefore cannot be contained in eight
+bits of the accumulator.
+Z - Zero The zero flag is set if the result of an
+operation is zero.
+I- Interrupt Disable This flag determines if
+interrupts are permitted in a program. This flag
+does not interest us at the moment.
+D -Decimal The decimal flag determines if arithmetic
+is carried out in the decimal mode.
+B -Break The break flag indicates if execution was
+halted by a BRK instruction.
+V-overflow The V flag indicates overflow when
+calculating with signed numbers.
+N -Negative This flag is set if the result of an
+operation results in a value greater than 127 (bit
+7 is set). The designation negative comes from the
+fact that values over $7F can be interpreted as
+negative numbers.
+
+
+
+
+
+A microprocessor must have a place to get data and store
+data. The computer's memory serves this purpose. Memory is
+divided into individual cells containing 8 bits each, the
+same size as the accumulator and X and Y registers. In order
+to access the memory, it must be possible to select a
+specific memory location. This selection is called
+addressing memory. We give each memory location a number or
+address. With 8 bits, the microprocessor can address cells
+from 0 to 255 for a total of 256 memory cells. This is far
+too few for most applications. For this reason, the micro
+processor uses 16-bits for the address. With 16 bits, the
+microprocessor can address 216 = 65536 memory locations.
+This is called a 16-bit address bus. To summarize - a) the
+6510 microprocessor can address 65536 memory locations; b)
+each memory location can contain a value from 0 to 255. For
+ease of handling, 210 = 1024 bytes is called a kilobyte or
+IK. Therefore, the processor can address 64*1024 = 65536 or
+64K. This is the entire address range of the Commodore 64.
+Now you can understand the significance of the program
+counter. The program counter contains a 16-bit value. This
+16-bit value is the address of the next instruction that the
+microprocessor is to fetch from memory and execute.
+An instruction for the microprocessor can be represented by
+a value between 0 and 255. The 6510 microprocessor can have
+a maximum of 256 different instructions. However, not all
+the codes have a meaning on the 6510; fewer than 256
+instructions exist. BASIC commands are naturally not
+included.
+
+
+
+
+3. Instructions and Addressing Modes of the 6510
+Of the 256 possible 8-bit codes, 151 are legal instructions
+for the 6510, These include several similar instructions,
+that are different only by addressing mode. There are only
+56 entirely different instructions on the 6510. These
+instructions are easy to learn. They are introduced to you
+in groups.
+An instruction is represented in the computer as an 8-bit
+binary number. Each particular machine language instruction
+has a specific binary value. The microprocessor knows what
+actions to take based on this binary value.
+Machine language instructions are given mnemonic-names. A
+mnemonic is a three character abbreviation for a machine
+language operation. For example, the mnemonic LDA stands for
+loaD Accumulator.
+
+
+
+
+
+
+A. The LOAD instructions
+The LOAD instructions get data from memory and place it
+into a register. There are three working registers in the
+processor (the accumulator, the X-register and the Y-
+register). Each has a corresponding load instructions.
+LDA LoaD Accumulator
+LDX LoaD X register
+LDY LoaD Y register
+The 6510 processor has different addressing modes. An
+addressing mode tells the 6510 how to calculate the
+address (or location) of the operand.
+In the examples that follow, we show you corresponding
+"pseudo-BASIC" statements to illustrate the machine
+langauge instructions in a familiar notation.
+1) Immediate Addressing
+LDA #10
+This addressing mode is indicated by the pound sign
+# preceding the value to be loaded. Immediate
+addressing means that the accumulator is loaded
+with the value which follows it, in this case 10.
+The corresponding pseudo-BASIC instruction is:
+A=10
+
+
+
+
+LDX #$7F or LDY #0
+Here the X-register is loaded with the value $7F
+(127 in decimal) and the Y-register with the value
+zero (0).
+When using the immediate addressing mode, the value
+to be loaded is part of the program. The
+instruction and the value are placed one after the
+other in two adjacent memory locations. For
+example, if the machine language program is located
+at address 1200, the program counter contains the
+value 1200. The 6510 microprocessor gets the
+intruction at 1200 and sees that its value is $A9
+or decimal 169. It knows that the instruction is
+LDA #. So it places the contents contained in the
+next memory location 1201 into the accumulator (see
+diagram which follows). Since this instruction
+consists of two bytes - the instruction itself and
+the value to be loaded - the processor
+automatically increments the program counter by
+two. The program counter then points to the next
+instruction to be executed by the microprocessor
+starting at 1202,
+
+
+
+
+2) Absolute Addressing
+This addressing mode is used if a register is be
+loaded with the contents of a particular memory
+location. This is different from the immediate
+addressing mode which loads the register with a
+constant value.
+LDA $C0AF
+Here the accumulator is loaded with the contents of
+memory location $C0AF. How is this instruction
+represented in memory? The address $C0AF is a 16-
+bit number. A memory location can only hold 8 bits.
+The solution is to divide the 16-bit address into
+two 8-bit numbers. The following convention is used
+for this - immediately following the instruction is
+the least significant part of the address (low-
+byte) and followed by the the most significant part
+(high-byte).
+
+
+
+
+
+Now a quick look at the status register. Load
+instructions affect the zero and negative flags. If
+the value loaded has a value of zero, then the zero
+flag is set; otherwise it is cleared. If the value
+ The Machine Language Book of the Commodore 64
+loaded is negative (greater than $7F or 127
+decimal), then the negative flag is set; otherwise
+it is cleared.
+
+
+
+
+
+
+
+
+
+Zero-page addressing
+Another addressing mode is called the zero-page
+addressing mode. This addressing mode can be used
+if the address of the data is in memory locations
+between 0 and $FF (255). This results in a two-byte
+instruction in contrast to the three-byte instruc
+tion of the absolute addressing mode. Zero-page
+addressing instructions occupy less memory and
+execute faster. A disadvantage, of course, is that
+the data must be located in addresses from 0 to
+255.
+Where did the term zero-page originate? You can
+think of the 64K of memory as being divided into
+256 pages, each containing 256 bytes. Thus memory
+locations 0 thru 255 form page zero.
+A zero-page load instruction looks like this:
+LDA $73
+
+
+
+
+
+
+When executing absolute addressing mode instruc
+tions, the processor gets the low-byte and then the
+high-byte of the address. The data found at that
+address is placed into the accumulator, the program
+counter is incremented by three and the next
+instruction is fetched. These instructions require
+three bytes, in contrast to the immediate
+addressing mode which requires only two.
+
+
+
+
+ Indexed Addressing
+Another addressing mode is the indexed addressing
+mode. Here the X and Y registers play important
+roles.
+LDA $25B8,X
+This is called absolute addressing indexed by X.
+How does it work? The processor loads the
+accumulator not with the contents of memory
+location $25B8. Rather it first adds the value of
+the X-register to the absolute address ($25B8). If
+the X-register contains $35, for example, the
+following calculation takes place:
+$25B8 + $35 = $25ED
+The Machine Language Book of the Commodore 64
+The accumulator is loaded with the contents of
+location $25ED. If this instruction is executed
+with varying X-valuesf a different value is loaded
+each time. This addressing mode is very useful for
+programming loops and when working with tables.
+Other examples are described later. In pseudo-
+BASIC, this addressing mode can be formulated as
+follows:
+A = PEEK($25B8 + X)
+You can also use the Y-register in place of the X-
+register for indexed addressing.
+LDA $25B8,Y
+Here the contents of the Y-register is added to the
+absolute address $25B8 to obtain the final address.
+Using both registers, you have two independent
+index variables which can be used for programming
+24
+nested loops.
+
+
+
+
+
+Zero-page indexed addressing
+Indexed addressing can also be used together with
+zero-page addressing, thereby carrying over the
+advantages of zero-page addressing to indexed
+addressing. Note that this addressing mode works
+with the X-register only. A typical instruction
+might look like this:
+LDA $BAfX
+
+
+
+
+Indirect Indexed Addressing
+This addressing mode is not as easy to understand,
+but permits very flexible programming -the indirect
+indexed addressing mode. Using this addressing
+mode, zero page plays an important role. With
+indirect indexed addressing, two consecutive memory
+locations in zero-page form a pointer to the actual
+address. The first memory cell contains the low-
+byte and the next contains the high-byte of theT
+actual address.
+
+
+
+
+Indirect indexed addressing is indicated by placing
+the operand in parentheses. This addressing mode is
+very efficient, because you can access the entire
+memory with a two-byte instruction. This mode is
+used for managing tables and loops. It is more
+flexible than the simple indexed addressing,
+because the entire memory range can be addressed,
+not just the memory in a single page. Only the
+contents of the two-byte pointer in the zero page
+need be changed.
+
+
+
+ Indexed Indirect Addressing
+Another addressing mode is the indexed indirect
+address mode, in contrast to the above indirect
+indexed addressing mode. It works with the X-
+register instead of the Y-register. Here also the
+address is formed from two consecutive zero-page
+locations. When calculating the address, the index
+is first added to the pointer and then the contents
+are used as a pointer to the actual address.
+
+
+
+
+
+The STORE Instructions
+The counterparts of the load instructions are the store
+instructions. Using these instructions we can place the
+contents of a register into memory. The mnemonics for the
+instructions are:
+STA
+STX
+STY
+The contents of the accumulator, X-register or Y-register
+are placed in the appropriate memory location, which is
+specified by the operand that follows the instruction
+code. The same addressing modes used for the load
+instructions apply to these instructions except for the
+immediate mode. Storing the contents of a register
+changes neither the register nor the status flags.
+
+
+
+
+The Transfer Instructions
+The 6510 microprocessor has instructions to copy the
+contents of one register to another. You can, for
+example, transfer the contents of the X-register into the
+accumulator or vice versa. This is quite important
+because many instructions only work with the accumulator.
+After executing these instructions, the contents of the
+source register are unchanged; the value is merely copied
+into the destination register. The transfer instructions
+within the processor require the participation of the
+accumulator; a direct transfer from the X to Y register
+or vice versa is not possible.
+All transfer instructions are one-byte instructions; they
+need no operand.
+Below are the individual transfer instructions and the
+pseudo-BASIC commands.
+TAX
+The contents of the accumulator is copied into the X
+register. The Z and N flags are affected, but the
+original contents of the accumulator remain unchanged.
+TXA A=X
+The contents of the X-register is copied into the
+accumulator. The N and Z flags are affected. The contents
+of the X-register are unchanged.
+TAY Y=A
+TYA A=Y
+These are the corresponding instructions for the Y-
+register. They work exactly like the above instructions,
+but substituting the Y-register for the X register.
+The next two transfer instructions affect the stack
+pointer. They are seldom used, although the stack pointer
+is discussed later. The stack pointer can be exchanged
+only with the X-register.
+TSX X = SP
+The contents of the stack pointer is placed into the X-
+register. The Z and N flags are set according to the
+value. The contents of the stack pointer remain unaltered
+by this operation.
+TXS SP = X
+The contents of the X-register are placed into the stack
+pointer. No flags are affected by this instruction. The
+contents of the X-register are unaltered.
+
+
+
+
+The Arithmetic Instructions
+As with most 8-bit microprocessors, the 6510 can perform
+only two arithmetic operations - addition and
+subtraction. Multiplication and division must be
+implemented by the user. Each calculation requires two
+operands which are combined to produce a result. For the
+6510, the first operand is contained in the accumulator
+and the second operand is obtained from memory. The
+various addressing modes are used for this. The result of
+the arithmetic operation is always left in the
+accumulator. The comparisons with the corresponding
+pseudo-BASIC commands makes this clearer.
+First consider addition. The contents of the addressed
+memory location are added to the accumulator and the
+result is again placed back in the accumulator.
+ADC #$3A A = A + $3A
+If you add two 8-bit values (0 to 255), the result may
+not be able to be represented by an 8-bit number. An
+overflow may occur.
+
+
+
+
+To add two 16-bit numbers, add the low-bytes of each
+operand and then the high-bytes of each operand. If an
+overflow occurs during the addition of the low-bytes,
+the carry flag adjusts for this during the addition of
+the high-bytes. Remember to clear the carry flag before
+adding the low-bytes so that the previous contents of the
+carry flag do not affect the addition. Here is an example
+of adding two numbers NUM1 and NUM2 with the result being
+placed in SUM:
+CLC  ;clear carry flag
+LDA NUM1LOW   ;low half of NUM1
+ADC NUM2LOW   ;low half of NUM2
+STA SUMLOW    ;low half of result
+LDA NUM1HIGH  ;high half of NUMl
+ADC NUM2HIGH  ;high half of NUM2
+STA SUMHIGH   ;high half of result
+
+
+
+
+
+Subtraction is
+performed
+in much
+the same
+way as
+addition. The contents of the addressed memory location
+is subtracted from the accumulator and the result is left
+in the accumulator. It is possible that the result cannot
+be represented in 8-bits. With subtraction, an overflow
+cannot occur, only an underflow. In this case, the result
+is less than zero. The carry flag indicates this too.
+Since overflow and underflow have opposite meanings,
+underflow is indicated by carry flag being cleared. A
+carry flag being set means that no underflow has
+occurred. Correspondingly, the carry flag must be set
+prior to subtraction (or the first byte of multi-
+precision subtraction).
+
+
+
+
+
+The logical instructions
+The logical instructions combine two value with each
+other. As with the arithmetic instructions, one operand
+must be in the accumulator while the second is retrieved
+from memory according to the addressing mode. After the
+operation, the result is left in the accumulator. The
+6510 can perform three different types of logical
+operations.
+
+
+
+
+The AND instruction
+The AND operation compares each bit of the accumulator
+with the corresponding bit in the operand. If the bit of
+the accumulator AND the corresponding bit of the operand
+are both set (to l)f the corresponding bit of the result
+is also set to one.
+0 AND 0=0
+0 AND 1=0
+1 AND 0=0
+1 AND 1=1
+The bit-wise comparison of the accumulator and operand
+can be made clearer with an example.
+AND #$37
+
+
+
+
+The Exclusive OR instruction
+The operand and the accumulator are compared bit by bit.
+The result is set to one if either one or the other bit
+is onef but not both. The truth table looks like this:
+0 EOR 0=0
+0 EOR 1=1
+1 EOR 0=1
+1 EOR 1=0
+
+
+
+
+The BIT instruction
+A special feature of the 65XX microprocessors is the BIT
+instruction. This instruction does not change the
+contents of any registers. It affects only the flags. The
+contents of the accumulator are ANDed with the contents
+of the addressed memory location. If the final result is
+zero, the Z flag is set, otherwise it is cleared.
+Additionally, the value of the sixth bit of the addressed
+location is placed into the V flag and the seventh bit is
+put in the N flag. With this one can check these two bits
+of a memory location without disturbing the contents of
+any of the registers. Let us look at an example:
+LDA #$10
+BIT $1234
+The accumulator contains $10; address $1234 contains $43.
+
+
+
+
+The Compare instructions
+These instructions compare the contents of a register
+and the contents of a memory location. These instructions
+alter neither the register nor the memory contents,
+affecting only the flags. You can determine the
+relationship of the two numbers by examining the flags.
+The compare instructions work by logically "subtracting11
+the contents of the addressed memory contents from the
+contents of the register and setting the flags as if an
+actual subtration occurred. The register contents are not
+changed. The £, N, and Z flags are affected depending on
+the result of the "subraction". There are compare
+commands for the three work registers of the
+microprocessor.
+
+
+
+
+The CMP instruction
+This instruction compares the contents of the accumulator
+with the contents of the addressed memory location, by
+logically subtracting the contents of the operand from
+the accumulator. If an underflow occurs, the carry flag
+is cleared; otherwise it is set. If the result is zero,
+the Z flag is set; otherwise it is cleared. If the result
+is greater than $7F (127), the N flag is set, otherwise
+it is cleared. Let us take a look at an example:
+LDA #$50
+CMP #$30
+The accumulator contains $50. The calculation $50 - $30
+is then carried out, with a result of $20. Because no
+underflow occurred, the carry flag is set. The zero flag
+is cleared because the result is not equal to zero. The N
+flag is cleared because the number is not greater than
+$7F. We get the following result:
+C=l; Z=0; N=0
+
+
+
+
+The CPX instruction
+The CPX instruction works the same way as the CMP
+instruction. Here the contents of the addressed memory
+location are compared not with the contents of
+the
+accumulator, but rather with the contents of the X-
+register. The contents of the registers are not altered.
+What was said above concerning the CMP instruction
+applies to the CPX instruction as well. There are not as
+many addressing modes for the CPX instruction, however.
+
+
+
+
+The CPY instruction
+These instructions are the same as the CPX instructions
+except that the Y-register is used in place of the X-
+register. There are only three addressing modes.
+immediate
+absolute
+zero page
+
+
+
+
+ Conditional branching instructions
+Next we introduce the instructions that allow you to make
+programming decisions. The foundations of these decisions
+are the conditions of the flags. The following four flags
+can be used to make decisions: the Z flag, the N flag,
+the C flag, and the V flag.
+For each flag there are two conditional branch commands:
+the first branches if the flag is set, the second if the
+flag is clear. The operand of each conditional branch
+instruction specifies the location where the micro
+processor is to get the next operation code should the
+condition tested for be true.
+The 6510 microprocessor uses the relative addressing mode
+for conditional branch instructions. The operand is not
+an absolute memory address, but rather an address
+relative to the current contents of the program counter.
+This relative address is an 8-bit value. The relative
+address is added to the contents of the program counter
+and the branch is made to that computed address if the
+condition tested for is true.
+With this 8-bit value you can represent 256 different
+numbers, so you can branch to any of 256 possible
+locations. The relative address causes a branch forward
+if the 8-bit value is positive and causes a branch
+backward if the 8-bit value is negative. So relative
+addressing can perform backward branching by allowing the
+use of negative operands.
+
+
+
+all, the branch instructions take up only two bytes in
+memory. Besides the savings in memory there is a faster
+speed of execution. A two byte instruction is executed
+faster by the microprocessor. The most important
+advantage of relative addressing is that the branch
+address is relative to the point of execution. Since the
+branch instructions do not use absolute addresses, if you
+place the same program segment in a different place in
+memory, the program does not have to be changed—the
+location to the branch address does not change.
+If the address to brarch to were given in absolute form,
+it would have to be changed if the program were move to a
+different memory location. The disadvantage of relative
+addressing is the limited address range to which we can
+branch. Only 129 bytes forward or 126 bytes backward from
+the branch instruction is the maximum that can be jumped.
+In practice this is usually no great hindrance, though,
+because it is seldom that a larger distance is involved.
+If you have found the address calculation of relative
+addressing quite complicated, you can rest at ease. We
+have presented this discussion only so that you
+understand the principle. Later, the assembler will taKe
+over this work for you; you need only give it the branch
+destination. The assembler will bring it to your
+attention if you attempt to jump beyond the permitted distance
+
+
+
+
+
+
+Branch on zero flag
+A branch when the zero flag is set results from the
+instruction "branch on equal," shortened to BEQ, If the
+branch is to be made on a cleared zero flag, the
+instruction is called "branch not equal," BNE.
+
+
+
+
+Branch on carry flag
+Here the instruction is called "branch on carry set" or
+BCS for branching on a set carry flag and "branch on
+carry clear", BCC, for a branch on carry clear flag.
+
+
+
+
+Branch on negative flag
+If the negative flag is set, the instruction "branch on
+minus," BMI, will branch; in order to jump on a clear
+negative flag, the instruction "branch on plus," BPL,
+must be used.
+ 
+
+
+
+
+Branch on overflow flag
+The overflow can also be
+used as the basis for
+conditional branches. The corresponding commands are
+"branch on overflow setf" BVSf and "branch on overflow
+clear," BVC. Because of the secondary importance of the V
+flag, these commands are seldom used.
+
+
+
+The Jump instructions
+In contrast to the conditional branch commands above, the
+unconditional jump instructions branches to an absolute
+address. These instructions are not dependent on any
+condition and is always executed. The destination address
+is specified in reverse sequence (low-byte followed by
+high-byte) as are the other absolute addresses.
+JMP $C420 direct jump to location $C420
+In addition to the absolute form of the jump instruction,
+there is also an indirect addressing form, a peculiarity
+of the jump instructions. With this instruction, the
+specified address is not jumped to. Instead, this address
+tells where to get the actual destination address. For
+this, two consecutive bytes are again used as a pointer,
+in the format low byte, high byte.
+JMP ($0302) indirect jump to destination pointed
+to by address $0302
+The actual address is now taken from memory locations
+$0302 and $0303. If, for example, $40 and $C8 are in
+these locations, a branch to location $C840 will be made.
+This method of addressing works only with the JMP
+instruction.
+
+The operating system of the Commodore 64 makes use of
+this method of addressing. There are several addresses
+(called vectors) located from $300 to $33C, that contain
+addresses for indirect JMPs. The operating system uses
+these vectors for performing frequently used routines.
+
+
+
+
+The Increment and Decrement instructions
+For effective programming of loops and counters, the 6510
+has commands to increment or decrement the contents of a
+register or memory location by one. These increment
+instructions correspond, together with the conditional
+branching commands, to the NEXT instruction in BASIC. The
+STEP-1 instruction can be simulated with the decrement
+commands.
+
+
+
+
+INX
+The contents of the X register are incremented by one.
+The N and Z flags are set according to the result. InINY
+This is the corresponding instruction to increment the Y
+register. It affects the flags in the same way.
+BASIC, this instruction can be formulated:
+X=X+1
+If a value of $FF is incremented, the overflow is not
+taken into account (the carry flag is not set). The
+contents are set to zero, and the Z flag is set.
+
+
+
+There is no instruction on the 6510 to increment or
+decrement the accumulator contents.
+
+INC
+This instruction increments the contents of a memory
+location by one. The Z and N flags are again set
+depending on the result. This instruction is different
+from the previous ones in that here the contents of a
+memory location is first read, then incremented by one,
+and then saved again (read - modify - write). The
+commands which you are acquainted with so far either read
+or wrote a memory location, but never both.
+instruction does not alter the contents
+accumulator.
+In pseudo-BASIC, we can formulate this like so:
+POKE M, PEEK(M) + 1
+
+
+
+
+DEX
+This instruction decrements the contents of the X
+register. When decrement from $00 to $FF, the carry flag
+is not set. The N and Z flags are set depending on the
+result. In psdueo-BASIC this can be written as
+X=X-1
+
+
+
+
+DEY
+This instruction is the analog of the previous
+instruction, decrementing the contents of Y instead of X.
+The flags are affected in the same manner
+
+
+
+
+DEX
+With this instruction the contents of a memory cell can
+be decremented without losing the contents of the
+accumulator. Its operation is equivalent to that of the
+INC instruction.
+
+
+
+
+Flag manipulation instructions
+In addition to the instructions whose results affect the
+flags, the flags can also be directly set or cleared by
+the programmer. Sometimes this is necessary before
+performing addition and subtraction. These instructions
+do not require any operands. They are all one-byte in
+length.
+
+
+The carry flag
+The carry flag is set by the instruction SEC (set carry)/
+and cleared by CLC (clear carry).
+The SEC instruction must be used before each subtraction
+and the CLC instruction before
+each addition, otherwise
+the answer may be wrong.
+
+
+
+
+The decimal flag
+This flag determines whether
+the processor performs
+addition and subtraction in binary (indicated by a
+cleared flag, as we have already learned) or in binary-
+coded decimal (BCD). This is the case if the flag is set.
+The microprocessor then works with BCD numbers. The
+instruction SED (set decimal) sets the flag, CLD (clear
+decimal) clears the flag.
+
+
+
+
+The interrupt flag
+The I flag determines whether the processor is ready to
+accept an interrupt or not. If the I flag is set with SEI
+(set interrupt disable), no interrupts will be accepted,
+while if it is cleared with CLI (clear interrupt
+disable), the processor can accept interrupts.
+
+
+
+
+The overflow flag
+The V flag can only be cleared on instruction. The
+instruction CLV (clear overflow) serves this purpose.
+
+
+
+The Shift Instructions
+The 6510 microprocessor has some instructions for which
+there are no equivalents in BASIC: the shift
+instructions. These instructions shift the bits in the
+accumulator or addressed memory location one position to
+the right or left. If these instructions are used in
+reference to the accumulator, one speaks of accumulator
+addressing. Depending on the addressing mode, these
+commands can consist of one, two, or three bytes. If a
+memory location is addressed, they behave as an INC or
+DEC instruction by following a read with a write. The
+contents of the accumulator remain unchanged by this
+addressing mode.
+
+
+
+
+ASL
+ASL stands for "arithmetic shift left." It shifts the of
+the addressed byte by one bit-position to the left. A
+zero is placed in the right-most bit (bit 0) and the
+carry flag is set equal to the left-most bit (bit 7).
+
+
+
+
+
+The LSR instruction (logical shift right) corresponds to
+the ASL instruction; here, however, the value is shifted
+right. The seventh bit is loaded with zero and bit zero
+is placed in the carry flag.
+LSR A The accumulator contains $CA.
+
+
+
+$CA %11001010
+%01100101 $65, C = 0
+The result is $65. The carry flag contains the value of
+bit position 0 before the shift occurs, in this case 0.
+So the carry flag is clear. You may have noticed that,
+shifting one bit position to the right divides the
+original value by two. The carry flag gives the contents
+of bit 0 before the shift. We can interpret the value of
+the carry as the remainder of the division by two. This
+way we can tell if a number is odd or even. The LSR
+instruction shifts the lowest bit into the carry. The
+carry flag can then be tested with BCC or BCS. If a
+memory location is addressed with the LSR instruction,
+the contents of the accumulator are retained.
+
+
+
+
+ROL
+With the ROL instruction (rotate left) we can shift a
+memory location or register left cyclically, that is,
+rotate the bits. The carry flag is shifted into bit 0
+while the contents of bit 7 are placed in the carry.
+Therefore we have a cyclical shift of nine bits (8 bits
+of the register plus the carry flag). An example will
+clarify this.
+ROL A The accumulator contains $4B,
+the carry flag is set.
+
+
+
+
+
+ROL
+All bits are shifted one position to the left. The carry
+flag is transferred into the now-vacant bit 0. The
+pushed-out seventh bit is placed into the carry. We get a
+result of $97 and a cleared carry. Here again the
+contents of the accumulator are doubled; any overflow is
+placed into the carry.
+
+
+
+
+ROR
+The ROR instruction (rotate right) is the opposite of the
+ROL instruction and rotates the contents of a register
+cyclically one position to the right. In so doing, the
+contents of the carry flag are placed into the now-free
+position 7 while the pushed-out contents of bit 0 are
+placed into the carry flag.
+
+
+
+
+The Subroutine Instructions
+A very important programming technique, which you already
+know from BASIC, is the use of subroutines. In BASIC, the
+instruction GOSUB is used to call a subroutine, and the
+instruction RETURN is used to return from the subroutine.
+How is a subroutine call distinguished from a normal jump
+instruction such as GOTO or JMP? When we call a
+subroutine, the processor or BASIC interpreter must make
+note of the location from which the subroutine was called
+so that the RETURN instruction can branch back to the
+location following the call. The BASIC interpreter does
+this for us; the 6510 also handles this task for us in
+machine language. In spite of this, however, we should
+know how it works.
+So that the processor knows which instruction to branch
+back to on a RETURN instruction, the current address of
+the program counter is saved when the call is made. A
+special storage area is reserved for this, called the
+stack. This stack lies from address $0100 to $01FF (256
+to 511). There is something called a stack pointer so
+that the microprocessor knows at which address of the
+stack it can save a return address. We have already been
+introduced to the stack register. Let's take a look at
+what happens when a subroutine is called.
+
+The processor takes the current contents of the program
+counter ( + 2) and divides it into high and low bytes. The
+high byte is stored at address $100 plus SP. Then the
+contents of the stack pointer are decremented by one and
+the low byte is stored on the stack (address 100 + SP),
+Finally the stack pointer is decremented by one again.
+Now a branch is made to the subroutine.
+When the processor encounters an RTS instruction, the
+opposite process takes place. The stack pointer is
+incremented by one and one byte is taken from the stack
+(address $100 + SP). This byte is used as the low-byte of
+the program counter. Then
+the stack pointer is
+incremented again and the high-byte of the program
+counter is fetched from the stack. Now the program
+counter points to the next instruction after the
+subroutine call and the program is continued there.
+When values are placed on the stack, the value is first
+saved on the stack and then the stack pointer is
+decremented by one. When getting a byte back from the
+stack, the stack pointer is first incremented by one. The
+stack grows from top to bottom (from $1FF to $100).
+
+
+
+
+The Stack Instructions
+The 6510 has the ability to save the contents of the
+accumulator and the status register on the stack and to
+get them back again. The stack pointer is automatically
+decremented after writing and incremented before reading.
+
+
+
+
+PHA
+The instruction PHA (push accumulator) saves the contents
+of the accumulator on the stack and decrements the stack
+pointer by one. The contents of the accumulator are
+unchanged.
+
+
+
+
+PHP
+With the PHP instruction (push processor status), the
+entire status register (contents of the flags) is placed
+on the stack and the stack pointer is decremented by one.
+The contents of the status register are retained.
+
+
+
+
+PLA
+The PLA instruction (pull accumulator) is the opposite of
+PHA. The stack pointer is incremented and a byte readfrom the stack into the accumulator. The N and Z flags
+are set according to the value.
+
+
+
+
+
+PLP
+With this instruction, one byte is fetched from the stack
+and placed in the status register. This is the complement
+of PHP.
+
+
+
+
+Instructions for handling interrupts
+We are not going to use use these instructions but
+mention them only for the sake of completeness. The 6510
+has the ability to interrupt a program from the outside
+world. For this, the interrupt line (IRQ, interrupt
+request) of the processor must be activated. The
+interrupt procedure is similar to a subroutine call. The
+processor interrupts the current program and places the
+contents of the program counter and the status register
+on the stack. Now execution branches to the address
+contained at $FFFE and $FFFF. The contents of these
+addresses are used as the new program counter.
+In addition to an interruption from the outside, the 6510
+can also interrupt a program through a instruction from
+within the program. The instruction BRK (break) serves
+this purpose. The program counter and the status register
+are saved on the stack.
+In order to return to the main program from an interrupt
+routine, there is a instruction similar to the RTS
+instruction for subroutines. The instruction RTI (return
+from interrupt) gets the program counter and the contents
+of the status register back from the stack so that the
+program can continue without changing the flags.
+
+
+
+
+There is one instruction which has not been mentioned yet
+which does absolutely nothing and so is called NOP (no
+operation). This instruction is used to remove operation
+codes from a program without shifting the rest of the
+commands, as well as in delay loops (this instruction too
+requires a certain amount of time to execute).
+
+
+

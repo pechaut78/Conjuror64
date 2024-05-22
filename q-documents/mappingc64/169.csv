@@ -1,0 +1,18 @@
+question,answer
+"What is the purpose of the memory location at address $2A6?","address          $2A6
+PAL/NTSC Flag
+
+At power-on, a test is performed to see if the monitor uses the NTSC
+(North American) or PAL (European) television standard.
+
+This test is accomplished by setting a raster interrupt for scan line
+311, and testing if the interrupt occurs.  Since NTSC monitors have
+only 262 raster scan lines per screen, the interrupt will occur only
+if a PAL monitor is used.  The results of that test are stored here,
+with a 0 indicating an NTSC system in use, and one signifying a PAL
+system.
+
+This information is used by the routines which set the prescaler
+values for the system IRQ timer, so that the IRQ occurs every 1/60
+second.  Since the PAL system 02 clock runs a bit slower than the NTSC
+version, this prescaler value must be adjusted accordingly."

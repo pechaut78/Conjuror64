@@ -1,0 +1,68 @@
+
+
+
+address       $2A7-$2FF
+Unused
+
+The programmer may use this area for machine language subroutines, or
+for graphics data storage.
+
+If the VIC-II ship is using the bottom 16K for graphics and memory
+(the default setting when the system is turned on), this is one of the
+few free areas available for storing sprite or character data.
+Locaitons 704-767 could be used for sprite data block number 11,
+without interfering with BASIC program text or variables.
+
+Location Range: 768-779 ($300-$30B)
+BASIC Indirect Vector Table
+
+Several important BASIC routines are vectored through RAM.  This means
+that the first instruction executed by the routine is an indirect jump
+to a location pointed to by one of the vectors in this table.
+
+On power up, the system sets these vectors to point to the next
+instruction past the original JuMP instruction.  The routine then
+continues with that instruction as if the jump never took place.  For
+example, the BASIC error message routine starts at 42039 ($A437) with
+the instruction JMP ($300).  The indirect vector at 768 ($300) points
+to 42042 ($A43A), which is the instruction immediately following JMP
+($300).
+
+Although this may seem like a fancy way of accomplishing nothing,
+using these indirect vectors serves two important purposes.  First, it
+allows you to use these important BASIC routines without knowing their
+addresses in the BASIC ROM.
+
+For example, the routine to LIST the ASCII text of the single-byte
+BASIC program token that is currently in the Accumulator (.A) is
+located at one address in the VIC, and another in the 64.  On future
+Commodore computers it may be found at still another location.  Yet as
+long as the routine is vectored in RAM at 774 ($306), the statement
+QP=PEEK(774)+256*PEEK(775) would find the address of that routine on
+any of the machines.  Thus, entering such routines through RAM vectors
+rather than a direct jump into the ROMs helps to keep your programs
+compatible with different machines.
+
+The other important effect of having these vectors in RAM is that you
+can alter them.  In that way, you can redirect these important BASIC
+routines to execute your own preprocessing routines first.
+
+If you wanted to add commands to BASIC, for example, how would you go
+about it?  First, you would need to change the BASIC routines that
+convert ASCII program text to tokenized program format, so that when a
+line of program text was entered, the new keyword would be stored as a
+token.
+
+Next, you would need to change the routine that executes tokens, so
+that when the interpreter comes to your new keyword token, it will
+take the proper action.
+
+You would also have to change the routine that converts tokens back to
+ASCII text, so that your program would LIST the token out correctly.
+And you might want to alter the routine that prints error messages, to
+add new messages for your keyword.
+
+As you will see, vectors to all of these routines can be found in the
+following indirect vector table.  Changing these vectors is a much
+more elegant and efficient solution than the old wedge technique
+discussed at location 115 ($73)

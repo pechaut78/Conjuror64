@@ -1,0 +1,30 @@
+
+
+A microprocessor must have a place to get data and store
+data. The computer's memory serves this purpose. Memory is
+divided into individual cells containing 8 bits each, the
+same size as the accumulator and X and Y registers. In order
+to access the memory, it must be possible to select a
+specific memory location. This selection is called
+addressing memory. We give each memory location a number or
+address. With 8 bits, the microprocessor can address cells
+from 0 to 255 for a total of 256 memory cells. This is far
+too few for most applications. For this reason, the micro
+processor uses 16-bits for the address. With 16 bits, the
+microprocessor can address 216 = 65536 memory locations.
+This is called a 16-bit address bus. To summarize - a) the
+6510 microprocessor can address 65536 memory locations; b)
+each memory location can contain a value from 0 to 255. For
+ease of handling, 210 = 1024 bytes is called a kilobyte or
+IK. Therefore, the processor can address 64*1024 = 65536 or
+64K. This is the entire address range of the Commodore 64.
+Now you can understand the significance of the program
+counter. The program counter contains a 16-bit value. This
+16-bit value is the address of the next instruction that the
+microprocessor is to fetch from memory and execute.
+An instruction for the microprocessor can be represented by
+a value between 0 and 255. The 6510 microprocessor can have
+a maximum of 256 different instructions. However, not all
+the codes have a meaning on the 6510; fewer than 256
+instructions exist. BASIC commands are naturally not
+included.

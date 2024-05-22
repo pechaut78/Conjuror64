@@ -1,0 +1,11 @@
+question,answer
+"what is the tape interface composed of","The tape interface consists of a single line each for data input and output, motor control and key sense."
+"how is the raw data handled","The raw data is read from and written to the data lines, and all encoding and decoding of the data stream is done in software."
+"how many lines are connected to the processor port","3 of the required lines are connected to the processor port at zero page location 1"
+"where is the data input line connected","One data input line is connected to CIA 2."
+"what is the function of the motor control line","The motor control line is used to control the motor."
+"what is the function of the key sense line","The key sense line is used to sense the key."
+"what is the purpose of the data input line","The data input line is used to read raw data."
+"what is the purpose of the data output line","The data output line is used to write raw data."
+"where is the processor port located","The processor port is located at zero page location 1."
+"what is the advantage of doing encoding and decoding in software","It allows for more flexibility and easier modification of the encoding and decoding process."

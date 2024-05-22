@@ -1,0 +1,9 @@
+
+
+
+address              $FF6E
+End of Routine to Set Timer for Sixtieth of a Second IRQ
+
+This appears to be a patch added to compensate for the extra length of
+the current version of this routine, which chooses either the PAL or
+NTSC prescaler values for the timer.

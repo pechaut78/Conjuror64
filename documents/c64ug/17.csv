@@ -1,0 +1,11 @@
+question,answer
+"what is the function of the CLR/HOME key in a C64","The CLR/HOME key positions the cursor at the HOME position of the screen, which is the upper left-hand corner, effectively moving the cursor to the starting point of the screen."
+"what happens when you press the CLR/HOME key with the shift key","When the CLR/HOME key is pressed with the shift key, it not only positions the cursor at the HOME position but also clears the screen, providing a clean slate for further input or output."
+"where does the cursor move when you press the CLR/HOME key","The cursor moves to the upper left-hand corner of the screen, which is the HOME position, when the CLR/HOME key is pressed."
+"what is the HOME position of the screen","The HOME position of the screen refers to the upper left-hand corner, which is the default starting point for the cursor."
+"what is the effect of pressing the CLR/HOME key on the screen","Pressing the CLR/HOME key positions the cursor at the HOME position, which is the upper left-hand corner of the screen, and if pressed with the shift key, it also clears the screen."
+"what is the difference between pressing CLR/HOME with and without the shift key","When pressed without the shift key, the CLR/HOME key only positions the cursor at the HOME position, whereas when pressed with the shift key, it clears the screen in addition to positioning the cursor."
+"what is the purpose of the CLR/HOME key in a C64","The CLR/HOME key is used to quickly position the cursor at the HOME position, which is the upper left-hand corner of the screen, and optionally clear the screen when pressed with the shift key."
+"in what corner of the screen does the cursor move when you press the CLR/HOME key","The cursor moves to the upper left-hand corner of the screen when the CLR/HOME key is pressed."
+"what happens to the screen when you press the CLR/HOME key with the shift key","The screen is cleared, and the cursor is positioned at the HOME position, which is the upper left-hand corner, when the CLR/HOME key is pressed with the shift key."
+"what is the default position of the cursor after pressing the CLR/HOME key","The default position of the cursor after pressing the CLR/HOME key is the upper left-hand corner of the screen, which is the HOME position."

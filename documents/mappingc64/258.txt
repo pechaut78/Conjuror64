@@ -1,0 +1,5 @@
+
+
+
+address         $AB4D          DOAGIN
+Error Message Formatting Routines for GET, INPUT, and READ

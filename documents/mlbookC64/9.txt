@@ -1,0 +1,18 @@
+
+2) Absolute Addressing
+This addressing mode is used if a register is be
+loaded with the contents of a particular memory
+location. This is different from the immediate
+addressing mode which loads the register with a
+constant value.
+LDA $C0AF
+Here the accumulator is loaded with the contents of
+memory location $C0AF. How is this instruction
+represented in memory? The address $C0AF is a 16-
+bit number. A memory location can only hold 8 bits.
+The solution is to divide the 16-bit address into
+two 8-bit numbers. The following convention is used
+for this - immediately following the instruction is
+the least significant part of the address (low-
+byte) and followed by the the most significant part
+(high-byte).

@@ -1,0 +1,13 @@
+
+
+
+address         $AEFF          CHKCOM
+Check for and Skip Comma
+
+This syntax checking device is the same in substance as the two
+checking routines above.  It is used when the next character should be
+a comma.  If it is not, a SYNTAX ERROR retults.  If it is, the
+character is skipped and the next character is read.  Any character
+can be checked for and skipped this way by loading the character into
+the Accumulator and entering this routine from SYNCHR at 44799
+($AEFF).

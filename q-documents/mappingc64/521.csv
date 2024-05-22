@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $E3BA?","address              $E3BA
+Initial RND Seed Value
+
+At power-up time, this five-byte floating point constant is
+transferred to 139 ($8B), where it functions as the starting RND seed
+number.  Thus, if RND is not initialized with a negative or zero
+argument, it will always return the same sequence of numbers."

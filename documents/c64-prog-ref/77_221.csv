@@ -1,0 +1,10 @@
+question,answer
+"what is the physical phenomenon that creates sound waves?","Sound is created by the movement of air in waves, similar to the ripples that occur when a stone is thrown into a pool, and when these waves are created in air, we hear it."
+"how is the frequency of a sound wave calculated?","The frequency of a sound wave is calculated by measuring the time between one peak of a wave and the next, and then taking the reciprocal of that number, which gives you the cycles per second."
+"what determines the pitch of a sound?","The highness or lowness of a sound, or pitch, is determined by the frequency of the sound waves produced."
+"where can you find the frequency values for a full eight octaves of musical notes?","The frequency values for a full eight octaves of musical notes can be found in Appendix E."
+"what formula is used to represent the frequency of a sound wave?","The formula Fout/.06097 is used to represent the frequency (Fn) of the sound you want to create."
+"how do you create the high and low frequency values for a note?","To create the high and low frequency values for a note, you must first round off Fn so that any numbers to the right of the decimal point are left off, and then use the formulas Fhi=INT(Fn/256) and Flo=Fn-(256*Fhi) to set the high frequency location (Fhi) and low frequency location (Flo)."
+"what is the purpose of the Fout formula?","The Fout formula is used to create a frequency other than the ones listed in the note table."
+"what is the relationship between the frequency of a sound wave and the pitch?","The frequency of a sound wave determines the pitch, with higher frequencies producing higher pitches and lower frequencies producing lower pitches."
+"what is the result of using the formulas for Fhi and Flo?","The result of using the formulas for Fhi and Flo is that you can create the high and low frequency values for a note, which can be used to produce a specific sound or pitch."

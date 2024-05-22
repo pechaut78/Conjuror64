@@ -1,0 +1,11 @@
+question,answer
+"What does the PLP instruction do?","The PLP instruction pulls the processor status from the stack, which means it retrieves the status flags from the top of the stack and sets the processor flags accordingly."
+"What is the purpose of the ROL instruction?","The ROL instruction rotates the bits of the accumulator or memory location one position to the left, effectively multiplying the value by 2, and sets the carry flag if the most significant bit is shifted out."
+"What is the difference between ROL and ROR instructions?","The ROL instruction rotates the bits one position to the left, while the ROR instruction rotates the bits one position to the right, effectively dividing the value by 2, and sets the carry flag if the least significant bit is shifted out."
+"What happens when the RTI instruction is executed?","When the RTI instruction is executed, the processor returns from an interrupt, popping the processor status and program counter from the stack, and resumes normal execution."
+"What is the purpose of the RTS instruction?","The RTS instruction returns from a subroutine, popping the return address from the stack and transferring control to the caller."
+"How does the SBC instruction handle borrowing?","The SBC instruction subtracts the memory value from the accumulator, borrowing from the next higher byte if the result is negative, and sets the carry flag accordingly."
+"What is the effect of the SEC instruction?","The SEC instruction sets the carry flag, which can affect the result of subsequent arithmetic and logical operations."
+"What is the purpose of the SED instruction?","The SED instruction sets the decimal mode, which affects the way arithmetic operations are performed, using binary-coded decimal (BCD) arithmetic."
+"What happens when the SEI instruction is executed?","When the SEI instruction is executed, the interrupt disable status is set, preventing the processor from responding to interrupts until the CLI instruction is executed."
+"What is the purpose of the STA instruction?","The STA instruction stores the value of the accumulator in a memory location, allowing the programmer to save the result of a calculation or operation."

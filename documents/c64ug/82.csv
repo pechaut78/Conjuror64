@@ -1,0 +1,11 @@
+question,answer
+"what is the syntax of the POKE command?","The POKE command is always followed by two numbers or formulas, where the first number is a memory location and the second number is a decimal value from 0 to 255, which will be placed in the memory location, replacing any previously stored value."
+"what is the purpose of the POKE command?","The purpose of the POKE command is to place a decimal value from 0 to 255 into a specific memory location, replacing any previously stored value."
+"what is the difference between a comma and a semicolon in a PRINT statement?","A comma in a PRINT statement divides the screen into four columns, while a semicolon suppresses all spacing, allowing the next thing printed to act as if it were a continuation of the same PRINT statement."
+"what are the different types of items that can be printed using the PRINT statement?","The PRINT statement can be followed by text strings with quotes, variable names, functions, and punctuation marks."
+"how do you print a string using the PRINT statement?","You can print a string using the PRINT statement by enclosing the string in quotes, for example: PRINT \"HELLO\""
+"what is the effect of using a semicolon at the end of a PRINT statement?","Using a semicolon at the end of a PRINT statement suppresses all spacing and allows the next thing printed to act as if it were a continuation of the same PRINT statement."
+"what is the purpose of the SPC function in relation to the PRINT statement?","The SPC function is used to specify the number of spaces to be printed before the next item, and is often used in conjunction with the PRINT statement to format output."
+"how do you print multiple values using the PRINT statement?","You can print multiple values using the PRINT statement by separating them with commas, for example: PRINT A, B, C, D"
+"what is the effect of using a comma at the end of a PRINT statement?","Using a comma at the end of a PRINT statement divides the screen into four columns and prints the next item in the next column."
+"can you use formulas with the POKE command?","Yes, you can use formulas with the POKE command, for example: POKE S + 29, 8, where S is a variable or expression that evaluates to a memory location."

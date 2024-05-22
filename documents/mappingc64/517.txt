@@ -1,0 +1,12 @@
+
+
+
+address              $E37B
+Warm Start BASIC
+
+This is the entry point into BASIC from the BRK routine at 65126
+($FE66), which is executed when the STOP and RESTORE keys are both
+pressed.  It first executes the Kernal CLRCHN routine which closes all
+files.  It then sets the default devices, resets the stack and BASIC
+program pointers, and jumps through the vector at 768 ($300) to the
+next routine to print the READY prompt and enter the main BASIC loop.

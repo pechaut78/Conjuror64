@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the SYS command in C64?","The SYS command is used to execute a machine language program starting at a specific memory location, which is specified by a decimal number or numeric value in the range of 0-65535, similar to the USR function but without parameter passing."
+"what is the range of decimal numbers that can be used with the SYS command?","The range of decimal numbers that can be used with the SYS command is 0-65535, which specifies the memory location where the machine language program will start executing."
+"how does the SYS command differ from the USR function?","The SYS command differs from the USR function in that it does not allow parameter passing, whereas the USR function does allow parameter passing, although both commands are used to execute machine language programs."
+"what happens when the SYS command is executed?","When the SYS command is executed, the program will begin executing the machine language program starting at the specified memory location, which is specified by a decimal number or numeric value in the range of 0-65535."
+"in what format should the memory location be specified when using the SYS command?","The memory location should be specified as a decimal number or numeric value in the range of 0-65535 when using the SYS command."
+"can the SYS command be used to execute a BASIC program?","No, the SYS command is used to execute a machine language program, not a BASIC program, and it requires a specific memory location to be specified."
+"what is the minimum value that can be specified with the SYS command?","The minimum value that can be specified with the SYS command is 0, which is the lowest memory location that can be accessed."
+"what is the maximum value that can be specified with the SYS command?","The maximum value that can be specified with the SYS command is 65535, which is the highest memory location that can be accessed."
+"is it possible to pass parameters to a machine language program using the SYS command?","No, it is not possible to pass parameters to a machine language program using the SYS command, unlike the USR function which does allow parameter passing."
+"what type of program is executed when using the SYS command?","A machine language program is executed when using the SYS command, which requires a specific memory location to be specified."

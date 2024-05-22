@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $A8D2?","address         $A8D2          RETURN
+Perform RETURN
+
+The RETURN statement finds the saved GOSUB data on the stack, and uses
+it to restore the pointers to the current line and current character.
+This will cause execution to continue where it left off when GOSUB was
+executed."

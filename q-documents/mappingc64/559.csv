@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $E9F0?","address              $E9F0
+Set Pointer to Screen Address of Start of Line
+
+This subroutine puts the address of the first byte of the screen line
+designated by the .X register into locations 209-210 ($D1-$D2)."

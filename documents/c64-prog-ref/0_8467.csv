@@ -1,0 +1,11 @@
+question,answer
+"Where is the Operating System of the Commodore 64 stored?","The Operating System is contained in the Read Only Memory (ROM) chips and is a combination of three separate, but interrelated, program modules."
+"What are the three program modules that make up the Operating System of the Commodore 64?","The three program modules that make up the Operating System are the BASIC Interpreter, the KERNAL, and the Screen Editor."
+"What is the role of the BASIC Interpreter in the Commodore 64 Operating System?","The BASIC Interpreter is responsible for analysing BASIC statement syntax and for performing the required calculations and/or data manipulation."
+"How many keywords does the BASIC Interpreter have in its vocabulary?","The BASIC Interpreter has a vocabulary of 65 keywords which have special meanings."
+"What characters are used to make keywords and variable names in the BASIC Interpreter?","The upper and lower case alphabet and the digits 0-9 are used to make both keywords and variable names."
+"What is the role of the KERNAL in the Commodore 64 Operating System?","The KERNAL handles most of the interrupt level processing in the system and does the actual input and output of data."
+"What is the function of the Screen Editor in the Commodore 64 Operating System?","The Screen Editor controls the output to the video screen (television set) and the editing of BASIC program text, and also intercepts keyboard input to decide whether characters should be acted upon immediately or passed on to the BASIC Interpreter."
+"How does the Screen Editor handle keyboard input?","The Screen Editor intercepts keyboard input to decide whether the characters put in should be acted upon immediately, or passed on to the BASIC Interpreter."
+"What is the purpose of the special characters and symbols in the BASIC Interpreter?","Certain punctuation characters and special symbols have meanings for the Interpreter, as listed in Table 1-1."
+"What is the relationship between the three program modules of the Operating System?","The three program modules - the BASIC Interpreter, the KERNAL, and the Screen Editor - are separate but interrelated, working together to form the Operating System of the Commodore 64."

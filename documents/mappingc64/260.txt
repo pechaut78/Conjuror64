@@ -1,0 +1,11 @@
+
+
+
+address        $ABA5          INPUTN
+Perform INPUT#
+
+This routine opens an input channel with the Kernal CHKIN routine,
+calls INPUT, and then closes the channel with a CHKOUT routine (62032,
+$F250).  Extra data is discarded without an EXTRA IGNORED message, and
+a FILE DATA ERROR message is issued when the data type is not suitable
+for the type of variable used.

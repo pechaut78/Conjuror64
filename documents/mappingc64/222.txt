@@ -1,0 +1,8 @@
+
+
+
+address   $A435-$A468    OMERR
+OUT OF MEMORY Error Handler
+
+This routine just sets the error message code, and falls through to
+the general error handler.

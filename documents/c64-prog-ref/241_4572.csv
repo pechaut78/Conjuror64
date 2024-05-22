@@ -1,0 +1,11 @@
+question,answer
+"What is the memory location of the pseudo 6551 control register?","The pseudo 6551 control register is located at memory location $0293, which is labeled as M51CTR."
+"What is the purpose of the two bytes at memory location $0295?","The two bytes at memory location $0295, labeled as M51AJB, contain the baud rate for the start of the bit test during interface activity, which is used to calculate the baud rate."
+"What is the function of the RSSTAT register?","The RSSTAT register, located at memory location $0297, is the RS-232 status register, which provides information about the current state of the RS-232 interface."
+"What is the purpose of the BITNUM register?","The BITNUM register, located at memory location $0298, holds the number of bits to be sent or received during RS-232 communication."
+"What is the significance of the BAUDOF register?","The BAUDOF register, located at memory location $0299, contains two bytes that are equal to the time of one bit cell, which is calculated based on the system clock and baud rate."
+"What is the purpose of the RIDBE register?","The RIDBE register, located at memory location $029B, holds the byte index to the end of the receiver FIFO buffer, which is used to manage the receiver buffer."
+"What is the function of the RIDBS register?","The RIDBS register, located at memory location $029C, holds the byte index to the start of the receiver FIFO buffer, which is used to manage the receiver buffer."
+"What is the purpose of the RODBS register?","The RODBS register, located at memory location $029D, holds the byte index to the start of the transmitter FIFO buffer, which is used to manage the transmitter buffer."
+"What is the function of the RODBE register?","The RODBE register, located at memory location $029E, holds the byte index to the end of the transmitter FIFO buffer, which is used to manage the transmitter buffer."
+"What information is stored in the ENABL register?","The ENABL register, located at memory location $02A1, holds current active interrupts in the CIA #2 ICR, including information about the system waiting for the Receiver Edge, receiving data, or transmitting data."

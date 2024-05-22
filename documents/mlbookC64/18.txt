@@ -1,0 +1,17 @@
+
+
+The STORE Instructions
+The counterparts of the load instructions are the store
+instructions. Using these instructions we can place the
+contents of a register into memory. The mnemonics for the
+instructions are:
+STA
+STX
+STY
+The contents of the accumulator, X-register or Y-register
+are placed in the appropriate memory location, which is
+specified by the operand that follows the instruction
+code. The same addressing modes used for the load
+instructions apply to these instructions except for the
+immediate mode. Storing the contents of a register
+changes neither the register nor the status flags.

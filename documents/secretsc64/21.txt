@@ -1,0 +1,19 @@
+
+
+Drawing Complex Shapes on the C64
+
+By using the BASIC PLOT and LINEDRAW routines des- 
+cribed above, or the much faster machine code routines 
+described in Chapter 10, it is jrossibie to draw almost any 
+complex shape. 
+
+All that is required is a coordinate file which holds all 
+the necessary drawing coordinates and status information 
+such as skip to the next point and end of file. The easiest 
+way to store this sort of data is in BASIC DATA statements. 
+
+We can store the X,y coordinates as simple pairs of 
+numbers in the range 0—319 for the X coordinate and 0—199 
+for the Y coordinate. For the status information we can use 
+— 1 to indicate skip to the next point and —2 to indicate the 
+end of the file. 

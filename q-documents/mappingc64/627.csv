@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $F6ED?","address              $F6ED          STOP
+Test STOP Key
+
+STOP is a documented Kernal routine which can be entered from the jump
+table at location 65505 ($FFE1).
+
+It is vectored through RAM at 808 ($328).  The routine checks to see
+if the STOP key was pressed during the last UDTIM call.  If it was,
+the Zero flag is set to 1, the CLRCHN routine is called to set the
+input and output devices back to the keyboard and screen, and the
+keyboard queue is emptied."

@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the SETNAM function?","The purpose of the SETNAM function is to set up the file name for the OPEN, SAVE, or LOAD routines, where the accumulator must be loaded with the length of the file name and the X and Y registers must be loaded with the address of the file name in standard 6502 low-byte/high-byte format."
+"What is the call address of the SETNAM function?","The call address of the SETNAM function is $FFBD (hex) or 65469 (decimal)."
+"What registers are used to communicate with the SETNAM function?","The SETNAM function uses the A, X, and Y registers for communication."
+"How many bytes of stack space are required by the SETNAM function?","The SETNAM function requires 2 bytes of stack space."
+"What happens if the accumulator is set to 0 when calling the SETNAM function?","If the accumulator is set to 0 when calling the SETNAM function, it represents a zero file length, and no file name is desired."
+"What is the format of the address stored in the X and Y registers when calling the SETNAM function?","The address stored in the X and Y registers when calling the SETNAM function is in standard 6502 low-byte/high-byte format."
+"How do you load the length of the file name when calling the SETNAM function?","You load the length of the file name by loading the accumulator with the length of the file name."
+"What is an example of how to call the SETNAM function?","An example of how to call the SETNAM function is: LDA #NAME2-NAME; LDX #<NAME; LDY #>NAME; JSR SETNAM."
+"What is the purpose of the X and Y registers when calling the SETNAM function?","The X and Y registers are used to store the address of the file name in standard 6502 low-byte/high-byte format when calling the SETNAM function."
+"What is the significance of the address stored in the X and Y registers when calling the SETNAM function?","The address stored in the X and Y registers when calling the SETNAM function is the address of the file name, which can be any valid memory address in the system where a string of characters for the file name is stored."
+"How do you set the file name to zero length when calling the SETNAM function?","You set the file name to zero length by setting the accumulator to 0, representing a zero file length, and the X and Y registers can be set to any memory address in that case."

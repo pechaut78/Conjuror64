@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address 65530-65535 ($FFFA-$FFFF)?","address      65530-65535 ($FFFA-$FFFF)
+6510 Hardware Vectors
+
+The last six locations in memory are reserved by the 6510 processor
+chip for three fixed vectors.  These vectors let the chip know at what
+address to start executing machine language program code when an NMI
+interrupt occurs, when the computer is turned on, or when an IRQ
+interrupt or BRK occurs."

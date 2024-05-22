@@ -1,0 +1,11 @@
+question,answer
+"what is the main advantage of using sprites for collision detection on the C64?","The main advantage of using sprites for collision detection on the C64 is that it allows for the detection of any number of collisions simply by PEEKing a pair of registers, making it a more efficient and easier process compared to using standard graphics."
+"How does the VIC chip report collisions to the programmer?","The VIC chip reports collisions to the programmer via two collision registers, one for Sprite to Sprite collisions and the other for Sprite to background collisions."
+"What is the definition of a Sprite to Sprite collision?","A Sprite to Sprite collision has occurred when a non-transparent area of one Sprite overlays a non-transparent area of another Sprite."
+"What is the definition of a Sprite to background collision?","A Sprite to background collision has occurred when a non-transparent area of a Sprite overlays any background graphics."
+"How are the collision registers used to detect collisions?","The collision registers are used to detect collisions by setting the appropriate bits to 1 for those Sprites which have collided, with bit 0 referring to Sprite 0, bit 1 referring to Sprite 1, and so on."
+"What is the value of the Sprite to Sprite Collision register if Sprite 3 has collided with Sprite 4?","The value of the Sprite to Sprite Collision register would be 24 decimal (bits 3 and 4 set)."
+"What is the value of the Sprite to Background Collision register if Sprite 5 has collided with the background?","The value of the Sprite to Background Collision register would be 32 decimal (bit 5 set)."
+"How can the problem of the collision registers returning numbers that don't immediately relate to individual Sprites be resolved?","The problem can be resolved by PEEKing the registers in the right way."
+"What is the purpose of the two collision registers used by the VIC chip?","The two collision registers are used to detect Sprite to Sprite collisions and Sprite to background collisions."
+"In what scenario would a collision not occur until the missile actually hits the target?","A collision would not occur until the missile actually hits the target in missile/target type applications, regardless of the way the missile has been drawn on the Sprite screen."

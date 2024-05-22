@@ -1,0 +1,8 @@
+
+
+
+address              $E891
+Output a Carriage Return
+
+A carriage return is performed by clearing insert mode, reverse video,
+and quote mode, and moving the cursor to the next line.

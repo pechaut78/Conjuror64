@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $29D?","address          $29D           RODBS
+RS-232: Index to Start of Transmit Buffer
+
+This index points to the starting byte within the 256-byte RS-232
+transmit buffer, and is used to remove data from that buffer."

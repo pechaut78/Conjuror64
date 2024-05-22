@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $26D-$276?","address       $26D-$276      SAT
+Kernal Table of Secondary Addresses for Each Logical File"

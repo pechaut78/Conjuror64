@@ -1,0 +1,11 @@
+question,answer
+"Where is the best place to put machine language routines on the Commodore 64?","The best place for machine language routines on the Commodore 64 is from $C000-$CFFF, assuming the routines are smaller than 4K bytes long. This section of memory is not disturbed by BASIC."
+"What happens if a machine language routine is larger than 4K bytes?","If a machine language routine is larger than 4K bytes, it then becomes necessary to reserve an area at the top of memory from BASIC for the routine."
+"How can the top of memory be changed on the Commodore 64?","The top of memory can be changed through the KERNAL routine MEMTOP, or by using the following BASIC statements: POKE51,L:POKE52,H:POKE55,1:POKE56,H:CLR, where H and L are the high and low portions, respectively, of the new top of memory."
+"What are the high and low portions in the BASIC statements to change the top of memory?","The high and low portions, H and L, are the high and low bytes of the new top of memory address, respectively."
+"How do you reserve an area from $9000 to $9FFF for a machine language routine?","To reserve an area from $9000 to $9FFF for a machine language routine, use the following BASIC statements: POKE5110:POKE52,144:POKE5510:POKE56,144:CLR."
+"What is the purpose of the CLR command in the BASIC statements to change the top of memory?","The CLR command is used to clear the BASIC program and variables, ensuring that the new top of memory setting takes effect."
+"Why is it important to reserve an area for machine language routines?","It is important to reserve an area for machine language routines to ensure that they do not interfere with BASIC and to prevent memory conflicts."
+"What is the default top of memory on the Commodore 64?","The default top of memory on the Commodore 64 is $9FFF."
+"How does the KERNAL routine MEMTOP change the top of memory?","The KERNAL routine MEMTOP changes the top of memory by modifying the memory allocation, allowing for the reservation of an area for machine language routines."
+"What is the advantage of placing machine language routines from $C000-$CFFF?","The advantage of placing machine language routines from $C000-$CFFF is that this section of memory is not disturbed by BASIC, ensuring that the routines are not overwritten or affected by BASIC operations."

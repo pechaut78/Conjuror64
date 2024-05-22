@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $DD0B?","address              $DD0B          TO2HRS
+Time of Day Clock Hours
+
+Bits 0-3:  Second digit of Time of Day hours (BCD)
+Bit 4:  First digit of Time of Day hours (BCD)
+Bits 5-6:  Unused
+Bit 7:  AM/PM flag (1=PM, 0=AM)"

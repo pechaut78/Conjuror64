@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for ROR instruction in accumulator mode?","The opcode for ROR instruction in accumulator mode is 6A, which requires 1 byte and 2 cycles to execute."
+"what is the addressing mode for ROR Oper,X instruction?","The addressing mode for ROR Oper,X instruction is Zero Page,X, which requires 2 bytes and 6 cycles to execute."
+"what is the opcode for ROR instruction in zero page mode?","The opcode for ROR instruction in zero page mode is 66, which requires 2 bytes and 5 cycles to execute."
+"in which microprocessors is the ROR instruction available?","The ROR instruction is available on MCS650X microprocessors manufactured after June, 1976."
+"what is the opcode for ROR instruction in absolute mode?","The opcode for ROR instruction in absolute mode is 6E, which requires 3 bytes and 6 cycles to execute."
+"what is the addressing mode for ROR A instruction?","The addressing mode for ROR A instruction is accumulator, which requires 1 byte and 2 cycles to execute."
+"what is the opcode for ROR instruction in absolute,X mode?","The opcode for ROR instruction in absolute,X mode is 7E, which requires 3 bytes and 7 cycles to execute."
+"how many bytes does ROR Oper instruction require?","The ROR Oper instruction in zero page mode requires 2 bytes."
+"what is the number of cycles required for ROR Oper,X instruction?","The ROR Oper,X instruction in zero page,X mode requires 6 cycles to execute."
+"what is the opcode for ROR Oper instruction in zero page mode?","The opcode for ROR Oper instruction in zero page mode is 66, which requires 2 bytes and 5 cycles to execute."

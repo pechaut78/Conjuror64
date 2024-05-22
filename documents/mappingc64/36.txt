@@ -1,0 +1,9 @@
+
+
+
+address         $43-$44        INPPTR
+Pointer in the Source of GET, READ, or INPUT Information
+
+READ, INPUT and GET all use this as a pointer to the address of the
+source of incoming data, such as DATA statements, or the text input
+buffer at 512 ($200).

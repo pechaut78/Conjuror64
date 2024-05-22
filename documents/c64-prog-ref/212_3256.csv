@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the UDTIM function?","The purpose of the UDTIM function is to update the system clock, which is typically called by the normal KERNAL interrupt routine every 1/60th of a second."
+"What is the call address of the UDTIM function?","The call address of the UDTIM function is $FFEA in hexadecimal, which is equivalent to 65514 in decimal."
+"What are the communication registers used by the UDTIM function?","The UDTIM function does not use any communication registers."
+"Are there any preparatory routines required before calling the UDTIM function?","No, there are no preparatory routines required before calling the UDTIM function."
+"What is the error return value of the UDTIM function?","The UDTIM function does not return any error values."
+"What is the stack requirement of the UDTIM function?","The UDTIM function requires 2 bytes of stack space."
+"Which registers are affected by the UDTIM function?","The UDTIM function affects the A and X registers."
+"Why is it necessary to call the UDTIM function in a user program?","It is necessary to call the UDTIM function in a user program if the program processes its own interrupts, in order to update the system clock and keep the STOP key functional."
+"How often is the UDTIM function typically called by the KERNAL interrupt routine?","The UDTIM function is typically called by the KERNAL interrupt routine every 1/60th of a second."
+"What is an example of how to use the UDTIM function?","An example of how to use the UDTIM function is to simply call it using the JSR instruction, like this: JSR UDTIM>."
+"What is the relationship between the UDTIM function and the STOP key?","The UDTIM function must be called in order to keep the STOP key functional, in addition to calling the STOP key routine itself."

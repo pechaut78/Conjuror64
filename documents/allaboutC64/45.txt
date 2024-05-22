@@ -1,0 +1,19 @@
+
+
+
+C64 Basic:
+- Because execution eventually resumes where it left off in the
+main program, statements can be placed after a GOSUB on
+the same line.
+• The RETURN statement causes execution to jump to the first
+statement after the most recent GOSUB. This may mean
+jumping into the middle of a line. RETURN is comparable
+to the END statement of a main program.
+• RETURN should be used only when a GOSUB has been
+previously executed. If the computer encounters a RETURN
+without having previously executed a matching GOSUB, the
+place to jump back to is undefined, so a RETURN WITH-
+OUT GOSUB error is printed.
+• A subroutine can contain several RETURN statements, pro
+vided that for every GOSUB executed, exactly one RETURN
+is executed.

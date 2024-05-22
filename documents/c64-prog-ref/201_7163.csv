@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the SCNKEY function?","The purpose of the SCNKEY function is to scan the Commodore 64 keyboard and check for pressed keys, placing the ASCII value of any pressed key in the keyboard queue."
+"What is the call address of the SCNKEY function?","The call address of the SCNKEY function is $FF9F (hex) or 65439 (decimal)."
+"What preparatory routine is required before calling SCNKEY?","The preparatory routine required before calling SCNKEY is IOINIT."
+"What registers are affected by the SCNKEY function?","The SCNKEY function affects registers A, X, and Y."
+"What is the stack requirement for the SCNKEY function?","The stack requirement for the SCNKEY function is 5 bytes."
+"How is the SCNKEY function typically used?","The SCNKEY function is typically used by calling the routine, then checking the keyboard queue for any pressed keys, and if a key is found, printing it using CHROUT."
+"What happens if no key is pressed when SCNKEY is called?","If no key is pressed when SCNKEY is called, the routine will return with no ASCII value in the keyboard queue."
+"Can SCNKEY be used to scan the keyboard at any time?","No, SCNKEY is only called if the normal IRQ interrupt is bypassed."
+"What is the relationship between SCNKEY and the interrupt handler?","The SCNKEY routine is the same routine called by the interrupt handler to scan the keyboard."
+"How can you use SCNKEY to get a character from the keyboard?","You can use SCNKEY to get a character from the keyboard by calling the routine, then checking the keyboard queue for the ASCII value of the pressed key, and if a key is found, printing it using CHROUT, as shown in the example: GET  JSR SCNKEY ;SCAN KEYBOARD JSR GETIN ;GET CHARACTER CMP #0 ;IS IT NULL? BEQ GET ;YES... SCAN AGAIN JSR CHROUT ;PRINT IT"

@@ -1,0 +1,64 @@
+
+
+
+C64: Moving Sprites Around 
+
+We said at the beginning of this chapter that one of the main 
+advantages of Sprites was the ease with which they could be 
+moved around the screen. This has been achieved on the 
+Commodore 64 by allocating a pair of registers, called the 
+Sprite Position registers, for each Sprite. These registers hold 
+the current position of the top left hand corner dot of the 
+Sprite on the 320 by 200 dots high resolution screen. 
+
+The VIC chip, which is constantly redrawing the display, 
+looks at the Sprite Position registers to find out where the 
+Sprites should be. POKEing new values into one of these 
+register pairs will cause the V(C chip to move the Sprite 
+from its old position to the new one. Figure 6.6 shows the 
+location of the Sprite position registers. 
+
+As we said earlier, the Sprite Position registers hold the 
+location of each Sprite on the high resolution screen. How- 
+ever, for Sprite positioning purposes, the high resolution 
+screen is not numbered in the way you might expect. Instead 
+of being numbered from to 319 in the X direction and 
+to 199 in the Y direction, the screen is actually numbered 
+from 24 to 344 in the X direction and from 50 to 250 in the 
+Y direction. The reason for this is that it allows Sprites to be 
+smoothly moved on and off the screen without needing nega- 
+tive position coordinates (which the system cannot deal with). 
+For example, a Sprite positioned at 12,50 will be fully on 
+screen in the Y direction and half on screen in the X direction. 
+And a Sprite positioned at 0,0 will be completely off screen 
+in both directions. 
+
+In addition, a problem occurs when using large values of X. 
+This is because the X Sprite Position registers can only hold 
+numbers in the range to 255, and this is not enough to 
+completely address the 320 dots wide screen. This has been 
+overcome by using an extra register to provide each of the 
+X Sprite Position registers with an extra high bh, thus making 
+them all 9 bits wide. (A 9 bit register can hold numbers in 
+the range to 511.) This additional register is called the 
+Most Significant Bit X register (MSBX for short) and it is 
+located at address 53264 decimal. As with other bit-wise 
+registers, bit is the extra bit for Sprite O's Sprite Position 
+X register, bit 1 is for Sprue 1 , and so on. 
+
+This does make life a little bit more difficuh, because we 
+now have to check every X coordinate to see if it is larger 
+or smaller than 255. 
+
+If it is larger than 255 we must set the appropriate extra 
+bit, subtract 256 from the X coordinate, and store the re- 
+mainder in the appropriate Sprite Position X register. 
+
+If it is smaller than 255 we must reset the appropriate extra bit and store the whole X coordinate in the appropriate 
+Sprite Position X register. 
+
+The following BASIC subroutine will set up the Sprite 
+Position registers correctly, regardless of the size of the X 
+coordinate. Before calling this routine, the Sprite number 
+must be placed in the SN variable, and the X,Y coordinate 
+must be placed in the X and Y variables. 

@@ -1,0 +1,8 @@
+
+
+
+address       $300-$301      IERROR
+Vector to the Print BASIC Error Message Routine
+
+This vector points to the address of the ERROR routine at 58251
+($E38B).

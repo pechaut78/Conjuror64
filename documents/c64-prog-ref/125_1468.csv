@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the BVS instruction in 6502 assembly language?","The opcode for the BVS instruction in 6502 assembly language is 70."
+"What is the addressing mode used by the BVS instruction?","The addressing mode used by the BVS instruction is Relative."
+"What is the number of bytes used by the BVS instruction?","The number of bytes used by the BVS instruction is 2."
+"What is the number of cycles used by the BVS instruction when the branch does not occur?","The number of cycles used by the BVS instruction when the branch does not occur is 2."
+"What is the number of cycles used by the BVS instruction when the branch occurs to the same page?","The number of cycles used by the BVS instruction when the branch occurs to the same page is 3."
+"What is the number of cycles used by the BVS instruction when the branch occurs to a different page?","The number of cycles used by the BVS instruction when the branch occurs to a different page is 4."
+"What is the purpose of the BVS instruction?","The purpose of the BVS instruction is to branch to a target location if the overflow flag is set."
+"What is the syntax for the BVS instruction in assembly language?","The syntax for the BVS instruction in assembly language is BVS Oper, where Oper is the target location."
+"How does the BVS instruction affect the program counter?","The BVS instruction affects the program counter by loading the target location into it if the overflow flag is set."
+"What is the relationship between the BVS instruction and the overflow flag?","The BVS instruction branches to the target location if and only if the overflow flag is set."

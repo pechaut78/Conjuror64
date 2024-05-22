@@ -1,0 +1,12 @@
+
+
+
+address              $EDC7          TKSA
+Send a Secondary Address to a Device on the Serial Bus after TALK
+
+This is a documented Kernal routine that can be entered from the jump
+table at 65430 ($FF96).  It sends a secondary address from the
+Accumulator to the device on the serial bus that has just been
+commanded to TALK.  This is usually done to give the device more
+particular instructions on how the I/O is to be carried out before
+information is sent.

@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $E453?","address              $E453
+Copy BASIC Vectors to RAM
+
+The cold start routine calls this subroutine to copy the table of
+vectors to important BASIC routines to RAM, starting at location 768
+($300)."

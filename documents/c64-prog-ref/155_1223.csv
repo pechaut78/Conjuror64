@@ -1,0 +1,11 @@
+question,answer
+"what is the addressing mode of the RTS instruction?","The addressing mode of the RTS instruction is implied, which means that the instruction does not require any additional memory references or registers to be specified."
+"what is the opcode of the RTS instruction?","The opcode of the RTS instruction is 60 in hexadecimal, which is a unique binary code that the 6510 microprocessor recognizes and executes as a return from subroutine instruction."
+"how many bytes does the RTS instruction occupy in memory?","The RTS instruction occupies only 1 byte in memory, making it a very compact and efficient instruction for returning from subroutines."
+"how many cycles does the RTS instruction take to execute?","The RTS instruction takes 6 cycles to execute, which is a relatively fast instruction that allows for efficient subroutine returns."
+"what is the purpose of the RTS instruction?","The purpose of the RTS instruction is to return from a subroutine, which means it pops the return address from the stack and transfers control to the calling program."
+"can the RTS instruction be used to return from an interrupt?","No, the RTS instruction is used to return from a subroutine, not from an interrupt. The RTI instruction is used to return from an interrupt."
+"what happens when the RTS instruction is executed?","When the RTS instruction is executed, the 6510 microprocessor pops the return address from the stack and transfers control to the calling program, effectively returning from the subroutine."
+"can the RTS instruction be used to call a subroutine?","No, the RTS instruction is used to return from a subroutine, not to call a subroutine. The JSR instruction is used to call a subroutine."
+"is the RTS instruction a jump instruction?","No, the RTS instruction is not a jump instruction, it is a return instruction that pops the return address from the stack and transfers control to the calling program."
+"in what type of programming is the RTS instruction commonly used?","The RTS instruction is commonly used in assembly language programming, particularly in programming for the Commodore 64 and other 8-bit computers."

@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $EE85?","address              $EE85
+Set the Serial Clock Line Low (Active)
+
+This subroutine clears the serial bus clock pulse output bit (Bit 4 of
+CIA #2 Data Port A at 56576 ($DD00))."

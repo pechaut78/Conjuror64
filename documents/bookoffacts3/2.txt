@@ -1,0 +1,6 @@
+
+RETURN KEY - The RETURN key is used to enter data Into memory.
+When you type in a command, such as the NEW command, the
+computer cannot respond until the command is entered by pressing the
+RETURN key. All data is entered in this manner. After typing in a
+program line, pressing the RETURN key will enter it into memory.

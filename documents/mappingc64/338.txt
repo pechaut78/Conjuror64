@@ -1,0 +1,8 @@
+
+
+
+address         $BA59          MLTPLY
+Multiply a Byte Subroutine
+
+This subroutine is used to repetitively add a mantissa byte of FAC2 to
+FAC1 the number of times specified in the .A register.

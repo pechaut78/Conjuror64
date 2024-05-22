@@ -1,0 +1,5 @@
+
+
+
+address              $D416          CUTHI
+Filter Cutoff Frequency (high byte)

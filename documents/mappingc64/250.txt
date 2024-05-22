@@ -1,0 +1,9 @@
+
+
+
+address         $A93B          REM
+Perform REM
+
+The REM statement is executed by skipping all program text until the
+beginning of the next statement.  It is actually a part of the IF
+statement, which continues for a few bytes after the REM part.

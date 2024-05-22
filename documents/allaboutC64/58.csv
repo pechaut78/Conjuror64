@@ -1,0 +1,11 @@
+question,answer
+"What is the definition of the dimension of an array in C64 Basic?","The dimension of an array in C64 Basic is the maximum subscript number that can be used for the array."
+"What is the initial state of arrays when a program first starts running or the CLR statement is executed in C64 Basic?","When a program first starts running, or the CLR statement is executed, all arrays are undimensioned in C64 Basic."
+"What happens when an undimensioned array is accessed for the first time in C64 Basic?","When an undimensioned array is accessed for the first time in C64 Basic, the array is dimensioned to a default of 10."
+"What statement must be used to dimension an array larger than 10 in C64 Basic?","The DIM statement must be used to dimension an array larger than 10 in C64 Basic."
+"What is the syntax for the DIM statement in C64 Basic?","The syntax for the DIM statement in C64 Basic is the keyword DIM followed by an array name list. Each array name in the list must be followed by parentheses containing the dimension numbers."
+"What is the effect of dimensioning an array smaller than 11 in C64 Basic?","To save memory, an array can be dimensioned smaller than 11 in C64 Basic."
+"What is the result of accessing an undimensioned array for the first time in C64 Basic?","When an undimensioned array is accessed for the first time in C64 Basic, the array is automatically dimensioned to a default of 10."
+"What statement is used to explicitly define the size of an array in C64 Basic?","The DIM statement is used to explicitly define the size of an array in C64 Basic."
+"What is the default dimension of an array when it is first accessed in C64 Basic?","The default dimension of an array when it is first accessed in C64 Basic is 10."
+"What is the purpose of the DIM statement in C64 Basic?","The purpose of the DIM statement in C64 Basic is to define the size of an array explicitly and to dimension arrays larger than the default of 10."

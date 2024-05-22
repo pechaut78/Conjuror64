@@ -1,0 +1,9 @@
+
+
+
+address         $BF3A          FDCEND
+Table of Constants for TI$ Conversion
+
+This table contains the floating point representation of the powers of
+-60 multiplied by 1 or 10.  These constants are used for converting
+TI$ to ASCII.

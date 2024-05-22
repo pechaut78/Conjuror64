@@ -1,0 +1,23 @@
+question,answer
+"What is the purpose of the memory location at address $DD03?","address              $DD03          C2DDRB
+Data Direction Register B
+
+Bit 0:  Select Bit 0 of data Port B for input or output (0=input, 1=output)
+Bit 1:  Select Bit 1 of data Port B for input or output (0=input, 1=output)
+Bit 2:  Select Bit 2 of data Port B for input or output (0=input, 1=output)
+Bit 3:  Select Bit 3 of data Port B for input or output (0=input, 1=output)
+Bit 4:  Select Bit 4 of data Port B for input or output (0=input, 1=output)
+Bit 5:  Select Bit 5 of data Port B for input or output (0=input, 1=output)
+Bit 6:  Select Bit 6 of data Port B for input or output (0=input, 1=output)
+Bit 7:  Select Bit 7 of data Port B for input or output (0=input, 1=output)
+
+Location Range: 56580-56583 ($DD04-$DD07)
+Timer A and B Low and High Bytes
+
+These four timer registers are used to control Timers A and B.  For
+details on the operation of these timers, see the entry for Location
+Range 56324-56327 ($DC04-$DC07).
+
+The 64 Operating System uses the CIA #2 Timers A and B mostly for
+timing RS-232 send and receive operations.  Serial Bus timing uses CIA
+#1 Timer B."

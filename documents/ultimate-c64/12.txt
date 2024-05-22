@@ -1,0 +1,45 @@
+
+
+Bugs and Quirks
+The original 6502 implementation has a series of
+bugs and other anomalies that have never been fixed
+in MOS chips (not counting the 65CE02, which was
+only used in Amiga peripherals).
+• The indirect version of JMP loads the program
+counter from the wrong address, if the vector's address lies on a page boundary: JMP ($23FF) will
+read the address from $23FF and $2300 instead of
+$23FF and $2400.
+• When in decimal mode, the negative flag reflects
+the original binary result, not the effective decimal
+result.
+• If a software interrupt (BRK) and a hardware interrupt occur at the same time, the BRK is dropped.
+• Read instructions (LDA/AND etc.) with the
+absolute-indexed addressing mode first read from
+the absolute address without the index register
+added, and then read again from the correct address. LDX #$07 LDA $D019,X will first read from
+$D019, discard the result, and then read from
+$D020. On the C64, this read form $D019 would
+ACK all pending VIC interrupts, while it is only
+supposed to read the border color ($D020).
+• Read-modify-write instructions with absolute addresses first read the value, but one cycle before
+they store the result, they store the original value
+again. On a C64, this can be seen when incrementing the screen border color at a defined area of the
+screen, as every write to the register will cause a
+tiny gray dot on the screen. When this is used with
+certain I/O ports, this can have other side effects.
+The latter two quirks have been used heavily for
+obfuscating copy protection software.
+• Instruction decoding in the 6502 is done by a PLA
+that compares the current cycle number within the
+instruction and the current opcode against a ROM
+of 130 mask lines, of which any number can fire
+independently. The outputs of these lines are then
+fed into components like the ALU, bus control, register control and program counter logic. The instruction set only consists of 151 defined opcodes,
+and since handling the remaining 105 opcodes as
+NOPs or traps would have required extra lines in
+the PLA, they will match against some lines that
+were meant for instructions with similar opcodes.
+Some of these ”illegal opcodes” lead to useful results and are used in some software (SAX = store A
+& X), but most of the instructions make little sense
+(SHX = store X & the upper 8 bits of the program
+counter), and some even lock up the CPU, disabling IRQs and NMIs (CRA/KIL).

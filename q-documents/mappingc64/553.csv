@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $E8CB?","address              $E8CB
+Check for a Color Change
+
+This routine is used by the screen CHROUT routine to check if the
+character to be printed is one that causes the current foreground
+color to change (such as the CTRL-1 combination)."

@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the ON command in Commodore 64 BASIC?","The ON command is used to turn the GOTO and GOSUB commands into special versions of the IF statement, allowing for conditional execution of code based on the result of a formula evaluation."
+"What happens when the result of the formula in an ON statement is 0, negative, or larger than the list of numbers?","In such cases, the next line executed will be the statement following the ON statement."
+"How does the ON command determine which line of code to execute?","The ON command executes the line of code corresponding to the result of the formula evaluation, where 1 corresponds to the first line, 2 corresponds to the second line, and so on."
+"What is the syntax of the ON command?","The ON command is followed by a formula, which is evaluated, and then the corresponding line of code is executed based on the result."
+"Can you provide an example of using the ON command in a Commodore 64 BASIC program?","Here is an example: 10 INPUT X 20 ON X GOTO 10,20,30,40,50, where the value of X determines which line of code to execute."
+"How does the ON command differ from a traditional IF statement?","The ON command allows for conditional execution of code based on a formula evaluation, whereas a traditional IF statement requires a specific condition to be true or false."
+"What happens if the result of the formula in an ON statement is not a whole number?","The ON command will execute the next line of code following the ON statement, as it only recognizes whole numbers as valid line numbers."
+"Can the ON command be used with other control structures, such as loops?","Yes, the ON command can be used in conjunction with loops and other control structures to create more complex conditional logic in a Commodore 64 BASIC program."
+"How does the ON command improve the readability and maintainability of code?","By allowing for conditional execution of code based on a formula evaluation, the ON command can simplify code and make it easier to read and maintain."
+"Are there any limitations to using the ON command in Commodore 64 BASIC?","Yes, the ON command can only execute lines of code that are numbered, and it does not support executing subroutines or other types of code."

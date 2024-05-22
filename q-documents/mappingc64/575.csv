@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $ECB9?","address              $ECB9
+Video Chip Register Default Table
+
+This table contains the default values that are stored in the 47
+VIC-II chip registers.  It is interesting to note that this table
+appears to be incomplete.  While Sprite Color Registers 0-6 are
+initialized to values of 1-7, Sprite Color Register 7 is initialized
+to 76--the ASCII value of the letter L which begins on the next table."

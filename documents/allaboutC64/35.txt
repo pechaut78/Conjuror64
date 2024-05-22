@@ -1,0 +1,19 @@
+
+
+
+C64 Basic:
+• Commodore 64 BASIC supports a second kind of variable
+besides the numeric variable used exclusively in previous
+chapters. The new kind of variable is called a string variable.
+• The two kinds of variables are used to contain different
+types of values. A numeric variable has a value of the type
+number. A string variable has a value of the type character
+string.
+• To distinguish between the two types of variables, string
+variable names end with a $ symbol. Otherwise, all the other
+rules about variable names apply, including the rule about
+two significant characters.
+• Variable names used for numeric variables have no effect on
+names used for string variables. The numeric variable C and
+the string variable C$ are entirely different things.
+• A null string is a string which consists of no characters.

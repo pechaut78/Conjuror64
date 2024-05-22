@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the POTX register?","The POTX register allows the microprocessor to read the position of the potentiometer tied to POTX (pin 24), with values ranging from 0 at minimum resistance, to 255 ($FF) at maximum resistance."
+"what is the range of values that can be read from the POTX register?","The range of values that can be read from the POTX register is from 0 at minimum resistance, to 255 ($FF) at maximum resistance."
+"how often is the value in the POTX register updated?","The value in the POTX register is updated every 512 clock cycles."
+"what is the pin number that the potentiometer is tied to?","The potentiometer is tied to pin 24."
+"what is the significance of the value 0 in the POTX register?","The value 0 in the POTX register indicates minimum resistance."
+"what is the significance of the value 255 ($FF) in the POTX register?","The value 255 ($FF) in the POTX register indicates maximum resistance."
+"where can you find more information on pot and capacitor values?","You can find more information on pot and capacitor values in the Pin Description section."
+"is the value in the POTX register always valid?","Yes, the value in the POTX register is always valid."
+"what is the clock cycle period for updating the POTX register value?","The clock cycle period for updating the POTX register value is 512 clock cycles."
+"what type of device is tied to pin 24?","A potentiometer is tied to pin 24."

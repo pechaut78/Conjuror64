@@ -1,0 +1,46 @@
+
+
+1541 Disk Drive
+The Commodore 1541 Disk Drive is the most common
+disk drive used with the C64. It uses 5.25'' SS/DD
+(single side, double density) disks, but disks can be
+flipped, and the other side can be used as well, if the
+disks are double sided. The 1541 does not use the index hole, and uses software markers (SYNC) instead
+to be able to tell the start of a sector. Due to reliability
+problems of early drives, the 1541 only uses 35 out of
+the 40 possible tracks on a 5.25" disk. The tracks have
+a variable number of 256 byte sectors, ranging from
+21 on the outside to 17 on the inside. The data is written in 4 different speeds. This makes an overall 683
+sectors, or 174,848 bytes.
+The file system is stored on track 18. Track 18, sector
+0 contains the disk name and the BAM (block availability map), which stores one bit per sector (1 = free).
+Track 18, sector 1 is the first sector containing directory entries: There are eight 32 byte entries per sector, with a maximum filename length of 16 characters. The first two bytes of a directory sector point to
+the next directory entry sector.
+The files on disk are also stored as a linked list. The
+first two bytes of every sector are either the track and
+sector number of the next block, or the first byte is 0
+and the second byte is the number of valid bytes in
+this sector.
+The 1541 is a stripped down version of the PET drive
+series, which had a parallel connection, and contained two 6502 CPUs: One for doing the filesystem
+and communicating with the computer, and one for
+reading data from disk and writing data to it, as well
+as encoding and decoding the data. The 1541 only has
+a single 6502 CPU running at 1 MHz, which (using
+timer IRQs) regularly switches itself between the two
+modes. The two virtual CPUs still communicate with
+each other using a messaging interface in the zero
+page. The 1541 has 2 KB of RAM at $0000-$07FF.
+The 1541 has two VIA I/O controllers at $1800 (for
+the IEC bus) and at $1C00 (for the drive). The firmware is located at $C000-$FFFF.
+Since loading an application or a game takes minutes
+on an unmodified C64, several ”floppy speeders” appeared (either as software on disk or built into applications, as ROM extension cartridges, or as internal
+replacement ROMs), that consisted of implementations of more optimized protocols for the IEC bus for
+both the C64 and the 1541. The 1541 code was uploaded using the old bus protocol. Such a new protocol would for example not do a handshake on every
+bit using the clock line, but shift a complete byte
+through in 4 steps, two bits at a time, using the clock
+and data line at the same time. This would of course
+only work if both CPUs were not interrupted. VIC
+timing on the C64 side could already affect this, so
+many floppy speeders turned off the screen while
+loading.

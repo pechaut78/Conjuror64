@@ -1,0 +1,24 @@
+question,answer
+"What is the purpose of the memory location at address $3-$4?","address           $3-$4          ADRAY1
+Vector: Routine to Convert a Number from Floating Point to Signed
+Integer
+
+This vector points to the address of the BASIC routine which converts
+a floating point number to an integer.  In the current Kernal version,
+the address that it points to is 45482 ($B1AA).  Disassembly of the
+ROMs indicates that BASIC does not use this vector.  However, it may
+be of real assistance to the programmer who wishes to use data that is
+stored in floating point format.  The parameter that is passed by the
+USR command is available only in that format, for example.
+
+Since it is extremely difficult to decipher and use a floating point
+number, the simplest way to deal with such data is to use the
+conversion routines that are built into BASIC to change it into a
+two-byte signed integer.  This could be accomplished by jumping
+directly into the BASIC ROM, if you know the location of the routine.
+Therefore, if the address changes in future versions of the 64 or
+future Commodore computers, you won't have to modify your program to
+make it work with them.
+
+See the entry for the USR vector at 785 ($311) for an explanation of
+how to use this routine in connection with the USR command."

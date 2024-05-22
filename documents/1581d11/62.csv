@@ -1,0 +1,11 @@
+question,answer
+"what are sequential files useful for?","Sequential files are very useful when you're just working with a continuous stream of data -- i.e. information that can be read or written all at once."
+"what is the limitation of sequential files?","Sequential files are not useful in some situations, for example, after writing a large list of mail labels, you wouldn't want to have to reread the entire list each time you need a person's record."
+"what is an analogy for random access?","A record turntable is an analogy for random access, where the needle can be picked up at any time, and instantly moved to any spot on the record, similar to how a disk drive works."
+"what are the two types of random access files that can be used on Commodore disk drives?","Two different types of random access files may be used on Commodore disk drives: relative files and random files."
+"what is the advantage of relative files?","Relative files are much more convenient for most data handling operations."
+"what is the target audience for true random access file commands?","True random access file commands are available to advanced users."
+"in what chapter will true random access file commands be discussed?","True random access file commands will be discussed in the next chapter."
+"what is the main topic of this chapter?","This chapter is about a type of file that reflects the flexibility of random access, specifically relative data files."
+"what is the main difference between a cassette recorder and a record turntable?","A cassette recorder requires listening from beginning to end, whereas a record turntable allows instant access to any spot on the record."
+"what is the comparison between disk drive and record turntable?","A disk drive works like a turntable in that respect, allowing instant access to any spot on the disk."

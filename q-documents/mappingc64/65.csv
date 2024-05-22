@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $93?","address           $93            VERCK
+Flag for Load Routine: 0=LOAD, 1=VERIFY
+
+The same Kernal routine can perform either a LOAD or VERIFY, depending
+on the value stored in the Accumulator (.A) on entry to the routine.
+This location is used to determine which operation to perform."

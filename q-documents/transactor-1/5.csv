@@ -1,0 +1,7 @@
+question,answer
+"What are some creative ways to deter software pirates and protect your program from being cracked?","Pirate Peeves
+Want to drive program pirates crazy. You must admit, if a burglar really wants in, he'll get in no matter how much protection you have. Program pirates are no different. The idea is to make them work for it. As they remove one lock, you check for it later in the program and throw them a couple of knuckle balls. Here's a couple of knuckle balls:
+poke 175, 3
+. . .switches the input device from the keyboard to the screen. ForVIC20/C64 use poke 153,3. Of course the pirate will remove this rather unsophisticated excuse for protec tion. So, you check for it. Then execute:
+sys 57441
+This turns off the keyboard completely except for carriage returns. It has no VIC20/C64 equivalent. The point is, if you make it appear as though the more they unprotect your software, the more foul it behaves, pretty soon they'll be replacing the protection they removed just so they can use it. The Transactor will be devoting an entire issue to soft ware protection and piracy in August 1984. Watch for it."

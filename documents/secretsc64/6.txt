@@ -1,0 +1,10 @@
+clock on C64
+registers at address 160 to 162 are used 
+as a single 24 bit counter. The value in this super register 
+is incremented automatically every l/60th of a second. This 
+is the real time jiffy clock mentioned in Chapter 2. 
+
+This clock can be used as an event timer by resetting the 
+whole register to and then PEEKing the value after some 
+event has occurred. (Because it takes time to PEEK the 
+values the time obtained will only be approximate.)

@@ -1,0 +1,23 @@
+
+LDX #$7F or LDY #0
+Here the X-register is loaded with the value $7F
+(127 in decimal) and the Y-register with the value
+zero (0).
+When using the immediate addressing mode, the value
+to be loaded is part of the program. The
+instruction and the value are placed one after the
+other in two adjacent memory locations. For
+example, if the machine language program is located
+at address 1200, the program counter contains the
+value 1200. The 6510 microprocessor gets the
+intruction at 1200 and sees that its value is $A9
+or decimal 169. It knows that the instruction is
+LDA #. So it places the contents contained in the
+next memory location 1201 into the accumulator (see
+diagram which follows). Since this instruction
+consists of two bytes - the instruction itself and
+the value to be loaded - the processor
+automatically increments the program counter by
+two. The program counter then points to the next
+instruction to be executed by the microprocessor
+starting at 1202,

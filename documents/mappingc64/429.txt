@@ -1,0 +1,40 @@
+
+
+
+address              $D406          SUREL1
+Voice 1 Sustain/Release Control Register
+
+Bits 0-3:  Select release cycle duration (0-15)
+Bits 4-7:  Select sustain volume level (0-15)
+
+Bits 4-7 select the volume level at which the note is sustained.
+Following the decay cycle, the volume of the output of voice 1 will
+remain at the selected sustain level as long as the gate bit of the
+Control Register is set to 1.  The sustain values range from 0, which
+chooses no volume, to 15, which sets the output of voice 1 equal to
+the peak volume achieved during the attack cycle.
+
+Bits 0-3 determine the length of the release cycle.  This phase, in
+which the volume fades from the sustain level to near zero volume,
+begins when the gate bit of the Control Register is set to 0 (while
+leaving the waveform setting that was previously chosen).  The
+duration of this decline in volume corresponds to the number (0-15)
+selected in the same way as for the decay value:
+
+0 = 6 milliseconds           8 = 300 milliseconds
+1 = 24 milliseconds          9 = 750 milliseconds
+2 = 48 milliseconds         10 = 1.5 seconds
+3 = 72 milliseconds         11 = 2.4 seconds
+4 = 114 milliseconds        12 = 3 seconds
+5 = 168 milliseconds        13 = 9 seconds
+6 = 204 milliseconds        14 = 15 seconds
+7 = 240 milliseconds        15 = 24 seconds
+
+Location Range: 54279-54292 ($D407-$D414)
+Voice 2 and Voice 3 Controls
+
+The various control registers for these two voices correspond almost
+exactly to those of voice 1.  The one exception is that the sync and
+ring-modulation bits of voice 2 operate on Oscillators 1 and 2, while
+the same bits of the Control Register for voice 3 uses Oscillators 2
+and 3.

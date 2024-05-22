@@ -1,0 +1,144 @@
+INVERSE TRIGNOMETRIC FUNCTIONS
+Here are a couple of handy methods of obtaining are sine and arc
+cosine (remember, the result will be in radians).
+ASNX = ATN (X/SQR(1-Xf2)
+ACSX = ATN (SQR(1-Xf2)/X)
+For those of you who are used to working in degrees, here are some
+handy user defined functions:
+DEFFNS(V) = SIN(V/(18O/tf))
+DEFFNC(V) = COS(V/(180/rf))
+DEFFNT(V) = TAN(V/(18O/rf))
+These are three user defined functions which when called with
+arguments and degrees will give the appropriate results. In these
+examples V can be any variable but if all three are defined in
+the same programme, you must use three different dummy variables.
+EXAMPLE: PRINT FNS(3O)
+Result of this will be .5. Notice that the argument for FNS, or
+FN anything for that matter, can be either a variable or numeric
+constant. Also, after a programme containing these definitions
+has been run, these functions may be called using FN in the direct
+mode, that is, from the keyboard directly without being in a
+programme.
+
+
+
+
+
+SECOND CASSETTE UNIT
+The second cassette unit with lead and plug ready to go straight
+onto the second cassette port on the rear of the PET, will be
+available from the beginning of June at a cost $130.00 plus P.S.T.
+
+
+
+INTERRUPT STRUCTURE
+Interrupts (including Break or Software Interrupts) are handled
+by software polling.
+When the processor recognizes an interrupt it vectors through
+FFFE, FFFF in ROM to a routine that first inspects the processor
+hardware (IRQ line low).
+If it was caused by a Break instruction, a Jump Indirect is
+executed through locations 02IB, C. If by a hardware interrupt then
+a Jump Indirect is taken through locations 0219, A.
+These locations being in RAM may be user-modified to point to
+extra user code ahead of normal interrupt processing.
+Note, however that the IRQ pointer is used by the cassette
+routines and should be restored to standard values before the cassette
+Save or Load functions are called.
+Various sections of the I/O chips can be set up to cause inter
+rupts through the IRQ line.
+Example: POKE 59470,2 enables a negative edge on the
+user port CAL line to cause an interrupt.
+However, have your code set up to handle it when it happens!
+Also note that each pass through the regular interrupt code
+increments the time register.
+
+
+
+
+
+Disk De-Activity Indicator
+If you're disk unit gets into some long operation, like the one mentioned above, you might not notice that it's finished until the next time you browse by. If you have a bell built into your computer, here is one way to make it useful:
+print ds$ : poke 231, 100 : print "|
+The POKE increases the chime time of the bell, and the 3 reverse G's invoke it 3 times. If you're within ear-shot, this should be enough to get your attention. Or you can put the bell in an endless loop that stops when you hit a key. Only one problem with this though - if you happen to step out or something, that insidious chiming is enough to drive some one bonkers if left exposed to it for too long. You might come home to find your new hard disk is now a chopping block in the kitchen!
+
+
+
+
+
+Hard Disk Formatting
+If you have any plans to install a Commodore hard disk drive, chances are the first command you send to it will be a New or HEADER operation. Disk users will know that this formating procedure is necessary to prepare the unit for all future operations. But once you get it started, you might as well find something else to do for a while like learn to play piano or re-build the engine in your car. A Header opera tion on the hard disk can take as long as 1 hour 45 minutes because the ID you select is recorded on every sector header.
+You need only do this once unless you wish to change the ID. A Header without the ID merely clears the BAM (Block Allocation Map) and the directory - the rest of the disk is left untouched. If you do decide a re-format is necessary, just remember it will take a while.
+Two other hard disk notes: The unit should never be moved while the cylinder is spinning. It takes a minute or so for the cylinder to come to a complete stop after power-down. When moving it, keep the unit level - don't set it on end or its side. Hard disks should be kept on a good solid surface during operation. Even small vibrations can cause undue wear on the disk bearings. Avoid sheifs, tables with long legs or spots that may get bumped by passers-by.
+Lastly, Commodore hard disks don't have a drive 0 and drive 1 - only drive 0. Some software packages assume you have a dual floppy and will attempt to access drive 1. Even BASIC tries to read drive 1 when you give a Catalog or Directory command with no drive specified. If you're experi encing any trouble, just slip in a ",D0" or "0:".
+
+
+
+
+Pirate Peeves
+Want to drive program pirates crazy. You must admit, if a burglar really wants in, he'll get in no matter how much protection you have. Program pirates are no different. The idea is to make them work for it. As they remove one lock, you check for it later in the program and throw them a couple of knuckle balls. Here's a couple of knuckle balls:
+poke 175, 3
+. . .switches the input device from the keyboard to the screen. ForVIC20/C64 use poke 153,3. Of course the pirate will remove this rather unsophisticated excuse for protec tion. So, you check for it. Then execute:
+sys 57441
+This turns off the keyboard completely except for carriage returns. It has no VIC20/C64 equivalent. The point is, if you make it appear as though the more they unprotect your software, the more foul it behaves, pretty soon they'll be replacing the protection they removed just so they can use it. The Transactor will be devoting an entire issue to soft ware protection and piracy in August 1984. Watch for it.
+
+
+
+RAM Expansion
+Wanna show off to that overinflated 48K Apple user next door. Try this on 'im.
+sys 54295 ;BASIC4.0
+Of course you know there can't possibly be that much, but how's he gonna know. Stay sharp though - he may know his Apple ROMs with equal impunity.
+
+
+
+Instant BASIC Monitor
+You can execute this SYS directly, but it won't mean much. However, put on the end of some line in your program and itwill report what line that is. It's part of the error message routine - the part that reports the line number after a run is interrupted. For example: ?syntax error in 6010.
+Immediately upon entering direct mode, the operating sys tem deposits an FF into the high order byte of the Current Line Number word, thus rendering that information mean ingless. During program execution, the current line being executed is copied here. Try this:
+100 print "line 100" 110 print "some line " : sys 53112:?
+120sys53112
+130 goto 100
+
+For C64 it's SYS 48585 and the VIC 20 is 56777. As you can see, if the program is renumbered, the message in line 100 will need updating. The ROM call, however, is universal. You can skip the "in" display by adding 7 to the address.
+Taking this one baby step further, this routine could be used as a primitive hex to decimal converter. For example:
+poke 55, 10: poke 54, 7: sys 53119
+. . .would print the decimal equivalent of $0A07. (C64/ VIC20: use 58 and 57 for the POKE addresses, with the above SYS address + 7) This is ok when you can convert the low order and high order to decimal in your head. When numbers get like CF7D it's a little tougher. Perhaps some one with BASIC 4.0 (built-in MLM) will investigate a more sophisticated approach to the same end. (Dave Hook, you there? You did that once long ago, did you not?)
+
+
+
+
+
+
+Text In Drag
+Back when there was only 40 Column PET/CBMs, The Transactor discussed a method of attaching the code from one line of BASIC onto the end of the line above it. For example, the following two lines need not be on two sepa rate lines:
+100 for j = 1 to 10 110 next
+The two lines would be LISTed on the screen. Then using the space bar to wrap around the top line onto the bottom line, the two lines would become one double line. Naturally it only worked for a range of 80 characters. The top line had to be less than 40 characters long and only the first 40 characters of the line below could be transfered. With the two screen lines linked together, the DELete key would beused to "drag" the line below up onto the line above, squeezing out the line number plus those extra spaces in the process. Of course you'd have to insert a colon yourself and also delete line 110. Try it! (By the way, this doesn't work on the VIC 20/C64 - the screen editor has been changed and is now too smart for this trick to be pulled off)
+When 80 Column machines came along there was no longer any need for a line wrap table in low RAM - all the lines were identical regardless of how much code was entered. So the situation above could still occur, but to add one line to another required re-typing.
+(You must know what I'm leading up to. Yes, a POKE this time) By making the operating system "think" that each line is longer than 80 characters, this same trick can be played on the 80 column screen editor. Slight of hand? No. More accurately, "right of hand". Location 213 is the right hand window margin. Normally it contains 79 for 80 column lines (0-79):
+poke 213,159
+. . .will make the editor think that each screen line is 160 characters long, however, you're still limited to 80 charac ters per program line.
+Now, about the only way I could make this work was to start from the beginning of the first line and " cursor right" all the way over to about column 75. Only then would DELete cooperate and drag the bottom line up. Using cursor left to "go around the other way" created some other problems.
+Once you're done you'll want to restore 213 to a 79. Otherwise you'll get some strangeness occurring. Try POKE 213, 255 and cursor down off the bottom of the screen. Weird, eh? Again, I don't know why. And if you think that's weird, try listing a program that will cause screen scrolling. You won't crash the machine, but you may have to clear the screen before entering any new direct commands. Try experimenting. I'm not sure, but it might even work for 3 screen lines (ie. POKE 213, 239).
+
+
+
+Some More C64 Hardware Tips
+Tony Lamartina of Chicago has another, but it's more suited to service technicians or those with access to necessary equipment.
+1. Remove metal cover from video RF area.
+2. Connect scope lead between ground and pin 1 of IC31. 3. Adjust R27 for 1.5 volt DC level.
+4. Connect scope lead between ground and pin 4 of DIN
+plug.
+5. Adjust R25 for midposition
+6. Connect decade box between pin 4 of DIN plug and
+right side of C78
+7. Adjust resistance of decade box for 0.8 to 1 volt of
+signal level on scope
+8. Connect resistor of value determined by decade box
+across pin 1 and pin 4 of DIN plug
+9. Fine adjust R25 for best display of colour monitor.
+Tony also suggests the following be checked on early re leases of the 64:
+1. Loose RF box covers. Tighten the metal tabs and re-in stall.
+2. Check for a missing heat sink on VR2-7805 voltage regulator. Install suitable heat sink.
+3. If the unit displays "sparkling" (interference across the CRT screen, random in nature) connect a 330 picoF capacitor from pin 20 (ground) to pin 30 (address 6) of the 6567 (VIC II) video chip. Make this connection outside the RF shielded box.
+
+
+

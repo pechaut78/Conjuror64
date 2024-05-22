@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $BAFE?","address         $BAFE          DIV10
+Divide FAC1 by 10"

@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $AFE9?","address         $AFE9          ANDOP
+Perform AND
+
+The AND routine changes the parameters to two-byte integer values, and
+performs the appropriate logical operation (AND or OR).  A result of 0
+signifies false, while a result of -1 signifies true."

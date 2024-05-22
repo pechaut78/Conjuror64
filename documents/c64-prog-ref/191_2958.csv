@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the LOAD function?","The purpose of the LOAD function is to load data bytes from any input device directly into the memory of the Commodore 64, and it can also be used for a verify operation, comparing data from a device with the data already in memory, while leaving the data stored in RAM unchanged."
+"What is the call address of the LOAD function in hexadecimal?","The call address of the LOAD function in hexadecimal is $FFD5."
+"What are the communication registers used by the LOAD function?","The communication registers used by the LOAD function are A, X, and Y."
+"What preparatory routines must be called before calling the LOAD function?","The preparatory routines that must be called before calling the LOAD function are SETLFS and SETNAM."
+"What is the use of the accumulator (A) in the LOAD function?","The accumulator (A) must be set to 0 for a LOAD operation, or 1 for a verify operation."
+"How does the LOAD function handle header information from the device?","If the input device is OPENed with a secondary address (SA) of 0, the header information from the device is ignored, and the X and Y registers must contain the starting address for the load."
+"What is the return value of the LOAD function?","The LOAD function returns the address of the highest RAM location loaded."
+"Can the LOAD function be used to load data from the keyboard, RS-232, or the screen?","No, the LOAD function cannot be used to load data from the keyboard (0), RS-232 (2), or the screen (3)."
+"How do you specify the starting address for a relocated load?","To specify the starting address for a relocated load, set the X and Y registers to the start address for the load."
+"What is the JSR instruction used for in the LOAD function?","The JSR instruction is used to call the LOAD function."

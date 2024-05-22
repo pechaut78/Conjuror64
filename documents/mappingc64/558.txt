@@ -1,0 +1,9 @@
+
+
+
+address              $E9E0
+Set Temporary Color Pointer for Scrolling
+
+This subrouting sets up a pointer in 17-175 ($AE-$AF) to the Color RAM
+address that corresponds to the temporary screen line address in
+172-173 ($AC-$AD).

@@ -1,0 +1,10 @@
+
+
+
+address         $A533          LINKPRG
+Relink Lines of Tokenized Program Text
+
+Each line of program text starts with a pointer to the address of the
+next line (link address).  This routine scans each line to the end
+(which is marked with a 0), and calculates the new link address by
+adding the offset to the address of the current statement.

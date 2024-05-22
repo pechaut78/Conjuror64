@@ -1,0 +1,5 @@
+
+
+
+address              $D40F          FREHI3
+Voice 3 Frequency Control (high byte)

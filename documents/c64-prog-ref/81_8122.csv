@@ -1,0 +1,11 @@
+question,answer
+"what is the term for the rate at which a note rises from zero volume to its peak volume?","The term for the rate at which a note rises from zero volume to its peak volume is called the ATTACK."
+"what is the term for the rate at which a note falls from its peak volume to a mid-ranged volume?","The term for the rate at which a note falls from its peak volume to a mid-ranged volume is called the DECAY."
+"what is the term for the mid-ranged volume that a note sustains at after the decay phase?","The term for the mid-ranged volume that a note sustains at after the decay phase is called the SUSTAIN level."
+"what is the term for the rate at which a note falls from the sustain level to zero volume when it stops playing?","The term for the rate at which a note falls from the sustain level to zero volume when it stops playing is called the RELEASE."
+"what is the collective term for the ATTACK, DECAY, SUSTAIN, and RELEASE parameters that control the qualities and restrictions of a note?","The collective term for the ATTACK, DECAY, SUSTAIN, and RELEASE parameters that control the qualities and restrictions of a note is called ADSR."
+"what do the parameters ATTACK, DECAY, SUSTAIN, and RELEASE control in a note?","The parameters ATTACK, DECAY, SUSTAIN, and RELEASE control the qualities and restrictions of a note, such as its volume and duration."
+"where are the ADSR parameters controlled in a sound generator chip?","The ADSR parameters are controlled by a set of locations in the sound generator chip."
+"what happens to a note when it is first struck?","When a note is first struck, it rises from zero volume to its peak volume, and the rate at which this happens is called the ATTACK."
+"what happens to a note after it reaches its peak volume?","After a note reaches its peak volume, it falls from the peak to a mid-ranged volume, and the rate at which the fall of the note occurs is called the DECAY."
+"what happens to a note when it stops playing?","When a note stops playing, it falls from the sustain level to zero volume, and the rate at which it falls is called the RELEASE."

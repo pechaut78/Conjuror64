@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the ACPTR function?","The purpose of the ACPTR function is to get data from the serial bus."
+"What is the call address of the ACPTR function in hexadecimal?","The call address of the ACPTR function is $FFA5."
+"What is the call address of the ACPTR function in decimal?","The call address of the ACPTR function is 65445."
+"What communication register is used by the ACPTR function?","The ACPTR function uses communication register A."
+"What preparatory routines are required before calling the ACPTR function?","The preparatory routines TALK and TKSA are required before calling the ACPTR function."
+"What error returns can be expected from the ACPTR function?","The ACPTR function returns errors according to the READST function."
+"How much stack is required by the ACPTR function?","The ACPTR function requires 13 bytes of stack."
+"What registers are affected by the ACPTR function?","The ACPTR function affects registers A and X."
+"Can the ACPTR function be used without calling TALK and TKSA first?","No, the ACPTR function requires the preparatory routines TALK and TKSA to be called before it can be used."
+"What is the primary function of the communication register A used by the ACPTR function?","The primary function of communication register A used by the ACPTR function is to facilitate data transfer over the serial bus."

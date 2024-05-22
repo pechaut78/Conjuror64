@@ -1,0 +1,82 @@
+
+
+
+address              $D01D          XXPAND
+Sprite Horizontal Expansion Register
+
+Bit 0:  Expand Sprite 0 horizontally (1=double-width sprite, 0=normal
+        width)
+Bit 1:  Expand Sprite 1 horizontally (1=double-width sprite, 0=normal
+        width)
+Bit 2:  Expand Sprite 2 horizontally (1=double-width sprite, 0=normal
+        width)
+Bit 3:  Expand Sprite 3 horizontally (1=double-width sprite, 0=normal
+        width)
+Bit 4:  Expand Sprite 4 horizontally (1=double-width sprite, 0=normal
+        width)
+Bit 5:  Expand Sprite 5 horizontally (1=double-width sprite, 0=normal
+        width)
+Bit 6:  Expand Sprite 6 horizontally (1=double-width sprite, 0=normal
+        width)
+Bit 7:  Expand Sprite 7 horizontally (1=double-width sprite, 0=normal
+        width)
+
+This register can be used to double the width of any sprite.  Setting
+any bit of this register to 1 will cause each dot of the corresponding
+sprite shape to be displayed twice as wide as normal, so that without
+changing its horizontal resolution, the sprite takes up twice as much
+space.  The horizontal expansion feature can be used alone, or in
+combination with the vertical expansion register at 53271 ($D017).
+
+Location Range: 53278-53279 ($D01E-$D01F)
+Sprite Collision Detection Registers
+
+While Bit 2 of the VIC IRQ Register at 53273 ($D019) is set to 1
+anytime two sprites overlap, and Bit 1 is set to 1, when a sprite
+shape is touching the foreground text or bit-graphics display, these
+registers specify which sprites were involved in the collision.  Every
+bit that is set to 1 indicates that the corresponding sprite was
+involved in the collision.  Reading these registers clears them so
+that they can detect the next collision.  Therefore, if you plan to
+make multiple tests on the values stored here, it may be necessary to
+copy it to a RAM variable for further reference.
+
+Note that while these registers tell you what sprites were involved in
+a collision, they do not necessarily tell you what objects have
+collided with each other.  It is quite possible to have three sprites
+lined up in a row, where Sprite A is on the left, Sprite B is in the
+middle, touching Sprite A, and Sprite C is on the right, touching
+Sprite B but not touching Sprite A.  The Sprite-Sprite Collision
+register would show that all three are involved.  The only way to make
+absolutely certain which collided with which is to check the position
+of each sprite, and calculate for each sprite display line if a sprite
+of that size would touch either of the others.  As you can imagine,
+this is no easy task.
+
+There are a few simple rules concerning what does or does not cause a
+collision.  Though the sprite character consists of 504 dots in a 24
+by 21 matrix, does which represent data bits that are equal to 0 (or
+multicolor bit- pairs equal to 00), and therefore always displayed in
+the background color, do not count when it comes to collision.
+
+A collision can occur only if a dot which represents a sprite shape
+data bit of 1 touches another dot of nonzero graphics data.  Consider
+the case of two invisible sprites.  The first sprite is enabled, its
+color set to contrast the background, and it is positioned on the
+screen, but its shape data bytes are all 0.  This sprite can never be
+involved in a collision, because it displays no nonzero data.  The
+second sprite is enabled, positioned on the screen, and its shape
+pointer set for a data read that is filled with bytes having a value
+of 255.  Even if that sprite's color is set to the same value as the
+background color, making the sprite invisible, it can still be
+involved in collisions.  The only exception to this rule is the 01
+bit-pair of multicolor graphics data.  This bit-pair is considered
+part of the background, and the dot it displays can never be involved
+in a collision.
+
+The other rule to remember about collisions is that they can occur in
+areas that are covered by the screen border.  Collision between
+sprites can occur when the sprites are offscreen, and collisions
+between sprites and foreground display data can occur when that data
+is in an area that is covered by the border due to the reduction of
+the display to 38 columns or 24 rows.

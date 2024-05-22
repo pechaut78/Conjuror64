@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $AF08?","address         $AF08          SNERR
+Print Syntax Error Message"

@@ -1,0 +1,35 @@
+
+
+
+address          $91            STKEY
+Flag: Was STOP Key Pressed?
+
+This location is updated every 1/60 second during the execution of the
+IRQ routine that reads the keyboard and updates the jiffy clock.
+
+The value of the last row of the keyboard matrix is placed here.  That
+row contains the STOP key, and although this location is used
+primarily to detect when that key has been pressed, it can also detect
+when any of the other keys in that row of the matrix have been
+pressed.
+
+In reading the keyboard matrix, a bit set to 1 means that no key has
+been pressed, while a bit reset to 0 indicates that a key is pressed.
+Therefore, the following values indicate the keystrokes detailed
+below:
+
+255 $FF  = no key pressed
+254 $FE  = 1 key pressed
+253 $FD  = (left arrow) key pressed
+251 $FB  = CTRL key pressed
+247 $F7  = 2 key pressed
+239 $EF  = space bar pressed
+223 $DF  = Commodore logo key pressed
+191 $BF  = Q key pressed
+127 $7F  = STOP key pressed
+
+VIC owners will notice that the 64's keyboard matrix is very different
+from the VIC's.  One of the advantages of this difference is that you
+can test for the STOP key by following a read of this location with a
+BPL instruction, which will cause a branch to occur anytime that the
+STOP key is pressed.

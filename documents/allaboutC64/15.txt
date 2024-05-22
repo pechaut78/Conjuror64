@@ -1,0 +1,13 @@
+
+
+C64 BASIC:
+When a line is executed as soon as it is typed, the computer
+is operating in the immediate or direct mode.
+• When the computer executes a program, it is said to be
+operating in the deferred or program mode.
+• If a number is placed at the beginning of a line, the com
+puter will not execute it immediately, but instead will place
+it in computer memory as a program line. A program is a se
+quence of numbered lines.
+• The position of a line in a program is determined by the
+value of the number at the beginning of the line.

@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $32C-$32D?","address       $32C-$32D      ICLALL
+Vector to Kernal CLALL Routine (Currently at 62255 ($F32F))"

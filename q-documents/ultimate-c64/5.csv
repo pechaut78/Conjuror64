@@ -1,0 +1,12 @@
+question,answer
+"What are the different types of instructions that make up the instruction set of the 6510 processor?","Instruction Set
+The instruction set is very streamlined, and avoid
+redundancies. There are load instructions (LDA/
+LDX/LDY to load A, X and Y respecively), store instructions (STA/STX/STY), read-modify-write instructions (logic: ASL/LSR/ROL/ROR, count: INC/
+DEC), arithmetic (ADC/SBC; note that these always
+include the carry: CLC/ADC is a regular addition, and
+SEC/SBC is a regular subtraction, because of the
+one's complement logic), compare (CMP/CPX/CPY;
+these are subtractions without storing the result),
+logic (AND/ORA/EOR, and BIT, which is AND without storing the result), as well as branch instructions,
+flag manipulation, register transfer and stack manipulation."

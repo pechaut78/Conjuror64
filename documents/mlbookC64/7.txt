@@ -1,0 +1,25 @@
+
+
+
+A. The LOAD instructions
+The LOAD instructions get data from memory and place it
+into a register. There are three working registers in the
+processor (the accumulator, the X-register and the Y-
+register). Each has a corresponding load instructions.
+LDA LoaD Accumulator
+LDX LoaD X register
+LDY LoaD Y register
+The 6510 processor has different addressing modes. An
+addressing mode tells the 6510 how to calculate the
+address (or location) of the operand.
+In the examples that follow, we show you corresponding
+"pseudo-BASIC" statements to illustrate the machine
+langauge instructions in a familiar notation.
+1) Immediate Addressing
+LDA #10
+This addressing mode is indicated by the pound sign
+# preceding the value to be loaded. Immediate
+addressing means that the accumulator is loaded
+with the value which follows it, in this case 10.
+The corresponding pseudo-BASIC instruction is:
+A=10

@@ -1,0 +1,7 @@
+
+There is one instruction which has not been mentioned yet
+which does absolutely nothing and so is called NOP (no
+operation). This instruction is used to remove operation
+codes from a program without shifting the rest of the
+commands, as well as in delay loops (this instruction too
+requires a certain amount of time to execute).

@@ -1,0 +1,18 @@
+
+
+Cycle Counting
+It is quite straightforward to find out how many cycles an instruction takes. As a rule of thumb, an instruction takes as many cycles as the number of
+memory fetches it has to perform, but at least two.
+Therefore, single-byte opcodes (one byte fetches;
+NOP/TAX/INX etc.) as well as instructions with immediate operands take two cycles. Zero page instructions take three memory accesses (opcode, address,
+data), so they are three cycles. Absolute instructions
+take four accesses (opcode, address low, address high,
+data), so they are four cycles.
+Read-modify-write instructions (INC/DEC/shift/
+rotate) are an exception: They require 4 memory accesses for the zero page case and 5 otherwise, but they
+take 5 and 6 cycles, respectively.
+Branches take 3 cycles if they are taken and two if
+they are not taken. And extra cycle has to be added if
+the branch crosses a page boundary. JMP is 3, push is
+3, pull is 4, JSR and RTS are 6 each.
+All other timings can be looked up in the 6502's reference, but they are very easy to memorize.

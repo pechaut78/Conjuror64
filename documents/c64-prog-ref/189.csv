@@ -4,7 +4,3 @@ question,answer
 "What registers are affected by the IOINIT function?","A, X, Y"
 "What is the description of the IOINIT function?","This routine initializes all input/output devices and routines."
 "What is the normal use of the IOINIT function?","It is normally called as part of the initialization procedure of a Commodore 64 program cartridge."
-"What is the result of not initializing I/O devices?","Error returns"
-"What is the stack requirement of the IOINIT function?","None"
-"What are the preparatory routines of the IOINIT function?","None"
-"What are the communication registers of the IOINIT function?","None"

@@ -1,0 +1,11 @@
+question,answer
+"What happens when execution resumes after a GOSUB in C64 Basic?","Execution resumes where it left off in the main program after a GOSUB in C64 Basic. This allows statements to be placed after a GOSUB on the same line."
+"What does the RETURN statement do in C64 Basic?","The RETURN statement in C64 Basic causes execution to jump to the first statement after the most recent GOSUB. This may mean jumping into the middle of a line."
+"What is the comparison of RETURN statement to a main program in C64 Basic?","RETURN statement in C64 Basic is comparable to the END statement of a main program as it causes execution to jump to the first statement after the most recent GOSUB."
+"What is the requirement for using RETURN statement in C64 Basic?","RETURN statement in C64 Basic should be used only when a GOSUB has been previously executed. If the computer encounters a RETURN without having previously executed a matching GOSUB, a RETURN WITHOUT GOSUB error is printed."
+"What is the consequence of using RETURN statement without GOSUB in C64 Basic?","If the computer encounters a RETURN without having previously executed a matching GOSUB, the place to jump back to is undefined, so a RETURN WITHOUT GOSUB error is printed."
+"Can a subroutine contain multiple RETURN statements in C64 Basic?","A subroutine can contain several RETURN statements in C64 Basic, provided that for every GOSUB executed, exactly one RETURN is executed."
+"What is the requirement for every GOSUB executed in C64 Basic?","For every GOSUB executed in C64 Basic, exactly one RETURN should be executed."
+"What is the effect of not having a corresponding RETURN for a GOSUB in C64 Basic?","If there is no corresponding RETURN for a GOSUB executed in C64 Basic, it may result in undefined behavior or an error."
+"What is the purpose of using RETURN statement in C64 Basic?","The purpose of using RETURN statement in C64 Basic is to cause execution to jump to the first statement after the most recent GOSUB, allowing for the execution of a subroutine and returning to the main program."
+"What is the consequence of not using RETURN statement in C64 Basic after GOSUB?","If RETURN statement is not used in C64 Basic after GOSUB, the program may keep executing the subroutine indefinitely or result in undefined behavior."

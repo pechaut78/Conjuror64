@@ -1,0 +1,17 @@
+
+
+C64 Basic:
+The READ and DATA statements offer an alternative
+method for assigning values to variables.
+• The syntax for the READ statement is the keyword READ
+followed by a list of variable names, called a variable list.
+Each variable name would be to the left of the equal sign if
+a LET statement were used. When more than one variable
+name is used in a READ statement, the variable names are
+separated by commas.
+• The syntax for the DATA statement is the keyword DATA
+followed by one or more numbers. If several numbers are
+used, they are separated by commas. Two consecutive com
+mas are read as the number 0. Only constant values can
+be used; variables or expressions cannot be placed in DATA
+statements.

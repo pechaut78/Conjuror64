@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $29C?","address          $29C           RIDBS
+RS-232: Index to Start of Receive Buffer
+
+This index points to the starting byte within the 256-byte RS-232
+receive buffer, and is used to remove data from that buffer."

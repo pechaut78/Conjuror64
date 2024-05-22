@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $F82E?","address              $F82E
+Check Cassette Switch
+
+This subroutine is used to check if a button on the recorder has been
+pressed."

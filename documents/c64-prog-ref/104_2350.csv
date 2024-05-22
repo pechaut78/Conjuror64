@@ -1,0 +1,11 @@
+question,answer
+"what is indexing in the context of the 6510 microprocessor?","Indexing is the process of creating an actual address from a base address plus the contents of either the X or Y index registers, allowing for more flexible and efficient memory access."
+"what is the result of executing an LDA instruction in absolute X indexed mode with a base address of $9000 and X containing $05?","The result would be loading the value from memory location $9000 + $05 = $9005 into the A register."
+"what is the mnemonic format of an absolute indexed instruction?","The mnemonic format of an absolute indexed instruction is the same as an absolute instruction, with the addition of ',X' or ',Y' to denote the index, for example, LDA $9000,X."
+"what are the different modes of addressing available on the 6510 microprocessor?","The 6510 microprocessor supports absolute indexed, zero page indexed, indirect indexed, and indexed indirect modes of addressing."
+"how does the 6510 microprocessor calculate the actual memory address in indexed mode?","The 6510 microprocessor calculates the actual memory address by adding the contents of either the X or Y index register to the base address."
+"what is the purpose of the index registers X and Y in the 6510 microprocessor?","The purpose of the index registers X and Y is to hold a value that is added to a base address to create an actual memory address, allowing for flexible and efficient memory access."
+"what is the difference between an absolute instruction and an absolute indexed instruction?","The difference is that an absolute indexed instruction has a ',X' or ',Y' added to the address, denoting that the index register is used to calculate the actual memory address."
+"can you give an example of an absolute indexed instruction?","Yes, an example is LDA $9000,X, which loads the value from memory location $9000 + X into the A register."
+"what is the advantage of using indexed addressing modes on the 6510 microprocessor?","The advantage is that it allows for more flexible and efficient memory access, as the index registers can be used to dynamically calculate memory addresses."
+"how many index registers are available on the 6510 microprocessor?","There are two index registers available on the 6510 microprocessor, X and Y."

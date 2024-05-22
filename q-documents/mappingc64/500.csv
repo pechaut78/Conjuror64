@@ -1,0 +1,28 @@
+question,answer
+"What is the purpose of the memory location at address $E168?","address              $E168          LOAD
+Perform LOAD
+
+This routine sets the load address to the start of BASIC (from pointer
+at 43 ($2B)), and calls the Kerneal LOAD routine.  If the load is
+successful, it relinks the BASIC program so that the links agree with
+the address to which it is loaded, and it resets the end of BASIC
+pointer to reflect the new end of program text.  If the LOAD was done
+while a program was running, the pointers are reset so that the
+program starts executing all over again from the beginning.  A CLR is
+not performed, so that the variables build so far are retained, and
+their values are still accessible.  The pointer to the variable area
+is not changed, but if the new program is longer than the one that
+loaded it, the variable table will be partially overwritten.  This
+will cause errors when the overwritten variables are referenced.
+Likewise, strings whose text was referenced at its location within the
+original program listing will be incorrect.
+
+Since a LOAD from a program causes the program execution to continue
+at the first line, when loading a machine language routine or data
+file with a nonrelocating load (for example, LOAD'FILE',8,1) from a
+program, you should read a flag and GOTO the line after the LOAD if
+you don't want the program to keep rerunning indefinitely:
+
+10 IF FLAG=1 THEN GOTO 30
+20 FLAG=1:LOAD'FILE',8,1
+30 REM PROGRAM CONTINUES HERE"

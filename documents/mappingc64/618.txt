@@ -1,0 +1,16 @@
+
+
+
+address              $F34A          OPEN
+Open a Logical I/O File
+
+OPEN is a documented Kernal I/O routine.  It can be entered from the
+jump table at 65472 ($FFC0).
+
+The routine jumps through a RAM vector at 794 ($31A).  This routine
+assigns a logical file to a device, so that it can be used for
+Input/Output operations.  In order to specify the logical file number,
+the device number, and the secondary address if any, the SETLFS
+routine must first be called.  Likewise, in order to designate the
+filename, the SETNAM routine must be used first.  After these two
+routines are called, OPEN is then called.

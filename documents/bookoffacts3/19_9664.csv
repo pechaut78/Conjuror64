@@ -1,0 +1,11 @@
+question,answer
+"What command executes a program in memory in C64 Basic?","The RUN command, when shifted and combined with the letter U, will execute a program that is stored in memory in C64 Basic."
+"How do you store a program to tape or disk in C64 Basic?","The SAVE command, when shifted and combined with the letter A, is used to store a program to tape or disk in C64 Basic."
+"What is the function of the SGN command in C64 Basic?","The SGN command is an interior function in C64 Basic, which stands for sign. It returns the sign of a number as -1, 0, or 1."
+"What is the purpose of the SIN function in C64 Basic?","The SIN function is a floating point function in C64 Basic, which stands for sine. It returns the sine of a number in radians."
+"What does the SPC function do in C64 Basic?","The SPC function is a function in C64 Basic that prints a specified number of spaces across the screen. For example, PRINT SPC 9 10 will print 10 spaces."
+"What command is used to execute a program in memory in C64 Basic?","In C64 Basic, the RUN command, when shifted and combined with the letter U, is used to execute a program that is stored in memory."
+"How do you store a program to tape or disk in C64 Basic?","The SAVE command, when shifted and combined with the letter A, is used to store a program to tape or disk in C64 Basic."
+"What is the function of the SGN command in C64 Basic?","The SGN command is an interior function in C64 Basic, which stands for sign. It returns -1 if the number is negative, 0 if the number is zero, and 1 if the number is positive."
+"What is the purpose of the SIN function in C64 Basic?","The SIN function is a floating point function in C64 Basic, which stands for sine. It returns the sine of a number in radians, with a result between -1 and 1."
+"What does the SPC function do in C64 Basic?","The SPC function is a function in C64 Basic that allows you to print a specified number of spaces across the screen. For example, PRINT SPC 9 10 will print 10 spaces."

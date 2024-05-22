@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $B391?","address         $B391          GIVAYF
+Convert 16-Bit Signed Integer to Floating Point
+
+This routine treats the value in the Accumulator as the high byte of a
+16-bit signed integer, and the value in the .Y register as the low
+byte, and converts the signed integer into a floating point number in
+the Floating Point Accumulator.
+
+The address of this routine is pointed to by the RAM vector at 5-6,
+and the routine can be used to return an argument from the USR call in
+the Floating Point Accumulator."

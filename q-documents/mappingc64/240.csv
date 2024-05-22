@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $A82C?","address         $A82C
+Test STOP Key for Break in Program
+
+The Kernal STOP routine is called from here, and if the key is
+pressed, the STOP (63213, $F6ED) command, below, is executed."

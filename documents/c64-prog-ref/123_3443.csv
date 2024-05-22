@@ -1,0 +1,11 @@
+question,answer
+"what is the addressing mode of the BRK instruction?","The addressing mode of the BRK instruction is implied, which means that the instruction does not require any additional memory locations to be specified."
+"what is the assembly language form of the BRK instruction?","The assembly language form of the BRK instruction is simply 'BRK', which is used to force a break in the program flow."
+"what is the OP code for the BRK instruction?","The OP code for the BRK instruction is 00, which is a single byte that represents the instruction."
+"how many bytes does the BRK instruction occupy in memory?","The BRK instruction occupies only 1 byte in memory, making it a very compact instruction."
+"how many cycles does the BRK instruction take to execute?","The BRK instruction takes 7 cycles to execute, which is relatively fast compared to other instructions."
+"can the BRK instruction be masked by setting the I flag?","No, the BRK instruction cannot be masked by setting the I flag, which means that it will always cause an interrupt when executed."
+"what is the purpose of the BRK instruction?","The purpose of the BRK instruction is to force a break in the program flow, which can be useful for debugging or error handling purposes."
+"can the BRK instruction be used to implement a software interrupt?","Yes, the BRK instruction can be used to implement a software interrupt, which can be used to invoke an interrupt service routine."
+"what happens when the BRK instruction is executed?","When the BRK instruction is executed, it generates an interrupt request, which causes the CPU to interrupt its normal operation and execute an interrupt service routine."
+"is the BRK instruction a conditional instruction?","No, the BRK instruction is not a conditional instruction, it always causes a break in the program flow regardless of the current state of the flags."

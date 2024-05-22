@@ -1,0 +1,14 @@
+question,answer
+"What is the purpose of the memory location at address $A00C-$A051?","address   $A00C-$A051    STMDSP
+Statement Dispatch Vector Table
+
+This table contains two-byte vectors, each of which points to an
+address which is one byte before the address of one of the routines
+that perform a BASIC statement.
+
+The statements are in token number order.  When it comes time to
+execute a statement, the NEWSTT routine at 42926 ($A7AE) places this
+address-1 on the stack and jumps to the CHRGET routine.  The RTS
+instruction at the end of that routine causes the statement address to
+be pulled off the stack, incremented, and placed in the Program
+Counter, just as if it were the actual return address."

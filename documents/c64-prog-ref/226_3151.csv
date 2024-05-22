@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the modem in computer communication","The modem is a simple device that can translate character codes into audio pulses and vice-versa, so that computers can communicate over telephone lines."
+"what are the parameters set by the OPEN statement for the modem","The OPEN statement for the modem sets up the parameters to match the speed and format of the other computer you are communicating with, specifically the baud rate, number of data bits, and number of stop bits."
+"what is the significance of the first character code in the OPEN statement","The bit positions of the first character code determine the baud rate, number of data bits, and number of stop bits."
+"what is the purpose of the second character code in the OPEN statement","The second code is optional, and its bits specify the parity and duplex of the transmission."
+"what is the format of the OPEN statement for modem communication","The format of the OPEN statement for modem communication is OPEN 1,2,0,CHR$(6) for 300 baud, and OPEN 2,2,0,CHR$(163) CHR$(112) for 110 baud, etc."
+"what is the standard set of character codes used by most computers","Most computers use the American Standard Code for Information Interchange, known as ASCII (pronounced ASK-KEY)."
+"what is the difference between Commodore 64 character codes and ASCII codes","The Commodore character codes must be translated into their ASCII counterparts when communicating with other computers."
+"what is the importance of character translation in modem communication","Character translation is necessary because the Commodore character codes must be translated into their ASCII counterparts when communicating with other computers."
+"what is the challenge in writing programs that communicate with other computers","The challenge is to carefully count the number of characters and RETURN characters, otherwise the computer receiving the characters won't know what to do with them."
+"what is an example of a program that communicates with another computer without human intervention","An example is a terminal program that automatically types in your account number and secret password."

@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $A004-$A00B?","address  $A004-$A00B
+ASCII Text characters CBMBASIC
+
+The ASCII characters for the letters CBMBASIC are located here.
+Possibly an identifier, this text is not referenced elsewhere in the
+program."

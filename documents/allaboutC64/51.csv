@@ -1,0 +1,11 @@
+question,answer
+"What happens when the NEXT statement checks the counting variable's value in a FOR-NEXT loop in C64 Basic?","The NEXT statement checks if the value of the counting variable is still in range, it checks not just for equality, but also for less than. This means that the counting variable does not have to exactly match the ending value for the loop to end."
+"What is the condition for repeating the loop with a positive step value in a FOR-NEXT loop in C64 Basic?","With a positive step value, the NEXT statement will repeat the loop if the counting variable is less than or equal to the loop's ending value."
+"What is the condition for repeating the loop with a negative step value in a FOR-NEXT loop in C64 Basic?","For a negative step value, a check for greater than or equal to is used."
+"What happens to the statements inside a FOR-NEXT loop in C64 Basic before reaching the NEXT statement for the first time?","All of the statements in a FOR-NEXT loop will be executed once before the NEXT statement is ever reached. This means that even if the starting and ending values in a FOR statement are wrong, as in FOR K=1 TO -1 (no STEP -1), the loop will be executed at least once."
+"What is the effect of using a step value of 0 in a FOR-NEXT loop in C64 Basic?","There is no sense in using a step value of 0, because doing so creates an infinite loop."
+"Can multiple independent FOR-NEXT loops be used in one program in C64 Basic?","Any number of independent FOR-NEXT loops can be used in one program."
+"What is the effect of a wrong starting and ending value in a FOR statement in C64 Basic?","All of the statements in a FOR-NEXT loop will be executed once before the NEXT statement is ever reached. This means that even if the starting and ending values in a FOR statement are wrong, as in FOR K=1 TO -1 (no STEP -1), the loop will be executed at least once."
+"What is the effect of using a negative step value in a FOR-NEXT loop in C64 Basic?","For a negative step value, a check for greater than or equal to is used."
+"What is the effect of using a step value of 0 in a FOR-NEXT loop in C64 Basic?","There is no sense in using a step value of 0, because doing so creates an infinite loop."
+"How many independent FOR-NEXT loops can be used in one program in C64 Basic?","Any number of independent FOR-NEXT loops can be used in one program."

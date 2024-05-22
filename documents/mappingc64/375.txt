@@ -1,0 +1,43 @@
+
+address  $D000-$DFFF
+
+This 4K block of memory is used for several key functions.  Normally,
+the 6510 microprocessor addresses the two Complex Interface Adapter
+(CIA) Input/Output chips here, along with the VIC-II video controller
+chip, the Sound Interface Device (SID) music synthesizer, and the
+Color RAM.
+
+Alternatively, the 6510 can address the character ROM here (though
+normally only the VIC-II chip has access to it).  Finally, there is
+also 4K of RAM here, although to use it may require banking it in only
+when necessary, as the I/O devices are needed for such niceties as
+reading he keyboard, and updating the screen display.
+
+It will appear from the map of the I/O devices below that many of the
+locations are not accounted for.  That is beause these devices tie up
+more addressing space than they actually use.  Each of them uses only
+a few addresses, mostly on the bit level.
+
+The missing addresses either consist of images of the hardware
+registers, or cannot be addressed in this configuration.  In addition,
+some address space is left open for the use of future hardware devices
+which might be plugged into the expansion port, like the CP/M card.
+
+As mentioned above, memory usage by these I/O devices is to intensive
+that to work with them often requires that you turn individual bits on
+and off.  Here is a quick reminder of how to manipulate bits.
+
+The bit values for each bit are:
+
+Bit 0 = 1
+Bit 1 = 2
+Bit 2 = 4
+Bit 3 = 8
+Bit 4 = 16
+Bit 5 = 32
+Bit 6 = 64
+Bit 7 = 128
+
+To set a bit to 1 from BASIC, POKE address, PEEK(address) OR Bitvalue.
+To reset a bit to 0 from BASIC, POKE address, PEEK(address) AND
+255-Bitvalue.

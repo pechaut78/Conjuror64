@@ -1,0 +1,11 @@
+question,answer
+"what is the format for the BSAVE command in Commodore 128?","The format for the BSAVE command in Commodore 128 is BSAVE \"file name\"[,Ddrive#][,Udevice#][,Bbank#][,Pstarting address][TO Pending address+1], where the usual options are the same and bank# is one of the 16 banks of the C128. The address to be saved are given in decimal. Note that the ending address must be 1 location beyond the last location to be saved."
+"how do you access a built-in monitor in Commodore 128?","To access a built-in monitor in Commodore 128, type MONITOR."
+"what is the command to exit a monitor in Commodore 128?","To exit a monitor in Commodore 128, type X alone on a line."
+"what is the purpose of the BSAVE command in Commodore 128?","The BSAVE command in Commodore 128 is used to save a block of memory to a file, the format of which is BSAVE \"file name\"[,Ddrive#][,Udevice#][,Bbank#][,Pstarting address][TO Pending address+1]."
+"in what format are the addresses specified in the BSAVE command?","The addresses specified in the BSAVE command are in decimal format."
+"what is the significance of the ending address in the BSAVE command?","The ending address in the BSAVE command must be 1 location beyond the last location to be saved."
+"what is the purpose of the bank# option in the BSAVE command?","The bank# option in the BSAVE command specifies one of the 16 banks of the C128."
+"can you specify a device number in the BSAVE command?","Yes, you can specify a device number in the BSAVE command using the Udevice# option."
+"can you specify a drive number in the BSAVE command?","Yes, you can specify a drive number in the BSAVE command using the Ddrive# option."
+"in what scenario would you use the TO option in the BSAVE command?","You would use the TO option in the BSAVE command to specify a pending address, which is the address to which the saved data will be transferred."

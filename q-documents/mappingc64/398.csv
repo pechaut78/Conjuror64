@@ -1,0 +1,22 @@
+question,answer
+"What is the purpose of the memory location at address $D015?","address              $D015          SPENA
+Sprite Enable Register
+
+Bit 0:  Enable Sprite 0 (1=sprite is on, 0=sprite is off)
+Bit 1:  Enable Sprite 1 (1=sprite is on, 0=sprite is off)
+Bit 2:  Enable Sprite 2 (1=sprite is on, 0=sprite is off)
+Bit 3:  Enable Sprite 3 (1=sprite is on, 0=sprite is off)
+Bit 4:  Enable Sprite 4 (1=sprite is on, 0=sprite is off)
+Bit 5:  Enable Sprite 5 (1=sprite is on, 0=sprite is off)
+Bit 6:  Enable Sprite 6 (1=sprite is on, 0=sprite is off)
+Bit 7:  Enable Sprite 7 (1=sprite is on, 0=sprite is off)
+
+In order for any sprite to be displayed, the corresponding bit in this
+register must be set to 1 (the default for this location is 0).  Of
+course, just setting this bit along will not guarantee that a sprite
+will be shown on the screen.  The Sprite Data Pointer must indicate a
+data area that holds some values other than 0.  The Sprite Color
+Register must also contain a value other than that of the background
+color.  In addition, the Sprite Horizontal and Vertical Position
+Registers must be set for positions that lie within the visible screen
+range in order for a sprite to appear on screen."

@@ -1,0 +1,20 @@
+
+C64 Basic
+ Unlike arithmetic and relational operators, which operate on
+numbers, the logical operators AND, OR, and NOT operate
+on the values true and false.
+• The operators AND or OR are called binary operators be
+cause they operate on two values. When you place AND or
+OR between two conditional expressions, the operator and
+expressions form one big expression.
+• When using AND, the value of this big expression is true
+only when both of the smaller expressions are true. All it
+takes is one false value to make the whole expression false.
+• When using OR, the value of the big expression is false only
+when both of the smaller expressions are false. All it takes is
+one true value to make the whole expression true.
+• The NOT operator is called a unary operator because it op
+erates on only one value. This operator takes a true/false
+value and changes it to the opposite value.
+• Logical operators have the lowest precedence of all the
+operators.

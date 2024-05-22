@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $BA8C?","address         $BA8C          CONUPK
+Move a Floating Point Number from Memory into FAC2
+
+This subroutine loads FAC2 from the four-byte number (three mantissa
+and one sign) pointed to by the .A and .Y registers."

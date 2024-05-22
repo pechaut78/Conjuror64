@@ -1,0 +1,36 @@
+question,answer
+"What is the purpose of the memory location at address $E097?","address              $E097          RND
+Perform RND
+
+This routine comes up with a random number in one of three ways,
+depending on the argument X of RND(X).  If the argument is positive,
+the next RND value is obtained by multiplying the seed value in
+location 139 ($8B) by one of the constants above, adding the other
+constant, and scrambling the resulting bytes.  This produces the next
+number in a sequence.  So many numbers can be produced in this way
+before the sequence begins to repear that it can be considered random.
+
+If the argument is negative, the argument itself is scrambled, and
+made the new seed.  This allows creation of a sequence that can be
+duplicated.
+
+If the argument is 0, four bytes of the Floating Point Accumulator are
+loaded from the low and high byte of Timer A, and the tenths of second
+and second Time of Day Clock registers, all on CIA #1.  This provides
+a somewhat random value determined by the setting of those timers at
+the moment that the command is executed, which becomes the new seed
+value.  The RND(1) command should then be used to generate further
+random numbers.
+
+The RND(0) implementation on the 64 has serious problems which make it
+unusable for generating a series of random numbers when used by
+itself.  First of all, the Time of Day Clock on CIA #1 (see
+56328-56331 ($DC08-$DC0B)) does not start running until you write to
+the tenth of second register.  The Operating System never starts this
+clock, and therefore the two registers used as part of the floating
+point RND(0) value always have a value of 0.  Even if the clock was
+started, however, these registers keep time in Binary Coded Decimal
+(BCD) format, which means that they do not produce a full range of
+numbers from 0 to 255.  In addition, the Timer A high register output
+ranges only from 0 to 66, which also imits the range of the final
+floating point value so that certain numbers are never chosen."

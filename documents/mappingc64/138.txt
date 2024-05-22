@@ -1,0 +1,16 @@
+
+
+
+address       $281-282       MEMSTR
+Pointer: O.S. Start of Memory
+
+When the power is first turned on, or a cold start RESET is performed,
+the Kernal routine RAMTAS (64848, $FD50) sets this location to point
+to address 2048 ($800).  This indicates that this is the starting
+address of user RAM.  BASIC uses this location to set its own start of
+memory pointer at location 43 ($2B), and thereafter uses only its own
+pointer.
+
+The Kernal routine MEMBOT (65076, $FE34) may be used to read or set
+this pointer, or these locations may be directly PEEKed or POKEd from
+BASIC.

@@ -1,0 +1,8 @@
+
+
+
+address              $FCD1
+Check the Tape Read/Write Pointer
+
+This routine compares the current tape read/write address with the
+ending read/write address.

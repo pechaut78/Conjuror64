@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the PLP instruction?","The opcode for the PLP instruction is 28, which is used to pull the processor status from the stack."
+"what is the addressing mode used by the PLP instruction?","The addressing mode used by the PLP instruction is implied, which means the instruction does not require a memory address as an operand."
+"how many bytes does the PLP instruction occupy in memory?","The PLP instruction occupies 1 byte in memory, making it a compact and efficient instruction."
+"how many cycles does the PLP instruction take to execute?","The PLP instruction takes 4 cycles to execute, which is relatively fast compared to other instructions."
+"what is the purpose of the PLP instruction?","The purpose of the PLP instruction is to pull the processor status from the stack, which is useful for restoring the processor's status after an interrupt or exception."
+"what is the difference between the PLP and PLA instructions?","The PLP instruction pulls the processor status from the stack, while the PLA instruction pulls the accumulator from the stack, making them distinct instructions with different purposes."
+"can the PLP instruction be used to pull data from memory?","No, the PLP instruction cannot be used to pull data from memory, as its purpose is to retrieve the processor status from the stack, not to access memory locations."
+"what is the relationship between the PLP instruction and the stack?","The PLP instruction is closely related to the stack, as it retrieves the processor status from the top of the stack, making it an essential instruction for managing the stack."
+"how does the PLP instruction affect the processor's flags?","The PLP instruction restores the processor's flags to their previous state, which is useful for maintaining the correct status of the processor after an interrupt or exception."
+"in what situations would you use the PLP instruction?","You would use the PLP instruction in situations where you need to restore the processor's status after an interrupt or exception, such as when returning from an interrupt service routine."

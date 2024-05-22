@@ -1,0 +1,9 @@
+
+
+
+address           $92            SVXT
+Timing Constant for Tape Reads
+
+This location is used as an adjustable timing constant for tape reads,
+which can be changed to allow for the slight speed variation between
+tapes.

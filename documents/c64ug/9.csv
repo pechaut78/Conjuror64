@@ -1,0 +1,11 @@
+question,answer
+"what is the flashing square under READY on the Commodore 64?","The flashing square under READY is called the cursor and indicates where what you type on the keyboard will be displayed on the screen."
+"what happens to the cursor when you type on the keyboard?","As you type, the cursor will move ahead one space, as the original cursor position is replaced with the character you typed."
+"what happens to the characters you type on the keyboard?","The characters you type are displayed on the TV screen, replacing the original cursor position."
+"what is the purpose of the cursor on the Commodore 64?","The cursor indicates where what you type on the keyboard will be displayed on the screen."
+"what do you see on the TV screen when you type on the keyboard?","You see the characters you type displayed on the TV screen, as the cursor moves ahead one space."
+"why does the cursor move ahead one space when you type?","The cursor moves ahead one space because the original cursor position is replaced with the character you typed."
+"what is the relationship between the cursor and the keyboard?","The cursor indicates where what you type on the keyboard will be displayed on the screen."
+"what is the visual representation of the cursor on the Commodore 64?","The cursor is represented as a flashing square under READY on the Commodore 64."
+"what happens when you type multiple characters on the keyboard?","The cursor moves ahead one space for each character you type, as each character replaces the original cursor position."
+"how does the cursor respond to keyboard input?","The cursor responds to keyboard input by moving ahead one space and displaying the typed character on the TV screen."

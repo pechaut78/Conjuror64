@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the JSR instruction?","JSR (jump to subroutine) only has an absolute version, and stores the address of the next instruction minus one on the stack."
+"what happens when a hardware interrupt occurs?","A hardware interrupt, unless disabled by a set interrupt (I) flag, pushes the address of the next instruction minus one, pushes the processor status afterwards, disables interrupts, and jumps over the vector at $FFFE/$FFFF."
+"what is the difference between a hardware interrupt and a software interrupt?","BRK causes a software interrupt and behaves the same as a hardware interrupt, except that it sets the B flag on the stack to 1 (a hardware interrupt sets it to 0)"
+"what is the purpose of the RTS instruction?","RTS (return from subroutine) takes the address from the stack, adds one, and moves it into the program counter."
+"what is the purpose of the RTI instruction?","RTI return from interrupt) is the same as the combination of PLP and RTS."
+"what is the purpose of the JMP instruction?","Next to the absolute JMP instruction, there is an indirect version that jumps over a vector (e.g. JMP ($FFFC))."
+"what is the purpose of the BRK instruction?","BRK causes a software interrupt and behaves the same as a hardware interrupt, except that it sets the B flag on the stack to 1 (a hardware interrupt sets it to 0)"
+"what is the purpose of the NMI interrupt?","NMIs behave the same as IRQs, but they cannot be masked, and they use the $FFFA/$FFFB vector."
+"what is the purpose of the reset vector?","The reset vector is at $FFFC/$FFFD."
+"what is the reason for the 'minus one' logic in JSR?","The ”minus one” logic was chosen because it could save one cycle in the implementation of JSR."

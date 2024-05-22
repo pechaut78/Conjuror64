@@ -1,0 +1,5 @@
+
+
+
+address              $D01A          SP3COL
+Sprite 3 Color Register (the default color value is 4, purple)

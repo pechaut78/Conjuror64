@@ -1,0 +1,8 @@
+
+Branch on overflow flag
+The overflow can also be
+used as the basis for
+conditional branches. The corresponding commands are
+"branch on overflow setf" BVSf and "branch on overflow
+clear," BVC. Because of the secondary importance of the V
+flag, these commands are seldom used.

@@ -1,0 +1,11 @@
+question,answer
+"What are line numbers in C64 Basic?","Line numbers in C64 Basic are a sequential list of numbers that precede each program line. They are used by the computer to follow the program. Without line numbers, it would be impossible for the computer to execute the program correctly."
+"Why are line numbers important in C64 Basic?","Line numbers are important in C64 Basic because they allow the computer to follow the program. Without line numbers, the computer would not be able to understand the order in which the commands should be executed."
+"What is the maximum line number in C64 Basic?","The maximum line number in C64 Basic is 63999. Any line number higher than this will not be recognized by the computer."
+"Are line numbers required in C64 Basic for immediate commands?","No, line numbers are not required in C64 Basic for immediate commands. They are only necessary for programmed commands."
+"What happens if a line number is higher than 63999 in C64 Basic?","If a line number is higher than 63999 in C64 Basic, it will not be recognized by the computer. The maximum line number is 63999."
+"Can line numbers be skipped in C64 Basic?","Yes, line numbers can be skipped in C64 Basic. The computer will simply ignore any lines that do not have a number that follows the correct sequence."
+"What is the purpose of line numbers in C64 Basic?","The purpose of line numbers in C64 Basic is to provide a sequence for the computer to follow when executing commands. They are essential for the correct execution of a program."
+"Are line numbers necessary for every command in C64 Basic?","No, line numbers are not necessary for every command in C64 Basic. They are only required for programmed commands that need to be executed in a specific order."
+"What is the format of a line number in C64 Basic?","The format of a line number in C64 Basic is a number that precedes each program line. It should be in sequential order and should not exceed 63999."
+"What happens if line numbers are not used in C64 Basic?","If line numbers are not used in C64 Basic, the computer will not be able to follow the program. This will result in incorrect execution of commands and errors in the program."

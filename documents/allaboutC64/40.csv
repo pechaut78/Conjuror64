@@ -1,0 +1,11 @@
+question,answer
+"What function is used to count the number of characters in a string in C64 Basic?","The LEN function is used to count the number of characters in a string in C64 Basic. The range of this function is 0 to 255, with 0 being the length of the null string."
+"What is the purpose of the $ at the end of the function name in C64 Basic?","In C64 Basic, the $ at the end of the function name indicates that the function returns a character string."
+"What function returns the ASCII code for the first character in a string in C64 Basic?","The ASC function returns the ASCII code for the first character in a string in C64 Basic. The string must not be the null string, or the ILLEGAL QUANTITY error will be printed."
+"What is the use of the ASC function in C64 Basic?","The ASC function in C64 Basic is often used to check input characters and can detect the ASCII codes of special function keys."
+"What function takes an ASCII code and returns a string one character long in C64 Basic?","The CHR$ function takes an ASCII code and returns a string one character long in C64 Basic. A common use for this function is to print the double quote character."
+"What is the use of the CHR$ function in C64 Basic in printing special control codes?","The CHR$ function in C64 Basic simplifies the printing of special control codes, such as those for screen clearing and color changing."
+"What is the range of the LEN function in C64 Basic?","The range of the LEN function in C64 Basic is 0 to 255, with 0 being the length of the null string."
+"What will happen if the ASC function in C64 Basic is used with the null string?","If the ASC function in C64 Basic is used with the null string, the ILLEGAL QUANTITY error will be printed."
+"What is the use of the CHR$ function in printing the double quote character in C64 Basic?","The CHR$ function in C64 Basic can be used to print the double quote character, which is a special control code."
+"What is the return type of the LEN and ASC functions in C64 Basic?","The LEN and ASC functions in C64 Basic both require a string for an argument and return a number."

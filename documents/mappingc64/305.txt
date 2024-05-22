@@ -1,0 +1,8 @@
+
+
+
+address         $B606
+Collect a String
+
+This part of the garbage collection routine moves the string to high
+memory and updates the descriptor to point to its new location.

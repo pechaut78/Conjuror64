@@ -1,0 +1,11 @@
+
+ROL
+With the ROL instruction (rotate left) we can shift a
+memory location or register left cyclically, that is,
+rotate the bits. The carry flag is shifted into bit 0
+while the contents of bit 7 are placed in the carry.
+Therefore we have a cyclical shift of nine bits (8 bits
+of the register plus the carry flag). An example will
+clarify this.
+ROL A The accumulator contains $4B,
+the carry flag is set.

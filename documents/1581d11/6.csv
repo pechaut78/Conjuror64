@@ -1,0 +1,12 @@
+question,answer
+"What is indicated by an asterisk appearing before the file type of a file that is 0 blocks long?","This indicates that the file was not properly closed after it was created, and that it should not be relied upon, and is referred to as a 'splat' file."
+"What should you do when you notice a 'splat' file on a diskette?","You should use the VALIDATE or COLLECT commands to safely erase the file, as the SCRATCH command should not be used."
+"What is the purpose of the VALIDATE and COLLECT commands in relation to 'splat' files?","These commands are used to safely erase 'splat' files from a diskette, and should be used whenever a 'splat' file is noticed."
+"What are the two exceptions to the warning about using VALIDATE and COLLECT commands on 'splat' files?","One exception is that these commands cannot be used on some diskettes that include direct access (random) files, and the other is that if the information in the 'splat' file was crucial and can't be replaced, there is a way to rescue whatever part of the file was properly written."
+"What type of files are excluded from using the VALIDATE and COLLECT commands?","Diskettes that include direct access (random) files are excluded from using these commands."
+"What happens if you use the SCRATCH command to erase a 'splat' file?","It is not recommended to use the SCRATCH command to erase a 'splat' file, as it is not a safe way to erase these types of files."
+"How can you rescue part of a 'splat' file if the information in it is crucial and can't be replaced?","There is a way to rescue whatever part of the file was properly written, which is described in the next chapter."
+"What is a 'splat' file?","A 'splat' file is a file that was not properly closed after it was created, and is indicated by an asterisk appearing before the file type of a file that is 0 blocks long."
+"Why should you not rely on a 'splat' file?","You should not rely on a 'splat' file because it was not properly closed after it was created, and may not be complete or accurate."
+"What should you do with a 'splat' file after it is erased from the diskette?","After erasing a 'splat' file from the diskette, you should rewrite the file to ensure that it is complete and accurate."
+"What is the purpose of rewriting a 'splat' file after it is erased from the diskette?","The purpose of rewriting a 'splat' file is to ensure that it is complete and accurate, and can be relied upon."

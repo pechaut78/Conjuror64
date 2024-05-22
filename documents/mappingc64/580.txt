@@ -1,0 +1,8 @@
+
+
+
+address              $ED11
+Send Command Code to a Device on the Serial Bus
+
+This subroutine is used in common by many Kernal routines to send the
+command code in the Accumulator to a device on the serial bus.

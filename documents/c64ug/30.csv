@@ -1,0 +1,11 @@
+question,answer
+"what is the command to load a program from disk?","The command to load a program from disk is LOAD \"PROGRAM NAME\",8, where PROGRAM NAME is the name of the program you want to load, and the 8 refers to the disk as the device to load from."
+"what happens when you load a new program into the computer's memory?","When you load a new program into the computer's memory, any instructions that were in the computer previously will be erased, so make sure you save a program you're working on before loading a new one."
+"what does the 8 represent in the LOAD command?","The 8 in the LOAD command represents the code for the disk, indicating that you want the program loaded from the disk."
+"what happens after you hit <RETURN> when loading a program from disk?","After you hit <RETURN> when loading a program from disk, the disk will start whirring and the display will show SEARCHING FOR PROGRAM NAME, LOADING, and READY."
+"what are the options after a program has been loaded?","Once a program has been loaded, you can RUN it, LIST, or make changes and re-save the new version."
+"what is the importance of saving a program before loading a new one?","It is important to save a program you're working on before loading a new one because loading a new program into the computer's memory will erase any instructions that were in the computer previously."
+"what is displayed on the screen while loading a program from disk?","While loading a program from disk, the screen will display SEARCHING FOR PROGRAM NAME, LOADING, and READY."
+"can you modify a program after it has been loaded?","Yes, after a program has been loaded, you can make changes and re-save the new version."
+"what happens to the previous program when you load a new one?","When you load a new program into the computer's memory, any instructions that were in the computer previously will be erased."
+"what is the purpose of the LOAD command?","The purpose of the LOAD command is to load a program from disk into the computer's memory, allowing you to run, list, or modify the program."

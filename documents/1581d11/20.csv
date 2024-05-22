@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the COPY command in a 1581 disk?","The COPY command allows you to make a spare copy of any program or file on a diskette, and it can also be used to combine up to four sequential data files, linking them one to another, end to end in a chain, without changing other files on the diskette."
+"what is the format for the COPY command?","The format for the COPY command is PRINT#15,\"COPYdrive#:new file=old file\" or abbreviated as PRINT#15,\"Cdrive#:new file=old file\" where \"drive#\" is the drive number, \"new file\" is the copy and \"old file\" is the original."
+"what is the purpose of combining files using the COPY command?","The purpose of combining files using the COPY command is to link up to four sequential data files, one to another, end to end in a chain, without changing other files on the diskette."
+"what is the limitation of the command string in the COPY command?","The length of a command string (command and filenames) is limited to 41 characters."
+"what is the importance of closing files before copying or linking them?","Files must be closed before they are copied or linked, otherwise, the COPY command will not work as expected."
+"can the COPY command be used to copy files across different diskettes?","No, the COPY command can only be used to make a spare copy of any program or file on the same diskette, which means it must be given a different name from the file copied."
+"how many files can be combined using the COPY command?","Up to four sequential data files can be combined using the COPY command."
+"what is the format for combining files using the COPY command?","The format for combining files using the COPY command is PRINT#15,\"Cdrive#:new file=file 1,file 2,file 3,file 4\" where \"drive#\" is always 0."
+"what is the purpose of specifying the drive number in the COPY command?","The drive number is specified to indicate the drive where the file is located, and in the case of a single drive like the 1581, the copy must be on the same diskette."
+"can the COPY command be used to overwrite an existing file?","No, the COPY command cannot be used to overwrite an existing file, as it requires a different name for the copied file."

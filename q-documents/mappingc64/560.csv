@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $E9FF?","address              $E9FF
+Clear Screen Line
+
+This subroutine writes space characters to an entire line of screen
+memory, and clears the corresponding line of color memory to color in
+Background Color Register 0 (53281, $D021)."

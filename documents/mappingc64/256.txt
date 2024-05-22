@@ -1,0 +1,11 @@
+
+
+
+address         $AAA0          PRINT
+Perform PRINT
+
+The PRINT routine has many segments, which are required for the
+various options which can be added to it:  TAB, SPC, comman,
+semicolon, variables, PI, ST, TI, and TI$.  Eventually, all output is
+converted to strings, and the Kernal CHROUT routine is called to print
+each character.

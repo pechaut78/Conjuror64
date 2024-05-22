@@ -1,0 +1,16 @@
+
+
+
+address       $32E-$32F      USRCMD
+Vector to User-Defined Command (Currently Points to BRK at 65126
+($FE66))
+
+This appears to be a holdover from PET days, when the built-in machine
+language monitor would JuMP through the USRCMD vector when it
+encountered a command that it did not understand, allowing the user to
+add new commands to the monitor.
+
+Although this vector is initialized to point to the routine called by
+STOP/ RESTORE and the BRK interrupt, and is updated by the Kernal
+VECTOR routine (64794, $FD1A), it does not seem to have the function
+of aiding in the addition of new commands.

@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $E422?","address              $E422
+Print BASIC Start-Up Messages
+
+This routine prints the start-up message '**** COMMODORE 64 BASIC V2
+****', calculates the amount of free memory, and prints the BYTES FREE
+message."

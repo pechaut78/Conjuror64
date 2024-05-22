@@ -1,0 +1,9 @@
+
+
+
+address         $B1A5          N32768
+The Constant -32768 in Five-Byte Floating Point Format
+
+This constant is used for range checking in the conversion of a
+floating point number to a signed integer (the minimum inter value is
+-32768).

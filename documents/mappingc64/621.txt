@@ -1,0 +1,5 @@
+
+
+
+address              $F5D2
+Print LOADING or VERIFYING

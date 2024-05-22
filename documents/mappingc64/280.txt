@@ -1,0 +1,9 @@
+
+
+
+address         $B08B          PTRGET
+Search for a Variable and Set It Up If It Is Not Found
+
+This routine attempts to locate a variable by searching for its name
+in the variable area.  If an existing variable of that name cannot be
+found, one is created with the NOTFNS routine below.

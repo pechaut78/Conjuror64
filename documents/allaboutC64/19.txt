@@ -1,0 +1,21 @@
+
+C64 Basic:
+• To move a line from one place in the program to another,
+type the line using the new line number, and delete the old
+line.
+• A line can also be moved by using the editing keys, list the
+line, position the cursor on top of the line number, type the
+new line number, and press RETURN. You must still delete
+the old line, though.
+• A fast way to erase a program is to use the NEW command,
+which deletes every line in the program, and clears all vari
+ables at the same time.
+• Variables retain their values after a program has stopped
+executing.
+• Variables are cleared as soon as the program is modified in
+any way.
+• The RUN command also automatically clears all variables
+before program execution starts.
+• Errors in a program line are detected only when the line is
+executed, not when the line is entered and placed in
+memory.

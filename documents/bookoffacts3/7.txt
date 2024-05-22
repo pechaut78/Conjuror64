@@ -1,0 +1,7 @@
+
+INITIALIZE THE DRIVE:
+OPENISAIS,"!" (press return key)
+EXPLANATION - There will be times when the disk drive will not
+respond to your commands. This is caused by an error condition. When
+the drive is initialized it will be returned to the same state as when first
+turned on.

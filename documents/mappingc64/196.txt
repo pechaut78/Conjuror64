@@ -1,0 +1,5 @@
+
+
+
+address       $32A-$32B      IGETIN
+Vector to Kernal GETIN Routine (Currently at 61758 ($F13E))

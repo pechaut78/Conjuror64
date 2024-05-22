@@ -1,0 +1,9 @@
+
+
+
+address              $E219
+Set Parameters for OPEN and CLOSE
+
+This routine is used in common by OPEN and CLOSE for setting the
+filename, the logical file, device number, and secondary address, all
+of which must be done prior to these operations.

@@ -1,0 +1,5 @@
+
+
+
+address         $B983          MULSHF
+SHIFT Routine

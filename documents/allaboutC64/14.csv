@@ -1,0 +1,11 @@
+question,answer
+"What type of values do logical operators AND, OR, and NOT operate on in C64 Basic?","Logical operators in C64 Basic operate on the values true and false."
+"What are binary operators in C64 Basic?","Binary operators in C64 Basic are operators that operate on two values. For example, the operators AND and OR are binary operators."
+"What is the effect of using the AND operator in C64 Basic?","When using the AND operator in C64 Basic, the value of the big expression is true only when both of the smaller expressions are true. All it takes is one false value to make the whole expression false."
+"What is the effect of using the OR operator in C64 Basic?","When using the OR operator in C64 Basic, the value of the big expression is false only when both of the smaller expressions are false. All it takes is one true value to make the whole expression true."
+"What is a unary operator in C64 Basic?","A unary operator in C64 Basic is an operator that operates on only one value. For example, the NOT operator is a unary operator."
+"What does the NOT operator do in C64 Basic?","The NOT operator in C64 Basic takes a true/false value and changes it to the opposite value."
+"What is the precedence of logical operators in C64 Basic?","Logical operators have the lowest precedence of all the operators in C64 Basic."
+"What are some examples of logical operators in C64 Basic?","Some examples of logical operators in C64 Basic include AND, OR, and NOT."
+"How do logical operators compare to arithmetic and relational operators in C64 Basic?","Unlike arithmetic and relational operators, which operate on numbers, logical operators in C64 Basic operate on the values true and false."
+"What is the effect of using the OR operator in C64 Basic when both smaller expressions are false?","When using the OR operator in C64 Basic and both smaller expressions are false, the value of the big expression is false."

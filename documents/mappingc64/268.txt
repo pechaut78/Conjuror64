@@ -1,0 +1,7 @@
+
+
+
+address         $AEA8          PIVAL
+PI Expressed as a Five-Byte Floating Point Number
+
+The value of PI is stored here as a five-byte floating point number.

@@ -1,0 +1,28 @@
+
+
+C64 Basic:
+
+TIME Tl A function that reads the internal timer of the
+computer also known as the jiffy clock. —(EXAMPLE: PRINT TI/30-this will
+display how many 1/30 second intervals have elapsed since power up)
+
+TIME$ Tl$ A function that will return a six character
+time display. (EXAMPLE: 1 Tl$ =
+"000000":FOR T = 1 TO 10000: NEXT
+T:PRINT Tl$-will display 000010)
+
+USR U(SHIFTED S) A function that accesses a user callable
+machine language routine. Memory locations 785 and 786 must contain the
+pointers for the start of the machine language routine.
+
+VAL V(SHIFTED A) A function that converts a string variable
+to a numberic. (EXAMPLE: A$ = "55": PRINT VAL (A$)-will print a 55)
+
+VERIFY V(SHIFTED E) A command that is used to compare a
+program currently saved to tape of disk with the same program in memory.
+(EXAMPLE: SAVE'TEST'^VERIFY'TEST'^-will save and verify the
+program called test)
+
+WAIT W(SHIFTED A) A statement that stops the execution of a
+program until the specified condition is met. (EXAMPLE: WAIT 198,1-will
+stop until any key is pressed)

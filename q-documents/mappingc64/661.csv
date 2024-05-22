@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $FD9B?","address              $FD9B
+Table of IRQ Vectors
+
+This table holds the vectors to the four IRQ routines which the system
+uses.  The first points to Part 1 of the cassette write routine at
+64618 ($FC6A), the second to Part 2 of the cassette write routine at
+64461 ($FBCD), the third to the standard scan keyboard IRQ at 59953
+($EA31), and the last to the cassette read routine at 63788 ($F92C)."

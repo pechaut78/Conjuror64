@@ -1,0 +1,5 @@
+
+
+
+address       $26D-$276      SAT
+Kernal Table of Secondary Addresses for Each Logical File

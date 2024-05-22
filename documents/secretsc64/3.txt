@@ -1,0 +1,6 @@
+
+Poking to the screen on C64
+When you are POKEing to the screen you also have to 
+remember to POKE the appropriate character colour into 
+the colour memory. (The BASIC PRINT statement does this 
+for you.) 

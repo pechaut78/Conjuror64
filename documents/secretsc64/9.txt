@@ -1,0 +1,78 @@
+C64 SPRITE GRAPHICS 
+
+Sprites are a fairly new development in home computers, 
+so it's probably worth spending a little time finding out 
+exactly what they are and what they can do. 
+
+The simplest model for a Sprite is to think of it as a small, 
+separate, high resolution screen, which can be overlaid on the 
+main screen anywhere you like. An immediate advantage 
+that we can see is that moving the Sprite around the main 
+screen is fairly simple, it is only necessary to specify the new 
+position for the Sprite screen, we don't need to worry about 
+moving the individual dots which make up the shape of the 
+Sprite. In addition, it is not necessary to redraw the bits of 
+the main screen which were overlaid by the Sprite, because 
+the Sprite never actually existed on the main screen. Wlien 
+we move the Sprite the main screen remains unaltered. 
+
+The Commodore 64's BASIC can control up to eight 
+Sprites at tlie same time. Using our model of a Sprite you 
+can see that, sooner or later, some of the Sprite screens are 
+going to overlay each other. The Sprite graphics system 
+allows us to detect these collisions between Sprites and also 
+to specify how they will collide, or rather fiow they will 
+overlay each other. By overlaying Sprites in a specific order 
+it is possible to create some very interesting 3D effects. And 
+using the collision detection facilities of Sprites enables some 
+very exciting games to be implemented fairly easily. 
+
+So, in general terms, a Sprite is a very flexible graphics 
+object with a lot of built in intelligence. By using Sprites 
+some very impressive graphics programs can be implemented 
+using fairly short BASIC routines. The price that you have 
+to pay for this intelligence is that, for each Sprite, a lot of 
+setting up needs to be done before the Sprite can be used. 
+
+the data for any particular Sprite is 63 
+bytes long, which means that a block of at least 63 bytes 
+of memory is required to store it. However, for a computer, 
+the number 64 is much more convenient (64 = 2*). For this 
+reason the VIC chip assumes that each Sprite's data occupies 
+a 64 byte block of memory. (The last byte is not used.) 
+When the VIC chip wants to know where a given Sprite's 
+data is located it muhiplies the value in the appropriate 
+Sprite Data Pointer by 64 to find the address of the first 
+byte of Sprite data. 
+
+For example, if register 2040 contained 14, then the VIC 
+chip would look at memory location 896 for the start of 
+Sprite O's data (14*64 = 896). 
+
+From this we can work out the range of memory locations 
+which can be used for storing Sprite data. Each Sprite Data 
+Pointer can point to 256 different locations and each Sprite 
+requires 64 bytes of memory for its data storage. So the 
+range of locations which could be used is given by 256*64 = 
+16384. In other words Sprite data can only be stored in the 
+first 16K of memory. 
+
+Within this range of memory locations (0 to 16383 
+decimal) there are many locations which cannot be used for 
+Sprite data storage. In fact, there are only two available areas 
+which can be used, these are:- 
+
+1. The Cassette I/O buffer. (828 decimal to 1023 decimal.) 
+This is used by the cassette recorder during LOAD, SAVE, 
+PRINT* and INPUT* operations. Provided that the cassette 
+recorder is not being used, you can fit the data for three 
+Sprites' in here. 
+
+2. The BASIC text area. (2048 decimal to 40959 deci- 
+mal.) This is, of course, fully used by the BASIC program. 
+It is possible however, to move the start of the BASIC text 
+area up a few bytes to release some space for Sprite data. 
+This can be done by typing the following lines in direct 
+mode. (You can't RUN this as a program because as soon as 
+you start to move the bottom of BASIC you will loose the 
+program!!) 

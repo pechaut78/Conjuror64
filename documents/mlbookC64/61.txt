@@ -1,0 +1,24 @@
+
+Instructions for handling interrupts
+We are not going to use use these instructions but
+mention them only for the sake of completeness. The 6510
+has the ability to interrupt a program from the outside
+world. For this, the interrupt line (IRQ, interrupt
+request) of the processor must be activated. The
+interrupt procedure is similar to a subroutine call. The
+processor interrupts the current program and places the
+contents of the program counter and the status register
+on the stack. Now execution branches to the address
+contained at $FFFE and $FFFF. The contents of these
+addresses are used as the new program counter.
+In addition to an interruption from the outside, the 6510
+can also interrupt a program through a instruction from
+within the program. The instruction BRK (break) serves
+this purpose. The program counter and the status register
+are saved on the stack.
+In order to return to the main program from an interrupt
+routine, there is a instruction similar to the RTS
+instruction for subroutines. The instruction RTI (return
+from interrupt) gets the program counter and the contents
+of the status register back from the stack so that the
+program can continue without changing the flags.

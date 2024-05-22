@@ -1,0 +1,14 @@
+
+
+
+address              $FE25          MEMTOP
+Read/Set Top of RAM Pointer
+
+This is a documented Kernal routine, which can be entered through the
+jump table at location 65433 ($FF99).
+
+It can be used to either read or set the top of RAM pointer.  If
+called with the Carry flag set, the address in the pointer will be
+loaded into the .X and .Y registers.  If called with the Carry flag
+cleared, the pointer will be changed to the address found in the .X
+and .Y registers.

@@ -1,0 +1,20 @@
+
+
+
+address              $F5DD          SAVE
+Save RAM to a Device
+
+This is a documented Kernal routine, whose entry in the jump table
+appears at 65496 ($FFD8).
+
+The routine jumps through a RAM vector at 818 ($332).  SAVE is used to
+transfer data directly from RAM to an I/O device.  Since the SAVE
+routine performs an OPEN, it must be preceded by a call to the SETLFS
+routine to specify the logical file number, device number, and
+secondary address, and a call to the SETNAM routine to specify the
+filename (although a SAVE to the cassette can be performed without
+giving a filename).  A Page 0 pointer to the starting address of the
+area to be saved should be set up, with the low byte of the address
+first.  The accumulator should be loaded with the Page 0 offset of
+that pointer, then the .X and .Y registers should be set with the
+ending address for the save, and the SAVE routine called.

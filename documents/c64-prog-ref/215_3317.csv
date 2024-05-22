@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the VECTOR function?","The purpose of the VECTOR function is to manage RAM vectors, specifically to store and retrieve system vector jump addresses in RAM."
+"What is the call address of the VECTOR function?","The call address of the VECTOR function is $FF8D (hex) or 65421 (decimal)."
+"What registers are used for communication in the VECTOR function?","The X and Y registers are used for communication in the VECTOR function."
+"What is the stack requirement for the VECTOR function?","The stack requirement for the VECTOR function is 2."
+"What registers are affected by the VECTOR function?","The registers affected by the VECTOR function are A, X, and Y."
+"How do you read the system RAM vectors using the VECTOR function?","To read the system RAM vectors, set the carry bit, set the X and Y registers to the address to store the vectors, and call the VECTOR function."
+"How do you load the system RAM vectors using the VECTOR function?","To load the system RAM vectors, clear the carry bit, set the X and Y registers to the address of the vector list in RAM, and call the VECTOR function."
+"What is the recommended way to use the VECTOR function?","The recommended way to use the VECTOR function is to first read the entire vector contents into the user area, alter the desired vectors, and then copy the contents back to the system vectors."
+"What is an example of how to change the input routines to a new system using the VECTOR function?","An example of how to change the input routines to a new system using the VECTOR function is to set the carry bit, call the VECTOR function to read the old vectors, alter the input routine, and then call the VECTOR function again to load the new vectors."
+"What is the address of the user-defined vector list in the example code?","The address of the user-defined vector list in the example code is stored in the X and Y registers, which are set to the address of the USER variable."

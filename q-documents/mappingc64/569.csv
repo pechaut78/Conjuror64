@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the memory location at address $EB81?","address              $EB81
+Standard Keyboard Matrix Decode Table
+
+This table contains the 64 PETASCII values for the standard keyboard,
+one for each key which is struck by itself.  The table is in keycode
+order (see the keycode table in Appendix H for the correspondence of
+keycode to key).  A 65th byte with the value of 255 ($FF) marks the
+end of the table (this corresponds to a keypress value of 64, no key
+pressed)."

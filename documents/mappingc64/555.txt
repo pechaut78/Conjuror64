@@ -1,0 +1,11 @@
+
+
+
+address              $E8EA
+Scroll Screen
+
+This subroutine moves all of the screen lines up, so that a blank line
+is created at the bottom of the screen and the top screen line is
+lost.  If the top logical line is two physical lines long, all lines
+are moved up two lines.  Holding down the CTRL key will cause a brief
+pause after the scroll.

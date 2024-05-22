@@ -1,0 +1,10 @@
+
+
+
+address         $B016          DORE1
+Perform Comparisons
+
+This routine does the greater than (>), less than (<), and equal (=)
+comparisons for foating point numbers and strings.  The result in the
+Floating Point Accumulator will be 0 if the comparison is false, and
+-1 if it is true.

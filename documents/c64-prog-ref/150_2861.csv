@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the PLA instruction?","The opcode for the PLA instruction is 68, which is used to pull the accumulator from the stack."
+"what is the addressing mode for the PLA instruction?","The addressing mode for the PLA instruction is implied, meaning that the instruction operates on the accumulator implicitly."
+"how many bytes does the PLA instruction occupy in memory?","The PLA instruction occupies 1 byte in memory."
+"how many cycles does the PLA instruction take to execute?","The PLA instruction takes 4 cycles to execute."
+"what is the purpose of the PLA instruction?","The purpose of the PLA instruction is to pull the accumulator from the stack, restoring the value of the accumulator from the top of the stack."
+"can the PLA instruction be used with an index register?","No, the PLA instruction cannot be used with an index register because it uses the implied addressing mode."
+"what is the assembly language form of the PLA instruction?","The assembly language form of the PLA instruction is simply 'PLA'."
+"in what situation would you use the PLA instruction?","You would use the PLA instruction when you need to restore the value of the accumulator from the top of the stack, such as after a subroutine call or interrupt."
+"how does the PLA instruction affect the flags?","The PLA instruction does not affect the flags, it only pulls the accumulator from the stack."
+"can the PLA instruction be used to pull other registers from the stack?","No, the PLA instruction can only be used to pull the accumulator from the stack, not other registers."

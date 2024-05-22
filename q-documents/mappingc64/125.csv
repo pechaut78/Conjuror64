@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $F9-$FA?","address       $F9-$FA        ROBUF
+Pointer: RS-232 Output Buffer
+
+This location points to the address of the 256-byte output buffer
+which is used for transmitting data to RS-232 devices (device number
+2)l"

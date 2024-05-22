@@ -1,0 +1,9 @@
+
+
+
+address              $E422
+Print BASIC Start-Up Messages
+
+This routine prints the start-up message "**** COMMODORE 64 BASIC V2
+****", calculates the amount of free memory, and prints the BYTES FREE
+message.

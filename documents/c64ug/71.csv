@@ -1,0 +1,11 @@
+question,answer
+"What happens when a program encounters an END statement?","When a program encounters an END statement, the program halts, as if it ran out of lines."
+"What is the effect of the END statement on a program?","The END statement causes a program to halt, as if it has reached the end of the code."
+"What does a program do when it reaches an END statement?","A program halts when it reaches an END statement, as if it has run out of lines to execute."
+"Can a program be restarted after an END statement?","Yes, a program can be restarted after an END statement by using the CONT statement."
+"What is the purpose of the CONT statement in relation to END?","The CONT statement is used to restart a program that has halted due to an END statement."
+"How does a program behave when it encounters an END statement?","A program behaves as if it has run out of lines when it encounters an END statement, halting its execution."
+"What happens to program execution when an END statement is encountered?","Program execution halts when an END statement is encountered, as if the program has reached its end."
+"Can an END statement be used to pause a program?","An END statement can be used to pause a program, allowing it to be restarted later using the CONT statement."
+"What is the difference between an END statement and the end of a program?","An END statement is a deliberate halt in a program, whereas the end of a program is the natural conclusion of the code."
+"What is the relationship between END and CONT statements?","The END statement halts a program, while the CONT statement restarts it, allowing for program flow control."

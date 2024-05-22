@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $A94B?","address         $A94B          ONGOTO
+Perform ON GOTO or ON GOSUB
+
+ON is performed by converting the argument to an integer, and then
+skipping a number between commas each time that the integer is
+decremented until the argument reaches 0.  If a GOTO or GOSUB is the
+next token, the current number between commas is used to execute one
+of those statements.  If the numbers between commas are used up before
+the argument reaches 0, the statement has no effect, and the next
+statement is executed."

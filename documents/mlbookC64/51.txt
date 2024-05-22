@@ -1,0 +1,14 @@
+$CA %11001010
+%01100101 $65, C = 0
+The result is $65. The carry flag contains the value of
+bit position 0 before the shift occurs, in this case 0.
+So the carry flag is clear. You may have noticed that,
+shifting one bit position to the right divides the
+original value by two. The carry flag gives the contents
+of bit 0 before the shift. We can interpret the value of
+the carry as the remainder of the division by two. This
+way we can tell if a number is odd or even. The LSR
+instruction shifts the lowest bit into the carry. The
+carry flag can then be tested with BCC or BCS. If a
+memory location is addressed with the LSR instruction,
+the contents of the accumulator are retained.

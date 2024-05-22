@@ -1,0 +1,11 @@
+question,answer
+"how is an absolute address expressed in terms of bytes?","An absolute address is expressed in terms of a high order byte and a low order byte. The high order byte is often referred to as the page of memory. For example, the address $1637 is in page $16 (22), and $0277 is in page $02 (2)."
+"what is zero page addressing mode?","Zero page addressing mode is a special mode of addressing associated with the addressing of memory locations in page zero. These addresses always have a high order byte of zero."
+"what is the advantage of zero page addressing mode?","The zero page addressing mode only expects one byte to describe the address, rather than two when using an absolute address."
+"in which page are addresses between $0000 and $00FF located?","Addresses between $0000 and $00FF are located in page zero."
+"why does the microprocessor assume a high order address of zero in zero page addressing mode?","The microprocessor assumes a high order address of zero in zero page addressing mode because the addresses in this mode always have a high order byte of zero."
+"what is the range of addresses that can be referenced using zero page addressing mode?","The range of addresses that can be referenced using zero page addressing mode is between $0000 and $00FF."
+"what is the significance of page zero in zero page addressing mode?","Page zero is significant in zero page addressing mode because it is the page that contains the addresses that can be referenced using this mode."
+"how does zero page addressing mode differ from absolute addressing mode?","Zero page addressing mode differs from absolute addressing mode in that it only expects one byte to describe the address, whereas absolute addressing mode expects two bytes."
+"in which situations is zero page addressing mode used?","Zero page addressing mode is used when referencing memory locations in page zero, whose addresses are between $0000 and $00FF."
+"what is the benefit of using zero page addressing mode?","The benefit of using zero page addressing mode is that it requires less memory to store the address, since only one byte is needed to describe the address."

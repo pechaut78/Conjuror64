@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the BVC instruction?","The opcode for the BVC instruction is 50, which is a single byte that represents the operation code for the Branch on Overflow Clear instruction."
+"What is the addressing mode used by the BVC instruction?","The addressing mode used by the BVC instruction is Relative, which means the instruction uses a relative address to determine the target of the branch."
+"What is the number of bytes required to encode the BVC instruction?","The BVC instruction requires 2 bytes to encode, with the first byte being the opcode and the second byte being the relative offset."
+"What is the number of cycles required to execute the BVC instruction?","The BVC instruction requires 2 cycles to execute, but this can increase to 3 cycles if the branch occurs to the same page, and 4 cycles if the branch occurs to a different page."
+"What happens to the cycle count if the branch occurs to the same page?","If the branch occurs to the same page, the cycle count increases by 1, making it a total of 3 cycles."
+"What happens to the cycle count if the branch occurs to a different page?","If the branch occurs to a different page, the cycle count increases by 2, making it a total of 4 cycles."
+"What is the purpose of the BVC instruction?","The purpose of the BVC instruction is to branch to a target location if the Overflow flag is clear, allowing for conditional branching based on the state of the Overflow flag."
+"In what situations would you use the BVC instruction?","You would use the BVC instruction in situations where you need to branch to a different location based on the state of the Overflow flag, such as in error handling or conditional logic."
+"How does the BVC instruction interact with the Overflow flag?","The BVC instruction interacts with the Overflow flag by branching to a target location if the Overflow flag is clear, and not branching if the Overflow flag is set."
+"What is the difference between the BVC and BVS instructions?","The BVC instruction branches if the Overflow flag is clear, whereas the BVS instruction branches if the Overflow flag is set, making them complementary instructions."

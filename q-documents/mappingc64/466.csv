@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $DC0A?","address              $DC0A          TODMIN
+Time of Day Clock Minutes
+
+Bits 0-3:  Second digit of Time of Day minutes (BCD)
+Bits 4-6:  First digit of Time of Day minutes (BCD)
+Bit 7:  Unused"

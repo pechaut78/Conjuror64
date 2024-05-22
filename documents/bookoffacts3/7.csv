@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of initializing the drive in C64 Basic?","Initializing the drive in C64 Basic returns the drive to the same state as when it was first turned on, which can help resolve error conditions and non-responsiveness."
+"What command is used to initialize the drive in C64 Basic?","The command used to initialize the drive in C64 Basic is INITIALIZE THE DRIVE: OPENISAIS,"!" followed by the return key."
+"What happens when the drive is initialized in C64 Basic?","When the drive is initialized in C64 Basic, it is returned to the same state as when it was first turned on, which can help resolve error conditions and non-responsiveness."
+"Why would you need to initialize the drive in C64 Basic?","You would need to initialize the drive in C64 Basic when the drive is not responding to your commands due to an error condition."
+"What is the syntax for initializing the drive in C64 Basic?","The syntax for initializing the drive in C64 Basic is INITIALIZE THE DRIVE: OPENISAIS,"!"."
+"What is the effect of initializing the drive in C64 Basic on the drive's state?","Initializing the drive in C64 Basic returns the drive to the same state as when it was first turned on."
+"What is the result of initializing the drive in C64 Basic?","The result of initializing the drive in C64 Basic is that the drive is returned to the same state as when it was first turned on, which can help resolve error conditions and non-responsiveness."
+"What is the purpose of the OPENISAIS command in C64 Basic?","The OPENISAIS command in C64 Basic is used to initialize the drive and return it to the same state as when it was first turned on."
+"What is the role of the '!' in the OPENISAIS command in C64 Basic?","The '!' in the OPENISAIS command in C64 Basic is used to indicate that the command is being executed and not just opened for reading."
+"What is the importance of initializing the drive in C64 Basic?","Initializing the drive in C64 Basic is important because it can help resolve error conditions and non-responsiveness by returning the drive to the same state as when it was first turned on."

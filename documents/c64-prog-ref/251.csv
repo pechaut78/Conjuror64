@@ -1,0 +1,11 @@
+question,answer
+"how do you switch between the two character sets on the commodore 64","The two character sets on the Commodore 64 can be switched by holding down the <SHIFT> and <C=> keys simultaneously. Additionally, from BASIC, POKE 53272,21 will switch to upper case mode and POKE 53272,23 switches to lower case."
+"what is the memory location range for screen memory on the commodore 64","The memory location range for screen memory on the Commodore 64 is 1024-2023."
+"how do you display a solid circle at a specific location on the screen","To display a solid circle at a specific location on the screen, you need to POKE the code for the circle (81) into the desired location. For example, to display a solid circle at location 1504, you would use the following command: POKE 1504,81."
+"how do you change the color of a character on the screen","To change the color of a character on the screen, you need to POKE the corresponding memory location with the desired color code. For example, to change the color of the circle to yellow (color code 7) at location 1504, you would use the following commands: POKE 1504,81 and POKE 55776,7."
+"what is the purpose of the memory locations 55296-56295","The memory locations 55296-56295 are used to control the color of each character displayed on the screen."
+"how do you obtain the reverse character code for a character","The reverse character code for a character can be obtained by adding 128 to the values shown in the character chart."
+"what is the purpose of appendix d in the commodore 64 documentation","Appendix D in the Commodore 64 documentation provides the complete screen and color memory maps, along with color codes."
+"what characters have the same symbol in set 1 and 2","The characters that have the same symbol in set 1 and 2 are: 1, 27-64, 91-93, 96-104, 106-121, 123-127."
+"how do you poke a character into screen memory","To poke a character into screen memory, you need to use the POKE command followed by the memory location and the code for the character. For example, to poke the code for a circle (81) into location 1504, you would use the following command: POKE 1504,81."
+"what is the range of memory locations used to control the color of characters on the screen","The range of memory locations used to control the color of characters on the screen is 55296-56295."

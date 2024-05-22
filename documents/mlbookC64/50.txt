@@ -1,0 +1,7 @@
+
+
+The LSR instruction (logical shift right) corresponds to
+the ASL instruction; here, however, the value is shifted
+right. The seventh bit is loaded with zero and bit zero
+is placed in the carry flag.
+LSR A The accumulator contains $CA.

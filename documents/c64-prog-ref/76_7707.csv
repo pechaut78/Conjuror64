@@ -1,0 +1,11 @@
+question,answer
+"Where is the overall volume control located in the C64 chip?","The overall volume control is located in chip register 24."
+"What is the range of values that can be set for the volume control?","The volume can be set anywhere between 0 and 15."
+"What are the remaining four bits in chip register 24 used for?","The remaining four bits are used for purposes that will be discussed later."
+"How is the volume control set in Example Program 1?","The volume control is set in Example Program 1 on line 30."
+"What is the purpose of chip register 24?","Chip register 24 contains the overall volume control, which allows the volume to be set between 0 and 15."
+"What is the significance of the value 15 in relation to the volume control?","The value 15 is the maximum value that can be set for the volume control in chip register 24."
+"Can the volume control be set to a value higher than 15?","No, the volume control cannot be set to a value higher than 15, as the maximum value is 15."
+"What is the minimum value that can be set for the volume control?","The minimum value that can be set for the volume control is 0."
+"In which program can an example of setting the volume control be found?","An example of setting the volume control can be found in Example Program 1."
+"What is the relevance of line 30 in Example Program 1?","Line 30 in Example Program 1 shows how the volume control is set."

@@ -1,0 +1,11 @@
+question,answer
+"What is the maximum length of a BASIC string in terms of characters?","A BASIC string may be up to 255 characters long."
+"What is the limitation of the input buffer in Commodore's serial bus computers?","The limitation is that the longest string you can enter via a single INPUT statement is just under two lines of text."
+"What happens if a single data element being read from a disk file into an INPUT# statement contains more than 88 characters in BASIC 2?","BASIC will halt with a 'STRING TOO LONG ERROR'."
+"What happens if a single data element being read from a disk file into an INPUT# statement contains more than 160 characters in BASIC 7?","BASIC will halt with a 'STRING TOO LONG ERROR'."
+"What is the error message that appears when a single data element being read from a disk file into an INPUT# statement contains too many characters?","The error message is 'STRING TOO LONG ERROR'."
+"What is the purpose of the INPUT# statement in BASIC?","The purpose of the INPUT# statement is to read data from a disk file into a variable."
+"What is the maximum number of characters that can be read into an INPUT# statement in BASIC 2?","The maximum number of characters that can be read into an INPUT# statement in BASIC 2 is 88."
+"What is the maximum number of characters that can be read into an INPUT# statement in BASIC 7?","The maximum number of characters that can be read into an INPUT# statement in BASIC 7 is 160."
+"Why does BASIC halt with a 'STRING TOO LONG ERROR' when reading data from a disk file?","BASIC halts with a 'STRING TOO LONG ERROR' when reading data from a disk file because the single data element being read contains more characters than the maximum allowed."
+"What is the relationship between the input buffer size and the maximum length of a string in BASIC?","The input buffer size limits the maximum length of a string that can be entered via a single INPUT statement, which is less than the maximum length of a BASIC string."

@@ -1,0 +1,9 @@
+
+VALIDATE A DISK:
+OPEN15,8,15,"V" (press return key)
+EXPLANATION - When a disk has been used over a period of time, the
+directory can become disorganized. Usually this is caused by repeated
+saving and scratching of files. This usually results in one or more
+blocks on the disk that cannot be used because they are too small. The
+validate command will reorganize the disk to make the most out of the
+space that is available.

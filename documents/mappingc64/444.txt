@@ -1,0 +1,7 @@
+
+
+
+address              $D415          CUTLO
+
+Bits 0-2:  Low portion of filter cutoff frequency
+Bits 5-7:  Unused

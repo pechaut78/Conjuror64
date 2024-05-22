@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the number 8 in the SAVE command?","The number 8 in the SAVE command specifies the device number for the disk drive, indicating that the program should be saved to the disk rather than to tape or another device."
+"what happens immediately after pressing RETURN when saving a program to disk?","The disk will start to turn, indicating that the computer is accessing the disk and preparing to save the program."
+"what is the purpose of the SAVE command?","The SAVE command is used to store a program or data on a disk or other storage device, allowing it to be retrieved and used later."
+"what is the format of the SAVE command to save a program to disk?","The format of the SAVE command to save a program to disk is SAVE \"PROGRAM NAME\",8, where \"PROGRAM NAME\" is the name of the program and 8 is the device number for the disk drive."
+"what is the computer's response after successfully saving a program to disk?","The computer responds with the messages SAVING PROGRAM NAME, OK, and READY., indicating that the program has been saved successfully."
+"what is the significance of the message SAVING PROGRAM NAME?","The message SAVING PROGRAM NAME indicates that the computer is in the process of saving the program to disk, and that the operation is underway."
+"what does the OK message indicate after saving a program to disk?","The OK message indicates that the program has been saved successfully to disk, and that the operation was completed without errors."
+"what is the purpose of the READY. prompt after saving a program to disk?","The READY. prompt indicates that the computer is ready to accept new commands or input, and that the save operation is complete."
+"can you save a program to tape using the SAVE command?","No, the SAVE command with the device number 8 is specifically for saving to disk, not tape. To save to tape, a different device number would be used."
+"what is the purpose of enclosing the program name in quotes in the SAVE command?","Enclosing the program name in quotes ensures that the computer treats the entire string as a single filename, rather than interpreting any spaces or special characters as separate commands or arguments."

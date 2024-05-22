@@ -1,0 +1,9 @@
+
+
+
+address              $F12B
+Print Kernal Error Message if in Direct Mode
+
+This routine first checks location 157 ($9D) to see if the messages
+are enabled.  If they are, it prints the message indexed by the .Y
+register.

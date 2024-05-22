@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $FC93?","address              $FC93
+Restores the Default IRQ Routine
+
+At the end of the tape I/O operations, this subroutine is used to turn
+the screen back on and stop the cassette motor.  It then resets the
+CIA #1 Timer A to generate an interrupt every sixtieth of a second,
+and restores the IRQ vector to point to the normal interrupt routine
+that updates the software clock and scans the keyboard."

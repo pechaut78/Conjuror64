@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the SCRATCH command?","The SCRATCH command allows you to erase unwanted files and free the space they occupied for use by other files, and it can be used to erase either a single file or several files at once via pattern-matching."
+"what is the format for the SCRATCH command?","The format for the SCRATCH command is PRINT#15,\"SCRATCH0:pattern\" or abbreviated as PRINT#15,\"S0:pattern\", where \"pattern\" can be any file name or combination of characters and wildcard characters."
+"what is the purpose of including the drive number in the SCRATCH command?","Although not absolutely necessary, it is best to include the drive number in SCRATCH commands for clarity and accuracy."
+"how do you check the number of files scratched after a SCRATCH command?","You can check the error channel after a SCRATCH command, and the value for ET (error track) will tell you how many files were scratched."
+"what is an example of using the SCRATCH command with a wildcard character?","An example of using the SCRATCH command with a wildcard character is PRINT#15,\"S0:T*\" to scratch all files starting with the letter \"T\"."
+"what is the purpose of the error checking subroutine at address 59990?","The error checking subroutine at address 59990 is used to verify that the files were successfully scratched, and it will display the number of files scratched."
+"what is the output of the error checking subroutine if four files were scratched?","The output of the error checking subroutine if four files were scratched is \"01, FILES SCRATCHED,04,00 READY.\""
+"can the SCRATCH command be used to erase a single file?","Yes, the SCRATCH command can be used to erase a single file by specifying its exact file name in the pattern."
+"what is the significance of the \"S0:\" abbreviation in the SCRATCH command?","The \"S0:\" abbreviation is a shorthand way of specifying the SCRATCH command, and it is equivalent to typing out the full command \"SCRATCH0:\"."
+"what happens to the space occupied by the scratched files?","The space occupied by the scratched files is freed up for use by other files."

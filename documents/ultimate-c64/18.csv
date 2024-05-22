@@ -1,0 +1,11 @@
+question,answer
+"What is the name of the video chip inside the C64?","MOS 6567/6569 VIC-II (Video Interface Controller)"
+"What was the original name of the video chip in the VIC-20?","VIC"
+"What is the maximum amount of memory the VIC can address?","16 KB"
+"What is the default memory range accessed by the VIC?","The first 16 KB of the C64 RAM"
+"How many colors does the VIC support?","16"
+"What are the two sets of colors in the VIC?","Two sets of eight colors"
+"What are the first eight colors of the VIC?","Black, white, red, cyan, purple, green, blue, and yellow"
+"What is the maximum resolution of the bitmap mode in the VIC?","320x200"
+"What is the text mode resolution of the VIC?","40x25"
+"How many sprites does the VIC support?","8"

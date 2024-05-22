@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $B4?","address           $B4            BITTS
+RS-232 Output Bit Count/Cassette Temporary Storage
+
+RS-232 routines use this to count the number of bits transmitted, and
+for parity and stop bit manipulation.  Tape load routines use this
+location to flag when they are ready to receive data bytes."

@@ -1,0 +1,8 @@
+
+
+
+address         $BF7B          FPWRT
+Performs Exponentation (Power Calculation Called for by UPARROW)
+
+This routine raises the value in FAC2 to the power in FAC1 and leaves
+the result in FAC1.

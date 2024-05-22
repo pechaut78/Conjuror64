@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the PLOT function in C64?","The purpose of the PLOT function is to set the cursor location, and it can be used to either read the current cursor position or move the cursor to a specific location on the screen."
+"What is the call address of the PLOT function?","The call address of the PLOT function is $FFF0 (hex) or 65520 (decimal)."
+"What registers are affected by the PLOT function?","The PLOT function affects the A, X, and Y registers."
+"What is the stack requirement for the PLOT function?","The stack requirement for the PLOT function is 2."
+"How do you read the current cursor location using the PLOT function?","To read the current cursor location, set the carry flag, call the PLOT function, and then retrieve the X and Y position from the Y and X registers, respectively."
+"What is the range of column numbers that can be set using the PLOT function?","The column number can be set to a value between 6 and 39 using the PLOT function."
+"How do you set the cursor location to a specific row and column using the PLOT function?","To set the cursor location, clear the carry flag, set the Y and X registers to the desired row and column, and then call the PLOT function."
+"What is the purpose of setting the carry flag when using the PLOT function?","The carry flag determines the operation of the PLOT function, with the carry flag set to read the current cursor location and clear to set the cursor location."
+"What is an example of how to move the cursor to row 10, column 5 using the PLOT function?","An example of how to move the cursor to row 10, column 5 is: LDX #10, LDY #5, CLC, JSR PLOT."
+"In what situation would you use the PLOT function with the carry flag set?","You would use the PLOT function with the carry flag set to read the current cursor location."
+"What is the relationship between the X and Y registers and the row and column numbers when using the PLOT function?","When using the PLOT function, the X register contains the row number (0-24) and the Y register contains the column number (6-39)."

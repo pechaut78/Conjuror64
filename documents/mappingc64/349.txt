@@ -1,0 +1,5 @@
+
+
+
+address         $BBFC          MOVFA
+Move a Floating Point Number from FAC2 to FAC1

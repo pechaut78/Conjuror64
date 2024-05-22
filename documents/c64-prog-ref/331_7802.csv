@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the TTL-Level inputs on pins 9-13?","These inputs are used to select one of the 29 SID registers, allowing the microprocessor to address the SID chip in a similar manner to memory."
+"What is the total number of registers that can be addressed using pins 9-13?","Although the addressing scheme allows for 32 registers, only 29 are actually used, with the remaining three locations being unused and returning invalid data when accessed."
+"How do the pins 9-13 connect to the microprocessor?","The pins 9-13 are normally connected to the corresponding address lines of the microprocessor, enabling the SID chip to be addressed in a similar manner to memory."
+"What happens when a write operation is performed on one of the unused register locations?","A write operation to any of the three unused register locations is ignored and has no effect on the SID chip."
+"What is the result of reading from one of the unused register locations?","Reading from one of the unused register locations returns invalid data, as these locations are not actually connected to a valid SID register."
+"What is the significance of the 29 SID registers?","The 29 SID registers are used to control and configure the SID chip, allowing for the generation of sound and music on the Commodore 64."
+"How do the pins 9-13 enable the SID chip to be addressed?","The pins 9-13 provide the necessary address lines to select one of the 29 SID registers, allowing the microprocessor to access and control the SID chip."
+"What is the relationship between the pins 9-13 and the microprocessor's address lines?","The pins 9-13 are connected to the corresponding address lines of the microprocessor, enabling the SID chip to be addressed in a similar manner to memory."
+"Why are the remaining three register locations not used?","The remaining three register locations are not used, and any attempts to access them will result in invalid data being returned."
+"How do the pins 9-13 enable the SID chip to be controlled?","The pins 9-13 provide the necessary address lines to select one of the 29 SID registers, allowing the microprocessor to control and configure the SID chip."

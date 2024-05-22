@@ -1,0 +1,8 @@
+
+
+
+address           $95            BSOUR
+Buffered Character for Serial Bus
+
+This is the character waiting to be sent.  A 255 ($FF) indicates that
+no character is waiting for serial output.

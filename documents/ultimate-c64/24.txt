@@ -1,0 +1,21 @@
+
+
+Timing
+For advanced VIC programming, it is necessary to not
+just set up a certain mode and have the VIC display it,
+but to reprogram the VIC while it is drawing the picture. For this, it is necessary, to understand its timing.
+While the pixels within the screen area are 320 by
+200, the VIC actively draws pixels in the border color
+outside of this area, which (on PAL) is 403x284 pixels. Analog TV standards specify an H blank area at
+the end of every line, and V blank area at the end of
+every screen. So counting this timing as pixels, this
+gives an absolute resolution of 504x312 pixels. The
+interesting and very useful connection about the pixel
+clock and the system clocks is that an 8 pixel character is drawn every system clock cycle, i.e. about 1 million times a second. The 504 horizontal pixels therefore mean that a line is drawn on the screen every 63
+cycles. With this information, it is possible to do
+cycle-exact timing of assembly code to switch a VIC
+register at an 8 pixel granularity.
+Further timing details (badlines, sprite timing), as
+well as the application of this information to do tricks
+like FLD, FLI and AGSP would go beyond the scope
+of this article.

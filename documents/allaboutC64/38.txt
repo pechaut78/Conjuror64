@@ -1,0 +1,10 @@
+
+
+C64 Basic
+• The occurrence of two consecutive commas in a DATA state
+ment will be read as a null string.
+• String variables can be used in any place where character
+strings are used, except for the prompt string of an INPUT
+statement.
+• The only reserved string variable is TIME$. The only way to
+change the time is to assign a string of digits to TI$.

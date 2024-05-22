@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $F841?","address              $F841
+Start Reading a Block of Data from the Cassette
+
+This subroutine tests the cassette switch and initializes various
+flags for reading a block of data from cassette."

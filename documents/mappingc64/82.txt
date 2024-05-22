@@ -1,0 +1,8 @@
+
+
+
+address           $A7            INBIT
+RS-232 Input Bits/Cassette Temporary Storage Area
+
+This location is used to temporarily store each bit of serial data
+that is received, as well as for miscellaneous tasks by tape I/O.

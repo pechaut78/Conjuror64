@@ -1,0 +1,11 @@
+question,answer
+"Where is the colour information for the high resolution screen stored on the C64?","The colour information for the high resolution screen is stored in the normal text screen area, which is located at address 1024 decimal to 2023 decimal."
+"What is stored in each text screen location on the C64?","Each text screen location holds the colour information for an 8 by 8 dots square on the high resolution screen."
+"How does the colour information work in each byte on the C64?","Within each colour byte, the four high order bits (bits 4 to 7) contain the colour for any bit on the high resolution screen which is set to a 1, and the four low order bits (bits 0 to 3) contain the colour for any bit on the high resolution screen which is reset to 0."
+"What is the resolution of the colour memory on the C64?","The colour memory has a much lower resolution than the screen memory, so you can only colour the screen in blocks of 64 bits."
+"How does the high resolution screen operate in terms of colour modes on the C64?","The high resolution screen can operate in two colour modes, similar to Sprite colours."
+"What is the significance of address 1024 decimal on the C64?","The byte at address 1024 decimal holds the colour information for bytes 0 to 7 of the high resolution screen."
+"What is the significance of address 1025 decimal on the C64?","The byte at address 1025 decimal holds the colour information for bytes 8 to 15 of the high resolution screen."
+"How does the colour information for the high resolution screen relate to the text screen on the C64?","The colour information for the high resolution screen comes from the normal text screen area."
+"What is the relationship between the colour memory and the screen memory on the C64?","The colour memory has a much lower resolution than the screen memory."
+"What is the significance of bits 4 to 7 in each colour byte on the C64?","The four high order bits (bits 4 to 7) contain the colour for any bit on the high resolution screen which is set to a 1."

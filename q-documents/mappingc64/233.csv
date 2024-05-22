@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $A68E?","address         $A68E          RUNC
+Reset Pointer to Current Text Character to the Beginning of Program
+Text
+
+This routine resets the CHRGET pointer TXTPTR (122-123, $7A-$7B) so
+that the next byte of text that the interpreter will read comes from
+the beginning of program text."

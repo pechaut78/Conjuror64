@@ -1,0 +1,10 @@
+
+
+
+address           $285           TIMOUT
+Flag: Kernal Variable for IEEE Time-Out
+
+This location is used only with the external IEEE interface card
+(which was not yet available from Commodore at the time of writing).
+For more information, see the entry for the Kernal SETTMO routine at
+65057 ($FE21).

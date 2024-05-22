@@ -1,0 +1,38 @@
+
+
+
+address       $A0-$A2        TIME
+Software Jiffy Clock
+
+These three locations are updated 60 times a second, and serve as a
+software clock which counts the number of jiffies (sixtieths of a
+second) that have elapsed since the computer was turned on.
+
+The value of location 162 ($A2) is increased every jiffy (0.1667
+second), 161 ($A1) is updated every 256 jiffies (4.2267 seconds), and
+160 ($A0) changes every 65536 jiffies (or every 18.2044 minutes).
+After 24 hours, these locations are set back to 0.
+
+The jiffy clock is used by the BASIC reserved variables TI and TI$.
+These are not ordinary variables that are stored in the RAM variable
+area, but are functions that call the Kernal routines RDTIM (63197,
+$F6DD), and SETTIM (63204, $F6E4).  Assigning the value of TI or TI$
+to another variable reads these locations, while assigning a given
+value to TI$ alters these locations.
+
+To illustrate the relationship between these locations and TI$, try
+the following program.  The program sets the jiffy clock to 23 hours,
+50 minutes.  After the program has been running for one minute, all
+these locations will be reset to 0.
+
+100 TI$="235900"
+110 PRINT TI$,PEEK(160),PEEK(161),PEEK(162)
+120 GOTO 110
+
+Since updating is done by the IRQ interrupt that reads the keyboard,
+anything which affects the operation of that interrupt routine will
+also interfere with this clock.  A typical example is tape I/O
+operations, which steal the IRQ vector for their own use, and restore
+it afterwards.  Obviously, user routines which redirect the IRQ and do
+not send it back to the normal routine will upset software clock
+operation as well.

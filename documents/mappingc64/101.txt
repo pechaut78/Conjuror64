@@ -1,0 +1,21 @@
+
+
+
+address           $C0            CAS1
+Tape Motor Interlock
+
+This location is maintained by the IRQ interrupt routine that scans
+the keyboard.  Whenever a button is pressed on the recorder, this
+location is checked.  If it contains a 0, the motor is turned on by
+setting Bit 5 of location 1 to 0.  When the button is let up, the tape
+motor is turned off, and this location is set to 0.
+
+Since the interrupt routine is executed 60 times per second, you will
+not be able to keep the motor bit set to keep the motor on if no
+buttons are pushed.  Likewise, if you try to turn the motor off when a
+button is pressed and this location is set to 0, the interrupt routine
+will turn it back on.
+
+To control the motor via software, you must set this location to a
+nonzero value after one of the buttons on the recorder has been
+pressed.

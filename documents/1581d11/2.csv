@@ -1,0 +1,12 @@
+question,answer
+"How do I view the directory on a C128 or Plus/4?","To view the directory on the C128 or Plus/4, type the word DIRECTORY on a blank line and press the [RETURN] key or simply press the [F3] key."
+"What is the difference between the C64 directory command and the C128 directory command?","The C64 directory command, LOAD\"$\",8 (press [RETURN]) LIST (press [RETURN]), erases what's in memory, whereas the C128 directory command does not erase anything in memory, allowing you to call up a directory anytime, even from within a program."
+"What information does each line in the directory provide about the files on the diskette?","Each line in the directory provides three pieces of information about the files on the diskette: the size of the file in blocks of 254 characters, the name of the file enclosed in quotation marks, and a three-letter abbreviation of the file type."
+"What does the number on the bottom line of the directory represent?","The number on the bottom line of the directory represents how many blocks are available for use, ranging from 3160 on a newly formatted diskette to 0 on one that is completely full."
+"How do I pause, stop, or slow down the scrolling of the directory?","To pause, stop, or slow down the scrolling of the directory, refer to your particular computer's user's manual for instructions as to which keys to use."
+"What is the purpose of the drive number on the left-hand side of the top line of the directory?","The drive number on the left-hand side of the top line of the directory indicates the drive number of the 1581."
+"What is the significance of the 3D at the end of the top line of the directory?","The 3D at the end of the top line of the directory indicates that the 1581 uses version 3D of Commodore's disk operating system (DOS)."
+"How do I get an idea of what a directory looks like?","To get an idea of what a directory looks like, load the directory from the Test/Demo diskette."
+"What is the relationship between blocks and memory inside the computer?","Four blocks are equivalent to almost 1K of memory inside the computer."
+"What is the purpose of the quotation marks in the directory?","The quotation marks in the directory enclose the filename, and all characters within the quotation marks are part of the filename."
+"How is the diskette name and diskette id determined?","The diskette name and diskette id are determined when the diskette is formatted."

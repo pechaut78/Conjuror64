@@ -1,0 +1,21 @@
+
+C64 Basic:
+• If an error occurs while a program is running, execution
+stops immediately. The error message is printed, along with
+an indication of which line contains the error.
+• Holding down the CTRL key while a program is listing will
+cause the lines to scroll more slowly.
+• The LIST command can be used to list a specific line, by
+typing the line number after the keyword.
+• A line number range can be specified after LIST. A dash
+must be placed between the starting and ending line
+numbers.
+• Using LIST with a line number followed by a dash causes
+the listing to start at the line number and continue to the
+end of the program. Using LIST with a dash followed by a
+line number causes the listing to start at the first line in the
+program and continue to the specified line number.
+• The RUN command usually starts executing a program at
+the first line. To start execution at a line other than the first,
+that line number must be specified after the keyword RUN.
+A line number range may not be used with this command.

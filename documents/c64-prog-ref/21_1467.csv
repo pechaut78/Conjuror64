@@ -1,0 +1,11 @@
+question,answer
+"what is bit mapping in the context of Commodore 64 graphics?","Bit mapping is the method in which each possible dot (pixel) of resolution on the screen is assigned its own bit (location) in memory. If that memory bit is a one, the dot it is assigned to is on. If the bit is set to zero, the dot is off."
+"what is the drawback of using high-resolution graphic design on Commodore 64?","High-resolution graphic design has a couple of drawbacks, one of which is that it takes lots of memory to bit map the entire screen, requiring one bit of memory for each pixel (or one byte for 8 pixels), resulting in 8000 bytes of memory needed to map the whole screen."
+"how many pixels are on the Commodore 64 screen?","The resolution is 320 pixels (dots) by 200 pixels for the whole screen, giving you 64000 separate dots, each of which requires a bit in memory."
+"why are high-resolution operations slow in BASIC?","High-resolution operations are made of many short, simple, repetitive routines, which are slow in BASIC, but exactly what machine language does best."
+"how can you achieve high-resolution graphics in BASIC?","You can either write your programs entirely in machine language, or call machine language, high-resolution sub-routines from your BASIC program using the SYS command from BASIC, or use the VSP cartridge to add high-resolution commands to COMMODORE 64 BASIC."
+"what is the advantage of using machine language for high-resolution graphics?","Machine language is ideal for high-resolution graphics because it can handle short, simple, repetitive routines quickly and efficiently, making it a better choice than BASIC for high-resolution operations."
+"what is the purpose of the VSP cartridge?","The VSP cartridge is available to add high-resolution commands to COMMODORE 64 BASIC, allowing for easier development of high-resolution graphics in BASIC."
+"how many characters are on each line of the Commodore 64 screen?","There are 25 characters in each line, with 40 lines on the screen."
+"what is the resolution of the Commodore 64 screen in characters?","The resolution is 40 lines with 25 characters in each line."
+"why are examples in this section given in BASIC?","The examples are given in BASIC to make them clear and easy to understand, even though machine language is often used for high-resolution graphics."

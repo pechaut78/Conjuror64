@@ -1,0 +1,11 @@
+question,answer
+"How does the MOS 6510 differ from the generic MOS 6502?","It differs in two ways: it can make the bus tri-state when not used, so the VIC can use it, and it has a 6 bit I/O port built in, which can be controlled using zero page locations 0 and 1."
+"What is the function of bits 0-2 in register 1?","They are outputs and control bank switching, they turn the ROMs and the I/O area on and off."
+"What is the purpose of the 6 bit I/O port in the MOS 6510?","It can be controlled using zero page locations 0 and 1."
+"How does the MOS 6510 handle the bus when not in use?","It can make the bus tri-state when not used, so the VIC can use it."
+"What is the function of bits 3-5 in register 1?","They go to the tape connector and control the motor and the data sent to the head, and detect whether a key on the tape deck is pressed."
+"What is the significance of register 0 in the MOS 6510?","In register 0, each bit from 0-5 set it to output if 1, and to input if 0."
+"How does the MOS 6510 control the tape deck?","It controls the motor and the data sent to the head, and detects whether a key on the tape deck is pressed."
+"What is the role of the VIC in relation to the MOS 6510?","The VIC can use the bus when the MOS 6510 makes it tri-state."
+"What is the function of the I/O port in the MOS 6510?","It is controlled using zero page locations 0 and 1, and is used for various I/O operations."
+"What is the difference in pin layout between the MOS 6510 and the generic MOS 6502?","Except for the pin layout, the MOS 6510 is different from the generic MOS 6502 in two ways."

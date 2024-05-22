@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $3B-$3C?","address        $3B-$3C        OLDLIN
+Previous BASIC Line Number
+
+When program execution ends, the last line number executed is stored
+here, and restored to location 57 ($39) by CONT."

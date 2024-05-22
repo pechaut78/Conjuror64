@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the UNTLK function?","The purpose of the UNTLK function is to send an UNTALK command on the serial bus, which stops all devices previously set to TALK from sending data when this command is received."
+"What is the call address of the UNTLK function?","The call address of the UNTLK function is $FFAB in hexadecimal, which is equivalent to 65451 in decimal."
+"What are the communication registers used by the UNTLK function?","The UNTLK function does not use any communication registers."
+"What are the preparatory routines required by the UNTLK function?","The UNTLK function does not require any preparatory routines."
+"What are the error returns of the UNTLK function?","The error returns of the UNTLK function are the same as those of the READST routine."
+"What is the stack requirement of the UNTLK function?","The UNTLK function requires 8 bytes of stack space."
+"What registers are affected by the UNTLK function?","The UNTLK function affects the accumulator (A) register."
+"How do you use the UNTLK function?","To use the UNTLK function, you simply need to call it using a JSR instruction, as shown in the example: JSR UNTLK>."
+"What is the effect of the UNTLK function on devices set to TALK?","When the UNTLK function is called, all devices previously set to TALK will stop sending data."
+"What is the purpose of sending an UNTALK command on the serial bus?","The purpose of sending an UNTALK command on the serial bus is to stop all devices previously set to TALK from sending data."

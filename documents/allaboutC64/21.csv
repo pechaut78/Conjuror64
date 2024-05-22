@@ -1,0 +1,11 @@
+question,answer
+"What command is used to store a copy of a program in memory onto a cassette tape or floppy disk?","The SAVE command is used to store a copy of a program in memory onto a cassette tape or floppy disk. The program remains in memory after the SAVE command is used."
+"What is the syntax for using the SAVE command with a floppy disk?","The syntax for using the SAVE command with a floppy disk is: SAVE filename,8. The filename is a character string used to identify the saved program, and the 8 specifies the floppy disk drive."
+"What command is used to retrieve a program from a cassette tape or floppy disk?","The LOAD command is used to retrieve a program from a cassette tape or floppy disk."
+"What happens to a program already in memory when a new program is loaded using the LOAD command?","Any program that was already in memory is erased when the new program is loaded using the LOAD command."
+"What is the syntax for using the LOAD command with a floppy disk?","The syntax for using the LOAD command with a floppy disk is: LOAD filename,8. The filename is the name of the program to be loaded, and the 8 specifies the floppy disk drive."
+"What is the purpose of the filename in the SAVE and LOAD commands?","The filename is a character string used to identify the saved or loaded program."
+"What is the default device number for the LOAD and SAVE commands if no device number is specified?","The default device number for the LOAD and SAVE commands is 1, which is the cassette tape drive."
+"What happens to a program in memory when the SAVE command is used?","The program remains in memory after the SAVE command is used."
+"What is the maximum number of characters that can be used for a filename in the SAVE and LOAD commands?","The maximum number of characters that can be used for a filename in the SAVE and LOAD commands is 16."
+"What is the purpose of the device number in the SAVE and LOAD commands?","The device number specifies the storage device to be used for the SAVE or LOAD operation. For example, a device number of 8 specifies the floppy disk drive."

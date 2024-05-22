@@ -1,0 +1,31 @@
+question,answer
+"What is the purpose of the memory location at address $E4DA?","address              $E4DA
+Clear Color RAM to the Color in Background Color Register 0
+
+This routine is a patch added to the more recent versions of the
+Kernal.  It is called by the routine which clears a screen line
+(59903, $E9FF), and it places the color value in Background Color
+Register 0 (53281, $D021) into the current byte of Color RAM pointed
+to by USER (243, $F3).
+
+In the original version of the Kernal, the routine that cleared a
+screen line set the corresponding Color RAM to a value of 1, which
+gives text characters a white foreground color.  This was changed when
+the white color was found to sometimes cause light flashes during
+screen scrolling.  It was that white foreground color, however, that
+enabled the user to POKE the screen code for a character into screen
+RAM, and make that character appear on the screen in a color that
+contrasted the blue background.  This change to the Operating System
+causes colors POKEd to screen RAM to be the same color as the
+background, and thus they are invisible.
+
+This is a fairly serious problem, because the technique of POKEing
+characters to screen RAM has long been a staple of Commodore graphics
+programming.  Fortunately, the problem has an easy colution.  Since
+the Color RAM will be set to whatevere color is in Background Color
+Register 0, what you have to do to initialize Color RAM to the color
+you desire is change the background color to the desired foreground
+color, clear the screen, and then change the background color back
+again:
+
+C=PEEK(53281):POKE 53281,HUE:PRINT CHR$(147):POKE 53281,C"

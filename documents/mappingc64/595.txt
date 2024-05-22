@@ -1,0 +1,8 @@
+
+
+
+address              $EF2E
+Handle RS-232 Errors
+
+This subroutine sets the appropriate error bits in the status register
+at 663 ($297).

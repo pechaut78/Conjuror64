@@ -1,0 +1,11 @@
+question,answer
+"Where is the VIC-II control register located?","The VIC-II control register is located at memory location 53265 ($D011)."
+"What does bit 4 of the VIC-II control register control?","Bit 4 of the VIC-II control register controls the screen blanking function, where a value of 1 turns the screen on and a value of 0 turns the screen off."
+"What happens when bit 4 of the VIC-II control register is set to 0?","When bit 4 of the VIC-II control register is set to 0, the entire screen changes to the border color, effectively blanking the screen."
+"What is the purpose of the following POKE command: POKE 53265,PEEK(53265)AND 239?","The purpose of the POKE command POKE 53265,PEEK(53265)AND 239 is to blank the screen by setting bit 4 of the VIC-II control register to 0, without losing any data, it just isn't displayed."
+"What is the effect of turning off the screen on the processor?","Turning off the screen speeds up the processor slightly, which also speeds up program execution."
+"How can you bring back the screen after it has been blanked?","You can bring back the screen by using the POKE command POKE 53265,PEEK(53265)OR 16, which sets bit 4 of the VIC-II control register back to 1."
+"What is the difference between a value of 1 and 0 for bit 4 of the VIC-II control register?","A value of 1 for bit 4 of the VIC-II control register turns the screen on, while a value of 0 turns the screen off and changes the entire screen to the border color."
+"What is the significance of memory location 53265 in the context of screen blanking?","Memory location 53265 is the location of the VIC-II control register, which controls the screen blanking function through bit 4."
+"How does screen blanking affect program execution?","Screen blanking speeds up program execution by slightly speeding up the processor."
+"What is the purpose of using the AND operator in the POKE command POKE 53265,PEEK(53265)AND 239?","The purpose of using the AND operator in the POKE command POKE 53265,PEEK(53265)AND 239 is to clear bit 4 of the VIC-II control register, effectively blanking the screen."

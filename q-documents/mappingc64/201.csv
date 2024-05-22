@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the memory location at address $334-$33B?","address       $334-$33B
+Unused
+
+Eight free bytes for user vectors or other data."

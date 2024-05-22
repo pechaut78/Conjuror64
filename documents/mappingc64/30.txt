@@ -1,0 +1,44 @@
+
+
+
+address         $37-$38        MEMSIZ
+Pointer to the Highest Address Used by BASIC
+
+The power-on/reset routine tests each byte of RAM until it comes to
+the BASIC ROM, and sets this pointer to the adress of the highest byte
+of consecutive RAM found (40959, $9FFF).
+
+There are two circumstances under which this pointer may be changed
+after power-up to reflect an address lower than the actual top of
+consecutive RAM:
+
+1.  Users may wish to lower this pointer themselves, in order to set
+aside an area of free RAM that will not be disturbed by BASIC.  For
+example, to set aside a 1K area at the top of BASIC, start your
+program with the line:
+
+POKE 56,PEEK(56)-4:CLR
+
+The CLR is necessary to insure that the string text will start below
+your safe area.
+
+You may wish to store machine language programs, sprites, or alternate
+character sets in such an area.  For the latter two applications,
+however, keep in mind the 16K addressing range limitation of the
+VIC-II chip.  If you do not assign the VIC-II to a bank other than the
+default memory bank of 0-16383 ($0-$3FFF), you must lower the top of
+memory below 16383 ($3FFF) if you wish your sprite or character data
+area to be within its addressing range.
+
+2.  Then the RS-232 device (number 2) is opened, this pointer and the
+pointer to the end of user RAM at 643 are lowered by 512 bytes in
+order to create two 256-byte buffers, one for input and the other for
+output.
+
+Since the contents of these buffers will overwrite any variables at
+the top of memory, a CLR command is issued at the time device 2 is
+opened.  Therefore, the RS-232 device should be opened before defining
+any variables, and before setting aside a safe area for machine
+language programs or other uses, as described above.
+
+5

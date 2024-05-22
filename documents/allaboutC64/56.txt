@@ -1,0 +1,12 @@
+
+C64 Basic:
+• An array is a group of numbers or character strings which
+have a common name but can be individually accessed.
+• The same restrictions that apply to a variable name also
+apply to array names.
+• Array names are separate from variable names.
+• To assign one array to another, each value in the array must
+be copied separately.
+• To specify one particular value in an array, a number in
+parentheses is placed after the array name. This number
+is called a subscript.

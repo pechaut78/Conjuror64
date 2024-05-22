@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $E632?","address              $E632
+Input a Character from Screen or Keyboard
+
+This routine is the portion of the Kernal CHRIN routine that handles
+input from the keyboard and screen devices.  CHRIN gets one byte at a
+time from the current screen position, or inputs a whole line from the
+keyboard and returns it one byte at a time."

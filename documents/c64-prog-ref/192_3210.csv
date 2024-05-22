@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the MEMBOT function?","The purpose of the MEMBOT function is to set the bottom of memory. It returns a pointer to the lowest byte of RAM in the X and Y registers if the accumulator carry bit is set when the routine is called, or sets the bottom of memory to the value in the X and Y registers if the carry bit is clear."
+"what is the call address of the MEMBOT function?","The call address of the MEMBOT function is $FF9C (hex) or 65436 (decimal)."
+"what registers are affected by the MEMBOT function?","The MEMBOT function affects the X and Y registers."
+"what is the initial value of the pointer to the lowest byte of RAM on an unexpanded Commodore 64?","The initial value of the pointer to the lowest byte of RAM on an unexpanded Commodore 64 is $0800 (2048 in decimal)."
+"how do you read the bottom of RAM using the MEMBOT function?","To read the bottom of RAM using the MEMBOT function, you need to set the carry bit and then call the MEMBOT function."
+"what happens when the accumulator carry bit is set when calling the MEMBOT function?","When the accumulator carry bit is set when calling the MEMBOT function, a pointer to the lowest byte of RAM is returned in the X and Y registers."
+"what happens when the accumulator carry bit is clear when calling the MEMBOT function?","When the accumulator carry bit is clear when calling the MEMBOT function, the values of the X and Y registers are transferred to the low and high bytes, respectively, of the pointer to the beginning of RAM."
+"how do you set the bottom of memory using the MEMBOT function?","To set the bottom of memory using the MEMBOT function, you need to clear the carry bit, set the X and Y registers to the desired value, and then call the MEMBOT function."
+"what is the purpose of the example code snippet provided?","The example code snippet provided demonstrates how to move the bottom of memory up one page by calling the MEMBOT function twice, once to read the current bottom of memory and once to set the new bottom of memory."
+"what is the significance of the SEC and CLC instructions in the example code snippet?","The SEC instruction sets the carry bit to read the current bottom of memory, and the CLC instruction clears the carry bit to set the new bottom of memory."

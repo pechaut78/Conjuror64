@@ -1,0 +1,50 @@
+question,answer
+"What is the purpose of the memory location at address $D414?","address              $D414          SUREL3
+Voice 3 Sustain/Release Control Register
+
+Bits 0-3:  Select release cycle duration (0-15)
+Bits 4-7:  Select sustain volume level (0-15)
+
+Location Range: 54293-54296 ($D415-$D418)
+Filter Controls
+
+In addition to the controls detailed above for each voice, the SID
+chip also provides a filtering capability which allows you to
+attenuate (make quieter) certain ranges of frequencies.  Any one or
+all three voices can be filtered, and there is even a provision for
+filtering an external signal that is input through pin 5 of the
+monitor jack.
+
+A low-pass filter is available, which suppresses the volume of those
+frequency components that are above a designated cutoff level.  The
+high-pass filter reduces the volume of frequency components that are
+below a certain level.  The band-pass filter reduces the volume of
+frequency components on both sides of the chosen frequency, thereby
+enhancing that frequency.  Finally, the high-pass and low-pass filters
+can be combined to form a notch reject filter, which reduces the
+folume of the frequency components nearest the selected frequency.
+These various filters can dramatically change the quality of the sound
+produced.
+
+The first two registers are used to select the filter cutoff
+frequency.  This is the frequency above or below which any sounds will
+be made quieter.  The further away from this level any frequency
+components are, the more their output volume will be suppresed (high-
+and low-pass filters reduce the volume of those components by 12 dB
+per octave away from the center frequency, while the band-pass filter
+attenuates them by 6 dB per octave).
+
+The cutoff frequency has an 11-bit range (which corresponds to the
+numbers 0 to 2047).  This is made up of a high-byte and three low
+bits.  Therefore, to compute the frequency represented by the value in
+these registers, you must multiply the value in the high byte by 8,
+and add the value of the low three bits.  The range of cutoff
+freqnencies represented by these 2048 values stretches from 30 Hz to
+about 12,000 Hz.  The exact frequency may be calculated with the
+formula:
+
+FREQUENCY=(REGISTER VALUE*5.8)+30Hz
+
+An additional element in filtering is the resonance control.  This
+allows you to peak the volume of the frequency elements nearest the
+cutoff frequency."

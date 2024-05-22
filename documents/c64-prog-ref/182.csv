@@ -5,7 +5,6 @@ question,answer
 "What are the preparatory routines for the CIOUT routine?","LISTEN, [SECOND]"
 "What are the error returns for the CIOUT routine?","See READST"
 "What is the stack requirement for the CIOUT routine?","5"
-"What registers are affected by the CIOUT routine?","None"
 "What is the description of the CIOUT routine?","This routine is used to send information to devices on the serial bus."
 "What is the purpose of the LISTEN KERNAL routine?","Command a device on the serial bus to get ready to receive data"
 "What is the purpose of the SECOND KERNAL routine?","Send a secondary address to a device on the serial bus"

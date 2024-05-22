@@ -1,0 +1,21 @@
+
+
+
+address              $FE43
+NMI Interrupt Entry Point
+
+This routine is the NMI interrupt handler entry, which is pointed to
+by the hardware NMI vector at 65530 ($FFFA).
+
+Any time an NMI interrupt occurs, the Interrupt disable flag will be
+set, and the routine will jump through the RAM vector at 792 ($318),
+which ordinarily points to the continuation of this routine.  The
+standard handler first checks to see if the NMI was caused by the
+RS-232 device.  If not, the RESTORE key is assumed.  The routine
+checks for a cartridge, and if one is found it exits through the
+cartridge warm start vector at 32770 ($8002).  If not, the STOP key is
+checked, and if it is being pressed, the BRK routine is executed.  If
+the RS-232 device was the cause of the NMI, the cartridge and STOP key
+checks are bypassed, and the routine skips to the end, where it checks
+whether it is time to send or receive a data bit via the RS-232
+device.

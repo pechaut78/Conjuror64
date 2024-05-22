@@ -1,0 +1,12 @@
+question,answer
+"Where is the Background colour register located?","The Background colour register is located at address 53281 decimal and it normally holds the text screen background colour."
+"What is the significance of the colour in the Background colour register?","The colour in this register is the same for the whole of the high resolution screen, i.e. the high resolution screen background must all be the same colour."
+"What is the purpose of the normal colour memory?","The normal colour memory, which is located at address 55296 decimal to 56295 decimal, is where the colour for the characters on the text screen is normally held."
+"How does extended colour mode work in high resolution screen?","In extended colour mode each location can be used to hold the colour for an 8 by 8 dots square on the high resolution screen."
+"What is the significance of location 55296 in extended colour mode?","Location 55296 holds the colour for any dot pairs set to 1 1 in bytes to 7 of the high resolution screen."
+"How do you select extended colour mode for the high resolution screen?","To select extended colour mode for the high resolution screen you must set bit 4 of the second VIC control register which is located at address 53270 decimal."
+"What is the POKE command to select extended colour mode for the high resolution screen?","To select extended colour mode for the high resolution screen you must use the following POKE: POKE 53270, PEEK (53270) OR 16."
+"What is the purpose of the second VIC control register?","The second VIC control register, located at address 53270 decimal, is used to select extended colour mode for the high resolution screen."
+"How does the high resolution screen background colour work?","The high resolution screen background colour is determined by the Background colour register located at address 53281 decimal."
+"What is the significance of the colour memory locations in extended colour mode?","In extended colour mode, each location in the colour memory, from 55296 to 56295, holds the colour for an 8 by 8 dots square on the high resolution screen."
+"What is the relationship between the colour memory locations and the high resolution screen in extended colour mode?","In extended colour mode, each location in the colour memory, from 55296 to 56295, corresponds to a specific area on the high resolution screen, with each location holding the colour for an 8 by 8 dots square."

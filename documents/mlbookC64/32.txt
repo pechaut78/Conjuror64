@@ -1,0 +1,25 @@
+all, the branch instructions take up only two bytes in
+memory. Besides the savings in memory there is a faster
+speed of execution. A two byte instruction is executed
+faster by the microprocessor. The most important
+advantage of relative addressing is that the branch
+address is relative to the point of execution. Since the
+branch instructions do not use absolute addresses, if you
+place the same program segment in a different place in
+memory, the program does not have to be changed—the
+location to the branch address does not change.
+If the address to brarch to were given in absolute form,
+it would have to be changed if the program were move to a
+different memory location. The disadvantage of relative
+addressing is the limited address range to which we can
+branch. Only 129 bytes forward or 126 bytes backward from
+the branch instruction is the maximum that can be jumped.
+In practice this is usually no great hindrance, though,
+because it is seldom that a larger distance is involved.
+If you have found the address calculation of relative
+addressing quite complicated, you can rest at ease. We
+have presented this discussion only so that you
+understand the principle. Later, the assembler will taKe
+over this work for you; you need only give it the branch
+destination. The assembler will bring it to your
+attention if you attempt to jump beyond the permitted distance

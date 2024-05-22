@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the SETTIM function?","The purpose of the SETTIM function is to set the system clock, which is maintained by an interrupt routine that updates the clock every 1/60th of a second (one 'jiffy')."
+"what is the call address of the SETTIM function?","The call address of the SETTIM function is $FFDB in hexadecimal, which is equivalent to 65499 in decimal."
+"what are the communication registers used by the SETTIM function?","The communication registers used by the SETTIM function are A, X, and Y."
+"what is the stack requirement for calling the SETTIM function?","The stack requirement for calling the SETTIM function is 2."
+"how does the system clock maintained by the SETTIM function work?","The system clock maintained by the SETTIM function is a three-byte clock that can count up to 5,184,000 jiffies (24 hours), after which it resets to zero."
+"in what order should the registers be loaded when calling the SETTIM function?","When calling the SETTIM function, the accumulator should be loaded with the most significant byte, the X index register with the next most significant byte, and the Y index register with the least significant byte of the initial time setting (in jiffies)."
+"what is the purpose of the interrupt routine used by the SETTIM function?","The purpose of the interrupt routine used by the SETTIM function is to update the clock every 1/60th of a second (one 'jiffy')."
+"how many bytes does the system clock maintained by the SETTIM function consist of?","The system clock maintained by the SETTIM function consists of three bytes, which gives it the capability to count up to 5,184,000 jiffies (24 hours)."
+"what is an example of how to use the SETTIM function?","An example of how to use the SETTIM function is to load the accumulator with the MSB of the 3-byte number to set the clock, load the X register with the next byte, load the Y register with the LSB, and then call the SETTIM function, as shown in the following example: LDA #0; LDX #>3600; LDY #<3600; JSR SETTIM>."
+"what is the significance of the 5,184,000 jiffies count in the SETTIM function?","The significance of the 5,184,000 jiffies count in the SETTIM function is that it represents the maximum count of the system clock, after which it resets to zero, equivalent to 24 hours."

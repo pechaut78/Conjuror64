@@ -1,0 +1,6 @@
+
+ASL
+ASL stands for "arithmetic shift left." It shifts the of
+the addressed byte by one bit-position to the left. A
+zero is placed in the right-most bit (bit 0) and the
+carry flag is set equal to the left-most bit (bit 7).

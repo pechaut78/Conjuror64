@@ -1,0 +1,10 @@
+
+
+
+address              $F014
+CHROUT for the RS-232 Device
+
+The Kernal CHROUT routine calls this subroutine to output a character
+to the RS-232 device.  After the logical file has been OPENed and set
+for output using CHKOUT, the CHROUT routine is used to actually send a
+byte of data.

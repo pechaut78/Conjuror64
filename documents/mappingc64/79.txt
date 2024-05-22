@@ -1,0 +1,8 @@
+
+
+
+address       $A3-$A4
+Temporary Data Storage Area
+
+These locations are used temporarily by the tape and serial I/O
+routines.

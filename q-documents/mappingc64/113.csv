@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $D0?","address          $D0            CRSW
+Flag: Input from Keyboard or Screen
+
+This flag is used by the Kernal CHRIN (61783, $F157) routine to
+indicate whether input is available from the screen (3), or whether a
+new line should be obtained from the keyboard (0)."

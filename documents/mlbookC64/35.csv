@@ -1,0 +1,23 @@
+question,answer
+"What is the instruction to branch on negative flag in C64 assembly language?","The instruction to branch on negative flag in C64 assembly language is BMI. When the negative flag is set, this instruction will cause a branch to occur."
+"What is the instruction to jump on a clear negative flag?","To jump on a clear negative flag in C64 assembly language, the instruction "branch on plus," BPL, must be used. This instruction will cause a branch to occur when the negative flag is not set."
+"What happens if the negative flag is set when BMI instruction is executed?","If the negative flag is set when BMI instruction is executed in C64 assembly language, a branch will occur. This means that the program will jump to a different part of the code."
+"What happens if the negative flag is not set when BPL instruction is executed?","If the negative flag is not set when BPL instruction is executed in C64 assembly language, a branch will occur. This means that the program will jump to a different part of the code."
+"What is the purpose of the BMI instruction in C64 assembly language?","The purpose of the BMI instruction in C64 assembly language is to branch to a different part of the code if the negative flag is set. This instruction is useful when a program needs to perform different actions based on the result of a previous operation."
+"What is the purpose of the BPL instruction in C64 assembly language?","The purpose of the BPL instruction in C64 assembly language is to branch to a different part of the code if the negative flag is not set. This instruction is useful when a program needs to perform different actions based on the result of a previous operation."
+"What is the negative flag in C64 assembly language?","The negative flag in C64 assembly language is a flag that is set when a previous operation results in a negative number. This flag can be used to determine whether a branch should occur in the code."
+"How can a program determine if a branch should occur based on the negative flag in C64 assembly language?","A program can determine if a branch should occur based on the negative flag in C64 assembly language by using the BMI or BPL instructions. These instructions will cause a branch to occur if the negative flag is set or not set, respectively."
+"What is an example of using the BMI instruction in C64 assembly language?","An example of using the BMI instruction in C64 assembly language is:
+LDA #$FF
+BMI negative\_branch
+; code to execute if negative flag is not set
+negative\_branch:
+; code to execute if negative flag is set
+In this example, the LDA instruction sets the negative flag if the value #$FF is loaded into the accumulator. The BMI instruction then causes a branch to the negative\_branch label if the negative flag is set."
+"What is an example of using the BPL instruction in C64 assembly language?","An example of using the BPL instruction in C64 assembly language is:
+LDA #$00
+BPL positive\_branch
+; code to execute if negative flag is set
+positive\_branch:
+; code to execute if negative flag is not set
+In this example, the LDA instruction does not set the negative flag if the value #$00 is loaded into the accumulator. The BPL instruction then causes a branch to the positive\_branch label if the negative flag is not set."

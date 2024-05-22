@@ -1,0 +1,5 @@
+
+
+
+address           $2A2
+Indicator of CIA #1 Control Register B Activity During Cassette I/O

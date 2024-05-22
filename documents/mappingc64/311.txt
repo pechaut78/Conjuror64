@@ -1,0 +1,9 @@
+
+
+
+address         $B700          LEFTD
+Perform LEFT$
+
+LEFT$ creates a temporary string descriptor for a new string which
+contains the number of characters from the left side of the string
+that is specified in the command.

@@ -1,0 +1,5 @@
+
+
+
+address      $324-$325      IBASIN
+Vector to Kernal CHRIN Routine (Currently at 61783 ($F157))

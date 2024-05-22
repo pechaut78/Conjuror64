@@ -1,0 +1,52 @@
+question,answer
+"What is the purpose of the memory location at address $293?","address          $293           M51CTR
+RS-232: Mock 6551 Control Register
+
+This location is used to control the RS-232 serial I/O baud rate
+(speed at which data is transmitted and received), the word length
+(number of bits per data character), and the number of stop bits used
+to mark the end of a transmitted character.  It uses the same format
+as that of the 6551 UART control register to set these parameters,
+although, as you will see, some of the 6551 configurations are not
+implemented by the software that emulates the UART device.  For
+example, the standard baud rates which are higher than 2400 baud are
+not implemented, presumably because the software cannot keep up at
+higher rates.  The meanings of the various bit patterns are as
+follows:
+
+Bit 7: STOP Bits
+0    (bit value of 0)   = 1 STOP Bit
+1    (bit value of 128) = 0 STOP Bits
+
+Bits 6-5: WORD LENGTH
+00   (bit value of 0)   = 8 DATA Bits
+01   (bit value of 32)  = 7 DATA Bits
+10   (bit value of 64)  = 6 DATA Bits
+11   (bit value of 96)  = 5 DATA Bits
+
+Bit 4: Unused
+
+Bits 3-0: BAUD RATE
+0000 (bit value of 0)   = Nonstandard (User-Defined) Rate (Not Implemented)
+0001 (bit value of 1)   = 50 Baud
+0010 (bit value of 2)   = 75 Baud
+0011 (bit value of 3)   = 110 Baud
+0100 (bit value of 4)   = 134.5 Baud
+0101 (bit value of 5)   = 150 Baud
+0110 (bit value of 6)   = 300 Baud
+0111 (bit value of 7)   = 600 Baud
+1000 (bit value of 8)   = 1200 Baud
+1001 (bit value of 9)   = 1800 Baud
+1010 (bit value of 10)  = 2400 Baud
+1011 (bit value of 11)  = 3600 Baud (Not Implemented on the Commodore 64)
+1100 (bit value of 12)  = 4800 Baud (Not Implemented on the Commodore 64)
+1101 (bit value of 13)  = 7200 Baud (Not Implemented on the Commodore 64)
+1110 (bit value of 14)  = 9600 Baud (Not Implemented on the Commodore 64)
+1111 (bit value of 15)  = 19200 Baud (Not Implemented on the Commodore 64)
+
+This register is the only one which must be set when opening RS-232
+device (number 2).  The first character of the filename will be stored
+here.  For example, the statement OPEN 2,2,0,CHR$(6+32) will set the
+value of this location to 38.  As you can see from the above chart,
+this sets up the RS-232 device for a data transfer rate of 300 baud,
+using seven data bits per character and one stop bit."

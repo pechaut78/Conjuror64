@@ -1,0 +1,10 @@
+
+
+
+address         $B737          MIDD
+Perform MID$
+
+MID$ manipulates its parameters so that the tail end of LEFT$ can be
+used to create a temporary string descriptor for a new string.  This
+new string contains the number of characters from the position in the
+middle of the string that is specified in the command.

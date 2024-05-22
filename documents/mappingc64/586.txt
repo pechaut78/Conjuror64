@@ -1,0 +1,9 @@
+
+
+
+address              $EDEF          UNTLK
+Send UNTALK to a Device on the Serial Bus
+
+This is a documented Kernal routine whose entry in the jump table is
+65451 ($FFAB).  When called, it sends the UNTALK code (95, $5F) on the
+serial bus.  This commands any TALKer on the bus to stop sending data.

@@ -1,0 +1,31 @@
+question,answer
+"What is the purpose of the memory location at address $DD0D?","address              $DD0D          CI2ICR
+Interrupt Control Register
+
+Bit 0:  Read / did Timer A count down to 0?  (1=yes)
+        Write/ enable or disable Timer A interrupt (1=enable, 0=disable)
+Bit 1:  Read / did Timer B count down to 0?  (1=yes)
+        Write/ enable or disable Timer B interrupt (1=enable, 0=disable)
+Bit 2:  Read / did Time of Day Clock reach the alarm time?  (1=yes)
+        Write/ enable or disable TOD clock alarm interrupt (1=enable,
+        0=disable)
+Bit 3:  Read / did the serial shift register finish a byte?  (1=yes)
+        Write/ enable or disable serial shift register interrupt (1=enable,
+        0=disable)
+Bit 4:  Read / was a signal sent on the FLAG line?  (1=yes)
+        Write/ enable or disable FLAG line interrupt (1=enable, 0=disable)
+Bit 5:  Not used
+Bit 6:  Not used
+Bit 7:  Read / did any CIA #2 source cause an interrupt?  (1=yes)
+        Write/ set or clear bits of this register (1=bits written with 1 will
+        be set, 0=bits written with 1 will be cleared)
+
+This register is used to control the five interrupt sources on the
+6526 CIA chip.  For details on its operation, see the entry for 56333
+($DC0D).  The main difference between these two chips pertaining to
+this register is that on CIA #2, the FLAG line is connected to Pin B
+of the User Port, and thus is available to the user who wishes to take
+advantage of its ability to cause interrupts for handshaking purposes.
+
+Location Range: 56590-$56591 ($DD0E-$DD0F)
+See locations 56334 and 56334 for details"

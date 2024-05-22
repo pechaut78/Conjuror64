@@ -1,0 +1,15 @@
+
+
+
+address              $EA31
+IRQ Interrupt Entry
+
+This is the entry point to the standard IRQ interrupt handler.  Timer
+A of CIA #1 is set at power-on to cause an IRQ interrupt to occur
+every 1/60 second.  When the interrupt occurs, program flow is
+transferred here via the CINV vector at 788 ($314).  This routine
+updates the software clock at 160-162 ($A0-$A2), handles the cursor
+flash, and maintains the tape interlock which keeps the cassette motor
+on if a button is pushed and the interlock flag is on.  Finally, it
+calls the keyboard scan routine, which checks the keyboard and puts
+any character it finds into the keyboard buffer.

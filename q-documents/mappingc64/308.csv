@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the memory location at address $B6A3?","address         $B6A3          FRESTR
+Discard a Temporary String
+
+This routine calls the following routine which clears an entry from
+the temporary descriptor stack.  If the descriptor was on the stack,
+it exits after setting pointers to the string and its length.  If it
+wasn't on the temporary stack and is at the bottom of string text
+storage, the pointer to the bottom is moved up to deallocate the
+string."

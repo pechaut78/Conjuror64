@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $298?","address          $298           BITNUM
+RS-232: Number of Bits Left to be Sent/Received
+
+This location is used to determine how many zero bits must be added to
+the data character to pad its length out to the word length specified
+in 659 ($293)."

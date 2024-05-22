@@ -1,0 +1,21 @@
+question,answer
+"What is the purpose of the memory location at address $D01F?","address              $D01F          SPBGCL
+Sprite to Foreground Collision Register
+
+Bit 0:  Did Sprite 0 collide with the foreground display?  (1=yes)
+Bit 1:  Did Sprite 1 collide with the foreground display?  (1=yes)
+Bit 2:  Did Sprite 2 collide with the foreground display?  (1=yes)
+Bit 3:  Did Sprite 3 collide with the foreground display?  (1=yes)
+Bit 4:  Did Sprite 4 collide with the foreground display?  (1=yes)
+Bit 5:  Did Sprite 5 collide with the foreground display?  (1=yes)
+Bit 6:  Did Sprite 6 collide with the foreground display?  (1=yes)
+Bit 7:  Did Sprite 7 collide with the foreground display?  (1=yes)
+
+Location Range: 53280-53294 ($D020-$D02E)
+VIC-II Color Register
+
+Although these color registers are used for various purposes, all of
+them have one thing in common.  Like the Color RAM Nybbles, only the
+lower four bits are connected.  Therefore, when reading these
+registers, you must mask out the upper four bits (that is,
+BORDERCOLOR=PEEK(53280)AND15) in order to get a true reading."

@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $CC?","address          $CC            BLNSW
+Cursor Blink Enable: 0=Flash Cursor
+
+When this flag is set to a nonzero value, it indicates to the routine
+that normally flashes the cursor not to do so.  The cursor blink is
+turned off when there are characters in the keyboard buffer, or when
+the program is running.
+
+You can use this location to turn the cursor on during a program (for
+a series of GET operations, for example, to show the user that input
+is expected) by using the statement POKE 204,0."

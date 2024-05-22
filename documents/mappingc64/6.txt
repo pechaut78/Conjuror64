@@ -1,0 +1,13 @@
+
+
+address            $7             CHARAC
+Search Character for Scanning BASIC Text Input
+
+This location and the next are used heavily by the BASIC routines that
+scan the text that comes into the buffer at 512 ($200), in order to
+detect significant characters such as quotes, comma, the colon which
+separates BASIC statements, and end-of-line.  The ASCII values of such
+special characters are usually stored here.
+
+This location is also used as a work area by other BASIC routines that
+do not involve scanning text.

@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $EEA9?","address              $EEA9
+Get Serial Bus Data Input Bit and Clock Pulse Input Bit
+
+This subroutine reads the serial bus data input bit and clock pulse
+input bit (Bits 7 and 6 of CIA #2 Data Port A at 56576 ($DD00)), and
+returns the data bit in the Carry flag and the clock bit in the
+Negative flag."

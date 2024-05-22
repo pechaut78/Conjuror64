@@ -1,0 +1,11 @@
+
+The CPX instruction
+The CPX instruction works the same way as the CMP
+instruction. Here the contents of the addressed memory
+location are compared not with the contents of
+the
+accumulator, but rather with the contents of the X-
+register. The contents of the registers are not altered.
+What was said above concerning the CMP instruction
+applies to the CPX instruction as well. There are not as
+many addressing modes for the CPX instruction, however.

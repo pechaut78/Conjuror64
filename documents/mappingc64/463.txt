@@ -1,0 +1,93 @@
+
+
+
+address              $DC07          TIMBHI
+Timer B (high byte)
+
+Location Range: 56328-56331 ($DC08-$DC0B)
+Time of Day Clock (TOD)
+
+In addition to the two general-purpose timers, the 6526 CIA chip has a
+special-purpose Time of Day Clock, which keeps time in a format that
+humans can understand a little more easily than microseconds.
+
+This Time of Day Clock even has an alarm, which can cause an interrupt
+at a specific time.  It is organized in four registers, one each for
+hours, minutes, seconds, and tenths of seconds.  Each register reads
+out in Binary Coded Decimal (BCD) format, for easier conversion to
+ASCII digits.  A BCD byte is divided into two nybbles, each of which
+represents a single digit in base 10.  Even though a four-bit nybble
+can hold a number from 0 to 15, only the base 10 digits of 0-9 are
+used.  Therefore, 10 0'clock would be represented by a byte in the
+hours register with the nybbles 0001 and 0000, which stand for the
+digits 1 and 0.  The binary value of this byte would be 16 (16 times
+the high nybble plus the low nybble).  Each of the other registers
+operates in the same manner.  In addition, Bit 7 of the hours register
+is used as an AM/PM flag.  If that bit is set to 1, it indicates PM,
+and if it is set to 0, the time is AM.
+
+The Time of Day Clock Registers can be used for two purposes,
+depending on whether you are reading them or writing to them.  If you
+are reading them, you will always be reading the time.  There is a
+latching feature associated with reading the hours register in order
+to solve the problem of the time changing while you are reading the
+registers.  For example, if you were reading the hours register just
+as the time was changing from 10:59 to 11:00, it is possible that you
+would read the 10 in the hours register, and by the time you read the
+minutes register it would have changed from 59 to 00.  Therefore, you
+would read 10:00 instead of either 10:59 or 11:00.
+
+To prevent this kind of mistake, the Time of Day Clock Registers stop
+updating as soon as you read the hours register, and do not start
+again until you read the tenths of seconds register.  Of course, the
+clock continues to keep time internally even though it does not update
+the registers.  If you want to read only minutes, or seconds or tenths
+of seconds, there is no problem, and no latching will occur.  But
+anytime you read hours, you must follow it by reading tenths of
+seconds, even if you don't care about them, or else the registers will
+not continue to update.
+
+Writing to these registers either sets the time or the alarm,
+depending on the setting of Bit 7 of Control Register B (56335,
+$DC0F).  If that bit is set to 1, writing to the Time of Day registers
+sets the alarm.  If the bit is set to 0, writing to the Time of Day
+registers sets the Time of Day clock.  In either case, as with reading
+the registers, there is a latch function.  This function stops the
+clock from updating when you write to the hours register.  The clock
+will not start again until you write to the tenths of seconds
+registers.
+
+The only apparent use of the Time of Day Clock by the 64's Operating
+System is in the BASIC RND statement.  There, the seconds and tenths
+of seconds registers are read and their values used as part of the
+seed value for the RND(0) command.
+
+Nonetheless, this clock can be an invaluable resource for the 64 user.
+It will keep time more accurately than the software clock maintained
+at locations 60-162 ($A0-$A2) by the Timer A interrupt routine.  And
+unlike that software clock, the Time of Day Clock will not be
+disturbed when I/O operations disrupt the Timer A IRQ, or when the IRQ
+vector is diverted elsewhere.  Not even a cold start RESET will
+disrupt the time.  For game timers, just set the time for 00:00:00:0
+and it will keep track of elapsed time in hours, minutes, seconds and
+tenths of seconds format.
+
+The following digital clock program, written in BASIC, will
+demonstrate the use of these timers:
+
+10 PRINT CHR$(147):GOSUB 200
+20 H=PEEK(56331):POKE 1238,(H AND 16)/16+48:POKE 1239,(H AND 15)+48
+30 M=PEEK(56330):POKE 1241,(M AND 240)/16+48:POKE 1242,(M AND 15)+48
+40 S=PEEK(56329):POKE 1244,(S AND 240)/16+48:POKE 1245,(S AND 15)+48
+50 T=PEEK(56328)AND15:POKE 1247,T+48:GOTO 20
+200 INPUT"WHAT IS THE HOUR";H$:IF H$="" THEN 200
+210 H=0:IF LEN(H$)>1 THEN H=16
+220 HH=VAL(RIGHT$(H$,1)):H=H+HH:POKE56331,H
+230 INPUT "WHAT IS THE MINUTE";M$:IF M$=""THEN 200
+240 M=0:IF LEN(M$)>1 THEN M=16*VAL(LEFT$(M$,1))
+250 MM=VAL(RIGHT$(M$,1)):M=M+MM:POKE56330,M
+260 INPUT "WHAT IS THE SECOND";S$:IF S$=""THEN 200
+270 S=0:IF LEN(S$)>1 THEN S=16*VAL(LEFT$(S$,1))
+280 SS=VAL(RIGHT$(S$,1)):S=S+SS:POKE56329,S:POKE56328,0
+290 POKE 53281,1:PRINT CHR$(147):POKE 53281,6
+300 POKE 1240,58:POKE 1243,58:POKE 1246,58:GOTO 20

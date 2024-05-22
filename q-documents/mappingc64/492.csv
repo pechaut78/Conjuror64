@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $E059?","address              $E059          POLY2
+Function Series Evaluation Subroutine 2
+
+This is the main series evaluation routine, which evaluates
+expressions by using a table of the various values that must be
+operated on in sequence to obtain the proper result."

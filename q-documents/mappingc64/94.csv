@@ -1,0 +1,17 @@
+question,answer
+"What is the purpose of the memory location at address $B8?","address           $B8            LA
+Current Logical File Number
+
+This location holds the logical file number of the device currently
+being used.  A maximum of five disk files, and ten files in total, may
+be open at any one time.
+
+File numbers range from 1 to 255 (a 0 is used to indicate system
+defaults).  When printing to a device with a file number greater than
+127, an ASCII linefeed character will be sent following each carriage
+return, which is useful for devices like serial printers that require
+linefeeds in addition to carriage returns.
+
+The BASIC OPEN command calls the Kernal OPEN routine, which sets the
+value of this location.  In the BASIC statement OPEN 4,8,15, the
+logical file number corresponds to the first parameter 4."

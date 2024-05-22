@@ -1,0 +1,8 @@
+
+
+
+address              $E165          VERIFY
+Perform VERIFY
+
+This routine sets the load/verify flag at 10 ($A), and falls through
+to the LOAD routine.

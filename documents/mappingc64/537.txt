@@ -1,0 +1,8 @@
+
+
+
+address              $E566
+Home the Cursor
+
+This routine sets PNTR (211, $D3) and TBLX (214, $D6) to 0, and falls
+through to the next routine.

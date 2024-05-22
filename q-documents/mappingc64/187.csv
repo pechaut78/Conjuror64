@@ -1,0 +1,26 @@
+question,answer
+"What is the purpose of the memory location at address $31A-$32D?","address ($31A-$32D)
+Kernal Indirect Vectors
+
+There are 39 Kernal routines for which there are vectors in the jump
+table located at the top of the ROM (65409, $FF81).  For ten of these
+routines, the jump table entry contains a machine language instruction
+to jump to the address pointed to by the RAM vector in this table.
+The addresses in this table are initialized to point to the
+corresponding routines in the Kernal ROM.  Since these addresses are
+in RAM, however, any entry in this table may be changed.  This enables
+the user to add to these routines, or to replace them completely.
+
+You will notice, for example, that many of these routines involve
+Input/ Output functions.  By changing the vectors  to these routines,
+it is possible to support new I/O devices, such as an IEEE disk drive
+used through an adapter.
+
+The user should be cautioned that since some of these routines are
+interrupt-driven, it is dangerous to change these vectors without
+first turning off all interrupts.  For a safe method of changing all
+of these vectors at one time, along with the interrupt vectors above,
+see the entry for the Kernal VECTOR routine at 64794 ($FD1A).
+
+More specific information about the individual routines can be found
+in the descriptions given for their ROM locations."

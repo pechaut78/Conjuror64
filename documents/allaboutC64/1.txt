@@ -1,0 +1,13 @@
+
+
+C64 basic variables
+All variables have an initial, or default, value of 0.
+• Variables are assigned new values with a LET statement.
+• The syntax for the LET statement is the keyword LET, a
+variable name, an equal sign, and a number or expression.
+• During execution of a LET statement, the value to the right
+of the equal sign is determined first, and then it is assigned
+to the variable specified to the left of the equal sign.
+• Variables can be used just like numbers.
+• The LET statement does not cause anything to be printed on
+the screen.

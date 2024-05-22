@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $302-$303?","address      $302-$303      IMAIN
+Vector to the Main BASIC Program Loop
+
+This vector points to the address of the main BASIC program loop at
+42115 ($A483).  This is the routine that is operating when you are in
+the direct mode (READY).  It executes statements, or stores them as
+program lines."

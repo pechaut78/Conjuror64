@@ -1,0 +1,11 @@
+question,answer
+"What happens when there are two consecutive commas in a DATA statement in C64 Basic?","When two consecutive commas appear in a DATA statement in C64 Basic, it is interpreted as a null string."
+"How can string variables be used in C64 Basic?","String variables can be used in any place where character strings are used in C64 Basic, with the exception of the prompt string of an INPUT statement."
+"What is the only reserved string variable in C64 Basic?","The only reserved string variable in C64 Basic is TIME$."
+"How can the time be changed in C64 Basic?","The time can be changed in C64 Basic by assigning a string of digits to TI$."
+"What is the effect of using a null string in a DATA statement in C64 Basic?","Using a null string in a DATA statement in C64 Basic will result in the occurrence of two consecutive commas."
+"Can string variables be used in the prompt string of an INPUT statement in C64 Basic?","No, string variables cannot be used in the prompt string of an INPUT statement in C64 Basic."
+"What is the purpose of the TIME$ variable in C64 Basic?","The TIME$ variable is a reserved string variable in C64 Basic that is used to represent the current time."
+"How can the TIME$ variable be modified in C64 Basic?","The TIME$ variable can be modified in C64 Basic by assigning a string of digits to it."
+"What happens if a non-string value is assigned to a string variable in C64 Basic?","If a non-string value is assigned to a string variable in C64 Basic, it will be implicitly converted to a string."
+"What is the effect of using a string variable in a place where a character string is expected in C64 Basic?","Using a string variable in a place where a character string is expected in C64 Basic will result in the string variable being treated as a character string."

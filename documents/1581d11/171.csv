@@ -1,0 +1,11 @@
+question,answer
+"What happens when a write file that has not been closed is reopened for reading?","A write file that has not been closed is being reopened for reading will result in an error code 60: WRITE FILE OPEN, and this file must be immediately rescued, as described in BASIC Hint #2 in Chapter 2, or it will become a splat (improperly closed) file and probably be lost."
+"What is the consequence of not rescuing a file with error code 60?","If the file is not rescued, it will become a splat (improperly closed) file and probably be lost."
+"What is the error code for a write file that has not been closed and is reopened for reading?","The error code is 60: WRITE FILE OPEN."
+"What should be done to a file that has not been closed and is reopened for reading?","The file must be immediately rescued, as described in BASIC Hint #2 in Chapter 2."
+"What happens if a file is not rescued after receiving error code 60?","The file will become a splat (improperly closed) file and probably be lost."
+"What is the purpose of rescuing a file with error code 60?","The purpose of rescuing a file is to prevent it from becoming a splat (improperly closed) file and probably being lost."
+"In what chapter can you find the solution to rescue a file with error code 60?","The solution to rescue a file with error code 60 can be found in Chapter 2, in BASIC Hint #2."
+"What type of file is created if a file with error code 60 is not rescued?","A splat (improperly closed) file is created if a file with error code 60 is not rescued."
+"Why is it important to rescue a file with error code 60?","It is important to rescue a file with error code 60 to prevent it from becoming a splat (improperly closed) file and probably being lost."
+"What is the result of not closing a file before reopening it for reading?","The result of not closing a file before reopening it for reading is an error code 60: WRITE FILE OPEN."

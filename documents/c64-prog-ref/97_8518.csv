@@ -1,0 +1,11 @@
+question,answer
+"At which memory locations can the input/output port register be found?","The input/output port register can be found at memory locations 0, which corresponds to the DATA DIRECTION REGISTER, and 1, which corresponds to the actual PORT."
+"What is the primary function of the input/output port register on the Commodore 64?","The primary function of the input/output port register on the Commodore 64 is for memory management, allowing the chip to control more than 64K of RAM and ROM memory."
+"What is the bit size of the input/output port?","The input/output port is an 8-bit input/output port."
+"In what context is the input/output port register used on the Commodore 64?","The input/output port register is used in the context of memory management on the Commodore 64, allowing the chip to control more than 64K of RAM and ROM memory."
+"Where can the details of the input/output port registers be found?","The details of the input/output port registers can be found in the explanations of the principles needed to understand them."
+"What is the relationship between the input/output port register and memory management on the Commodore 64?","The input/output port register is used to control more than 64K of RAM and ROM memory on the Commodore 64, making it an essential component of memory management."
+"How many bits are available in the input/output port?","There are 8 bits available in the input/output port."
+"What is the purpose of the DATA DIRECTION REGISTER in the input/output port?","The DATA DIRECTION REGISTER is used to set the direction of data flow in the input/output port, determining whether the port is used for input or output operations."
+"What is the significance of memory locations 0 and 1 in the context of the input/output port?","Memory locations 0 and 1 are significant in the context of the input/output port because they correspond to the DATA DIRECTION REGISTER and the actual PORT, respectively."
+"Can the input/output port register be used for purposes other than memory management on the Commodore 64?","The input/output port register is primarily used for memory management on the Commodore 64, and its use for other purposes is not explicitly stated."

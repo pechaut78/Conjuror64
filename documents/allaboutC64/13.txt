@@ -1,0 +1,11 @@
+
+C64 Basic:
+The relational operators < (less than) and > (greater than)
+
+work just like the equal sign, except that they are used U
+in cases of inequality.
+• Relational operators can be combined, as in <= and > = .
+The combination <> means not equal <—>
+• The advantage of these new operators is that they can check
+for conditions which cannot be expressed using only the
+equal sign. They increase the flexibility of conditional logic.

@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $FB-$FE?","address       $FB-$FE        FREEZP
+Four Free Bytes of Zero Page for User Programs
+
+These locations were specifically set aside for user-written ML
+routines that require zero-page addressing.  While other zero-page
+locations can be used on a noninterference basis, it is guaranteed
+that BASIC will not alter these locations."

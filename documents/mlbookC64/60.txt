@@ -1,0 +1,6 @@
+
+
+PLP
+With this instruction, one byte is fetched from the stack
+and placed in the status register. This is the complement
+of PHP.

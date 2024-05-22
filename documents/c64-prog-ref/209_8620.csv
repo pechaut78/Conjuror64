@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the STOP function?","The purpose of the STOP function is to check if the STOP key is pressed, and it returns the Z flag set if the key was pressed during a UDTIM call, and resets the channels to default values, leaving other flags unchanged."
+"What is the call address of the STOP function?","The call address of the STOP function is $FFE1 in hexadecimal, which is equivalent to 65505 in decimal."
+"What registers are affected by the STOP function?","The STOP function affects two registers: A and X."
+"What is the preparatory routine required for the STOP function?","There are no preparatory routines required for the STOP function."
+"What is the error return of the STOP function?","There are no error returns for the STOP function."
+"How do you use the STOP function?","To use the STOP function, you need to call UDTIM before calling STOP, then test for the zero flag to determine if the STOP key was pressed."
+"What happens if the STOP key is not pressed?","If the STOP key is not pressed, the accumulator will contain a byte representing the lost row of the keyboard scan, allowing the user to check for certain other keys."
+"What is the significance of the Z flag in the STOP function?","The Z flag is set if the STOP key was pressed during a UDTIM call, indicating that the STOP key was pressed."
+"What is the relationship between the STOP function and the UDTIM function?","The STOP function should be called after UDTIM, as UDTIM scans for the STOP key and the STOP function checks if the key was pressed."
+"How can you check if the STOP key was pressed using the STOP function?","You can check if the STOP key was pressed by testing for the zero flag after calling the STOP function, and if the flag is set, it means the STOP key was pressed."

@@ -1,0 +1,23 @@
+
+
+C64 Basic:
+LEN NONE A intergerfunctionthatcountstheamountof
+characters in a specified string. (EXAMPLE: A$ ="COMPUTER":PRINT LEN
+(A$)-the result will be 8)
+
+LIST L(SHIFTED I)
+A command that lists a program in current
+memory.
+
+LOAD L(SHIFTED O)
+A command that loads a program from tape
+or disk.
+
+LOG NONE
+A mathmatical function.
+
+MID$ MSHIFTED I)
+A string function that returns the part of a
+string that is set by the first value, counting from the far left, the length of the
+second value. (EXAMPLE: A$ = "AROUNDTHEWORLD":PRINT
+MID$(A$,10,5)-the result of this would be the word WORLD.)

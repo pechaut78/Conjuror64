@@ -1,0 +1,86 @@
+
+
+
+address       $73-$8A        CHRGET
+Subroutine: Get Next BASIC Text Character
+
+This is actually a machine language subroutine, which at the time of a
+BASIC cold start (such as when the power is turned on) is copied from
+MOVCHG (58274, $E3A2) in the ROM to this zero page location.
+
+CHRGET is a crucial routine which BASIC uses to read text characters,
+such as the text of the BASIC program which is being interpreted.  It
+is placed on zero page to make the routine run faster.  Since it keeps
+track of the address of the character being read within the routine
+itself, the routine must be in RAM in order to update that pointer.
+The pointer to the address of the byte currently being read is really
+the operand of a LDA instruction.  When entered from CHRGET, the
+routine increments the pointer by modifying the operand at TXTPTR
+(122, $7A), thus allowing the next character to be read.
+
+Entry at CHRGOT (121, $79) allows the current character to be read
+again.  The CHRGET routine skips spaces, sets the various flags or the
+status register (.P) to indicate whether the character read was a
+digit, statement terminator, or other type of character, and returns
+with the retrieved character in the Accumulator (.A).
+
+Since CHRGET is used to read every BASIC statement before it is
+executed, and since it is in RAM, and therefore changeable, it makes a
+handy place to intercept BASIC to add new features and commands (and
+in the older PET line, it was the only way to add such features).
+Diversion of the CHRGET routine for this purpose is generally referred
+to as a wedge.
+
+Since a wedge can greatly slow down execution speed, mose of the time
+it is set up so that it performs its preprocessing functions only when
+in direct or immediate mode.  The most well-known example of such a
+wedge is the "Universal DOS Support" program that allows easier
+communication with the disk drive command channel.
+
+As this is such a central routine, a disassembly listing is given
+below to provide a better understanding of how it works.
+
+115 $73   CHRGET  INC TXTPTR   ; increment low byte of TXTPTR
+117 $75           BNE CHRGOT   ; if low byte isn't 0, skip next
+119 $77           INC TXTPTR+1 ; increment high byte of TXTPTR
+121 $79   CHRGOT  LDA          ; load byte from where TXTPTR points
+                               ; entry here does not update TXTPTR,
+                               ; allowing you to readl the old byte again
+122 $7A   TXTPTR  $0207        ; pointer is really the LDA operand
+                               ; TXTPTR+1 points to 512-580 ($200-$250)
+                               ; when reading from the input buffer
+                               ; in direct mode
+124 $7C   POINTB  CMP #$3A     ; carry flag set if > ASCII numeral 9
+126 $7E           BCS EXIT     ; character is not a numeral--exit
+128 $80           CMP #$20     ; if it is an ASCI space...
+130 $82           BEQ CHRGET   ; ignore it and get next character
+132 $84           SEC          ; prepare to subtract
+133 $85           SBC #$30     ; ASCII 0-9 are between 48-57 ($30-$39)
+135 $87           SEC          ; prepare to subtract again
+136 $88           SBC #$D0     ; if < ASCII 0 (57, $39) then carry is set
+138 $8A   EXIT    RTS          ; carry is clear only for numeral on return
+
+The Accumulator (.A register) holds the character that was read on
+exit from the routine.  Status register (.P) bits which can be tested
+for on exit are:
+
+  Carry Clear if the character was an ASCII digit 0-9.
+  Carry Set, otherwise.
+  Zero Set only if the character was a statement terminator 0 or an
+ASCII colon, 58 ($3A).
+  Zero Clear, otherwise.
+
+
+One wedge insertion technique is to change CHRGET's INC $7A to a JMP
+WEDGE, have your wedge update TXTPTR itself, and then JSR CHRGOT.
+Another is to change the CMP #$3A at location 124 ($7C), which I have
+labeled POINTB, to a JMP WEDGE, do your wedge processing, and then
+exit through the ROM version of POINTB, which is located at 48283
+($E3AB).  For more detailed information about wedges, see Programming
+the PET/CBM, Raeto Collin West, pages 365-68.
+
+While the wedge is a good, quick technique for adding new commands, a
+much more elegant method exists for accomplishing this task on the
+VIC-20 and 64 withouth slowing BASIC down to the extent that the wedge
+does.  See the entries for the BASIC RAM vector area at 768-779
+($300-$30B) for more details.

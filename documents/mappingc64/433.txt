@@ -1,0 +1,5 @@
+
+
+
+address              $D40A          PWHI2
+Voice 2 Pulse Waveform Width (high nybble)

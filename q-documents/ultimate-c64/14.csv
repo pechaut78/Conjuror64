@@ -1,0 +1,34 @@
+question,answer
+"What is the history and features of Microsoft BASIC and its variations, including Commodore BASIC, on early home computers?","BASIC
+Microsoft had a strong position in the market for
+(mostly ROM) BASIC interpreters in 8080-based
+home computers when the MOS 6502 was released in
+1975, so they rewrote their interpreter in 6502 assembly. Microsoft BASIC was pure 6502 code with a
+minimal character I/O interface to the machine's
+”monitor”, i.e. I/O library.
+Commodore decided to license the interpreter for the
+1977 PET and extended it slightly to interface with
+their disk and tape libraries. Commodore BASIC was
+very buggy, so they went back to Microsoft for an update, which, with the Commodore changes re-applied,
+shipped in newer PETs as BASIC V2. For version 4,
+Commodore added several extensions, both language
+constructs as well as support for graphics and sound.
+Being a low-end machine, Commodore took the bugfixed BASIC V4 codebase and removed all features
+after V2, making it independent of the machine's
+graphics and sound features again, and fitting it back
+into 8 KB, and shipped this version on the VIC-20.
+The Commodore 64 got the exact same version, except that it runs at a different memory address
+($A000-$BFFF).
+Microsoft BASIC is a line-based editor, that is, lines
+can be shown with the LIST command, and they can
+be modified by re-typing them. This integrates nicely
+with the KERNAL screen editor: The cursor can be
+moved up to LISTed lines, the lines can be modified,
+and when RETURN is pressed, the whole line is fed
+into BASIC again.
+4
+A nice feature of this and later versions of Commodore BASIC is the fact that all important parts, like
+the tokenizer, the detokenizer and the interpreter
+loop jump over a jump table in RAM before they do
+their work, allowing the user to extend BASIC arbitrarily. The most well-known BASIC extension is Simons' BASIC, a cartridge that maps 8 KB of extra
+ROM at $8000-$9FFF."

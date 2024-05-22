@@ -1,0 +1,14 @@
+question,answer
+"What is the purpose of the memory location at address $D026?","address              $D026          SPMC1
+Sprite Multicolor Register 1
+
+This register sets the color that is displayed by the 11 bit-pair in
+multicolor sprite graphics.  The default color value is 0 (black).
+
+Location Range: 53287-53294 ($D027-$D02E)
+Sprite Color Registers
+
+These registers are used to set the color to be displayed by bits of
+hi-res sprite data having a value of 1, and by bit-pairs of multicolor
+sprite data having a value of 10.  The color of each sprite is
+determined by its own individual color register."

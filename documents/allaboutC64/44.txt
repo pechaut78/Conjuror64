@@ -1,0 +1,19 @@
+
+
+C64 Basic:
+• A subroutine is a sequence of statements that occurs once in
+a program, but is executed from several places in the
+program.
+• The purpose of using a subroutine is to avoid duplicating
+statement sequences in a program.
+• The statements used to implement subroutines are GOSUB
+(go to subroutine) and RETURN (return to main program).
+• The syntax for the GOSUB statement is the keyword
+GOSUB followed by a line number. The RETURN statement
+consists only of the keyword RETURN.
+• The GOSUB statement makes execution jump to the begin
+ning of the specified line. If the specified line does not exist,
+an UNDEFD STATEMENT error will occur.
+• The main difference between GOSUB and GOTO is that
+with GOSUB, the computer remembers where execution
+stopped in the main program.

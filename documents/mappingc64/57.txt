@@ -1,0 +1,9 @@
+
+
+
+address           $6F            ARISGN
+Result of a Signed Comparison of Accumulator #1 to Accumulator #2
+
+Used to indicate whether the two Floating Point Accumulators have like
+or unlike signs.  A 0 indicates like signs, a 255 ($FF) indicates
+unlike signs.

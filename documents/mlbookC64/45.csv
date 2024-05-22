@@ -1,0 +1,11 @@
+question,answer
+"What flag determines whether the processor performs addition and subtraction in binary or binary-coded decimal?","The decimal flag determines whether the processor performs addition and subtraction in binary or binary-coded decimal. This flag is set if the processor works with BCD numbers and cleared if it works with binary numbers."
+"How can you set the decimal flag?","The SED (set decimal) instruction is used to set the decimal flag."
+"How can you clear the decimal flag?","The CLD (clear decimal) instruction is used to clear the decimal flag."
+"What happens if the decimal flag is set?","If the decimal flag is set, the processor works with BCD numbers."
+"What happens if the decimal flag is cleared?","If the decimal flag is cleared, the processor works with binary numbers."
+"What is the effect of the SED instruction on the processor?","The SED instruction sets the decimal flag, causing the processor to work with BCD numbers."
+"What is the effect of the CLD instruction on the processor?","The CLD instruction clears the decimal flag, causing the processor to work with binary numbers."
+"What is the purpose of the decimal flag in the processor?","The decimal flag determines whether the processor performs addition and subtraction in binary or binary-coded decimal."
+"What is the difference between the operation of the processor with the decimal flag set and cleared?","With the decimal flag set, the processor works with BCD numbers, while with the flag cleared, it works with binary numbers."
+"What are the instructions used to set and clear the decimal flag?","The SED (set decimal) instruction sets the flag, while the CLD (clear decimal) instruction clears it."

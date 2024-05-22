@@ -1,0 +1,11 @@
+question,answer
+"What is the initial value of a variable in C64 Basic?","In C64 Basic, the initial value of a variable is 0."
+"How do you clear a variable in C64 Basic?","You can clear a variable in C64 Basic by resetting it to its initial value of 0 using the CLR statement."
+"What is the purpose of the CLR statement in C64 Basic?","The CLR statement in C64 Basic is used to clear all variables by setting them to their initial value of 0."
+"What is the syntax for the CLR statement in C64 Basic?","The syntax for the CLR statement in C64 Basic consists only of the keyword CLR. Unlike other statements such as PRINT, POKE, or LET, it does not require any numbers."
+"Does the CLR statement in C64 Basic require any numbers in the statement?","No, the CLR statement in C64 Basic does not require any numbers. It consists only of the keyword CLR."
+"What happens to variables when the CLR statement is used in C64 Basic?","When the CLR statement is used in C64 Basic, every variable is set to its initial value of 0."
+"What is the difference between the CLR statement and other statements such as PRINT, POKE, or LET in C64 Basic?","Unlike other statements such as PRINT, POKE, or LET, the CLR statement in C64 Basic does not require any numbers. It is used to clear all variables by setting them to their initial value of 0."
+"Is it necessary to use the CLR statement in C64 Basic to clear variables?","Yes, it is necessary to use the CLR statement in C64 Basic to clear variables. This is because it is the only way to ensure that all variables are set to their initial value of 0."
+"Can the CLR statement be used to clear specific variables in C64 Basic?","No, the CLR statement in C64 Basic is used to clear all variables. It cannot be used to clear specific variables."
+"What is the impact of the CLR statement on the memory of the C64 Basic system?","The CLR statement in C64 Basic sets all variables to their initial value of 0, which can help to free up memory in the system."

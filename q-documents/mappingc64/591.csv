@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $EE97?","address              $EE97
+Set Serial Bus Data Output Line Low
+
+This subroutine clears the serial bus data output to 0 (Bit 5 of CIA
+#2 Data Port A at 56576 ($DD00))."

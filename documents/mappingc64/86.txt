@@ -1,0 +1,8 @@
+
+
+
+address          $AB            RIPRTY
+RS-232 Input Parity/Cassete Leader Counter
+
+This location is used to help detect if data was lost during RS-232
+transmission, or if a tape leader is completed.

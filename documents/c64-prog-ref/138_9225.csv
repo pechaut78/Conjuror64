@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for the instruction that increments the index x by one?","The opcode for the instruction that increments the index x by one is E8, which is the INX instruction in implied addressing mode, requiring 1 byte and 2 cycles to execute."
+"what is the addressing mode used by the INX instruction?","The addressing mode used by the INX instruction is implied addressing mode, which means that the instruction does not require a memory address as an operand."
+"how many bytes does the INX instruction require?","The INX instruction requires 1 byte of memory to execute."
+"what is the number of cycles required to execute the INX instruction?","The INX instruction requires 2 cycles to execute, which is a relatively fast operation."
+"what is the effect of the INX instruction on the index x register?","The INX instruction increments the index x register by one, which means that the value of the register is increased by one."
+"what flags are affected by the INX instruction?","The INX instruction affects the N, Z, C, I, D, and V flags, which are set or cleared based on the result of the increment operation."
+"can the INX instruction be used with other addressing modes?","No, the INX instruction can only be used with implied addressing mode, which means that it does not require a memory address as an operand."
+"what is the assembly language form of the INX instruction?","The assembly language form of the INX instruction is simply 'INX', which is used to increment the index x register by one."
+"is the INX instruction a load instruction?","No, the INX instruction is not a load instruction, but rather an increment instruction that modifies the value of the index x register."
+"what is the purpose of the INX instruction?","The purpose of the INX instruction is to increment the index x register by one, which is often used in loops and other control structures to iterate over arrays or tables."

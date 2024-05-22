@@ -1,0 +1,18 @@
+question,answer
+"What is the purpose of the memory location at address 0-255?","Page zero
+Memory locations 0-255 ($0-$FF) have a special significance in 6502
+machine language programming (the 6510 microprocessor in the Commodore
+64 shares the same instruction set as the 6502).  Since these
+addresses cn be expressed using just one byte, instructions which
+access data stored in these locations are shorter and execute more
+quickly than do instructions which operate on addresses in higher
+memory, which requires two bytes.
+
+Because of this relatively fast execution time, most 6502 software
+makes heavy use of zero-page locations.  The 64 is no exception, and
+uses this area for many important system variables and pointers.
+
+In addition, locations 0 and 1 have special Input/Output functions on
+the 6510.  In the case of the 64, this on-chip I/O port is used to
+select the possible combinations of ROM, as we will se below, and to
+control cassette I/O."

@@ -1,0 +1,23 @@
+C64 Basic:
+BASIC KEY WORDS
+Command Abbreviation
+Definition
+ABS A(SHIFTED B) -
+A numeric function that returns the absolute
+value of a number.
+AND A(SHIFTED N)
+Can be a logical operator that checks the
+truth between two expressions.
+ASC A(SHIFTED S) A numeric function that gives the ASCII
+value of the first character in a string.
+
+
+C64 Basic:
+ATN A(SHIFTED T) A mathematical function.
+CHR$ A(SHIFTED H) A string function that changes ASCII to a
+numeric value.
+CLOSE CL(SHIFTED O) A input/output statement that closes a
+channel to a device.
+CLR C(SHIFTED L) A statement that resets all variables.
+CMD C(SHIFTED M) A input/output statement that outputs data
+to an opened device or file that corresponds to a file number.

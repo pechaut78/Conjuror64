@@ -1,0 +1,14 @@
+
+The AND instruction
+The AND operation compares each bit of the accumulator
+with the corresponding bit in the operand. If the bit of
+the accumulator AND the corresponding bit of the operand
+are both set (to l)f the corresponding bit of the result
+is also set to one.
+0 AND 0=0
+0 AND 1=0
+1 AND 0=0
+1 AND 1=1
+The bit-wise comparison of the accumulator and operand
+can be made clearer with an example.
+AND #$37

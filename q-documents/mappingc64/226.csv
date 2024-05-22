@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $A49C?","address        $A49C          MAIN1
+Add or Replace a Line of Program Text
+
+This routine calls subroutines to get the line number, tokenize
+keywords, and then looks for a line with the same line number.
+
+If it finds a line with the same number, the routine deletes that line
+by moving all higher program text and variables down to where it
+started.  The new line is then added.  Since the CLR routine is
+called, the value of all current program variables is lost."

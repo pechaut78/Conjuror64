@@ -6,5 +6,3 @@ question,answer
 "What is the error return for the UNTLK function?","See READST"
 "What is the description of the UNTLK function?","This routine transmits an UNTALK command on the serial bus."
 "What devices will stop sending data when the UNTLK command is received?","All devices previously set to TALK"
-"What is the preparatory routine for the UNTLK function?","None"
-"What is the communication register for the UNTLK function?","None"

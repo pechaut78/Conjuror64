@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $A9A5?","address         $A9A5          LET
+Perform LET
+
+The LET command causes variables to be created and initialized, or to
+have a new value assigned.  It handles all types of array or nonarray
+variables:  strings, floating point, integers, ST, TI, and TI$.  The
+routine is composed of several subroutines that evaluate the variable,
+evaluate the assigned expression, check that the assigned value is
+suitable for a variable of that type, and then assign a value to the
+existing variable, or create a new variable."

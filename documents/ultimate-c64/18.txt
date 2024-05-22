@@ -1,0 +1,17 @@
+
+6567/6569 VIC
+The video chip inside the C64 is called the MOS
+6567/6569 VIC-II (Video Interface Controller) - the
+video chip in the VIC-20 had been the original VIC,
+and was the reason for the marketing name of the
+VIC-20.
+The VIC supports a 40x25 text mode, a 320x200 bitmap mode, 16 colors and 8 sprites - all of these features have lots of sub-modes and options. The
+amount of memory the VIC can address is 16 KB, and
+while by default, it accesses the first 16 KB of the C64
+RAM, it can be configured to use any of the four
+banks.
+The 16 colors of the VIC are divided into two sets of
+eight. The first eight are the more important colors,
+as some modes only support the first eight. The colors
+are, in the original order: black, white, red, cyan, purple, green, blue, yellow, orange, brown, pink, dark
+gray, gray, light green, light blue and light gray.

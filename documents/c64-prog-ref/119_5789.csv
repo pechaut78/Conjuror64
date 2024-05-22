@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the BIT instruction in 6502 assembly language?","The BIT instruction is used to test bits in memory with the accumulator. It transfers bits 6 and 7 to the status register, and sets the zero flag if the result of A /\ M is zero, where A is the accumulator and M is the memory location."
+"what happens to bits 6 and 7 during a BIT instruction?","During a BIT instruction, bits 6 and 7 are transferred to the status register, which affects the status flags N, Z, C, I, D, and V."
+"what is the effect of the result of A /\ M on the zero flag?","If the result of A /\ M is zero, then the zero flag Z is set to 1, otherwise it is set to 0."
+"what is the opcode for the BIT instruction in zero page addressing mode?","The opcode for the BIT instruction in zero page addressing mode is 24."
+"what is the number of bytes required for the BIT instruction in absolute addressing mode?","The BIT instruction in absolute addressing mode requires 3 bytes."
+"what is the number of cycles required for the BIT instruction in zero page addressing mode?","The BIT instruction in zero page addressing mode requires 3 cycles."
+"what is the assembly language form for the BIT instruction in zero page addressing mode?","The assembly language form for the BIT instruction in zero page addressing mode is BIT Oper, where Oper is the zero page address."
+"what is the difference in the number of bytes required for the BIT instruction between zero page and absolute addressing modes?","The BIT instruction in zero page addressing mode requires 2 bytes, whereas in absolute addressing mode it requires 3 bytes."
+"what is the purpose of the status register in the BIT instruction?","The status register is used to store the result of the BIT instruction, specifically bits 6 and 7, which affect the status flags N, Z, C, I, D, and V."
+"what is the relationship between the accumulator and memory location M in the BIT instruction?","In the BIT instruction, the accumulator A is logically ANDed with the memory location M, and the result affects the status flags."

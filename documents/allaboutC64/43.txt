@@ -1,0 +1,14 @@
+
+
+C64 Basic:
+• Changing a character in a string requires using LEFTS and
+RIGHTS with concatenation.
+• The MID$ function needs at least two arguments. The sec
+ond argument tells how far into the string the substring
+starts. The optional third argument specifies the length of
+the substring. If the third argument is not provided, the
+substring continues to the end of the string.
+• These functions may return the null string as the substring.
+They will not return a string longer than the original string.
+• Nesting of too many string functions results in the FOR
+MULA TOO COMPLEX error.

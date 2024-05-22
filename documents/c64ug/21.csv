@@ -1,0 +1,11 @@
+question,answer
+"What is the normal function of the <RUN/STOP> key?","The normal function of the <RUN/STOP> key is to stop the execution of a BASIC program, signaling the computer to STOP doing something."
+"What happens when you depress the <RUN/STOP> key?","When you depress the <RUN/STOP> key, it stops the execution of a BASIC program, halting its operation."
+"What is the purpose of the <RUN/STOP> key in a BASIC program?","The purpose of the <RUN/STOP> key is to interrupt the execution of a BASIC program, allowing the user to regain control."
+"How does the <RUN/STOP> key affect a running BASIC program?","The <RUN/STOP> key affects a running BASIC program by stopping its execution, allowing the user to intervene or terminate the program."
+"What is the shifted mode of the <RUN/STOP> key used for?","The shifted mode of the <RUN/STOP> key is used to automatically load a program from tape, allowing for convenient program loading."
+"In what mode does the <RUN/STOP> key load a program from tape?","The <RUN/STOP> key loads a program from tape when used in the shifted mode."
+"What is the difference between the normal and shifted modes of the <RUN/STOP> key?","The normal mode of the <RUN/STOP> key stops the execution of a BASIC program, while the shifted mode loads a program from tape."
+"How does the <RUN/STOP> key interact with a BASIC program?","The <RUN/STOP> key interacts with a BASIC program by either stopping its execution or loading a new program from tape, depending on the mode used."
+"What is the primary function of the <RUN/STOP> key in a Commodore 64?","The primary function of the <RUN/STOP> key in a Commodore 64 is to control the execution of BASIC programs, allowing the user to start, stop, and load programs."
+"What are the two main uses of the <RUN/STOP> key?","The two main uses of the <RUN/STOP> key are to stop the execution of a BASIC program and to load a program from tape when used in the shifted mode."

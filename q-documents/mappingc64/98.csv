@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $BD?","address          $BD            ROPRTY
+RS-232 Output Parity/Cassette Temporary Storage
+
+This location is used by the RS-232 routines as an output parity work
+byte, and by the tape as temporary storage for the current character
+being read or sent."

@@ -1,0 +1,11 @@
+question,answer
+"Where is the interrupt status register located?","The interrupt status register is located at 53273 ($D019)."
+"What is the purpose of bit 7 in the interrupt status register?","Bit 7 is set with a 1 whenever an interrupt occurs."
+"What happens when two sprites hit each other?","The current status of bit 2 of the interrupt register will be a 1 when two sprites hit each other."
+"How do you clear an interrupt bit?","Once an interrupt bit has been set, it's 'latched' in and must be cleared by writing a 1 to that bit in the interrupt register when you're ready to handle it."
+"What is the function of IRST (bit 0) in the interrupt status register?","IRST (bit 0) is set when the current raster count equals the stored raster count."
+"What triggers the setting of IMDC (bit 1) in the interrupt status register?","IMDC (bit 1) is set by SPRITE-DATA collision (1st one only, until reset)."
+"What is the function of ILP (bit 3) in the interrupt status register?","ILP (bit 3) is set by a negative transition of the light pen (1 per frame)."
+"How does the interrupt status register allow for selective interrupt handling?","The interrupt status register allows for selective interrupt handling by allowing you to clear individual interrupt bits by writing a 1 to that bit in the interrupt register when you're ready to handle it, without having to store the other interrupt bits."
+"What is the significance of the 'latched' state of an interrupt bit?","Once an interrupt bit has been set, it's 'latched' in and must be cleared by writing a 1 to that bit in the interrupt register when you're ready to handle it."
+"What is the relationship between the bits in the interrupt status register and the interrupt sources?","The current status of bits 0-3 in the interrupt register corresponds to a 1 to 1 relationship with the interrupt sources, including SPRITE-DATA collision, SPRITE-SPRITE collision, and negative transition of the light pen."

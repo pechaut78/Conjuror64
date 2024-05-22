@@ -1,0 +1,20 @@
+
+
+
+address              $F0BD
+Kernal Control Messages
+
+The ASCII text of the Kernal I/O control messages is stored here.  The
+last byte of every message has Bit 7 set to 1 (ASCII value + 128).
+The messages are:
+
+I/O ERROR
+SEARCHING
+FOR
+PRESS PLAY ON TAPE
+PRESS RECORD & PLAY ON TAPE
+LOADING
+SAVING
+VERIFYING
+FOUND
+OK

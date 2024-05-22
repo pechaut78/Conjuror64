@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the registers at address 160 to 162 on a C64?","These registers are used as a single 24-bit counter, which increments automatically every 1/60th of a second, serving as a real-time jiffy clock, as mentioned in Chapter 2."
+"how does the clock on a C64 work?","The clock on a C64 works by automatically incrementing the 24-bit counter formed by the registers at address 160 to 162 every 1/60th of a second, allowing it to be used as a real-time jiffy clock."
+"what is the resolution of the clock on a C64?","The clock on a C64 has a resolution of 1/60th of a second, meaning it increments the 24-bit counter every 1/60th of a second."
+"can the clock on a C64 be used as an event timer?","Yes, the clock on a C64 can be used as an event timer by resetting the whole register to 0 and then PEEKing the value after some event has occurred, although the time obtained will only be approximate due to the time it takes to PEEK the values."
+"how do you reset the clock on a C64 for use as an event timer?","To use the clock on a C64 as an event timer, you need to reset the whole register to 0, and then PEEK the value after some event has occurred."
+"what is the limitation of using the clock on a C64 as an event timer?","The limitation of using the clock on a C64 as an event timer is that the time obtained will only be approximate, due to the time it takes to PEEK the values."
+"what is the real-time jiffy clock on a C64 used for?","The real-time jiffy clock on a C64 is used as an event timer, allowing the measurement of time intervals between events, although the time obtained will only be approximate."
+"what is the address range of the registers used as a clock on a C64?","The address range of the registers used as a clock on a C64 is 160 to 162."
+"how often does the clock on a C64 increment?","The clock on a C64 increments every 1/60th of a second."
+"what is the size of the counter used as a clock on a C64?","The size of the counter used as a clock on a C64 is 24 bits."

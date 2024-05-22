@@ -1,0 +1,11 @@
+question,answer
+"Where is the normal text screen area located in memory?","The normal text screen area is located at address 1024 decimal to 2023 decimal, which holds the colour information for the high resolution screen."
+"What information does each text screen location hold?","Each text screen location holds the colour information for an 8 by 8 dots square on the high resolution screen."
+"What is the purpose of the byte at address 1024 decimal?","The byte at address 1024 decimal holds the colour information for bytes 0 to 7 of the high resolution screen."
+"How are the colour bytes organized?","Within each colour byte, the four high order bits (bits 4 to 7) contain the colour for any bit on the high resolution screen which is set to a 1, and the four low order bits (bits 0 to 3) contain the colour for any bit on the high resolution screen which is reset to 0."
+"What is the resolution of the colour memory compared to the screen memory?","The colour memory has a much lower resolution than the screen memory, so you can only colour the screen in blocks of 64 bits."
+"How does the high resolution screen operate in terms of colour modes?","The high resolution screen can operate in two colour modes, similar to Sprite colours."
+"What is the relationship between the text screen area and the high resolution screen?","The colour information for the high resolution screen comes from the normal text screen area."
+"How are the colour bytes addressed in memory?","The colour bytes are addressed sequentially in memory, with each byte holding the colour information for a specific block of the high resolution screen."
+"What is the significance of the bits in each colour byte?","The bits in each colour byte determine the colour of the corresponding block on the high resolution screen, with the high order bits controlling the colour of set bits and the low order bits controlling the colour of reset bits."
+"What is the purpose of Figure 7.2 in the context of colour on the C64?","Figure 7.2 illustrates the relationship between the text screen area and the high resolution screen, showing how the colour information is stored and used."

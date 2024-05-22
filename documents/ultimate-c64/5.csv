@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of load instructions in the instruction set?","Load instructions, such as LDA/LDX/LDY, are used to load the values into registers A, X, and Y respectively."
+"What is the function of store instructions in the instruction set?","Store instructions, such as STA/STX/STY, are used to store the values from registers A, X, and Y into memory."
+"What is the purpose of read-modify-write instructions in the instruction set?","Read-modify-write instructions, such as ASL/LSR/ROL/ROR, are used to perform logical operations on the values in the registers."
+"What is the function of arithmetic instructions in the instruction set?","Arithmetic instructions, such as ADC/SBC, are used to perform addition and subtraction operations, including the carry flag, due to the one's complement logic."
+"What is the purpose of compare instructions in the instruction set?","Compare instructions, such as CMP/CPX/CPY, are used to compare the values in the registers, performing subtractions without storing the result."
+"What is the function of logic instructions in the instruction set?","Logic instructions, such as AND/ORA/EOR, are used to perform logical operations on the values in the registers, while BIT is an AND operation without storing the result."
+"What is the purpose of branch instructions in the instruction set?","Branch instructions are used to control the flow of the program, allowing the program to jump to different locations based on conditions."
+"What is the function of flag manipulation instructions in the instruction set?","Flag manipulation instructions are used to set or clear the flags, such as the carry flag, to control the flow of the program."
+"What is the purpose of register transfer instructions in the instruction set?","Register transfer instructions are used to transfer values between registers, allowing for efficient data movement."
+"What is the function of stack manipulation instructions in the instruction set?","Stack manipulation instructions are used to push and pop values from the stack, allowing for efficient memory management."

@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $308-$309?","address      $308-$309      IGONE
+Vector to the Routine That Executes the Next BASIC Program Token
+
+This vector points to the address of the GONE routine at 42980 ($A7E4)
+that executes the next program token."

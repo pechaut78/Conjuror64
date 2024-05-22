@@ -1,0 +1,11 @@
+question,answer
+"What is a subroutine in C64 Basic?","A subroutine in C64 Basic is a sequence of statements that is used once in a program, but can be executed from multiple places in the program. Its purpose is to avoid duplicating statement sequences in a program."
+"What is the main advantage of using a subroutine in C64 Basic?","The main advantage of using a subroutine in C64 Basic is that it helps to avoid duplicating statement sequences in a program, which can make the program more efficient and easier to maintain."
+"What are the statements used to implement subroutines in C64 Basic?","The statements used to implement subroutines in C64 Basic are GOSUB (go to subroutine) and RETURN (return to main program)."
+"What is the syntax for the GOSUB statement in C64 Basic?","The syntax for the GOSUB statement in C64 Basic is the keyword GOSUB followed by a line number."
+"What does the RETURN statement consist of in C64 Basic?","The RETURN statement in C64 Basic consists only of the keyword RETURN."
+"What happens when the GOSUB statement is executed in C64 Basic?","When the GOSUB statement is executed in C64 Basic, execution jumps to the beginning of the specified line. If the specified line does not exist, an UNDEFD STATEMENT error will occur."
+"What is the main difference between GOSUB and GOTO in C64 Basic?","The main difference between GOSUB and GOTO in C64 Basic is that with GOSUB, the computer remembers where execution stopped in the main program."
+"What error occurs in C64 Basic if the specified line does not exist after a GOSUB statement?","If the specified line does not exist after a GOSUB statement in C64 Basic, an UNDEFD STATEMENT error will occur."
+"What is the keyword used for returning to the main program after a subroutine in C64 Basic?","The keyword used for returning to the main program after a subroutine in C64 Basic is RETURN."
+"What is the syntax for the RETURN statement in C64 Basic?","The syntax for the RETURN statement in C64 Basic is only the keyword RETURN."

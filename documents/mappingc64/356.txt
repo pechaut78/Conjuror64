@@ -1,0 +1,11 @@
+
+
+
+address         $BC5B          FCOMP
+Compare FAC1 to Memory
+
+On entry to this routine, .A and .Y point to a five-byte floating
+point number to be compared to FAC1.  After the comparison, .A holds 0
+if the two are equal, a 1 if the value of FAC1 is greater than that in
+the memory location, and 255 ($FF) if the value of FAC1 is less than
+that in the memory location.

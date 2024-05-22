@@ -1,0 +1,10 @@
+
+Scrolling
+The VIC supports hardware X and Y scrolling by 0 to
+7 pixels. Since the 40th column is half visible and another column left of the first column is half-visible
+when the horizontal shift register is set to e.g. 4, a
+41th column would be needed. Instead, it is possible
+to switch the screen to 38 column mode, i.e. the
+whole screen is a little narrower, and more border is
+shown on the left and on the right. The screen can
+also be switched from 25 to 24 lines the same way.

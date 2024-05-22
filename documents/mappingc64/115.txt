@@ -1,0 +1,10 @@
+
+
+
+address          $D3            PNTR
+Cursor Column on Current Line
+
+The number contained here is the cursor column position within the
+logical line pointed to by 209 ($D1).  Since a logical line can
+contain up to two physical lines, this value may be from 0 to 79 (the
+number here is the value returned by the POS function).

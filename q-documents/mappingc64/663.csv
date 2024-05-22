@@ -1,0 +1,12 @@
+question,answer
+"What is the purpose of the memory location at address $FDF9?","address              $FDF9          SETNAM
+Set Filename Parameters
+
+This is a documented Kernal routine, which can be entered through the
+jump table at location 65469 ($FFBD).
+
+It puts the value in the Accumulator into the location which stores
+the number of characters in the filename, and sets the pointer to the
+address of the ASCII text of the filename from the .X and .Y
+registers.  This sets up the filename for the OPEN, LOAD, or SAVE
+routine."

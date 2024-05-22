@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $A7AE?","address         $A7AE          NEWSTT
+Set Up Next Statement for Execution
+
+This routine tests for the STOP key, updates the pointer to the
+current line number, and positions the text pointer to read the
+beginning of the statement."

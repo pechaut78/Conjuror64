@@ -1,0 +1,12 @@
+question,answer
+"what is the purpose of the CLOSE function in C64?","The purpose of the CLOSE function is to close a logical file after all I/O operations have been completed on that file, and it is called after the accumulator is loaded with the logical file number to be closed."
+"what is the call address of the CLOSE function in C64?","The call address of the CLOSE function is $FFC3 (hex) or 65475 (decimal)."
+"what is the communication register used by the CLOSE function?","The communication register used by the CLOSE function is the accumulator (A)."
+"what is the error return value of the CLOSE function in case of an error?","The error return value of the CLOSE function in case of an error is 0,240, which is the same as the READST error return value."
+"what is the stack requirement for the CLOSE function?","The stack requirement for the CLOSE function is 2+."
+"what registers are affected by the CLOSE function?","The registers affected by the CLOSE function are A, X, and Y."
+"how do you use the CLOSE function to close a logical file?","To use the CLOSE function to close a logical file, you load the accumulator with the number of the logical file to be closed, and then call the CLOSE routine."
+"in what situation is the CLOSE function typically called?","The CLOSE function is typically called after all I/O operations have been completed on a logical file."
+"what is the relationship between the CLOSE function and the OPEN function?","The CLOSE function is used to close a logical file that was previously opened using the OPEN function, and the same logical file number is used for both functions."
+"can you provide an example of how to use the CLOSE function?","Here is an example of how to use the CLOSE function: LDA #15; JSR CLOSE, which closes logical file number 15."
+"what is the significance of loading the accumulator with the logical file number before calling the CLOSE function?","Loading the accumulator with the logical file number before calling the CLOSE function is necessary because the CLOSE function uses this value to determine which file to close."

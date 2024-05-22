@@ -1,0 +1,11 @@
+question,answer
+"What is the meaning of K in the context of computer memory?","K is a computer term used to measure groups of memory units. It is similar to the word 'dozen' which stands for 12 units. In the context of computer memory, one K indicates 1024 units."
+"How much memory does a Commodore 64 have?","A Commodore 64 has 64K of memory, which is equal to 64*1024 or 65536 units of memory."
+"What is the range of POKE locations in a Commodore 64?","The POKE locations in a Commodore 64 are limited to the range 0 to 65535."
+"What is the purpose of the FRE function in Commodore 64 Basic?","The FRE function in Commodore 64 Basic is used to determine how much memory is available for use by BASIC."
+"What is free memory in a Commodore 64?","Free memory in a Commodore 64 is the memory that can be used to hold program information. It is the memory that remains after reserved areas for special computer chips and system software, including the BASIC language, have been provided for."
+"How much free memory does a Commodore 64 have?","A Commodore 64 has about 38K memory locations remaining after reserved areas have been provided for. This memory is called free memory."
+"What is the effect of a program getting longer in a Commodore 64?","As a program gets longer, more of the free memory is used up in a Commodore 64."
+"How does the FRE function determine the remaining free memory in a Commodore 64?","The FRE function in Commodore 64 Basic determines the remaining free memory by printing the number of memory locations that are still available for use by BASIC."
+"What is the purpose of the adjustment in the FRE function in Commodore 64 Basic?","The purpose of the adjustment in the FRE function in Commodore 64 Basic is to get the correct value of the free memory if the number printed is negative."
+"What is the meaning of a byte in the context of computer memory?","A byte is another name for one memory unit in the context of computer memory. It is equal to one memory location in a Commodore 64."

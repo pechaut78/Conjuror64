@@ -1,0 +1,11 @@
+question,answer
+"what is a locked file on a 1581 disk?","A locked file on a 1581 disk is a file that cannot be erased with the SCRATCH command, and can be recognized by the '<' character that immediately follows the file type in their directory entry."
+"how can you recognize a locked file on a 1581 disk?","A locked file on a 1581 disk can be recognized by the '<' character that immediately follows the file type in their directory entry."
+"what is the purpose of bit 6 of the file-type byte in a directory entry?","Bit 6 of the file-type byte in a directory entry is used to lock or unlock a file, where setting bit 6 locks the file and clearing it unlocks the file."
+"how do you lock a file on a 1581 disk?","To lock a file on a 1581 disk, you would set bit 6 of the file-type byte in the directory entry on the diskette."
+"how do you erase a locked file on a 1581 disk?","To erase a locked file on a 1581 disk, you would have to use a sector editor program to clear bit 6 of the file-type byte in the directory entry on the diskette."
+"what is the SCRATCH command used for?","The SCRATCH command is used to erase files, but it cannot erase locked files, which require a sector editor program to clear the lock bit."
+"what is the significance of the '<' character in a directory entry?","The '<' character in a directory entry indicates that the file is locked and cannot be erased with the SCRATCH command."
+"how do you unlock a file on a 1581 disk?","To unlock a file on a 1581 disk, you would clear bit 6 of the file-type byte in the directory entry on the diskette using a sector editor program."
+"what type of program is required to erase a locked file on a 1581 disk?","A sector editor program is required to erase a locked file on a 1581 disk, as it allows you to modify the directory entry and clear the lock bit."
+"why can't you erase a locked file with the SCRATCH command?","You can't erase a locked file with the SCRATCH command because the lock bit prevents it, and the SCRATCH command doesn't have the capability to clear the lock bit."

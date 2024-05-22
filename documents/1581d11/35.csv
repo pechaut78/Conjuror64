@@ -1,0 +1,11 @@
+question,answer
+"what is the syntax for the CONCAT command in C64 BASIC 7.0?","The syntax for the CONCAT command in C64 BASIC 7.0 is CONCAT [Ddrive#],\"add file\" TO [Ddrive#], \"master file\" [,Udevice#] where the optional \"drive#\" would be 0 in both cases."
+"what happens to the old \"master file\" when using the CONCAT command?","The old \"master file\" is deleted and replaced with a new \"master file\" which is the concatenation of the old \"master file\" and \"add file\"."
+"what is the maximum length of a command string in C64 BASIC 7.0?","The length of a command string (command and filenames) is limited to 41 characters."
+"what is the purpose of the CONCAT command in C64 BASIC 7.0?","The purpose of the CONCAT command is to concatenate the contents of an \"add file\" to a \"master file\", effectively replacing the old \"master file\" with the new concatenated file."
+"can you provide an example of using the CONCAT command in C64 BASIC 7.0?","For example, the command CONCAT 0,\"NEWFILE\" TO 0,\"MASTERFILE\" would concatenate the contents of \"NEWFILE\" to \"MASTERFILE\" on device 0."
+"what happens if you omit the device number in the CONCAT command?","If you omit the device number in the CONCAT command, it defaults to device 0."
+"can you explain the role of the \"add file\" in the CONCAT command?","The \"add file\" is the file whose contents are concatenated to the \"master file\" using the CONCAT command."
+"what is the significance of the \"master file\" in the CONCAT command?","The \"master file\" is the file to which the contents of the \"add file\" are concatenated using the CONCAT command."
+"can you provide a scenario where the CONCAT command would be useful?","A scenario where the CONCAT command would be useful is when you need to combine the contents of multiple files into a single file, such as combining multiple data files into a single data file."
+"what is the relationship between the \"add file\" and the \"master file\" in the CONCAT command?","The \"add file\" and the \"master file\" are combined using the CONCAT command, with the contents of the \"add file\" being appended to the contents of the \"master file\"."

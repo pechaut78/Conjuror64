@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the LEN function in C64 Basic?","The LEN function in C64 Basic is an integer function that counts the number of characters in a specified string. For example, if A$ = "COMPUTER", then PRINT LEN(A$) will output 8."
+"How do you list a program in current memory in C64 Basic?","To list a program in current memory in C64 Basic, you can use the LIST L(SHIFTED I) command."
+"What is the use of the LOAD L(SHIFTED O) command in C64 Basic?","The LOAD L(SHIFTED O) command in C64 Basic is used to load a program from tape or disk."
+"What does the LOG function do in C64 Basic?","The LOG function in C64 Basic is a mathematical function."
+"Can you explain the use of the MID$ function in C64 Basic?","The MID$ function in C64 Basic is a string function that returns a part of a string. It takes three arguments: the string, the starting position, and the length of the substring. For example, if A$ = "AROUNDTHEWORLD", then PRINT MID$(A$,10,5) will output 'WORLD'."
+"What is the syntax for using the LEN function in C64 Basic?","The syntax for using the LEN function in C64 Basic is LEN(string), where string is the string whose length you want to find."
+"How do you list a program in current memory starting from a specific line in C64 Basic?","To list a program in current memory starting from a specific line in C64 Basic, you can use the LIST command followed by the line number. For example, LIST 100 will list the program starting from line 100."
+"What is the maximum length of a string in C64 Basic?","In C64 Basic, the maximum length of a string is 255 characters."
+"Can you give an example of using the MID$ function in C64 Basic to extract a substring from a string?","Sure! Here's an example: if A$ = "HELLO WORLD", then PRINT MID$(A$,6,5) will output 'WORLD'."
+"What is the difference between the LEN function and the LENGTH function in C64 Basic?","There is no LENGTH function in C64 Basic. The LEN function is used to find the length of a string."

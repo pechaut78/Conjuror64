@@ -1,0 +1,11 @@
+question,answer
+"What is the error message that appears when reading the disk error channel before sending any disk commands on a 1581 disk?","The error message that appears is 'COPYRIGHT CBM DOS V10 1581', which is not always an error and can be used to check the version of DOS being used."
+"What does the error message 'COPYRIGHT CBM DOS V10 1581' indicate when it appears later, after other disk commands?","The error message indicates a mismatch between the DOS used to format the diskette and the DOS in the drive."
+"What is the purpose of the DOS in a computer system?","The purpose of the DOS, or Disk Operating System, is to manage and interact with disk storage devices."
+"What is the significance of the 'COPYRIGHT CBM DOS V10 1581' message when it appears initially?","The message is a handy way to check which version of DOS is being used, and it is not an error in this context."
+"How can you check which version of DOS is being used on a 1581 disk?","You can check the version of DOS by reading the disk error channel before sending any disk commands, which will display the 'COPYRIGHT CBM DOS V10 1581' message."
+"What is the difference between the initial 'COPYRIGHT CBM DOS V10 1581' message and the same message appearing later?","The initial message is not an error and is used to check the DOS version, while the later message indicates a mismatch between the DOS used to format the diskette and the DOS in the drive."
+"What does a mismatch between the DOS used to format the diskette and the DOS in the drive indicate?","It indicates that there is an incompatibility between the two, which can cause errors or issues with disk operations."
+"What is the relationship between the 1581 disk and the DOS?","The 1581 disk uses the DOS to manage and interact with the disk storage device."
+"How can you identify the version of DOS being used on a 1581 disk?","You can identify the version of DOS by reading the disk error channel before sending any disk commands, which will display the 'COPYRIGHT CBM DOS V10 1581' message."
+"What is the significance of the 'COPYRIGHT CBM DOS V10 1581' message in the context of disk operations?","The message is significant because it can indicate either a normal condition or an error, depending on the context in which it appears."

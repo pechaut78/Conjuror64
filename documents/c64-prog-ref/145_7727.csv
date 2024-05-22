@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for LSR in accumulator mode?","The opcode for LSR in accumulator mode is 4A, which takes 1 byte and 2 cycles to execute."
+"what is the addressing mode for LSR Oper,X?","The addressing mode for LSR Oper,X is Zero Page,X, which has an opcode of 56, takes 2 bytes, and executes in 6 cycles."
+"what is the difference in cycles between LSR Oper and LSR Oper,X?","The difference in cycles between LSR Oper and LSR Oper,X is 1 cycle, with LSR Oper taking 5 cycles and LSR Oper,X taking 6 cycles."
+"what is the opcode for LSR in absolute mode?","The opcode for LSR in absolute mode is 4E, which takes 3 bytes and 6 cycles to execute."
+"how many bytes does LSR Oper,X take?","LSR Oper,X takes 2 bytes."
+"what is the addressing mode for LSR Oper?","The addressing mode for LSR Oper is Zero Page, which has an opcode of 46, takes 2 bytes, and executes in 5 cycles."
+"what is the opcode for LSR A?","The opcode for LSR A is 4A, which takes 1 byte and 2 cycles to execute."
+"what is the difference in bytes between LSR Oper and LSR Oper,X?","The difference in bytes between LSR Oper and LSR Oper,X is 0 bytes, as both take 2 bytes."
+"what is the addressing mode for LSR Oper,X?","The addressing mode for LSR Oper,X is Zero Page,X, which has an opcode of 56, takes 2 bytes, and executes in 6 cycles."
+"what is the opcode for LSR Oper in absolute mode?","The opcode for LSR Oper in absolute mode is 4E, which takes 3 bytes and 6 cycles to execute."

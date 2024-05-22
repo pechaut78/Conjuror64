@@ -1,0 +1,8 @@
+
+
+
+address          $66            FACSGN
+Floating Point Accumulator #1: Sign
+
+A value of 0 here indicates a positive number, while a value of 255
+($FF) indicates a negative number.

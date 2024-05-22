@@ -1,0 +1,11 @@
+question,answer
+"what is the memory location that controls the border color on a C64?","The memory location that controls the border color on a C64 is 53280."
+"what is the memory location that controls the screen background color on a C64?","The memory location that controls the screen background color on a C64 is 53281."
+"how do you set the whole screen background to black on a C64?","You can set the whole screen background to black on a C64 by using the POKE command, specifically POKE 53280,0 : POKE 53281,0."
+"what is the effect of using POKE 53280,0 : POKE 53281,0 on a C64?","Using POKE 53280,0 : POKE 53281,0 on a C64 sets the whole screen background to black, which can be more restful on the eyes."
+"what are the two useful screen colour locations on a C64?","The two useful screen colour locations on a C64 are 53280, which controls the border colour, and 53281, which controls the screen background colour."
+"what is the purpose of POKE 53280,0 on a C64?","The purpose of POKE 53280,0 on a C64 is to set the border color to black."
+"what is the purpose of POKE 53281,0 on a C64?","The purpose of POKE 53281,0 on a C64 is to set the screen background color to black."
+"how do you change the border color on a C64?","You can change the border color on a C64 by using the POKE command and specifying the memory location 53280."
+"how do you change the screen background color on a C64?","You can change the screen background color on a C64 by using the POKE command and specifying the memory location 53281."
+"what is the benefit of setting the screen background to black on a C64?","Setting the screen background to black on a C64 can be more restful on the eyes."

@@ -1,0 +1,18 @@
+Some More C64 Hardware Tips
+Tony Lamartina of Chicago has another, but it's more suited to service technicians or those with access to necessary equipment.
+1. Remove metal cover from video RF area.
+2. Connect scope lead between ground and pin 1 of IC31. 3. Adjust R27 for 1.5 volt DC level.
+4. Connect scope lead between ground and pin 4 of DIN
+plug.
+5. Adjust R25 for midposition
+6. Connect decade box between pin 4 of DIN plug and
+right side of C78
+7. Adjust resistance of decade box for 0.8 to 1 volt of
+signal level on scope
+8. Connect resistor of value determined by decade box
+across pin 1 and pin 4 of DIN plug
+9. Fine adjust R25 for best display of colour monitor.
+Tony also suggests the following be checked on early re leases of the 64:
+1. Loose RF box covers. Tighten the metal tabs and re-in stall.
+2. Check for a missing heat sink on VR2-7805 voltage regulator. Install suitable heat sink.
+3. If the unit displays "sparkling" (interference across the CRT screen, random in nature) connect a 330 picoF capacitor from pin 20 (ground) to pin 30 (address 6) of the 6567 (VIC II) video chip. Make this connection outside the RF shielded box.

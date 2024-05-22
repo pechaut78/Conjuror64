@@ -1,0 +1,11 @@
+question,answer
+"What happens when an error occurs while a program is running in C64 Basic?","When an error occurs while a program is running in C64 Basic, execution stops immediately and the error message is printed, along with an indication of which line contains the error."
+"How can the lines be scrolled more slowly while a program is listing in C64 Basic?","Holding down the CTRL key while a program is listing will cause the lines to scroll more slowly in C64 Basic."
+"How can a specific line be listed using the LIST command in C64 Basic?","The LIST command can be used to list a specific line by typing the line number after the keyword in C64 Basic."
+"How can a line number range be specified after LIST in C64 Basic?","A line number range can be specified after LIST by placing a dash between the starting and ending line numbers in C64 Basic."
+"What is the effect of using LIST with a line number followed by a dash in C64 Basic?","Using LIST with a line number followed by a dash causes the listing to start at the line number and continue to the end of the program in C64 Basic."
+"What is the effect of using LIST with a dash followed by a line number in C64 Basic?","Using LIST with a dash followed by a line number causes the listing to start at the first line in the program and continue to the specified line number in C64 Basic."
+"How can the execution of a program be started at a line other than the first in C64 Basic?","The RUN command can be used to start execution at a line other than the first by specifying the line number after the keyword in C64 Basic. A line number range may not be used with this command."
+"What is the default starting point of execution when using the RUN command in C64 Basic?","The RUN command usually starts executing a program at the first line in C64 Basic."
+"Can a line number range be used with the RUN command in C64 Basic?","A line number range may not be used with the RUN command in C64 Basic."
+"What is the effect of using LIST with only a dash in C64 Basic?","Using LIST with only a dash causes the listing to start at the first line in the program and continue to the end of the program in C64 Basic."

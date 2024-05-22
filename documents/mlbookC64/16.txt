@@ -1,0 +1,11 @@
+
+Indirect indexed addressing is indicated by placing
+the operand in parentheses. This addressing mode is
+very efficient, because you can access the entire
+memory with a two-byte instruction. This mode is
+used for managing tables and loops. It is more
+flexible than the simple indexed addressing,
+because the entire memory range can be addressed,
+not just the memory in a single page. Only the
+contents of the two-byte pointer in the zero page
+need be changed.

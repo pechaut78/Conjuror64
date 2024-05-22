@@ -1,0 +1,5 @@
+
+
+
+address              $F5A5
+Print SEARCHING Message if in Direct Mode

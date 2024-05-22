@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of byte 02 in the 1581 disk format?","Byte 02 contains three flags: M (mode), X (reserved), X (reserved), X (reserved), 0 (fixed), 1 (fixed), 1 (fixed), and N (drive number). The M flag determines whether the disk will accept bytes 03-08 or format, create a directory, and BAM."
+"What is the default sector size in the 1581 disk format?","The default sector size is 512 bytes, but this can be overridden by specifying a different value in byte 03."
+"What is the purpose of byte 04 in the 1581 disk format?","Byte 04 specifies the last track number, with a default value of 79 if not specified."
+"How do you log a disk in using the 1581 disk format?","To log a disk in, you must follow CMD 4 with CMD 3 or CMD 6 once."
+"What is the purpose of byte 07 in the 1581 disk format?","Byte 07 is a fill byte, with a default value of $E5 if not specified."
+"What is the purpose of byte 08 in the 1581 disk format?","Byte 08 specifies the starting sector, with a default value of 1 if not specified."
+"What is the purpose of the M flag in byte 02 of the 1581 disk format?","The M flag determines whether the disk will accept bytes 03-08 or format, create a directory, and BAM."
+"What is the default starting track in the 1581 disk format?","The default starting track is 0, but this can be overridden by specifying a different value in byte 06."
+"What is the purpose of byte 05 in the 1581 disk format?","Byte 05 specifies the number of sectors, with a default value that depends on the sector size specified in byte 03."
+"What protocol does the 1581 disk format use?","The 1581 disk format uses the Conventional protocol."

@@ -1,0 +1,8 @@
+
+
+
+address         $B113
+Check If .A Register Holds Alphabetic ASCII Character
+
+This is part of the check for a valid variable name (it must start
+with an alphabetic character).

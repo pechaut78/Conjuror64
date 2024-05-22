@@ -1,0 +1,18 @@
+
+SCRATCH A FILE:
+EXPLANATION - When a file is scratched from the disk it is erased.
+The procedure is the same as to format, except that an S (scratch) is
+used instead of the N (new), and the ID is not used. It Is possible to
+scratch more than one file by using pattern matching, for example If
+there are two files and their names are test and track. You would type
+OPEN 15,8,15,"S:T*", both programs would be erased. Another
+example of this technique, used on three files with the names, rats,
+bats, and cats would be as follows:
+OPEN15,8,15,"S:?ATS", this would erase all three files.
+RENAME A FILE:
+OPEN15,8,15 'R:NEW NAME = OLD NAME' (press return key)
+(the rename command will now work with files that are open)
+EXPLANATION - This Is very simple, the R stands for rename. If you
+have a file with the name planes and you want to change the name to
+airplanes, you would type the following, OPEN15,8,15,"R:
+AIRPLANES = PLANES, (press return key).

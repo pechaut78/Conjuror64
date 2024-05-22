@@ -1,0 +1,23 @@
+question,answer
+"What is the purpose of the memory location at address $E8D1?","address              $E8D1
+PETASCII Color Code Equivalent Table
+
+This table gives the PETASCII values of the color change characters
+for each of the 16 possible colors.  These values are:
+
+144 ($90)  Change to color 0 (black)
+  5 ($05)  Change to color 0 (white)
+ 28 ($1C)  Change to color 0 (red)
+159 ($9F)  Change to color 0 (cyan)
+156 ($9C)  Change to color 0 (purple)
+ 30 ($1E)  Change to color 0 (green)
+ 31 ($1F)  Change to color 0 (blue)
+158 ($9E)  Change to color 0 (yellow)
+129 ($81)  Change to color 0 (orange)
+149 ($95)  Change to color 0 (brown)
+150 ($96)  Change to color 0 (light red)
+151 ($97)  Change to color 0 (dark gray)
+152 ($98)  Change to color 0 (medium gray)
+153 ($99)  Change to color 0 (light green)
+154 ($9A)  Change to color 0 (light blue)
+155 ($9B)  Change to color 0 (light gray)"

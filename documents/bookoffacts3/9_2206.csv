@@ -1,0 +1,11 @@
+question,answer
+"What is the command to load a Basic program file in Commodore 64?","The command to load a Basic program file in Commodore 64 is LOAD "PROGRAM" NAME, 8"
+"How do you load a machine language program in Commodore 64?","To load a machine language program in Commodore 64, use the command LOAD "PROGRAM NAME",8,1"
+"What is the difference between loading a Basic and a machine language program in Commodore 64?","In Commodore 64, the command LOAD "PROGRAM" NAME, 8 is used to load a Basic program, while LOAD "PROGRAM NAME",8,1 is used to load a machine language program."
+"What is the purpose of the number 8 in the load command for Commodore 64?","In Commodore 64, the number 8 in the load command specifies the device number for the tape drive."
+"What is the syntax for loading a program in Commodore 64?","The syntax for loading a program in Commodore 64 is LOAD "PROGRAM NAME", device number, secondary address"
+"What is the secondary address in the load command for Commodore 64?","In Commodore 64, the secondary address in the load command is an optional parameter used to specify the starting address of the program in memory."
+"What is the default device number for loading a program in Commodore 64?","In Commodore 64, the default device number for loading a program is 8, which corresponds to the tape drive."
+"What is the purpose of the quotation marks in the load command for Commodore 64?","In Commodore 64, the quotation marks in the load command are used to enclose the name of the program file being loaded."
+"What is the maximum file name length for a program in Commodore 64?","In Commodore 64, the maximum file name length for a program is 16 characters, not including the file extension."
+"What is the file extension for a Basic program in Commodore 64?","In Commodore 64, the file extension for a Basic program is .BAS or .BIN"

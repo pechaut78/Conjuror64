@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the memory location at address $BF11?","address         $BF11          FHALF
+The Constant Value 1/2 in Five-Byte Floating Point Notation
+
+This constant is used for rounding and SQR."

@@ -1,0 +1,11 @@
+question,answer
+"How do I clear the screen on a Commodore 64?","Hold down the <SHIFT> key and then depress the <CLR/HOME> key to clear the screen."
+"What is the purpose of typing NEW and pressing <RETURN> in the Commodore 64?","Typing NEW and pressing <RETURN> clears out any numbers that might have been left in the computer from previous experiments or programs."
+"What is the purpose of the line '10 ? "COMMODORE 64"' in the Commodore 64 program?","The line '10 ? "COMMODORE 64"' is used to print the string 'COMMODORE 64' to the screen, which is a common way to start a Commodore 64 program."
+"Why do I need to type '20 GOTO 10' in the Commodore 64 program?","The line '20 GOTO 10' is used to create an infinite loop that will continuously print the string 'COMMODORE 64' to the screen, creating a dynamic display."
+"What happens when I type RUN and press <RETURN> in the Commodore 64 program?","When you type RUN and press <RETURN>, the program will execute and the screen will come alive with the string 'COMMODORE 64' being printed repeatedly."
+"How do I stop the program from running on the Commodore 64?","To stop the program, press the <RUN/STOP> key, which will halt the execution of the program."
+"What is the purpose of the <SHIFT> key in the Commodore 64?","The <SHIFT> key is used in combination with other keys to perform specific functions, such as clearing the screen."
+"What is the function of the <CLR/HOME> key in the Commodore 64?","The <CLR/HOME> key is used to clear the screen and return the cursor to the home position."
+"Why do I need to hit <RETURN> after each line when typing a program on the Commodore 64?","Hitting <RETURN> after each line is necessary to execute the command and move to the next line in the program."
+"How do I start a new program on the Commodore 64?","To start a new program, type NEW and press <RETURN>, which clears out any previous programs or data, and then type in your new program."

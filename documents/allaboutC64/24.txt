@@ -1,0 +1,16 @@
+
+
+C64 Basic
+The END statement causes the computer to stop executing a
+program, and return to the immediate mode.
+• The syntax for the END statement consists only of the
+keyword END.
+• A program automatically ends after the last line has been
+executed, so there is no real need to put an END as the last
+line. Using END in this way is a formality, not a necessity.
+• END can be placed on a line by itself, or after other state
+ments on a line. This is often done in conjunction with the
+IF-THEN statement. It is sometimes desirable for a program
+to end early, such as when a potential error has been detected.
+• Statements placed after an END statement on the same line
+will never be executed.

@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $AFA7?","address         $AFA7          ISFUN
+Dispatch and Evaluate a Function
+
+If a BASIC function (like ASC('A')) is part of an expression, this
+routine will use the function dispatch table at 42242 ($A502) to set
+up the address of th proper function routine, and then branch to that
+routine."

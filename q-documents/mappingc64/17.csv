@@ -1,0 +1,13 @@
+question,answer
+"What is the purpose of the memory location at address $12?","address           $12            TANSGN
+Flag: Sign of the Result of the TAN or SIN Function
+
+This location is used to determine whether the sign of the value
+returned by the functions SIN or TAN is positive or negative.
+
+Additionally, the string and numeric comparison routines use this
+location to indicate the outcome of the comparison.  For a comparison
+of variable A to variable B, the value here will be 1 if A is greater
+than B, 2 if A equals B, and 4 if a is less than B.  If more than one
+comparison operator was used to compare the two variables (e.g., >= or
+<=), the value here will be a combination of the above values."

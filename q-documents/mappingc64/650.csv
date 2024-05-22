@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $FCB8?","address              $FCB8
+Terminate Cassette I/O
+
+This routine calls the subroutine above and returns from the
+interrupt."

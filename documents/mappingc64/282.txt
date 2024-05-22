@@ -1,0 +1,9 @@
+
+
+
+address         $B11D          NOTFNS
+Create a New BASIC Variable
+
+This routine makes space for a seven-byte descriptor by moving the
+variable storage area seven bytes higher in memory, and then creates
+the descriptor.

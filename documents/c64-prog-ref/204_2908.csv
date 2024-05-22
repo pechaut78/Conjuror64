@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the SETLFS function?","The purpose of the SETLFS function is to set up a logical file, which includes setting the logical file number, device address, and secondary address (command number) for other KERNAL routines."
+"What is the call address of the SETLFS function?","The call address of the SETLFS function is $FFBA (hex) or 65466 (decimal)."
+"What are the communication registers used by the SETLFS function?","The communication registers used by the SETLFS function are A, X, and Y."
+"What is the stack requirement for the SETLFS function?","The stack requirement for the SETLFS function is 2."
+"How do you use the SETLFS function to set a logical file number, device number, and command?","To use the SETLFS function, load the accumulator with the logical file number, load the X index register with the device number, and load the Y index register with the command. Then, call the SETLFS function using JSR SETLFS."
+"What is the range of device addresses that can be used with the SETLFS function?","The range of device addresses that can be used with the SETLFS function is 0 to 31."
+"What does a device address of 0 represent in the SETLFS function?","A device address of 0 represents the Keyboard in the SETLFS function."
+"What happens when a device number of 4 or greater is used with the SETLFS function?","When a device number of 4 or greater is used with the SETLFS function, it automatically refers to devices on the serial bus."
+"What is the purpose of the secondary address in the SETLFS function?","The purpose of the secondary address in the SETLFS function is to send a command to the device on the serial bus after the device number is sent during the serial attention handshaking sequence."
+"How do you indicate that no secondary address is to be sent with the SETLFS function?","To indicate that no secondary address is to be sent with the SETLFS function, set the Y index register to 255."

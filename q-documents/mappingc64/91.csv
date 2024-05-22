@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $B5?","address          $B5            NXTBIT
+RS-232 Next Bit to Send/Tape EOT Flag
+
+This location is used by the RS-232 routines to hold the next bit to
+be sent, and by the tape routines to indicate what part of a block the
+read routine is currently reading."

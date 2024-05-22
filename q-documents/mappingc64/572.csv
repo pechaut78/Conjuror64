@@ -1,0 +1,9 @@
+question,answer
+"What is the purpose of the memory location at address $EC44?","address              $EC44
+Set Lowercase/Uppercase or Uppercase/Graphics Character Set
+
+The part of the Kernal CHROUT routine that outputs to the screen uses
+this subroutine to check for the special nonprinting characters that
+switch the character set (CHR$(14) and CHR$(142)).  If one of these is
+the character to be printed, this routine makes the switch by setting
+the location 53272 ($D018) accordingly."

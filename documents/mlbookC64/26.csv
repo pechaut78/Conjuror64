@@ -1,0 +1,11 @@
+question,answer
+"What is the effect of the BIT instruction on registers?","The BIT instruction does not change the contents of any registers. It affects only the flags."
+"What operation does the BIT instruction perform on the accumulator and the addressed memory location?","The contents of the accumulator are ANDed with the contents of the addressed memory location."
+"What happens to the Z flag when the final result of the BIT instruction is zero?","If the final result is zero, the Z flag is set."
+"What happens to the Z flag when the final result of the BIT instruction is not zero?","Otherwise, it is cleared."
+"What is stored in the V flag after the execution of the BIT instruction?","The value of the sixth bit of the addressed location is placed into the V flag."
+"What is stored in the N flag after the execution of the BIT instruction?","The seventh bit of the addressed location is put in the N flag."
+"What is the advantage of using the BIT instruction to check two bits of a memory location?","The advantage of using the BIT instruction to check two bits of a memory location is that it does not disturb the contents of any of the registers."
+"What is the initial value of the accumulator in the given example?","In the given example, the initial value of the accumulator is $10."
+"What is the memory address being accessed in the given example?","In the given example, the memory address being accessed is $1234."
+"What is the value stored at the memory address being accessed in the given example?","In the given example, the value stored at the memory address being accessed is $43."

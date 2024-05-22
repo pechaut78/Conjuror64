@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $400-$7FF?","address     $400-$7FF      VICSCN
+Video Screen Memory Area
+
+This is the default location of the video screen memory area, which
+contains the video matrix and the sprite data pointers.  Keep in mind,
+however, that the video screen memory area can be relocated to start
+on any even 1K boundary.  Its location at any given moment is
+getermined by the VIC-II chip memory control register at 53272
+($D018), and the VIC-II memory bank select bits on CIA #2 Data Port A
+(56576, $DD00)."

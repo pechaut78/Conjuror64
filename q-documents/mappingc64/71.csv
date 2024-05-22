@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the memory location at address $99?","address           $99            DFLTN
+Default Input Device (Set to 0 for Keyboard)
+
+The default value of this location is 0, which designates the keyboard
+as the current input device.  That value can be changed by the Kernal
+routine CHKIN (61966, $F20E), which uses this location to store the
+device number of the device whose file it defines as an input channel.
+
+BASIC calls CHKIN whenever the command INPUT# or GET# is executed, but
+clears the channel after the input operation has been completed."

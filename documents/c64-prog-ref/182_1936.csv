@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the CIOUT function?","The purpose of the CIOUT function is to transmit a byte over the serial bus."
+"what is the call address of the CIOUT function?","The call address of the CIOUT function is $FFA8 (hex) or 65448 (decimal)."
+"what are the preparatory routines required before calling the CIOUT function?","The preparatory routines required before calling the CIOUT function are LISTEN and SECOND (if a secondary address is needed)."
+"what is the role of the accumulator in the CIOUT function?","The accumulator is loaded with a byte to be sent as data on the serial bus, and it is used for handshaking."
+"what happens if a device is not listening when the CIOUT function is called?","If a device is not listening when the CIOUT function is called, the status word will return a timeout."
+"how does the CIOUT function handle the transmission of data?","The CIOUT function always buffers one character, holding the previous character to be sent back, and when the UNLSN routine is called to end the data transmission, the buffered character is sent with an End Or Identify (EOI) set."
+"what is the sequence of steps to use the CIOUT function?","The sequence of steps to use the CIOUT function is: 1) use the LISTEN KERNAL routine (and the SECOND routine if needed), 2) load the accumulator with a byte of data, and 3) call the CIOUT routine to send the data byte."
+"what is the significance of the UNLSN routine in relation to the CIOUT function?","The UNLSN routine is used to end the data transmission, and when called, the buffered character is sent with an End Or Identify (EOI) set, and then the UNLSN command is sent to the device."
+"what is the error return mechanism of the CIOUT function?","The error returns of the CIOUT function are handled according to the READST routine."
+"what is the stack requirement of the CIOUT function?","The stack requirement of the CIOUT function is 5."

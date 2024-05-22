@@ -1,0 +1,8 @@
+
+
+
+address          $310           USRPOK
+Jump Instruction for User Function ($4C)
+
+The value here (67, $4C) is first part of the 6510 machine language
+JuMP instruction for the USR command.

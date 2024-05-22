@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $B8FE?","address         $B8FE          NORMAL
+Normalize Floating Point Accumulator #1"

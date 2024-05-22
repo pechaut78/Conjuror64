@@ -1,0 +1,20 @@
+
+C64 Basic:
+In general, the three distinguishing characteristics of a vari
+able are its name, value, and type.
+• The availability of string variables makes the GET statement
+much more useful. GET will assign the indicated string vari
+able the null value if no key is pressed. Otherwise, a single
+character will be assigned, according to the key pressed.
+The INPUT statement is used to input strings longer than
+one character.
+• Pressing RETURN only in response to an input prompt of ?
+does not change the value of the variable being assigned. But
+entering nothing for ?? causes all unassigned string variables
+in the variable list to be assigned the null string.
+• String variables can also be included in the variable list for
+READ.
+• The quote marks that delimit a character string are optional
+when used in DATA statements. The only time that they
+have to be used is when the string includes a comma or
+colon as one of its characters.

@@ -1,0 +1,35 @@
+question,answer
+"What is the purpose of the memory location at address $D4?","address          $D4            QTSW
+Flag: Editor in Quote Mode? 0=No
+
+A nonzero value in this location indicates that the editor is in quote
+mode.  Quote mode is toggled every time that you type in a quotation
+mark on a given line--the first quote mark turns it on, the second
+turns it off, the third turns it back on, etc.
+
+If the editor is in this mode when a cursor control character or other
+nonprinting character is entered, a printed equivalent will appear on
+the screen instead of the cursor movement or other control operation
+taking place.  Instead, that action is deferred until the string is
+sent to the string by a PRINT statement, at which time the cursor
+movement or other control operation will take place.
+
+The exception to this rule is the DELETE key, which will function
+normally within quote mode.  The only way to print a character which
+is equivalent to the DELETE key is by entering insert mode (see
+loctaion 216 ($D8)).  Quote mode may be exited by printing a closing
+quote, or by hitting the RETURN or SHIFT-RETURN keys.
+
+Sometimes, it would be handy to be able to escape from quote mode or
+insert mode without skipping to a new line.  The machine language
+program below hooks into the keyscan interrupt routine, and allows you
+to escape quote mode by changing this flag to 0 when you press the f1
+key:
+
+10 FOR I=850 TO I+41:READ A:POKE I,A:NEXT
+20 PRINTCHR$(147)'PRESS F1 KEY TO ESCAPE QUOTE MODE'
+30 PRINT'TO RESTART AFTER RESTORE ONLY, SYS 850':SYS850:NEW
+40 DATA  173 , 143 , 2 , 141 , 46 , 3 , 173 , 144 , 2 , 141
+50 DATA 47 , 3 , 120 , 169 , 107 , 141 , 143 , 2 , 169 , 3
+60 DATA 141 , 144 , 2 , 88 , 96 , 165 , 203 , 201 , 4 , 208
+70 DATA 8 , 169 , 0 , 133 , 212 , 133 , 216 , 133 , 199 , 108 , 46 , 3"

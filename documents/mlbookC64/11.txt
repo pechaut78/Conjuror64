@@ -1,0 +1,19 @@
+
+
+Zero-page addressing
+Another addressing mode is called the zero-page
+addressing mode. This addressing mode can be used
+if the address of the data is in memory locations
+between 0 and $FF (255). This results in a two-byte
+instruction in contrast to the three-byte instruc
+tion of the absolute addressing mode. Zero-page
+addressing instructions occupy less memory and
+execute faster. A disadvantage, of course, is that
+the data must be located in addresses from 0 to
+255.
+Where did the term zero-page originate? You can
+think of the 64K of memory as being divided into
+256 pages, each containing 256 bytes. Thus memory
+locations 0 thru 255 form page zero.
+A zero-page load instruction looks like this:
+LDA $73

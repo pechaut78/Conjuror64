@@ -1,0 +1,11 @@
+question,answer
+"How many hardware sprites does the VIC have?","The VIC has eight hardware sprites."
+"What is the size of each sprite in pixels?","Each sprite is 24x21 pixels."
+"What is the purpose of the last 24 characters of the $0400=1024 bytes area?","The index to the sprite's bitmap data in memory is an 8 bit value that is read from the last 8 bytes of screen RAM."
+"What is the effect of setting bits in a sprite's bitmap data?","Set bits will be drawn in the sprite's individual foreground color."
+"What is the purpose of the sprite multicolor registers?","The codes 01 and 11 take the color out of the sprite multicolor registers ($D025 and $D026), which are shared among all sprites."
+"How do sprites interact with background pixels?","Sprites can be shown in front or behind background pixels."
+"What happens when two non-transparent sprite pixels are drawn at the same position on the screen?","Whenever two non-transparent sprite pixels are drawn at the same position on the screen, they have collided."
+"How do newer games typically handle sprite collisions?","Most newer games do not use the hardware functionality, but instead test for overlapping sprite bounding boxes in software."
+"What is the effect of X- and Y-expanding a sprite?","Sprites can be X- and Y-expanded by a factor of two."
+"What is the purpose of the 01 code in the character data?","The 01 code in the character data also counts as background, allowing a background picture to be constructed that does not cause collisions in certain areas."

@@ -1,0 +1,55 @@
+question,answer
+"What is the purpose of the memory location at address $288?","address          $288           HIBASE
+Top Page of Screen Memory
+
+This location contains the value used by the Operating System routines
+that print to the screen as the base address for screen RAM.  The top
+of screen memory can be found by multiplying this location by 256.
+The default value for screen RAM is set on power-up to location 1024
+($400), and this location therefore usually contains a 4.
+
+Screen display memory on the Commodore 64 can be moved to start on any
+1K boundary (location evenly divisible by 1024).  This is done by
+manipulating the VIC-II chip memory bank select at location 56576
+($DD00).
+
+It is important to note, however, that while any area may be
+displayed, the Operating System will look here to find out where it
+should PRINT characters.  Therefore, if you change the screen location
+by altering the contents of one of the two addresses listed above, the
+Operating System will still not know where to PRINT characters unless
+you also change this address as well.  The result will be that
+characters entered from the keyboard or PRINTed will not appear on the
+screen.
+
+Examples of how to properly relocate the screen can be found at the
+entries for location 53272 ($D018) and 43 ($2B).
+
+Since the PRINT command in essence just POKEs a lot of values to
+screen and color memory, by changing this pointer you can print a
+string of characters to memory locations other than screen RAM.  For
+example, you could PRINT a sprite shape to memory without having to
+READ a lot of DATA statements.  The program below PRINTs different
+sprite shapes into the sprite data area:
+
+10 SP=53248:POKESP,170:POKESP+1,125:POKESP+21,1:POKE 2040,13:PRINT CHR$(147)
+20 A$='THIS TEXT WILL BE PRINTED TO THE SPRITE SHAPE DATA AREA AND DISPLAYED'
+30 GOSUB 100
+40 A$='THIS IS SOME DIFFERENT TEXT TO BE PRINTED TO THE SPRITE SHAPE AREA'
+50 GOSUB 100
+60 COUNT=COUNT+1:IF COUNT<15 THEN 20
+70 END
+100 POKE 648,3:PRINT CHR$(19);CHR$(17);SPC$(24);A$;:POKE 648,4:RETURN
+
+Since PRINTing also changes color memory, you can change the pointer
+to print the characters harmlessly to ROM, while changing a lot of
+screen RAM at one time, as the following program demonstrates:
+
+10 D$=CHR(94):FOR I=1 TO 4:D$=D$+D$:NEXT
+20 PRINT CHR$(147);:FOR I=1 TO 7:PRINT TAB(10) D$:NEXT:PRINT:PRINT:PRINT:PRINT
+30 PRINT TAB(9);CHR$(5);'HIT ANY KEY TO STOP'
+40 DIM C(15):FOR I=0TO14:READ A:C(I)=A:NEXT:DATA2,8,7,5,6,4,1,2,8,7,5,6,4,1,2
+50 POKE 53281,0:POKE 648,212:FOR J=0 TO 6:PRINT CHR$(19);
+60 FOR I=J TO J+6:POKE 646,C(I):PRINT TAB(10) D$:NEXT I,J
+70 GET A$:IF A$='' THEN 50
+80 POKE 648,4:POKE 646,1"

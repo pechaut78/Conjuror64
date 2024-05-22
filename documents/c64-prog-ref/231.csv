@@ -1,0 +1,11 @@
+question,answer
+"Where are the paddle values read from?","The paddle values are read via the SID registers 54297 ($D419) and 54298 ($D41A)."
+"What is the issue with reading paddles from BASIC alone?","PADDLES ARE NOT RELIABLE WHEN READ FROM BASIC ALONE!!!!"
+"What is the recommended way to use paddles from BASIC or machine code?","The best way to use paddles, from BASIC or machine code, is to use the following machine language routine..."
+"What is the purpose of the `pdlrd` routine?","The `pdlrd` routine is a four paddle read routine that can also be used for two paddles or analog joysticks."
+"What is the function of the `buffer` variable in the `pdlrd` routine?","The `buffer` variable is used to save the current value of the CIA Data Direction Register (DDRA)."
+"What is the purpose of the `sei` instruction in the `pdlrd` routine?","The `sei` instruction is used to disable interrupts while the paddles are being read."
+"How does the `pdlrd` routine wait for a short period of time?","The `pdlrd` routine waits for a short period of time using a loop that decrements the Y register until it reaches zero."
+"What is the purpose of the `sta sid+25` and `sta sid+26` instructions?","The `sta sid+25` and `sta sid+26` instructions are used to read the X and Y values of the paddle, respectively."
+"How does the `pdlrd` routine handle the fire buttons of the paddles?","The `pdlrd` routine reads the fire buttons of the paddles by reading the value of the `porta` register and storing it in the `btna` and `btnb` variables."
+"What is the purpose of the `cli` instruction at the end of the `pdlrd` routine?","The `cli` instruction is used to re-enable interrupts after the paddles have been read."

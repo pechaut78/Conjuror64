@@ -1,0 +1,13 @@
+
+
+
+address   $A480-$A49B    MAIN
+Main Loop, Receives Input and Executes Immediately or Stores as
+Program Line
+
+This is the main BASIC program loop.  It jumps through the RAM vector
+at 770 ($302), so this routine can be diverted.  The routine gets a
+line of input from the keyboard, and checks for a line number.  If
+there is a line number, the program branches to the routine that
+stores a line of program text.  If there is no line number, it
+branches to the routine that executes statements.

@@ -1,0 +1,11 @@
+question,answer
+"How much memory can the VIC address at a time?","The VIC can address 16 KB at a time."
+"What is the size of the screen RAM?","The screen RAM is $0400 bytes in size."
+"What is the size of the character set?","The character set is $0800 bytes."
+"What is the size of the bitmap?","The bitmap is $2000 bytes."
+"What is the size of sprites?","Sprites are $40 bytes."
+"How can the VIC be switched between banks?","By changing the lower 2 bits of $DD02, the VIC can be switched between banks."
+"What happens when the VIC is set to banks $0000 or $8000?","If the VIC is set to banks $0000 or $8000, then the two built-in character sets shadow RAM in the area of $1000-$1FFF."
+"Why is color information not taken from main RAM?","For timing reasons, color information is not taken from main RAM, but from a dedicated Color RAM."
+"Where is the Color RAM accessible to the C64?","The Color RAM is accessible to the C64 at $D800-$DBFF."
+"Can the Color RAM be bank switched?","No, the Color RAM can not be bank switched."

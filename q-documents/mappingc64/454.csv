@@ -1,0 +1,23 @@
+question,answer
+"What is the purpose of the memory location at address $DC00-$DC0F?","address        $DC00-$DC0F
+Complex Interface Adapter (CIA) #1 Registers
+
+Locations 56320-56335 ($DC00-$DC0F) are used to communicate with the
+Complex Interface Adapter chip #1 (CIA #1).  This chip is a successor
+to the earlier VIA and PIA devices used on the VIC-20 and PET.  This
+chip functions the same way as the VIA and PIA:  It allows the 6510
+microprocessor to communicate with peripheral input and output
+devices.  The specific devices that CIA #1 reads data from and sends
+data to are the joystick controllers, the paddle fire buttons, and the
+keyboard.
+
+In addition to its two data ports, CIA #1 has two timers, each of
+which can count an interval from a millionth of a second to a
+fifteenth of a second.  Or the timers can be hooked together to count
+much longer intervals.  CIA #1 has an interrupt line which is
+connected to the 6510 IRQ line.  These two timers can be used to
+generate interrupts at specified intervals (such as the 1/60 second
+interrupt used for keyboard scanning, or the more complexly timed
+interrupts that drive the tape read and write routines).  As you will
+see below, the CIA chip has a host of other features to aid in
+Input/Output functions."

@@ -1,0 +1,10 @@
+
+
+
+address              $E38B
+Error Message Handler
+
+This routine to print error messages is pointed to by the vector at
+768 ($300).  Using the .X register as an index, it either prints an
+error message from the table at 41363 ($A193) or the READY prompt, and
+continues through the vector at 770 ($302) to the main BASIC loop.

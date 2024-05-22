@@ -1,0 +1,10 @@
+
+
+
+address              $ED09          TALK
+Send TALK to a Device on the Serial Bus
+
+This is a documented Kernal routine whose entry in the jump table is
+65460 ($FFB4).  When called, it ORs the device number in the
+Accumulator with the TALK code (64, $40) and sends it on the serial
+bus.  This commands the device to TALK.

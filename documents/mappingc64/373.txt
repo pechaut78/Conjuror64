@@ -1,0 +1,14 @@
+
+
+
+address         $BFED          EXP
+Perform EXP
+
+This routine calculates the natural logarithm e (2.718281828...)
+raised to the power in FAC1.  The result is left in FAC1.
+
+This routine is split between the BASIC ROM wich ends at 49151 ($BFFF)
+and the Kernal ROM which begins at 57344 ($E000).  Therefore, a JMP
+$E000 instruction is tacked on to the end, which makes the BASIC
+routines in the 64 Kernal ROM three bytes higher in memory than the
+corresponding VIC-20 routines.

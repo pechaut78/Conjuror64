@@ -1,0 +1,11 @@
+question,answer
+"what is required to draw complex shapes on the C64?","All that is required is a coordinate file which holds all the necessary drawing coordinates and status information such as skip to the next point and end of file."
+"how can we store the X,y coordinates?","We can store the X,y coordinates as simple pairs of numbers in the range 0—319 for the X coordinate and 0—199 for the Y coordinate."
+"what is the purpose of the status information in the coordinate file?","The status information is used to indicate skip to the next point and end of file."
+"what values can be used to indicate skip to the next point and end of file?","We can use —1 to indicate skip to the next point and —2 to indicate the end of the file."
+"what is the advantage of using machine code routines over BASIC PLOT and LINEDRAW?","The machine code routines are much faster than the BASIC PLOT and LINEDRAW routines."
+"how can we store the coordinate file data?","The easiest way to store this sort of data is in BASIC DATA statements."
+"what is the range of values for the X coordinate?","The X coordinate values range from 0 to 319."
+"what is the range of values for the Y coordinate?","The Y coordinate values range from 0 to 199."
+"what is the purpose of the coordinate file?","The coordinate file holds all the necessary drawing coordinates and status information."
+"what is the benefit of using a coordinate file?","It allows us to draw almost any complex shape on the C64."

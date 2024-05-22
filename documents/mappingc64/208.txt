@@ -1,0 +1,24 @@
+
+
+
+address        $8000
+Autostart ROM Cartridge
+
+An 8K or 16K autostart ROM cartridge designed to use this as a
+starting memory address may be plugged into the Expansion Port on the
+back.  If the cartridge ROM at locations 32772-32776 ($8004-$8008)
+contains the numbers 195, 194, 205, 56, 48 ($C3, $C2, $CD, $38, $30)
+when the computer powers up, it will start the program pointed to by
+the vector at locations 32768-32769 ($8000-$8001), and will use
+32770-32771 ($8002-$8003) for a warm start vector when the RESTORE key
+is pressed.  These characters are PETASCII for the inverse letters
+CBM, followed by the digits 80.  An autostart cartridge may also be
+addressed at 40960 ($A000), where it would replace BASIC, or at 61440
+($F000), where it would replace the Kernal.
+
+It is possible to have a 16K cartridge sitting at 32768 ($8000), such
+as Simon's BASIC, which can be turned on and off so that the BASIC ROM
+underneath can also be used.  Finally, it is even possible to have
+bank-selected cartridges, which turn banks of memory in the cartidge
+on and off alternately, so that a 32K program could fit into only 16K
+of addressing space.

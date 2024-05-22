@@ -1,0 +1,12 @@
+question,answer
+"what is the purpose of the CHKIN function?","The purpose of the CHKIN function is to open a channel for input, allowing the program to read data from a logical file that has already been opened by the KERNAL OPEN routine, as long as the device on the channel is an input device."
+"What is the call address of the CHKIN function?","The call address of the CHKIN function is $FFC6 (hex) or 65478 (decimal)."
+"What communication register is used by the CHKIN function?","The communication register used by the CHKIN function is X."
+"What is the preparatory routine required by the CHKIN function?","The preparatory routine required by the CHKIN function is OPEN."
+"What error returns can occur when using the CHKIN function?","The error returns that can occur when using the CHKIN function are #3: File not open, #5: Device not present, and #6: File not an input file."
+"What registers are affected by the CHKIN function?","The registers affected by the CHKIN function are A and X."
+"In what situations is the CHKIN function required?","The CHKIN function is required when getting data from anywhere other than the keyboard, and it must be called before using either the CHRIN or the GETIN KERNAL routines for data input."
+"How do you use the CHKIN function with a device on the serial bus?","When the CHKIN function is used with a device on the serial bus, it automatically sends the talk address (and the secondary address if one was specified by the OPEN routine) over the bus."
+"What is the procedure to use the CHKIN function?","The procedure to use the CHKIN function is to first OPEN the logical file (if necessary), load the X register with the number of the logical file to be used, and then call the CHKIN routine using a JSR command."
+"What is an example of using the CHKIN function?","An example of using the CHKIN function is to prepare for input from logical file 2 by loading the X register with the value 2 and then calling the CHKIN routine, as shown in the following code snippet: LDX #2; JSR CHKIN."
+"In what situations can the CHKIN function be skipped?","The CHKIN function can be skipped if you want to use the input from the keyboard, and no other input channels are opened."

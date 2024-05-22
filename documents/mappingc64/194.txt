@@ -1,0 +1,5 @@
+
+
+
+address      $326-$327      IBSOUT
+Vector to Kernal CHROUT Routine (Currently at 61898 ($F1CA))

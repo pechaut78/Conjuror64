@@ -1,0 +1,9 @@
+
+
+
+address         $AD8A          FRMNUM
+Evaluate a Numeric Expression and/or Check for Data Type Mismatch
+
+This routine can be called from different entry points to check the
+current data against the desired data type (string or numeric) to see
+if they match.  If they don't, a TYPE MISMATCH error will result.

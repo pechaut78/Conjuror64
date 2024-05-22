@@ -1,0 +1,11 @@
+question,answer
+"What is the initial value of all variables in C64 Basic?","The initial, or default, value of all variables in C64 Basic is 0."
+"How are new values assigned to variables in C64 Basic?","New values are assigned to variables in C64 Basic using the LET statement."
+"What is the syntax for the LET statement in C64 Basic?","The syntax for the LET statement in C64 Basic is: LET variable name = number or expression."
+"What happens during the execution of a LET statement in C64 Basic?","During the execution of a LET statement in C64 Basic, the value to the right of the equal sign is determined first, and then it is assigned to the variable specified to the left of the equal sign."
+"Can variables be used like numbers in C64 Basic?","Yes, variables can be used just like numbers in C64 Basic."
+"What is the effect of the LET statement on the screen in C64 Basic?","The LET statement does not cause anything to be printed on the screen in C64 Basic."
+"What is the default value of a variable before it is assigned a new value in C64 Basic?","The default value of a variable before it is assigned a new value in C64 Basic is 0."
+"What is the role of the LET keyword in assigning new values to variables in C64 Basic?","The LET keyword is used to assign new values to variables in C64 Basic. The syntax is: LET variable name = number or expression."
+"What happens to the value on the right side of the equal sign during the execution of a LET statement in C64 Basic?","The value on the right side of the equal sign is determined first during the execution of a LET statement in C64 Basic, and then it is assigned to the variable specified to the left of the equal sign."
+"What is the impact of using a variable in C64 Basic, as if it were a number?","Using a variable in C64 Basic as if it were a number allows you to perform mathematical operations and assign the result to the variable. This is done using the LET statement."

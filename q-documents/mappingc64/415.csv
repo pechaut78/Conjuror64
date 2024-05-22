@@ -1,0 +1,3 @@
+question,answer
+"What is the purpose of the memory location at address $D028?","address              $D028          SP1COL
+Sprite 1 Color Register (the default color value is 2, red)"

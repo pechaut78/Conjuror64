@@ -1,0 +1,11 @@
+question,answer
+"Where is the sprite to sprite collision register located in the VIC-II chip control register?","The sprite to sprite collision register is located at location 53278 ($D01E in HEX) in the VIC-II chip control register."
+"What happens to the bits in the sprite to sprite collision register when a collision is detected?","When a collision is detected, the corresponding bit in the sprite to sprite collision register is set to 1, indicating that the sprite is involved in a collision."
+"What happens to the bits in the sprite to sprite collision register after they are read?","Once the bits in the sprite to sprite collision register are read (PEEKed), they are automatically cleared, so it is a good idea to save the value in a variable until you are finished with it."
+"Can collisions occur even when sprites are off screen?","Yes, collisions can take place even when the sprites are off screen."
+"How can you preserve the value of the sprite to sprite collision register after reading it?","You can preserve the value of the sprite to sprite collision register by saving it in a variable until you are finished with it."
+"What is the purpose of the sprite to sprite collision register?","The purpose of the sprite to sprite collision register is to recognize sprite to sprite collisions and flag them for the computer to take action."
+"How many bits are in the sprite to sprite collision register?","Each sprite has a bit in the sprite to sprite collision register, so the number of bits depends on the number of sprites being used."
+"What happens if you don't save the value of the sprite to sprite collision register after reading it?","If you don't save the value of the sprite to sprite collision register after reading it, the value will be lost because the register is automatically cleared after being read."
+"In what format is the location of the sprite to sprite collision register typically represented?","The location of the sprite to sprite collision register is typically represented in hexadecimal format, which is $D01E in this case."
+"Why is it important to read the sprite to sprite collision register carefully?","It is important to read the sprite to sprite collision register carefully because the register is automatically cleared after being read, and you may lose the value if you don't save it in a variable."

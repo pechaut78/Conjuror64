@@ -1,0 +1,11 @@
+question,answer
+"What is the default behavior of the SAVE command if no additional parameters are provided?","The SAVE command will store the program currently in memory on cassette, overwriting any existing program on the tape, so be careful with your tapes or you may erase a valuable program."
+"What is the purpose of providing a name in quotes or a string variable after the SAVE command?","The computer will give the program that name, so it can be more easily located and retrieved in the future."
+"What is the significance of the device number that can be provided after the program name?","The device number specifies the device to save the program to, such as a cassette or disk."
+"What is the purpose of the second number that can be provided after the device number?","The second number, either 0 or 1, determines whether an END-OF-TAPE marker is placed after the program, signaling the computer not to look any further on the tape if an additional LOAD command is given."
+"What happens if an END-OF-TAPE marker is encountered during a LOAD command?","If an END-OF-TAPE marker is encountered, the computer will return a FILE NOT FOUND ERROR."
+"How can a program be saved to disk instead of cassette?","By providing a device number corresponding to the disk drive, such as 8, after the program name, the program will be saved to disk instead of cassette."
+"What is the difference between SAVE and SAVE with a name in quotes?","SAVE without a name will save the program to tape without a name, while SAVE with a name in quotes will save the program to tape with the specified name."
+"Can a string variable be used as the program name?","Yes, a string variable, such as A$, can be used as the program name by providing it after the SAVE command."
+"What is the syntax to save a program to tape with a name and an END-OF-TAPE marker?","The syntax is SAVE \"name\",1,1, where \"name\" is the desired program name."
+"How can a program be saved to tape without a name?","By simply typing SAVE and RETURN, the program will be saved to tape without a name."

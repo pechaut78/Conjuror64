@@ -1,0 +1,8 @@
+question,answer
+"What is the purpose of the memory location at address $E5A0?","address              $E5A0
+Set Default I/O Devices and Set Default Values for VIC-II Chip
+Registers
+
+This routine sets the keyboard and screen as the current input and
+output devices.  It then writes the default values found in the table
+at 60601 ($ECB9) to the VIC-II chip."

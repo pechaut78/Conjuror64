@@ -1,0 +1,12 @@
+
+C64 basic:
+PRINT is a versatile statement used to output information to
+the screen.
+• If a value is placed after the keyword, it will be printed be-
+ginning at the place on the screen currently pointed to by
+the cursor.
+• After a PRINT statement is executed, the computer prints a
+RETURN, which moves the cursor back to the left edge and
+down one row.
+• If no value is specified after the PRINT keyword, the auto-
+matic RETURN leaves a blank line on the screen.

@@ -1,0 +1,15 @@
+
+The Compare instructions
+These instructions compare the contents of a register
+and the contents of a memory location. These instructions
+alter neither the register nor the memory contents,
+affecting only the flags. You can determine the
+relationship of the two numbers by examining the flags.
+The compare instructions work by logically "subtracting11
+the contents of the addressed memory contents from the
+contents of the register and setting the flags as if an
+actual subtration occurred. The register contents are not
+changed. The £, N, and Z flags are affected depending on
+the result of the "subraction". There are compare
+commands for the three work registers of the
+microprocessor.

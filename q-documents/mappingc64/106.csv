@@ -1,0 +1,7 @@
+question,answer
+"What is the purpose of the memory location at address $C8?","address          $C8            INDX
+Pointer: End of Logical Line for Input
+
+This pointer indicates the column number of the last nonblank
+character on the logical line that is to be input.  Since a logical
+line can be up to 80 characters long, this number can range from 0-79."

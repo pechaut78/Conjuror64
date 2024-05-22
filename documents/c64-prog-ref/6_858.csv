@@ -1,0 +1,11 @@
+question,answer
+"what is the maximum amount of memory that the VIC-II chip can access at a time?","The VIC-II chip can access 16K of memory at a time, which is a limitation that requires bank selection to access the entire 64K of memory in the Commodore 64."
+"How many banks of memory are there in the Commodore 64?","There are 4 possible banks of 16K memory in the Commodore 64, which can be accessed by controlling the bank select bits in the CIA#2 chip."
+"What is the purpose of the bank select bits in the CIA#2 chip?","The bank select bits in the CIA#2 chip are used to control which 16K bank of memory the VIC-II chip looks at, allowing access to the entire 64K of memory."
+"How are the bank select bits controlled?","The bank select bits are controlled using the POKE and PEEK BASIC statements (or their machine language versions) to set bits 0 and 1 of PORT A of CIA#2 (location 56576) and setting bits 0 and 1 of location 56578 ($DD02,HEX) to change banks."
+"What is the default bank setting when the Commodore 64 is powered on?","When the Commodore 64 is powered on, bits 0 and 1 of location 56576 are automatically set to BANK 0 ($0000-$3FFF) for all display information."
+"What is the significance of the bank concept in the VIC-II chip?","The 16K bank concept is crucial in the VIC-II chip, as it affects where character data patterns come from, where the screen is, where sprites come from, etc. and it's essential to be aware of which bank the VIC-II chip is pointing at."
+"How do you set bits 0 and 1 of PORT A of CIA#2 to outputs?","You set bits 0 and 1 of PORT A of CIA#2 to outputs by setting bits 0 and 1 of location 56578 ($DD02,HEX) using the POKE statement, for example: POKE 56578,PEEK(56578)OR 3."
+"What is the purpose of the POKE statement in the bank selection process?","The POKE statement is used to change banks by setting the bank select bits in the CIA#2 chip, for example: POKE 56576,(PEEK(56576)AND 252)OR A."
+"In which banks is the Commodore 64 character set not available to the VIC-II chip?","The Commodore 64 character set is not available to the VIC-II chip in BANKS 1 and 3."
+"How do you change banks using machine language?","You change banks using machine language by controlling bits 0 and 1 of PORT A of CIA#2 (location 56576) and setting bits 0 and 1 of location 56578 ($DD02,HEX) to outputs, similar to the POKE statement."

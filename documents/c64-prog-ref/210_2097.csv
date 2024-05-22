@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the TALK function?","The purpose of the TALK function is to command a device on the serial bus to TALK."
+"What is the call address of the TALK function in hexadecimal?","The call address of the TALK function in hexadecimal is $FFB4."
+"What is the decimal equivalent of the call address of the TALK function?","The decimal equivalent of the call address of the TALK function is 65460."
+"What register is used for communication in the TALK function?","The accumulator (A) is used for communication in the TALK function."
+"What is the preparatory routine required for the TALK function?","There is no preparatory routine required for the TALK function."
+"What is the error return mechanism for the TALK function?","The error return mechanism for the TALK function is the same as the READST function."
+"How much stack is required for the TALK function?","The TALK function requires 8 bytes of stack."
+"What register is affected by the TALK function?","The accumulator (A) is affected by the TALK function."
+"How do you use the TALK function to command a device?","To use the TALK function, load the accumulator with the device number and then call the TALK function."
+"What is an example of using the TALK function to command device #4?","An example of using the TALK function to command device #4 is: LDA #4, JSR TALK."

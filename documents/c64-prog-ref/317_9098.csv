@@ -1,0 +1,11 @@
+question,answer
+"what is the function of PW LO/PW HI registers in the C64?","These registers form a 12-bit number that linearly controls the Pulse Width (duty cycle) of the Pulse waveform on Oscillator 1, with a resolution that allows for smooth sweeping without discernable stepping."
+"how is the pulse width determined in the C64?","The pulse width is determined by the equation PWout = (PWn/40.95) %, where PWn is the 12-bit number in the Pulse Width registers."
+"what happens when the Pulse Width registers are set to 0 or 4095 ($FF)?","A value of 0 or 4095 ($FF) in the Pulse Width registers will produce a constant DC output."
+"what happens when the Pulse Width registers are set to 2048 ($800)?","A value of 2048 ($800) in the Pulse Width registers will produce a square wave."
+"what is the condition for the Pulse Width registers to have an audible effect?","The Pulse waveform on Oscillator 1 must be selected in order for the Pulse Width registers to have any audible effect."
+"in what format is the 12-bit number stored in the Pulse Width registers?","The 12-bit number is stored in the Pulse Width registers with bits 4-7 of PW HI not used."
+"what is the range of values that can be stored in the Pulse Width registers?","The Pulse Width registers can store values ranging from 0 to 4095 ($FF), which corresponds to a 12-bit number."
+"how does the pulse width resolution affect the output waveform?","The pulse width resolution allows the width to be smoothly swept with no discernable stepping, resulting in a smooth output waveform."
+"in what way do the Pulse Width registers control the Pulse waveform on Oscillator 1?","The Pulse Width registers control the Pulse waveform on Oscillator 1 by linearly controlling the Pulse Width (duty cycle) of the waveform."
+"what is the relationship between the Pulse Width registers and the Oscillator 1 waveform?","The Pulse Width registers directly control the Pulse Width (duty cycle) of the Pulse waveform on Oscillator 1, allowing for precise control over the waveform's characteristics."

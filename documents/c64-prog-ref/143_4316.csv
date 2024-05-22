@@ -1,0 +1,11 @@
+question,answer
+"what is the opcode for loading index X with immediate value","The opcode for loading index X with an immediate value is A2, which requires 2 bytes and takes 2 cycles to execute."
+"What is the addressing mode used in the instruction LDX Oper","The addressing mode used in the instruction LDX Oper is Zero Page, which uses the opcode A6, requires 2 bytes, and takes 3 cycles to execute."
+"How many bytes are required to execute the instruction LDX Oper,Y","The instruction LDX Oper,Y requires 2 bytes and takes 4 cycles to execute, using the opcode B6 and the Zero Page,Y addressing mode."
+"What is the opcode for loading index X with an absolute value","The opcode for loading index X with an absolute value is AE, which requires 3 bytes and takes 4 cycles to execute."
+"What is the addressing mode used in the instruction LDX Oper,Y with absolute addressing","The addressing mode used in the instruction LDX Oper,Y with absolute addressing is Absolute,Y, which uses the opcode BE, requires 3 bytes, and takes 4 cycles to execute, with an additional cycle added if a page boundary is crossed."
+"How many cycles does it take to execute the instruction LDX #Oper","The instruction LDX #Oper takes 2 cycles to execute."
+"What is the difference in cycles between LDX Oper and LDX Oper,Y","The instruction LDX Oper takes 3 cycles to execute, while the instruction LDX Oper,Y takes 4 cycles to execute, making a difference of 1 cycle."
+"How many bytes are required to execute the instruction LDX #Oper","The instruction LDX #Oper requires 2 bytes."
+"What is the opcode for loading index X with a zero page value","The opcode for loading index X with a zero page value is A6, which requires 2 bytes and takes 3 cycles to execute."
+"What is the addressing mode used in the instruction LDX Oper with absolute addressing","The addressing mode used in the instruction LDX Oper with absolute addressing is Absolute, which uses the opcode AE, requires 3 bytes, and takes 4 cycles to execute."

@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the BNE instruction in 6502 assembly language?","The BNE instruction, short for Branch on result not zero, is used to alter the program flow based on the result of a previous operation. It checks the zero flag and if it is clear, i.e., the result is not zero, the program counter is loaded with the target address, effectively branching to that location."
+"What is the addressing mode used by the BNE instruction?","The BNE instruction uses the relative addressing mode, which means that the target address is specified as an offset from the current program counter."
+"What is the assembly language form of the BNE instruction?","The assembly language form of the BNE instruction is BMI Oper, where Oper is the target address or label."
+"What is the OP code for the BNE instruction?","The OP code for the BNE instruction is D0."
+"How many bytes does the BNE instruction occupy in memory?","The BNE instruction occupies 2 bytes in memory."
+"How many cycles does the BNE instruction take to execute?","The BNE instruction takes 2 cycles to execute, but this can increase to 3 or 4 cycles if the branch occurs to the same page or a different page, respectively."
+"What happens to the program counter when the BNE instruction is executed?","When the BNE instruction is executed, the program counter is loaded with the target address if the zero flag is clear, effectively branching to that location."
+"What is the condition for the BNE instruction to branch to a new location?","The BNE instruction branches to a new location if the zero flag is clear, i.e., the result of the previous operation is not zero."
+"How does the BNE instruction handle page boundaries?","The BNE instruction adds 1 cycle to its execution time if the branch occurs to the same page, and adds 2 cycles if the branch occurs to a different page."
+"What is the purpose of the zero flag in the context of the BNE instruction?","The zero flag is used by the BNE instruction to determine whether to branch to a new location or not. If the zero flag is set, the result of the previous operation is zero, and the branch is not taken."

@@ -1,0 +1,14 @@
+question,answer
+"What is the purpose of the memory location at address $F1CA?","address              $F1CA          CHROUT
+Output a Byte
+
+This is a documented Kernal routine whose jump table entry point is at
+65490 ($FFD2).  The routine jumps through a RAM vector at 806 ($326).
+It is probably one of the best known and most used Kernal routines,
+because it sends the character in the Accumulator to the current
+output device.  Unless a device has been OPENed and designated as the
+current output channel using the CHKOUT routine, the character is
+printed to the screen, which is the default output device.  If the
+cassette is the current device, outputting a byte will only add it to
+the buffer.  No actual transmission of data will occur until the
+192-byte buffer is full."

@@ -1,0 +1,12 @@
+
+
+
+C64 Basic:
+• The default value for all string variables is the null string.
+• The CLR statement sets all string variables to the null string.
+• Both types of variables can be used in the same variable list
+for PRINT, GET, INPUT, and READ. However, the TYPE
+MISMATCH error will be printed if an attempt is made to
+incorrectly mix the two types. In any variable assignment,
+the value being assigned must be of the same type as the
+variable name to which it is assigned.

@@ -1,0 +1,15 @@
+
+C64 Basic:
+A part of a string, consisting of contiguous characters in the
+string, is called a substring.
+• The substring functions differ from other functions in that
+their names are not always three characters long, and they
+take multiple arguments of different types.
+• The LEFTS and RIGHTS functions need a string for the first
+argument, and a number for the second argument. The
+substring returned is the leftmost or rightmost characters
+in the string. The length of the substring is determined by
+the second argument.
+• LEFT$ and RIGHTS can be used to split a character string
+into two parts, thereby reversing the process of
+concatenation.

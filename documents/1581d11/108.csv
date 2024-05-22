@@ -1,0 +1,11 @@
+question,answer
+"What is the meaning of the MODE bit in the status byte?","The MODE bit indicates whether the disk is in Alien Disk Format (non-default physical format, or default physical format without Directory and BAM information) or Resident Disk Format (default physical format with Directory and BAM information). A value of 1 indicates Alien Disk Format, while a value of 0 indicates Resident Disk Format."
+"What is the purpose of the DN bit in the status byte?","The DN bit represents the drive number."
+"What is the default sector size for a 1581 disk?","The default sector size for a 1581 disk is 512 bytes, which is represented by the binary code 10 in the SECTOR SIZE field of the status byte."
+"What does a CONTROLLER STATUS code of 0010 indicate?","A CONTROLLER STATUS code of 0010 indicates that the header block cannot be found."
+"What is the meaning of a CONTROLLER STATUS code of 1000?","A CONTROLLER STATUS code of 1000 indicates a write protect error, meaning that the disk is write-protected and cannot be written to."
+"How is the sector size of a 1581 disk determined?","The sector size of a 1581 disk is determined by the SECTOR SIZE field in the status byte, which can have a value of 00 (128 bytes, not supported), 01 (256 bytes), 10 (512 bytes, default), or 11 (1024 bytes)."
+"What is the Resident Disk Format?","The Resident Disk Format is the default physical format for a 1581 disk, which includes Directory and BAM information."
+"What does a CONTROLLER STATUS code of 1011 indicate?","A CONTROLLER STATUS code of 1011 indicates that the disk has been changed, meaning that the disk has been removed or replaced."
+"What is the meaning of a CONTROLLER STATUS code of 0110?","A CONTROLLER STATUS code of 0110 indicates a format error, meaning that the disk is not formatted correctly."
+"What does a CONTROLLER STATUS code of 000X indicate?","A CONTROLLER STATUS code of 000X indicates that the operation was successful and there are no errors."

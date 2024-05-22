@@ -1,7 +1,6 @@
 question,answer
 "What is the purpose of the OPEN function?","To open a logical file"
 "What is the call address of the OPEN function?","$FFC0 (hex) 65472 (decimal)"
-"What communication registers are used by the OPEN function?","None"
 "What preparatory routines are required before using the OPEN function?","SETLFS, SETNAM"
 "What error returns can occur when using the OPEN function?","1,2,4,5,6,240, READST"
 "What registers are affected by the OPEN function?","A, X, Y"

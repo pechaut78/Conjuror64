@@ -1,0 +1,21 @@
+question,answer
+"What is the purpose of the memory location at address $FF5B?","address              $FF5B          CINT
+Initialize Screen Editor and VIC-II Chip
+
+This is a documented Kernal routine whose entry in the jump table is
+located at 65409 ($FF81).
+
+The start of the routine appears to be a patch that was added to later
+versions of the Kernal.  It first calls the old routine at 58648
+($E518).  This initializes the VIC-II chip to the default values, sets
+the keyboard as the input device and the screen as the output device,
+initializes the cursor flash variables, builds the screen line link
+table, clears the screen, and homes the cursor.  The new code then
+checks the VIC Interrupt register to see if the conditions for a
+Raster Compare IRQ have been fulfilled.  Since the Raster Register was
+initialized to 311, that can only occur when using a PAL system (NTSC
+screens do not have that many scan lines).  The PAL/NTSC register at
+678 ($2A6) is set on the basis of the outcome of this test.  The CIA
+#1 Timer A is then set to cause an IRQ interrupt every sixtieth of a
+second, using the prescaler figures for a PAL or NTSC system, as
+appropriate."

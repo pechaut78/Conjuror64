@@ -1,0 +1,8 @@
+
+
+
+Branch on zero flag
+A branch when the zero flag is set results from the
+instruction "branch on equal," shortened to BEQ, If the
+branch is to be made on a cleared zero flag, the
+instruction is called "branch not equal," BNE.

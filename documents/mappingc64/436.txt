@@ -1,0 +1,8 @@
+
+
+
+address              $D40D          SUREL2
+Voice 2 Sustain/Release Control Register
+
+Bits 0-3:  Select release cycle duration (0-15)
+Bits 4-7:  Select sustain volume level (0-15)

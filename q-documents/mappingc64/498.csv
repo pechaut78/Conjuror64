@@ -1,0 +1,10 @@
+question,answer
+"What is the purpose of the memory location at address $E156?","address              $E156          SAVE
+Perform SAVE
+
+This routine sets the range of addresses to be saved from the start of
+BASIC program text and end of BASIC program text pointers at 43 ($2B)
+and 45 ($2D), and calls the Kernal SAVE routine.  This means that any
+area of memory can be saved by altering these two pointers to point to
+the starting and ending address of the desired area, and then changing
+them back."

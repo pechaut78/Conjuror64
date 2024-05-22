@@ -1,0 +1,5 @@
+question,answer
+"What is the purpose of the memory location at address $FFFA?","address              $FFFA
+Non-Maskable Interrupt Hardware Vector
+
+This vector points to the main NMI routine at 65091 ($FE43)."

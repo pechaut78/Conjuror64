@@ -1,0 +1,811 @@
+question,answer
+"Give a sample code for raster bars in ASM","
+;making simple rasterbars
+;by Knoeki of Digital Sounds System
+;
+;was coded and proven to work in Turbo Assembler 5.2 (Cyberpunx RR)
+;
+;should be compatible with most assemblers out there..
+;
+;                                                          enjoy ;)
+
+         *=$080d
+
+         sei              ;disable interrupts
+
+         lda #$00         ;load $00 into A
+         sta $d011        ;turn off screen. (now you have only borders!)
+         sta $d020        ;make border black.
+
+main     ldy #$7a         ;load $7a into Y. this is the line where our rasterbar will start.
+         ldx #$00         ;load $00 into X
+loop     lda colors,x     ;load value at label 'colors' plus x into a. if we don't add x, only the first 
+                          ;value from our color-table will be read.
+
+         cpy $d012        ;ComPare current value in Y with the current rasterposition.
+         bne *-3          ;is the value of Y not equal to current rasterposition? then jump back 3 bytes (to cpy).
+
+         sta $d020        ;if it IS equal, store the current value of A (a color of our rasterbar)
+                          ;into the bordercolour
+
+         cpx #51          ;compare X to #51 (decimal). have we had all lines of our bar yet?
+         beq main         ;Branch if EQual. if yes, jump to main.
+
+         inx              ;increase X. so now we're gonna read the next color out of the table.
+         iny              ;increase Y. go to the next rasterline.
+
+         jmp loop         ;jump to loop.
+
+
+colors
+         .byte $06,$06,$06,$0e,$06,$0e
+         .byte $0e,$06,$0e,$0e,$0e,$03
+         .byte $0e,$03,$03,$0e,$03,$03
+         .byte $03,$01,$03,$01,$01,$03
+         .byte $01,$01,$01,$03,$01,$01
+         .byte $03,$01,$03,$03,$03,$0e
+         .byte $03,$03,$0e,$03,$0e,$0e
+         .byte $0e,$06,$0e,$0e,$06,$0e
+         .byte $06,$06,$06,$00,$00,$00
+
+         .byte $ff
+
+;-----------------------------------------------------------------
+;
+;if everything goes correctly, you should have a blue rasterbar on
+;the middle of your screen. play with the values a bit, and see
+;what you can do with it... 
+"
+"give a sample for raster bars","
+;coded by Bitbreaker Oxyron ^ Nuance ^ Arsenic
+;feel free to change $d020/$d021 to other registers like $d022/$d023 for effects with multicolor charsets
+;as you see, there are plenty of cycles free for more action.
+ 
+        * = $2000
+ 
+tmpa    = $22
+tmpx    = $23
+tmpy    = $24
+tmp_1   = $25
+ 
+         sei
+         lda #$7f
+         sta $dc0d
+         lda $dc0d
+         lda #$01
+         sta $d01a
+         sta $d019
+         lda #$32
+         sta $d012
+         lda $d011
+         and #$3f
+         sta $d011
+         lda #$34
+         sta $01
+         lda #<irq1
+         sta $fffe
+         lda #>irq1
+         sta $ffff
+         cli
+         jmp *
+ 
+irq1
+         ;irq enter stuff
+         sta tmpa
+         stx tmpx
+         sty tmpy
+         lda $01
+         sta tmp_1
+         lda #$35
+         sta $01
+         dec $d019
+ 
+         ldx #$01
+         dex
+         bpl *-1
+ 
+         ;do raster
+         jsr raster
+ 
+         ;exit irq
+         lda tmp_1
+         sta $01
+         ldy tmpy
+         ldx tmpx
+         lda tmpa
+         rti
+ 
+raster  
+         ldx #$00
+--
+         ldy #$07       ;2
+ 
+         lda tab,x      ;4
+         sta $d020      ;4
+         sta $d021      ;4
+         inx            ;2
+         cpx #$c8       ;2
+         beq +          ;2
+         nop            ;2 _20
+-
+         lda tab,x      ;4
+         sta $d020      ;4
+         sta $d021      ;4
+         jsr +          ;12
+         jsr +          ;12
+         jsr +          ;12 _48
+         nop            ;2
+         inx            ;2
+         cpx #$c8       ;2
+         beq +          ;2
+         dey            ;2
+         beq --         ;2 / 3 _61 (+2)
+         bne -          ;3     _63
++
+         rts
+ 
+!align 255, 0
+ 
+;your colors go here
+tab
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+        !text '@kloaolk'
+"
+"give a minimalistic sample for raster bars",";coded by Graham/Oxyron
+
+	*= $c000
+
+	lda #$7f
+	sta $dc0d
+	and $d011
+	sta $d011
+	lda #$32
+	sta $d012
+
+	sei
+	lda #<irq
+	sta $0314
+	lda #>irq
+	sta $0315
+	lda #$01
+	sta $d01a
+	cli
+	rts
+
+irq:
+	lda #$ff
+	sta $d019
+
+	ldx #$05
+d	dex
+	bne d
+
+	ldx #$00
+c	ldy #$08
+a	lda colors,x
+	sta $d020
+	sta $d021
+	inx
+	dey
+	beq c
+
+	txa
+	ldx #$07
+b	dex
+	bne b
+	tax
+
+	cpx #$8c
+	bcc a
+
+	jmp $ea34
+
+	*= $c100
+colors:
+	.byte $09,$02,$08,$0a,$0f,$07,$01,$07,$0f,$0a,$08,$02,$09,$00
+	.byte $06,$04,$0e,$05,$03,$0d,$01,$0d,$03,$05,$0e,$04,$06,$00
+	.byte $09,$02,$08,$0a,$0f,$07,$01,$07,$0f,$0a,$08,$02,$09,$00
+	.byte $06,$04,$0e,$05,$03,$0d,$01,$0d,$03,$05,$0e,$04,$06,$00
+	.byte $09,$02,$08,$0a,$0f,$07,$01,$07,$0f,$0a,$08,$02,$09,$00
+	.byte $06,$04,$0e,$05,$03,$0d,$01,$0d,$03,$05,$0e,$04,$06,$00
+	.byte $09,$02,$08,$0a,$0f,$07,$01,$07,$0f,$0a,$08,$02,$09,$00
+	.byte $06,$04,$0e,$05,$03,$0d,$01,$0d,$03,$05,$0e,$04,$06,$00
+	.byte $09,$02,$08,$0a,$0f,$07,$01,$07,$0f,$0a,$08,$02,$09,$00
+	.byte $06,$04,$0e,$05,$03,$0d,$01,$0d,$03,$05,$0e,$04,$06,$00"
+"give a sample for stabilized raster bars",";64tass format
+;taken from s451-1 intro, stabilized and NTSC support added
+;without delay table-values
+
+	* = $1000
+		
+	sei		
+loop	lda #$42		;must start on a badline. ($x2 or $xA)
+-	cmp $d012
+	bne -
+	cmp ($00),y
+	ldx #$00
+	ldy #$01
+	nop			;NTSC : change this byte to $d1, becomes cmp ($ea),y
+br1	nop
+	cmp ($00,x)
+br2	lda #$00		;NTSC : change this to lda $00,x
+	cmp ($00,x)
+		
+	inx
+	lda col1,x
+	sta val1+1
+	lda col2,x
+	sta val2+1
+	dex
+
+	lda col1,x
+	sta $d021
+	sta $d020
+	lda col2,x
+	sta $d022
+	inx
+	dey
+	bne br1
+val1	lda #$00		;badline code. Y=0
+	sta $d021		;NTSC : change this to sta$d021,y	
+	sta $d020		;NTSC : change this to sta$d020,y
+val2	lda #$00		
+	sta $d022,y
+	nop
+	nop
+	ldy #$07
+	inx
+	cpx #$22		;this value should be $x2 or $xA
+	bne br2
+	jmp loop
+		
+	* = $1100		;test colors - new page = to avoid +1 cycle
+		
+col1	.byte $01,$00,$01,$00,$01,$00,$01,$00
+	.byte $01,$00,$01,$00,$01,$00,$01,$00
+	.byte $01,$00,$01,$00,$01,$00,$01,$00
+	.byte $01,$00,$01,$00,$01,$00,$01,$00
+	.byte $01,$00
+
+col2	.byte $02,$00,$02,$00,$02,$00,$02,$00
+	.byte $02,$00,$02,$00,$02,$00,$02,$00
+	.byte $02,$00,$02,$00,$02,$00,$02,$00
+	.byte $02,$00,$02,$00,$02,$00,$02,$00
+	.byte $02,$00"
+"Give an exemple of overlapped raster bars","overlapping_raster:
+  lda rspeed         ;Control speed for scrolling/overlap
+  cmp #2             ;before calling routine.
+  beq waitend
+  inc rspeed
+  rts
+waitend
+  lda #0               
+  sta rspeed
+  jsr movesilver     ;Subroutine to move silver bars
+  jsr backup         ;Subroutine to backup still raster colours
+  rts
+  
+;This subroutine performs the main movement of the black + grey raster bars
+  
+movesilver
+   lda ras2end-1          ;Grab last byte of the silver bar raster table
+   sta rtemp1             ;put to a temp byte.
+   ldx #ras2end-ras2start 
+loop2   
+   lda ras2start,x        ;Shift the raster forward to the next
+   sta ras2start+1,x      ;byte
+   dex
+   bpl loop2
+   lda rtemp1
+   sta ras2start
+   rts
+   
+   ;This routine does a backup of the main static raster bar
+   
+backup
+   ldx #ras1backupend-ras1backup 
+loop3   
+   lda ras1backup,x 
+   sta ras1start,x 
+   dex
+   bpl loop3
+   
+   ;This routine reads the silver raster bars. If the zero byte (colour BLACK)
+   ;is detected on the table, it skips that byte and will read 
+   ;the next byte. Any colour other than the zero byte will be stored
+   ;to the main raster's table.
+   
+copysilver
+   ldx #ras2end-ras2start 
+loop4   
+   lda ras2start,x
+   cmp #0
+   beq next 
+   sta ras1start,x
+next
+   dex
+   bpl loop4
+   rts
+   
+; ... Some pointers and tables:
+
+rtemp1 !byte 0
+rtemp2 !byte 0
+rspeed !byte 0
+
+
+ras1start
+  !byte $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+  !byte $00,$06,$00,$06,$06,$00,$06,$06,$0e,$06,$0e,$0e,$06,$0e,$0e,$03
+  !byte $0e,$03,$03,$0e,$03,$03,$01,$03,$01,$0e,$01,$03,$0e,$03,$03,$0e
+  !byte $03,$0e,$0e,$06,$0e,$0e,$06,$0e,$06,$06,$00,$06,$06,$00,$06,$00
+  !byte $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+ras1end
+  !byte 0
+  
+ras2start
+  !byte $0b,$0c,$0f,$01,$0f,$0c,$0b,$00,$00,$00,$00,$00,$00,$00,$00,$00
+  !byte $0b,$0c,$0d,$01,$0f,$0c,$0b,$00,$00,$00,$00,$00,$00,$00,$00,$00
+  !byte $0b,$0c,$0d,$01,$0f,$0c,$0b,$00,$00,$00,$00,$00,$00,$00,$00,$00
+  !byte $0b,$0c,$0d,$01,$0f,$0c,$0b,$00,$00,$00,$00,$00,$00,$00,$00,$00
+  !byte $0b,$0c,$0d,$01,$0f,$0c,$0b,$00,$00,$00,$00,$00,$00,$00,$00,$00
+ras2end 
+  !byte 0
+  
+ras1backup
+  !byte $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+  !byte $00,$06,$00,$06,$06,$00,$06,$06,$0e,$06,$0e,$0e,$06,$0e,$0e,$03
+  !byte $0e,$03,$03,$0e,$03,$03,$01,$01,$01,$01,$01,$03,$0e,$03,$03,$0e
+  !byte $03,$0e,$0e,$06,$0e,$0e,$06,$0e,$06,$06,$00,$06,$06,$00,$06,$00
+  !byte $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+ras1backupend
+  !byte 0 "
+  "Give an exemple of a 1char size scroller","=4000
+
+                jsr $ff81
+                jsr $ff84
+                jsr $ff8a
+                ldx #$00
+                stx $d020           ;black border
+                stx $d021           ;black screen
+                dex
+                stx $0286           ;light grey cursor
+                jsr $e544           ;clear screen
+
+                lda #$00
+                sta smooth          ;clear var
+                sta $f0            
+                lda #$30            ;set text start to $3000 (zp $f0+$f1)
+                sta $f1
+
+                sei                 ;set up irq
+                lda #$01
+                sta $d01a
+                sta $dc0d
+                lda #<irq
+                sta $0314
+                lda #>irq
+                sta $0315
+                lda #$1b
+                sta $d011
+                lda #$fa
+                sta $d012
+                cli
+                jmp *
+
+
+irq             inc $d019
+                jsr scroller      ;scroll
+                lda #$1b
+                sta $d011
+                lda #$fa
+                sta $d012
+                lda smooth         ;smooth it
+                sta $d016
+                jmp $ea31
+
+scroller
+                lda smooth
+                sec
+                sbc #$01            ;$01-$07 Higher is faster scroll
+                bcc scroll0
+                sta smooth
+                rts
+scroll0         and #$07            ;only 3 bits needed for smooth
+                sta smooth
+                ldx #$00
+move0           lda $0401,x         ;move first $28 characters on top line
+                sta $0400,x
+                inx
+                cpx #$28
+                bne move0
+                ldy #$00
+                lda ($f0),y         ;fetch 1 char from scroll text
+                cmp #$ff            ;if value is $ff reset text to $3000
+                beq zp0
+                inc $f0             ;inc $f0/$f1 to fetch next scrolltext char
+                lda $f0
+                bne noc0
+                inc $f1
+noc0            rts
+zp0             lda #$00
+                sta $f0
+                lda #$30
+                sta $f1
+                rts
+
+smooth          .byte $00"
+"Give an exemple of 8x8 plasma in ASM","//--------------------------------------------------------------------------------------------------
+// 8x8 Plasma Crap w/o Speedcode
+// For Codebase64
+// By Cruzer/CML 2009
+// Asm: KickAss 3.1
+//--------------------------------------------------------------------------------------------------
+// memory...
+.var plasmaCnt =	$02
+.var add =		$04
+.var yPos =		$05
+.var screen =		$0400
+.var basic =		$0801
+.var sine64 =		$1000
+.var sine128 =		$1200
+.var colorTable =	$1400
+.var bitmap =		$2000
+.var code =		$4000
+//--------------------------------------------------------------------------------------------------
+.pc = sine64 "sine64"
+.for (var i=0; i<$200; i++)
+	.by 32 + 32 * sin(i/[$100/2/PI])
+.pc = sine128 "sine128"
+.for (var i=0; i<$200; i++)
+	.by 64 + 64 * sin(i/[$100/2/PI])
+//--------------------------------------------------------------------------------------------------
+.pc = $0801 "basic"
+:BasicUpstart(code)
+//--------------------------------------------------------------------------------------------------
+.pc = code "code"
+	jmp start
+//--------------------------------------------------------------------------------------------------
+// plasma params...
+.var width = 20
+.var height = 20
+.var sineSpreadX = 	$03
+.var sineSpreadY =	$01
+.var colorSpreadX = 	$01
+.var colorSpreadY = 	$02
+.var realtimeSpread0 =	$04
+.var realtimeSpread1 =	$07
+sineSpeeds:	.byte $03,$fe
+addSpeed:	.byte $ff
+colors:		.byte $a7,$aa,$8a,$2a,$b8,$95,$b5,$c5,$55,$5f,$cd,$5d,$37,$dd,$d1,$11
+//--------------------------------------------------------------------------------------------------
+start:
+	sei
+//clear screen...
+	ldx #$00
+	txa
+!:	sta $0400,x
+	sta $0500,x
+	sta $0600,x
+	sta $0700,x
+	inx
+	bne !-
+	
+// fill bitmap...
+	ldx #0
+	ldy #$1f
+	lda #%01010101
+!:	sta bitmap,x
+	eor #%11111111
+	inx
+	bne !-
+	inc !- +2
+	dey
+	bpl !-
+
+// generate color table...
+
+	ldx #0
+!loop:
+	txa
+	asl
+	asl
+	asl
+	bcc !+
+	eor #$ff
+!:	lsr
+	lsr
+	lsr
+	lsr
+	tay
+	lda colors,y
+	sta colorTable,x
+	sta colorTable+$100,x
+	inx
+	bne !loop-
+
+// init vic...
+	lda #$3b
+	sta $d011
+	lda #$18
+	sta $d018
+
+//--------------------------------------------------------------------------------------------------
+mainLoop:
+	lda #$00
+	sta $d020
+	lda #$44
+!:	cmp $d012
+	bne !-
+	sta $d020
+	
+	lda plasmaCnt+0
+	clc
+	adc sineSpeeds+0
+	sta plasmaCnt+0
+	lda plasmaCnt+1
+	clc
+	adc sineSpeeds+1
+
+	sta plasmaCnt+1
+	lda add
+	clc
+	adc addSpeed
+	anc #$3f
+	sta add
+
+	lda #<screen
+	sta store+1
+	lda #>screen
+	sta store+2
+	
+	lda #0
+	sta sine0+1
+	sta sine1+1
+	sta rtSine+1
+	sta color+1
+
+	lda #height-1
+	sta yPos
+yLoop:
+	ldx plasmaCnt + 0
+	ldy plasmaCnt + 1
+	clc
+sine0:	lda sine128,x
+sine1:	adc sine64,y
+	sta lineOffset
+	
+	lda sine0+1
+	clc
+	adc #realtimeSpread0
+	sta sine0+1
+
+	lda sine1+1
+	clc
+	adc #realtimeSpread1
+	sta sine1+1
+
+	ldx #width-1
+xLoop:
+	lda sineOffsets,x
+	clc
+	adc lineOffset
+	tay
+	lda colorOffsets,x
+	clc
+rtSine:	adc sine64,y
+	adc add
+	tay
+color:	lda colorTable,y
+store:	sta screen,x
+	dex
+	bpl xLoop
+
+	lda rtSine+1
+	clc
+	adc #sineSpreadY
+	sta rtSine+1
+
+	lda color+1
+	clc
+	adc #colorSpreadY
+	sta color+1
+
+	lda store+1
+	clc
+	adc #40
+	sta store+1
+	bcc !+
+	inc store+2
+!:	
+	dec yPos	
+	bpl yLoop
+
+	jmp mainLoop
+
+sineOffsets:
+	.fill 40, i*sineSpreadX
+colorOffsets:
+	.fill 40, i*colorSpreadX
+lineOffset:
+	.by 0"
+"Give an exemple of a waving sprite scroller","// Made in Kick Assembler
+
+	.const SPRITESPACING	= 43	// minimal possible spacing
+	.const SINLEAP		= 20	// choose anything here to change sine wave
+	.const SCROLLSPEED	= 4	// lower value is slower
+	.const SPRITEPOINTER	= $07f8
+	.label spriteMemory	= $2000	// assumes sprite font from $2000 to $3000
+	
+*=$0801
+	BasicUpstart($0810)
+*=$0810
+	sei
+	jsr $e544			// KERNAL: clear screen
+	lda #$00			// reset sine wave pointers
+	sta sinreset+1
+	sta sinwave+1
+
+	ldx #<scrolltext		// reset scroll text pointer
+	ldy #>scrolltext
+	stx textpointer+1
+	sty textpointer+2
+	        		
+	lda #$ff	
+	sta $d015			// turn on all sprites
+	
+	ldx #$00	
+!:	lda #$a0			// init with spaces in all sprite pointers
+	sta SPRITEPOINTER,x
+	lda #$0e			// light blue
+	sta $d027,x			// set sprite colours
+	inx
+	cpx #$08
+	bne !-
+
+	lda #$01			// init IRQ
+	sta $d01a
+	lda #$7f
+	sta $dc0d
+	sta $dd0d
+	lda $dc0d
+	lda $dd0d
+
+	lda #$32			// arbitrary value
+	sta $d012
+	lda #$1b
+	sta $d011
+
+	ldx #<irq			// set pointers to FLD IRQ routine
+	ldy #>irq
+	stx $0314
+	sty $0315
+
+	cli
+	
+	jmp *
+	
+irq:
+	inc $d019
+
+	lda scrollpos+1			// X-position of 1st sprite
+	sec
+	sbc #SCROLLSPEED		// decrease with SCROLLSPEED
+	bpl notext			// skip text fetch if sprite 1 can still move left
+
+		ldx #$00		// shift content of sprites pointers
+	scrollpointers:
+		lda SPRITEPOINTER+1,x
+		sta SPRITEPOINTER,x
+		inx
+		cpx #$07	
+		bne scrollpointers
+		lda sinreset+1		// shift sine wave
+		clc
+		adc SINLEAP		// this fixes sine offset
+		adc #$03		//  when resetting sprite position
+		sta sinreset+1
+	textpointer:
+		lda scrolltext		// get next letter from scroll text
+		bne noreset		// if not #$00 (end indicator)
+	
+		lda #<scrolltext	// reset scroll text pointer when letter is $00
+		sta textpointer+1
+		lda #>scrolltext
+		sta textpointer+2
+		jmp textpointer		// read new letter
+	
+	noreset:
+		clc
+		adc #(>spriteMemory<<2)	// correct for location of sprite font
+		sta SPRITEPOINTER+7	// store new letter in sprite 8 pointer
+
+		inc textpointer+1	// increase scroll text pointer
+		bne !+
+		inc textpointer+2
+	!:	 
+		lda #SPRITESPACING	// move sprite 1 to right most position
+notext:
+	sta scrollpos+1
+
+	ldx #$00			// position other sprites relative to sprite 1
+scrollpos:
+	lda #$18			// set new X-coord for all sprites
+	sta $d000
+	clc
+	adc #SPRITESPACING
+	sta $d002
+	clc
+	adc #SPRITESPACING
+	sta $d004
+	clc
+	adc #SPRITESPACING
+	sta $d006
+	clc
+	adc #SPRITESPACING
+	sta $d008
+	clc
+	adc #SPRITESPACING
+	sta $d00a
+	bcc !+
+	ldx #%11100000			// take care of MSB
+	clc
+!:	adc #SPRITESPACING
+	sta $d00c
+	bcc !+
+	ldx #%11000000
+	clc
+!:	adc #SPRITESPACING
+	sta $d00e
+	bcc !+
+	ldx #%10000000
+!:	stx $d010			// set proper sprite MSB
+
+sinreset:
+	ldx #$00			// sine wave counter
+	stx sinwave+1			// store in sine wave pointer
+	inc sinreset+1
+	ldy #$00
+sinwave:
+	lda sindata			// read sine wave data
+	sta $d001,y			// store in Y-coords sprites
+	lda sinwave+1
+	clc
+	adc #SINLEAP			// to make wave more interesting
+	sta sinwave+1			// increase sine wave pointer by SINLEAP
+	iny
+	iny
+	cpy #$10			// next sprites
+	bne sinwave	
+	jmp $ea31			// end of IRQ1
+	
+.align $100
+sindata:
+	.fill 256, 120 + 15.5*sin(toRadians(i*(3*360)/256))
+
+scrolltext:
+	.text 'this is a sprite scroller for Conjuror64 '
+	.byte $00"

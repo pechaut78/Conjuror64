@@ -1,0 +1,9 @@
+
+
+
+address              $F31F
+Set Current Logical File, Current Device, and Current Seconday Address
+
+This subroutine is used to update the Kernal variables at 184-186
+($B8-$BA) which holds the current logical file number, current device
+number, and current secondary address number.

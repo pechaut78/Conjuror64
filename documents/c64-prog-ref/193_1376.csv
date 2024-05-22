@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the MEMTOP function?","The purpose of the MEMTOP function is to set the top of RAM, which can be done by calling the routine with the carry bit of the accumulator set to load the pointer to the top of RAM into the X and Y registers, or by calling it with the carry bit clear to set the top of memory to the value in the X and Y registers."
+"What is the call address of the MEMTOP function in hexadecimal?","The call address of the MEMTOP function in hexadecimal is $FF99."
+"What is the decimal equivalent of the MEMTOP function call address?","The decimal equivalent of the MEMTOP function call address is 65433."
+"What registers are affected by the MEMTOP function?","The X and Y registers are affected by the MEMTOP function."
+"What is the stack requirement for the MEMTOP function?","The stack requirement for the MEMTOP function is 2."
+"How do you read the top of memory using the MEMTOP function?","You can read the top of memory using the MEMTOP function by calling it with the carry bit of the accumulator set, which loads the pointer to the top of RAM into the X and Y registers."
+"What happens when you call the MEMTOP function with the accumulator carry bit clear?","When you call the MEMTOP function with the accumulator carry bit clear, the contents of the X and Y registers are loaded into the top of memory pointer, changing the top of memory."
+"What is an example of using the MEMTOP function to deallocate a buffer?","An example of using the MEMTOP function to deallocate a buffer is by calling it to read the top of memory, decrementing the value, and then calling it again to set the new top of memory, as shown in the example code: SEC; JSR MEMTOP; DEX; CLC; JSR MEMTOP;"
+"How do you set a new top of memory using the MEMTOP function?","You can set a new top of memory using the MEMTOP function by calling it with the accumulator carry bit clear, which loads the contents of the X and Y registers into the top of memory pointer."
+"What are the communication registers used by the MEMTOP function?","The communication registers used by the MEMTOP function are X and Y."

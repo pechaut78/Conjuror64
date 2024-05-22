@@ -1,0 +1,11 @@
+question,answer
+"How do I reset a 1581 disk drive?","To reset a 1581 disk drive, type: OPEN 15,8,15,\"UJ\":CLOSE 15."
+"What is the purpose of the SAVE command in the context of a C64?","The SAVE command preserves a program or file on a formatted diskette for later use."
+"What is the format for the SAVE command?","The format for the SAVE command is SAVE \"drive#:file name\",device#, where \"file name\" is any string expression of up to 16 characters, preceded by the drive number and a colon, and followed by the device number of the disk, normally 8."
+"What is the limitation of the SAVE command?","The SAVE command will not work in copying programs that are not in the BASIC text area, such as \"DOS 5.1\" for the C64."
+"What type of program is required to copy machine-language programs?","A machine-language monitor program is required to copy machine-language programs, such as the one resident in the C128."
+"What is the device number of the disk in the SAVE command?","The device number of the disk in the SAVE command is normally 8."
+"Can I use the SAVE command to copy any type of program?","No, the SAVE command cannot be used to copy programs that are not in the BASIC text area, such as machine-language programs."
+"What is the maximum length of the file name in the SAVE command?","The maximum length of the file name in the SAVE command is 16 characters."
+"Can I use the SAVE command to copy a program from one disk to another?","The SAVE command is used to preserve a program or file on a formatted diskette for later use, but it does not copy programs from one disk to another."
+"What is the purpose of the OPEN and CLOSE commands in the context of resetting a 1581 disk drive?","The OPEN and CLOSE commands are used to reset a 1581 disk drive, with the command being OPEN 15,8,15,\"UJ\":CLOSE 15."

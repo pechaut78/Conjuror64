@@ -1,0 +1,11 @@
+question,answer
+"What operation does ROL perform on all bits in a value?","ROL shifts all bits one position to the left and transfers the carry flag into the now-vacant bit 0. The pushed-out seventh bit is placed into the carry."
+"What is the effect of ROL on the carry flag?","The carry flag is transferred into the now-vacant bit 0 when ROL is performed."
+"What is the result of ROL on the value $8F?","The result of ROL on the value $8F is $97 and a cleared carry."
+"What is the effect of ROL on the accumulator?","ROL doubles the contents of the accumulator and places any overflow into the carry."
+"What happens to the seventh bit when ROL is performed?","The seventh bit is pushed out and placed into the carry when ROL is performed."
+"What is the difference between ROL and other shifting operations?","ROL is unique in that it transfers the carry flag into the now-vacant bit 0 and places the pushed-out seventh bit into the carry."
+"Can ROL affect the value of the carry flag?","Yes, ROL can affect the value of the carry flag by transferring it into the now-vacant bit 0 and placing the pushed-out seventh bit into the carry."
+"What is an example of using ROL to double a value?","An example of using ROL to double a value is taking the decimal number 5, which is represented as $05 in hexadecimal, and shifting it to the left to get $0A, which is the decimal number 10."
+"What is the result of ROL on the value $FF?","The result of ROL on the value $FF is $FE and a set carry."
+"What is the binary representation of the result of ROL on the value $8F?","The binary representation of the result of ROL on the value $8F is 10010111, which is the decimal number $97."

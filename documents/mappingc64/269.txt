@@ -1,0 +1,10 @@
+
+
+
+address         $AEF1          PARCHK
+Evaluate Expression Within Parentheses
+
+This routine evaluates an expression within parentheses by calling the
+syntax checking routines that look for opening and closing
+parentheses, and then calling FRMEVL (4446, $AD9E) for each level of
+parentheses.

@@ -1,0 +1,11 @@
+question,answer
+"what is the result of SIN(X) function?","The result of SIN(X) function is the sine of X, where X is an angle in radians."
+"what happens if X is negative in SQR(X) function?","If X is negative in SQR(X) function, an ILLEGAL QUANTITY ERROR results."
+"in which unit is the angle X in SIN(X) function?","The angle X in SIN(X) function is in radians."
+"what is the domain of SQR(X) function?","The domain of SQR(X) function is all positive numbers and 0."
+"what is the result of TAN(X) function?","The result of TAN(X) function is the tangent of X, where X is an angle in radians."
+"in which unit is the angle X in TAN(X) function?","The angle X in TAN(X) function is in radians."
+"what is the purpose of SQR(X) function?","The purpose of SQR(X) function is to return the square root of X."
+"what is the purpose of SIN(X) function?","The purpose of SIN(X) function is to return the sine of X, where X is an angle in radians."
+"what is the purpose of TAN(X) function?","The purpose of TAN(X) function is to return the tangent of X, where X is an angle in radians."
+"what is the relationship between SIN(X) and TAN(X) functions?","The TAN(X) function is related to SIN(X) function as tangent is sine divided by cosine, but in this case, only SIN(X) is provided."

@@ -1,0 +1,13 @@
+
+
+
+Text In Drag
+Back when there was only 40 Column PET/CBMs, The Transactor discussed a method of attaching the code from one line of BASIC onto the end of the line above it. For example, the following two lines need not be on two sepa rate lines:
+100 for j = 1 to 10 110 next
+The two lines would be LISTed on the screen. Then using the space bar to wrap around the top line onto the bottom line, the two lines would become one double line. Naturally it only worked for a range of 80 characters. The top line had to be less than 40 characters long and only the first 40 characters of the line below could be transfered. With the two screen lines linked together, the DELete key would beused to "drag" the line below up onto the line above, squeezing out the line number plus those extra spaces in the process. Of course you'd have to insert a colon yourself and also delete line 110. Try it! (By the way, this doesn't work on the VIC 20/C64 - the screen editor has been changed and is now too smart for this trick to be pulled off)
+When 80 Column machines came along there was no longer any need for a line wrap table in low RAM - all the lines were identical regardless of how much code was entered. So the situation above could still occur, but to add one line to another required re-typing.
+(You must know what I'm leading up to. Yes, a POKE this time) By making the operating system "think" that each line is longer than 80 characters, this same trick can be played on the 80 column screen editor. Slight of hand? No. More accurately, "right of hand". Location 213 is the right hand window margin. Normally it contains 79 for 80 column lines (0-79):
+poke 213,159
+. . .will make the editor think that each screen line is 160 characters long, however, you're still limited to 80 charac ters per program line.
+Now, about the only way I could make this work was to start from the beginning of the first line and " cursor right" all the way over to about column 75. Only then would DELete cooperate and drag the bottom line up. Using cursor left to "go around the other way" created some other problems.
+Once you're done you'll want to restore 213 to a 79. Otherwise you'll get some strangeness occurring. Try POKE 213, 255 and cursor down off the bottom of the screen. Weird, eh? Again, I don't know why. And if you think that's weird, try listing a program that will cause screen scrolling. You won't crash the machine, but you may have to clear the screen before entering any new direct commands. Try experimenting. I'm not sure, but it might even work for 3 screen lines (ie. POKE 213, 239).

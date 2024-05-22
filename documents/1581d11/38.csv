@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of using the DIRECTORY command before using the SCRATCH command with a pattern?","The purpose is to ensure that you are aware of exactly which files will be deleted, avoiding any unpleasant surprises when using the same pattern in the SCRATCH command."
+"What should you do if you accidentally delete a file using the SCRATCH command?","You can try to save the file by using the 'UNSCRATCH' program on your Test/Demo diskette."
+"What is the main precaution to take when using the SCRATCH command?","You should use it with caution to ensure that you only delete the files you intend to erase."
+"How can you verify which files will be deleted when using the SCRATCH command with a pattern?","You can use the same pattern in a DIRECTORY command to verify which files will be deleted."
+"What is the consequence of using the SCRATCH command without caution?","You may delete files that you didn't intend to erase, resulting in unpleasant surprises."
+"What is the purpose of the SCRATCH command?","The SCRATCH command is a powerful command used to delete files, and it should be used with caution to avoid deleting unwanted files."
+"What is the relationship between the SCRATCH command and the DIRECTORY command?","The DIRECTORY command can be used to verify which files will be deleted when using the SCRATCH command with a pattern."
+"Can deleted files be recovered after using the SCRATCH command?","Yes, there is a chance of saving deleted files by using the 'UNSCRATCH' program on your Test/Demo diskette."
+"What is the recommended approach when using the SCRATCH command with a pattern?","First use the same pattern in a DIRECTORY command to verify which files will be deleted, and then use the SCRATCH command with caution."
+"Why should you be cautious when using the SCRATCH command?","Because it is a powerful command that can permanently delete files, and you should ensure that you only delete the files you intend to erase."

@@ -1,0 +1,11 @@
+question,answer
+"What is the 6510's ability in regards to the stack?","The 6510 microprocessor has the capability to save the contents of the accumulator and the status register onto the stack and to retrieve them back. The stack pointer is automatically decremented after writing to the stack and incremented before reading from the stack."
+"What does the 6510 do to the stack pointer after writing to the stack?","After writing to the stack, the 6510 automatically decrements the stack pointer."
+"What does the 6510 do to the stack pointer before reading from the stack?","Before reading from the stack, the 6510 automatically increments the stack pointer."
+"What two values can be saved onto the stack by the 6510?","The 6510 can save the contents of the accumulator and the status register onto the stack."
+"What happens to the stack pointer after the 6510 saves the accumulator onto the stack?","After the 6510 saves the accumulator onto the stack, the stack pointer is automatically decremented."
+"What happens to the stack pointer before the 6510 retrieves a value from the stack?","Before the 6510 retrieves a value from the stack, the stack pointer is automatically incremented."
+"Can the 6510 save other values onto the stack besides the accumulator and status register?","No, the 6510 can only save the contents of the accumulator and the status register onto the stack."
+"What is the purpose of the stack pointer in the 6510?","The stack pointer in the 6510 is used to keep track of the memory address of the top of the stack. It is automatically decremented after writing to the stack and incremented before reading from the stack."
+"What happens to the stack pointer after the 6510 retrieves a value from the stack?","After the 6510 retrieves a value from the stack, the stack pointer is automatically incremented."
+"What two things does the 6510 do to the stack pointer when saving a value onto the stack?","The 6510 decrements the stack pointer after writing a value onto the stack."

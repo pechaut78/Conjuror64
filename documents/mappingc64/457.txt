@@ -1,0 +1,43 @@
+
+
+
+address              $DC01          CIAPRB
+Data Port Register B
+
+Bit 0:  Read keyboard row 0
+        Read joystick 1 up direction
+Bit 1:  Read keyboard row 1
+        Read joystick 1 down direction
+Bit 2:  Read keyboard row 2
+        Read joystick 1 left direction
+        Read paddle 1 fire button
+Bit 3:  Read keyboard row 3
+        Read joystick 1 right direction
+        Read paddle 2 fire button
+Bit 4:  Read keyboard row 4
+        Read joystick 1 fire button
+Bit 5:  Read keyboard row 5
+Bit 6:  Read keyboard row 6
+        Toggle or pulse data output for Timer A
+Bit 7:  Read keyboard row 7
+        Toggle or pulse data output for Timer B
+
+Location Range: 56322-56323 ($DC02-$DC03)
+CIA #1 Data Direction Registers A and B
+
+These Data Direction Registers control the direction of data flow over
+Data Ports A and B.  Each bit controls the direction of the data on
+the corresponding bit of the port.  If teh bit of the Direction
+Register is set to a 1, the corresponding Data Port bit will be used
+for data output.  If the bit is set to a 0, the corresponding Data
+Port bit will be used for data input.  For example, Bit 7 of Data
+Direction Register A controls Bit 7 of Data Port A, and if that
+direction bit is set to 0, Bit 7 of Data Port A will be used for data
+input.  If the direction bit is set to 1, however, data Bit 7 on Port
+A will be used for data output.
+
+The default setting for Data Direction Register A is 255 (all
+outputs), and for Data Direction Register B it is 0 (all inputs).
+This corresponds to the setting used when reading the keyboard (the
+keyboard column number is written to Data Port A, and the row number
+is then read in Data Port B).

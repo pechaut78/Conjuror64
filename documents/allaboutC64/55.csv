@@ -1,0 +1,11 @@
+question,answer
+"What are the restrictions on the line numbers in a C64 BASIC program?","In C64 BASIC, there are no restrictions on the line numbers in the list, other than that no variables or expressions are allowed. The line numbers do not have to be in increasing order or increment by the same number. Programmers have a tendency to use numbers in this way, but it is not a requirement."
+"Can the same line number be used more than once in a C64 BASIC program?","Yes, the same line number can be used more than once in the same list in a C64 BASIC program."
+"What do consecutive commas represent in a C64 BASIC program?","Consecutive commas in a C64 BASIC program are counted as meaning that a line number of 0 is intended."
+"Can ON work with only selected values in a range in C64 BASIC?","No, it is not possible to make ON work with only selected values in a range in C64 BASIC. One ON statement can often replace several IF-THEN statements, but it cannot be used to select a range of values."
+"How can multiple ON statements be used together in C64 BASIC?","If the line number list is too long, a couple of ON statements can be used together in C64 BASIC. In such a case, the number of line numbers in the first line must be subtracted from the value in the second ON statement."
+"What error is generated when a requested line is not found in a C64 BASIC program?","When a requested line is not found in a C64 BASIC program, the UNDEFD STATEMENT error is generated."
+"Can variables or expressions be used as line numbers in a C64 BASIC program?","No, variables or expressions are not allowed as line numbers in a C64 BASIC program. The line numbers must be numerical values."
+"Do line numbers in a C64 BASIC program have to be in increasing order?","No, the line numbers in a C64 BASIC program do not have to be in increasing order. They can be in any order."
+"Can the ON statement be used to perform a GOTO or GOSUB in a C64 BASIC program?","Yes, the ON statement can perform a GOTO or GOSUB in a C64 BASIC program. This is one of the forms of conditional logic that the ON statement can be used for."
+"What happens if the line number requested in an ON statement is not found in a C64 BASIC program?","If the line number requested in an ON statement is not found in a C64 BASIC program, the UNDEFD STATEMENT error is generated."

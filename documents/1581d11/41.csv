@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the RENAME command in Commodore 64?","The RENAME command allows the user to alter the name of a program or other file in the diskette directory, and since it only affects the directory, it works very quickly."
+"what happens if you try to RENAME a file with a name already in the directory?","If you try to RENAME a file using a file name already in the directory, the computer will respond with a 'FILE EXISTS' error."
+"what is the format for the RENAME command?","The format for the RENAME command is RENAME [Ddrive#,] 'old name' TO [Ddrive#,] 'new name' [,Udevice#], where both drive#s, if included, would be 0."
+"can you RENAME a file that is currently in use?","No, a file must be properly closed before it can be renamed."
+"what part of the diskette is affected by the RENAME command?","Only the directory is affected by the RENAME command."
+"can you RENAME a file to a name that already exists in the directory?","No, if you try to RENAME a file using a file name already in the directory, the computer will respond with a 'FILE EXISTS' error."
+"what happens if you try to RENAME a file without closing it first?","The RENAME command will not work if the file is not properly closed, you will get an error."
+"what is the advantage of using the RENAME command?","The advantage of using the RENAME command is that it works very quickly, since it only affects the directory."
+"in what situation would you use the RENAME command?","You would use the RENAME command when you want to alter the name of a program or other file in the diskette directory."
+"what is the purpose of the 'TO' keyword in the RENAME command?","The 'TO' keyword in the RENAME command is used to specify the new name of the file."

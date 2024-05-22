@@ -1,0 +1,11 @@
+
+
+
+address       $AC-$AD        SAL
+Pointer to the Starting Address of a Load/Screen Scrolling
+
+The pointer to the start of the RAM area to be SAVEd or LOADed at 193
+($C1) is copied here.  This pointer is used as a working version, to
+be increased as the data is received or transmitted.  At the end of
+the operation, the initial value is restored here.  Screen management
+routines temporarily use this as a work pointer.

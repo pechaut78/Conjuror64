@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $B34C?","address         $B34C          UMULT
+Compute the Size of a Multidimensional Array
+
+This routine calculates the size of a multidimensional array by
+multiplying the dimensions."

@@ -1,0 +1,23 @@
+question,answer
+"What is the IEC bus and how does it work on Commodore computers?","IEC Bus
+The IEC bus is a serial version of the IEEE-488 bus
+used on the PET. Devices on the IEC bus are daisychained, and are all connected to the same three
+lines: ATN (attention), clock and data. IEC has a single bus master, which is the computer. It is the only
+device to ever raise ATN, while every device can output to clock and data, depending on the state of the
+bus.
+If the computer raises ATN, every device on the bus
+listens for the 4 bit device number and compares it
+with its own. The protocol on who sends and who receives is determined by the computer sending TALK/
+UNTALK and LISTEN/UNLISTEN requests, quick is an ATN sequence, followed by one of the four commands.
+While KERNAL exports the interface at this level, it
+also allows high-level open, close, read and write operations on the IEC bus, as well as load and save operations. The BASIC LOAD and SAVE commands are
+directly hooked up to this interface.
+The IEC bus was designed for the serial shift register
+in the VIA (Versatile Interface Adapter) of the VIC-20
+and its disk drive, but it turned out that the VIA had a
+bug that made the shift register unusable, so the IEC
+protocol had to be implemented in software. While
+the C64 has CIAs, in which the bug has been fixed,
+the 1541 still used VIAs. It wasn't until the C128 (in its
+native mode only) that the computer could talk to the
+floppy drive (Commodore 1570/1571/1581) in its intended speed."

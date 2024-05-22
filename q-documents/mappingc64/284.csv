@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $B194?","address         $B194          ARYGET
+Allocate Space for Array Descriptors
+
+This routine allocates five bytes plus two bytes for every dimension
+specified for the array descriptor."

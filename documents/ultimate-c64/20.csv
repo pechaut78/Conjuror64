@@ -1,0 +1,11 @@
+question,answer
+"What is the resolution of hi-res graphics mode in the VIC?","The resolution of hi-res graphics mode in the VIC is 320x200, which uses the same pixel frequency as 40x25 character mode."
+"What is the location of the bitmap in hi-res mode?","The bitmap can reside at $0000 or $2000, and the VIC reads one byte for 8 pixels."
+"How are the foreground and background colors of each 8x8 tile determined in hi-res mode?","The foreground and background colors of each 8x8 tile are taken from the high and low nibble of screen RAM, which would otherwise be unused."
+"What is the encoding of the bitmap in hi-res mode?","The encoding of the bitmap is identical to the encoding of a character set, making it a non-linear framebuffer."
+"How does the bitmap layout affect pixel addressing in software?","The layout makes pixel addressing in software slower."
+"What is the horizontal resolution in Multi-Color Bitmap Mode?","The horizontal resolution is halved to 160x200, and pixels are twice the width."
+"How are colors encoded in Multi-Color Bitmap Mode?","Every set of two bits in the encodes one of four colors per tile: 00 takes it from the global background register ($D021), 01 and 10 take it from the upper and lower nibble of screen RAM, respectively, and 11 takes it from Color RAM."
+"What is the purpose of the high and low nibble of screen RAM in hi-res mode?","The high and low nibble of screen RAM are used to determine the foreground and background colors of each 8x8 tile."
+"Is Color RAM used in hi-res mode?","No, Color RAM is not used in hi-res mode."
+"What is the size of each pixel in Multi-Color Bitmap Mode?","Pixels are twice the width in Multi-Color Bitmap Mode."

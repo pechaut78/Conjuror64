@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the memory location at address $EF2E?","address              $EF2E
+Handle RS-232 Errors
+
+This subroutine sets the appropriate error bits in the status register
+at 663 ($297)."

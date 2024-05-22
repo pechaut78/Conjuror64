@@ -1,0 +1,11 @@
+question,answer
+"what is the purpose of the SETMSG function?","The purpose of the SETMSG function is to control system message output, specifically to select whether to print error messages or control messages by setting the accumulator when the routine is called."
+"what is the call address of the SETMSG function?","The call address of the SETMSG function is $FF90 (hex) or 65424 (decimal)."
+"what is the role of bits 6 and 7 in the accumulator when calling the SETMSG function?","Bits 6 and 7 of the accumulator value determine where the message will come from; if bit 7 is 1, one of the error messages from the KERNAL is printed, and if bit 6 is set, control messages are printed."
+"what is an example of an error message that can be printed by the SETMSG function?","An example of an error message that can be printed by the SETMSG function is 'FILE NOT FOUND'."
+"what is an example of a control message that can be printed by the SETMSG function?","An example of a control message that can be printed by the SETMSG function is 'PRESS PLAY ON CASSETTE'."
+"how do you turn on control messages using the SETMSG function?","To turn on control messages using the SETMSG function, you set the accumulator to a value with bit 6 set, for example LDA #$40, and then call the SETMSG routine."
+"how do you turn on error messages using the SETMSG function?","To turn on error messages using the SETMSG function, you set the accumulator to a value with bit 7 set, for example LDA #$80, and then call the SETMSG routine."
+"what is the stack requirement for the SETMSG function?","The stack requirement for the SETMSG function is 2."
+"which register is affected by the SETMSG function?","The accumulator (A) register is affected by the SETMSG function."
+"what is the preparatory routine required for the SETMSG function?","There is no preparatory routine required for the SETMSG function."
