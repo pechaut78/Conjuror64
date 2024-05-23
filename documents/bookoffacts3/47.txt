@@ -1,0 +1,12 @@
+
+_Want to go to the border ?_
+
+Some coders are always trying to get all effects ever done using the C64 go
+to the border, and even successfully. The easiest way is to use only a region
+of 21 pixels high - sprites - and move the text exactly like in characters.
+In fact only the different addressing causes the differences in the code.
+
+Eight horizontally expanded sprites will be just enough to fill the side
+borders. You can also mix these techiques, but then you have the usual
+"chars-in-the-screen-while-border-opened"-problems (however, they are
+solvable). Unfortunately sprite-dycp is even more slower than char-dycp.

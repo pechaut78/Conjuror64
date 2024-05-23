@@ -1,0 +1,18 @@
+
+FLI - more color to the screen by Pasi 'Albert' Ojala (po87553@cs.tut.fi or albert@cc.tut.fi)
+                       
+(All timings are in PAL, altho the principles will apply to NTSC too)
+
+All of us have heard complaints about the color constraints on C64. One 8x8
+pixel character position may only carry four different colors.  FLI picture
+can have all of the 16 colors in one char position.  What then is this FLI
+and how it is done ?
+
+In the normal multicolor mode can one character position (4x8 pixels) have
+only four different colors and one of them is the common background color.
+Color codes are stored in half bytes (nybbles) to the video matrix memory
+(anywhere video matrix pointer points at, normally $0400) and to the color
+memory ($D800-$DBFF). In multicolor mode the color of each pixel is
+determined by two bits in the graphics memory. Bit pair 11 will refer to
+color memory, background color is the color for bit pair 00, and video
+matrix will define the colors for bit pairs 01 and 10.

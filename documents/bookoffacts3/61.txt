@@ -1,0 +1,27 @@
+
+
+Normally, when VIC-II is displaying the last character row, it is
+showing the memory from offsets $3c0 to $3e7.  If VIC-II has skipped
+one character row, it is displaying from $3e8 to $40f instead.  But,
+there are only 10 bits for the video matrix counter (0..1023), so it
+wraps around to zero after $3ff.  This means that the beginning of
+the video matrix is displayed at the bottom of the screen.  The
+character rows become shifted by 24 character positions to the right
+because there were originally 24 unused memory locations at the end
+of the memory (1000..1023).  (To be honest, sprite image pointers
+are not unused memory, but they are not used with normal FLI.)
+
+The same thing happens for color memory because it uses the same
+counter for addressing the memory (in fact, color memory access and
+character data access are performed simultaneosly, 12 bits at a
+time).  The graphics memory behaves the same way, except that the
+counter has three bits more and it counts at eight times the speed,
+so that it wraps at the exact same time as the other counter.
+
+The first character row can't be used for linecrunch and the second
+one is also lost in the process.  The first usable line to display
+is the third character row.  However, those two lost rows can still
+be used as an extension at the end of the first screen.  You must
+notice, however, that the alignment has been changed.  After these
+two rows have been displayed, the video bank is switched to get new
+fresh data on the screen.

@@ -1,0 +1,11 @@
+question,answer
+"What is the easiest way to create effects on the C64 border?","The easiest way to create effects on the C64 border is to use only a 21 pixel high region of the screen, specifically sprites, and move the text exactly like characters. The different addressing is what causes the differences in the code."
+"What can be used to fill the side borders of the C64 screen?","Eight horizontally expanded sprites will be just enough to fill the side borders of the C64 screen."
+"What is an alternative way to create effects on the C64 border?","An alternative way to create effects on the C64 border is to mix sprite techniques, but this can result in 'chars-in-the-screen-while-border-opened' problems, which are solvable."
+"What is the downside of using sprite-dycp compared to char-dycp on the C64?","The downside of using sprite-dycp compared to char-dycp on the C64 is that sprite-dycp is even more slower."
+"What are some coders on the C64 always trying to do?","Some coders on the C64 are always trying to get all effects ever done using the C64 go to the border, and even successfully."
+"What are the limitations of using sprites on the C64?","The limitations of using sprites on the C64 is that only 8 horizontally expanded sprites will be just enough to fill the side borders, and sprite-dycp is even more slower than char-dycp."
+"What is the main challenge of mixing sprite techniques on the C64?","The main challenge of mixing sprite techniques on the C64 is that it can result in 'chars-in-the-screen-while-border-opened' problems, which are solvable."
+"What are the benefits of using sprites on the C64?","The benefits of using sprites on the C64 is that it is the easiest way to create effects on the border and only the different addressing causes the differences in the code."
+"What are the limitations of using char-dycp on the C64?","The limitations of using char-dycp on the C64 is that it is slower than sprite-dycp."
+"What are the benefits of using char-dycp on the C64?","The benefits of using char-dycp on the C64 is that it can be mixed with sprite techniques and the problems that arise are solvable."

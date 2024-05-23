@@ -438,3 +438,1045 @@ program called test)
 WAIT W(SHIFTED A) A statement that stops the execution of a
 program until the specified condition is met. (EXAMPLE: WAIT 198,1-will
 stop until any key is pressed)
+
+Astute reads will notice a slight flaw in the above logic. For simplification 
+purposes, I didn't get into the fact that you will need TWO raster interrupts 
+PER SCREEN to accomplish anything useful. Why two? Because any change to the 
+video mode you put into effect 3/4 of the way down the screen will have to be 
+undone at the TOP of the next screen update. If you decide to make the top 3/4 
+of the screen a hi-res image, and the bottom 1/4 text, you need one interrupt 
+3/4 of the way down the screen to change from hi-res to text, but you need a 
+SECOND one at the top of the screen to change back to hi-res from text.
+
+So, we will now have 120 interrupts going off every second to accomplish our 
+video desires, with 60 of them working a double shift, making sure the system 
+interrupt code gets executed also. Remember that we are working with a specific
+example. There is no reason why you couldn't split the screen into N different
+video modes, and have (N+1)*60 interrupts going off per second. As long as you 
+keep your code short (so your interrupts don't take too long, and have another 
+interrupt occur before the current one is done - messy), it will work 
+beautifully.
+
+So far, this is all talk. Let's write a few short code segments to accomplish 
+some of the feats we've just discussed.
+
+The first we'll do is a re-hash of the one presented above. It flashes the 
+border again. It does not do any mid-screen changes of video modes or anything 
+fancy like that, so only 1 interrupt per screen is required (ie. 60 per second,
+not 120 etc.). This program simply shows the same idea, but this time using 
+video interrupts as the source rather than the CIA. You probably won't
+notice a difference during execution.
+
+
+
+
+
+If there are sprites on the screen, the VIC needs even more cycles to fetch
+all of the graphics data. Scan lines are time divided so that there is
+enough time for all action during one line. On each line, the sprite
+image pointers are fetched during phase 1. If the sprite is to be displayed
+on that line, the three bytes of image data are fetched right after that.
+Out of these three fetches, two take place during phase 2 of the clock,
+so the processor will lose these. On average, two clock cycles are lost
+for each sprite that is displayed on that line.
+
+But how is it possible for all eight sprites to only take 16-19 cycles
+(depending on the timing) when we have observed that one sprite requires
+three cycles? And why do sprites 0, 2, 4, 6 and 7 together take up as many
+cycles as all eight sprites ? The answer may be found in the way the VIC
+tells the CPU that it needs additional cycles.
+
+
+
+
+
+       [all timings are in PAL, the principle applies to NTSC too]
+
+there are 63 cycles available to the C64 processor on each scan line, except for one which only provides 23 cycles (later referred
+to as a "bad" scan line). But what happens when we add sprites and why ?
+
+In the C64, the VIC (video interface controller) has much more to do than
+just showing graphics on the screen. It also handles the memory refresh.
+On each scanline, it has to refresh five rows in the memory matrix and
+fetch fourty bytes of graphics data.
+
+The VIC does all of this during the cycles (phase 1) that the processor is
+not using the memory.  These cycles, however, are not sufficient when the
+VIC also needs to access the character and color codes for the next row.
+The memory bus can't be used by the CPU and the VIC at the same time, so CPU
+access to the bus must be denied to allow the VIC to fetch its data.
+Fortunately, the VIC bus (12-bit wide) allows the character (8 bits) and
+color (4 bits) codes to be fetched at the same time.
+
+
+
+
+
+If there are sprites on the screen, the VIC needs even more cycles to fetch
+all of the graphics data. Scan lines are time divided so that there is
+enough time for all action during one line. On each line, the sprite
+image pointers are fetched during phase 1. If the sprite is to be displayed
+on that line, the three bytes of image data are fetched right after that.
+Out of these three fetches, two take place during phase 2 of the clock,
+so the processor will lose these. On average, two clock cycles are lost
+for each sprite that is displayed on that line.
+
+But how is it possible for all eight sprites to only take 16-19 cycles
+(depending on the timing) when we have observed that one sprite requires
+three cycles? And why do sprites 0, 2, 4, 6 and 7 together take up as many
+cycles as all eight sprites ? The answer may be found in the way the VIC
+tells the CPU that it needs additional cycles.
+
+
+
+
+he BA signal_
+
+When the VIC wants to use the bus, the BA (Bus Available) signal goes
+inactive. This will happen three cycles before the bus must be released !
+During these three cycles, the CPU must complete all memory accesses or
+delay them until it has the bus again.
+
+The CPU either completes the current instruction in the remaining cycles
+or sits and waits for the bus to become available again. It can't execute
+a new instruction as long as it doesn't have the bus. This is why cycles
+seem to be lost (besides those stolen directly for the sprites). Usually,
+all 8 sprites take 17 cycles while one sprite takes three cycles. However,
+the CPU may continue to execute an instruction if it does not use the bus.
+
+
+
+
+
+_Theory and speculation_
+
+Let's suppose that all the sprites are enabled and on the same scan line.
+Then, the VIC steals 16 cycles (2 cycles for each sprite) for the memory
+fetches and 3 cycles as overhead for the BA signal, for a total of 19 cycles.
+However, it will be usually less because the CPU will use some of the cycles
+when the bus request is pending.
+
+If we now disable sprite 4, no cycles are released for the CPU's use. This
+is because during the previous sprite 4 data fetch, the VIC already signals
+that it needs the bus for the sprite 5 data fetch and BA stays low (Refer
+to the timing chart). Thus, the CPU never sees BA go high during sprite 4
+and 2 cycles are still lost.
+
+Accordingly, if we only turn off sprites 1, 3 and 5 we get no cycles back
+from the VIC. So in time-critical raster routines, always use sprites in
+order.
+
+
+
+
+_What can we do with this feature ?_
+
+How can this be useful? A good use is for synchronization. Normally,
+before the CPU starts to execute the raster interrupt code, it's executing
+an instruction of undefined cycle-length. This execution time varies from
+two to seven cycles.
+
+With a sprite, you can do the synchronization with a minimal effort using
+a DEC or INC instruction in the right place. If the processor is early,
+it has to wait for the bus, otherwise it will continue to execute cycles
+from the instruction.
+
+I have never experimented with any other instruction than DEC/INC, but
+some others should work also. You need an instruction which has a cycle that
+do not need the bus to be available. e.g. INC $3fff will increase the
+value during the fifth cycle and do not need the bus for that.
+
+
+
+
+      All timings are in PAL, principles will apply to NTSC too.
+              Refer to VIC memory map in Hacking Issue 4.
+
+VIC has many features and transparent borders are one of them. You can not
+make characters appear in the border, but sprites are displayed in the
+border too. "How to do this then?" is the big question.
+
+The screen resolution in C64 has been and will be 320 x 200 pixels. Most
+games need to use the whole screen to be efficient or just plain playable.
+But there still is that useless border area, and you can put score and
+other status information there instead of having them interfere with the
+full-screen smooth-scrolling playing area.
+
+
+
+
+
+_How to disable the vertical borders_
+
+When VIC (Video Interface Controller) has displayed all character rows,
+it will start displaying the vertical border area. It will start displaying
+the characters again in top of the screen. The row select register sets the
+number of character lines on the screen. If we select the 24-row display
+when VIC is drawing the last (25th) row, it does not start to draw the
+border at all !  VIC will think that it already started to draw the border.
+
+The 25-row display must be selected again in the top of the screen, so that
+the border may be opened in the next frame too. The number of displayed rows
+can be selected with the bit 3 in $d011. If the bit is set, VIC will display
+25 rows and 24 rows otherwise. We have to clear the bit somewhere during the
+last row (raster lines $f2-$fa) and set it again in top of the screen or at
+least somewhere before the last row (line $f2). This has to be done in every
+frame (50 times per second in PAL).
+
+
+
+
+
+_How to open the sideborders_
+
+The same trick can be applied to sideborders. When VIC is about to start
+displaying the sideborder, just select 38-column mode and restore 40-column
+mode so that you can do the trick again in the next scan line. If you need to
+open the sideborders in the bottom or top border area, you have to open the
+vertical borders also, but there shouldn't be any difficulty in doing that.
+
+There is two drawbacks in this. The timing must be precise, one clock cycle
+off and the sideborder will not open (the sprites will generally take care of
+the timing) and you have to do the opening on each and every line. With
+top/bottom borders once in a frame was enough.
+
+Another problem is bad-lines. There is not enough time to open the borders
+during a bad line and still have all of the sprites enabled. One solution
+is to open the borders only on seven lines and leave the bad lines unopened.
+Another way is to use less than eight sprites. You can have six of them
+on a bad line and still be able to open the sideborders (PAL). The old and
+still good solution is to scroll the bad lines, so that VIC will not start
+to draw the screen at all until it is allowed to do so.
+[Read more about bad lines from previous C=Hacking Issues]
+
+
+
+
+
+_Scrolling the screen_
+
+VIC begins to draw the screen from the first bad line. VIC will know what
+line is a bad line by comparing its scan line counter to the vertical
+scroll register : when they match, the next line is a bad line. If we change
+the vertical scroll register ($d011), the first bad line will move also.
+If we do this on every line, the line counter in VIC will never match with
+it and the drawing never starts (until it is allowed to do so).
+
+When we don't have to worry about bad lines, we have enough time to open the
+borders and do some other effects too. It is not necassary to change the
+vertical scroll on every line to get rid of the bad lines, just make sure
+that it never matches the line counter (or actually the least significant
+8 bits).
+
+You can even scroll the bad lines independently and you have FLD - Flexible
+Line Distance. You just allow a bad line when it is time to display the next
+character row. With this you can bounce the lines or scroll a hires picture
+very fast down the screen. But this has not so much to do with borders, so
+I will leave it to another article. (Just send requests and I might start
+writing about FLD ..)
+
+
+
+
+
+
+_Garbage appearing_
+
+When we open the top and bottom borders, some graphics may appear. Even
+though VIC has already completed the graphics data fetches for the screen
+area, it will still fetch data for every character position in top and bottom
+borders. This will not do any harm though, because it does not generate any
+bad lines and happens during video fetch cycles [see Missing Cycles article].
+VIC reads the data from the last address in the current video bank, which is
+normally $3fff and displays this over and over again.
+
+If we change the data in this address in the border area, the change will be
+visible right away. And if you synchronize the routine to the beam position,
+you can have a different value on each line. If there is nothing else to do
+in the border, you can get seven different values on each scan line.
+
+The bad thing about this graphics is that it is impossible to change its
+color - it is always black. It is of course possible to use inverted graphics
+and change the background color. And if you have different data on each line,
+you can as easily have different color(s) on each line too.
+
+If you don't use $3fff for any effects, it is a good idea to set it to zero,
+but remember to check that you do not store anything important in that
+address. In one demo I just cleared $3fff and it was right in the middle of
+another packed demopart. It took some time to find out what was wrong with
+the other part.
+
+
+
+
+
+_Horizontal scrolling_
+
+This new graphics data also obeys the horizontal scroll register ($D016), so
+you can do limited tech-tech effects in the border too. You can also use
+sprites and open the sideborders. You can see an example of the tech-tech
+effect in the first example program. Multicolor mode select has no effect
+on this data. You can read more about tech-tech effects in a future article.
+
+
+
+
+
+  _Scrolling the screen_
+
+  VIC begins to draw the screen from the first bad line. VIC will know
+  what line is a bad line by comparing its scan line counter to the
+  vertical scroll register : when they match, the next line is a bad
+  line. If we change the vertical scroll register ($d011), the first bad
+  line will move also. If we do this on every line, the line counter in
+  VIC will never match with it and the drawing never starts (until it is
+  allowed to do so).
+
+  When we don't have to worry about bad lines, we have enough time to
+  open the borders and do some other effects too. It is not necassary to
+  change the vertical scroll on every line to get rid of the bad lines,
+  just make sure that it never matches the line counter (or actually the
+  least significant 3 bits).
+
+  You can even scroll the bad lines independently and you have FLD -
+  Flexible Line Distance. You just allow a bad line when it is time to
+  display the next character row. With this you can bounce the lines or
+  scroll a hires picture very fast down the screen.
+
+
+
+
+  You might have heard that it is possible to expand sprites to more than
+twice their original size. Imagine a sprite scroller with 6-times expanded
+sprites. However, there is no need to expand all of them equally. Using
+this technique, it is possible to make easy sinus effects and constantly
+expanding and shrinking letters.
+
+The VIC (video interface controller) may be fooled in many things. One of
+them is the vertical expansion of sprites. If you clear the expand flag and
+then set it back straight away, VIC will think it has only displayed the
+first one of the expanded lines. If we do the trick again, VIC will continue
+to display the same data again and again. But why does VIC behave like this ?
+
+
+
+
+_Logic gates will tell the truth_
+
+It is not really a bug, but a feature. The hardware design to implement the
+vertical enlargement was just as simple as possible. Those, who do not care
+about hardware should skip this part... The whole y-enlargement is handled
+with five simple logical ports. Each sprite has an associated Set-Reset
+flip-flop to tell whether to jump to the next sprite line (add three bytes
+to the data counter) or not.
+
+Let's call the state of the flip-flop Q and the inputs R (reset) and S (set).
+The function of a SR flip-flop is quite simple: if R is one, Q goes to zero,
+if S is one, Q goes to one. Otherwise the state of the flip-flop does not
+change. In this case the flip-flop is Set, if either the Y-enlargement bit
+is zero or the state of the flip-flop is zero at the end of a scan line. The
+flip-flop is reset, if both the state and the Y-enlargement are ones at the
+end of the line.
+
+When you clear the bit in the vertical expansion register, the flip-flop will
+be set regardless of the electron beam position on the scan line. If you
+set the bit again before the end of the line, the flip-flop will be cleared
+and VIC will be displaying the same sprite line again. In other words, VIC
+will think that it is starting to display the second line of the expanded
+sprite row. This way any of the lines in any of the sprites may be stretched
+as wanted.
+So, simply, at any time, if vertical expand is zero, the add enable is set
+to one. At the end of the line - before adding - the state is cleared if
+vertical expand is one.
+
+
+
+
+Even odder ?_
+
+Something very weird happens when we clear the expansion bit right when VIC
+is adding three to the sprite image counters. The values in the counters will
+be increased only by two, and the data is then read from the wrong place.
+
+Normally the display of a sprite ends when VIC has shown all of the 21
+lines of the sprite (the counter will end up to $3f). If there has been a
+counter mixup, $3f is not reached after 21 lines and VIC will go on counting
+and will display the sprite again, now normally. If we fool the counter only
+once, the counter value $3f is reached when the sprite is displayed twice.
+
+
+
+
+
+
+_Fiddling_
+
+I don't think the distorted counter effect can be used for anything, but
+there is many things where the variable stretching could be used. When you
+open the borders, you can be sure that there is a constant amount of time,
+if you stretch the sprites to the whole lenght of the area. You may stretch
+only the first and last lines, stretch the other lines by a constant or
+using a table, or using a variable table or any of the combinations possible.
+
+
+
+
+
+_A raster routine is a must_
+
+Because you have to access the VIC registers on each line during the stretch,
+you need some kind of routine which can do other kinds of tricks besides the
+stretch. You can open the side borders and change the background color and
+maybe you have to shift the screen (and the bad lines with it) downwards.
+[See previous C=Hacking Issues for talk about raster interrupts.]
+
+Look at the demo program. In the beginning of the raster routine there is
+first some timing, then a loop that lasts exactly 46 clock cycles. It takes
+exactly one scan line to execute. Inside the loop we first do the necassary
+modifications to the vertical scroll register, then we change the background
+color and then we open the side borders. And finally we handle the stretching
+using the stretch data, where a zero-bit means that the corresponding sprite
+will be stretched. A one-bit means that VIC is allowed to go to the next line
+of the sprite data.
+
+
+
+
+
+_Stretching takes time_
+
+Besides showing the stretched sprites we need time to generate the stretching
+data, unless of course, the stretch is constant. We have to have 20
+one-bits for each sprite in our table. It is not feasible to determine the
+state of each byte in the table, instead you clear the table and plot the
+needed bits.
+
+The routine is quite straightforward, but many optimizations may be applied
+to make it faster. First we load Y with the stretch of the first line (the
+y-coordinate of the data). Then we use it as an index to the table and plot
+the right bit and increase Y with the expansion value. Then we do it again
+until we have all of the 20 bits scattered to the table. The last sprite line
+will then stretch until we stop the stretching, because the last line is
+not allowed to be drawn.
+
+
+
+
+
+
+_Speed is everything_
+
+The calculation itself is easy, but optimizing the routine is not. If all
+of the sprites are stretched equally (by integer amounts) and from the same
+position, the routine is the fastest possible.  You can also have variable
+and smooth stretch.  Smooth stretch uses other than integer expansion values
+and thus also needs more processor time.  If each sprite has to be stretched
+individually, you need much more time to do it.
+
+The fastest routine I have ever written uses some serious selfmodification
+tricks. There are also some other tricks to speed up the stretch, but they
+are all secret ones.. :-)  Well, what the h*ck, I will include it anyway.
+By the time you read this I have already made a faster routine..
+
+You can speed up that routine (by 17%) by unrolling the inner loop, but you
+have to use a different addressing mode for ORA (zero-page). You also need
+to place some restrictions to the tables used.. If you unroll both loops,
+you can get ~25% faster routine than the Fore!-version.
+
+
+
+
+One time half of the demos had pictures waving horizontally on the
+width of the whole screen. This effect is named tech-tech, and the
+audience was puzzled. You can move the screen only eight pixels using
+the horizontal scroll register. This effect was done using character
+graphics. How exactly and is the same possible with sprites ?
+
+Horizontal scroll register can move the screen by eight pixels. This
+isn't even nearly enough to produce a really stunning effect. You have
+to move the graphics itself, fortunately with a resolution of one
+character position (one byte) only, the rest can be done with the scroll
+register. During one scan line there is no time to move the actual data,
+you can only move a pointer. Changing the video matrix pointer won't
+help, because VIC (video interface controller) will fetch the character
+codes only at certain times, called bad lines. You can change the
+character set pointer instead, because VIC reads the data it displays
+directly from the character set memory.
+
+haracter set-implementation has its restrictions
+
+Because horizontal movement is done by changing the character sets, the
+picture or text must be pure graphic and the character codes in the
+video matrix must be in a numerical order. The normal picture is in the
+first character memory and in the next one it is shifted one character
+position to the right. One video bank can hold only seven full character
+memories besides the video matrix. This limits the movement of the
+picture to 56 pixels. It is possible to get more movement if you use
+smaller picture or another video bank.
+
+The shift is done so that on each scan line we update the horizontal
+scroll register ($D016) with the three lowest bits of the shift value.
+We use the other bits to select the right character set ($D018). In a
+tech-tech the shift value changes during the display of the whole
+picture, and the values are stored in a table. In addition to that, the
+shift values should be put into two tables, one for the horizontal
+scroll register and another for the character set select. This is
+necessary, because there is no time for extra calculations on a bad
+line.
+
+Because we have to change the character set and x-scroll dynamically, we
+also need a raster routine to show a tech-tech. A raster routine is a
+routine which is synchronized to the electron beam. This eats up the
+processor time: the bigger the picture, the less time is left over for
+other activities. On other than bad lines you can do other funny things,
+like change the color of the background or border.
+
+
+
+ou can do it on the screen, how about borders ?
+
+Because you cannot get characters to the border, you might think that it
+is impossible to make a tech-tech effect in the borders. It takes so
+much time to change sprite x-coordinates, that you can change only some
+of them. There is time for five sprite moves, if you do not need to
+change the most significant (9th) bit of the x-coordinate. On the other
+hand, you could design the movements directly to the sprites and then
+just change the images, but then the movements would be constant.
+
+However, there is one trick you can use to get all of the sprites on the
+screen, with variable movements and color bars etc. You do not change
+the x-coordinates, but the data itself on each scan line. In fact you
+change the sprite image pointers. There is multiple sprite pictures,
+where the graphics is shifted horizontally, just like the normal
+tech-tech charsets. Because of this, the sprites have to be placed side
+by side. No gaps are allowed. By changing the image pointers you can get
+the graphics to move horizontally on each line as you wish. With
+multicolor sprites you have to remember that one pixel corresponds to
+two bits - the movement is not so smooth.
+
+Wait ! How come there is enough time to change the sprite pointers, when
+there is not time to change the coordinates ? This is another pointer
+trick. VIC reads the sprite image pointers from the end of the current
+video matrix, normally $07f8. You just have to change the video matrix
+pointer ($D018) to change all of the image pointers. This takes only
+eight cycles and there is plenty of time left for other effects on each
+scan line. If you use only one video bank, you can get the sprite
+picture to 16 different places. This allows also another kind of
+effects, just use your imagination.
+
+
+
+
+
+DYCP - Different Y Character Position - is a name for a horizontal scroller,
+where characters go smoothly up and down during their voyage from right to
+left. One possibility is a scroll with 8 characters - one character in each
+sprite, but a real demo coder won't be satisfied with that.
+
+Demo coders thought that it looks good to make the scrolling text change its
+vertical position in the same time it proceeded from the right side of the
+screen to the left. The only problem is that there is only eight sprites
+and that is not even nearly enough to satisfy the requirements needed for
+great look. So the only way is to use screen and somehow plot the text in
+graphics, because character columns can not be scrolled individually.
+Plotting the characters take absolutely too much time, because you have to
+handle each byte seperately and the graphics bitmap must be cleared too.
+
+
+
+
+
+
+_Character hack_
+
+The whole DYCP started using character graphics. You plot six character
+rows where the character (screen) codes increase to the right and down.
+This area is then used like a small bitmap screen. Each of the text chars
+are displayed one byte at a time on each six rows high character columns.
+This 240 character positions big piece of screen can be moved horizontally
+using the x-scroll register (three lowest bits in $D016) and after eight
+pixels you move the text itself, like in any scroll. The screen is of course
+reduced to 38 columns wide to hide the jittering on the sides.
+
+A good coder may also change the character sets during the display and
+even double the size of the scroll, but because the raster time happens
+to go to waste using this technique anyway, that is not very feasible. There
+are also other difficulties in this approach, the biggest is the time needed
+to clear the display.
+
+
+
+
+
+
+
+_Save characters - and time_
+
+But why should we move an eight-byte-high character image in a 48-line-high
+area, when 16 is really enough ?  We can use two characters for the graphics
+bitmap and then move this in eight pixel steps up and down. The lowest
+three bits of the y-position then gives us the offset where the data must
+be plotted inside this graphical region. The two character codes are usually
+selected to be consecutive ones so that the image data has also 16
+consecutive bytes. [See picture 1.]
+
+
+
+
+
+
+
+
+_Want to go to the border ?_
+
+Some coders are always trying to get all effects ever done using the C64 go
+to the border, and even successfully. The easiest way is to use only a region
+of 21 pixels high - sprites - and move the text exactly like in characters.
+In fact only the different addressing causes the differences in the code.
+
+Eight horizontally expanded sprites will be just enough to fill the side
+borders. You can also mix these techiques, but then you have the usual
+"chars-in-the-screen-while-border-opened"-problems (however, they are
+solvable). Unfortunately sprite-dycp is even more slower than char-dycp.
+
+
+
+
+
+
+_More movement vertically_
+
+You might think that using the sprites will restrict the sinus to only
+14 pixels. Not really, the only restriction is that the vertical position
+difference between three consequent text character must be less than 14
+pixel lines. Each sprites' Y-coordinate will be the minimum of the three
+characters residing in that sprite. Line offsets inside the sprites
+are then obtained by subtracting the sprite y-coordinate from the character
+y-coordinate. Maybe a little hard to follow, but maybe a picture will
+clear the situation. [See picture 2.]
+
+Scrolling horizontally is easy. You just have to move sprites like you would
+use the character horizontal scroll register and after eight pixels you
+reset the sprite positions and scroll the text one position in memory.
+And of course, you fetch a new character for the scroll. When we have
+different and changing sprite y-coordinates, opening the side borders become
+a great deal more difficult. However, in this case there is at least two
+different ways to do it.
+
+
+
+
+
+
+_Stretch the sprites_
+
+The easiest way is to position all of the sprites where the scroll will
+be when it is in its highest position. Then stretch the first and last line
+of each sprite so that the 19 sprite lines in the middle will be on the
+desired place. Opening the borders now is trivial, because all of the sprites
+are present on all of the scan lines and they steal a constant amount of
+time. However, we lose two sprite lines. We might not want to use the first
+and the last line for graphics, because they are stretched.
+[See previous C=Hacking Issues for more information about stretching and
+ stolen cycles.]
+
+A more difficult approach is to unroll the routine and let another routine
+count the sprites present in each line and then change the time the routine
+uses accordingly. In this way you save time during the display for other
+effects, like color bars, because stretching will take at least 12 cycles
+on each raster line. On the other hand, if the sinus is constant (user is
+not allowed to change it), it is usually possible to embedd the count
+routine directly to the border opening part of the routine.
+
+
+
+
+
+
+_More sprites_
+
+You don't necassarily need to plot the characters in sprites to have more
+than eight characters. Using a sprite multiplexing techiques you can double
+or triple the number of sprites available. You can divide the scroll
+vertically into several areas and because the y-coordinate of the scroll
+is a sinus, there always is a fixed maximum number of sprites in each area.
+This number is always smaller than the total number of sprites in the
+whole scroll. I won't go into detail, but didn't want to leave this out
+completely. [See picture 3.]
+
+
+
+
+
+
+_Smoother and smoother_
+
+Why be satisfied with a scroll with only 40 different slices horizontally ?
+It should be possible to count own coordinates for each pixel column on
+the scroll. In fact the program won't be much different, but the routine
+must also mask the unwanted bits and write the byte to memory with ORA+STA.
+When you think about it more, it is obvious that this takes a generous amount
+of time, handling every bit seperately will take much more than eight times
+the time a simple LDA+STA takes. Some coders have avoided this by plotting
+the same character to different character sets simultaneously and then
+changing the charsets appropriately, but the resulting scroll won't be much
+larger than 96x32 pixels.
+
+
+
+
+FLI - more color to the screen by Pasi 'Albert' Ojala (po87553@cs.tut.fi or albert@cc.tut.fi)
+                       
+(All timings are in PAL, altho the principles will apply to NTSC too)
+
+All of us have heard complaints about the color constraints on C64. One 8x8
+pixel character position may only carry four different colors.  FLI picture
+can have all of the 16 colors in one char position.  What then is this FLI
+and how it is done ?
+
+In the normal multicolor mode can one character position (4x8 pixels) have
+only four different colors and one of them is the common background color.
+Color codes are stored in half bytes (nybbles) to the video matrix memory
+(anywhere video matrix pointer points at, normally $0400) and to the color
+memory ($D800-$DBFF). In multicolor mode the color of each pixel is
+determined by two bits in the graphics memory. Bit pair 11 will refer to
+color memory, background color is the color for bit pair 00, and video
+matrix will define the colors for bit pairs 01 and 10.
+
+
+
+
+
+
+_What happens in the VIC ?_
+
+VIC (Video Interface Controller) fetches color information from memory on
+each bad line. This will steal time from processor, because VIC needs to use
+processor's bus cycles. Bad line is a curse in the C64 world. Fortunately
+VIC's data bus is 12 bits wide and so the color data fetch for each character
+position will take only one bus cycle. Color memory is physically wired to
+the VIC databus lines D8-D11.
+
+How does VIC know where to fetch the graphical information ? Some of you know
+the mystical formulas needed to mess with the pixels in the hires screen.
+How are these functions obtained ? Are they just magic ? No, there are some
+internal counters in VIC. They always point to the right place in grafix
+memory and the address is determined like this:
+
+A13  A12 A11 A10 A9  A8  A7  A6  A5  A4  A3  A2  A1  A0
+CB13 VC9 VC8 VC7 VC6 VC5 VC4 VC3 VC2 VC1 VC0 RC2 RC1 RC0
+
+Address bits A15 and A14 change according to the selected video bank.
+Address bit A13 is CB13, which may be found in VIC register $18. It
+selects the right side of the video bank to be the bitmap memory. With
+these bits you can set the bitmap to eight different places in memory.
+However, some of them are useless because of the character ROM images and
+zero page/stack. Rest of the bits come from the internal counters.
+
+VC9-VC0 (Video Counter) forms the address bits 12-3. The counter rolls
+through all 1000 character positions, 0-39 on the first eight lines, 40-79
+on the second eight lines and so on. The lowest three bits come from the row
+counter, RC2-RC0. This is another VIC counter and it counts the scan lines
+from zero to seven.
+
+
+
+
+
+
+_A software graphics mode - FLI_
+
+VIC will systematically go through every byte in the bitmap memory, but how
+does it know where and when to get the color information ? This is where
+the main principle of FLI (Flexible Line Interpretation) lies. Color data
+is fetched (and this means it is a bad line), when the line counter matches
+with the vertical scroll register. VC9-VC0 defines where the color data is
+inside the video matrix and color memory.
+
+If we change the vertical scroll register, we can fool VIC to think that
+every line is a bad line, so it will fetch the color information on every
+line too. Because VIC will fetch the colors continuosly, we can get
+independent colors on each scan line. We just have to change colors and VIC
+will handle the rest. Unfortunately the result is the loss of 40 processor
+cycles per line (see the Missing Cycles article for more information about
+VIC stealing cycles).
+
+
+
+
+
+
+_Doing it in practice_
+
+In practice there is no time to change color memory, but in multicolor
+mode VIC uses video matrix for color information too. We have just enough
+time to change the video matrix pointer, $D018. Now VIC will see a
+different video matrix on each scan line, different block of memory. With
+the four upper bits in the register we select one of the 16 video memories
+in the video bank. Just remember that the register also selects the position
+of the graphics memory (bitmap) inside the video bank.
+
+Because we have to keep the bitmap in the same video bank, we only have half
+of the bank free for video matrices. Fortunately, that's all we need to get
+individual multicolor colors for each line and character position.
+VIC will fetch the color data from the eight video matrices and then it will
+roll on to the next 40 bytes. After eight lines and matrices we will select
+the first video matrix again. (See picture 1)
+
+Usually it is not necassary to use the whole screen for a FLI picture,
+especially if you want to have a scroller or some other effects. You just
+have to make sure that VIC is foolable in the usual way. The timing is also
+very important, even one cycle variations in the routine entry are not
+allowed. There is many ways to do the synchronization. One way is to use a
+sprite, as in the previous article. (See C= Hacking, Vol. 1, Iss. 3, The
+Demo Corner: Missing Cycles).
+
+
+
+
+
+
+_Not much time_
+
+Because a bad line will steal 40 cycles, there is only 23 cycles left on
+each scan line. It is enough for changing the video matrix and backgroud
+color. There is not a moment to lose, because you must change the vertical
+scroll register, video matrix pointer and the background color. This is why
+you can't have sprites in front of a FLI picture.
+
+With FLI we get two selectable colors for each character position and line,
+each scan line can have it's own background color and each character position
+still has its own character color from color memory. In theory each character
+position could have 25 different colors, unfortunately VIC only has 16.
+
+
+
+
+
+_A little feature_
+
+VIC does not like it when we change the vertical scroll register ($D011),
+and is a bit annoyed. It 'sees' code 255 (light gray) in video matrix
+and 9 (brown) in the color memory instead of the correct values stored there.
+Actually the color value seems to be the lower nybble of the data byte
+currently on the data bus (accessed by the processor (LDA#=$A9)).
+Unfortunately there is no chance to do the register change in the border
+and thus the three leftmost character columns are a bit useless, because
+the colors are fixed.
+
+However, this doesn't mean that you can't use those three columns. FLI
+editors may not support the fixed colors though, so it may be hard to use
+them.
+
+
+
+
+
+
+_What to do with FLI ?_
+
+Because FLI will eat up all the available processor time (no Copper :-),
+it is not suitable for any action-games. Each FLI picture takes about 17 kB
+of memory: not so many pictures fit on one floppy. So, the only place for FLI
+is demos, intros, board-type games and maybe a GIF viewer..
+
+
+
+
+
+AFLI-specs v1.0
+by written by D'Arc/Topaz for Chief/Padua on 28.6.1994
+
+Advanged FLI is name I came up with during the time I coded the
+first version of AFLI editor. I have never claimed to be the one
+who discovered this new graphics mode for 64. I myself give the
+credit for COLORFUL/ORIGO but I am not sure if anyone did it
+before him (splits have been done but in my eyes they don't count).
+
+In AFLI we can get 120 colors in theory (counted like this
+16!/(2!*14!)=120). When we put red and blue hires pixels close to
+each other we get a vision of purple - thanks the television.
+
+AFLI is just like FLI with $08-$0f (hires value) in $d016 and a
+couple of sprites over the first three marks. With $d018 we
+change the start of screen memory. And the good old $d011 for the
+main work.
+
+AFLI is the same as FLI but we don't use the $d800-$dc00 area
+for the third color. Actually we can't. In normal hires pictures
+the colors on the picture is ordered in a normal screen (normal
+text screen is on $0400+). The upper 4 bits is the color for
+bit 0 in picture bitmap and the lower 4 bits is the color for bit
+1 in picture bitmap (or the other way...but let us think that was
+the right way).
+
+For example: a normal hires picture char (8x8 bits)
+
+ 01234567  in hires picture where  01234567
+0 *****    the first spot of the  0bgggggbb
+1*** ***   screen has a value of  1gggbgggb
+2*** ***   $68 (blue&green) the   2gggbgggb
+3*******   hires picture looks    3gggggggb
+4*** ***   like this ---->        4gggbgggb
+5*** ***   b=blue, g=green        5gggbgggb
+6*** ***                          6gggbgggb
+7                                 7bbbbbbbb
+
+The bitmap is built just as in a hires picture bit 1 means the pixel
+is on and 0 that the pixel is off.
+
+In FLI we have built the screen to have badlines on every scanline of
+the screen. This gives us the possibility to change the screenmemory
+the picture uses on everyline. Now... when AFLI (and FLI) uses screen
+memory for colors and we change the screenmemory start on everyline,
+we can have new colors on everyline.
+
+
+
+
+
+
+_Linecrunch Basics_
+
+For those not familiar with linecrunch routines:  linecrunch is used
+to scroll the screen UPWARDS by convincing VIC-II that it has
+already showed more character rows than it in reality has shown.
+Surprisingly (or then, maybe not :) this consists of fiddling with
+$D011.  The timing is critical as always.
+
+Linecrunch works by setting $D011 equal the line before the current
+line and VIC-II will happily think that it is time to move on to the
+next character row - add 40 to the video matrix counter, 320 to the
+graphics memory counter and be ready to start a bad line.  Or, maybe
+'NOT to go back to the current row' would be a more suitable
+description.  (Programming VIC-II is slowly becoming a science.)
+
+The required timing also does not cause bad lines so that you can
+skip another line immediately on the successive line.  In addition,
+lines can be skipped only after the first character row and half of
+the second character row have been displayed.  This has something to
+do with the way VIC-II decides when there is a bad line.
+
+Because linecrunch causes VIC-II to skip rows, it will run out of
+video matrix and color memory (and graphics memory) before reaching
+the end of the screen.  However, VIC-II does not stop displaying the
+graphics nor does it reset the internal counters.  The counters keep
+on running and wrap around instead.
+
+
+
+
+
+Normally, when VIC-II is displaying the last character row, it is
+showing the memory from offsets $3c0 to $3e7.  If VIC-II has skipped
+one character row, it is displaying from $3e8 to $40f instead.  But,
+there are only 10 bits for the video matrix counter (0..1023), so it
+wraps around to zero after $3ff.  This means that the beginning of
+the video matrix is displayed at the bottom of the screen.  The
+character rows become shifted by 24 character positions to the right
+because there were originally 24 unused memory locations at the end
+of the memory (1000..1023).  (To be honest, sprite image pointers
+are not unused memory, but they are not used with normal FLI.)
+
+The same thing happens for color memory because it uses the same
+counter for addressing the memory (in fact, color memory access and
+character data access are performed simultaneosly, 12 bits at a
+time).  The graphics memory behaves the same way, except that the
+counter has three bits more and it counts at eight times the speed,
+so that it wraps at the exact same time as the other counter.
+
+The first character row can't be used for linecrunch and the second
+one is also lost in the process.  The first usable line to display
+is the third character row.  However, those two lost rows can still
+be used as an extension at the end of the first screen.  You must
+notice, however, that the alignment has been changed.  After these
+two rows have been displayed, the video bank is switched to get new
+fresh data on the screen.
+
+
+
+
+
+
+
+_Back to BFLI_
+
+Wrapped data is nothing difficult to work with.  It is just the
+matter of writing the right conversion program.  Also, the normal
+FLI routine can be used, we just have to make sure VIC always has
+the right bank visible - simple LDA bank,x:sta $DD00 can accomplish
+that.  The more difficult aspect is to make the display freely
+locatable.  We have 32 kilobytes of graphics data, this is the main
+reason we can't even think about using copying.  Linecrunch combined
+with the bad line delaying technique will do the job much more
+nicely.
+
+Figure 2 shows the principles.  To make things simpler I have chosen
+location 0 to mean that the top of the picture is visible, 1 means
+that the picture is scrolled one line upwards and so on.  We can see
+that linecrunch is not used at all for the location 0.  To make the
+picture start at the same point whether linecrunch has crunched
+lines or not we compensate the non-lost raster lines by delaying the
+next bad line.  When the location is n*8 (n=0,1,2..), the sum of the
+linecrunched and delayed lines is constant - the graphics display
+always starts at the same point.
+
+Then how do we deal with the location values that are not evenly
+dividable by eight ?  Now, lets assume that the location is L, and
+we have C, which is the location divided by eight (C = L/8), and R,
+which is the remainder (R = L%8).  To make the picture scroll to the
+right position, we need to delay the bad line less than before - R
+lines less for location L than for location C*8.  E.g.  for location
+2 we delay the bad line two lines less than for location 0.  This
+also shows that we need 7 lines more than is needed for to
+compensate for the linecrunch.
+
+Determining the number of linecrunch lines is a recursive process,
+because when you use more linecrunch lines, that decreases the
+number of lines you have available for the display and you need
+bigger range for the location value.  The linecrunch can be started
+after 12 lines, and we need at least 7 lines to use the soft
+y-scroll.  This makes 181 lines available for the display
+originally.
+
+Because we need to show 400 lines of graphics, we would need
+(400-181)/8=28 linecrunch lines.  However, this in turn reduces the
+number of lines we have for graphics to 181-28=153 and we need
+(400-153)/8=31 linecrunch lines.  Again, 181-31 is 150.  We get
+(400-150)/8=32 and there it finally converges and we have 149 lines
+for graphics, which makes location values 0..251 valid.
+
+
+
+
+
+
+
+_Clipping added_
+
+Now we can scroll the picture to any location we want, but the top
+of the picture is not clipped and it is very annoying to watch.  We
+need to enable the graphics at the same point regardless of the
+y-scroll value.  The answer is in the extended color mode (ECM).
+
+When both ECM and multicolor mode (MCM) are selected, VIC-II will
+turn the display to black.  This is because there is a conflicting
+situation and it just can't decide which color scheme to use.  The
+video accesses will continue to happen just like before, the data is
+just not displayed.  When the ECM bit is cleared again, the normal
+multicolor graphics is shown.
+
+So, we set the ECM bit and start to display the first eight lines of
+the FLI.  Because the FLI routine already writes to $D011, we just
+make sure the ECM bit is set in the first R number of writes to
+$D011 and zero in all other.
+
+The viewer is now 'complete'.  You can take a look at the code below
+or you can get C64Gfx1_4.lha and see it in action yourself and not
+just rely on my word.  The package includes converter programs for
+BFLI, FLI and Koala (ANSI-C), couple of example pictures and viewers
+for PAL and NTSC machines.
+
+
+
+

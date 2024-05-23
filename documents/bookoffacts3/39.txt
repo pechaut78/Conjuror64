@@ -1,0 +1,18 @@
+
+
+_A raster routine is a must_
+
+Because you have to access the VIC registers on each line during the stretch,
+you need some kind of routine which can do other kinds of tricks besides the
+stretch. You can open the side borders and change the background color and
+maybe you have to shift the screen (and the bad lines with it) downwards.
+[See previous C=Hacking Issues for talk about raster interrupts.]
+
+Look at the demo program. In the beginning of the raster routine there is
+first some timing, then a loop that lasts exactly 46 clock cycles. It takes
+exactly one scan line to execute. Inside the loop we first do the necassary
+modifications to the vertical scroll register, then we change the background
+color and then we open the side borders. And finally we handle the stretching
+using the stretch data, where a zero-bit means that the corresponding sprite
+will be stretched. A one-bit means that VIC is allowed to go to the next line
+of the sprite data.

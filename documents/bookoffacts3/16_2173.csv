@@ -1,0 +1,6 @@
+question,answer
+"What is the purpose of the LEN function in C64 Basic?","The LEN function in C64 Basic is an integer function that counts the number of characters in a specified string. For example, if A$ = "COMPUTER", then PRINT LEN(A$) will result in 8."
+"How do you list a program in current memory in C64 Basic?","To list a program in current memory in C64 Basic, you can use the LIST L(SHIFTED I) command."
+"What is the function of the LOAD L(SHIFTED O) command in C64 Basic?","The LOAD L(SHIFTED O) command in C64 Basic is used to load a program from tape or disk."
+"What does the LOG function do in C64 Basic?","The LOG function in C64 Basic is a mathematical function."
+"Can you explain the use of the MID$ function in C64 Basic?","The MID$ function in C64 Basic is a string function that returns the part of a string that is set by the first value, counting from the far left, with a length of the second value. For example, if A$ = "AROUNDTHEWORLD" and PRINT MID$(A$,10,5), the result would be the word WORLD."

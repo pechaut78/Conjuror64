@@ -1,0 +1,24 @@
+_Clipping added_
+
+Now we can scroll the picture to any location we want, but the top
+of the picture is not clipped and it is very annoying to watch.  We
+need to enable the graphics at the same point regardless of the
+y-scroll value.  The answer is in the extended color mode (ECM).
+
+When both ECM and multicolor mode (MCM) are selected, VIC-II will
+turn the display to black.  This is because there is a conflicting
+situation and it just can't decide which color scheme to use.  The
+video accesses will continue to happen just like before, the data is
+just not displayed.  When the ECM bit is cleared again, the normal
+multicolor graphics is shown.
+
+So, we set the ECM bit and start to display the first eight lines of
+the FLI.  Because the FLI routine already writes to $D011, we just
+make sure the ECM bit is set in the first R number of writes to
+$D011 and zero in all other.
+
+The viewer is now 'complete'.  You can take a look at the code below
+or you can get C64Gfx1_4.lha and see it in action yourself and not
+just rely on my word.  The package includes converter programs for
+BFLI, FLI and Koala (ANSI-C), couple of example pictures and viewers
+for PAL and NTSC machines.

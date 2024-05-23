@@ -15,7 +15,7 @@ model = None
 
 
 prompt = PromptTemplate(
-    template="""you are training an LLM for C64 assembly langage and generating a csv of questions and verbose answers just answer providing pairs no other text like:
+    template="""you are training an LLM for C64  and generating a csv of questions and verbose answers just answer providing pairs no other text like:
     "question1","answer1"
     "question2","answer2"
 

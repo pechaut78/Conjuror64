@@ -1,0 +1,11 @@
+question,answer
+"What is the command to load a Basic program file in Commodore 64?","The command to load a Basic program file in Commodore 64 is LOAD "PROGRAM NAME",8 where "PROGRAM NAME" is the name of the file you want to load."
+"What is the syntax for loading a machine language program in Commodore 64?","The syntax for loading a machine language program in Commodore 64 is LOAD "PROGRAM NAME",8,1 where "PROGRAM NAME" is the name of the file you want to load."
+"What is the purpose of the number 8 in the LOAD command for Commodore 64?","The number 8 in the LOAD command for Commodore 64 specifies that the file is to be loaded into memory starting at address 1000 (hexadecimal), which is the location of the system's Basic interpreter."
+"What is the difference between loading a Basic program and a machine language program in Commodore 64?","The difference between loading a Basic program and a machine language program in Commodore 64 is that the former is loaded in a format that can be interpreted and executed by the Basic interpreter, while the latter is loaded in a format that can be directly executed by the computer's processor."
+"What is the file extension for Basic programs in Commodore 64?","The file extension for Basic programs in Commodore 64 is .BAS or .BIN"
+"What is the file extension for machine language programs in Commodore 64?","The file extension for machine language programs in Commodore 64 is .PRG"
+"Can a machine language program be loaded in Basic interpreter in Commodore 64?","No, a machine language program cannot be loaded and executed in Basic interpreter in Commodore 64. It needs to be loaded in a machine language monitor or assembler."
+"What is the purpose of the comma in the LOAD command for Commodore 64?","The comma in the LOAD command for Commodore 64 separates the file name from the memory address or the device number."
+"What is the device number for loading programs from a disk drive in Commodore 64?","The device number for loading programs from a disk drive in Commodore 64 is 8."
+"What is the device number for loading programs from a tape drive in Commodore 64?","The device number for loading programs from a tape drive in Commodore 64 is 1."

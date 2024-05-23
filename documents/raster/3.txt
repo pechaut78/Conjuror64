@@ -1,0 +1,17 @@
+
+
+The system needs an interrupt to occur 60 times per second to do housekeeping,
+and uses the CIA clock to generate the interrupts. We want to interrupt every 
+time a certain scan line is reached on the monitor, which will also just happen
+to occur at 60 times per second. We also have to make sure that they don't 
+interfere with each other. The regular interrupts should be sent to their Rom
+destination, while our video interrupts should go to our code, and no where 
+else.
+
+If both are occurring at 60 times per second, why not do the job of the system
+Rom, and our video code on the SAME interrupt? We know that the CIA chip is not
+good for this; it is out of sync with the video image. Why not turn OFF the CIA
+interrupt, enable the raster/video interrupt, and do both jobs on one interrupt?
+Then we would have an interrupt signal that occurs 60 times per second, and is
+in perfect sync with the video image.
+

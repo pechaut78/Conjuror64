@@ -1,0 +1,27 @@
+
+
+
+_Doing it in practice_
+
+In practice there is no time to change color memory, but in multicolor
+mode VIC uses video matrix for color information too. We have just enough
+time to change the video matrix pointer, $D018. Now VIC will see a
+different video matrix on each scan line, different block of memory. With
+the four upper bits in the register we select one of the 16 video memories
+in the video bank. Just remember that the register also selects the position
+of the graphics memory (bitmap) inside the video bank.
+
+Because we have to keep the bitmap in the same video bank, we only have half
+of the bank free for video matrices. Fortunately, that's all we need to get
+individual multicolor colors for each line and character position.
+VIC will fetch the color data from the eight video matrices and then it will
+roll on to the next 40 bytes. After eight lines and matrices we will select
+the first video matrix again. (See picture 1)
+
+Usually it is not necassary to use the whole screen for a FLI picture,
+especially if you want to have a scroller or some other effects. You just
+have to make sure that VIC is foolable in the usual way. The timing is also
+very important, even one cycle variations in the routine entry are not
+allowed. There is many ways to do the synchronization. One way is to use a
+sprite, as in the previous article. (See C= Hacking, Vol. 1, Iss. 3, The
+Demo Corner: Missing Cycles).

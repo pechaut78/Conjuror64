@@ -1,0 +1,59 @@
+question,an
+"Make an asm program that changes the border color and screen colour in a loop","
+; This program rapidly updates the colors
+; of the screen and the border.
+
+*=$c000   ; starting address of the program 
+
+BORDER = $d020
+SCREEN = $d021
+
+start   inc SCREEN  ; increase screen colour 
+        inc BORDER  ; increase border colour
+        jmp start   ; repeat
+"
+"write an asm program that set the screen colour to black","
+*=$c000 
+
+lda #$00
+sta $d020
+sta $d021
+rts "
+"Provide a hello world program in asm","*=$0801   ; Starting Address BASIC + 1 =&gt; SYS 2049
+ 
+  !byte $0C,$08,$40,$00,$9E,$20,$32,$30,$36,$32,$00,$00,$00 ; BASIC CODE: 1024 SYS 2062	
+ 
+  jsr $E544     ; Call the Function that clears the screen
+  ldx #$00      ; Put 0 in Register X (Index Register)
+ 
+.write:
+  lda .hello,x  ; Read next character from Address at Label .hello + Offeset X
+  jsr $FFD2     ; CHROUT Subroutine, prints the Character loaded into Register A
+  inx           ; Increments Register X by 1
+  cpx #$0B      ; Compare if Value in Register X equals to 11
+  bne .write    ; If Value in Register X is not 11, go back to $033E
+  rts           ; Return to Basic  
+ 
+.hello: !text "HELLO WORLD"
+"Give an asm program to play a sid","setup:
+    sei                 ; Disable interrupts
+
+    lda #<irq_vector    ; Set IRQ vector to be called
+    sta $0314           ; Once per screen refresh
+    lda #>irq_vector
+    sta $0315           ; The $ 314 / $ 315 vector points to the IRQ raster routine
+
+    lda #$00
+    jsr $1000           ; Initialize sid to play song 0
+                        ; because a sid can have more than one song
+
+    cli                 ; Enable interrupts again
+    rts
+
+irq_vector:
+    asl $d019           ; ACK raster interrupt
+
+    jsr $1003           ; Call the sid
+
+    jmp $ea31           ; Exit interrupt"
+    

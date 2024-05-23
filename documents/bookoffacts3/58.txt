@@ -1,0 +1,9 @@
+
+
+
+_What to do with FLI ?_
+
+Because FLI will eat up all the available processor time (no Copper :-),
+it is not suitable for any action-games. Each FLI picture takes about 17 kB
+of memory: not so many pictures fit on one floppy. So, the only place for FLI
+is demos, intros, board-type games and maybe a GIF viewer..

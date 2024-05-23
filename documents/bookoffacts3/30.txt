@@ -1,0 +1,23 @@
+
+
+_How to open the sideborders_
+
+The same trick can be applied to sideborders. When VIC is about to start
+displaying the sideborder, just select 38-column mode and restore 40-column
+mode so that you can do the trick again in the next scan line. If you need to
+open the sideborders in the bottom or top border area, you have to open the
+vertical borders also, but there shouldn't be any difficulty in doing that.
+
+There is two drawbacks in this. The timing must be precise, one clock cycle
+off and the sideborder will not open (the sprites will generally take care of
+the timing) and you have to do the opening on each and every line. With
+top/bottom borders once in a frame was enough.
+
+Another problem is bad-lines. There is not enough time to open the borders
+during a bad line and still have all of the sprites enabled. One solution
+is to open the borders only on seven lines and leave the bad lines unopened.
+Another way is to use less than eight sprites. You can have six of them
+on a bad line and still be able to open the sideborders (PAL). The old and
+still good solution is to scroll the bad lines, so that VIC will not start
+to draw the screen at all until it is allowed to do so.
+[Read more about bad lines from previous C=Hacking Issues]

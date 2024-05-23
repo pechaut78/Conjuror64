@@ -1,0 +1,11 @@
+question,answer
+"What is the distorted counter effect and why is it not useful?","The distorted counter effect is a feature in the C64 that cannot be used for any practical purpose. It is a side effect of the system's timing."
+"What is the effect of opening the borders on the C64?","When the borders are opened on the C64, there is a constant amount of time available for displaying graphics."
+"What can be controlled when stretching sprites to the whole length of the area?","When stretching sprites to the whole length of the area, the first and last lines can be stretched, as well as the other lines using a constant, a table, a variable table, or any combination of these options."
+"What is the advantage of using a variable table for stretching sprites?","Using a variable table for stretching sprites allows for more flexibility and customization in the stretching process."
+"Can the distorted counter effect be used for variable stretching?","No, the distorted counter effect cannot be used for variable stretching. It is not a practical or useful feature for this purpose."
+"What is the difference between stretching only the first and last lines and stretching all lines using a constant?","Stretching only the first and last lines will result in a different display than stretching all lines using a constant, as the constant will apply a uniform stretch to all lines."
+"What is one advantage of using a table for stretching sprites?","Using a table for stretching sprites allows for more precise control over the stretching of each line."
+"What is the difference between using a constant and using a table for stretching sprites?","Using a constant for stretching sprites will apply a uniform stretch to all lines, while using a table allows for more precise control over the stretching of each line."
+"Can the other lines be stretched using a variable table?","Yes, the other lines can be stretched using a variable table, which allows for more flexibility and customization in the stretching process."
+"What is one potential use of the variable stretching feature on the C64?","One potential use of the variable stretching feature on the C64 is for creating dynamic and visually interesting graphics effects."

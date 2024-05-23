@@ -1,0 +1,11 @@
+question,answer
+"What operation is performed to determine the state of each byte in the table for stretching sprites?","Instead of determining the state of each byte in the table, the table is cleared and the needed bits are plotted."
+"What is the purpose of using the y-coordinate of the data as an index to the table in the routine?","The y-coordinate of the data is used as an index to the table to plot the right bit and increase Y with the expansion value."
+"What is the significance of having 20 one-bits for each sprite in the table?","Having 20 one-bits for each sprite in the table ensures that there is enough space for the stretched sprite data."
+"What is the reason for not allowing the last line of the sprite to be drawn?","The last line of the sprite is not allowed to be drawn because it will stretch until the stretching is stopped."
+"What optimization can be applied to make the stretching routine faster?","One optimization that can be applied is to load Y with the stretch of the first line (the y-coordinate of the data) and use it as an index to the table to plot the right bit and increase Y with the expansion value."
+"What is the role of the expansion value in the routine?","The expansion value is used to increase Y with in the routine, allowing for the correct bits to be plotted to the table."
+"What is the maximum number of bits that can be scattered to the table for each sprite?","The maximum number of bits that can be scattered to the table for each sprite is 20."
+"What is the initial value assigned to Y in the routine?","Y is loaded with the stretch of the first line (the y-coordinate of the data) in the routine."
+"What is the purpose of clearing the table in the routine?","The table is cleared in the routine to make it feasible to plot the needed bits."
+"What is the role of the plotting operation in the routine?","The plotting operation is used to place the needed bits into the table in the routine."

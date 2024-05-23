@@ -1,0 +1,11 @@
+question,answer
+"What is the number of cycles available to the C64 processor on each scan line?","On each scan line, there are 63 cycles available to the C64 processor, except for one which only provides 23 cycles. This scan line is later referred to as a 'bad' scan line."
+"What is the role of the VIC in the C64?","The VIC (video interface controller) in the C64 handles the memory refresh and shows graphics on the screen. It fetches fourty bytes of graphics data and refreshes five rows in the memory matrix on each scan line."
+"When does the VIC access the memory?","The VIC accesses the memory during the cycles (phase 1) that the processor is not using the memory. However, CPU access to the bus must be denied to allow the VIC to fetch its data."
+"What is the width of the VIC bus in the C64?","The VIC bus in the C64 is 12-bit wide."
+"What is fetched at the same time by the VIC bus?","The character (8 bits) and color (4 bits) codes are fetched at the same time by the VIC bus."
+"What happens when sprites are added in the C64?","When sprites are added in the C64, the number of cycles available to the processor on each scan line changes."
+"What is the role of the VIC in handling the memory refresh in the C64?","The VIC in the C64 handles the memory refresh by refreshing five rows in the memory matrix on each scan line."
+"What is the number of bytes of graphics data fetched by the VIC on each scan line?","The VIC fetches fourty bytes of graphics data on each scan line."
+"What is the impact of the VIC's memory access on the CPU's access to the bus?","The VIC's memory access denies the CPU access to the bus, allowing the VIC to fetch its data."
+"What is the width of the memory bus in the C64?","The memory bus in the C64 is 8-bit wide."

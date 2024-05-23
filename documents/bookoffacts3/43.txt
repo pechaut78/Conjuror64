@@ -1,0 +1,30 @@
+ou can do it on the screen, how about borders ?
+
+Because you cannot get characters to the border, you might think that it
+is impossible to make a tech-tech effect in the borders. It takes so
+much time to change sprite x-coordinates, that you can change only some
+of them. There is time for five sprite moves, if you do not need to
+change the most significant (9th) bit of the x-coordinate. On the other
+hand, you could design the movements directly to the sprites and then
+just change the images, but then the movements would be constant.
+
+However, there is one trick you can use to get all of the sprites on the
+screen, with variable movements and color bars etc. You do not change
+the x-coordinates, but the data itself on each scan line. In fact you
+change the sprite image pointers. There is multiple sprite pictures,
+where the graphics is shifted horizontally, just like the normal
+tech-tech charsets. Because of this, the sprites have to be placed side
+by side. No gaps are allowed. By changing the image pointers you can get
+the graphics to move horizontally on each line as you wish. With
+multicolor sprites you have to remember that one pixel corresponds to
+two bits - the movement is not so smooth.
+
+Wait ! How come there is enough time to change the sprite pointers, when
+there is not time to change the coordinates ? This is another pointer
+trick. VIC reads the sprite image pointers from the end of the current
+video matrix, normally $07f8. You just have to change the video matrix
+pointer ($D018) to change all of the image pointers. This takes only
+eight cycles and there is plenty of time left for other effects on each
+scan line. If you use only one video bank, you can get the sprite
+picture to 16 different places. This allows also another kind of
+effects, just use your imagination.

@@ -1,0 +1,17 @@
+
+_What can we do with this feature ?_
+
+How can this be useful? A good use is for synchronization. Normally,
+before the CPU starts to execute the raster interrupt code, it's executing
+an instruction of undefined cycle-length. This execution time varies from
+two to seven cycles.
+
+With a sprite, you can do the synchronization with a minimal effort using
+a DEC or INC instruction in the right place. If the processor is early,
+it has to wait for the bus, otherwise it will continue to execute cycles
+from the instruction.
+
+I have never experimented with any other instruction than DEC/INC, but
+some others should work also. You need an instruction which has a cycle that
+do not need the bus to be available. e.g. INC $3fff will increase the
+value during the fifth cycle and do not need the bus for that.

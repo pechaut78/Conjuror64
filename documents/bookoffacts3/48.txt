@@ -1,0 +1,21 @@
+
+
+
+_More movement vertically_
+
+You might think that using the sprites will restrict the sinus to only
+14 pixels. Not really, the only restriction is that the vertical position
+difference between three consequent text character must be less than 14
+pixel lines. Each sprites' Y-coordinate will be the minimum of the three
+characters residing in that sprite. Line offsets inside the sprites
+are then obtained by subtracting the sprite y-coordinate from the character
+y-coordinate. Maybe a little hard to follow, but maybe a picture will
+clear the situation. [See picture 2.]
+
+Scrolling horizontally is easy. You just have to move sprites like you would
+use the character horizontal scroll register and after eight pixels you
+reset the sprite positions and scroll the text one position in memory.
+And of course, you fetch a new character for the scroll. When we have
+different and changing sprite y-coordinates, opening the side borders become
+a great deal more difficult. However, in this case there is at least two
+different ways to do it.

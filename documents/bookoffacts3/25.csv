@@ -1,0 +1,11 @@
+question,answer
+"What happens to the BA signal when the VIC wants to use the bus?","The BA (Bus Available) signal goes inactive when the VIC wants to use the bus, which will happen three cycles before the bus must be released."
+"What must the CPU do during the three cycles before the bus is released?","The CPU must complete all memory accesses or delay them until it has the bus again during the three cycles before the bus is released."
+"Can the CPU execute a new instruction while it doesn't have the bus?","The CPU can't execute a new instruction as long as it doesn't have the bus."
+"What happens to cycles when the CPU can't execute a new instruction?","Cycles seem to be lost when the CPU can't execute a new instruction as long as it doesn't have the bus."
+"How many cycles do all 8 sprites usually take?","All 8 sprites usually take 17 cycles."
+"How many cycles does one sprite take?","One sprite takes three cycles."
+"Can the CPU continue to execute an instruction if it does not use the bus?","Yes, the CPU may continue to execute an instruction if it does not use the bus."
+"What happens to the BA signal when the VIC wants to use the bus?","The BA signal goes inactive when the VIC wants to use the bus, indicating that the bus is no longer available."
+"What must the CPU do when the BA signal goes inactive?","The CPU must complete all memory accesses or delay them until it has the bus again when the BA signal goes inactive."
+"Can the CPU execute a new instruction while the BA signal is inactive?","No, the CPU can't execute a new instruction as long as the BA signal is inactive."

@@ -1,0 +1,11 @@
+question,answer
+"What command is used to put a value in a specified memory location in C64 Basic?","POKE"
+"What statement returns the current cursor position in C64 Basic?","POS"
+"What statement is used to output data to a device or file in C64 Basic?","PRINT#"
+"What statement reads from a data statement in C64 Basic?","READ"
+"What statement cannot be executed but serves as a vehicle to store remarks in a program in C64 Basic?","REM"
+"What statement resets the pointer to the first data statement in the program in C64 Basic?","RESTORE"
+"What statement is used to return to the data or line number following the gosub statement in C64 Basic?","RETURN"
+"What string function returns a set number of characters from the right most end of a string in C64 Basic?","RIGHT$"
+"What floating point function creates a random number in C64 Basic?","RND"
+"What statement is used to direct data to the printer in C64 Basic?","CMD"

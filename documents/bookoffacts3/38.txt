@@ -1,0 +1,11 @@
+
+
+
+_Fiddling_
+
+I don't think the distorted counter effect can be used for anything, but
+there is many things where the variable stretching could be used. When you
+open the borders, you can be sure that there is a constant amount of time,
+if you stretch the sprites to the whole lenght of the area. You may stretch
+only the first and last lines, stretch the other lines by a constant or
+using a table, or using a variable table or any of the combinations possible.

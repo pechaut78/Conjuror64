@@ -1,0 +1,11 @@
+question,answer
+"What happens to the sprite image counters when the expansion bit is cleared right as VIC is adding three to them?","The sprite image counters will only be increased by two instead of three, leading to the data being read from the wrong place."
+"What is the normal display end point for a sprite?","The normal display of a sprite ends when VIC has shown all 21 lines of the sprite, resulting in a counter value of $3f."
+"What happens if the counter mixup is not corrected and VIC continues counting?","If the counter mixup is not corrected, VIC will continue counting and display the sprite again, this time normally."
+"What is the effect of fooling the counter only once?","Fooling the counter only once will result in the counter value of $3f being reached when the sprite is displayed twice."
+"What is the impact of clearing the expansion bit at the wrong time on the sprite display?","Clearing the expansion bit at the wrong time can result in the sprite being displayed incorrectly and the data being read from the wrong place."
+"What is the result of a counter mixup in the sprite display?","A counter mixup can result in the sprite being displayed twice, with the second display being normal."
+"What is the maximum value that the sprite counter should reach after displaying a sprite?","The sprite counter should reach a maximum value of $3f after displaying a sprite."
+"What is the cause of the sprite counter not reaching the maximum value after 21 lines?","The sprite counter may not reach the maximum value after 21 lines if the expansion bit is cleared at the wrong time."
+"What is the impact of the counter mixup on the sprite display?","The counter mixup can result in the sprite being displayed twice, which can impact the overall display and performance of the system."
+"What is the result of the counter mixup if it is not corrected?","If the counter mixup is not corrected, VIC will continue counting and display the sprite again, which can impact the overall display and performance of the system."

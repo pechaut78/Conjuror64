@@ -26,3 +26,31 @@ program called test)
 WAIT W(SHIFTED A) A statement that stops the execution of a
 program until the specified condition is met. (EXAMPLE: WAIT 198,1-will
 stop until any key is pressed)
+
+Astute reads will notice a slight flaw in the above logic. For simplification 
+purposes, I didn't get into the fact that you will need TWO raster interrupts 
+PER SCREEN to accomplish anything useful. Why two? Because any change to the 
+video mode you put into effect 3/4 of the way down the screen will have to be 
+undone at the TOP of the next screen update. If you decide to make the top 3/4 
+of the screen a hi-res image, and the bottom 1/4 text, you need one interrupt 
+3/4 of the way down the screen to change from hi-res to text, but you need a 
+SECOND one at the top of the screen to change back to hi-res from text.
+
+So, we will now have 120 interrupts going off every second to accomplish our 
+video desires, with 60 of them working a double shift, making sure the system 
+interrupt code gets executed also. Remember that we are working with a specific
+example. There is no reason why you couldn't split the screen into N different
+video modes, and have (N+1)*60 interrupts going off per second. As long as you 
+keep your code short (so your interrupts don't take too long, and have another 
+interrupt occur before the current one is done - messy), it will work 
+beautifully.
+
+So far, this is all talk. Let's write a few short code segments to accomplish 
+some of the feats we've just discussed.
+
+The first we'll do is a re-hash of the one presented above. It flashes the 
+border again. It does not do any mid-screen changes of video modes or anything 
+fancy like that, so only 1 interrupt per screen is required (ie. 60 per second,
+not 120 etc.). This program simply shows the same idea, but this time using 
+video interrupts as the source rather than the CIA. You probably won't
+notice a difference during execution.

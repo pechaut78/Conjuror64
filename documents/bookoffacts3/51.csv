@@ -1,0 +1,11 @@
+question,answer
+"What is the limitation of a standard Commodore 64 scroll in terms of horizontal slices?","The standard Commodore 64 scroll has 40 different slices horizontally."
+"Why is it possible to count own coordinates for each pixel column on the scroll?","It is possible to count own coordinates for each pixel column on the scroll by modifying the program to handle each pixel column individually."
+"What routine must be used to mask the unwanted bits and write the byte to memory?","The routine must use ORA+STA to mask the unwanted bits and write the byte to memory."
+"Why does handling each bit separately take more time than a simple LDA+STA?","Handling each bit separately takes more time than a simple LDA+STA because it is a more complex operation."
+"What is a workaround some coders use to avoid handling each bit separately?","Some coders plot the same character to different character sets simultaneously and then change the charsets appropriately to create a larger scroll."
+"What is the size of the resulting scroll when using the workaround?","The resulting scroll won't be much larger than 96x32 pixels when using the workaround."
+"What is the main disadvantage of handling each bit separately?","The main disadvantage of handling each bit separately is that it takes a generous amount of time and is much slower than a simple LDA+STA."
+"What is the advantage of plotting the same character to different character sets?","The advantage of plotting the same character to different character sets is that it allows for a larger scroll without the need to handle each bit separately."
+"What is the maximum size of the scroll when plotting the same character to different character sets?","The maximum size of the scroll is 96x32 pixels when plotting the same character to different character sets."
+"What is the main limitation of the workaround?","The main limitation of the workaround is that the resulting scroll won't be much larger than 96x32 pixels."

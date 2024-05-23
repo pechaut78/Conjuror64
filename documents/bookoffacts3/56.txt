@@ -1,0 +1,15 @@
+
+
+
+_Not much time_
+
+Because a bad line will steal 40 cycles, there is only 23 cycles left on
+each scan line. It is enough for changing the video matrix and backgroud
+color. There is not a moment to lose, because you must change the vertical
+scroll register, video matrix pointer and the background color. This is why
+you can't have sprites in front of a FLI picture.
+
+With FLI we get two selectable colors for each character position and line,
+each scan line can have it's own background color and each character position
+still has its own character color from color memory. In theory each character
+position could have 25 different colors, unfortunately VIC only has 16.

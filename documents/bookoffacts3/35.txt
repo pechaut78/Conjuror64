@@ -1,0 +1,12 @@
+
+  You might have heard that it is possible to expand sprites to more than
+twice their original size. Imagine a sprite scroller with 6-times expanded
+sprites. However, there is no need to expand all of them equally. Using
+this technique, it is possible to make easy sinus effects and constantly
+expanding and shrinking letters.
+
+The VIC (video interface controller) may be fooled in many things. One of
+them is the vertical expansion of sprites. If you clear the expand flag and
+then set it back straight away, VIC will think it has only displayed the
+first one of the expanded lines. If we do the trick again, VIC will continue
+to display the same data again and again. But why does VIC behave like this ?

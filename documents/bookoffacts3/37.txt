@@ -1,0 +1,12 @@
+
+Even odder ?_
+
+Something very weird happens when we clear the expansion bit right when VIC
+is adding three to the sprite image counters. The values in the counters will
+be increased only by two, and the data is then read from the wrong place.
+
+Normally the display of a sprite ends when VIC has shown all of the 21
+lines of the sprite (the counter will end up to $3f). If there has been a
+counter mixup, $3f is not reached after 21 lines and VIC will go on counting
+and will display the sprite again, now normally. If we fool the counter only
+once, the counter value $3f is reached when the sprite is displayed twice.

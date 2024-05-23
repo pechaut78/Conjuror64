@@ -1,0 +1,45 @@
+
+One time half of the demos had pictures waving horizontally on the
+width of the whole screen. This effect is named tech-tech, and the
+audience was puzzled. You can move the screen only eight pixels using
+the horizontal scroll register. This effect was done using character
+graphics. How exactly and is the same possible with sprites ?
+
+Horizontal scroll register can move the screen by eight pixels. This
+isn't even nearly enough to produce a really stunning effect. You have
+to move the graphics itself, fortunately with a resolution of one
+character position (one byte) only, the rest can be done with the scroll
+register. During one scan line there is no time to move the actual data,
+you can only move a pointer. Changing the video matrix pointer won't
+help, because VIC (video interface controller) will fetch the character
+codes only at certain times, called bad lines. You can change the
+character set pointer instead, because VIC reads the data it displays
+directly from the character set memory.
+
+haracter set-implementation has its restrictions
+
+Because horizontal movement is done by changing the character sets, the
+picture or text must be pure graphic and the character codes in the
+video matrix must be in a numerical order. The normal picture is in the
+first character memory and in the next one it is shifted one character
+position to the right. One video bank can hold only seven full character
+memories besides the video matrix. This limits the movement of the
+picture to 56 pixels. It is possible to get more movement if you use
+smaller picture or another video bank.
+
+The shift is done so that on each scan line we update the horizontal
+scroll register ($D016) with the three lowest bits of the shift value.
+We use the other bits to select the right character set ($D018). In a
+tech-tech the shift value changes during the display of the whole
+picture, and the values are stored in a table. In addition to that, the
+shift values should be put into two tables, one for the horizontal
+scroll register and another for the character set select. This is
+necessary, because there is no time for extra calculations on a bad
+line.
+
+Because we have to change the character set and x-scroll dynamically, we
+also need a raster routine to show a tech-tech. A raster routine is a
+routine which is synchronized to the electron beam. This eats up the
+processor time: the bigger the picture, the less time is left over for
+other activities. On other than bad lines you can do other funny things,
+like change the color of the background or border.

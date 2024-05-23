@@ -1,0 +1,19 @@
+
+
+_Theory and speculation_
+
+Let's suppose that all the sprites are enabled and on the same scan line.
+Then, the VIC steals 16 cycles (2 cycles for each sprite) for the memory
+fetches and 3 cycles as overhead for the BA signal, for a total of 19 cycles.
+However, it will be usually less because the CPU will use some of the cycles
+when the bus request is pending.
+
+If we now disable sprite 4, no cycles are released for the CPU's use. This
+is because during the previous sprite 4 data fetch, the VIC already signals
+that it needs the bus for the sprite 5 data fetch and BA stays low (Refer
+to the timing chart). Thus, the CPU never sees BA go high during sprite 4
+and 2 cycles are still lost.
+
+Accordingly, if we only turn off sprites 1, 3 and 5 we get no cycles back
+from the VIC. So in time-critical raster routines, always use sprites in
+order.

@@ -1,0 +1,28 @@
+
+
+
+_Garbage appearing_
+
+When we open the top and bottom borders, some graphics may appear. Even
+though VIC has already completed the graphics data fetches for the screen
+area, it will still fetch data for every character position in top and bottom
+borders. This will not do any harm though, because it does not generate any
+bad lines and happens during video fetch cycles [see Missing Cycles article].
+VIC reads the data from the last address in the current video bank, which is
+normally $3fff and displays this over and over again.
+
+If we change the data in this address in the border area, the change will be
+visible right away. And if you synchronize the routine to the beam position,
+you can have a different value on each line. If there is nothing else to do
+in the border, you can get seven different values on each scan line.
+
+The bad thing about this graphics is that it is impossible to change its
+color - it is always black. It is of course possible to use inverted graphics
+and change the background color. And if you have different data on each line,
+you can as easily have different color(s) on each line too.
+
+If you don't use $3fff for any effects, it is a good idea to set it to zero,
+but remember to check that you do not store anything important in that
+address. In one demo I just cleared $3fff and it was right in the middle of
+another packed demopart. It took some time to find out what was wrong with
+the other part.

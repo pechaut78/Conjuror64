@@ -1,0 +1,11 @@
+question,answer
+"What memory addresses does VIC-II display when showing the last character row?","VIC-II displays the memory from offsets $3c0 to $3e7 when showing the last character row."
+"What happens to the character row if VIC-II has skipped one character row?","If VIC-II has skipped one character row, it displays from $3e8 to $40f instead."
+"How many bits does the video matrix counter have?","The video matrix counter has 10 bits (0..1023)."
+"What happens when the video matrix counter wraps around?","When the video matrix counter wraps around, the beginning of the video matrix is displayed at the bottom of the screen."
+"Why are character rows shifted to the right by 24 positions?","Character rows are shifted to the right by 24 positions because there were originally 24 unused memory locations at the end of the memory (1000..1023)."
+"What happens to color memory when the video matrix counter wraps around?","Color memory uses the same counter for addressing the memory and it also wraps around to zero after $3ff."
+"What happens to graphics memory when the video matrix counter wraps around?","Graphics memory behaves the same way, except that the counter has three bits more and it counts at eight times the speed, so that it wraps at the exact same time as the other counter."
+"Which character rows can't be used for linecrunch?","The first character row can't be used for linecrunch and the second one is also lost in the process."
+"Which is the first usable line to display?","The first usable line to display is the third character row."
+"What can be done with the two lost rows at the end of the first screen?","The two lost rows can still be used as an extension at the end of the first screen, but the alignment has been changed."

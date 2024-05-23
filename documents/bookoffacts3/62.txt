@@ -1,0 +1,46 @@
+_Back to BFLI_
+
+Wrapped data is nothing difficult to work with.  It is just the
+matter of writing the right conversion program.  Also, the normal
+FLI routine can be used, we just have to make sure VIC always has
+the right bank visible - simple LDA bank,x:sta $DD00 can accomplish
+that.  The more difficult aspect is to make the display freely
+locatable.  We have 32 kilobytes of graphics data, this is the main
+reason we can't even think about using copying.  Linecrunch combined
+with the bad line delaying technique will do the job much more
+nicely.
+
+Figure 2 shows the principles.  To make things simpler I have chosen
+location 0 to mean that the top of the picture is visible, 1 means
+that the picture is scrolled one line upwards and so on.  We can see
+that linecrunch is not used at all for the location 0.  To make the
+picture start at the same point whether linecrunch has crunched
+lines or not we compensate the non-lost raster lines by delaying the
+next bad line.  When the location is n*8 (n=0,1,2..), the sum of the
+linecrunched and delayed lines is constant - the graphics display
+always starts at the same point.
+
+Then how do we deal with the location values that are not evenly
+dividable by eight ?  Now, lets assume that the location is L, and
+we have C, which is the location divided by eight (C = L/8), and R,
+which is the remainder (R = L%8).  To make the picture scroll to the
+right position, we need to delay the bad line less than before - R
+lines less for location L than for location C*8.  E.g.  for location
+2 we delay the bad line two lines less than for location 0.  This
+also shows that we need 7 lines more than is needed for to
+compensate for the linecrunch.
+
+Determining the number of linecrunch lines is a recursive process,
+because when you use more linecrunch lines, that decreases the
+number of lines you have available for the display and you need
+bigger range for the location value.  The linecrunch can be started
+after 12 lines, and we need at least 7 lines to use the soft
+y-scroll.  This makes 181 lines available for the display
+originally.
+
+Because we need to show 400 lines of graphics, we would need
+(400-181)/8=28 linecrunch lines.  However, this in turn reduces the
+number of lines we have for graphics to 181-28=153 and we need
+(400-153)/8=31 linecrunch lines.  Again, 181-31 is 150.  We get
+(400-150)/8=32 and there it finally converges and we have 149 lines
+for graphics, which makes location values 0..251 valid.

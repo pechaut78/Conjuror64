@@ -1,0 +1,13 @@
+
+
+
+_More sprites_
+
+You don't necassarily need to plot the characters in sprites to have more
+than eight characters. Using a sprite multiplexing techiques you can double
+or triple the number of sprites available. You can divide the scroll
+vertically into several areas and because the y-coordinate of the scroll
+is a sinus, there always is a fixed maximum number of sprites in each area.
+This number is always smaller than the total number of sprites in the
+whole scroll. I won't go into detail, but didn't want to leave this out
+completely. [See picture 3.]

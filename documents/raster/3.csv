@@ -1,0 +1,11 @@
+question,answer
+"What is the frequency at which the system needs an interrupt to occur for housekeeping?","The system needs an interrupt to occur 60 times per second to do housekeeping."
+"What is used to generate the interrupts for the system?","The CIA clock is used to generate the interrupts for the system."
+"What is the frequency of the scan line reached on the monitor?","The scan line is reached on the monitor at 60 times per second."
+"Why should regular interrupts and video interrupts be sent to different destinations?","Regular interrupts should be sent to their Rom destination, while video interrupts should go to the custom code, and no where else, to ensure they don't interfere with each other."
+"Why can't both jobs of the system Rom and the video code be done on the same interrupt?","Both jobs can't be done on the same interrupt because the CIA chip is out of sync with the video image."
+"What is the suggested solution to turn off the CIA interrupt and enable the raster/video interrupt?","The suggested solution is to turn off the CIA interrupt, enable the raster/video interrupt, and do both jobs on one interrupt, to have an interrupt signal that occurs 60 times per second, and is in perfect sync with the video image."
+"What is the frequency of the interrupt signal after turning off the CIA interrupt and enabling the raster/video interrupt?","The interrupt signal occurs 60 times per second after turning off the CIA interrupt and enabling the raster/video interrupt."
+"What is the advantage of having an interrupt signal that is in perfect sync with the video image?","The advantage of having an interrupt signal that is in perfect sync with the video image is that it allows for both jobs of the system Rom and the video code to be done on one interrupt."
+"What is the disadvantage of using the CIA chip for generating interrupts?","The disadvantage of using the CIA chip for generating interrupts is that it is out of sync with the video image."
+"What is the purpose of using an interrupt for housekeeping in the system?","The purpose of using an interrupt for housekeeping in the system is to ensure that regular tasks are performed at regular intervals, and to enable the raster/video interrupt for custom video code."

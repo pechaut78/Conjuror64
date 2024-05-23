@@ -1,0 +1,29 @@
+
+
+
+_Linecrunch Basics_
+
+For those not familiar with linecrunch routines:  linecrunch is used
+to scroll the screen UPWARDS by convincing VIC-II that it has
+already showed more character rows than it in reality has shown.
+Surprisingly (or then, maybe not :) this consists of fiddling with
+$D011.  The timing is critical as always.
+
+Linecrunch works by setting $D011 equal the line before the current
+line and VIC-II will happily think that it is time to move on to the
+next character row - add 40 to the video matrix counter, 320 to the
+graphics memory counter and be ready to start a bad line.  Or, maybe
+'NOT to go back to the current row' would be a more suitable
+description.  (Programming VIC-II is slowly becoming a science.)
+
+The required timing also does not cause bad lines so that you can
+skip another line immediately on the successive line.  In addition,
+lines can be skipped only after the first character row and half of
+the second character row have been displayed.  This has something to
+do with the way VIC-II decides when there is a bad line.
+
+Because linecrunch causes VIC-II to skip rows, it will run out of
+video matrix and color memory (and graphics memory) before reaching
+the end of the screen.  However, VIC-II does not stop displaying the
+graphics nor does it reset the internal counters.  The counters keep
+on running and wrap around instead.

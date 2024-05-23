@@ -1,0 +1,19 @@
+
+
+
+_A software graphics mode - FLI_
+
+VIC will systematically go through every byte in the bitmap memory, but how
+does it know where and when to get the color information ? This is where
+the main principle of FLI (Flexible Line Interpretation) lies. Color data
+is fetched (and this means it is a bad line), when the line counter matches
+with the vertical scroll register. VC9-VC0 defines where the color data is
+inside the video matrix and color memory.
+
+If we change the vertical scroll register, we can fool VIC to think that
+every line is a bad line, so it will fetch the color information on every
+line too. Because VIC will fetch the colors continuosly, we can get
+independent colors on each scan line. We just have to change colors and VIC
+will handle the rest. Unfortunately the result is the loss of 40 processor
+cycles per line (see the Missing Cycles article for more information about
+VIC stealing cycles).

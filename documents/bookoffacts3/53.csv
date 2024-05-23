@@ -1,0 +1,11 @@
+question,answer
+"What is the role of the VIC in the C64?","The VIC (Video Interface Controller) is responsible for controlling the video and graphics output on the C64. It fetches color information from memory and generates the video signal."
+"What information does the VIC fetch from memory on each bad line?","The VIC fetches color information from memory on each bad line."
+"How does the VIC's data bus width affect the color data fetch?","The VIC's data bus is 12 bits wide, which allows it to fetch the color data for each character position in a single bus cycle."
+"Where is the color memory physically wired on the C64?","The color memory is physically wired to the VIC databus lines D8-D11 on the C64."
+"How does the VIC determine the address to fetch graphical information from?","The VIC uses internal counters to determine the address to fetch graphical information from. These counters include the video counter, which rolls through all 1000 character positions, and the row counter, which counts the scan lines from zero to seven."
+"What do address bits A15 and A14 represent in the VIC?","Address bits A15 and A14 change according to the selected video bank in the VIC. They determine the location of the bitmap memory in the video bank."
+"What is the role of address bit A13 (CB13) in the VIC?","Address bit A13 (CB13) in the VIC selects the right side of the video bank to be the bitmap memory. It can be set to eight different places in memory."
+"What determines the address bits 12-3 in the VIC?","The video counter (VC9-VC0) in the VIC forms the address bits 12-3. It rolls through all 1000 character positions."
+"What do the lowest three bits in the VIC come from?","The lowest three bits in the VIC come from the row counter (RC2-RC0), which counts the scan lines from zero to seven."
+"What makes some of the memory locations in the VIC useless for bitmap memory?","Some of the memory locations in the VIC are useless for bitmap memory because of the character ROM images and the zero page/stack."

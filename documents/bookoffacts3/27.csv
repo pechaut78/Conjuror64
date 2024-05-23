@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the feature being discussed?","The purpose of the feature being discussed is for synchronization in the Commodore 64."
+"How can synchronization be achieved with this feature?","Synchronization can be achieved by using a DEC or INC instruction in the raster interrupt code. If the processor is early, it has to wait for the bus, otherwise it will continue to execute cycles from the instruction."
+"What is the benefit of using this feature for synchronization?","The benefit of using this feature for synchronization is that it allows for minimal effort synchronization."
+"What is the variation in execution time before the CPU starts to execute the raster interrupt code?","The execution time varies from two to seven cycles."
+"What kind of instructions can be used for synchronization?","Instructions that have a cycle that do not need the bus to be available can be used for synchronization."
+"Can other instructions besides DEC/INC be used for synchronization?","It is possible that other instructions besides DEC/INC can be used for synchronization, but it has not been experimented with."
+"What is the impact of using an instruction that needs the bus to be available?","Using an instruction that needs the bus to be available can cause issues with synchronization."
+"What is the impact of using an instruction that does not need the bus to be available?","Using an instruction that does not need the bus to be available allows for proper synchronization."
+"What is the example of an instruction that increases the value during the fifth cycle?","An example of an instruction that increases the value during the fifth cycle is INC $3fff"
+"What is the importance of the bus being available for instructions?","The bus being available is important for certain instructions to execute properly."

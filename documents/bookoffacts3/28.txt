@@ -1,0 +1,13 @@
+
+      All timings are in PAL, principles will apply to NTSC too.
+              Refer to VIC memory map in Hacking Issue 4.
+
+VIC has many features and transparent borders are one of them. You can not
+make characters appear in the border, but sprites are displayed in the
+border too. "How to do this then?" is the big question.
+
+The screen resolution in C64 has been and will be 320 x 200 pixels. Most
+games need to use the whole screen to be efficient or just plain playable.
+But there still is that useless border area, and you can put score and
+other status information there instead of having them interfere with the
+full-screen smooth-scrolling playing area.

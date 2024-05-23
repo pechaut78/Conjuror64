@@ -1,0 +1,22 @@
+
+
+
+_Stretch the sprites_
+
+The easiest way is to position all of the sprites where the scroll will
+be when it is in its highest position. Then stretch the first and last line
+of each sprite so that the 19 sprite lines in the middle will be on the
+desired place. Opening the borders now is trivial, because all of the sprites
+are present on all of the scan lines and they steal a constant amount of
+time. However, we lose two sprite lines. We might not want to use the first
+and the last line for graphics, because they are stretched.
+[See previous C=Hacking Issues for more information about stretching and
+ stolen cycles.]
+
+A more difficult approach is to unroll the routine and let another routine
+count the sprites present in each line and then change the time the routine
+uses accordingly. In this way you save time during the display for other
+effects, like color bars, because stretching will take at least 12 cycles
+on each raster line. On the other hand, if the sinus is constant (user is
+not allowed to change it), it is usually possible to embedd the count
+routine directly to the border opening part of the routine.

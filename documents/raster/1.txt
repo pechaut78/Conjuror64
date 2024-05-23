@@ -1,0 +1,26 @@
+
+How do you change the interrupt's normal course of action? It's rather simple.
+The C64 contains an interrupt VECTOR at locations 788/9 which is 'jumped 
+through' before the Kernal Rom gets a chance to execute its code. If you change
+this vector to point to YOUR code, and make the end of your code point to the 
+normal Kernal location (where the interrupt normally would have jumped to, 
+$EA31), and you are careful not to step on anything, your code will be executed
+60 times per second.
+
+The above is an example of a very simple interrupt routine. If you were to 
+assemble it with an assembler, and SYS to the SETUP routine, you would see your
+border flash 60 times per second.
+
+You will notice the SEI and CLI machine language instructions used above. They
+are very important. We don't want an interrupt occurring in between the STA 788
+and the STA 789 instructions.
+
+Think what would happen if one did: 788 would have been modified, but 789 would
+still be pointing to the high byte of the Kernal address. Result: the interrupt
+would have jumped to heaven knows where. You can be virtually guaranteed that 
+it would NOT be pointing to a valid piece of interrupt code. Your machine would
+crash. The SEI instruction turns interrupts OFF, so that there is no danger of 
+an interrupt occurring during execution of the following routine. The CLI turns
+them back on. If you forget to turn them back on, and accidentally leave them 
+off, your keyboard will freeze when you return to basic, and your machine will
+seem to lock up.

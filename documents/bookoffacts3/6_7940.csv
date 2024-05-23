@@ -1,0 +1,11 @@
+question,answer
+"What command is used to validate a C64 disk?","The command used to validate a C64 disk is 'OPEN15,8,15,"V"'."
+"What does the validate command do to a C64 disk?","The validate command reorganizes the disk to make the most out of the space that is available on a C64 disk."
+"What can cause the directory of a C64 disk to become disorganized?","The directory of a C64 disk can become disorganized due to repeated saving and scratching of files."
+"What are the consequences of a disorganized directory on a C64 disk?","A disorganized directory on a C64 disk can result in one or more blocks on the disk that cannot be used because they are too small."
+"What is the purpose of validating a C64 disk?","The purpose of validating a C64 disk is to reorganize the disk to make the most out of the space that is available and to fix any issues caused by a disorganized directory."
+"What input is required for the validate command on a C64?","The validate command on a C64 is executed by typing 'OPEN15,8,15,"V"'."
+"What is the effect of the 'V' in the validate command on a C64?","The 'V' in the validate command on a C64 stands for validate and it is used to reorganize the disk to make the most out of the space that is available."
+"What is the syntax for the validate command on a C64?","The syntax for the validate command on a C64 is 'OPEN15,8,15,"V"'."
+"What is the role of the 'OPEN15' command in the validate command on a C64?","The 'OPEN15' command in the validate command on a C64 is used to open channel 15 which is used for communication with the disk drive."
+"What is the role of the '8' in the validate command on a C64?","The '8' in the validate command on a C64 is used to specify that the command is for device 8 which is the disk drive."

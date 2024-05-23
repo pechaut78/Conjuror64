@@ -1,0 +1,48 @@
+
+
+AFLI-specs v1.0
+by written by D'Arc/Topaz for Chief/Padua on 28.6.1994
+
+Advanged FLI is name I came up with during the time I coded the
+first version of AFLI editor. I have never claimed to be the one
+who discovered this new graphics mode for 64. I myself give the
+credit for COLORFUL/ORIGO but I am not sure if anyone did it
+before him (splits have been done but in my eyes they don't count).
+
+In AFLI we can get 120 colors in theory (counted like this
+16!/(2!*14!)=120). When we put red and blue hires pixels close to
+each other we get a vision of purple - thanks the television.
+
+AFLI is just like FLI with $08-$0f (hires value) in $d016 and a
+couple of sprites over the first three marks. With $d018 we
+change the start of screen memory. And the good old $d011 for the
+main work.
+
+AFLI is the same as FLI but we don't use the $d800-$dc00 area
+for the third color. Actually we can't. In normal hires pictures
+the colors on the picture is ordered in a normal screen (normal
+text screen is on $0400+). The upper 4 bits is the color for
+bit 0 in picture bitmap and the lower 4 bits is the color for bit
+1 in picture bitmap (or the other way...but let us think that was
+the right way).
+
+For example: a normal hires picture char (8x8 bits)
+
+ 01234567  in hires picture where  01234567
+0 *****    the first spot of the  0bgggggbb
+1*** ***   screen has a value of  1gggbgggb
+2*** ***   $68 (blue&green) the   2gggbgggb
+3*******   hires picture looks    3gggggggb
+4*** ***   like this ---->        4gggbgggb
+5*** ***   b=blue, g=green        5gggbgggb
+6*** ***                          6gggbgggb
+7                                 7bbbbbbbb
+
+The bitmap is built just as in a hires picture bit 1 means the pixel
+is on and 0 that the pixel is off.
+
+In FLI we have built the screen to have badlines on every scanline of
+the screen. This gives us the possibility to change the screenmemory
+the picture uses on everyline. Now... when AFLI (and FLI) uses screen
+memory for colors and we change the screenmemory start on everyline,
+we can have new colors on everyline.

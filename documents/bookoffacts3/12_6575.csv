@@ -1,0 +1,11 @@
+question,answer
+"What is the purpose of the CONT C(SHIFTED O) command statement in C64 Basic?","The CONT C(SHIFTED O) command statement in C64 Basic is used to restart the flow of the program from a specific point after a stop or end statement has been encountered."
+"What does the COS NONE mathematical function do in C64 Basic?","The COS NONE mathematical function in C64 Basic calculates the cosine of an angle provided in radians."
+"How are DATA D(SHIFTED A) statements used in C64 Basic?","DATA D(SHIFTED A) statements in C64 Basic are used to store string or numeric values that can be used in conjunction with the READ statement to retrieve and assign those values to variables."
+"What is the effect of using the CONT C(SHIFTED O) statement after a stop or end statement in C64 Basic?","Using the CONT C(SHIFTED O) statement after a stop or end statement in C64 Basic will cause the program to restart from the point at which the CONT statement is located."
+"What type of values can be stored in DATA D(SHIFTED A) statements in C64 Basic?","DATA D(SHIFTED A) statements in C64 Basic can store both string and numeric values."
+"What is the role of the READ statement in conjunction with DATA D(SHIFTED A) statements in C64 Basic?","The READ statement is used in conjunction with DATA D(SHIFTED A) statements in C64 Basic to retrieve and assign the stored values to variables."
+"How does the COS NONE mathematical function calculate cosine in C64 Basic?","The COS NONE mathematical function in C64 Basic calculates cosine by taking the ratio of the length of the adjacent side of a right triangle to the length of the hypotenuse, given an angle provided in radians."
+"What is the syntax for using the CONT C(SHIFTED O) statement in C64 Basic?","The syntax for using the CONT C(SHIFTED O) statement in C64 Basic is: CONT C(SHIFTED O)"
+"What is the syntax for using the COS NONE mathematical function in C64 Basic?","The syntax for using the COS NONE mathematical function in C64 Basic is: COS NONE (angle in radians)"
+"What is the syntax for using the DATA D(SHIFTED A) statements in C64 Basic?","The syntax for using the DATA D(SHIFTED A) statements in C64 Basic is: DATA value1, value2, ..., valueN"

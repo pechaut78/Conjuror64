@@ -1,0 +1,19 @@
+
+
+       [all timings are in PAL, the principle applies to NTSC too]
+
+there are 63 cycles available to the C64 processor on each scan line, except for one which only provides 23 cycles (later referred
+to as a "bad" scan line). But what happens when we add sprites and why ?
+
+In the C64, the VIC (video interface controller) has much more to do than
+just showing graphics on the screen. It also handles the memory refresh.
+On each scanline, it has to refresh five rows in the memory matrix and
+fetch fourty bytes of graphics data.
+
+The VIC does all of this during the cycles (phase 1) that the processor is
+not using the memory.  These cycles, however, are not sufficient when the
+VIC also needs to access the character and color codes for the next row.
+The memory bus can't be used by the CPU and the VIC at the same time, so CPU
+access to the bus must be denied to allow the VIC to fetch its data.
+Fortunately, the VIC bus (12-bit wide) allows the character (8 bits) and
+color (4 bits) codes to be fetched at the same time.

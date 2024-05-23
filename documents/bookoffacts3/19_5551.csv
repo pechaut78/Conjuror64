@@ -1,0 +1,11 @@
+question,answer
+"What command executes a program in memory on a C64?","The RUN command, when shifted and followed by the U key, will execute a program that is in memory on a Commodore 64."
+"How do you store a program to tape or disk on a C64?","The SAVE command, when shifted and followed by the A key, allows you to store a program to tape or disk on a Commodore 64."
+"What is the function of the SGN command on a C64?","The SGN command is an interior function on a C64, which stands for "sign." It returns the sign of a number as -1, 0, or 1."
+"What does the SIN function do on a C64?","The SIN function is a floating point function on a C64, which stands for "sine." It returns the sine of a given angle in radians."
+"How can you print a specified number of spaces across the screen on a C64?","The SPC function, when shifted and followed by the P key, allows you to print a specified number of spaces across the screen on a Commodore 64. For example, PRINT SPC 9 10 will print 10 spaces."
+"What is the purpose of the RUN command on a C64?","The RUN command on a C64 is used to execute a program that is in memory."
+"What does the SAVE command do on a C64?","The SAVE command on a C64 is used to store a program to tape or disk."
+"What is the function of the SGN command on a C64?","The SGN command on a C64 is an interior function that returns the sign of a number as -1, 0, or 1."
+"What does the SIN function do on a C64?","The SIN function on a C64 is a floating point function that returns the sine of a given angle in radians."
+"How can you print a specified number of spaces across the screen on a C64?","The SPC function, when shifted and followed by the P key, can be used to print a specified number of spaces across the screen on a Commodore 64. For example, PRINT SPC 9 10 will print 10 spaces."

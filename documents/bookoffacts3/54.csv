@@ -1,0 +1,11 @@
+question,answer
+"What is the main principle of FLI (Flexible Line Interpretation) in regards to fetching color data in bitmap memory?","The main principle of FLI lies in fetching color data when the line counter matches with the vertical scroll register. The location of color data inside the video matrix and color memory is defined by VC9-VC0."
+"How can we fool VIC into thinking that every line is a bad line?","We can fool VIC into thinking that every line is a bad line by changing the vertical scroll register. This will cause VIC to fetch the color information on every line."
+"What is the result of VIC fetching colors continuously in FLI mode?","The result of VIC fetching colors continuously in FLI mode is independent colors on each scan line. This is achieved by changing colors and allowing VIC to handle the rest."
+"What is the downside of having independent colors on each scan line in FLI mode?","The downside of having independent colors on each scan line in FLI mode is the loss of 40 processor cycles per line."
+"What is the role of the line counter in FLI mode?","In FLI mode, the line counter matches with the vertical scroll register to determine when to fetch color data."
+"What defines the location of color data inside the video matrix and color memory in FLI mode?","VC9-VC0 defines the location of color data inside the video matrix and color memory in FLI mode."
+"What happens when the line counter matches with the vertical scroll register in FLI mode?","Color data is fetched when the line counter matches with the vertical scroll register in FLI mode."
+"How can we get independent colors on each scan line in FLI mode?","We can get independent colors on each scan line in FLI mode by changing colors and allowing VIC to handle the rest."
+"What is the impact on processor cycles when using FLI mode?","The impact on processor cycles when using FLI mode is the loss of 40 processor cycles per line."
+"What is the principle behind FLI (Flexible Line Interpretation) in regards to the VIC systematically going through every byte in the bitmap memory?","The principle behind FLI is that color data is fetched when the line counter matches with the vertical scroll register, allowing for independent colors on each scan line and the loss of 40 processor cycles per line."

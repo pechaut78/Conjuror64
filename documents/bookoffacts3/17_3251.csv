@@ -1,0 +1,11 @@
+question,answer
+"What command erases a program currently in memory in C64 Basic?","The NEW NONE command erases a program currently in memory in C64 Basic."
+"What statement is used in conjunction with the FOR statement and serves as a counter that is incremented by 1, and tested for the end-value in C64 Basic?","The NEXT N(SHIFTED E) statement is used in conjunction with the FOR statement and serves as a counter that is incremented by 1, and tested for the end-value in C64 Basic."
+"What is the function of the NOT N(SHIFTED O) logical operator in C64 Basic?","The NOT N(SHIFTED O) logical operator in C64 Basic is used to compare a set of values or variables for a negative result."
+"What statement is used with the goto and gosub statements and depending on the value of a set of variables in a program jumps to any one of several predefined line numbers within the program in C64 Basic?","The ON NONE statement is used with the goto and gosub statements and depending on the value of a set of variables in a program jumps to any one of several predefined line numbers within the program in C64 Basic."
+"What command will open a channel to a device or file in C64 Basic?","The OPEN O(SHIFTED P) command will open a channel to a device or file in C64 Basic."
+"What is the function of the OR NONE logical operator in C64 Basic?","The OR NONE logical operator in C64 Basic compares a set of values for a true or false result."
+"What command reads and returns the contents of a specified memory location in C64 Basic?","The PEEK P(SHIFTED E) command reads and returns the contents of a specified memory location in C64 Basic."
+"What is the example usage of the NEXT statement in C64 Basic?","An example usage of the NEXT statement in C64 Basic is: 10 FOR A = 1 T01000: NEXT A, which counts 1000 times before ending."
+"What is the example usage of the NOT logical operator in C64 Basic?","An example usage of the NOT logical operator in C64 Basic is: IF NOT X = Y THEN END, which ends the program if the value of x does not equal the value of y."
+"What is the example usage of the ON statement in C64 Basic?","An example usage of the ON statement in C64 Basic is: ON A GOTO 10,20,30, which jumps to line 10, 20, or 30 depending on the value of A."

@@ -1,0 +1,15 @@
+
+
+
+_Smoother and smoother_
+
+Why be satisfied with a scroll with only 40 different slices horizontally ?
+It should be possible to count own coordinates for each pixel column on
+the scroll. In fact the program won't be much different, but the routine
+must also mask the unwanted bits and write the byte to memory with ORA+STA.
+When you think about it more, it is obvious that this takes a generous amount
+of time, handling every bit seperately will take much more than eight times
+the time a simple LDA+STA takes. Some coders have avoided this by plotting
+the same character to different character sets simultaneously and then
+changing the charsets appropriately, but the resulting scroll won't be much
+larger than 96x32 pixels.

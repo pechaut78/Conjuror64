@@ -1,0 +1,11 @@
+question,answer
+"What happens during phase 1 of each line when sprites are on the screen?","During phase 1 of each line, the sprite image pointers are fetched if there are sprites on the screen."
+"What happens if a sprite is to be displayed on a line?","If a sprite is to be displayed on a line, the three bytes of image data are fetched right after the sprite image pointers."
+"How many of the three fetches for a sprite's image data take place during phase 2 of the clock?","Two of the three fetches for a sprite's image data take place during phase 2 of the clock."
+"How many clock cycles are lost on average for each sprite that is displayed on a line?","On average, two clock cycles are lost for each sprite that is displayed on a line."
+"Why do sprites 0, 2, 4, 6 and 7 together take up as many cycles as all eight sprites?","Sprites 0, 2, 4, 6 and 7 together take up as many cycles as all eight sprites because of the way the VIC tells the CPU that it needs additional cycles."
+"How many cycles do all eight sprites take on average when displayed on the screen?","All eight sprites take 16-19 cycles on average when displayed on the screen."
+"How many cycles does one sprite require for its image data to be fetched?","One sprite requires three cycles for its image data to be fetched."
+"What happens to the processor during the two fetches of a sprite's image data that take place during phase 2 of the clock?","The processor will lose these two fetches, meaning it cannot perform other tasks during that time."
+"What is time divided into on each line of the screen?","Scan lines are time divided so that there is enough time for all action during one line."
+"What is the role of the VIC in relation to the CPU and sprites on the screen?","The VIC tells the CPU that it needs additional cycles when sprites are on the screen, which affects the number of clock cycles available for the CPU to perform other tasks."

@@ -1,0 +1,9 @@
+
+
+_Horizontal scrolling_
+
+This new graphics data also obeys the horizontal scroll register ($D016), so
+you can do limited tech-tech effects in the border too. You can also use
+sprites and open the sideborders. You can see an example of the tech-tech
+effect in the first example program. Multicolor mode select has no effect
+on this data. You can read more about tech-tech effects in a future article.

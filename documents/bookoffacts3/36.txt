@@ -1,0 +1,28 @@
+
+_Logic gates will tell the truth_
+
+It is not really a bug, but a feature. The hardware design to implement the
+vertical enlargement was just as simple as possible. Those, who do not care
+about hardware should skip this part... The whole y-enlargement is handled
+with five simple logical ports. Each sprite has an associated Set-Reset
+flip-flop to tell whether to jump to the next sprite line (add three bytes
+to the data counter) or not.
+
+Let's call the state of the flip-flop Q and the inputs R (reset) and S (set).
+The function of a SR flip-flop is quite simple: if R is one, Q goes to zero,
+if S is one, Q goes to one. Otherwise the state of the flip-flop does not
+change. In this case the flip-flop is Set, if either the Y-enlargement bit
+is zero or the state of the flip-flop is zero at the end of a scan line. The
+flip-flop is reset, if both the state and the Y-enlargement are ones at the
+end of the line.
+
+When you clear the bit in the vertical expansion register, the flip-flop will
+be set regardless of the electron beam position on the scan line. If you
+set the bit again before the end of the line, the flip-flop will be cleared
+and VIC will be displaying the same sprite line again. In other words, VIC
+will think that it is starting to display the second line of the expanded
+sprite row. This way any of the lines in any of the sprites may be stretched
+as wanted.
+So, simply, at any time, if vertical expand is zero, the add enable is set
+to one. At the end of the line - before adding - the state is cleared if
+vertical expand is one.

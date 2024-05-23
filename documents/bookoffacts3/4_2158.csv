@@ -1,0 +1,11 @@
+question,answer
+"What command is used to format a disk for the first time on a Commodore 64?","The command used to format a disk for the first time on a Commodore 64 is 'OPEN (file#), (divlce#),.(channel#):PRINT*, "N:NAME, ID"', where file# is any number from 1 to 255 (but numbers greater than 127 should be avoided), divlce# is the device number for the disk drive which is 8, channel number can be any number from 2 to 15, and NAME and ID are the name and ID of the disk, respectively. The command can be abbreviated as 'OPEN15,8,15'N:NAME,ID"'."
+"What is the purpose of the 'PRINT*' command in the format disk command?","The 'PRINT*' command in the format disk command is used to direct data to the disk drive. It is used in conjunction with the 'OPEN' command to initiate the formatting process."
+"What is the maximum length of the name of a disk on a Commodore 64?","The maximum length of the name of a disk on a Commodore 64 is sixteen characters."
+"What is the ID of a disk on a Commodore 64?","The ID of a disk on a Commodore 64 is two characters, which can be any combination of numbers, letters, or both."
+"What command is used to close the file after formatting a disk on a Commodore 64?","The command used to close the file after formatting a disk on a Commodore 64 is 'CLQSE15'."
+"What is the purpose of the 'CLQSE15' command in Commodore 64?","The 'CLQSE15' command in Commodore 64 is used to close the file after formatting a disk. It is an important step to ensure that the formatting process is completed successfully."
+"What is the device number for the disk drive on a Commodore 64?","The device number for the disk drive on a Commodore 64 is 8."
+"What are the file numbers that are reserved for the operating system on a Commodore 64?","The file numbers that are reserved for the operating system on a Commodore 64 are 0 to 1."
+"What are the channels that are used for data to files on a Commodore 64?","The channels that are used for data to files on a Commodore 64 are the channels 2 to 14."
+"What is the command channel on a Commodore 64?","The command channel on a Commodore 64 is channel number 15. It is used for loading and saving."

@@ -1,0 +1,14 @@
+
+he BA signal_
+
+When the VIC wants to use the bus, the BA (Bus Available) signal goes
+inactive. This will happen three cycles before the bus must be released !
+During these three cycles, the CPU must complete all memory accesses or
+delay them until it has the bus again.
+
+The CPU either completes the current instruction in the remaining cycles
+or sits and waits for the bus to become available again. It can't execute
+a new instruction as long as it doesn't have the bus. This is why cycles
+seem to be lost (besides those stolen directly for the sprites). Usually,
+all 8 sprites take 17 cycles while one sprite takes three cycles. However,
+the CPU may continue to execute an instruction if it does not use the bus.

@@ -1,0 +1,17 @@
+
+
+_Stretching takes time_
+
+Besides showing the stretched sprites we need time to generate the stretching
+data, unless of course, the stretch is constant. We have to have 20
+one-bits for each sprite in our table. It is not feasible to determine the
+state of each byte in the table, instead you clear the table and plot the
+needed bits.
+
+The routine is quite straightforward, but many optimizations may be applied
+to make it faster. First we load Y with the stretch of the first line (the
+y-coordinate of the data). Then we use it as an index to the table and plot
+the right bit and increase Y with the expansion value. Then we do it again
+until we have all of the 20 bits scattered to the table. The last sprite line
+will then stretch until we stop the stretching, because the last line is
+not allowed to be drawn.

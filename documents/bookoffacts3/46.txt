@@ -1,0 +1,9 @@
+_Save characters - and time_
+
+But why should we move an eight-byte-high character image in a 48-line-high
+area, when 16 is really enough ?  We can use two characters for the graphics
+bitmap and then move this in eight pixel steps up and down. The lowest
+three bits of the y-position then gives us the offset where the data must
+be plotted inside this graphical region. The two character codes are usually
+selected to be consecutive ones so that the image data has also 16
+consecutive bytes. [See picture 1.]

@@ -1,0 +1,33 @@
+
+
+
+_What happens in the VIC ?_
+
+VIC (Video Interface Controller) fetches color information from memory on
+each bad line. This will steal time from processor, because VIC needs to use
+processor's bus cycles. Bad line is a curse in the C64 world. Fortunately
+VIC's data bus is 12 bits wide and so the color data fetch for each character
+position will take only one bus cycle. Color memory is physically wired to
+the VIC databus lines D8-D11.
+
+How does VIC know where to fetch the graphical information ? Some of you know
+the mystical formulas needed to mess with the pixels in the hires screen.
+How are these functions obtained ? Are they just magic ? No, there are some
+internal counters in VIC. They always point to the right place in grafix
+memory and the address is determined like this:
+
+A13  A12 A11 A10 A9  A8  A7  A6  A5  A4  A3  A2  A1  A0
+CB13 VC9 VC8 VC7 VC6 VC5 VC4 VC3 VC2 VC1 VC0 RC2 RC1 RC0
+
+Address bits A15 and A14 change according to the selected video bank.
+Address bit A13 is CB13, which may be found in VIC register $18. It
+selects the right side of the video bank to be the bitmap memory. With
+these bits you can set the bitmap to eight different places in memory.
+However, some of them are useless because of the character ROM images and
+zero page/stack. Rest of the bits come from the internal counters.
+
+VC9-VC0 (Video Counter) forms the address bits 12-3. The counter rolls
+through all 1000 character positions, 0-39 on the first eight lines, 40-79
+on the second eight lines and so on. The lowest three bits come from the row
+counter, RC2-RC0. This is another VIC counter and it counts the scan lines
+from zero to seven.

@@ -1,0 +1,15 @@
+
+
+DYCP - Different Y Character Position - is a name for a horizontal scroller,
+where characters go smoothly up and down during their voyage from right to
+left. One possibility is a scroll with 8 characters - one character in each
+sprite, but a real demo coder won't be satisfied with that.
+
+Demo coders thought that it looks good to make the scrolling text change its
+vertical position in the same time it proceeded from the right side of the
+screen to the left. The only problem is that there is only eight sprites
+and that is not even nearly enough to satisfy the requirements needed for
+great look. So the only way is to use screen and somehow plot the text in
+graphics, because character columns can not be scrolled individually.
+Plotting the characters take absolutely too much time, because you have to
+handle each byte seperately and the graphics bitmap must be cleared too.

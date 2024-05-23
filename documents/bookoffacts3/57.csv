@@ -1,0 +1,11 @@
+question,answer
+"What issue does VIC have when the vertical scroll register ($D011) is changed?","VIC does not like it when the vertical scroll register is changed and it sees code 255 (light gray) in the video matrix and 9 (brown) in the color memory instead of the correct values stored there. The color value seems to be the lower nybble of the data byte currently on the data bus (accessed by the processor using the LDA#=$A9)."
+"Can the register change be done in the border?","No, there is no chance to do the register change in the border, making the three leftmost character columns a bit useless because the colors are fixed."
+"What is the effect of the fixed colors on FLI editors?","FLI editors may not support the fixed colors, making it hard to use the three columns."
+"What code does VIC see in the video matrix when the vertical scroll register is changed?","VIC sees code 255 (light gray) in the video matrix when the vertical scroll register is changed."
+"What color does VIC see in the color memory when the vertical scroll register is changed?","VIC sees color 9 (brown) in the color memory when the vertical scroll register is changed."
+"What seems to be the lower nybble of the data byte currently on the data bus?","The color value seems to be the lower nybble of the data byte currently on the data bus (accessed by the processor using the LDA#=$A9)."
+"Is it possible to change the register in the border?","No, there is no chance to do the register change in the border."
+"Why are the three leftmost character columns useless?","The three leftmost character columns are a bit useless because the colors are fixed, and there is no chance to do the register change in the border."
+"Do FLI editors support the fixed colors?","No, FLI editors may not support the fixed colors, making it hard to use the three columns."
+"What is the color memory value that VIC sees instead of the correct values stored there?","VIC sees color 9 (brown) in the color memory instead of the correct values stored there."

@@ -1,0 +1,11 @@
+question,answer
+"What process does the VIC chip follow to fetch sprite image data during a scan line?","The VIC chip fetches sprite image pointers during phase 1 of a scan line and fetches the three bytes of image data right after that if the sprite is to be displayed on that line. Two of these fetches take place during phase 2 of the clock, causing the processor to lose these cycles."
+"How many clock cycles are lost on average for each sprite displayed on a line?","On average, two clock cycles are lost for each sprite displayed on a line."
+"How many cycles do all eight sprites take to be displayed?","All eight sprites take 16-19 cycles (depending on the timing) to be displayed."
+"Why do sprites 0, 2, 4, 6 and 7 together take up as many cycles as all eight sprites?","This is because of the way the VIC chip tells the CPU that it needs additional cycles."
+"What happens to the processor's cycles when the sprite image data is fetched?","Two of the fetches for the sprite image data take place during phase 2 of the clock, causing the processor to lose these cycles."
+"How many bytes of image data are fetched for each sprite?","Three bytes of image data are fetched for each sprite."
+"When are the sprite image pointers fetched during a scan line?","The sprite image pointers are fetched during phase 1 of a scan line."
+"What is the impact of sprites on the VIC's clock cycles?","Sprites can cause the VIC to require additional cycles, impacting the clock cycles available for the CPU."
+"How does the VIC chip communicate its need for additional cycles to the CPU?","The VIC chip communicates its need for additional cycles to the CPU by the way it fetches sprite image data."
+"What is the total number of phases in a clock cycle?","A clock cycle has two phases: phase 1 and phase 2."

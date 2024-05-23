@@ -1,0 +1,18 @@
+
+
+_How to disable the vertical borders_
+
+When VIC (Video Interface Controller) has displayed all character rows,
+it will start displaying the vertical border area. It will start displaying
+the characters again in top of the screen. The row select register sets the
+number of character lines on the screen. If we select the 24-row display
+when VIC is drawing the last (25th) row, it does not start to draw the
+border at all !  VIC will think that it already started to draw the border.
+
+The 25-row display must be selected again in the top of the screen, so that
+the border may be opened in the next frame too. The number of displayed rows
+can be selected with the bit 3 in $d011. If the bit is set, VIC will display
+25 rows and 24 rows otherwise. We have to clear the bit somewhere during the
+last row (raster lines $f2-$fa) and set it again in top of the screen or at
+least somewhere before the last row (line $f2). This has to be done in every
+frame (50 times per second in PAL).

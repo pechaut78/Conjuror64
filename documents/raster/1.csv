@@ -1,0 +1,11 @@
+question,answer
+"What is the memory location of the C64's interrupt vector?","The C64's interrupt vector is located at memory locations 788 and 789."
+"What happens when the interrupt vector is triggered?","When the interrupt vector is triggered, it jumps to the location specified in the vector before the Kernal Rom gets a chance to execute its code."
+"How can you change the interrupt vector to point to your own code?","You can change the interrupt vector by storing the address of your own code in memory locations 788 and 789."
+"What is the purpose of the SEI and CLI instructions in the example code?","The SEI instruction turns interrupts OFF, while the CLI instruction turns them back on. This ensures that there is no danger of an interrupt occurring during the execution of the routine, and that interrupts are not left off accidentally."
+"What happens if an interrupt occurs during the execution of the STA 788 instruction?","If an interrupt occurs during the execution of the STA 788 instruction, the low byte of the Kernal address would have been modified, but the high byte would still be pointing to the Kernal address. This would result in the interrupt jumping to an unknown location, causing the machine to crash."
+"What is the purpose of the example code in the text?","The purpose of the example code in the text is to demonstrate a simple interrupt routine that causes the border to flash 60 times per second when assembled and run."
+"What happens if interrupts are left off accidentally after returning to basic?","If interrupts are left off accidentally after returning to basic, the keyboard will freeze and the machine will seem to lock up."
+"What is the memory location where the interrupt normally jumps to?","The interrupt normally jumps to memory location $EA31."
+"What is the importance of being careful not to step on anything when changing the interrupt vector?","Being careful not to step on anything ensures that you don't accidentally modify any other part of the system that could cause unexpected behavior or crashes."
+"What is the effect of changing the interrupt vector to point to your own code?","Changing the interrupt vector to point to your own code allows you to execute your own code 60 times per second."

@@ -1,0 +1,11 @@
+question,answer
+"What address does VIC read from to display data in the top and bottom borders?","VIC reads from the last address in the current video bank, which is normally $3fff, and displays this over and over again in the border area."
+"What happens if we change the data in address $3fff?","If we change the data in address $3fff in the border area, the change will be visible right away. And if you synchronize the routine to the beam position, you can have a different value on each line."
+"Can we change the color of the graphics that appear in the top and bottom borders?","No, it is impossible to change the color of the graphics that appear in the top and bottom borders - it is always black."
+"How can we make use of the graphics that appear in the top and bottom borders?","We can use inverted graphics and change the background color. And if we have different data on each line, we can also have different colors on each line."
+"What is a good idea if we are not using $3fff for any effects?","If we are not using $3fff for any effects, it is a good idea to set it to zero, but remember to check that we do not store anything important in that address."
+"What can happen if we clear $3fff without checking for important data?","If we clear $3fff without checking for important data, we may accidentally overwrite something important. For example, in one demo, clearing $3fff caused issues with another part of the demo."
+"What memory address does VIC read from to display data in the top and bottom borders, and what color are the graphics that appear?","VIC reads from address $3fff to display data in the top and bottom borders, and the graphics are always black."
+"Can we have different colors on each line of the graphics that appear in the top and bottom borders?","Yes, if we have different data on each line, we can also have different colors on each line."
+"What should we do with address $3fff if we are not using it for any effects?","If we are not using $3fff for any effects, it is a good idea to set it to zero, but we need to check that we do not store anything important in that address."
+"What issue can occur if we are not careful when clearing address $3fff?","If we are not careful when clearing address $3fff, we may accidentally overwrite something important, which can cause issues with other parts of our code."

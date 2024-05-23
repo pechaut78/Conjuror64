@@ -1,0 +1,13 @@
+question,answer
+"What is the name of the effect where pictures wave horizontally on the width of the whole screen?","Tech-tech"
+"How much can the screen be moved using the horizontal scroll register?","The screen can be moved only eight pixels using the horizontal scroll register."
+"What was used to create the tech-tech effect?","The tech-tech effect was done using character graphics."
+"Is it possible to move the actual data during one scan line?","No, it is not possible to move the actual data during one scan line. Only a pointer can be moved."
+"What does VIC fetch the character codes at?","VIC fetches the character codes only at certain times, called bad lines."
+"What can be changed instead of the video matrix pointer?","The character set pointer can be changed instead."
+"What are the restrictions of horizontal movement due to character set implementation?","The picture or text must be pure graphic and the character codes in the video matrix must be in a numerical order. The normal picture is in the first character memory and in the next one it is shifted one character position to the right. One video bank can hold only seven full character memories besides the video matrix. This limits the movement of the picture to 56 pixels."
+"How is the shift done during one scan line?","On each scan line, the horizontal scroll register ($D016) is updated with the three lowest bits of the shift value. The other bits are used to select the right character set ($D018)."
+"What is necessary for the shift values in a tech-tech?","The shift values should be put into two tables, one for the horizontal scroll register and another for the character set select. This is necessary because there is no time for extra calculations on a bad line."
+"What is used for a tech-tech?","A raster routine is used for a tech-tech. It is a routine which is synchronized to the electron beam."
+"What happens when the picture is bigger in a tech-tech?","The bigger the picture, the less time is left over for other activities."
+"What can be done on other than bad lines in a tech-tech?","On other than bad lines, funny things like changing the color of the background or border can be done."

@@ -1,0 +1,16 @@
+
+
+_A little feature_
+
+VIC does not like it when we change the vertical scroll register ($D011),
+and is a bit annoyed. It 'sees' code 255 (light gray) in video matrix
+and 9 (brown) in the color memory instead of the correct values stored there.
+Actually the color value seems to be the lower nybble of the data byte
+currently on the data bus (accessed by the processor (LDA#=$A9)).
+Unfortunately there is no chance to do the register change in the border
+and thus the three leftmost character columns are a bit useless, because
+the colors are fixed.
+
+However, this doesn't mean that you can't use those three columns. FLI
+editors may not support the fixed colors though, so it may be hard to use
+them.

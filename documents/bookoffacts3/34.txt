@@ -1,0 +1,22 @@
+
+
+  _Scrolling the screen_
+
+  VIC begins to draw the screen from the first bad line. VIC will know
+  what line is a bad line by comparing its scan line counter to the
+  vertical scroll register : when they match, the next line is a bad
+  line. If we change the vertical scroll register ($d011), the first bad
+  line will move also. If we do this on every line, the line counter in
+  VIC will never match with it and the drawing never starts (until it is
+  allowed to do so).
+
+  When we don't have to worry about bad lines, we have enough time to
+  open the borders and do some other effects too. It is not necassary to
+  change the vertical scroll on every line to get rid of the bad lines,
+  just make sure that it never matches the line counter (or actually the
+  least significant 3 bits).
+
+  You can even scroll the bad lines independently and you have FLD -
+  Flexible Line Distance. You just allow a bad line when it is time to
+  display the next character row. With this you can bounce the lines or
+  scroll a hires picture very fast down the screen.

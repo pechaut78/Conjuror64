@@ -1,0 +1,21 @@
+
+
+
+_Speed is everything_
+
+The calculation itself is easy, but optimizing the routine is not. If all
+of the sprites are stretched equally (by integer amounts) and from the same
+position, the routine is the fastest possible.  You can also have variable
+and smooth stretch.  Smooth stretch uses other than integer expansion values
+and thus also needs more processor time.  If each sprite has to be stretched
+individually, you need much more time to do it.
+
+The fastest routine I have ever written uses some serious selfmodification
+tricks. There are also some other tricks to speed up the stretch, but they
+are all secret ones.. :-)  Well, what the h*ck, I will include it anyway.
+By the time you read this I have already made a faster routine..
+
+You can speed up that routine (by 17%) by unrolling the inner loop, but you
+have to use a different addressing mode for ORA (zero-page). You also need
+to place some restrictions to the tables used.. If you unroll both loops,
+you can get ~25% faster routine than the Fore!-version.

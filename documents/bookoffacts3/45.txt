@@ -1,0 +1,19 @@
+
+
+
+_Character hack_
+
+The whole DYCP started using character graphics. You plot six character
+rows where the character (screen) codes increase to the right and down.
+This area is then used like a small bitmap screen. Each of the text chars
+are displayed one byte at a time on each six rows high character columns.
+This 240 character positions big piece of screen can be moved horizontally
+using the x-scroll register (three lowest bits in $D016) and after eight
+pixels you move the text itself, like in any scroll. The screen is of course
+reduced to 38 columns wide to hide the jittering on the sides.
+
+A good coder may also change the character sets during the display and
+even double the size of the scroll, but because the raster time happens
+to go to waste using this technique anyway, that is not very feasible. There
+are also other difficulties in this approach, the biggest is the time needed
+to clear the display.

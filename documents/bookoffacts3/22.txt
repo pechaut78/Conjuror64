@@ -1,0 +1,16 @@
+
+
+If there are sprites on the screen, the VIC needs even more cycles to fetch
+all of the graphics data. Scan lines are time divided so that there is
+enough time for all action during one line. On each line, the sprite
+image pointers are fetched during phase 1. If the sprite is to be displayed
+on that line, the three bytes of image data are fetched right after that.
+Out of these three fetches, two take place during phase 2 of the clock,
+so the processor will lose these. On average, two clock cycles are lost
+for each sprite that is displayed on that line.
+
+But how is it possible for all eight sprites to only take 16-19 cycles
+(depending on the timing) when we have observed that one sprite requires
+three cycles? And why do sprites 0, 2, 4, 6 and 7 together take up as many
+cycles as all eight sprites ? The answer may be found in the way the VIC
+tells the CPU that it needs additional cycles.
